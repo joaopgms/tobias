@@ -46,7 +46,8 @@ You have two jobs:
 Read your skills file carefully — the Analyst updates it daily.
 Stakes are committed NOW. Deduct from bankroll. This is real money in the simulation.
 
-Output ONLY the required XML tags at the very end. No extra text after them."""
+CRITICAL FORMATTING RULE: Your response MUST end with these exact XML tags.
+The system will FAIL if <committed_bets> tag is missing. Even if all picks are cancelled, output <committed_bets>[]</committed_bets>."""
 
 
 def _build_commit_prompt(skills: str, draft_picks: list, odds_text: str,
@@ -226,7 +227,7 @@ def run(store, force: bool = False) -> None:
             COMMIT_SYSTEM,
             _build_commit_prompt(skills, draft_picks, odds_str,
                                   injuries_str, state, today),
-            max_tokens=3000,
+            max_tokens=4096,
             agent="commit",
         )
         raw = llm_result.text
@@ -236,7 +237,7 @@ def run(store, force: bool = False) -> None:
         state["scout_error"]   = str(e)
         state["last_updated"]  = now_iso
         store.write_json("state", state, f"commit: LLM error {today}")
-        store.write_data_js(state, history)
+        store.write_data_js(state, history, config=store.read_config())
         return
 
     # ── 7. Extract tags ────────────────────────────────────────────────────────
@@ -250,7 +251,7 @@ def run(store, force: bool = False) -> None:
         state["scout_error"]   = "Missing <committed_bets> tag"
         state["last_updated"]  = now_iso
         store.write_json("state", state, f"commit: parse error {today}")
-        store.write_data_js(state, history)
+        store.write_data_js(state, history, config=store.read_config())
         return
 
     # ── 8. Parse ──────────────────────────────────────────────────────────────
@@ -263,7 +264,7 @@ def run(store, force: bool = False) -> None:
         state["scout_error"]   = f"JSON parse error: {e}"
         state["last_updated"]  = now_iso
         store.write_json("state", state, f"commit: JSON error {today}")
-        store.write_data_js(state, history)
+        store.write_data_js(state, history, config=store.read_config())
         return
 
     # ── 9. Validate bets ──────────────────────────────────────────────────────
@@ -275,7 +276,7 @@ def run(store, force: bool = False) -> None:
         state["scout_error"]   = str(e)
         state["last_updated"]  = now_iso
         store.write_json("state", state, f"commit: validation error {today}")
-        store.write_data_js(state, history)
+        store.write_data_js(state, history, config=store.read_config())
         return
 
     # ── 10. Deduct stakes, update bankroll ────────────────────────────────────
@@ -342,7 +343,7 @@ def run(store, force: bool = False) -> None:
     )
     store.write_json("state",   state,   commit_msg)
     store.write_json("history", history, commit_msg)
-    store.write_data_js(state, history, commit_report=report_raw)
+    store.write_data_js(state, history, commit_report=report_raw, config=store.read_config())
 
     # ── 15. Audit log ─────────────────────────────────────────────────────────
     _append_audit(store, now_iso, llm,

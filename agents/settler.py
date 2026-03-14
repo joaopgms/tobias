@@ -287,7 +287,7 @@ def run(store) -> None:
     commit_msg = f"settler: {len(newly_settled)} settled ({wins}W/{losses}L), {len(still_pending)} pending"
     store.write_json("state",   state,   commit_msg)
     store.write_json("history", history, commit_msg)
-    store.write_data_js(state, history)
+    store.write_data_js(state, history, config=store.read_config())
 
     # ── 8. Audit log ──────────────────────────────────────────────────────────
     _append_audit(store, now_iso,

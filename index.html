@@ -198,6 +198,15 @@
     .patch-reason{font-size:.72rem;color:var(--muted);line-height:1.4}
     .audit-notes{font-size:.75rem;color:var(--text);margin-top:8px;padding-top:8px;border-top:1px solid var(--border2);line-height:1.5}
     .audit-no-change{font-size:.72rem;color:var(--muted);font-style:italic}
+    .analyst-notes-card{background:var(--card);border:1px solid var(--teal-mid);border-left:4px solid var(--teal);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
+    .analyst-notes-header{padding:12px 18px;background:var(--teal-soft);display:flex;align-items:center;justify-content:space-between;font-size:.68rem;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--teal)}
+    .analyst-notes-date{font-size:.65rem;color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0}
+    .analyst-notes-body{padding:14px 18px;font-size:.78rem;line-height:1.65;color:var(--text);white-space:pre-wrap;max-height:300px;overflow-y:auto}
+    .analyst-notes-body strong{color:var(--teal)}
+    .analyst-notes-section{margin-top:10px;padding-top:10px;border-top:1px solid var(--border2)}
+    .analyst-notes-section-title{font-size:.62rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+    .analyst-patch-item{display:flex;gap:8px;align-items:flex-start;margin-bottom:5px;font-size:.74rem}
+    .analyst-patch-bullet{color:var(--teal);font-weight:700;flex-shrink:0}
     .diff-block{margin-top:8px;border:1px solid var(--border2);border-radius:var(--r-sm);overflow:hidden;font-family:monospace;font-size:.68rem;line-height:1.6}
     .diff-header{background:var(--surface);padding:4px 10px;font-size:.62rem;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border2);display:flex;justify-content:space-between;align-items:center}
     .diff-section-name{color:var(--teal)}
@@ -414,6 +423,13 @@
 
 <!-- AUDIT TAB -->
 <div class="tab-panel" id="tab-audit">
+  <div class="analyst-notes-card" id="analystNotesCard" style="margin:16px 32px 0;display:none">
+    <div class="analyst-notes-header">
+      <span>🧠 Latest Analyst Notes</span>
+      <span class="analyst-notes-date" id="analystNotesDate"></span>
+    </div>
+    <div class="analyst-notes-body" id="analystNotesBody"></div>
+  </div>
   <div class="audit-filters">
     <span class="filter-label">Agent</span>
     <select id="auditAgent" onchange="renderAudit()"><option value="all">All Agents</option><option value="analyst">🧠 Analyst</option><option value="scout">🔍 Scout</option><option value="commit">🎯 Commit</option><option value="settler">✅ Settler</option></select>
@@ -671,7 +687,7 @@ function mobileLogo(n){return`<img src="${logoUrl(n)}" class="mobile-logo" onerr
 const ST  =typeof STATE_DATA!=='undefined'?STATE_DATA:{};
 const HIST=typeof HISTORY_DATA!=='undefined'?HISTORY_DATA:{seasons:[],entries:[]};
 const DRF =typeof DRAFT_PICKS!=='undefined'?DRAFT_PICKS:[];
-const AUDIT_DATA=typeof window.AUDIT_LOG!=='undefined'?window.AUDIT_LOG:[];
+const AUDIT_DATA=typeof AUDIT_LOG!=='undefined'?AUDIT_LOG:[];
 
 let allBets=[];
 try {
@@ -1020,6 +1036,52 @@ function toggleDiff(id) {
   btn.textContent = open ? '▼ show diff' : '▲ hide diff';
 }
 
+function renderAnalystNotes() {
+  const raw = typeof ANALYST_NOTES !== 'undefined' ? ANALYST_NOTES : '';
+  const card = document.getElementById('analystNotesCard');
+  const body = document.getElementById('analystNotesBody');
+  const dateEl = document.getElementById('analystNotesDate');
+  if (!card || !body) return;
+  if (!raw) { card.style.display = 'none'; return; }
+
+  // Parse frontmatter
+  let date = '', content = raw;
+  if (raw.startsWith('---')) {
+    const parts = raw.split('---');
+    if (parts.length >= 3) {
+      const meta = parts[1];
+      const dm = meta.match(/date:\s*(.+)/);
+      if (dm) date = dm[1].trim();
+      content = parts.slice(2).join('---').trim();
+    }
+  }
+
+  // Render sections
+  const sections = content.split(/^## /m).filter(s => s.trim());
+  let html = '';
+  sections.forEach(sec => {
+    const lines = sec.split('\n');
+    const title = lines[0].trim();
+    const body  = lines.slice(1).join('\n').trim();
+    if (!body) return;
+    if (title.includes("Today's Analysis")) {
+      html += `<div>${body}</div>`;
+    } else if (body !== 'None') {
+      html += `<div class="analyst-notes-section">
+        <div class="analyst-notes-section-title">${title}</div>`;
+      body.split('\n').filter(l => l.trim()).forEach(line => {
+        const clean = line.replace(/^[-*]\s*/, '');
+        html += `<div class="analyst-patch-item"><span class="analyst-patch-bullet">→</span><span>${clean}</span></div>`;
+      });
+      html += '</div>';
+    }
+  });
+
+  body.innerHTML = html || raw;
+  dateEl.textContent = date ? fmt(date + 'T00:00:00Z') : '';
+  card.style.display = 'block';
+}
+
 function renderAudit(){
   const af=document.getElementById('auditAgent').value;
   const sf=(document.getElementById('auditSection').value||'').toLowerCase();
@@ -1262,7 +1324,7 @@ function switchTab(tab){
   document.querySelectorAll('.main-tab').forEach(b=>b.classList.remove('active'));
   document.getElementById('tab-'+tab).classList.add('active');
   document.querySelector(`.main-tab[data-tab="${tab}"]`).classList.add('active');
-  if(tab==='audit')renderAudit();
+  if(tab==='audit'){renderAudit();renderAnalystNotes();}
   if(tab==='settings')renderSettings();
   if(tab==='history')renderTable();
 }

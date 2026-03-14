@@ -19,7 +19,7 @@ import re
 import logging
 from datetime import datetime, date, timezone
 
-from core.llm import call_llm, extract_tag, current_provider_name
+from core.llm import call_llm, call_llm_full, extract_tag, agent_model_name
 from core.espn import fetch_scoreboard, fetch_injuries, fetch_standings, fetch_first_game_time_utc
 from core.odds import fetch_betano_nba_odds, format_odds_for_prompt
 from core.validators import validate_all_drafts, ValidationError
@@ -36,7 +36,9 @@ Stakes are committed at the Commit phase, 15 minutes before tip-off.
 Read the skills file carefully — the Analyst updates it daily based on what is working.
 Follow it precisely. It is your primary decision-making guide.
 
-Output ONLY the required XML tags at the end of your response. No extra text after them."""
+CRITICAL FORMATTING RULE: Your response MUST end with these exact XML tags.
+No exceptions. Even if you find zero picks, output <draft_picks>[]</draft_picks>.
+The system will FAIL and no picks will be saved if these tags are missing."""
 
 
 def _build_scout_prompt(skills: str, games_text: str, odds_text: str,
@@ -82,18 +84,19 @@ Drafted_at: {datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')}
 
 Draft pick IDs: nba_draft_{today.replace('-','')}_{'{001, 002...}'}
 
-Output these XML tags at the very end:
+IMPORTANT: You MUST end your response with ALL THREE of these XML tags in this exact format.
+Do not add any text after the closing </scout_report> tag.
 
 <draft_picks>
-[JSON array of draft pick objects — [] if none]
+[JSON array of draft pick objects — use [] if no picks meet criteria]
 </draft_picks>
 
 <first_game_time>
-[ISO 8601 UTC timestamp of first game tip-off tonight, e.g. 2026-03-14T18:00:00Z]
+[ISO 8601 UTC of first tip-off, e.g. 2026-03-15T00:00:00Z]
 </first_game_time>
 
 <scout_report>
-[Full scout report text — markdown formatted]
+[Your full scouting analysis in markdown]
 </scout_report>
 """
 
@@ -157,7 +160,7 @@ def run(store) -> None:
     now     = datetime.now(timezone.utc)
     now_iso = now.isoformat()
     today   = now.strftime("%Y-%m-%d")
-    llm     = current_provider_name()
+    llm     = agent_model_name("scout")
 
     # ── 1. Load state ──────────────────────────────────────────────────────────
     state, history = store.read_state_and_history()
@@ -186,7 +189,7 @@ def run(store) -> None:
         state["scout_updated_at"] = now_iso
         state["last_updated"]     = now_iso
         store.write_json("state", state, f"scout: no games {today}")
-        store.write_data_js(state, history)
+        store.write_data_js(state, history, config=store.read_config())
         return
 
     # ── 5. Build prompt ───────────────────────────────────────────────────────
@@ -199,20 +202,23 @@ def run(store) -> None:
 
     # ── 6. Call LLM ───────────────────────────────────────────────────────────
     log.info("Scout: calling LLM…")
+    llm_result = None
     try:
-        raw = call_llm(
+        llm_result = call_llm_full(
             SCOUT_SYSTEM,
             _build_scout_prompt(skills, games_str, odds_str, injuries_str,
                                  standings_str, state, today),
-            max_tokens=3000,
+            max_tokens=4096,
+            agent="scout",
         )
+        raw = llm_result.text
     except Exception as e:
         log.error(f"Scout: LLM call failed: {e}")
         state["scout_status"] = "unavailable"
         state["scout_error"]  = str(e)
         state["last_updated"] = now_iso
         store.write_json("state", state, f"scout: LLM error {today}")
-        store.write_data_js(state, history)
+        store.write_data_js(state, history, config=store.read_config())
         return
 
     # ── 7. Extract tags ────────────────────────────────────────────────────────
@@ -226,7 +232,7 @@ def run(store) -> None:
         state["scout_error"]  = "Missing <draft_picks> tag"
         state["last_updated"] = now_iso
         store.write_json("state", state, f"scout: parse error {today}")
-        store.write_data_js(state, history)
+        store.write_data_js(state, history, config=store.read_config())
         return
 
     # ── 8. Parse draft picks ──────────────────────────────────────────────────
@@ -238,7 +244,7 @@ def run(store) -> None:
         state["scout_error"]  = f"JSON parse error: {e}"
         state["last_updated"] = now_iso
         store.write_json("state", state, f"scout: JSON error {today}")
-        store.write_data_js(state, history)
+        store.write_data_js(state, history, config=store.read_config())
         return
 
     # ── 9. Validate picks ─────────────────────────────────────────────────────
@@ -250,7 +256,7 @@ def run(store) -> None:
         state["scout_error"]  = str(e)
         state["last_updated"] = now_iso
         store.write_json("state", state, f"scout: validation error {today}")
-        store.write_data_js(state, history)
+        store.write_data_js(state, history, config=store.read_config())
         return
 
     # ── 10. Determine first_game_time ─────────────────────────────────────────
@@ -261,6 +267,8 @@ def run(store) -> None:
 
     # ── 11. Update state ──────────────────────────────────────────────────────
     state["draft_picks"]      = draft_picks
+    state["agent_models"] = state.get("agent_models", {})
+    state["agent_models"]["scout"] = llm
     state["scout_status"]     = "live"
     state["scout_error"]      = ""
     state["scout_updated_at"] = now_iso
@@ -276,7 +284,7 @@ def run(store) -> None:
     commit_msg = f"scout: {len(draft_picks)} draft picks for {today}"
     store.write_json("state",   state,   commit_msg)
     store.write_json("history", history, commit_msg)
-    store.write_data_js(state, history, scout_report=report_raw)
+    store.write_data_js(state, history, scout_report=report_raw, config=store.read_config())
 
     # ── 13. Audit log ─────────────────────────────────────────────────────────
     _append_audit(store, now_iso, llm,
@@ -287,13 +295,15 @@ def run(store) -> None:
                          for p in draft_picks],
                   first_game_time=fgt or "",
                   odds_source=odds[0].get("odds_source", "?") if odds else "none",
-                  bankroll=state["bankroll"])
+                  bankroll=state["bankroll"],
+                  llm_meta=llm_result.to_audit_dict() if llm_result else {})
 
     log.info(f"Scout done — {len(draft_picks)} picks | first game: {fgt}")
 
 
 def _append_audit(store, ts, llm, draft_count=0, picks=None,
-                  first_game_time="", odds_source="", bankroll=0, error=""):
+                  first_game_time="", odds_source="", bankroll=0, error="",
+                  llm_meta=None):
     entry = {
         "ts":               ts,
         "agent":            "scout",
@@ -304,6 +314,7 @@ def _append_audit(store, ts, llm, draft_count=0, picks=None,
         "odds_source":      odds_source,
         "bankroll":         round(bankroll, 2),
         "error":            error,
+        **(llm_meta or {}),
     }
     try:
         store.append_jsonl("scout_log", entry)

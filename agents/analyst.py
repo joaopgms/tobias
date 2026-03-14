@@ -23,7 +23,7 @@ import re
 import logging
 from datetime import datetime, date, timezone
 
-from core.llm import call_llm, extract_tag, current_provider_name
+from core.llm import call_llm, call_llm_full, extract_tag, agent_model_name
 from core.espn import fetch_standings, fetch_injuries
 
 log = logging.getLogger(__name__)
@@ -270,7 +270,7 @@ def run(store) -> None:
     now     = datetime.now(timezone.utc)
     now_iso = now.isoformat()
     today   = now.strftime("%Y-%m-%d")
-    llm     = current_provider_name()
+    llm     = agent_model_name("analyst")
 
     # ── 1. Load state ──────────────────────────────────────────────────────────
     state, history = store.read_state_and_history()
@@ -299,7 +299,9 @@ def run(store) -> None:
     system = ANALYST_SYSTEM
     user   = _build_analyst_prompt(perf, standings_str, injuries_str,
                                     scout_content, commit_content)
-    raw = call_llm(system, user, max_tokens=2048)
+    state["agent_models"] = state.get("agent_models", {})
+    state["agent_models"]["analyst"] = llm
+    raw = call_llm(system, user, max_tokens=2048, agent="analyst")
 
     # ── 6. Parse LLM response ─────────────────────────────────────────────────
     try:
@@ -360,6 +362,9 @@ commit_patches: {len(commit_applied)}
 ## Commit patches applied
 {chr(10).join(f"- [{p['section']}] {p['reason']}" for p in commit_applied) or "None"}
 """
+    state["analyst_updated_at"] = now_iso
+    store.write_json("state", state, f"analyst: updated_at {today}")
+    store.write_data_js(state, history, config=store.read_config())
     store.write_md("analyst_notes", notes_content,
                    f"analyst: notes {today}")
 
@@ -370,7 +375,8 @@ commit_patches: {len(commit_applied)}
                   notes=analyst_notes,
                   no_change=no_change,
                   bankroll=state["bankroll"],
-                  net_pnl=state.get("net_pnl", 0))
+                  net_pnl=state.get("net_pnl", 0),
+                  llm_meta=llm_result.to_audit_dict())
 
     log.info(f"Analyst done — scout changed={scout_changed}, commit changed={commit_changed}")
     if analyst_notes:
@@ -380,7 +386,8 @@ commit_patches: {len(commit_applied)}
 def _append_audit(store, ts: str, llm: str, error: str = "",
                   scout_patches: list = None, commit_patches: list = None,
                   notes: str = "", no_change: str = "",
-                  bankroll: float = 0, net_pnl: float = 0):
+                  bankroll: float = 0, net_pnl: float = 0,
+                  llm_meta: dict = None):
     entry = {
         "ts":               ts,
         "agent":            "analyst",
@@ -392,6 +399,7 @@ def _append_audit(store, ts: str, llm: str, error: str = "",
         "commit_patches":   commit_patches or [],
         "notes":            notes,
         "no_change_reason": no_change,
+        **(llm_meta or {}),
     }
     try:
         store.append_jsonl("analyst_log", entry)
