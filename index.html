@@ -1116,7 +1116,9 @@ function renderTable(){
     const pts=(b.match||'').split(' vs ');const h=pts[0]||'',a=pts[1]||'';
     const rb=b.result?`<span class="badge badge-${b.result.toLowerCase()}">${b.result==='WON'?'✅':b.result==='LOST'?'❌':'?'} ${b.result}</span>`:`<span class="badge badge-pending">⏳ Placed</span>`;
     const pnl=b.pnl!=null?`<span class="${b.pnl>=0?'pnl-pos':'pnl-neg'}">${b.pnl>=0?'+':''}€${b.pnl.toFixed(2)}</span>`:'-';
-    return`<tr><td>${b.date||'-'}</td>
+    const gameTime = b.time ? fmt(b.time) : '';
+    const betDate = b.date || '-';
+    return`<tr><td style='white-space:nowrap'>${betDate}${gameTime?`<br><span style="font-size:.65rem;color:var(--muted)">🏀 ${gameTime}</span>`:''}</td>
       <td><div class="team-cell">${logoImg(h)}<span>${getTeam(h).short}</span><span style="color:var(--muted);margin:0 4px;font-size:.7rem">vs</span>${logoImg(a)}<span>${getTeam(a).short}</span></div></td>
       <td>${(b.odds||0).toFixed(2)}</td><td>€${(b.stake||0).toFixed(2)}</td><td>€${(b.potential_return||0).toFixed(2)}</td>
       <td>${rb}</td><td>${pnl}</td>
@@ -1129,7 +1131,7 @@ function renderTable(){
     const rb=b.result?`<span class="badge badge-${b.result.toLowerCase()}">${b.result}</span>`:`<span class="badge badge-pending">⏳</span>`;
     const pnl=b.pnl!=null?`<span class="bet-card-chip"><span>P&L</span><span class="${b.pnl>=0?'pnl-pos':'pnl-neg'}">${b.pnl>=0?'+':''}€${b.pnl.toFixed(2)}</span></span>`:'';
     return`<div class="bet-card">
-      <div class="bet-card-top"><span class="bet-card-date">${b.date||''}${b.time?' · '+fmt(b.time):''}</span>${rb}</div>
+      <div class="bet-card-top"><span class="bet-card-date">${b.date||''}${b.time?' · 🏀 '+fmt(b.time):''}</span>${rb}</div>
       <div class="bet-card-matchup"><div class="bet-card-team">${mobileLogo(h)}<div class="bet-card-team-name">${getTeam(h).short}</div><div class="bet-card-venue">🏠 Home</div></div>
         <div class="bet-card-vs">VS</div>
         <div class="bet-card-team">${mobileLogo(a)}<div class="bet-card-team-name">${getTeam(a).short}</div><div class="bet-card-venue">✈️ Away</div></div>
