@@ -887,12 +887,16 @@ function renderDrafts(){
 let apexChart=null,wlInst=null;
 function renderChart(){
   const b=allBets.filter(x=>x.season===activeSeason&&(activeGame==='all'||x.game==activeGame)&&x.result).sort((a,b)=>a.date>b.date?1:-1);
-  let br=1000;const pts=[{x:'Start',y:br}];
+  let br=ST.bankroll_initial||1000;const pts=[{x:'Start',y:br}];
   b.forEach((x,i)=>{if(x.result==='WON')br+=(x.pnl||0);pts.push({x:x.date||`Bet ${i+1}`,y:Math.round(br*100)/100});});
   pts.push({x:'Now',y:ST.bankroll||br});
+  // Guard: ApexCharts crashes on empty/null data
+  if(!pts.length || pts.every(p=>!p.y)) { document.getElementById('bankrollChart').innerHTML='<div style="padding:40px;text-align:center;color:var(--muted);font-size:.8rem">No bet data yet</div>'; return; }
   document.getElementById('chartLabel').textContent=`Season ${activeSeason} · Game ${activeGame==='all'?'All':activeGame}`;
   if(apexChart){apexChart.destroy();apexChart=null;}
-  apexChart=new ApexCharts(document.getElementById('bankrollChart'),{
+  const chartEl=document.getElementById('bankrollChart');
+  if(!chartEl)return;
+  apexChart=new ApexCharts(chartEl,{
     series:[{name:'Bankroll',data:pts.map(p=>p.y)}],
     chart:{type:'area',height:200,toolbar:{show:false},background:'transparent',fontFamily:'Satoshi,sans-serif'},
     dataLabels:{enabled:false},stroke:{curve:'smooth',width:2,colors:['#7c1d34']},
@@ -914,7 +918,7 @@ function renderWL(){
   document.getElementById('legendPending').textContent=`${s.pend.length} Pending`;
   document.getElementById('wlSub').textContent=`${s.s.length} settled`;
   if(wlInst)wlInst.destroy();
-  if(!s.s.length&&!s.pend.length)return;
+  if(!s.s.length&&!s.pend.length){ document.getElementById('donutPct').textContent='0%'; return; }
   wlInst=new Chart(document.getElementById('wlChart'),{type:'doughnut',data:{labels:['Won','Lost','Pending'],datasets:[{data:[s.won.length,s.lost.length,s.pend.length],backgroundColor:['#2a6b4a','#7c1d34','#b08800'],borderWidth:0,hoverOffset:4}]},options:{cutout:'72%',plugins:{legend:{display:false}},animation:{duration:600}}});
 }
 
@@ -1283,7 +1287,7 @@ function refresh(){
   try{renderScout();}catch(e){console.warn('scout:',e);}
   try{renderDrafts();}catch(e){console.warn('drafts:',e);}
   try{renderAgents();}catch(e){console.warn('agents:',e);}
-  try{renderChart();}catch(e){console.warn('chart:',e);}
+  try{if(document.getElementById('bankrollChart'))renderChart();}catch(e){console.warn('chart:',e);}
   try{renderWL();}catch(e){console.warn('wl:',e);}
   try{renderAnalytics();}catch(e){console.warn('analytics:',e);}
 }
