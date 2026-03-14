@@ -179,13 +179,13 @@
     tbody tr{border-bottom:1px solid var(--border2);transition:background .12s}
     tbody tr:last-child{border-bottom:none}
     tbody tr:hover{background:var(--surface)}
-    td{padding:10px 14px;font-size:.78rem;vertical-align:middle}
+    td{padding:10px 14px;font-size:.78rem;vertical-align:top;white-space:nowrap}
     .team-cell{display:flex;align-items:center;gap:8px;font-weight:600}
     .team-logo-sm{width:22px;height:22px;object-fit:contain;border-radius:3px}
     .badge{display:inline-flex;align-items:center;padding:3px 9px;border-radius:var(--r-pill);font-size:.64rem;font-weight:700;letter-spacing:.5px;border:1px solid transparent}
     .badge-won{background:var(--green-soft);color:var(--green);border-color:#b3e0cc}.badge-lost{background:var(--burg-soft);color:var(--burg);border-color:var(--burg-mid)}.badge-pending{background:var(--yellow-soft);color:var(--yellow);border-color:var(--yellow-mid)}
     .pnl-pos{color:var(--green);font-weight:700}.pnl-neg{color:var(--burg);font-weight:700}
-    .reasoning-cell{max-width:220px;font-size:.7rem;color:var(--muted);line-height:1.4}
+    .reasoning-cell{font-size:.68rem;color:var(--muted);line-height:1.5;white-space:normal!important;min-width:180px;max-width:320px}
     .bet-cards-mobile{display:none;padding:8px 4px}
     .bet-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;margin-bottom:10px;box-shadow:var(--shadow)}
     .bet-card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
@@ -314,7 +314,6 @@
       .analytics-section,.settings-wrap{grid-template-columns:1fr}
       table,thead{display:none!important}
       .bet-cards-mobile{display:block}
-      .reasoning-cell{display:none}
       .scoreboard{grid-template-columns:1fr 1fr}
     }
   </style>
@@ -455,16 +454,9 @@
 
 <!-- AUDIT TAB -->
 <div class="tab-panel" id="tab-audit">
-  <div class="analyst-notes-card" id="analystNotesCard" style="margin:16px 32px 0;display:none">
-    <div class="analyst-notes-header">
-      <span>🧠 Latest Analyst Notes</span>
-      <span class="analyst-notes-date" id="analystNotesDate"></span>
-    </div>
-    <div class="analyst-notes-body" id="analystNotesBody"></div>
-  </div>
   <div class="audit-filters">
     <span class="filter-label">Agent</span>
-    <select id="auditAgent" onchange="renderAudit()"><option value="all">All Agents</option><option value="analyst">🧠 Analyst</option><option value="scout">🔍 Scout</option><option value="commit">🎯 Commit</option><option value="settler">✅ Settler</option></select>
+    <select id="auditAgent" onchange="renderAudit()"><option value="all">All Agents</option><option value="analyst">🧠 Analyst</option><option value="scout">🔍 Scout</option><option value="commit">🎯 Commit</option><option value="settler">✅ Setter</option></select>
     <span class="filter-label" style="margin-left:8px">Section</span>
     <input type="text" id="auditSection" placeholder="Filter section name…" oninput="renderAudit()" style="min-width:160px"/>
     <span class="filter-label" style="margin-left:8px">From</span>
@@ -517,7 +509,7 @@
           <div class="amc-rec">💡 Sonnet recommended</div>
         </div>
         <div class="agent-model-card">
-          <div class="amc-label">✅ Settler <span class="amc-sub">10:00 UTC daily</span></div>
+          <div class="amc-label">✅ Setter <span class="amc-sub">10:00 UTC daily</span></div>
           <select class="amc-select" id="sel-settler">
             <option value="claude-opus-4-6">Opus 4.6 (best reasoning)</option>
             <option value="claude-sonnet-4-6" selected>Sonnet 4.6 (default)</option>
@@ -642,7 +634,7 @@
     <div class="settings-card">
       <div class="settings-title">Agent Schedule (UTC)</div>
       <div style="font-size:.78rem;line-height:2.2;color:var(--text)">
-        <div>✅ <strong>Settler</strong> - 10:00 daily</div>
+        <div>✅ <strong>Setter</strong> - 10:00 daily</div>
         <div>🧠 <strong>Analyst</strong> - 11:00 daily</div>
         <div>🔍 <strong>Scout</strong> - 14:00 daily</div>
         <div>🎯 <strong>Commit</strong> - every 30min, self-gating<br/><span style="font-size:.68rem;color:var(--muted)">Fires 15min before first tip-off</span></div>
@@ -816,7 +808,7 @@ function buildTicker(){
     items=[
       `🏀 <span class="pend">TOBIAS</span> - Autonomous NBA Betting Simulation`,
       `Waiting for first agent run · Scout fires at 14:00 UTC`,
-      `Analyst 11:00 · Scout 14:00 · Commit 15min before tip-off · Settler 10:00`,
+      `Analyst 11:00 · Scout 14:00 · Commit 15min before tip-off · Setter 10:00`,
       `Odds via <span class="pend">Betano.pt</span> · Powered by Claude Sonnet 4.6`,
       `Starting bankroll: <span class="pend">€${(ST.bankroll_initial||1000).toLocaleString('pt-PT')}</span>`,
       `Season <span class="pend">${activeSeason}</span> · Game <span class="pend">${ST.game||1}</span>`,
@@ -918,23 +910,120 @@ function renderStats(){
   document.getElementById('lastUpdated').textContent=ST.last_updated?fmt(ST.last_updated):'-';
 }
 
+function parseReportBets(md) {
+  const bets = [];
+  md.split(/(?=### [✅❌])/).forEach(sec => {
+    const isOk = sec.startsWith('### ✅');
+    const isX  = sec.startsWith('### ❌');
+    if(!isOk && !isX) return;
+    const matchM  = sec.match(/\*\*Match:\*\*\s*([^\n]+)/);
+    const oddsM   = sec.match(/\*\*Odds:\*\*\s*([\d.]+)/);
+    const stakeM  = sec.match(/\*\*Stake:\*\*\s*€([\d.]+)/);
+    const potM    = sec.match(/\*\*Potential Return:\*\*\s*€([\d.]+)/);
+    const confM   = sec.match(/\*\*Confidence:\*\*\s*(\d+)/);
+    const edgeM   = sec.match(/\*\*Edge Summary:\*\*([^\n]+(?:\n(?!-)[^\n]+)*)/);
+    const cancelM = sec.match(/\*\*Reason:\*\*([^\n]+(?:\n(?!-)[^\n]+)*)/);
+    const anchorM = sec.match(/\*\*Anchor Status:\*\*([^\n]+)/);
+    const titleM  = sec.match(/### [✅❌] (.+)/);
+    bets.push({
+      confirmed: isOk,
+      title:  titleM  ? titleM[1].trim()   : '',
+      match:  matchM  ? matchM[1].trim()   : '',
+      odds:   oddsM   ? oddsM[1]           : '',
+      stake:  stakeM  ? stakeM[1]          : '',
+      pot:    potM    ? potM[1]            : '',
+      conf:   confM   ? parseInt(confM[1]) : 0,
+      edge:   edgeM   ? edgeM[1].trim()    : '',
+      cancel: cancelM ? cancelM[1].trim()  : '',
+      anchor: anchorM ? anchorM[1].trim()  : '',
+    });
+  });
+  return bets;
+}
+
+function renderRichReport(md) {
+  if(!md) return null;
+  const bets = parseReportBets(md);
+  const stakeM = md.match(/\*\*Total Committed Stake:\*\*[^€]*€([\d.]+)/);
+  const remM   = md.match(/\*\*Remaining Bankroll After Commit:\*\*[^€]*€([\d.]+)/);
+  const timeM  = md.match(/\*\*Committed At:\*\*\s*([^\n]+)/);
+  const confirmed = bets.filter(b=>b.confirmed);
+  const cancelled = bets.filter(b=>!b.confirmed);
+  let h = '';
+  h += '<div class="report-summary">';
+  if(stakeM) h+=`<div class="report-kpi"><div class="report-kpi-label">Staked</div><div class="report-kpi-val">€${stakeM[1]}</div></div>`;
+  if(remM)   h+=`<div class="report-kpi"><div class="report-kpi-label">Remaining</div><div class="report-kpi-val">€${remM[1]}</div></div>`;
+  h+=`<div class="report-kpi"><div class="report-kpi-label">Confirmed</div><div class="report-kpi-val">${confirmed.length} bets</div></div>`;
+  if(timeM)  h+=`<div class="report-kpi"><div class="report-kpi-label">Time</div><div class="report-kpi-val" style="font-size:.75rem">${fmt(timeM[1].trim())}</div></div>`;
+  h+='</div>';
+  if(confirmed.length){
+    h+='<div class="report-section-title">Confirmed Bets</div>';
+    confirmed.forEach(b=>{
+      const pts=b.match.split(' vs ');const hm=pts[0]||'',aw=pts[1]||'';
+      const pickLabel=b.title.replace(/^CONFIRMED\s*[-—]\s*/,'').replace(/\s*\(Bet ID:[^)]+\)/,'').replace(/\s*\(Draft ID:[^)]+\)/,'');
+      h+=`<div class="report-bet-card confirmed">
+        <div class="report-bet-header">
+          <div class="report-bet-title">${logoImg(hm,18)} ${getTeam(hm).short} vs ${logoImg(aw,18)} ${getTeam(aw).short}</div>
+          <span class="report-bet-status confirmed">✅ Confirmed</span>
+        </div>
+        <div class="report-bet-chips">
+          <span class="report-chip"><span>Pick</span>${pickLabel}</span>
+          <span class="report-chip"><span>Odds</span>${b.odds}</span>
+          <span class="report-chip"><span>Stake</span>€${b.stake}</span>
+          <span class="report-chip"><span>Pot.</span>€${b.pot}</span>
+          ${b.conf?`<span class="conf-pill ${CC(b.conf)}">${b.conf}/100 ${CL(b.conf)}</span>`:''}
+        </div>
+        ${b.anchor?`<div style="font-size:.68rem;color:var(--teal);margin-bottom:6px">⚓ ${b.anchor}</div>`:''}
+        ${b.edge?`<div class="report-bet-reasoning">${b.edge}</div>`:''}
+      </div>`;
+    });
+  }
+  if(cancelled.length){
+    h+='<div class="report-section-title">Cancelled Picks</div>';
+    cancelled.forEach(b=>{
+      const pickLabel=b.title.replace(/^CANCELLED\s*[-—]\s*/,'').replace(/\s*\(Bet ID:[^)]+\)/,'').replace(/\s*\(Draft ID:[^)]+\)/,'');
+      h+=`<div class="report-bet-card cancelled">
+        <div class="report-bet-header">
+          <div class="report-bet-title">${pickLabel}</div>
+          <span class="report-bet-status cancelled">❌ Cancelled</span>
+        </div>
+        ${b.cancel?`<div class="report-cancelled-reason">${b.cancel}</div>`:''}
+      </div>`;
+    });
+  }
+  return h||null;
+}
+
 function renderScout(){
-  const scoutReport  = typeof SCOUT_REPORT  !=='undefined'?SCOUT_REPORT :'';
+  const scoutReport  = typeof SCOUT_REPORT  !=='undefined'?SCOUT_REPORT:'';
   const commitReport = typeof COMMIT_REPORT !=='undefined'?COMMIT_REPORT:'';
   const su = typeof SCOUT_UPDATED_AT!=='undefined'?SCOUT_UPDATED_AT:'';
   const cu = ST.commit_updated_at||'';
   const hasCommitted = ST.commit_status==='done' && !DRF.length;
-  const titleEl = document.getElementById('reportCardTitle');
-
-  // After commit fires (no draft picks left), show commit report if available
-  if(hasCommitted && commitReport){
-    document.getElementById('scoutModelOutput').textContent=commitReport;
-    if(titleEl) titleEl.textContent='🎯 Commit Report';
-    document.getElementById('scoutUpdatedAt').textContent=cu?`Committed ${fmt(cu)}`:'After tonight\'s games';
+  const titleEl    = document.getElementById('reportCardTitle');
+  const renderedEl = document.getElementById('reportRendered');
+  const rawEl      = document.getElementById('scoutModelOutput');
+  const emptyEl    = document.getElementById('reportEmpty');
+  const report = hasCommitted && commitReport ? commitReport : scoutReport;
+  const isCommit = hasCommitted && !!commitReport;
+  if(titleEl) titleEl.textContent = isCommit ? '🎯 Commit Report' : '🧠 Scout Report';
+  const ts = isCommit?(cu?`Committed ${fmt(cu)}`:''):(su?`Scouted ${fmt(su)}`:'From last run');
+  document.getElementById('scoutUpdatedAt').textContent = ts;
+  if(!report){
+    if(renderedEl) renderedEl.style.display='none';
+    if(rawEl) rawEl.style.display='none';
+    if(emptyEl) emptyEl.style.display='block';
+    return;
+  }
+  if(emptyEl) emptyEl.style.display='none';
+  const richHtml = isCommit ? renderRichReport(report) : null;
+  if(richHtml && renderedEl){
+    renderedEl.innerHTML=richHtml;
+    renderedEl.style.display='block';
+    if(rawEl) rawEl.style.display='none';
   } else {
-    document.getElementById('scoutModelOutput').textContent=scoutReport||'No scout output yet.';
-    if(titleEl) titleEl.textContent='🧠 Scout Report';
-    document.getElementById('scoutUpdatedAt').textContent=su?`Scouted ${fmt(su)}`:'From last run';
+    if(rawEl){ rawEl.textContent=report; rawEl.style.display='block'; }
+    if(renderedEl) renderedEl.style.display='none';
   }
 }
 
@@ -1027,7 +1116,7 @@ function renderTable(){
       <td>${(b.odds||0).toFixed(2)}</td><td>€${(b.stake||0).toFixed(2)}</td><td>€${(b.potential_return||0).toFixed(2)}</td>
       <td>${rb}</td><td>${pnl}</td>
       <td><span class="conf-pill ${CC(b.confidence)}">${b.confidence}/100</span></td>
-      <td class="reasoning-cell" style="font-size:.7rem;color:var(--muted)">${(b.reasoning||'').slice(0,120)}${(b.reasoning||'').length>120?'…':''}</td>
+      <td class="reasoning-cell" style="font-size:.7rem;color:var(--muted);line-height:1.5">${b.reasoning||''}</td>
     </tr>`;
   }).join('');
   document.getElementById('betCardsMobile').innerHTML=bets.map(b=>{
@@ -1095,51 +1184,7 @@ function toggleDiff(id) {
   btn.textContent = open ? '▼ show diff' : '▲ hide diff';
 }
 
-function renderAnalystNotes() {
-  const raw = typeof ANALYST_NOTES !== 'undefined' ? ANALYST_NOTES : '';
-  const card = document.getElementById('analystNotesCard');
-  const body = document.getElementById('analystNotesBody');
-  const dateEl = document.getElementById('analystNotesDate');
-  if (!card || !body) return;
-  if (!raw) { card.style.display = 'none'; return; }
 
-  // Parse frontmatter
-  let date = '', content = raw;
-  if (raw.startsWith('---')) {
-    const parts = raw.split('---');
-    if (parts.length >= 3) {
-      const meta = parts[1];
-      const dm = meta.match(/date:\s*(.+)/);
-      if (dm) date = dm[1].trim();
-      content = parts.slice(2).join('---').trim();
-    }
-  }
-
-  // Render sections
-  const sections = content.split(/^## /m).filter(s => s.trim());
-  let html = '';
-  sections.forEach(sec => {
-    const lines = sec.split('\n');
-    const title = lines[0].trim();
-    const body  = lines.slice(1).join('\n').trim();
-    if (!body) return;
-    if (title.includes("Today's Analysis")) {
-      html += `<div>${body}</div>`;
-    } else if (body !== 'None') {
-      html += `<div class="analyst-notes-section">
-        <div class="analyst-notes-section-title">${title}</div>`;
-      body.split('\n').filter(l => l.trim()).forEach(line => {
-        const clean = line.replace(/^[-*]\s*/, '');
-        html += `<div class="analyst-patch-item"><span class="analyst-patch-bullet">→</span><span>${clean}</span></div>`;
-      });
-      html += '</div>';
-    }
-  });
-
-  body.innerHTML = html || raw;
-  dateEl.textContent = date ? fmt(date + 'T00:00:00Z') : '';
-  card.style.display = 'block';
-}
 
 function renderAudit(){
   const af=document.getElementById('auditAgent').value;
@@ -1163,11 +1208,13 @@ function renderAudit(){
       if(patches.length){
         body+=`<div style="margin-bottom:6px;font-size:.68rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px">${patches.length} section${patches.length>1?'s':''} updated</div>`;
         body+=patches.map((p,pi)=>{
-          const diffHtml = simpleDiff(p.before||'', p.after||'', p.section||'?', entries.indexOf(e)*100+pi);
+          // Only show diff if before/after have enough content (not truncated)
+          const hasDiff = (p.before||'').length > 30 && (p.after||'').length > 30;
+          const diffHtml = hasDiff ? simpleDiff(p.before||'', p.after||'', p.section||'?', entries.indexOf(e)*100+pi) : '';
           return `<div class="audit-patch"><span class="patch-section">${p.section||'?'}</span><span class="patch-reason">${p.reason||''}</span></div>${diffHtml}`;
         }).join('');
       }
-      if(e.notes)body+=`<div class="audit-notes">📝 ${e.notes}</div>`;
+      if(e.notes) body+=`<div class="audit-notes">📝 ${e.notes}</div>`;
       if(!patches.length&&e.no_change_reason)body+=`<div class="audit-no-change">No changes: ${e.no_change_reason}</div>`;
       body+=`<div class="audit-pnl-row"><span class="audit-kv">Bankroll: <strong>€${(e.bankroll||0).toFixed(2)}</strong></span><span class="audit-kv">P&L: <strong>€${(e.net_pnl||0).toFixed(2)}</strong></span>${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>`;
     }else if(ag==='scout'){
@@ -1383,7 +1430,7 @@ function switchTab(tab){
   document.querySelectorAll('.main-tab').forEach(b=>b.classList.remove('active'));
   document.getElementById('tab-'+tab).classList.add('active');
   document.querySelector(`.main-tab[data-tab="${tab}"]`).classList.add('active');
-  if(tab==='audit'){renderAudit();renderAnalystNotes();}
+  if(tab==='audit')renderAudit();
   if(tab==='settings')renderSettings();
   if(tab==='history')renderTable();
 }
