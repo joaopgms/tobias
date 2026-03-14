@@ -844,7 +844,7 @@ function renderScout(){
   if(hasCommitted && commitReport){
     document.getElementById('scoutModelOutput').textContent=commitReport;
     if(titleEl) titleEl.textContent='🎯 Commit Report';
-    document.getElementById('scoutUpdatedAt').textContent=cu?`Committed ${fmt(cu)}`:'After tonight's games';
+    document.getElementById('scoutUpdatedAt').textContent=cu?`Committed ${fmt(cu)}`:'After tonight\'s games';
   } else {
     document.getElementById('scoutModelOutput').textContent=scoutReport||'No scout output yet.';
     if(titleEl) titleEl.textContent='🧠 Scout Report';
