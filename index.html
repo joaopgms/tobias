@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>🏀 Tobias — NBA Sim</title>
+  <title>🏀 Tobias - NBA Sim</title>
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,800,900&display=swap" rel="stylesheet"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.44.0/apexcharts.min.js"></script>
@@ -289,7 +289,7 @@
       </div>
     </div>
     <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;flex-shrink:0">
-      <div class="header-meta">Last updated &nbsp;<strong id="lastUpdated">—</strong></div>
+      <div class="header-meta">Last updated &nbsp;<strong id="lastUpdated">-</strong></div>
     </div>
   </div>
   <div class="main-tabs">
@@ -311,35 +311,35 @@
 <div class="tab-panel active" id="tab-live">
   <div class="bust-banner" id="bustBanner" style="display:none"><span style="font-size:1.3rem">🔴</span><span id="bustMessage"></span></div>
   <div class="scoreboard">
-    <div class="score-card sc-burg"><div class="score-label">💰 Bankroll</div><div class="score-value" id="statBankroll">—</div><div class="score-sub" id="statBankrollSub">—</div></div>
-    <div class="score-card sc-teal"><div class="score-label">📈 Net P&L</div><div class="score-value" id="statPnl">—</div><div class="score-sub" id="statPnlSub">—</div></div>
-    <div class="score-card sc-cyan"><div class="score-label">⏳ Pending</div><div class="score-value" id="statPending" style="color:var(--cyan)">—</div><div class="score-sub" id="statPendingSub">—</div></div>
-    <div class="score-card"><div class="score-label">📊 Total Staked</div><div class="score-value" id="statStaked">—</div><div class="score-sub" id="statROI">ROI: —</div></div>
+    <div class="score-card sc-burg"><div class="score-label">💰 Bankroll</div><div class="score-value" id="statBankroll">-</div><div class="score-sub" id="statBankrollSub">-</div></div>
+    <div class="score-card sc-teal"><div class="score-label">📈 Net P&L</div><div class="score-value" id="statPnl">-</div><div class="score-sub" id="statPnlSub">-</div></div>
+    <div class="score-card sc-cyan"><div class="score-label">⏳ Pending</div><div class="score-value" id="statPending" style="color:var(--cyan)">-</div><div class="score-sub" id="statPendingSub">-</div></div>
+    <div class="score-card"><div class="score-label">📊 Total Staked</div><div class="score-value" id="statStaked">-</div><div class="score-sub" id="statROI">ROI: -</div></div>
   </div>
   <div class="agents-row">
     <div class="agent-card">
       <div class="agent-card-header"><span class="agent-name">🧠 Analyst</span><span class="agent-pill done" id="analystPill"><span class="agent-dot done" id="analystDot"></span><span id="analystStatus">Daily</span></span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Model</span><span class="agent-meta-val" id="analystLlm">—</span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Last run</span><span class="agent-meta-val" id="analystLastRun">—</span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Next run</span><span class="agent-meta-val" id="analystNextRun">—</span></div>
+      <div class="agent-meta-row"><span class="agent-meta-label">Model</span><span class="agent-meta-val" id="analystLlm">-</span></div>
+      <div class="agent-meta-row"><span class="agent-meta-label">Last run</span><span class="agent-meta-val" id="analystLastRun">-</span></div>
+      <div class="agent-meta-row"><span class="agent-meta-label">Next run</span><span class="agent-meta-val" id="analystNextRun">-</span></div>
     </div>
     <div class="agent-card">
-      <div class="agent-card-header"><span class="agent-name">🔍 Scout</span><span class="agent-pill pending" id="scoutPill"><span class="agent-dot pending" id="scoutDot"></span><span id="scoutStatus">—</span></span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Model</span><span class="agent-meta-val" id="scoutLlm">—</span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Last run</span><span class="agent-meta-val" id="scoutTime">—</span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Next run</span><span class="agent-meta-val" id="scoutNextRun">—</span></div>
+      <div class="agent-card-header"><span class="agent-name">🔍 Scout</span><span class="agent-pill pending" id="scoutPill"><span class="agent-dot pending" id="scoutDot"></span><span id="scoutStatus">-</span></span></div>
+      <div class="agent-meta-row"><span class="agent-meta-label">Model</span><span class="agent-meta-val" id="scoutLlm">-</span></div>
+      <div class="agent-meta-row"><span class="agent-meta-label">Last run</span><span class="agent-meta-val" id="scoutTime">-</span></div>
+      <div class="agent-meta-row"><span class="agent-meta-label">Next run</span><span class="agent-meta-val" id="scoutNextRun">-</span></div>
     </div>
     <div class="agent-card">
-      <div class="agent-card-header"><span class="agent-name">🎯 Commit</span><span class="agent-pill pending" id="commitPill"><span class="agent-dot pending" id="commitDot"></span><span id="commitStatus">—</span></span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Model</span><span class="agent-meta-val" id="commitLlm">—</span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Last run</span><span class="agent-meta-val" id="commitTime">—</span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">First game</span><span class="agent-meta-val" id="firstGameTime">—</span></div>
+      <div class="agent-card-header"><span class="agent-name">🎯 Commit</span><span class="agent-pill pending" id="commitPill"><span class="agent-dot pending" id="commitDot"></span><span id="commitStatus">-</span></span></div>
+      <div class="agent-meta-row"><span class="agent-meta-label">Model</span><span class="agent-meta-val" id="commitLlm">-</span></div>
+      <div class="agent-meta-row"><span class="agent-meta-label">Last run</span><span class="agent-meta-val" id="commitTime">-</span></div>
+      <div class="agent-meta-row"><span class="agent-meta-label">First game</span><span class="agent-meta-val" id="firstGameTime">-</span></div>
     </div>
     <div class="agent-card">
       <div class="agent-card-header"><span class="agent-name">✅ Setter</span><span class="agent-pill done" id="settlerPill"><span class="agent-dot done"></span><span>Daily</span></span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Model</span><span class="agent-meta-val" id="settlerLlm">—</span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Last run</span><span class="agent-meta-val" id="settlerLastRun">—</span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Next run</span><span class="agent-meta-val" id="settlerNextRun">—</span></div>
+      <div class="agent-meta-row"><span class="agent-meta-label">Model</span><span class="agent-meta-val" id="settlerLlm">-</span></div>
+      <div class="agent-meta-row"><span class="agent-meta-label">Last run</span><span class="agent-meta-val" id="settlerLastRun">-</span></div>
+      <div class="agent-meta-row"><span class="agent-meta-label">Next run</span><span class="agent-meta-val" id="settlerNextRun">-</span></div>
     </div>
   </div>
   <div class="scout-card">
@@ -348,7 +348,7 @@
   </div>
   <div class="draft-section" id="draftSection" style="display:none">
     <div class="draft-header">
-      <div><div class="draft-title">⏳ Tonight's Draft Picks — awaiting commit</div><div class="draft-subtitle" id="draftSubtitle"></div></div>
+      <div><div class="draft-title">⏳ Tonight's Draft Picks - awaiting commit</div><div class="draft-subtitle" id="draftSubtitle"></div></div>
       <div class="table-head-actions">
         <button class="btn-wa" onclick="shareScoutWA()" title="Share on WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></button>
         <button class="btn-copy" id="btnScoutCopy" onclick="copyScout()">Copy</button>
@@ -364,7 +364,7 @@
     <div class="analytics-card">
       <div class="section-header"><div class="section-title">W / L <span>BREAKDOWN</span></div><div style="font-size:.68rem;color:var(--muted)" id="wlSub"></div></div>
       <div class="donut-wrap">
-        <div class="donut-canvas-wrap"><canvas id="wlChart"></canvas><div class="donut-center"><div class="donut-pct" id="donutPct">—</div><div class="donut-lbl">Win Rate</div></div></div>
+        <div class="donut-canvas-wrap"><canvas id="wlChart"></canvas><div class="donut-center"><div class="donut-pct" id="donutPct">-</div><div class="donut-lbl">Win Rate</div></div></div>
         <div class="donut-legend">
           <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div><span id="legendWon">0 Won</span></div>
           <div class="legend-item"><div class="legend-dot" style="background:var(--burg)"></div><span id="legendLost">0 Lost</span></div>
@@ -421,7 +421,7 @@
   <div class="settings-wrap">
     <div class="settings-card" style="grid-column:1/-1">
       <div class="settings-title">Per-Agent Model Configuration</div>
-      <div style="font-size:.72rem;color:var(--muted);margin-bottom:16px">Choose a model per agent. Save writes to <code>data/config.json</code> in the repo — agents read it on their next run. Requires your GitHub PAT.</div>
+      <div style="font-size:.72rem;color:var(--muted);margin-bottom:16px">Choose a model per agent. Save writes to <code>data/config.json</code> in the repo - agents read it on their next run. Requires your GitHub PAT.</div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:16px">
         <div class="agent-model-card">
           <div class="amc-label">🧠 Analyst <span class="amc-sub">11:00 UTC daily</span></div>
@@ -431,8 +431,8 @@
             <option value="claude-haiku-4-5-20251001">Haiku 4.5 (cheapest)</option>
             <option value="gemini-3.1-flash-lite-preview">Gemini Flash (free)</option>
           </select>
-          <div class="amc-cost" id="cost-analyst">—</div>
-          <div class="amc-rec">💡 Opus recommended — runs once/day</div>
+          <div class="amc-cost" id="cost-analyst">-</div>
+          <div class="amc-rec">💡 Opus recommended - runs once/day</div>
         </div>
         <div class="agent-model-card">
           <div class="amc-label">🔍 Scout <span class="amc-sub">14:00 UTC daily</span></div>
@@ -442,7 +442,7 @@
             <option value="claude-haiku-4-5-20251001">Haiku 4.5 (cheapest)</option>
             <option value="gemini-3.1-flash-lite-preview">Gemini Flash (free)</option>
           </select>
-          <div class="amc-cost" id="cost-scout">—</div>
+          <div class="amc-cost" id="cost-scout">-</div>
           <div class="amc-rec">💡 Sonnet recommended</div>
         </div>
         <div class="agent-model-card">
@@ -453,7 +453,7 @@
             <option value="claude-haiku-4-5-20251001">Haiku 4.5 (cheapest)</option>
             <option value="gemini-3.1-flash-lite-preview">Gemini Flash (free)</option>
           </select>
-          <div class="amc-cost" id="cost-commit">—</div>
+          <div class="amc-cost" id="cost-commit">-</div>
           <div class="amc-rec">💡 Sonnet recommended</div>
         </div>
         <div class="agent-model-card">
@@ -464,8 +464,8 @@
             <option value="claude-haiku-4-5-20251001">Haiku 4.5 (cheapest)</option>
             <option value="gemini-3.1-flash-lite-preview">Gemini Flash (free)</option>
           </select>
-          <div class="amc-cost" id="cost-settler">—</div>
-          <div class="amc-rec">💡 Haiku fine — minimal LLM use</div>
+          <div class="amc-cost" id="cost-settler">-</div>
+          <div class="amc-rec">💡 Haiku fine - minimal LLM use</div>
         </div>
       </div>
       <div class="pat-save-box">
@@ -474,7 +474,7 @@
           <input type="password" id="ghPatInput" placeholder="github_pat_..." class="pat-input"/>
           <button onclick="saveConfig()" class="btn-save-config">💾 Save Config</button>
         </div>
-        <div class="pat-save-note">PAT needs <strong>Contents: write</strong> on this repo. Never stored — only used for this request.</div>
+        <div class="pat-save-note">PAT needs <strong>Contents: write</strong> on this repo. Never stored - only used for this request.</div>
       </div>
       <div id="saveStatus" style="display:none;font-size:.76rem;padding:8px 12px;border-radius:var(--r-sm);margin-bottom:8px"></div>
 
@@ -529,7 +529,7 @@
               <div class="step-content">
                 <div class="step-title">Set the one permission needed</div>
                 <div class="step-desc">
-                  Under <strong>Repository permissions</strong>, find <strong>Contents</strong> and set it to <strong>Read and write</strong>. That's the only permission required — leave everything else as No access.
+                  Under <strong>Repository permissions</strong>, find <strong>Contents</strong> and set it to <strong>Read and write</strong>. That's the only permission required - leave everything else as No access.
                 </div>
               </div>
             </div>
@@ -538,7 +538,7 @@
               <div class="step-num">6</div>
               <div class="step-content">
                 <div class="step-title">Generate and copy</div>
-                <div class="step-desc">Click <strong>Generate token</strong>. Copy the token immediately — GitHub only shows it once. It starts with <code class="step-code">github_pat_</code></div>
+                <div class="step-desc">Click <strong>Generate token</strong>. Copy the token immediately - GitHub only shows it once. It starts with <code class="step-code">github_pat_</code></div>
               </div>
             </div>
 
@@ -554,7 +554,7 @@
               <div class="step-num step-num-info">!</div>
               <div class="step-content">
                 <div class="step-title">When does the change take effect?</div>
-                <div class="step-desc">Immediately on save — the next agent run will read <code class="step-code">data/config.json</code> from the repo and use the new models. The Analyst runs at 11:00 UTC, Scout at 14:00 UTC.</div>
+                <div class="step-desc">Immediately on save - the next agent run will read <code class="step-code">data/config.json</code> from the repo and use the new models. The Analyst runs at 11:00 UTC, Scout at 14:00 UTC.</div>
               </div>
             </div>
 
@@ -571,8 +571,8 @@
       </div>
       <div class="settings-info">
         <strong>Monthly cost estimates (4 runs/day, ~10K in + 3K out tokens):</strong><br/>
-        Opus all agents ~€40–50 · Sonnet all ~€8–10 · Haiku all ~€1–2 · Gemini Flash ~€0.50<br/>
-        <strong>Hybrid (Opus analyst + Sonnet rest) ~€15–20 ← recommended</strong>
+        Opus all agents ~€40-50 · Sonnet all ~€8-10 · Haiku all ~€1-2 · Gemini Flash ~€0.50<br/>
+        <strong>Hybrid (Opus analyst + Sonnet rest) ~€15-20 ← recommended</strong>
       </div>
     </div>
     <div class="settings-card">
@@ -582,10 +582,10 @@
     <div class="settings-card">
       <div class="settings-title">Agent Schedule (UTC)</div>
       <div style="font-size:.78rem;line-height:2.2;color:var(--text)">
-        <div>✅ <strong>Settler</strong> — 10:00 daily</div>
-        <div>🧠 <strong>Analyst</strong> — 11:00 daily</div>
-        <div>🔍 <strong>Scout</strong> — 14:00 daily</div>
-        <div>🎯 <strong>Commit</strong> — every 30min, self-gating<br/><span style="font-size:.68rem;color:var(--muted)">Fires 15min before first tip-off</span></div>
+        <div>✅ <strong>Settler</strong> - 10:00 daily</div>
+        <div>🧠 <strong>Analyst</strong> - 11:00 daily</div>
+        <div>🔍 <strong>Scout</strong> - 14:00 daily</div>
+        <div>🎯 <strong>Commit</strong> - every 30min, self-gating<br/><span style="font-size:.68rem;color:var(--muted)">Fires 15min before first tip-off</span></div>
       </div>
     </div>
     <div class="settings-card" style="grid-column:1/-1">
@@ -597,11 +597,11 @@
         </div>
       </div>
       <div style="font-size:.68rem;color:var(--muted);margin-bottom:10px">
-        Read live from <code class="step-code">skills/*.md</code> — updated daily by the Analyst agent. These drive all betting decisions.
+        Read live from <code class="step-code">skills/*.md</code> - updated daily by the Analyst agent. These drive all betting decisions.
       </div>
       <div id="skills-content" class="skills-viewer">Loading skills…</div>
       <div class="settings-info" style="margin-top:12px">
-        <strong>Bust resets to the season starting bankroll (€<span id="bustResetAmount">1,000</span>)</strong> — not a fixed amount.<br/>
+        <strong>Bust resets to the season starting bankroll (€<span id="bustResetAmount">1,000</span>)</strong> - not a fixed amount.<br/>
         To change staking rules, the Analyst will patch the <code class="step-code">confidence_staking</code> section of Scout Skills based on performance data.
       </div>
     </div>
@@ -611,7 +611,7 @@
 <div id="copyToast" class="copy-toast"></div>
 <script src="data/data.js"></script>
 <script>
-// ── ALL 30 NBA TEAMS ───────────────────────────────────────────────────────
+// -- ALL 30 NBA TEAMS -------------------------------------------------------
 const NBA_TEAMS={
   'Atlanta Hawks':{abbr:'ATL',short:'Hawks',id:'atl'},
   'Boston Celtics':{abbr:'BOS',short:'Celtics',id:'bos'},
@@ -655,7 +655,7 @@ function logoUrl(n){return`https://a.espncdn.com/i/teamlogos/nba/500/${getTeam(n
 function logoImg(n,sz=22){return`<img src="${logoUrl(n)}" style="width:${sz}px;height:${sz}px;object-fit:contain" onerror="this.style.display='none'" alt="${getTeam(n).abbr}"/>`;}
 function mobileLogo(n){return`<img src="${logoUrl(n)}" class="mobile-logo" onerror="this.style.display='none'" alt="${getTeam(n).abbr}"/>`;}
 
-// ── DATA ───────────────────────────────────────────────────────────────────
+// -- DATA -------------------------------------------------------------------
 const ST  =typeof STATE_DATA!=='undefined'?STATE_DATA:{};
 const HIST=typeof HISTORY_DATA!=='undefined'?HISTORY_DATA:{seasons:[],entries:[]};
 const DRF =typeof DRAFT_PICKS!=='undefined'?DRAFT_PICKS:[];
@@ -671,7 +671,7 @@ let activeSeason=ST.season||seasons[seasons.length-1]||'2024-25';
 let activeGame=ST.game||1;
 let sortCol='date',sortDir=-1;
 
-// ── SELECTOR ───────────────────────────────────────────────────────────────
+// -- SELECTOR ---------------------------------------------------------------
 function buildSelector(){
   const sel=document.getElementById('seasonSelect');
   sel.innerHTML=seasons.length?seasons.map(s=>`<option value="${s}" ${s===activeSeason?'selected':''}>${s}</option>`).join(''):`<option value="2024-25">2024-25</option>`;
@@ -693,7 +693,7 @@ function buildGameTabs(){
 }
 function setGame(n){activeGame=n;buildGameTabs();refresh();}
 
-// ── FILTER BETS ────────────────────────────────────────────────────────────
+// -- FILTER BETS ------------------------------------------------------------
 function getFiltered(){
   let b=allBets.filter(x=>x.season===activeSeason);
   if(activeGame!=='all')b=b.filter(x=>x.game==activeGame);
@@ -706,7 +706,7 @@ function getFiltered(){
   return b;
 }
 
-// ── STATS ──────────────────────────────────────────────────────────────────
+// -- STATS ------------------------------------------------------------------
 function stats(){
   const b=allBets.filter(x=>x.season===activeSeason&&(activeGame==='all'||x.game==activeGame));
   const s=b.filter(x=>x.result),won=s.filter(x=>x.result==='WON'),lost=s.filter(x=>x.result==='LOST'),pend=b.filter(x=>!x.result);
@@ -718,11 +718,11 @@ function stats(){
   return{b,s,won,lost,pend,tStk,tRet,pnl,wr,roi,br,peak,streak,sType};
 }
 
-// ── CONFIDENCE ─────────────────────────────────────────────────────────────
+// -- CONFIDENCE -------------------------------------------------------------
 const CC=c=>c>=85?'conf-elite':c>=70?'conf-high':c>=55?'conf-med':c>=40?'conf-spec':'conf-no';
 const CL=c=>c>=85?'🔥 Elite':c>=70?'✅ High':c>=55?'🟡 Med':c>=40?'🔵 Spec':'❌';
 
-// ── TICKER ─────────────────────────────────────────────────────────────────
+// -- TICKER -----------------------------------------------------------------
 function buildTicker(){
   const s=stats();
   const hasData = allBets.length > 0 || s.br !== 1000 || ST.last_updated;
@@ -732,13 +732,13 @@ function buildTicker(){
       `Bankroll: <span class="pend">€${(s.br||0).toFixed(2)}</span>`,
       `Record: <span class="win">${s.won.length}W</span> / <span class="loss">${s.lost.length}L</span>`,
       `Season ${activeSeason}`,
-      ...allBets.slice(-4).map(b=>`${b.match} — ${b.pick} <span class="${b.result?(b.result==='WON'?'win':'loss'):'pend'}">${b.result||'PENDING'}</span>`),
+      ...allBets.slice(-4).map(b=>`${b.match} - ${b.pick} <span class="${b.result?(b.result==='WON'?'win':'loss'):'pend'}">${b.result||'PENDING'}</span>`),
       `Scout 14:00 UTC · Commit 15min before tip-off`,
       `Odds: Betano.pt via OddsPapi`,
     ];
   } else {
     items=[
-      `🏀 <span class="pend">TOBIAS</span> — Autonomous NBA Betting Simulation`,
+      `🏀 <span class="pend">TOBIAS</span> - Autonomous NBA Betting Simulation`,
       `Waiting for first agent run · Scout fires at 14:00 UTC`,
       `Analyst 11:00 · Scout 14:00 · Commit 15min before tip-off · Settler 10:00`,
       `Odds via <span class="pend">Betano.pt</span> · Powered by Claude Sonnet 4.6`,
@@ -750,7 +750,7 @@ function buildTicker(){
   document.getElementById('tickerScroll').innerHTML=d.map(i=>`<span class="ticker-item">${i}</span>`).join('');
 }
 
-// ── NEXT RUN HELPER ────────────────────────────────────────────────────────
+// -- NEXT RUN HELPER --------------------------------------------------------
 function nextRunAt(utcHour) {
   const now = new Date();
   const next = new Date();
@@ -764,7 +764,7 @@ function nextRunAt(utcHour) {
   return `${dd}/${mm}/${yyyy} ${hh}:${mn} UTC`;
 }
 
-// ── AGENTS ─────────────────────────────────────────────────────────────────
+// -- AGENTS -----------------------------------------------------------------
 function renderAgents(){
   const scSt=typeof SCOUT_STATUS!=='undefined'?SCOUT_STATUS:'pending';
   const cmSt=ST.commit_status||'pending';
@@ -808,14 +808,14 @@ function renderAgents(){
 
   // First game time
   const fgt=ST.first_game_time;
-  document.getElementById('firstGameTime').textContent = fgt ? fmt(fgt) : '—';
+  document.getElementById('firstGameTime').textContent = fgt ? fmt(fgt) : '-';
   // Next run timestamps
   const elAN=document.getElementById('analystNextRun'); if(elAN) elAN.textContent=nextRunAt(11);
   const elSC=document.getElementById('scoutNextRun');   if(elSC) elSC.textContent=nextRunAt(14);
   const elSE=document.getElementById('settlerNextRun'); if(elSE) elSE.textContent=nextRunAt(10);
 }
 
-// ── MAIN RENDER ────────────────────────────────────────────────────────────
+// -- MAIN RENDER ------------------------------------------------------------
 function renderStats(){
   const s=stats();
   document.getElementById('statBankroll').textContent=`€${(s.br||0).toFixed(2)}`;
@@ -825,11 +825,11 @@ function renderStats(){
   document.getElementById('statPending').textContent=s.pend.length;
   document.getElementById('statPendingSub').textContent=s.pend.length?`€${s.pend.reduce((a,b)=>a+b.stake,0).toFixed(2)} at risk`:'No pending bets';
   document.getElementById('statStaked').textContent=`€${s.tStk.toFixed(2)}`;
-  document.getElementById('statROI').textContent=`ROI: ${s.roi!==null?s.roi+'%':'—'}`;
+  document.getElementById('statROI').textContent=`ROI: ${s.roi!==null?s.roi+'%':'-'}`;
   const bust=ST.bust&&!s.pend.length;
   document.getElementById('bustBanner').style.display=bust?'flex':'none';
   if(bust)document.getElementById('bustMessage').textContent=`💥 Bust at game ${ST.game}. New game started with €${(ST.bankroll_initial||1000).toLocaleString('pt-PT')}.`;
-  document.getElementById('lastUpdated').textContent=ST.last_updated?fmt(ST.last_updated):'—';
+  document.getElementById('lastUpdated').textContent=ST.last_updated?fmt(ST.last_updated):'-';
 }
 
 function renderScout(){
@@ -896,7 +896,7 @@ function renderChart(){
 
 function renderWL(){
   const s=stats();
-  document.getElementById('donutPct').textContent=s.wr!==null?s.wr+'%':'—';
+  document.getElementById('donutPct').textContent=s.wr!==null?s.wr+'%':'-';
   document.getElementById('legendWon').textContent=`${s.won.length} Won`;
   document.getElementById('legendLost').textContent=`${s.lost.length} Lost`;
   document.getElementById('legendPending').textContent=`${s.pend.length} Pending`;
@@ -908,21 +908,21 @@ function renderWL(){
 
 function renderAnalytics(){
   const s=stats();
-  const aOdds=s.s.length?(s.s.reduce((a,b)=>a+(b.odds||0),0)/s.s.length).toFixed(2):'—';
-  const aStk=s.s.length?(s.tStk/s.s.length).toFixed(0):'—';
+  const aOdds=s.s.length?(s.s.reduce((a,b)=>a+(b.odds||0),0)/s.s.length).toFixed(2):'-';
+  const aStk=s.s.length?(s.tStk/s.s.length).toFixed(0):'-';
   const best=s.won.length?s.won.reduce((b,x)=>(x.pnl||0)>(b.pnl||0)?x:b,s.won[0]):null;
-  const stk=s.streak>1?`<span class="streak-badge ${s.sType==='WON'?'streak-w':'streak-l'}">${s.sType==='WON'?'🔥':'❄️'} ${s.streak} in a row</span>`:'—';
+  const stk=s.streak>1?`<span class="streak-badge ${s.sType==='WON'?'streak-w':'streak-l'}">${s.sType==='WON'?'🔥':'❄️'} ${s.streak} in a row</span>`:'-';
   document.getElementById('analyticsStats').innerHTML=`
     <div class="a-stat"><div class="a-stat-label">Avg Odds</div><div class="a-stat-value teal">${aOdds}</div></div>
     <div class="a-stat"><div class="a-stat-label">Avg Stake</div><div class="a-stat-value">€${aStk}</div></div>
-    <div class="a-stat"><div class="a-stat-label">Best Win</div><div class="a-stat-value green">${best?'+€'+(best.pnl||0).toFixed(2):'—'}</div>${best?`<div class="a-stat-sub">${best.match}</div>`:''}</div>
+    <div class="a-stat"><div class="a-stat-label">Best Win</div><div class="a-stat-value green">${best?'+€'+(best.pnl||0).toFixed(2):'-'}</div>${best?`<div class="a-stat-sub">${best.match}</div>`:''}</div>
     <div class="a-stat"><div class="a-stat-label">Streak</div><div class="a-stat-value" style="font-size:.85rem">${stk}</div></div>
     <div class="a-stat"><div class="a-stat-label">Returned</div><div class="a-stat-value green">€${s.tRet.toFixed(2)}</div></div>
     <div class="a-stat"><div class="a-stat-label">Net P&L</div><div class="a-stat-value ${s.pnl>=0?'green':'burg'}">${s.pnl>=0?'+':''}€${s.pnl.toFixed(2)}</div></div>
   `;
 }
 
-// ── TABLE ──────────────────────────────────────────────────────────────────
+// -- TABLE ------------------------------------------------------------------
 function renderTable(){
   const bets=[...getFiltered()].sort((a,b)=>{let av=a[sortCol]??'',bv=b[sortCol]??'';return typeof av==='number'?(av-bv)*sortDir:String(av).localeCompare(String(bv))*sortDir;});
   document.getElementById('filterCount').textContent=`${bets.length} bet${bets.length!==1?'s':''}`;
@@ -930,8 +930,8 @@ function renderTable(){
   document.getElementById('betTableBody').innerHTML=bets.map(b=>{
     const pts=(b.match||'').split(' vs ');const h=pts[0]||'',a=pts[1]||'';
     const rb=b.result?`<span class="badge badge-${b.result.toLowerCase()}">${b.result==='WON'?'✅':b.result==='LOST'?'❌':'?'} ${b.result}</span>`:`<span class="badge badge-pending">⏳ Pending</span>`;
-    const pnl=b.pnl!=null?`<span class="${b.pnl>=0?'pnl-pos':'pnl-neg'}">${b.pnl>=0?'+':''}€${b.pnl.toFixed(2)}</span>`:'—';
-    return`<tr><td>${b.date||'—'}</td>
+    const pnl=b.pnl!=null?`<span class="${b.pnl>=0?'pnl-pos':'pnl-neg'}">${b.pnl>=0?'+':''}€${b.pnl.toFixed(2)}</span>`:'-';
+    return`<tr><td>${b.date||'-'}</td>
       <td><div class="team-cell">${logoImg(h)}<span>${getTeam(h).short}</span><span style="color:var(--muted);margin:0 4px;font-size:.7rem">vs</span>${logoImg(a)}<span>${getTeam(a).short}</span></div></td>
       <td>${(b.odds||0).toFixed(2)}</td><td>€${(b.stake||0).toFixed(2)}</td><td>€${(b.potential_return||0).toFixed(2)}</td>
       <td>${rb}</td><td>${pnl}</td>
@@ -958,7 +958,7 @@ function renderTable(){
 function sortBy(c){if(sortCol===c)sortDir*=-1;else{sortCol=c;sortDir=-1;}renderTable();}
 function resetFilters(){['filterResult','filterDate','filterSearch'].forEach(id=>{const el=document.getElementById(id);if(el)(el.tagName==='SELECT'?el.value='all':el.value='');});renderTable();}
 
-// ── AUDIT ──────────────────────────────────────────────────────────────────
+// -- AUDIT ------------------------------------------------------------------
 function renderAudit(){
   const af=document.getElementById('auditAgent').value;
   const sf=(document.getElementById('auditSection').value||'').toLowerCase();
@@ -983,7 +983,7 @@ function renderAudit(){
       if(!patches.length&&e.no_change_reason)body+=`<div class="audit-no-change">No changes: ${e.no_change_reason}</div>`;
       body+=`<div class="audit-pnl-row"><span class="audit-kv">Bankroll: <strong>€${(e.bankroll||0).toFixed(2)}</strong></span><span class="audit-kv">P&L: <strong>€${(e.net_pnl||0).toFixed(2)}</strong></span>${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>`;
     }else if(ag==='scout'){
-      body+=`<div class="audit-pnl-row"><span class="audit-kv">Picks: <strong>${e.draft_count||0}</strong></span><span class="audit-kv">Odds: <strong>${e.odds_source||'—'}</strong></span><span class="audit-kv">Bankroll: <strong>€${(e.bankroll||0).toFixed(2)}</strong></span>${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>`;
+      body+=`<div class="audit-pnl-row"><span class="audit-kv">Picks: <strong>${e.draft_count||0}</strong></span><span class="audit-kv">Odds: <strong>${e.odds_source||'-'}</strong></span><span class="audit-kv">Bankroll: <strong>€${(e.bankroll||0).toFixed(2)}</strong></span>${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>`;
       if((e.picks||[]).length)body+=(e.picks||[]).map(p=>`<div class="audit-patch"><span class="patch-section">${getTeam((p.match||'').split(' vs ')[0]).abbr}</span><span class="patch-reason">${p.pick} @ ${p.odds} · conf=${p.confidence}</span></div>`).join('');
       if(e.error)body+=`<div style="color:var(--burg);font-size:.72rem;margin-top:6px">⚠️ ${e.error}</div>`;
     }else if(ag==='commit'){
@@ -991,7 +991,7 @@ function renderAudit(){
       if((e.bets||[]).length)body+=(e.bets||[]).map(b=>`<div class="audit-patch"><span class="patch-section">${getTeam((b.match||'').split(' vs ')[0]).abbr}</span><span class="patch-reason">${b.pick} @ ${b.odds} · €${b.stake} · conf=${b.confidence}</span></div>`).join('');
     }else if(ag==='settler'){
       body+=`<div class="audit-pnl-row"><span class="audit-kv">Settled: <strong>${e.settled_count||0}</strong></span><span class="audit-kv">${e.wins||0}W/${e.losses||0}L</span><span class="audit-kv">P&L: <strong class="${(e.pnl_today||0)>=0?'pnl-pos':'pnl-neg'}">${(e.pnl_today||0)>=0?'+':''}€${(e.pnl_today||0).toFixed(2)}</strong></span></div>`;
-      if(e.bust)body+=`<div style="color:var(--burg);font-weight:700;margin-top:6px">💥 Bust triggered — bankroll reset</div>`;
+      if(e.bust)body+=`<div style="color:var(--burg);font-weight:700;margin-top:6px">💥 Bust triggered - bankroll reset</div>`;
     }
     return`<div class="audit-entry">
       <div class="audit-entry-header">
@@ -1004,16 +1004,16 @@ function renderAudit(){
 }
 function resetAudit(){['auditAgent','auditSection','auditFrom','auditTo'].forEach(id=>{const el=document.getElementById(id);if(el)(el.tagName==='SELECT'?el.value='all':el.value='');});renderAudit();}
 
-// ── SETTINGS ───────────────────────────────────────────────────────────────
-// ── MODEL COST ESTIMATES (USD/month at ~4 runs/day, ~10K in + 3K out tokens) ──
+// -- SETTINGS ---------------------------------------------------------------
+// -- MODEL COST ESTIMATES (USD/month at ~4 runs/day, ~10K in + 3K out tokens) --
 const MODEL_COSTS = {
-  'claude-opus-4-6':              '~€40–50/mo',
-  'claude-sonnet-4-6':            '~€8–10/mo',
-  'claude-haiku-4-5-20251001':    '~€1–2/mo',
+  'claude-opus-4-6':              '~€40-50/mo',
+  'claude-sonnet-4-6':            '~€8-10/mo',
+  'claude-haiku-4-5-20251001':    '~€1-2/mo',
   'gemini-3.1-flash-lite-preview': '~€0.50/mo (free tier)',
 };
 
-// ── SKILLS VIEWER ─────────────────────────────────────────────────────────
+// -- SKILLS VIEWER ---------------------------------------------------------
 let activeSkillsTab = 'scout';
 
 function switchSkillsTab(tab) {
@@ -1081,7 +1081,7 @@ function renderSkillsViewer() {
     : (typeof COMMIT_SKILLS !== 'undefined' ? COMMIT_SKILLS : '');
   const el = document.getElementById('skills-content');
   if (!el) return;
-  if (!raw) { el.innerHTML = '<span style="color:var(--muted);font-style:italic">Skills not loaded yet — runs after first Analyst cycle.</span>'; return; }
+  if (!raw) { el.innerHTML = '<span style="color:var(--muted);font-style:italic">Skills not loaded yet - runs after first Analyst cycle.</span>'; return; }
   const parsed = parseSkillsSections(raw);
   const { sections, version, updated_at, llm } = parsed;
   const metaHtml = `<div class="skills-meta">v${version}${updated_at && updated_at !== 'null' ? ' · Updated ' + fmt(updated_at) : ''}${llm && llm !== 'bootstrap' ? ' · by ' + llm : ''}</div>`;
@@ -1116,7 +1116,7 @@ function renderSettings(){
     <div>Total Staked: <strong>€${(ST.total_staked||0).toFixed(2)}</strong></div>
     <div>Net P&L: <strong>€${(ST.net_pnl||0).toFixed(2)}</strong></div>
     <div>Config last saved: <strong>${cfg.updated_at ? fmt(cfg.updated_at) : 'never'}</strong></div>
-    <div>Config updated by: <strong>${cfg.updated_by || '—'}</strong></div>
+    <div>Config updated by: <strong>${cfg.updated_by || '-'}</strong></div>
   `;
   // Update bust reset amount display
   const bustEl = document.getElementById('bustResetAmount');
@@ -1189,7 +1189,7 @@ function showSaveStatus(type, msg) {
   el.textContent = msg;
 }
 
-// ── TABS ───────────────────────────────────────────────────────────────────
+// -- TABS -------------------------------------------------------------------
 function switchTab(tab){
   document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.main-tab').forEach(b=>b.classList.remove('active'));
@@ -1200,20 +1200,20 @@ function switchTab(tab){
   if(tab==='history')renderTable();
 }
 
-// ── SHARE ──────────────────────────────────────────────────────────────────
+// -- SHARE ------------------------------------------------------------------
 function shareWA(){const t=buildMsg();if(!t){showToast('No bets!');return;}window.open('https://wa.me/?text='+encodeURIComponent(t),'_blank');}
 function copyBets(){doCopy(buildMsg()||'No bets','btnCopy','Copy');}
 function shareScoutWA(){const t=buildScoutMsg();if(!t){showToast('No picks!');return;}window.open('https://wa.me/?text='+encodeURIComponent(t),'_blank');}
 function copyScout(){doCopy(buildScoutMsg()||'No picks','btnScoutCopy','Copy');}
 function doCopy(text,btnId,lbl){const btn=document.getElementById(btnId);navigator.clipboard.writeText(text).then(()=>{btn.innerHTML='✓ Copied';btn.classList.add('copied');showToast('📋 Copied!');setTimeout(()=>{btn.innerHTML=lbl;btn.classList.remove('copied');},2500);}).catch(()=>{const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);btn.innerHTML='✓ Copied';btn.classList.add('copied');showToast('📋 Copied!');setTimeout(()=>{btn.innerHTML=lbl;btn.classList.remove('copied');},2500);});}
-function buildMsg(){const b=getFiltered();if(!b.length)return null;const s=stats();const now=new Date().toLocaleDateString('pt-PT');return[`🏀 *TOBIAS* — ${now}`,`💰 €${(s.br||0).toFixed(2)} | P&L: ${s.pnl>=0?'+':''}€${s.pnl.toFixed(2)} | ${s.won.length}W/${s.lost.length}L`,...b.map(x=>`${x.result==='WON'?'✅':x.result==='LOST'?'❌':'⏳'} ${x.match} — ${x.pick} @ ${x.odds} ${x.pnl!=null?(x.pnl>=0?'+':'')+'€'+x.pnl.toFixed(2):''}`),'_simulation only 🎮_'].join('\n');}
-function buildScoutMsg(){if(!DRF.length)return null;const s=stats();const now=new Date().toLocaleDateString('pt-PT');return[`🏀 *TOBIAS SCOUT — ${now}*`,`💰 Bankroll: €${(s.br||0).toFixed(2)}`,'','🔍 Draft picks:',...DRF.map((p,i)=>`${i+1}. ${p.match} — ${p.pick} @ ${(p.odds||0).toFixed(2)} · €${(p.stake||0).toFixed(2)} · conf=${p.confidence}`),'_simulation only 🎮_'].join('\n');}
+function buildMsg(){const b=getFiltered();if(!b.length)return null;const s=stats();const now=new Date().toLocaleDateString('pt-PT');return[`🏀 *TOBIAS* - ${now}`,`💰 €${(s.br||0).toFixed(2)} | P&L: ${s.pnl>=0?'+':''}€${s.pnl.toFixed(2)} | ${s.won.length}W/${s.lost.length}L`,...b.map(x=>`${x.result==='WON'?'✅':x.result==='LOST'?'❌':'⏳'} ${x.match} - ${x.pick} @ ${x.odds} ${x.pnl!=null?(x.pnl>=0?'+':'')+'€'+x.pnl.toFixed(2):''}`),'_simulation only 🎮_'].join('\n');}
+function buildScoutMsg(){if(!DRF.length)return null;const s=stats();const now=new Date().toLocaleDateString('pt-PT');return[`🏀 *TOBIAS SCOUT - ${now}*`,`💰 Bankroll: €${(s.br||0).toFixed(2)}`,'','🔍 Draft picks:',...DRF.map((p,i)=>`${i+1}. ${p.match} - ${p.pick} @ ${(p.odds||0).toFixed(2)} · €${(p.stake||0).toFixed(2)} · conf=${p.confidence}`),'_simulation only 🎮_'].join('\n');}
 function showToast(m){const t=document.getElementById('copyToast');t.textContent=m;t.classList.add('show');clearTimeout(t._tid);t._tid=setTimeout(()=>t.classList.remove('show'),2600);}
 
-// ── UTILS ──────────────────────────────────────────────────────────────────
-function fmt(iso){if(!iso)return'—';try{return new Date(iso).toLocaleString('pt-PT',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});}catch{return iso;}}
+// -- UTILS ------------------------------------------------------------------
+function fmt(iso){if(!iso)return'-';try{return new Date(iso).toLocaleString('pt-PT',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});}catch{return iso;}}
 
-// ── INIT ───────────────────────────────────────────────────────────────────
+// -- INIT -------------------------------------------------------------------
 function refresh(){
   try{buildTicker();}catch(e){console.warn('ticker:',e);}
   try{renderStats();}catch(e){console.warn('stats:',e);}
