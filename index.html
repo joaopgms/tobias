@@ -32,15 +32,15 @@
     @keyframes ticker{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-50%,0,0)}}
     /* HEADER */
     header{background:var(--card);border-bottom:1px solid var(--border)}
-    .header-top{padding:16px 32px;display:flex;align-items:center;justify-content:space-between}
+    .header-top{padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:nowrap}
     .brand{display:flex;align-items:center;gap:14px}
     .brand-icon{width:46px;height:46px;display:flex;align-items:center;justify-content:center}
     .brand-spin{width:42px;height:42px;object-fit:contain;display:block}
-    .brand-name{font-size:1.2rem;font-weight:800;letter-spacing:-.5px;color:var(--text);line-height:1}
+    .brand-name{font-size:1.1rem;font-weight:800;letter-spacing:-.5px;color:var(--text);line-height:1}
     .brand-sub{font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:3px}
     .header-meta{font-size:.7rem;color:var(--muted);text-align:right;line-height:1.6}
     .header-meta strong{color:var(--text)}
-    .live-badge{display:inline-flex;align-items:center;gap:5px;font-size:.6rem;font-weight:700;color:var(--green-neon);letter-spacing:1px;text-transform:uppercase;margin-top:2px}
+    .live-badge{display:inline-flex;align-items:center;gap:5px;font-size:.6rem;font-weight:700;color:var(--green-neon);letter-spacing:1px;text-transform:uppercase}
     .live-dot{width:7px;height:7px;border-radius:50%;background:var(--green-neon);animation:blink 1.6s ease-in-out infinite;box-shadow:0 0 6px var(--green-neon)}
     @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
     /* MAIN TABS */
@@ -288,13 +288,12 @@
         <div class="brand-sub">Your friendly neighborhood advisor</div>
       </div>
     </div>
-    <div style="text-align:right;display:flex;flex-direction:column;align-items:flex-end;justify-content:center">
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;flex-shrink:0">
       <div class="header-meta">Last updated &nbsp;<strong id="lastUpdated">—</strong></div>
-      <div class="live-badge"><span class="live-dot"></span> Simulation active</div>
     </div>
   </div>
   <div class="main-tabs">
-    <button class="main-tab active" data-tab="live" onclick="switchTab('live')">🏀 Live <span class="dot on"></span></button>
+    <button class="main-tab active" data-tab="live" onclick="switchTab('live')">🏀 Live</button>
     <button class="main-tab" data-tab="history" onclick="switchTab('history')">📋 History</button>
     <button class="main-tab" data-tab="audit" onclick="switchTab('audit')">🔍 Audit</button>
     <button class="main-tab" data-tab="settings" onclick="switchTab('settings')">⚙️ Settings</button>
@@ -322,13 +321,13 @@
       <div class="agent-card-header"><span class="agent-name">🧠 Analyst</span><span class="agent-pill done" id="analystPill"><span class="agent-dot done" id="analystDot"></span><span id="analystStatus">Daily</span></span></div>
       <div class="agent-meta-row"><span class="agent-meta-label">Model</span><span class="agent-meta-val" id="analystLlm">—</span></div>
       <div class="agent-meta-row"><span class="agent-meta-label">Last run</span><span class="agent-meta-val" id="analystLastRun">—</span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Next run</span><span class="agent-meta-val">11:00 UTC daily</span></div>
+      <div class="agent-meta-row"><span class="agent-meta-label">Next run</span><span class="agent-meta-val" id="analystNextRun">—</span></div>
     </div>
     <div class="agent-card">
       <div class="agent-card-header"><span class="agent-name">🔍 Scout</span><span class="agent-pill pending" id="scoutPill"><span class="agent-dot pending" id="scoutDot"></span><span id="scoutStatus">—</span></span></div>
       <div class="agent-meta-row"><span class="agent-meta-label">Model</span><span class="agent-meta-val" id="scoutLlm">—</span></div>
       <div class="agent-meta-row"><span class="agent-meta-label">Last run</span><span class="agent-meta-val" id="scoutTime">—</span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Next run</span><span class="agent-meta-val">14:00 UTC daily</span></div>
+      <div class="agent-meta-row"><span class="agent-meta-label">Next run</span><span class="agent-meta-val" id="scoutNextRun">—</span></div>
     </div>
     <div class="agent-card">
       <div class="agent-card-header"><span class="agent-name">🎯 Commit</span><span class="agent-pill pending" id="commitPill"><span class="agent-dot pending" id="commitDot"></span><span id="commitStatus">—</span></span></div>
@@ -340,7 +339,7 @@
       <div class="agent-card-header"><span class="agent-name">✅ Setter</span><span class="agent-pill done" id="settlerPill"><span class="agent-dot done"></span><span>Daily</span></span></div>
       <div class="agent-meta-row"><span class="agent-meta-label">Model</span><span class="agent-meta-val" id="settlerLlm">—</span></div>
       <div class="agent-meta-row"><span class="agent-meta-label">Last run</span><span class="agent-meta-val" id="settlerLastRun">—</span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Next run</span><span class="agent-meta-val">10:00 UTC daily</span></div>
+      <div class="agent-meta-row"><span class="agent-meta-label">Next run</span><span class="agent-meta-val" id="settlerNextRun">—</span></div>
     </div>
   </div>
   <div class="scout-card">
@@ -751,6 +750,20 @@ function buildTicker(){
   document.getElementById('tickerScroll').innerHTML=d.map(i=>`<span class="ticker-item">${i}</span>`).join('');
 }
 
+// ── NEXT RUN HELPER ────────────────────────────────────────────────────────
+function nextRunAt(utcHour) {
+  const now = new Date();
+  const next = new Date();
+  next.setUTCHours(utcHour, 0, 0, 0);
+  if (next <= now) next.setUTCDate(next.getUTCDate() + 1); // already passed today
+  const dd = String(next.getUTCDate()).padStart(2,'0');
+  const mm = String(next.getUTCMonth()+1).padStart(2,'0');
+  const yyyy = next.getUTCFullYear();
+  const hh = String(next.getUTCHours()).padStart(2,'0');
+  const mn = String(next.getUTCMinutes()).padStart(2,'0');
+  return `${dd}/${mm}/${yyyy} ${hh}:${mn} UTC`;
+}
+
 // ── AGENTS ─────────────────────────────────────────────────────────────────
 function renderAgents(){
   const scSt=typeof SCOUT_STATUS!=='undefined'?SCOUT_STATUS:'pending';
@@ -796,6 +809,10 @@ function renderAgents(){
   // First game time
   const fgt=ST.first_game_time;
   document.getElementById('firstGameTime').textContent = fgt ? fmt(fgt) : '—';
+  // Next run timestamps
+  const elAN=document.getElementById('analystNextRun'); if(elAN) elAN.textContent=nextRunAt(11);
+  const elSC=document.getElementById('scoutNextRun');   if(elSC) elSC.textContent=nextRunAt(14);
+  const elSE=document.getElementById('settlerNextRun'); if(elSE) elSE.textContent=nextRunAt(10);
 }
 
 // ── MAIN RENDER ────────────────────────────────────────────────────────────
