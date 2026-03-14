@@ -9,20 +9,70 @@
   "net_pnl": 0.0,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-03-14T18:47:07.802881+00:00",
-  "first_game_time": null,
+  "last_updated": "2026-03-14T19:13:59.255832+00:00",
+  "first_game_time": "2026-03-14T17:00:00Z",
   "llm_provider": "claude",
-  "scout_status": "unavailable",
-  "scout_error": "Missing <draft_picks> tag",
-  "scout_updated_at": null,
+  "scout_status": "live",
+  "scout_error": "",
+  "scout_updated_at": "2026-03-14T19:13:59.255832+00:00",
   "commit_status": "pending",
   "commit_updated_at": null,
   "last_report": "",
-  "draft_picks": [],
+  "draft_picks": [
+    {
+      "id": "nba_draft_20260314_001",
+      "match": "Atlanta Hawks vs Milwaukee Bucks",
+      "time": "2026-03-14T19:00:00Z",
+      "pick": "Atlanta Hawks ML",
+      "odds": 1.8,
+      "stake": 200,
+      "potential_return": 360.0,
+      "confidence": 72,
+      "reasoning": "Hawks L10: 9-1 is the strongest recent form signal on tonight's entire slate — priority stat #1. Bucks are L10: 3-7 with a 3-game losing streak, meeting two of three tank-watch criteria. Hawks are home with play-in/playoff motivation. NetRtg trend clearly favors Hawks. Bucks fading hard with no clear turnaround signal. Estimated odds ~1.80 fall within 1.70–2.50 target range. No franchise player injuries flagged for Hawks. High-confidence pick pending odds confirmation at commit.",
+      "anchor_players": [
+        "Trae Young",
+        "Dejounte Murray"
+      ],
+      "drafted_at": "2026-03-14T19:14:02Z"
+    },
+    {
+      "id": "nba_draft_20260314_002",
+      "match": "Miami Heat vs Orlando Magic",
+      "time": "2026-03-15T00:00:00Z",
+      "pick": "Miami Heat ML",
+      "odds": 1.88,
+      "stake": 150,
+      "potential_return": 282.0,
+      "confidence": 60,
+      "reasoning": "Both teams share L10: 8-2 records, but Heat have home court advantage at Kaseya Center. Both are in playoff/play-in contention providing high motivation. Home advantage in a mirror-image matchup is the tiebreaker. Heat culture known for home performance. No franchise player injuries flagged. Estimated odds ~1.88 within target range. Confidence capped at Medium given how evenly matched these teams are — Magic equally capable of winning. Stake set at 15% (medium tier).",
+      "anchor_players": [
+        "Bam Adebayo",
+        "Tyler Herro"
+      ],
+      "drafted_at": "2026-03-14T19:14:02Z"
+    },
+    {
+      "id": "nba_draft_20260314_003",
+      "match": "LA Clippers vs Sacramento Kings",
+      "time": "2026-03-15T02:30:00Z",
+      "pick": "LA Clippers ML",
+      "odds": 1.72,
+      "stake": 150,
+      "potential_return": 258.0,
+      "confidence": 65,
+      "reasoning": "Kings are a confirmed tanking team (16-51, L10: 4-6, worst record in West, own 2026 pick) — skills state betting AGAINST tanking teams is edge-positive. Clippers are home (L10: 7-3) with strong play-in motivation. Motivation delta is massive: Clippers fighting for postseason, Kings actively tanking. No franchise player injuries flagged for Clippers. CONDITIONAL PICK: Odds must confirm ≥ 1.70 at commit phase — if Clippers are shorter than 1.70, this pick should be withdrawn. At estimated ~1.72, just inside our range.",
+      "anchor_players": [
+        "Kawhi Leonard",
+        "James Harden"
+      ],
+      "drafted_at": "2026-03-14T19:14:02Z"
+    }
+  ],
   "pending_bets": [],
   "settled_bets": [],
   "agent_models": {
-    "analyst": "claude-sonnet-4-6"
+    "analyst": "claude-sonnet-4-6",
+    "scout": "claude-sonnet-4-6"
   },
   "analyst_updated_at": "2026-03-14T19:02:59.051718+00:00"
 }
