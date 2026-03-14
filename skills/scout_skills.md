@@ -1,6 +1,6 @@
 ---
-version: 3
-updated_at: 2026-03-14T18:46:12.101354+00:00
+version: 4
+updated_at: 2026-03-14T19:02:59.051718+00:00
 updated_by: analyst_2026-03-14
 llm: claude-sonnet-4-6
 ---
@@ -39,7 +39,8 @@ Confirmed tanking-tier teams (all three criteria met):
   - Sacramento Kings: 16-51, L10: 4-6 — worst record in West, no play-in path
   - Brooklyn Nets: 17-49, L10: 2-8 — bottom East, no play-in path
   - Utah Jazz: 20-47, L10: 2-8 — no play-in path
-  - Dallas Mavericks: 22-45, L10: 1-9 — now meets all three tanking criteria; treat as confirmed tank
+  - Dallas Mavericks: 22-45, L10: 1-9 — meets all three tanking criteria; treat as confirmed tank
+  - Memphis Grizzlies: 23-43, L10: 2-8, streak: L7 — now meets all three tanking criteria; elevated to confirmed tank
 
 Tanking criteria (ALL THREE must be met):
   (a) Team owns its own 2026 draft pick
@@ -48,7 +49,7 @@ Tanking criteria (ALL THREE must be met):
 
 When betting AGAINST tanking teams: treat as edge-positive. When betting ON tanking teams: require odds ≥ 2.20 and strong situational reason (e.g. opponent B2B, major injury).
 
-Emerging tank-watch: Memphis Grizzlies (23-43, L10: 2-8, streak: L7) — trending toward tank criteria, monitor draft pick ownership.
+Emerging tank-watch: Chicago Bulls (27-40, L10: 3-7), Milwaukee Bucks (27-38, L10: 3-7, streak: L3) — both fading hard; monitor play-in race and draft pick ownership to determine if criteria met.
 
 ## SECTION:b2b_rules
 B2B teams cover the spread less than 45% of the time historically.
