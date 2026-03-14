@@ -198,6 +198,18 @@
     .patch-reason{font-size:.72rem;color:var(--muted);line-height:1.4}
     .audit-notes{font-size:.75rem;color:var(--text);margin-top:8px;padding-top:8px;border-top:1px solid var(--border2);line-height:1.5}
     .audit-no-change{font-size:.72rem;color:var(--muted);font-style:italic}
+    .diff-block{margin-top:8px;border:1px solid var(--border2);border-radius:var(--r-sm);overflow:hidden;font-family:monospace;font-size:.68rem;line-height:1.6}
+    .diff-header{background:var(--surface);padding:4px 10px;font-size:.62rem;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border2);display:flex;justify-content:space-between;align-items:center}
+    .diff-section-name{color:var(--teal)}
+    .diff-lines{max-height:160px;overflow-y:auto}
+    .diff-line{padding:1px 10px;white-space:pre-wrap;word-break:break-all}
+    .diff-line-add{background:#ecfdf5;color:#166534}
+    .diff-line-add::before{content:'+  ';font-weight:700;opacity:.6}
+    .diff-line-rem{background:#fef2f2;color:#991b1b}
+    .diff-line-rem::before{content:'-  ';font-weight:700;opacity:.6}
+    .diff-line-ctx{background:transparent;color:var(--muted)}
+    .diff-line-ctx::before{content:'   '}
+    .diff-toggle{background:none;border:none;font-size:.62rem;color:var(--cyan);cursor:pointer;font-family:inherit;font-weight:700;padding:0}
     .audit-pnl-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
     .audit-kv{font-size:.7rem;color:var(--muted)}.audit-kv strong{color:var(--text)}
     /* SETTINGS */
@@ -959,6 +971,51 @@ function sortBy(c){if(sortCol===c)sortDir*=-1;else{sortCol=c;sortDir=-1;}renderT
 function resetFilters(){['filterResult','filterDate','filterSearch'].forEach(id=>{const el=document.getElementById(id);if(el)(el.tagName==='SELECT'?el.value='all':el.value='');});renderTable();}
 
 // -- AUDIT ------------------------------------------------------------------
+// -- DIFF RENDERER ----------------------------------------------------------
+function simpleDiff(before, after, sectionName, idx) {
+  if (!before && !after) return '';
+  before = (before || '').trim();
+  after  = (after  || '').trim();
+  if (before === after) return '';
+
+  const bLines = before.split('\n');
+  const aLines = after.split('\n');
+  const id = 'diff-' + idx + '-' + (sectionName||'x').replace(/\W/g,'');
+
+  // Build simple line diff (LCS-free: just mark removed/added blocks)
+  const bSet = new Set(bLines);
+  const aSet = new Set(aLines);
+  const lines = [];
+
+  // Lines only in before = removed
+  bLines.forEach(l => { if (!aSet.has(l)) lines.push({t:'rem', v:l}); });
+  // Lines only in after = added
+  aLines.forEach(l => { if (!bSet.has(l)) lines.push({t:'add', v:l}); });
+  // Shared lines as context (max 2)
+  let ctx = 0;
+  bLines.forEach(l => { if (aSet.has(l) && ctx < 2) { lines.push({t:'ctx', v:l}); ctx++; } });
+
+  const html = lines.map(l =>
+    `<div class="diff-line diff-line-${l.t}">${l.v.replace(/</g,'&lt;').replace(/>/g,'&gt;') || '&nbsp;'}</div>`
+  ).join('');
+
+  return `<div class="diff-block">
+    <div class="diff-header">
+      <span class="diff-section-name">${sectionName}</span>
+      <button class="diff-toggle" onclick="toggleDiff('${id}')">▼ show diff</button>
+    </div>
+    <div class="diff-lines" id="${id}" style="display:none">${html}</div>
+  </div>`;
+}
+
+function toggleDiff(id) {
+  const el = document.getElementById(id);
+  const btn = el.previousElementSibling.querySelector('.diff-toggle');
+  const open = el.style.display !== 'none';
+  el.style.display = open ? 'none' : 'block';
+  btn.textContent = open ? '▼ show diff' : '▲ hide diff';
+}
+
 function renderAudit(){
   const af=document.getElementById('auditAgent').value;
   const sf=(document.getElementById('auditSection').value||'').toLowerCase();
@@ -978,7 +1035,13 @@ function renderAudit(){
     let body='';
     if(ag==='analyst'){
       const patches=[...(e.scout_patches||[]),(e.commit_patches||[])];
-      if(patches.length)body+=`<div style="margin-bottom:6px;font-size:.68rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px">${patches.length} section${patches.length>1?'s':''} updated</div>`+patches.map(p=>`<div class="audit-patch"><span class="patch-section">${p.section||'?'}</span><span class="patch-reason">${p.reason||''}</span></div>`).join('');
+      if(patches.length){
+        body+=`<div style="margin-bottom:6px;font-size:.68rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px">${patches.length} section${patches.length>1?'s':''} updated</div>`;
+        body+=patches.map((p,pi)=>{
+          const diffHtml = simpleDiff(p.before||'', p.after||'', p.section||'?', entries.indexOf(e)*100+pi);
+          return `<div class="audit-patch"><span class="patch-section">${p.section||'?'}</span><span class="patch-reason">${p.reason||''}</span></div>${diffHtml}`;
+        }).join('');
+      }
       if(e.notes)body+=`<div class="audit-notes">📝 ${e.notes}</div>`;
       if(!patches.length&&e.no_change_reason)body+=`<div class="audit-no-change">No changes: ${e.no_change_reason}</div>`;
       body+=`<div class="audit-pnl-row"><span class="audit-kv">Bankroll: <strong>€${(e.bankroll||0).toFixed(2)}</strong></span><span class="audit-kv">P&L: <strong>€${(e.net_pnl||0).toFixed(2)}</strong></span>${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>`;
