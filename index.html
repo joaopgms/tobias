@@ -1034,8 +1034,7 @@ function parseSkillsSections(raw) {
     if (parts.length >= 3) { meta = parts[1].trim(); body = parts.slice(2).join('---').trim(); }
   }
   // Parse ## SECTION:name blocks
-  const lines = body.split('
-');
+  const lines = body.split('\n');
   let current = null;
   for (const line of lines) {
     const m = line.match(/^## SECTION:(\S+)/);
