@@ -362,7 +362,7 @@
   <div class="scoreboard">
     <div class="score-card sc-burg"><div class="score-label">💰 Bankroll</div><div class="score-value" id="statBankroll">-</div><div class="score-sub" id="statBankrollSub">-</div></div>
     <div class="score-card sc-teal"><div class="score-label">📈 Net P&L</div><div class="score-value" id="statPnl">-</div><div class="score-sub" id="statPnlSub">-</div></div>
-    <div class="score-card sc-cyan"><div class="score-label">⏳ Pending</div><div class="score-value" id="statPending" style="color:var(--cyan)">-</div><div class="score-sub" id="statPendingSub">-</div></div>
+    <div class="score-card sc-cyan"><div class="score-label">⏳ Placed</div><div class="score-value" id="statPending" style="color:var(--cyan)">-</div><div class="score-sub" id="statPendingSub">-</div></div>
     <div class="score-card"><div class="score-label">📊 Total Staked</div><div class="score-value" id="statStaked">-</div><div class="score-sub" id="statROI">ROI: -</div></div>
   </div>
   <div class="agents-row">
@@ -433,7 +433,7 @@
 <div class="tab-panel" id="tab-history">
   <div class="filters-bar" style="margin-top:16px">
     <span class="filter-label">Filter:</span>
-    <select id="filterResult"><option value="all">All Results</option><option value="WON">Won ✅</option><option value="LOST">Lost ❌</option><option value="pending">Pending ⏳</option></select>
+    <select id="filterResult"><option value="all">All Results</option><option value="WON">Won ✅</option><option value="LOST">Lost ❌</option><option value="pending">Placed ⏳</option></select>
     <input type="date" id="filterDate"/>
     <input type="text" id="filterSearch" placeholder="Search team or pick…" style="min-width:180px"/>
     <button class="btn-reset" onclick="resetFilters()">✕ Reset</button>
@@ -990,11 +990,11 @@ function renderWL(){
   document.getElementById('donutPct').textContent=s.wr!==null?s.wr+'%':'-';
   document.getElementById('legendWon').textContent=`${s.won.length} Won`;
   document.getElementById('legendLost').textContent=`${s.lost.length} Lost`;
-  document.getElementById('legendPending').textContent=`${s.pend.length} Pending`;
+  document.getElementById('legendPending').textContent=`${s.pend.length} Placed`;
   document.getElementById('wlSub').textContent=`${s.s.length} settled`;
   if(wlInst)wlInst.destroy();
   if(!s.s.length&&!s.pend.length){ document.getElementById('donutPct').textContent='0%'; return; }
-  wlInst=new Chart(document.getElementById('wlChart'),{type:'doughnut',data:{labels:['Won','Lost','Pending'],datasets:[{data:[s.won.length,s.lost.length,s.pend.length],backgroundColor:['#2a6b4a','#7c1d34','#b08800'],borderWidth:0,hoverOffset:4}]},options:{cutout:'72%',plugins:{legend:{display:false}},animation:{duration:600}}});
+  wlInst=new Chart(document.getElementById('wlChart'),{type:'doughnut',data:{labels:['Won','Lost','Placed'],datasets:[{data:[s.won.length,s.lost.length,s.pend.length],backgroundColor:['#2a6b4a','#7c1d34','#b08800'],borderWidth:0,hoverOffset:4}]},options:{cutout:'72%',plugins:{legend:{display:false}},animation:{duration:600}}});
 }
 
 function renderAnalytics(){
@@ -1020,7 +1020,7 @@ function renderTable(){
   document.getElementById('emptyState').style.display=bets.length?'none':'block';
   document.getElementById('betTableBody').innerHTML=bets.map(b=>{
     const pts=(b.match||'').split(' vs ');const h=pts[0]||'',a=pts[1]||'';
-    const rb=b.result?`<span class="badge badge-${b.result.toLowerCase()}">${b.result==='WON'?'✅':b.result==='LOST'?'❌':'?'} ${b.result}</span>`:`<span class="badge badge-pending">⏳ Pending</span>`;
+    const rb=b.result?`<span class="badge badge-${b.result.toLowerCase()}">${b.result==='WON'?'✅':b.result==='LOST'?'❌':'?'} ${b.result}</span>`:`<span class="badge badge-pending">⏳ Placed</span>`;
     const pnl=b.pnl!=null?`<span class="${b.pnl>=0?'pnl-pos':'pnl-neg'}">${b.pnl>=0?'+':''}€${b.pnl.toFixed(2)}</span>`:'-';
     return`<tr><td>${b.date||'-'}</td>
       <td><div class="team-cell">${logoImg(h)}<span>${getTeam(h).short}</span><span style="color:var(--muted);margin:0 4px;font-size:.7rem">vs</span>${logoImg(a)}<span>${getTeam(a).short}</span></div></td>
