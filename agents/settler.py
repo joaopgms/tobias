@@ -1,0 +1,322 @@
+"""
+agents/settler.py
+Tobias — Settler Agent (10:00 UTC)
+
+Responsibilities:
+  1. Read pending_bets from state
+  2. Fetch ESPN final scores for each bet's date
+  3. Settle each bet (WON / LOST / still pending)
+  4. Update state.bankroll, state.settled_bets, history entries
+  5. Handle bust detection
+  6. Write state + history + data.js back to GitHub
+  7. Append to audit/settler_log.jsonl
+"""
+
+import json
+import logging
+from datetime import datetime, date, timezone
+
+from core.validators import validate_all_bets
+from core.espn import fetch_final_scores
+
+log = logging.getLogger(__name__)
+
+def _bust_reset_amount(state: dict) -> float:
+    """Reset to the season starting bankroll, not an arbitrary small amount."""
+    return float(state.get("bankroll_initial", 1000.0))
+
+NBA_SEASON_START = {
+    "2024-25": "2024-10-22",
+    "2025-26": "2025-10-21",
+}
+BUST_THRESHOLD  = 2.0
+BUST_RESET      = None   # resolved at runtime from state["bankroll_initial"]
+
+
+# ── Bet evaluation ─────────────────────────────────────────────────────────────
+
+def _evaluate(bet: dict, result: dict) -> bool:
+    """Return True if bet WON given final scores."""
+    pick  = bet.get("pick", "").lower()
+    h     = result["home_score"]
+    a     = result["away_score"]
+    home  = result["home"].lower()
+    away  = result["away"].lower()
+
+    # Moneyline
+    if "ml" in pick or pick in (home, away):
+        winner = home if h > a else away
+        return any(w in pick for w in winner.split())
+
+    # Spread — format: "Team Name -X.X" or "Team Name +X.X"
+    import re
+    spread_m = re.search(r'([+-]?\d+\.?\d*)\s*$', pick)
+    if spread_m:
+        spread = float(spread_m.group(1))
+        # Determine which team this pick is on
+        if any(w in pick for w in home.split()):
+            return (h + spread) > a
+        elif any(w in pick for w in away.split()):
+            return (a + spread) > h
+
+    # Over / Under
+    ou_m = re.search(r'(over|under)\s+(\d+\.?\d*)', pick)
+    if ou_m:
+        direction = ou_m.group(1)
+        total_line = float(ou_m.group(2))
+        total = h + a
+        return total > total_line if direction == "over" else total < total_line
+
+    log.warning(f"  Could not evaluate pick '{bet['pick']}' — leaving pending")
+    return False
+
+
+# ── Main bust logic ────────────────────────────────────────────────────────────
+
+def _check_bust(state: dict, history: dict) -> tuple[dict, dict, bool]:
+    """Check if bust condition is met. Handle reset if so."""
+    bankroll = state["bankroll"]
+    pending  = state.get("pending_bets", [])
+
+    if bankroll >= BUST_THRESHOLD or pending:
+        return state, history, False
+
+    log.warning(f"💥 BUST — bankroll €{bankroll:.2f} with no pending bets")
+    now = datetime.now(timezone.utc).isoformat()
+
+    # Close current game in history
+    season = state["season"]
+    game_n = state["game"]
+    for s in history["seasons"]:
+        if s["season"] == season:
+            for g in s["games"]:
+                if g["game"] == game_n:
+                    g["end_date"]       = now[:10]
+                    g["final_bankroll"] = round(bankroll, 2)
+                    g["net_pnl"]        = round(bankroll - g["initial_bankroll"], 2)
+                    g["bust"]           = True
+
+    # Append bust entry to history
+    history["entries"].append({
+        "entry_id":        f"bust_{now[:10]}_game{game_n}",
+        "season":          season,
+        "game":            game_n,
+        "timestamp":       now,
+        "type":            "bust",
+        "bankroll_before": round(bankroll, 2),
+        "bankroll_after":  _bust_reset_amount(state),
+        "summary":         f"💥 Game {game_n} bust at €{bankroll:.2f}. Resetting to €{_bust_reset_amount(state):.0f}.",
+    })
+
+    # Reset state for new game
+    new_game = game_n + 1
+    state["game"]             = new_game
+    reset_amt = _bust_reset_amount(state)
+    state["bankroll"]         = reset_amt
+    state["bankroll_initial"] = reset_amt
+    state["bankroll_peak"]    = reset_amt
+    state["bust"]             = True
+    state["bust_at"]          = now
+    state["settled_bets"]     = []
+    state["pending_bets"]     = []
+
+    # Open new game in history
+    for s in history["seasons"]:
+        if s["season"] == season:
+            s["games"].append({
+                "game":             new_game,
+                "start_date":       now[:10],
+                "end_date":         None,
+                "initial_bankroll": reset_amt,
+                "peak_bankroll":    reset_amt,
+                "final_bankroll":   None,
+                "net_pnl":          None,
+                "total_bets":       0,
+                "wins":             0,
+                "losses":           0,
+                "bust":             False,
+            })
+
+    return state, history, True
+
+
+# ── Main run ───────────────────────────────────────────────────────────────────
+
+def run(store) -> None:
+    now      = datetime.now(timezone.utc)
+    today    = date.today()
+    now_iso  = now.isoformat()
+
+    # ── 1. Load state & history ────────────────────────────────────────────────
+    state, history = store.read_state_and_history()
+    pending = state.get("pending_bets", [])
+
+    if not pending:
+        log.info("Settler: no pending bets — nothing to settle")
+        _append_audit(store, now_iso, settled=[], skipped=[], bust=False,
+                      bankroll_before=state["bankroll"],
+                      bankroll_after=state["bankroll"])
+        return
+
+    log.info(f"Settler: {len(pending)} pending bets to check")
+
+    # ── 2. Fetch scores grouped by date ───────────────────────────────────────
+    dates_needed = sorted(set(
+        b.get("settled_at", "")[:10] or str(today)
+        for b in pending
+    ))
+    # pending bets have no settled_at yet — use match date from ID
+    # ID format: nba_bet_YYYYMMDD_NNN
+    def _bet_date(bet):
+        try:
+            return bet["id"].split("_")[2]          # YYYYMMDD
+        except Exception:
+            return str(today - __import__('datetime').timedelta(days=1))
+
+    dates_needed = sorted(set(_bet_date(b) for b in pending))
+    scores_by_date: dict[str, dict] = {}
+    for d_str in dates_needed:
+        try:
+            d_obj = date.fromisoformat(f"{d_str[:4]}-{d_str[4:6]}-{d_str[6:8]}")
+            if d_obj < today:             # only settle past games
+                scores_by_date[d_str] = fetch_final_scores(d_obj)
+            else:
+                log.info(f"  Skipping {d_str} — today's games not final yet")
+        except Exception as e:
+            log.warning(f"  Could not fetch scores for {d_str}: {e}")
+
+    # ── 3. Settle each bet ────────────────────────────────────────────────────
+    settled_ids: list[str] = []
+    still_pending: list[dict] = []
+    newly_settled: list[dict] = []
+    bankroll_before = state["bankroll"]
+
+    for bet in pending:
+        bet_date = _bet_date(bet)
+        scores   = scores_by_date.get(bet_date, {})
+        match    = bet.get("match", "")
+
+        # Try to find result
+        result = scores.get(match)
+        if result is None:
+            # Try partial match
+            for key, res in scores.items():
+                if res.get("home", "") in match or res.get("away", "") in match:
+                    result = res
+                    break
+
+        if result is None:
+            log.info(f"  [{bet['id']}] No final score found — keeping pending")
+            still_pending.append(bet)
+            continue
+
+        # Evaluate
+        won     = _evaluate(bet, result)
+        stake   = float(bet["stake"])
+        odds    = float(bet["odds"])
+        returned = round(stake * odds, 2) if won else 0.0
+        pnl      = round(returned - stake, 2)
+
+        bet["result"]     = "WON" if won else "LOST"
+        bet["returned"]   = returned
+        bet["pnl"]        = pnl
+        bet["settled_at"] = now_iso
+
+        if won:
+            state["bankroll"]      = round(state["bankroll"] + returned, 2)
+            state["total_returned"] = round(state.get("total_returned", 0) + returned, 2)
+            log.info(f"  ✅ WON  {match} | +€{pnl:.2f} | bankroll → €{state['bankroll']:.2f}")
+        else:
+            log.info(f"  ❌ LOST {match} | -€{stake:.2f} | bankroll → €{state['bankroll']:.2f}")
+
+        state["net_pnl"] = round(
+            state.get("net_pnl", 0) + pnl, 2)
+
+        if state["bankroll"] > state.get("bankroll_peak", 0):
+            state["bankroll_peak"] = state["bankroll"]
+
+        newly_settled.append(bet)
+
+    # ── 4. Update state bets lists ────────────────────────────────────────────
+    state["pending_bets"]  = still_pending
+    state["settled_bets"]  = state.get("settled_bets", []) + newly_settled
+    state["last_updated"]      = now_iso
+    state["settler_updated_at"] = now_iso
+    state["bust"]               = False   # reset flag (rechecked below)
+
+    # ── 5. Update history entries with settlement results ─────────────────────
+    settled_by_id = {b["id"]: b for b in newly_settled}
+    for entry in history.get("entries", []):
+        if entry.get("type") != "bets_placed":
+            continue
+        for eb in entry.get("bets", []):
+            if eb["id"] in settled_by_id:
+                sb = settled_by_id[eb["id"]]
+                eb["result"]     = sb["result"]
+                eb["returned"]   = sb["returned"]
+                eb["pnl"]        = sb["pnl"]
+                eb["settled_at"] = sb["settled_at"]
+
+    # Update game-level stats in history
+    wins   = sum(1 for b in newly_settled if b["result"] == "WON")
+    losses = sum(1 for b in newly_settled if b["result"] == "LOST")
+    season = state["season"]
+    game_n = state["game"]
+    for s in history["seasons"]:
+        if s["season"] == season:
+            for g in s["games"]:
+                if g["game"] == game_n:
+                    g["wins"]          = g.get("wins", 0) + wins
+                    g["losses"]        = g.get("losses", 0) + losses
+                    g["peak_bankroll"] = max(g.get("peak_bankroll", 0), state["bankroll"])
+
+    # ── 6. Bust check ─────────────────────────────────────────────────────────
+    state, history, busted = _check_bust(state, history)
+
+    # ── 7. Validate & write ────────────────────────────────────────────────────
+    try:
+        validate_all_bets(state["pending_bets"],  "settler/pending")
+        validate_all_bets(state["settled_bets"],  "settler/settled")
+    except Exception as e:
+        log.error(f"Validation error: {e}")
+        # Write error state to GitHub so dashboard shows it
+        state["scout_error"] = str(e)
+        store.write_json("state", state, "settler: validation error")
+        return
+
+    commit_msg = f"settler: {len(newly_settled)} settled ({wins}W/{losses}L), {len(still_pending)} pending"
+    store.write_json("state",   state,   commit_msg)
+    store.write_json("history", history, commit_msg)
+    store.write_data_js(state, history)
+
+    # ── 8. Audit log ──────────────────────────────────────────────────────────
+    _append_audit(store, now_iso,
+                  settled=newly_settled,
+                  skipped=[b["id"] for b in still_pending],
+                  bust=busted,
+                  bankroll_before=bankroll_before,
+                  bankroll_after=state["bankroll"])
+
+    log.info(f"Settler done: {wins}W / {losses}L | bankroll €{bankroll_before:.2f} → €{state['bankroll']:.2f}")
+
+
+def _append_audit(store, ts: str, settled: list, skipped: list,
+                  bust: bool, bankroll_before: float, bankroll_after: float):
+    wins   = sum(1 for b in settled if b.get("result") == "WON")
+    losses = sum(1 for b in settled if b.get("result") == "LOST")
+    entry = {
+        "ts":              ts,
+        "agent":           "settler",
+        "settled_count":   len(settled),
+        "wins":            wins,
+        "losses":          losses,
+        "skipped":         skipped,
+        "bust":            bust,
+        "bankroll_before": round(bankroll_before, 2),
+        "bankroll_after":  round(bankroll_after, 2),
+        "pnl_today":       round(bankroll_after - bankroll_before, 2),
+    }
+    try:
+        store.append_jsonl("settler_log" if "settler_log" in store.FILES else "scout_log", entry)
+    except Exception as e:
+        log.warning(f"Audit log append failed: {e}")

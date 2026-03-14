@@ -1,0 +1,41 @@
+name: Tobias — Analyst (11:00 UTC)
+
+on:
+  schedule:
+    - cron: '0 11 * * *'   # 11:00 UTC — after settler, before scout
+  workflow_dispatch:        # allow manual trigger
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run analyst agent
+        env:
+          # ── LLM secrets (Repository Secrets) ─────────────────────────────
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY:    ${{ secrets.GEMINI_API_KEY }}
+          # ── Per-agent models (Repository Variables — not secrets) ─────────
+          # Set these in: Repo → Settings → Secrets and Variables → Variables
+          # Valid: claude-opus-4-6 | claude-sonnet-4-6 | claude-haiku-4-5-20251001 | gemini-2.0-flash-lite
+          ANALYST_MODEL:  ${{ vars.ANALYST_MODEL  || 'claude-sonnet-4-6' }}
+          SCOUT_MODEL:    ${{ vars.SCOUT_MODEL    || 'claude-sonnet-4-6' }}
+          COMMIT_MODEL:   ${{ vars.COMMIT_MODEL   || 'claude-sonnet-4-6' }}
+          SETTLER_MODEL:  ${{ vars.SETTLER_MODEL  || 'claude-sonnet-4-6' }}
+          LLM_PROVIDER:   ${{ vars.LLM_PROVIDER   || 'claude' }}
+          # ── GitHub data store ─────────────────────────────────────────────
+          GITHUB_TOKEN:   ${{ secrets.GH_PAT }}
+          GITHUB_REPO:    ${{ github.repository }}
+          # ── Odds ──────────────────────────────────────────────────────────
+          ODDSPAPI_KEY:   ${{ secrets.ODDSPAPI_KEY }}
+        run: python run.py analyst

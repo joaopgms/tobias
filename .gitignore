@@ -1,0 +1,81 @@
+# ══════════════════════════════════════════════════════════════════
+# TOBIAS — .gitignore
+# ══════════════════════════════════════════════════════════════════
+
+# ── SECRETS — never ever commit these ─────────────────────────────
+.env
+*.env
+.env.local
+.env.production
+secrets.json
+secrets.yaml
+
+# ── PYTHON ────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+virtualenv/
+
+# Distribution / packaging
+*.egg-info/
+*.egg
+dist/
+build/
+wheels/
+*.whl
+
+# pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ── IDE / EDITORS ─────────────────────────────────────────────────
+.vscode/
+*.code-workspace
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+
+# ── WINDOWS ───────────────────────────────────────────────────────
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# ── MACOS ─────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+._*
+
+# ── LOGS ──────────────────────────────────────────────────────────
+# Local logs only — canonical audit logs live in audit/ ON GitHub
+logs/
+*.log
+
+# ── LOCAL DEV SCRATCH ─────────────────────────────────────────────
+scratch/
+tmp/
+temp/
+local/
+
+# ══════════════════════════════════════════════════════════════════
+# NOTE — these files MUST be committed (do not add them above):
+#   data/state.json       live sim state
+#   data/history.json     full bet history
+#   data/data.js          dashboard data layer
+#   data/config.json      agent model config
+#   skills/*.md           agent skills files
+#   audit/*.jsonl         agent audit logs
+#   dashboard/index.html  static dashboard
+# ══════════════════════════════════════════════════════════════════

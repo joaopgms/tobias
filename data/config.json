@@ -1,0 +1,11 @@
+{
+  "_comment": "Agent model configuration. Edit here or via the dashboard Settings tab.",
+  "_note": "Changes take effect on the next agent run. Commit this file to apply.",
+  "analyst_model":  "claude-sonnet-4-6",
+  "scout_model":    "claude-sonnet-4-6",
+  "commit_model":   "claude-sonnet-4-6",
+  "settler_model":  "claude-sonnet-4-6",
+  "llm_provider":   "claude",
+  "updated_at":     null,
+  "updated_by":     "bootstrap"
+}

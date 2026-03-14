@@ -1,0 +1,31 @@
+name: Tobias — Scout (14:00 UTC)
+
+on:
+  schedule:
+    - cron: '0 14 * * *'   # 14:00 UTC — draft picks, no stakes committed
+  workflow_dispatch:
+
+jobs:
+  scout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scout
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY:    ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN:      ${{ secrets.GH_PAT }}
+          GITHUB_REPO:       ${{ github.repository }}
+          ODDSPAPI_KEY:      ${{ secrets.ODDSPAPI_KEY }}
+          LLM_PROVIDER:      ${{ vars.LLM_PROVIDER || 'claude' }}
+        run: python run.py scout
