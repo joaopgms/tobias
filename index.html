@@ -25,11 +25,21 @@
     /* TICKER */
     .ticker-bar{background:#1a1410;height:32px;display:flex;align-items:center;overflow:hidden}
     .ticker-label{background:var(--burg);padding:0 16px;height:100%;display:flex;align-items:center;font-size:.62rem;font-weight:800;letter-spacing:2px;color:#fff;text-transform:uppercase;flex-shrink:0}
-    .ticker-scroll{display:flex;white-space:nowrap;animation:ticker 14s linear infinite}
-    @media(max-width:768px){.ticker-scroll{animation-duration:5s}}
+    .ticker-overflow{overflow:hidden;flex:1;height:100%;display:flex;align-items:center}
+    .ticker-scroll{display:flex;white-space:nowrap;
+      animation:ticker 18s linear infinite;
+      will-change:transform;
+      -webkit-backface-visibility:hidden;
+      backface-visibility:hidden;
+      transform:translate3d(0,0,0);
+      -webkit-transform:translate3d(0,0,0)}
+    @media(max-width:768px){.ticker-scroll{animation-duration:22s}}
     .ticker-item{padding:0 26px;font-size:.68rem;color:#7a6d5e;border-right:1px solid #2a2218}
     .ticker-item .win{color:var(--green-neon)}.ticker-item .loss{color:#ff7070}.ticker-item .pend{color:#f5c542}
-    @keyframes ticker{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-50%,0,0)}}
+    @keyframes ticker{
+      0%{transform:translate3d(0,0,0);-webkit-transform:translate3d(0,0,0)}
+      100%{transform:translate3d(-50%,0,0);-webkit-transform:translate3d(-50%,0,0)}
+    }
     /* HEADER */
     header{background:var(--card);border-bottom:1px solid var(--border)}
     .header-top{padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:nowrap}
@@ -90,6 +100,24 @@
     .scout-card-title{font-size:.68rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--burg)}
     .scout-card-subtitle{margin-top:2px;font-size:.66rem;color:var(--muted)}
     .scout-card-body{padding:14px 18px;font-size:.75rem;line-height:1.45;color:var(--text)}
+    .report-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-bottom:14px}
+    .report-kpi{background:var(--surface);border:1px solid var(--border2);border-radius:var(--r-sm);padding:10px 14px}
+    .report-kpi-label{font-size:.58rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+    .report-kpi-val{font-size:1.1rem;font-weight:900;color:var(--text);letter-spacing:-.5px}
+    .report-bet-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;margin-bottom:10px;box-shadow:var(--shadow)}
+    .report-bet-card.confirmed{border-left:4px solid var(--green)}
+    .report-bet-card.cancelled{border-left:4px solid var(--burg);opacity:.75}
+    .report-bet-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;flex-wrap:wrap;gap:6px}
+    .report-bet-title{font-size:.8rem;font-weight:800;color:var(--text)}
+    .report-bet-status{font-size:.64rem;font-weight:700;padding:3px 10px;border-radius:var(--r-pill)}
+    .report-bet-status.confirmed{background:var(--green-soft);color:var(--green);border:1px solid #b3e0cc}
+    .report-bet-status.cancelled{background:var(--burg-soft);color:var(--burg);border:1px solid var(--burg-mid)}
+    .report-bet-chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+    .report-chip{display:inline-flex;align-items:center;gap:4px;background:var(--surface);border:1px solid var(--border2);border-radius:var(--r-pill);padding:3px 9px;font-size:.68rem}
+    .report-chip span{font-size:.58rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+    .report-bet-reasoning{font-size:.72rem;color:var(--muted);line-height:1.55;padding-top:8px;border-top:1px solid var(--border2)}
+    .report-section-title{font-size:.62rem;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin:12px 0 6px}
+    .report-cancelled-reason{font-size:.72rem;color:var(--burg);background:var(--burg-soft);border-radius:var(--r-sm);padding:8px 12px;margin-top:6px}
     .scout-card-body pre{margin:0;white-space:pre-wrap;word-break:break-word;max-height:180px;overflow:auto;border:1px solid var(--border2);border-radius:var(--r-sm);background:#f7f3ec;padding:10px}
     /* CHART */
     .chart-section{margin:16px 32px 0;background:var(--card);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow)}
@@ -365,7 +393,11 @@
   </div>
   <div class="scout-card">
     <div class="scout-card-header"><div><div class="scout-card-title" id="reportCardTitle">🧠 Scout Report</div><div class="scout-card-subtitle" id="scoutUpdatedAt">From last run</div></div></div>
-    <div class="scout-card-body"><pre id="scoutModelOutput">No scout output yet.</pre></div>
+    <div class="scout-card-body" id="reportCardBody">
+      <div id="reportRendered" style="display:none"></div>
+      <pre id="scoutModelOutput" style="display:none">No scout output yet.</pre>
+      <div id="reportEmpty" style="color:var(--muted);font-size:.78rem;padding:8px 0">No report yet.</div>
+    </div>
   </div>
   <div class="draft-section" id="draftSection" style="display:none">
     <div class="draft-header">
@@ -691,7 +723,23 @@ const AUDIT_DATA=typeof AUDIT_LOG!=='undefined'?AUDIT_LOG:[];
 
 let allBets=[];
 try {
+  // From history entries (settled bets with full history)
   (HIST.entries||[]).forEach(e=>(e.bets||[]).forEach(b=>allBets.push({...b,date:(e.timestamp||'').split('T')[0],season:e.season||'',game:e.game||1,status:b.result||'pending'})));
+  // Also add pending_bets from state (not yet in history entries)
+  const inHistory=new Set(allBets.map(b=>b.id));
+  (ST.pending_bets||[]).forEach(b=>{
+    if(!inHistory.has(b.id)){
+      const d=(b.time||b.committed_at||'').split('T')[0];
+      allBets.push({...b,date:d,season:ST.season||'',game:ST.game||1,status:'pending'});
+    }
+  });
+  // Also add settled_bets from state not yet in history
+  (ST.settled_bets||[]).forEach(b=>{
+    if(!inHistory.has(b.id)){
+      const d=(b.settled_at||b.time||'').split('T')[0];
+      allBets.push({...b,date:d,season:ST.season||'',game:ST.game||1,status:b.result||'pending'});
+    }
+  });
 } catch(e) { console.warn('allBets init error:', e); }
 
 const seasons=Array.isArray(HIST.seasons)?(HIST.seasons||[]).map(s=>s.season):['2024-25'];
@@ -798,6 +846,16 @@ function renderAgents(){
   const cmSt=ST.commit_status||'pending';
   const cfg=typeof CONFIG_DATA!=='undefined'?CONFIG_DATA:{};
   const agentModels=ST.agent_models||{};
+  // Analyst status — derive from analyst_updated_at
+  const aUpd=ST.analyst_updated_at||'';
+  const aToday=aUpd&&aUpd.startsWith(new Date().toISOString().slice(0,10));
+  const analystSt=aToday?'done':'pending';
+  // Setter status — derive from settler_updated_at
+  const seUpd=ST.settler_updated_at||'';
+  const seToday=seUpd&&seUpd.startsWith(new Date().toISOString().slice(0,10));
+  const settlerSt=seToday?'done':'pending';
+  setPill('analystPill','analystDot',analystSt,analystSt==='done'?'ran today':'awaiting');
+  setPill('settlerPill','settlerDot',settlerSt,settlerSt==='done'?'ran today':'awaiting');
 
   // Model display: prefer what the agent actually used (from state), fallback to config
   const modelLabel=m=>{
@@ -918,10 +976,11 @@ function renderChart(){
     dataLabels:{enabled:false},stroke:{curve:'smooth',width:2,colors:['#7c1d34']},
     fill:{type:'gradient',gradient:{shadeIntensity:1,opacityFrom:.3,opacityTo:.02,stops:[0,100]}},
     xaxis:{categories:pts.map(p=>p.x),labels:{show:false},axisBorder:{show:false},axisTicks:{show:false}},
-    yaxis:{labels:{style:{fontSize:'11px',fontFamily:'Satoshi,sans-serif'},formatter:v=>'€'+v.toFixed(0)},min:0},
-    grid:{borderColor:'#ede5da',strokeDashArray:0,xaxis:{lines:{show:false}},yaxis:{lines:{show:true}}},
+
+    grid:{show:false},
     tooltip:{theme:'light',y:{formatter:v=>'€'+v.toFixed(2)}},
     colors:['#7c1d34'],
+    yaxis:{labels:{style:{fontSize:'11px',fontFamily:'Satoshi,sans-serif'},formatter:v=>'€'+v.toFixed(0)},min:0,stepSize:250},
   });
   apexChart.render();
 }
