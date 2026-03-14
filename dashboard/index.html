@@ -35,18 +35,7 @@
     .header-top{padding:16px 32px;display:flex;align-items:center;justify-content:space-between}
     .brand{display:flex;align-items:center;gap:14px}
     .brand-icon{width:46px;height:46px;display:flex;align-items:center;justify-content:center}
-    .brand-spin-wrap{overflow:visible}
-    .brand-spin{width:42px;height:42px;object-fit:contain;
-      animation:nba-spin 8s linear infinite;
-      transform-origin:center center;
-      will-change:transform;
-      -webkit-backface-visibility:hidden;
-      backface-visibility:hidden;
-      display:block}
-    @keyframes nba-spin{
-      0%{transform:rotate(0deg)}
-      100%{transform:rotate(360deg)}
-    }
+    .brand-spin{width:42px;height:42px;object-fit:contain;display:block}
     .brand-name{font-size:1.2rem;font-weight:800;letter-spacing:-.5px;color:var(--text);line-height:1}
     .brand-sub{font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:3px}
     .header-meta{font-size:.7rem;color:var(--muted);text-align:right;line-height:1.6}
@@ -291,8 +280,12 @@
 <header>
   <div class="header-top">
     <div class="brand">
-      <div class="brand-icon brand-spin-wrap">
+      <div class="brand-icon">
         <img src="https://a.espncdn.com/i/teamlogos/leagues/500/nba.png" class="brand-spin" alt="NBA"/>
+      </div>
+      <div>
+        <div class="brand-name">TOBIAS</div>
+        <div class="brand-sub">Your friendly neighborhood advisor</div>
       </div>
     </div>
     <div style="text-align:right">
@@ -731,14 +724,27 @@ const CL=c=>c>=85?'🔥 Elite':c>=70?'✅ High':c>=55?'🟡 Med':c>=40?'🔵 Spe
 // ── TICKER ─────────────────────────────────────────────────────────────────
 function buildTicker(){
   const s=stats();
-  const items=[
-    `Bankroll: <span class="pend">€${(s.br||0).toFixed(2)}</span>`,
-    `Record: <span class="win">${s.won.length}W</span> / <span class="loss">${s.lost.length}L</span>`,
-    `Season ${activeSeason}`,
-    ...allBets.slice(-4).map(b=>`${b.match} — ${b.pick} <span class="${b.result?(b.result==='WON'?'win':'loss'):'pend'}">${b.result||'PENDING'}</span>`),
-    `Scout 14:00 UTC · Commit 15min before tip-off`,
-    `Odds: Betano.pt via OddsPapi`,
-  ];
+  const hasData = allBets.length > 0 || s.br !== 1000 || ST.last_updated;
+  let items;
+  if(hasData){
+    items=[
+      `Bankroll: <span class="pend">€${(s.br||0).toFixed(2)}</span>`,
+      `Record: <span class="win">${s.won.length}W</span> / <span class="loss">${s.lost.length}L</span>`,
+      `Season ${activeSeason}`,
+      ...allBets.slice(-4).map(b=>`${b.match} — ${b.pick} <span class="${b.result?(b.result==='WON'?'win':'loss'):'pend'}">${b.result||'PENDING'}</span>`),
+      `Scout 14:00 UTC · Commit 15min before tip-off`,
+      `Odds: Betano.pt via OddsPapi`,
+    ];
+  } else {
+    items=[
+      `🏀 <span class="pend">TOBIAS</span> — Autonomous NBA Betting Simulation`,
+      `Waiting for first agent run · Scout fires at 14:00 UTC`,
+      `Analyst 11:00 · Scout 14:00 · Commit 15min before tip-off · Settler 10:00`,
+      `Odds via <span class="pend">Betano.pt</span> · Powered by Claude Sonnet 4.6`,
+      `Starting bankroll: <span class="pend">€${(ST.bankroll_initial||1000).toLocaleString('pt-PT')}</span>`,
+      `Season <span class="pend">${activeSeason}</span> · Game <span class="pend">${ST.game||1}</span>`,
+    ];
+  }
   const d=[...items,...items];
   document.getElementById('tickerScroll').innerHTML=d.map(i=>`<span class="ticker-item">${i}</span>`).join('');
 }
