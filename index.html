@@ -1024,36 +1024,37 @@ function switchSkillsTab(tab) {
 }
 
 function parseSkillsSections(raw) {
-  if (!raw) return [];
+  if (!raw) return {sections:[], version:'?', updated_at:null, llm:null};
   const sections = [];
-  // Parse YAML frontmatter
   let body = raw;
   let meta = '';
-  if (raw.startsWith('---')) {
+  if (raw.indexOf('---') === 0) {
     const parts = raw.split('---');
     if (parts.length >= 3) { meta = parts[1].trim(); body = parts.slice(2).join('---').trim(); }
   }
-  // Parse ## SECTION:name blocks
   const lines = body.split('\n');
   let current = null;
-  for (const line of lines) {
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
     const m = line.match(/^## SECTION:(\S+)/);
     if (m) {
       if (current) sections.push(current);
       current = { name: m[1], content: '' };
     } else if (current) {
-      current.content += (current.content ? '
-' : '') + line;
+      current.content += (current.content ? '\n' : '') + line;
     }
   }
   if (current) sections.push(current);
-  // Extract version from meta
-  const vMatch = meta.match(/version:\s*(\d+)/);
-  const upMatch = meta.match(/updated_at:\s*([^
-]+)/);
-  const lMatch = meta.match(/llm:\s*([^
-]+)/);
-  return { sections, version: vMatch ? vMatch[1] : '?', updated_at: upMatch ? upMatch[1].trim() : null, llm: lMatch ? lMatch[1].trim() : null };
+  let version = '?', updated_at = null, llm = null;
+  meta.split('\n').forEach(function(line) {
+    const vM = line.match(/^version:\s*(\d+)/);
+    const uM = line.match(/^updated_at:\s*(.+)/);
+    const lM = line.match(/^llm:\s*(.+)/);
+    if (vM) version = vM[1];
+    if (uM) updated_at = uM[1].trim();
+    if (lM) llm = lM[1].trim();
+  });
+  return { sections, version, updated_at, llm };
 }
 
 function sectionTitle(name) {
