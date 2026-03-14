@@ -1,6 +1,6 @@
 ---
-version: 2
-updated_at: 2026-03-14T18:14:09.813312+00:00
+version: 3
+updated_at: 2026-03-14T18:46:12.101354+00:00
 updated_by: analyst_2026-03-14
 llm: claude-sonnet-4-6
 ---
@@ -30,15 +30,16 @@ If BOTH teams have franchise player uncertainty → evaluate net impact; may sti
 
 Current confirmed franchise player absences (update each session):
   - Anthony Davis (Lakers): OUT — do not back Lakers ML unless opponent also missing anchor
-  - D'Angelo Russell (Lakers): OUT — compounds Lakers roster concerns
-  - Kyshawn George (Wizards): OUT — note: Wizards already tank-tier, minimal impact on assessment
+  - D'Angelo Russell (Lakers): OUT — compounds Lakers roster concerns; Lakers still 41-25 with W4 streak, suggesting depth is covering adequately — monitor but do not discount Lakers entirely in spread/O-U contexts
+  - Kyshawn George (Wizards): OUT — note: Wizards already tank-tier, minimal additional impact on assessment
 
 ## SECTION:tanking_teams
 Confirmed tanking-tier teams (all three criteria met):
-  - Washington Wizards: 16-49, L10: 0-10, L10 streak W0 — clear tank, no play-in path
+  - Washington Wizards: 16-49, L10: 0-10, streak: L10 — clearest tank in league, actively losing every game
   - Sacramento Kings: 16-51, L10: 4-6 — worst record in West, no play-in path
   - Brooklyn Nets: 17-49, L10: 2-8 — bottom East, no play-in path
   - Utah Jazz: 20-47, L10: 2-8 — no play-in path
+  - Dallas Mavericks: 22-45, L10: 1-9 — now meets all three tanking criteria; treat as confirmed tank
 
 Tanking criteria (ALL THREE must be met):
   (a) Team owns its own 2026 draft pick
@@ -47,7 +48,7 @@ Tanking criteria (ALL THREE must be met):
 
 When betting AGAINST tanking teams: treat as edge-positive. When betting ON tanking teams: require odds ≥ 2.20 and strong situational reason (e.g. opponent B2B, major injury).
 
-Note: Dallas Mavericks (22-45, L10: 1-9) trending toward tank territory — monitor.
+Emerging tank-watch: Memphis Grizzlies (23-43, L10: 2-8, streak: L7) — trending toward tank criteria, monitor draft pick ownership.
 
 ## SECTION:b2b_rules
 B2B teams cover the spread less than 45% of the time historically.
