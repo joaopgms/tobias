@@ -288,7 +288,7 @@
         <div class="brand-sub">Your friendly neighborhood advisor</div>
       </div>
     </div>
-    <div style="text-align:right">
+    <div style="text-align:right;display:flex;flex-direction:column;align-items:flex-end;justify-content:center">
       <div class="header-meta">Last updated &nbsp;<strong id="lastUpdated">—</strong></div>
       <div class="live-badge"><span class="live-dot"></span> Simulation active</div>
     </div>
@@ -663,9 +663,11 @@ const DRF =typeof DRAFT_PICKS!=='undefined'?DRAFT_PICKS:[];
 const AUDIT_DATA=typeof window.AUDIT_LOG!=='undefined'?window.AUDIT_LOG:[];
 
 let allBets=[];
-(HIST.entries||[]).forEach(e=>(e.bets||[]).forEach(b=>allBets.push({...b,date:(e.timestamp||'').split('T')[0],season:e.season||'',game:e.game||1,status:b.result||'pending'})));
+try {
+  (HIST.entries||[]).forEach(e=>(e.bets||[]).forEach(b=>allBets.push({...b,date:(e.timestamp||'').split('T')[0],season:e.season||'',game:e.game||1,status:b.result||'pending'})));
+} catch(e) { console.warn('allBets init error:', e); }
 
-const seasons=(HIST.seasons||[]).map(s=>s.season);
+const seasons=Array.isArray(HIST.seasons)?(HIST.seasons||[]).map(s=>s.season):['2024-25'];
 let activeSeason=ST.season||seasons[seasons.length-1]||'2024-25';
 let activeGame=ST.game||1;
 let sortCol='date',sortDir=-1;
@@ -1195,8 +1197,18 @@ function showToast(m){const t=document.getElementById('copyToast');t.textContent
 function fmt(iso){if(!iso)return'—';try{return new Date(iso).toLocaleString('pt-PT',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});}catch{return iso;}}
 
 // ── INIT ───────────────────────────────────────────────────────────────────
-function refresh(){buildTicker();renderStats();renderScout();renderDrafts();renderAgents();renderChart();renderWL();renderAnalytics();}
-buildSelector();refresh();
+function refresh(){
+  try{buildTicker();}catch(e){console.warn('ticker:',e);}
+  try{renderStats();}catch(e){console.warn('stats:',e);}
+  try{renderScout();}catch(e){console.warn('scout:',e);}
+  try{renderDrafts();}catch(e){console.warn('drafts:',e);}
+  try{renderAgents();}catch(e){console.warn('agents:',e);}
+  try{renderChart();}catch(e){console.warn('chart:',e);}
+  try{renderWL();}catch(e){console.warn('wl:',e);}
+  try{renderAnalytics();}catch(e){console.warn('analytics:',e);}
+}
+try{buildSelector();}catch(e){console.warn('selector:',e);}
+refresh();
 ['filterResult','filterDate','filterSearch'].forEach(id=>{const el=document.getElementById(id);if(el)el.addEventListener('input',renderTable);});
 </script>
 </body>
