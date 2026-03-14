@@ -1,8 +1,8 @@
 ---
-version: 1
-updated_at: null
-updated_by: bootstrap
-llm: bootstrap
+version: 2
+updated_at: 2026-03-14T18:14:09.813312+00:00
+updated_by: analyst_2026-03-14
+llm: claude-sonnet-4-6
 ---
 
 ## SECTION:odds_targets
@@ -28,12 +28,26 @@ Franchise player Questionable/GTD → confidence -10, stake -20%. Flag explicitl
 Franchise player Day-To-Day → confidence -5, stake -10%.
 If BOTH teams have franchise player uncertainty → evaluate net impact; may still be value on the less-affected side.
 
+Current confirmed franchise player absences (update each session):
+  - Anthony Davis (Lakers): OUT — do not back Lakers ML unless opponent also missing anchor
+  - D'Angelo Russell (Lakers): OUT — compounds Lakers roster concerns
+  - Kyshawn George (Wizards): OUT — note: Wizards already tank-tier, minimal impact on assessment
+
 ## SECTION:tanking_teams
-No teams confirmed tanking at start of season. Analyst will update based on standings.
+Confirmed tanking-tier teams (all three criteria met):
+  - Washington Wizards: 16-49, L10: 0-10, L10 streak W0 — clear tank, no play-in path
+  - Sacramento Kings: 16-51, L10: 4-6 — worst record in West, no play-in path
+  - Brooklyn Nets: 17-49, L10: 2-8 — bottom East, no play-in path
+  - Utah Jazz: 20-47, L10: 2-8 — no play-in path
+
 Tanking criteria (ALL THREE must be met):
   (a) Team owns its own 2026 draft pick
   (b) Bad record confirmed by both W-L AND L10
   (c) No realistic path to playoffs or play-in
+
+When betting AGAINST tanking teams: treat as edge-positive. When betting ON tanking teams: require odds ≥ 2.20 and strong situational reason (e.g. opponent B2B, major injury).
+
+Note: Dallas Mavericks (22-45, L10: 1-9) trending toward tank territory — monitor.
 
 ## SECTION:b2b_rules
 B2B teams cover the spread less than 45% of the time historically.
