@@ -20,5 +20,9 @@
   "last_report": "",
   "draft_picks": [],
   "pending_bets": [],
-  "settled_bets": []
+  "settled_bets": [],
+  "agent_models": {
+    "analyst": "claude-sonnet-4-6"
+  },
+  "analyst_updated_at": "2026-03-14T19:02:59.051718+00:00"
 }
