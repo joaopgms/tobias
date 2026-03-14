@@ -366,19 +366,19 @@
   </div>
   <div class="agents-row">
     <div class="agent-card">
-      <div class="agent-card-header"><span class="agent-name">🧠 Analyst</span><span class="agent-pill done" id="analystPill"><span class="agent-dot done" id="analystDot"></span><span id="analystStatus">Daily</span></span></div>
+      <div class="agent-card-header"><span class="agent-name">🧠 Analyst</span><span class="agent-pill done" id="analystPill"><span class="agent-dot done" id="analystDot"></span><span id="analystStatus">offline</span></span></div>
       <div class="agent-meta-row"><span class="agent-meta-label">Model</span><span class="agent-meta-val" id="analystLlm">-</span></div>
       <div class="agent-meta-row"><span class="agent-meta-label">Last run</span><span class="agent-meta-val" id="analystLastRun">-</span></div>
       <div class="agent-meta-row"><span class="agent-meta-label">Next run</span><span class="agent-meta-val" id="analystNextRun">-</span></div>
     </div>
     <div class="agent-card">
-      <div class="agent-card-header"><span class="agent-name">🔍 Scout</span><span class="agent-pill pending" id="scoutPill"><span class="agent-dot pending" id="scoutDot"></span><span id="scoutStatus">-</span></span></div>
+      <div class="agent-card-header"><span class="agent-name">🔍 Scout</span><span class="agent-pill pending" id="scoutPill"><span class="agent-dot pending" id="scoutDot"></span><span id="scoutStatus">offline</span></span></div>
       <div class="agent-meta-row"><span class="agent-meta-label">Model</span><span class="agent-meta-val" id="scoutLlm">-</span></div>
       <div class="agent-meta-row"><span class="agent-meta-label">Last run</span><span class="agent-meta-val" id="scoutTime">-</span></div>
       <div class="agent-meta-row"><span class="agent-meta-label">Next run</span><span class="agent-meta-val" id="scoutNextRun">-</span></div>
     </div>
     <div class="agent-card">
-      <div class="agent-card-header"><span class="agent-name">🎯 Commit</span><span class="agent-pill pending" id="commitPill"><span class="agent-dot pending" id="commitDot"></span><span id="commitStatus">-</span></span></div>
+      <div class="agent-card-header"><span class="agent-name">🎯 Commit</span><span class="agent-pill pending" id="commitPill"><span class="agent-dot pending" id="commitDot"></span><span id="commitStatus">offline</span></span></div>
       <div class="agent-meta-row"><span class="agent-meta-label">Model</span><span class="agent-meta-val" id="commitLlm">-</span></div>
       <div class="agent-meta-row"><span class="agent-meta-label">Last run</span><span class="agent-meta-val" id="commitTime">-</span></div>
       <div class="agent-meta-row"><span class="agent-meta-label">First game</span><span class="agent-meta-val" id="firstGameTime">-</span></div>
@@ -846,8 +846,8 @@ function renderAgents(){
   const seUpd=ST.settler_updated_at||'';
   const seToday=seUpd&&seUpd.startsWith(new Date().toISOString().slice(0,10));
   const settlerSt=seToday?'done':'pending';
-  setPill('analystPill','analystDot',analystSt,analystSt==='done'?'ran today':'awaiting');
-  setPill('settlerPill','settlerDot',settlerSt,settlerSt==='done'?'ran today':'awaiting');
+  setPill('analystPill','analystDot',analystSt,analystSt==='done'?'done':'offline');
+  setPill('settlerPill','settlerDot',settlerSt,settlerSt==='done'?'done':'offline');
 
   // Model display: prefer what the agent actually used (from state), fallback to config
   const modelLabel=m=>{
@@ -865,8 +865,8 @@ function renderAgents(){
   const settlerM = agentModels.settler || cfg.settler_model || 'claude-sonnet-4-6';
 
   function setPill(pid,did,cls,txt){const p=document.getElementById(pid),d=document.getElementById(did);if(!p||!d)return;p.className=`agent-pill ${cls}`;d.className=`agent-dot ${cls}`;p.querySelector('span:last-child').textContent=txt;}
-  setPill('scoutPill','scoutDot', scSt==='live'?'live':scSt==='unavailable'?'error':'pending', scSt);
-  setPill('commitPill','commitDot', cmSt==='done'?'done':cmSt==='error'?'error':'pending', cmSt);
+  setPill('scoutPill','scoutDot', scSt==='live'?'live':scSt==='unavailable'?'error':'pending', scSt==='live'?'live':scSt==='unavailable'?'error':'offline');
+  setPill('commitPill','commitDot', cmSt==='done'?'done':cmSt==='error'?'error':'pending', cmSt==='done'?'done':cmSt==='error'?'error':'offline');
 
   // Set model labels
   document.getElementById('analystLlm').textContent  = modelLabel(analystM);
@@ -982,11 +982,16 @@ function renderRichReport(md) {
     h+='<div class="report-section-title">Cancelled Picks</div>';
     cancelled.forEach(b=>{
       const pickLabel=b.title.replace(/^CANCELLED\s*[-—]\s*/,'').replace(/\s*\(Bet ID:[^)]+\)/,'').replace(/\s*\(Draft ID:[^)]+\)/,'');
+      const cpts=b.match?b.match.split(' vs '):[];
+      const chm=cpts[0]||'', caw=cpts[1]||'';
       h+=`<div class="report-bet-card cancelled">
         <div class="report-bet-header">
-          <div class="report-bet-title">${pickLabel}</div>
+          <div class="report-bet-title">
+            ${chm?`${logoImg(chm,18)} ${getTeam(chm).short} vs ${logoImg(caw,18)} ${getTeam(caw).short}`:pickLabel}
+          </div>
           <span class="report-bet-status cancelled">❌ Cancelled</span>
         </div>
+        ${b.match?`<div style="font-size:.72rem;color:var(--muted);margin-bottom:6px">${pickLabel}</div>`:''}
         ${b.cancel?`<div class="report-cancelled-reason">${b.cancel}</div>`:''}
       </div>`;
     });
@@ -1124,7 +1129,7 @@ function renderTable(){
     const rb=b.result?`<span class="badge badge-${b.result.toLowerCase()}">${b.result}</span>`:`<span class="badge badge-pending">⏳</span>`;
     const pnl=b.pnl!=null?`<span class="bet-card-chip"><span>P&L</span><span class="${b.pnl>=0?'pnl-pos':'pnl-neg'}">${b.pnl>=0?'+':''}€${b.pnl.toFixed(2)}</span></span>`:'';
     return`<div class="bet-card">
-      <div class="bet-card-top"><span class="bet-card-date">${b.date||''}</span>${rb}</div>
+      <div class="bet-card-top"><span class="bet-card-date">${b.date||''}${b.time?' · '+fmt(b.time):''}</span>${rb}</div>
       <div class="bet-card-matchup"><div class="bet-card-team">${mobileLogo(h)}<div class="bet-card-team-name">${getTeam(h).short}</div><div class="bet-card-venue">🏠 Home</div></div>
         <div class="bet-card-vs">VS</div>
         <div class="bet-card-team">${mobileLogo(a)}<div class="bet-card-team-name">${getTeam(a).short}</div><div class="bet-card-venue">✈️ Away</div></div>
@@ -1446,7 +1451,7 @@ function buildScoutMsg(){if(!DRF.length)return null;const s=stats();const now=ne
 function showToast(m){const t=document.getElementById('copyToast');t.textContent=m;t.classList.add('show');clearTimeout(t._tid);t._tid=setTimeout(()=>t.classList.remove('show'),2600);}
 
 // -- UTILS ------------------------------------------------------------------
-function fmt(iso){if(!iso)return'-';try{return new Date(iso).toLocaleString('pt-PT',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});}catch{return iso;}}
+function fmt(iso){if(!iso)return'-';try{return new Date(iso).toLocaleString('pt-PT',{timeZone:'Europe/Lisbon',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});}catch{return iso;}}
 
 // -- INIT -------------------------------------------------------------------
 function refresh(){
