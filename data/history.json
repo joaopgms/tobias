@@ -14,7 +14,7 @@
           "peak_bankroll": 1000.0,
           "final_bankroll": null,
           "net_pnl": null,
-          "total_bets": 2,
+          "total_bets": 0,
           "wins": 0,
           "losses": 0,
           "bust": false
@@ -22,66 +22,5 @@
       ]
     }
   ],
-  "entries": [
-    {
-      "entry_id": "nba_entry_20260314",
-      "season": "2024-25",
-      "game": 1,
-      "timestamp": "2026-03-14T19:46:01.984626+00:00",
-      "type": "bets_placed",
-      "bankroll_before": 1000.0,
-      "total_staked": 300.0,
-      "bankroll_after": 700.0,
-      "cancelled_picks": [
-        {
-          "id": "nba_draft_20260314_001",
-          "match": "Atlanta Hawks vs Milwaukee Bucks",
-          "reason": "Game already in progress at commit time (tip-off 19:00Z, commit 19:46Z). Cannot place pre-game bet on live game. Pick cancelled regardless of edge quality."
-        }
-      ],
-      "bets": [
-        {
-          "id": "nba_bet_20260314_001",
-          "match": "Miami Heat vs Orlando Magic",
-          "time": "2026-03-15T00:00:00Z",
-          "pick": "Miami Heat ML",
-          "odds": 1.88,
-          "stake": 150,
-          "potential_return": 282.0,
-          "reasoning": "Mirror-image matchup (both L10: 8-2) where home court advantage is the decisive tiebreaker. Heat at Kaseya Center with playoff/play-in motivation. Heat culture well-documented for strong home performances. Anchors Bam Adebayo and Tyler Herro both active. Odds 1.88 within 1.70–2.50 target range. No cancel criteria triggered. Confidence capped at 60 (medium) due to genuinely even matchup — Magic equally capable — but home edge justifies the play at these odds.",
-          "confidence": 60,
-          "anchor_players": [
-            "Bam Adebayo",
-            "Tyler Herro"
-          ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
-          "committed_at": "2026-03-14T19:46:05Z"
-        },
-        {
-          "id": "nba_bet_20260314_002",
-          "match": "LA Clippers vs Sacramento Kings",
-          "time": "2026-03-15T02:30:00Z",
-          "pick": "LA Clippers ML",
-          "odds": 1.72,
-          "stake": 150,
-          "potential_return": 258.0,
-          "reasoning": "Kings are a confirmed tanking team (16-51 record, worst in West, L10: 4-6, own their 2026 draft pick) — skills explicitly state betting against tanking teams is edge-positive. Clippers are home (L10: 7-3) with strong play-in/postseason motivation. Motivation delta is the largest on tonight's slate: Clippers fighting for their playoff lives vs Kings actively seeking lottery position. Anchors Kawhi Leonard and James Harden both active. Odds confirmed at 1.72, meeting the ≥1.70 conditional threshold set at draft. No cancel criteria triggered.",
-          "confidence": 65,
-          "anchor_players": [
-            "Kawhi Leonard",
-            "James Harden"
-          ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
-          "committed_at": "2026-03-14T19:46:05Z"
-        }
-      ],
-      "summary": "Day 2026-03-14 commit — 2 bets totalling €300.00. 1 cancelled. Bankroll: €1000.00 → €700.00."
-    }
-  ]
+  "entries": []
 }

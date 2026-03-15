@@ -117,6 +117,9 @@
     .report-chip span{font-size:.58rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
     .report-bet-reasoning{font-size:.72rem;color:var(--muted);line-height:1.55;padding-top:8px;border-top:1px solid var(--border2)}
     .report-section-title{font-size:.62rem;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin:12px 0 6px}
+    .report-rejected-card{background:var(--surface);border:1px solid var(--border2);border-left:3px solid var(--muted);border-radius:var(--r-sm);padding:10px 14px;margin-bottom:6px;display:flex;gap:10px;align-items:flex-start}
+    .report-rejected-match{font-size:.74rem;font-weight:700;color:var(--text);flex-shrink:0;min-width:120px}
+    .report-rejected-reason{font-size:.7rem;color:var(--muted);line-height:1.5}
     .report-cancelled-reason{font-size:.72rem;color:var(--burg);background:var(--burg-soft);border-radius:var(--r-sm);padding:8px 12px;margin-top:6px}
     .scout-card-body pre{margin:0;white-space:pre-wrap;word-break:break-word;max-height:180px;overflow:auto;border:1px solid var(--border2);border-radius:var(--r-sm);background:#f7f3ec;padding:10px}
     /* CHART */
@@ -996,7 +999,24 @@ function renderRichReport(md) {
       </div>`;
     });
   }
+  // Late scout rejections (commit phase)
+  const lateRej = ST.late_scout_rejections||[];
+  h += renderRejectedGames(lateRej, '🔍 Late Scout — Games Checked, Not Added');
   return h||null;
+}
+
+function renderRejectedGames(items, title) {
+  if(!items||!items.length) return '';
+  let h = `<div class="report-section-title">${title}</div>`;
+  items.forEach(g => {
+    const pts = (g.match||'').split(' vs ');
+    const hm=pts[0]||'', aw=pts[1]||'';
+    h += `<div class="report-rejected-card">
+      <div class="report-rejected-match">${hm?logoImg(hm,16):''}${getTeam(hm).short}${aw?' vs '+getTeam(aw).short:''}</div>
+      <div class="report-rejected-reason">${g.reason||''}</div>
+    </div>`;
+  });
+  return h;
 }
 
 function renderScout(){
@@ -1027,8 +1047,14 @@ function renderScout(){
     renderedEl.style.display='block';
     if(rawEl) rawEl.style.display='none';
   } else {
+    // Scout report — show raw text + rejected games below
     if(rawEl){ rawEl.textContent=report; rawEl.style.display='block'; }
-    if(renderedEl) renderedEl.style.display='none';
+    if(renderedEl){
+      const rejected = ST.rejected_games||[];
+      const rejHtml = renderRejectedGames(rejected, '🚫 Games Reviewed — Not Drafted');
+      if(rejHtml){ renderedEl.innerHTML=rejHtml; renderedEl.style.display='block'; }
+      else renderedEl.style.display='none';
+    }
   }
 }
 
@@ -1116,9 +1142,8 @@ function renderTable(){
     const pts=(b.match||'').split(' vs ');const h=pts[0]||'',a=pts[1]||'';
     const rb=b.result?`<span class="badge badge-${b.result.toLowerCase()}">${b.result==='WON'?'✅':b.result==='LOST'?'❌':'?'} ${b.result}</span>`:`<span class="badge badge-pending">⏳ Placed</span>`;
     const pnl=b.pnl!=null?`<span class="${b.pnl>=0?'pnl-pos':'pnl-neg'}">${b.pnl>=0?'+':''}€${b.pnl.toFixed(2)}</span>`:'-';
-    const gameTime = b.time ? fmt(b.time) : '';
-    const betDate = b.date || '-';
-    return`<tr><td style='white-space:nowrap'>${betDate}${gameTime?`<br><span style="font-size:.65rem;color:var(--muted)">🏀 ${gameTime}</span>`:''}</td>
+    const gameTime = b.time ? fmt(b.time) : (b.date||'-');
+    return`<tr><td style='white-space:nowrap'><span style="font-size:.72rem;color:var(--muted)">${gameTime}</span></td>
       <td><div class="team-cell">${logoImg(h)}<span>${getTeam(h).short}</span><span style="color:var(--muted);margin:0 4px;font-size:.7rem">vs</span>${logoImg(a)}<span>${getTeam(a).short}</span></div></td>
       <td>${(b.odds||0).toFixed(2)}</td><td>€${(b.stake||0).toFixed(2)}</td><td>€${(b.potential_return||0).toFixed(2)}</td>
       <td>${rb}</td><td>${pnl}</td>
@@ -1131,7 +1156,7 @@ function renderTable(){
     const rb=b.result?`<span class="badge badge-${b.result.toLowerCase()}">${b.result}</span>`:`<span class="badge badge-pending">⏳</span>`;
     const pnl=b.pnl!=null?`<span class="bet-card-chip"><span>P&L</span><span class="${b.pnl>=0?'pnl-pos':'pnl-neg'}">${b.pnl>=0?'+':''}€${b.pnl.toFixed(2)}</span></span>`:'';
     return`<div class="bet-card">
-      <div class="bet-card-top"><span class="bet-card-date">${b.date||''}${b.time?' · 🏀 '+fmt(b.time):''}</span>${rb}</div>
+      <div class="bet-card-top"><span class="bet-card-date">${b.time?fmt(b.time):b.date||''}</span>${rb}</div>
       <div class="bet-card-matchup"><div class="bet-card-team">${mobileLogo(h)}<div class="bet-card-team-name">${getTeam(h).short}</div><div class="bet-card-venue">🏠 Home</div></div>
         <div class="bet-card-vs">VS</div>
         <div class="bet-card-team">${mobileLogo(a)}<div class="bet-card-team-name">${getTeam(a).short}</div><div class="bet-card-venue">✈️ Away</div></div>

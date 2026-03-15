@@ -84,7 +84,7 @@ Drafted_at: {datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')}
 
 Draft pick IDs: nba_draft_{today.replace('-','')}_{'{001, 002...}'}
 
-IMPORTANT: You MUST end your response with ALL THREE of these XML tags in this exact format.
+IMPORTANT: You MUST end your response with ALL FOUR of these XML tags in this exact format.
 Do not add any text after the closing </scout_report> tag.
 
 <draft_picks>
@@ -94,6 +94,12 @@ Do not add any text after the closing </scout_report> tag.
 <first_game_time>
 [ISO 8601 UTC of first tip-off, e.g. 2026-03-15T00:00:00Z]
 </first_game_time>
+
+<rejected_games>
+[JSON array of games you reviewed but did NOT draft, format:
+{{"match": "HOME vs AWAY", "reason": "why not picked (e.g. odds out of range, both teams tanking, confidence below 40, etc.)"}}
+Use [] if all games were drafted or if no games tonight.]
+</rejected_games>
 
 <scout_report>
 [Your full scouting analysis in markdown]
@@ -270,6 +276,11 @@ def run(store) -> None:
     state["agent_models"] = state.get("agent_models", {})
     state["agent_models"]["scout"] = llm
     state["scout_status"]     = "live"
+    # Store rejected games for dashboard display
+    try:
+        state["rejected_games"] = json.loads(rejected_raw) if rejected_raw else []
+    except Exception:
+        state["rejected_games"] = []
     state["scout_error"]      = ""
     state["scout_updated_at"] = now_iso
     state["commit_status"]    = "pending"   # reset for today's commit

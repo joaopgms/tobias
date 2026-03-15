@@ -109,8 +109,14 @@ Output these XML tags at the very end:
 </committed_bets>
 
 <cancelled_picks>
-[JSON array of {{"id": "...", "match": "...", "reason": "..."}} for cancelled picks]
+[JSON array of {{"id": "...", "match": "...", "pick": "...", "reason": "..."}} for each draft pick you cancelled]
 </cancelled_picks>
+
+<late_scout_rejections>
+[JSON array of games you checked in late scout but did NOT add as new bets, format:
+{{"match": "HOME vs AWAY", "reason": "why not picked"}}
+Use [] if you found no new edges to evaluate.]
+</late_scout_rejections>
 
 <commit_report>
 [Full commit report — markdown formatted]
@@ -302,6 +308,10 @@ def run(store, force: bool = False) -> None:
     state["commit_updated_at"] = now_iso
     state["last_updated"]      = now_iso
     state["last_report"]       = report_raw
+    try:
+        state["late_scout_rejections"] = json.loads(late_rejections_raw) if late_rejections_raw else []
+    except Exception:
+        state["late_scout_rejections"] = []
 
     # ── 12. Update history ────────────────────────────────────────────────────
     season = state["season"]
