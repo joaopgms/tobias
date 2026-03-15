@@ -1,6 +1,6 @@
 ---
-version: 7
-updated_at: 2026-03-15T12:16:48.626019+00:00
+version: 8
+updated_at: 2026-03-15T18:48:09.927309+00:00
 updated_by: analyst_2026-03-15
 llm: claude-sonnet-4-6
 ---
@@ -41,7 +41,7 @@ Confirmed tanking-tier teams (all three criteria met):
   - Utah Jazz: 20-47, L10: 2-8 — no play-in path
   - Dallas Mavericks: 22-45, L10: 1-9 — meets all three tanking criteria; treat as confirmed tank
   - Memphis Grizzlies: 23-43, L10: 2-8, streak: L7 — confirmed tank
-  - Milwaukee Bucks: 27-39, L10: 2-8, streak: L4 — promoted to confirmed tank-tier; fading hard, verify draft pick ownership before each bet
+  - Milwaukee Bucks: 27-39, L10: 2-8, streak: L4 — confirmed tank-tier; fading hard, verify draft pick ownership before each bet
 
 Tanking criteria (ALL THREE must be met):
   (a) Team owns its own 2026 draft pick
@@ -51,13 +51,14 @@ Tanking criteria (ALL THREE must be met):
 When betting AGAINST tanking teams: treat as edge-positive. When betting ON tanking teams: require odds ≥ 2.20 and strong situational reason (e.g. opponent B2B, major injury).
 
 Emerging tank-watch:
-  - Chicago Bulls (27-40, L10: 3-7) — monitor play-in race and pick ownership
-  - New Orleans Pelicans (22-46, L10: 6-4) — record is tank-tier but L10 shows fight; watch motivation shift
+  - Chicago Bulls (27-40, L10: 3-7, streak: L2) — monitor play-in race and pick ownership; L2 streak adds concern
+  - New Orleans Pelicans (22-46, L10: 6-4, streak: L1) — record is tank-tier but L10 shows fight; watch motivation shift
 
 Hot streaks to track (may create line inefficiencies):
-  - Atlanta Hawks (36-31, L10: 9-1, streak: W9) — elite recent form; books may undervalue
+  - Atlanta Hawks (36-31, L10: 9-1, streak: W9) — elite recent form; books may undervalue; W9 streak risks sharp regression, verify line before committing
   - Orlando Magic (38-28, L10: 8-2, streak: W7) — strong run; monitor for inflated lines
   - OKC Thunder (52-15, L10: 9-1, streak: W7) — best record in league; likely priced efficiently but note for context
+  - Los Angeles Lakers (42-25, L10: 8-2, streak: W5) — strong depth performance despite Davis/Russell OUT; back only in spread/O-U contexts given anchor absences
 
 ## SECTION:b2b_rules
 B2B teams cover the spread less than 45% of the time historically.
