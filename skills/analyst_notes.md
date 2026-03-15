@@ -7,13 +7,13 @@ commit_patches: 0
 
 ## Today's Analysis — 2026-03-15
 
-No bets have been placed yet so there is no performance data to act on. The main structural update this session is promoting Milwaukee Bucks to confirmed tank-tier based on their record, L10, and losing streak all meeting the criteria. The Lakers situation (Davis + Russell both out) warrants continued caution on their ML despite a 5-game winning streak suggesting depth is compensating. Atlanta Hawks' W9 streak and Orlando's W7 streak are the most notable potential line inefficiency signals to monitor.
+No bets have been settled yet so there is no performance data to analyse. The standings reveal two macro trends worth monitoring: (1) Atlanta Hawks' W9 streak and Orlando Magic's W7 streak represent potential line-value opportunities that books may be slow to fully price in; (2) Washington Wizards' 0-10 L10 and L11 streak is historically extreme — fade aggressively but check for schedule-driven garbage-time line distortions. Lakers' 8-2 L10 despite Davis/Russell OUT signals exceptional depth, making them a spread/O-U candidate but not ML.
 
 
 
 ## Scout patches applied
-- [franchise_player_rules] Injury landscape is unchanged from prior session; no new injuries or upgrades reported, so current absences remain accurate.
-- [tanking_teams] Milwaukee Bucks now meet all three tanking criteria (27-39, L10: 2-8, streak: L4) and should be promoted from tank-watch to confirmed tank-tier per the established framework.
+- [franchise_player_rules] Injury data is unchanged from prior session; no new absences or upgrades reported, so current guidance remains accurate.
+- [tanking_teams] Current standings confirm all existing tanking/hot-streak classifications; Lakers W5 streak with 8-2 L10 despite dual absences is a notable new data point warranting explicit callout in hot-streaks section.
 
 ## Commit patches applied
 None
