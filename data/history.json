@@ -14,7 +14,7 @@
           "peak_bankroll": 1000.0,
           "final_bankroll": null,
           "net_pnl": null,
-          "total_bets": 3,
+          "total_bets": 0,
           "wins": 0,
           "losses": 0,
           "bust": false
@@ -22,80 +22,5 @@
       ]
     }
   ],
-  "entries": [
-    {
-      "entry_id": "nba_entry_20260315",
-      "season": "2024-25",
-      "game": 1,
-      "timestamp": "2026-03-15T19:47:19.782890+00:00",
-      "type": "bets_placed",
-      "bankroll_before": 1000.0,
-      "total_staked": 500.0,
-      "bankroll_after": 500.0,
-      "cancelled_picks": [],
-      "bets": [
-        {
-          "id": "nba_bet_20260315_001",
-          "match": "Cleveland Cavaliers vs Dallas Mavericks",
-          "time": "2026-03-15T19:30:00Z",
-          "pick": "Cleveland Cavaliers -8.5",
-          "odds": 1.9,
-          "stake": 200.0,
-          "potential_return": 380.0,
-          "confidence": 70,
-          "reasoning": "Dallas confirmed tanking (22-45, L10: 1-9) with all three tanking criteria met. Cleveland at home in playoff race provides strong motivation edge. D'Angelo Russell (DAL) confirmed OUT per late injury report, further weakening Dallas's competitive capacity. Donovan Mitchell (CLE) not flagged. No adverse line movement detected. Textbook home playoff-motivated team vs road tanking squad scenario. Edge confirmed and slightly improved by late injury news.",
-          "anchor_players": [
-            "Donovan Mitchell (CLE)",
-            "D'Angelo Russell (DAL) — OUT, edge improved"
-          ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
-          "committed_at": "2026-03-15T19:47:23Z"
-        },
-        {
-          "id": "nba_bet_20260315_002",
-          "match": "Milwaukee Bucks vs Indiana Pacers",
-          "time": "2026-03-15T19:30:00Z",
-          "pick": "Indiana Pacers ML",
-          "odds": 2.0,
-          "stake": 150.0,
-          "potential_return": 300.0,
-          "confidence": 68,
-          "reasoning": "Milwaukee confirmed tanking (27-39, L10: 2-8, L4 streak) with all three tanking criteria met. Indiana fighting for play-in/playoff positioning — strong motivation differential. IND ML at 2.00 within target range. No adverse line movement detected. Neither anchor player (Haliburton, Giannis) appears in injury report. Even at home, Milwaukee's tanking trajectory and 2-8 L10 form undermines competitive intent. Late injury report does not affect this matchup.",
-          "anchor_players": [
-            "Tyrese Haliburton (IND)",
-            "Giannis Antetokounmpo (MIL — tanking context, not flagged OUT)"
-          ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
-          "committed_at": "2026-03-15T19:47:23Z"
-        },
-        {
-          "id": "nba_bet_20260315_003",
-          "match": "Toronto Raptors vs Detroit Pistons",
-          "time": "2026-03-15T19:30:00Z",
-          "pick": "Detroit Pistons ML",
-          "odds": 1.82,
-          "stake": 150.0,
-          "potential_return": 273.0,
-          "confidence": 65,
-          "reasoning": "Detroit (48-18, 3rd best record in NBA, W3 streak, L10: 6-4) is clearly superior to fading Toronto (37-29, L10: 4-6). DET road ML at 1.82 within target range. Neither Cade Cunningham (DET) nor Scottie Barnes (TOR) appears in late injury report. No adverse line movement detected. Late injury report players (Davis, George, Russell, Whitmore) all unrelated to this matchup. Road factor is primary risk, moderating confidence to 65. Edge intact and confirmed.",
-          "anchor_players": [
-            "Cade Cunningham (DET)",
-            "Scottie Barnes (TOR)"
-          ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
-          "committed_at": "2026-03-15T19:47:23Z"
-        }
-      ],
-      "summary": "Day 2026-03-15 commit — 3 bets totalling €500.00. 0 cancelled. Bankroll: €1000.00 → €500.00."
-    }
-  ]
+  "entries": []
 }
