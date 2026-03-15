@@ -102,7 +102,16 @@ Use [] if all games were drafted or if no games tonight.]
 </rejected_games>
 
 <scout_report>
-[Your full scouting analysis in markdown]
+Write a structured scouting report covering EVERY game on tonight's slate.
+For each game use this format:
+
+### HOME vs AWAY
+- **Edge assessment:** [why value exists or why it doesn't]
+- **Key factors:** [B2B, injuries, tanking status, form, odds range]
+- **Decision:** DRAFTED [pick @ odds] | REJECTED [reason] | NO EDGE [reason]
+
+End with a brief summary of tonight's overall slate quality.
+Even if 0 picks were drafted, the full per-game breakdown is required.
 </scout_report>
 """
 
@@ -245,7 +254,7 @@ def run(store) -> None:
                 f"<draft_picks>\n[]\n</draft_picks>\n\n"
                 f"<first_game_time>\n{now_iso}\n</first_game_time>\n\n"
                 f"<rejected_games>\n[]\n</rejected_games>\n\n"
-                f"<scout_report>\nNo picks today.\n</scout_report>\n\n"
+                f"<scout_report>\nNo analysis available — retry required due to missing XML tags.\n</scout_report>\n\n"
                 f"If you do have picks from your analysis, include them in draft_picks now. "
                 f"Otherwise output empty arrays. DO NOT write anything except these XML tags."
             )
