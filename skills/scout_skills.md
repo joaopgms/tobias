@@ -1,6 +1,6 @@
 ---
-version: 5
-updated_at: 2026-03-15T11:24:30.276751+00:00
+version: 6
+updated_at: 2026-03-15T11:46:03.801058+00:00
 updated_by: analyst_2026-03-15
 llm: claude-sonnet-4-6
 ---
@@ -30,8 +30,8 @@ If BOTH teams have franchise player uncertainty → evaluate net impact; may sti
 
 Current confirmed franchise player absences (update each session):
   - Anthony Davis (Lakers): OUT — do not back Lakers ML unless opponent also missing anchor
-  - D'Angelo Russell (Lakers): OUT — compounds Lakers roster concerns; Lakers 42-25 with W5 streak, suggesting depth is covering adequately — monitor but do not discount Lakers entirely in spread/O-U contexts
-  - Kyshawn George (Wizards): OUT — note: Wizards already tank-tier, minimal additional impact on assessment
+  - D'Angelo Russell (Lakers): OUT — compounds Lakers roster concerns; Lakers 42-25 with W5 streak suggests depth covering adequately — avoid ML, but spread/O-U contexts may still offer value with caution
+  - Kyshawn George (Wizards): OUT — Wizards already confirmed tank-tier; minimal additional impact on assessment
 
 ## SECTION:tanking_teams
 Confirmed tanking-tier teams (all three criteria met):
@@ -49,7 +49,15 @@ Tanking criteria (ALL THREE must be met):
 
 When betting AGAINST tanking teams: treat as edge-positive. When betting ON tanking teams: require odds ≥ 2.20 and strong situational reason (e.g. opponent B2B, major injury).
 
-Emerging tank-watch: Chicago Bulls (27-40, L10: 3-7), Milwaukee Bucks (27-39, L10: 2-8, streak: L4) — Bucks fading harder; monitor play-in race and draft pick ownership to determine if criteria met. New Orleans Pelicans (22-46, L10: 6-4) — record is tank-tier but L10 shows fight; watch for motivation shift.
+Emerging tank-watch:
+  - Milwaukee Bucks (27-39, L10: 2-8, streak: L4) — fading hard; verify draft pick ownership; if confirmed, promote to tank-tier next session
+  - Chicago Bulls (27-40, L10: 3-7) — monitor play-in race and pick ownership
+  - New Orleans Pelicans (22-46, L10: 6-4) — record is tank-tier but L10 shows fight; watch motivation shift
+
+Hot streaks to track (may create line inefficiencies):
+  - Atlanta Hawks (36-31, L10: 9-1, streak: W9) — elite recent form; books may undervalue
+  - Orlando Magic (38-28, L10: 8-2, streak: W7) — strong run; monitor for inflated lines
+  - OKC Thunder (52-15, L10: 9-1, streak: W7) — best record in league; likely priced efficiently but note for context
 
 ## SECTION:b2b_rules
 B2B teams cover the spread less than 45% of the time historically.
