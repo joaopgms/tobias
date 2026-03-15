@@ -23,7 +23,7 @@ import re
 import logging
 from datetime import datetime, date, timezone
 
-from core.llm import call_llm, call_llm_full, extract_tag, agent_model_name
+from core.llm import call_llm, call_llm_full, call_llm_full, extract_tag, agent_model_name
 from core.espn import fetch_standings, fetch_injuries
 
 log = logging.getLogger(__name__)
@@ -301,7 +301,8 @@ def run(store) -> None:
                                     scout_content, commit_content)
     state["agent_models"] = state.get("agent_models", {})
     state["agent_models"]["analyst"] = llm
-    raw = call_llm(system, user, max_tokens=2048, agent="analyst")
+    llm_result = call_llm_full(system, user, max_tokens=2048, agent="analyst")
+    raw = llm_result.text
 
     # ── 6. Parse LLM response ─────────────────────────────────────────────────
     try:
