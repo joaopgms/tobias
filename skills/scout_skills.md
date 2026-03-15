@@ -1,7 +1,7 @@
 ---
-version: 4
-updated_at: 2026-03-14T19:02:59.051718+00:00
-updated_by: analyst_2026-03-14
+version: 5
+updated_at: 2026-03-15T11:24:30.276751+00:00
+updated_by: analyst_2026-03-15
 llm: claude-sonnet-4-6
 ---
 
@@ -30,17 +30,17 @@ If BOTH teams have franchise player uncertainty → evaluate net impact; may sti
 
 Current confirmed franchise player absences (update each session):
   - Anthony Davis (Lakers): OUT — do not back Lakers ML unless opponent also missing anchor
-  - D'Angelo Russell (Lakers): OUT — compounds Lakers roster concerns; Lakers still 41-25 with W4 streak, suggesting depth is covering adequately — monitor but do not discount Lakers entirely in spread/O-U contexts
+  - D'Angelo Russell (Lakers): OUT — compounds Lakers roster concerns; Lakers 42-25 with W5 streak, suggesting depth is covering adequately — monitor but do not discount Lakers entirely in spread/O-U contexts
   - Kyshawn George (Wizards): OUT — note: Wizards already tank-tier, minimal additional impact on assessment
 
 ## SECTION:tanking_teams
 Confirmed tanking-tier teams (all three criteria met):
-  - Washington Wizards: 16-49, L10: 0-10, streak: L10 — clearest tank in league, actively losing every game
-  - Sacramento Kings: 16-51, L10: 4-6 — worst record in West, no play-in path
-  - Brooklyn Nets: 17-49, L10: 2-8 — bottom East, no play-in path
+  - Washington Wizards: 16-50, L10: 0-10, streak: L11 — clearest tank in league, actively losing every game
+  - Sacramento Kings: 17-51, L10: 5-5 — worst record in West, no play-in path; slight L10 improvement, monitor
+  - Brooklyn Nets: 17-50, L10: 2-8, streak: L3 — bottom East, no play-in path
   - Utah Jazz: 20-47, L10: 2-8 — no play-in path
   - Dallas Mavericks: 22-45, L10: 1-9 — meets all three tanking criteria; treat as confirmed tank
-  - Memphis Grizzlies: 23-43, L10: 2-8, streak: L7 — now meets all three tanking criteria; elevated to confirmed tank
+  - Memphis Grizzlies: 23-43, L10: 2-8, streak: L7 — confirmed tank
 
 Tanking criteria (ALL THREE must be met):
   (a) Team owns its own 2026 draft pick
@@ -49,7 +49,7 @@ Tanking criteria (ALL THREE must be met):
 
 When betting AGAINST tanking teams: treat as edge-positive. When betting ON tanking teams: require odds ≥ 2.20 and strong situational reason (e.g. opponent B2B, major injury).
 
-Emerging tank-watch: Chicago Bulls (27-40, L10: 3-7), Milwaukee Bucks (27-38, L10: 3-7, streak: L3) — both fading hard; monitor play-in race and draft pick ownership to determine if criteria met.
+Emerging tank-watch: Chicago Bulls (27-40, L10: 3-7), Milwaukee Bucks (27-39, L10: 2-8, streak: L4) — Bucks fading harder; monitor play-in race and draft pick ownership to determine if criteria met. New Orleans Pelicans (22-46, L10: 6-4) — record is tank-tier but L10 shows fight; watch for motivation shift.
 
 ## SECTION:b2b_rules
 B2B teams cover the spread less than 45% of the time historically.
