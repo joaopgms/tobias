@@ -9,13 +9,13 @@
   "net_pnl": 0.0,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-03-15T18:48:58.179023+00:00",
-  "first_game_time": "2026-03-15T18:48:58.179023+00:00",
+  "last_updated": "2026-03-15T19:15:10.474153+00:00",
+  "first_game_time": "2026-03-15T17:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
-  "scout_updated_at": "2026-03-15T18:48:58.179023+00:00",
-  "commit_status": "done",
+  "scout_updated_at": "2026-03-15T19:15:10.474153+00:00",
+  "commit_status": "pending",
   "commit_updated_at": "2026-03-15T19:04:35.362353+00:00",
   "commit_date": null,
   "analyst_updated_at": "2026-03-15T18:52:11.974529+00:00",
@@ -24,8 +24,57 @@
     "analyst": "claude-sonnet-4-6",
     "scout": "claude-sonnet-4-6"
   },
-  "last_report": "No picks today.",
-  "draft_picks": [],
+  "last_report": "",
+  "draft_picks": [
+    {
+      "id": "nba_draft_20260315_001",
+      "match": "Cleveland Cavaliers vs Dallas Mavericks",
+      "time": "2026-03-15T19:30:00Z",
+      "pick": "Cleveland Cavaliers -8.5",
+      "odds": 1.9,
+      "stake": 200.0,
+      "potential_return": 380.0,
+      "confidence": 70,
+      "reasoning": "Dallas is a confirmed tanking team (22-45, L10: 1-9 — worst L10 in the league, streak L-heavy) meeting all three tanking criteria. Cleveland at home in the playoff race provides high motivation edge. Skills say betting AGAINST tanking teams is edge-positive. CLE is a solid home team (41-26) while Dallas has virtually no competitive drive. Spread estimated at 1.90 (within target 1.75–2.10). No major CLE franchise player injuries flagged. This is a classic rested home playoff-motivated team vs road tanking squad.",
+      "anchor_players": [
+        "Donovan Mitchell (CLE)",
+        "Luka Doncic absence context — DAL tanking regardless"
+      ],
+      "drafted_at": "2026-03-15T19:15:14Z"
+    },
+    {
+      "id": "nba_draft_20260315_002",
+      "match": "Milwaukee Bucks vs Indiana Pacers",
+      "time": "2026-03-15T19:30:00Z",
+      "pick": "Indiana Pacers ML",
+      "odds": 2.0,
+      "stake": 150.0,
+      "potential_return": 300.0,
+      "confidence": 68,
+      "reasoning": "Milwaukee is a confirmed tanking-tier team (27-39, L10: 2-8, streak: L4) — all three tanking criteria met. Indiana is fighting for play-in/playoff positioning, providing strong motivation differential. Skills explicitly flag MIL as confirmed tank; betting AGAINST them is treated as edge-positive. IND ML estimated ~2.00 (within 1.70–2.50 target). Even at home, Milwaukee's tanking trajectory and poor recent form (2-8 L10) significantly undermines their competitive intent. IND's urgency in the race should drive this result.",
+      "anchor_players": [
+        "Tyrese Haliburton (IND)",
+        "Giannis Antetokounmpo (MIL — tanking context, verify availability)"
+      ],
+      "drafted_at": "2026-03-15T19:15:14Z"
+    },
+    {
+      "id": "nba_draft_20260315_003",
+      "match": "Toronto Raptors vs Detroit Pistons",
+      "time": "2026-03-15T19:30:00Z",
+      "pick": "Detroit Pistons ML",
+      "odds": 1.82,
+      "stake": 150.0,
+      "potential_return": 273.0,
+      "confidence": 65,
+      "reasoning": "Detroit (48-18, 3rd best record in league, W3 streak, L10: 6-4) is a clearly superior team facing a fading Toronto (37-29, L10: 4-6). Despite being road team, DET's elite season record and roster depth warrant backing. TOR's 4-6 L10 shows cooling form. DET road ML estimated ~1.82 (within 1.70–2.50 target). No major franchise player injuries flagged for either side. DET has been historically excellent this season — this is a matchup they should control even on the road. Road factor is the primary risk, moderating confidence to 65 (medium tier).",
+      "anchor_players": [
+        "Cade Cunningham (DET)",
+        "Scottie Barnes (TOR)"
+      ],
+      "drafted_at": "2026-03-15T19:15:14Z"
+    }
+  ],
   "pending_bets": [],
   "settled_bets": [],
   "rejected_games": []
