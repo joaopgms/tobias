@@ -1,5 +1,5 @@
 ---
-version: 9
+version: 1
 updated_at: 2026-03-15T18:52:11.974529+00:00
 updated_by: analyst_2026-03-15
 llm: claude-sonnet-4-6
