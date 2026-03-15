@@ -7,13 +7,13 @@ commit_patches: 0
 
 ## Today's Analysis — 2026-03-15
 
-No bets have been placed yet so there is no performance data to act on. The main structural story in the current standings is the Wizards' historic collapse (L11 streak, 0-10 L10) and the Thunder pulling clear at 52-15. The Lakers situation (42-25, W5 streak despite Davis+Russell out) is noteworthy — depth appears genuine and spread/O-U value may exist. Atlanta Hawks (36-31, L10: 9-1, W9 streak) and Orlando Magic (38-28, L10: 8-2, W7) are strong momentum plays worth monitoring. Bucks and Bulls are deteriorating fast and may soon meet all three tanking criteria.
+No bets have been settled yet so there is no performance signal to act on — this is effectively a bootstrap session. Key macro trends worth watching: Atlanta Hawks' 9-1 L10 and Orlando Magic's 8-2 L10 suggest genuine momentum that books may be slow to fully price in; both are worth monitoring for underdog or spread value. Milwaukee Bucks' collapse (L10: 2-8, streak: L4) is approaching confirmed tank territory — verify draft pick ownership before the next session to determine if they should be promoted from watch to confirmed.
 
 
 
 ## Scout patches applied
-- [franchise_player_rules] Lakers record and streak updated to 42-25 / W5 to reflect current standings data.
-- [tanking_teams] Standings updated across all tanking/near-tanking teams; Wizards streak now L11, Bucks L10 worsened to 2-8/L4, Kings L10 improved slightly, Pelicans added to watch list.
+- [franchise_player_rules] Standings confirm Lakers are 42-25 with a W5 streak despite both Davis and Russell being out, validating the existing note that depth is covering — no change in assessment logic needed, but minor wording cleanup for clarity and consistency with current injury list.
+- [tanking_teams] Milwaukee Bucks now clearly meet the L10 and streak tanking criteria (L10: 2-8, W-L: 27-39) and warrant an explicit promotion warning; also added a hot-streaks section to flag Atlanta, Orlando, and OKC whose recent form may create line inefficiencies.
 
 ## Commit patches applied
 None
