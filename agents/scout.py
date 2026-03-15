@@ -295,10 +295,9 @@ def run(store) -> None:
     commit_msg = f"scout: {len(draft_picks)} draft picks for {today}"
     store.write_json("state",   state,   commit_msg)
     store.write_json("history", history, commit_msg)
-    store.write_data_js(state, history, scout_report=report_raw, config=store.read_config())
 
     # ── 13. Audit log ─────────────────────────────────────────────────────────
-    _append_audit(store, now_iso, llm,
+    _append_audit(store, now_iso, llm, state, history, report_raw,
                   draft_count=len(draft_picks),
                   picks=[{"id": p["id"], "match": p["match"],
                           "pick": p["pick"], "odds": p["odds"],
@@ -312,7 +311,8 @@ def run(store) -> None:
     log.info(f"Scout done — {len(draft_picks)} picks | first game: {fgt}")
 
 
-def _append_audit(store, ts, llm, draft_count=0, picks=None,
+def _append_audit(store, ts, llm, state, history, report_raw="",
+                  draft_count=0, picks=None,
                   first_game_time="", odds_source="", bankroll=0, error="",
                   llm_meta=None):
     entry = {
@@ -331,3 +331,4 @@ def _append_audit(store, ts, llm, draft_count=0, picks=None,
         store.append_jsonl("scout_log", entry)
     except Exception as e:
         log.warning(f"Scout audit log failed: {e}")
+    store.write_data_js(state, history, scout_report=report_raw, config=store.read_config())

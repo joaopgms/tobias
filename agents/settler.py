@@ -156,7 +156,7 @@ def run(store) -> None:
         state["settler_updated_at"] = now_iso
         state["last_updated"]       = now_iso
         store.write_json("state", state, f"settler: no pending bets {today}")
-        _append_audit(store, now_iso, settled=[], skipped=[], bust=False,
+        _append_audit(store, now_iso, state, history, settled=[], skipped=[], bust=False,
                       bankroll_before=state["bankroll"],
                       bankroll_after=state["bankroll"])
         store.write_data_js(state, history, config=store.read_config())
@@ -291,10 +291,9 @@ def run(store) -> None:
     commit_msg = f"settler: {len(newly_settled)} settled ({wins}W/{losses}L), {len(still_pending)} pending"
     store.write_json("state",   state,   commit_msg)
     store.write_json("history", history, commit_msg)
-    store.write_data_js(state, history, config=store.read_config())
 
     # ── 8. Audit log ──────────────────────────────────────────────────────────
-    _append_audit(store, now_iso,
+    _append_audit(store, now_iso, state, history,
                   settled=newly_settled,
                   skipped=[b["id"] for b in still_pending],
                   bust=busted,
@@ -304,7 +303,8 @@ def run(store) -> None:
     log.info(f"Settler done: {wins}W / {losses}L | bankroll €{bankroll_before:.2f} → €{state['bankroll']:.2f}")
 
 
-def _append_audit(store, ts: str, settled: list, skipped: list,
+def _append_audit(store, ts: str, state: dict, history: dict,
+                  settled: list, skipped: list,
                   bust: bool, bankroll_before: float, bankroll_after: float):
     wins   = sum(1 for b in settled if b.get("result") == "WON")
     losses = sum(1 for b in settled if b.get("result") == "LOST")
@@ -324,3 +324,4 @@ def _append_audit(store, ts: str, settled: list, skipped: list,
         store.append_jsonl("settler_log" if "settler_log" in store.FILES else "scout_log", entry)
     except Exception as e:
         log.warning(f"Audit log append failed: {e}")
+    store.write_data_js(state, history, config=store.read_config())

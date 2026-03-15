@@ -353,10 +353,9 @@ def run(store, force: bool = False) -> None:
     )
     store.write_json("state",   state,   commit_msg)
     store.write_json("history", history, commit_msg)
-    store.write_data_js(state, history, commit_report=report_raw, config=store.read_config())
 
     # ── 15. Audit log ─────────────────────────────────────────────────────────
-    _append_audit(store, now_iso, llm,
+    _append_audit(store, now_iso, llm, state, history, report_raw,
                   committed=committed_bets,
                   cancelled=cancelled_picks,
                   total_staked=total_staked,
@@ -384,7 +383,8 @@ def _injuries_text(injuries: dict) -> str:
     return "\n".join(lines[:30]) if lines else "No notable injuries."
 
 
-def _append_audit(store, ts, llm, committed=None, cancelled=None,
+def _append_audit(store, ts, llm, state, history, report_raw="",
+                  committed=None, cancelled=None,
                   total_staked=0, bankroll_before=0, bankroll_after=0, bust=False,
                   llm_meta=None):
     entry = {
@@ -408,3 +408,4 @@ def _append_audit(store, ts, llm, committed=None, cancelled=None,
         store.append_jsonl("commit_log", entry)
     except Exception as e:
         log.warning(f"Commit audit log failed: {e}")
+    store.write_data_js(state, history, commit_report=report_raw, config=store.read_config())

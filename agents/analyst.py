@@ -376,7 +376,6 @@ commit_patches: {len(commit_applied)}
                   bankroll=state["bankroll"],
                   net_pnl=state.get("net_pnl", 0),
                   llm_meta=llm_result.to_audit_dict())
-    store.write_data_js(state, history, config=store.read_config())
 
     log.info(f"Analyst done — scout changed={scout_changed}, commit changed={commit_changed}")
     if analyst_notes:
@@ -405,3 +404,4 @@ def _append_audit(store, ts: str, llm: str, error: str = "",
         store.append_jsonl("analyst_log", entry)
     except Exception as e:
         log.warning(f"Analyst audit log failed: {e}")
+    store.write_data_js(state, history, config=store.read_config())
