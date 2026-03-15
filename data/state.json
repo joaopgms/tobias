@@ -18,7 +18,7 @@
   "commit_status": "pending",
   "commit_updated_at": null,
   "commit_date": null,
-  "analyst_updated_at": "2026-03-15T12:16:48.626019+00:00",
+  "analyst_updated_at": "2026-03-15T18:48:09.927309+00:00",
   "settler_updated_at": "2026-03-15T10:50:34.156535+00:00",
   "agent_models": {
     "analyst": "claude-sonnet-4-6"
