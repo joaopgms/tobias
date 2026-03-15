@@ -1,6 +1,6 @@
 ---
-version: 1
-updated_at: 2026-03-15T18:52:11.974529+00:00
+version: 2
+updated_at: 2026-03-15T21:28:05.120295+00:00
 updated_by: analyst_2026-03-15
 llm: claude-sonnet-4-6
 ---
@@ -30,12 +30,12 @@ If BOTH teams have franchise player uncertainty → evaluate net impact; may sti
 
 Current confirmed franchise player absences (update each session):
   - Anthony Davis (Lakers): OUT — do not back Lakers ML unless opponent also missing anchor
-  - D'Angelo Russell (Lakers): OUT — compounds Lakers roster concerns; Lakers 42-25 with W5 streak suggests depth covering adequately — avoid ML, but spread/O-U contexts may still offer value with caution
-  - Kyshawn George (Wizards): OUT — Wizards already confirmed tank-tier; minimal additional impact on assessment
+  - Alex Sarr (Wizards): OUT — Wizards already confirmed tank-tier; minimal additional impact on assessment
+  - Kyshawn George (Wizards): OUT — compounds Wizards anchor absence; team fully tank-tier, no bet ON them
 
 ## SECTION:tanking_teams
 Confirmed tanking-tier teams (all three criteria met):
-  - Washington Wizards: 16-50, L10: 0-10, streak: L11 — clearest tank in league, actively losing every game
+  - Washington Wizards: 16-50, L10: 0-10, streak: L11 — clearest tank in league, actively losing every game; Alex Sarr OUT compounds
   - Sacramento Kings: 17-51, L10: 5-5 — worst record in West, no play-in path; slight L10 improvement, monitor
   - Brooklyn Nets: 17-50, L10: 2-8, streak: L3 — bottom East, no play-in path
   - Utah Jazz: 20-47, L10: 2-8 — no play-in path
@@ -55,12 +55,12 @@ Emerging tank-watch:
   - New Orleans Pelicans (22-46, L10: 6-4, streak: L1) — record is tank-tier but L10 shows fight; watch motivation shift
 
 Hot streaks to track (may create line inefficiencies):
-  - Atlanta Hawks (36-31, L10: 9-1, streak: W9) — elite recent form; books may undervalue; W9 streak risks sharp regression, verify line before committing
+  - Atlanta Hawks (36-31, L10: 9-1, streak: W9) — elite recent form; W9 streak risks sharp regression, verify line before committing
   - Orlando Magic (38-28, L10: 8-2, streak: W7) — strong run; monitor for inflated lines
-  - OKC Thunder (52-15, L10: 9-1, streak: W7) — best record in league; likely priced efficiently but note for context
-  - Los Angeles Lakers (42-25, L10: 8-2, streak: W5) — strong depth performance despite Davis/Russell OUT; back only in spread/O-U contexts given anchor absences
+  - OKC Thunder (53-15, L10: 9-1, streak: W8) — best record in league; likely priced efficiently but note for context
+  - Los Angeles Lakers (42-25, L10: 8-2, streak: W5) — strong depth performance despite Davis OUT; back only in spread/O-U contexts given anchor absence
   - San Antonio Spurs (49-18, L10: 8-2, streak: W1) — second-best record in league; elite form, likely efficiently priced
-  - Detroit Pistons (48-18, L10: 6-4, streak: W3) — third-best record, strong season; notable given historical context
+  - Detroit Pistons (48-18, L10: 6-4, streak: W3) — third-best record, strong season
 
 ## SECTION:b2b_rules
 B2B teams cover the spread less than 45% of the time historically.
