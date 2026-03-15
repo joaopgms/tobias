@@ -87,20 +87,6 @@ Draft pick IDs: nba_draft_{today.replace('-','')}_{'{001, 002...}'}
 IMPORTANT: You MUST end your response with ALL FOUR of these XML tags in this exact format.
 Do not add any text after the closing </scout_report> tag.
 
-<draft_picks>
-[JSON array of draft pick objects — use [] if no picks meet criteria]
-</draft_picks>
-
-<first_game_time>
-[ISO 8601 UTC of first tip-off, e.g. 2026-03-15T00:00:00Z]
-</first_game_time>
-
-<rejected_games>
-[JSON array of games you reviewed but did NOT draft, format:
-{{"match": "HOME vs AWAY", "reason": "why not picked (e.g. odds out of range, both teams tanking, confidence below 40, etc.)"}}
-Use [] if all games were drafted or if no games tonight.]
-</rejected_games>
-
 <scout_report>
 Write a structured scouting report covering EVERY game on tonight's slate.
 For each game use this format:
@@ -113,6 +99,19 @@ For each game use this format:
 End with a brief summary of tonight's overall slate quality.
 Even if 0 picks were drafted, the full per-game breakdown is required.
 </scout_report>
+
+<draft_picks>
+[JSON array of draft pick objects — use [] if no picks meet criteria]
+</draft_picks>
+
+<first_game_time>
+[ISO 8601 UTC of first tip-off, e.g. 2026-03-15T00:00:00Z]
+</first_game_time>
+
+<rejected_games>
+[JSON array of {{"match": "HOME vs AWAY", "reason": "why not picked"}}
+Use [] if all games were drafted or if no games tonight.]
+</rejected_games>
 """
 
 
@@ -223,7 +222,7 @@ def run(store) -> None:
             SCOUT_SYSTEM,
             _build_scout_prompt(skills, games_str, odds_str, injuries_str,
                                  standings_str, state, today),
-            max_tokens=4096,
+            max_tokens=6000,
             agent="scout",
         )
         raw = llm_result.text

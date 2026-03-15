@@ -309,11 +309,28 @@ def run(store) -> None:
         # Strip markdown code fences if present
         clean = re.sub(r'^```(?:json)?\s*', '', raw.strip(), flags=re.MULTILINE)
         clean = re.sub(r'\s*```$', '', clean.strip(), flags=re.MULTILINE)
+        # Extract only the JSON object — ignore any trailing text Claude may add
+        brace_start = clean.find('{')
+        if brace_start > 0:
+            clean = clean[brace_start:]
+        # Find the matching closing brace
+        depth = 0
+        end_idx = 0
+        for i, c in enumerate(clean):
+            if c == '{': depth += 1
+            elif c == '}':
+                depth -= 1
+                if depth == 0:
+                    end_idx = i + 1
+                    break
+        if end_idx > 0:
+            clean = clean[:end_idx]
         result = json.loads(clean)
     except json.JSONDecodeError as e:
         log.error(f"Analyst: LLM returned invalid JSON: {e}\nRaw: {raw[:400]}")
         _append_audit(store, now_iso, llm, error=str(e),
                       scout_patches=[], commit_patches=[], notes="JSON parse error")
+        store.write_data_js(state, history, config=store.read_config())
         return
 
     scout_patches  = result.get("scout_patches", [])
