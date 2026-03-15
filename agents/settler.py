@@ -153,6 +153,8 @@ def run(store) -> None:
 
     if not pending:
         log.info("Settler: no pending bets — nothing to settle")
+        state["agent_models"] = state.get("agent_models", {})
+        state["agent_models"]["settler"] = "no-llm"
         state["settler_updated_at"] = now_iso
         state["last_updated"]       = now_iso
         store.write_json("state", state, f"settler: no pending bets {today}")
