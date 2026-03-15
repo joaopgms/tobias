@@ -1,6 +1,6 @@
 ---
-version: 8
-updated_at: 2026-03-15T18:48:09.927309+00:00
+version: 9
+updated_at: 2026-03-15T18:52:11.974529+00:00
 updated_by: analyst_2026-03-15
 llm: claude-sonnet-4-6
 ---
@@ -59,6 +59,8 @@ Hot streaks to track (may create line inefficiencies):
   - Orlando Magic (38-28, L10: 8-2, streak: W7) — strong run; monitor for inflated lines
   - OKC Thunder (52-15, L10: 9-1, streak: W7) — best record in league; likely priced efficiently but note for context
   - Los Angeles Lakers (42-25, L10: 8-2, streak: W5) — strong depth performance despite Davis/Russell OUT; back only in spread/O-U contexts given anchor absences
+  - San Antonio Spurs (49-18, L10: 8-2, streak: W1) — second-best record in league; elite form, likely efficiently priced
+  - Detroit Pistons (48-18, L10: 6-4, streak: W3) — third-best record, strong season; notable given historical context
 
 ## SECTION:b2b_rules
 B2B teams cover the spread less than 45% of the time historically.
