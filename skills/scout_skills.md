@@ -1,6 +1,6 @@
 ---
-version: 6
-updated_at: 2026-03-15T11:46:03.801058+00:00
+version: 7
+updated_at: 2026-03-15T12:16:48.626019+00:00
 updated_by: analyst_2026-03-15
 llm: claude-sonnet-4-6
 ---
@@ -41,6 +41,7 @@ Confirmed tanking-tier teams (all three criteria met):
   - Utah Jazz: 20-47, L10: 2-8 — no play-in path
   - Dallas Mavericks: 22-45, L10: 1-9 — meets all three tanking criteria; treat as confirmed tank
   - Memphis Grizzlies: 23-43, L10: 2-8, streak: L7 — confirmed tank
+  - Milwaukee Bucks: 27-39, L10: 2-8, streak: L4 — promoted to confirmed tank-tier; fading hard, verify draft pick ownership before each bet
 
 Tanking criteria (ALL THREE must be met):
   (a) Team owns its own 2026 draft pick
@@ -50,7 +51,6 @@ Tanking criteria (ALL THREE must be met):
 When betting AGAINST tanking teams: treat as edge-positive. When betting ON tanking teams: require odds ≥ 2.20 and strong situational reason (e.g. opponent B2B, major injury).
 
 Emerging tank-watch:
-  - Milwaukee Bucks (27-39, L10: 2-8, streak: L4) — fading hard; verify draft pick ownership; if confirmed, promote to tank-tier next session
   - Chicago Bulls (27-40, L10: 3-7) — monitor play-in race and pick ownership
   - New Orleans Pelicans (22-46, L10: 6-4) — record is tank-tier but L10 shows fight; watch motivation shift
 
