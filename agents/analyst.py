@@ -364,7 +364,6 @@ commit_patches: {len(commit_applied)}
 """
     state["analyst_updated_at"] = now_iso
     store.write_json("state", state, f"analyst: updated_at {today}")
-    store.write_data_js(state, history, config=store.read_config())
     store.write_md("analyst_notes", notes_content,
                    f"analyst: notes {today}")
 
@@ -377,6 +376,7 @@ commit_patches: {len(commit_applied)}
                   bankroll=state["bankroll"],
                   net_pnl=state.get("net_pnl", 0),
                   llm_meta=llm_result.to_audit_dict())
+    store.write_data_js(state, history, config=store.read_config())
 
     log.info(f"Analyst done — scout changed={scout_changed}, commit changed={commit_changed}")
     if analyst_notes:
