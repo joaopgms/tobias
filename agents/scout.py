@@ -224,6 +224,8 @@ def run(store) -> None:
         state["scout_error"]  = str(e)
         state["last_updated"] = now_iso
         store.write_json("state", state, f"scout: LLM error {today}")
+        _append_audit(store, now_iso, state.get("llm_provider","claude"),
+                      error=str(e), bankroll=state["bankroll"])
         store.write_data_js(state, history, config=store.read_config())
         return
 
@@ -233,13 +235,39 @@ def run(store) -> None:
     report_raw    = extract_tag(raw, "scout_report") or ""
 
     if draft_raw is None:
-        log.error("Scout: <draft_picks> tag missing from LLM response")
-        state["scout_status"] = "unavailable"
-        state["scout_error"]  = "Missing <draft_picks> tag"
-        state["last_updated"] = now_iso
-        store.write_json("state", state, f"scout: parse error {today}")
-        store.write_data_js(state, history, config=store.read_config())
-        return
+        log.error("Scout: <draft_picks> tag missing — retrying with stricter prompt")
+        # One automatic retry with a simpler, more direct prompt
+        try:
+            retry_prompt = (
+                f"CRITICAL: You forgot to include the required XML tags.\n"
+                f"Today: {today} | Bankroll: €{state['bankroll']:.2f}\n\n"
+                f"You MUST output EXACTLY these XML tags and nothing else:\n\n"
+                f"<draft_picks>\n[]\n</draft_picks>\n\n"
+                f"<first_game_time>\n{now_iso}\n</first_game_time>\n\n"
+                f"<rejected_games>\n[]\n</rejected_games>\n\n"
+                f"<scout_report>\nNo picks today.\n</scout_report>\n\n"
+                f"If you do have picks from your analysis, include them in draft_picks now. "
+                f"Otherwise output empty arrays. DO NOT write anything except these XML tags."
+            )
+            retry_result = call_llm_full(SCOUT_SYSTEM, retry_prompt, max_tokens=2048, agent="scout")
+            draft_raw = extract_tag(retry_result.text, "draft_picks")
+            fgt_raw   = extract_tag(retry_result.text, "first_game_time") or fgt_raw
+            report_raw = extract_tag(retry_result.text, "scout_report") or report_raw or ""
+            if draft_raw is None:
+                raise ValueError("Retry also missing <draft_picks>")
+            log.info("Scout: retry succeeded")
+        except Exception as retry_err:
+            log.error(f"Scout: retry failed: {retry_err}")
+            state["scout_status"] = "unavailable"
+            state["scout_error"]  = "Missing <draft_picks> tag after retry"
+            state["last_updated"] = now_iso
+            store.write_json("state", state, f"scout: parse error {today}")
+            llm_meta = llm_result.to_audit_dict() if llm_result else {}
+            _append_audit(store, now_iso, state.get("llm_provider","claude"),
+                          error="Missing <draft_picks> tag after retry",
+                          bankroll=state["bankroll"], llm_meta=llm_meta)
+            store.write_data_js(state, history, config=store.read_config())
+            return
 
     # ── 8. Parse draft picks ──────────────────────────────────────────────────
     try:
