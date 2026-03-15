@@ -9,22 +9,24 @@
   "net_pnl": 0.0,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-03-15T14:36:11.840090+00:00",
-  "first_game_time": null,
+  "last_updated": "2026-03-15T18:48:58.179023+00:00",
+  "first_game_time": "2026-03-15T18:48:58.179023+00:00",
   "llm_provider": "claude",
-  "scout_status": "unavailable",
-  "scout_error": "Missing <draft_picks> tag",
-  "scout_updated_at": null,
+  "scout_status": "live",
+  "scout_error": "",
+  "scout_updated_at": "2026-03-15T18:48:58.179023+00:00",
   "commit_status": "pending",
   "commit_updated_at": null,
   "commit_date": null,
   "analyst_updated_at": "2026-03-15T18:48:09.927309+00:00",
   "settler_updated_at": "2026-03-15T10:50:34.156535+00:00",
   "agent_models": {
-    "analyst": "claude-sonnet-4-6"
+    "analyst": "claude-sonnet-4-6",
+    "scout": "claude-sonnet-4-6"
   },
-  "last_report": "",
+  "last_report": "No picks today.",
   "draft_picks": [],
   "pending_bets": [],
-  "settled_bets": []
+  "settled_bets": [],
+  "rejected_games": []
 }
