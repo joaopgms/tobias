@@ -7,13 +7,13 @@ commit_patches: 0
 
 ## Today's Analysis — 2026-03-15
 
-No bets have been settled yet so there is no performance signal to act on — this is effectively a bootstrap session. Key macro trends worth watching: Atlanta Hawks' 9-1 L10 and Orlando Magic's 8-2 L10 suggest genuine momentum that books may be slow to fully price in; both are worth monitoring for underdog or spread value. Milwaukee Bucks' collapse (L10: 2-8, streak: L4) is approaching confirmed tank territory — verify draft pick ownership before the next session to determine if they should be promoted from watch to confirmed.
+No bets have been placed yet so there is no performance data to act on. The main structural update this session is promoting Milwaukee Bucks to confirmed tank-tier based on their record, L10, and losing streak all meeting the criteria. The Lakers situation (Davis + Russell both out) warrants continued caution on their ML despite a 5-game winning streak suggesting depth is compensating. Atlanta Hawks' W9 streak and Orlando's W7 streak are the most notable potential line inefficiency signals to monitor.
 
 
 
 ## Scout patches applied
-- [franchise_player_rules] Standings confirm Lakers are 42-25 with a W5 streak despite both Davis and Russell being out, validating the existing note that depth is covering — no change in assessment logic needed, but minor wording cleanup for clarity and consistency with current injury list.
-- [tanking_teams] Milwaukee Bucks now clearly meet the L10 and streak tanking criteria (L10: 2-8, W-L: 27-39) and warrant an explicit promotion warning; also added a hot-streaks section to flag Atlanta, Orlando, and OKC whose recent form may create line inefficiencies.
+- [franchise_player_rules] Injury landscape is unchanged from prior session; no new injuries or upgrades reported, so current absences remain accurate.
+- [tanking_teams] Milwaukee Bucks now meet all three tanking criteria (27-39, L10: 2-8, streak: L4) and should be promoted from tank-watch to confirmed tank-tier per the established framework.
 
 ## Commit patches applied
 None
