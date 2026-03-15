@@ -153,6 +153,10 @@ def run(store) -> None:
 
     if not pending:
         log.info("Settler: no pending bets — nothing to settle")
+        state["settler_updated_at"] = now_iso
+        state["last_updated"]       = now_iso
+        store.write_json("state", state, f"settler: no pending bets {today}")
+        store.write_data_js(state, history, config=store.read_config())
         _append_audit(store, now_iso, settled=[], skipped=[], bust=False,
                       bankroll_before=state["bankroll"],
                       bankroll_after=state["bankroll"])
