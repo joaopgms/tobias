@@ -1,1 +1,2 @@
 ﻿
+{"ts": "2026-03-16T15:06:02.606244+00:00", "agent": "scout", "llm": "claude-sonnet-4-6", "draft_count": 0, "picks": [], "first_game_time": "2026-03-16T15:06:02.606244+00:00", "odds_source": "ddg_fallback", "bankroll": 1000.0, "error": "", "model": "claude-sonnet-4-6", "tokens_in": 2992, "tokens_out": 6000, "cost_usd": 0.098976}
