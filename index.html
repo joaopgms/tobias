@@ -860,7 +860,7 @@ function renderAgents(){
 
   // Model display: prefer what the agent actually used (from state), fallback to config
   const modelLabel=m=>{
-    if(!m)return'claude-sonnet-4-6';
+    if(!m||m==='no-llm'||m==='none') return'No LLM needed';
     if(m.includes('opus'))   return'Opus 4.6';
     if(m.includes('sonnet')) return'Sonnet 4.6';
     if(m.includes('haiku'))  return'Haiku 4.5';
@@ -1262,9 +1262,10 @@ function renderAudit(){
     }else if(ag==='commit'){
       body+=`<div class="audit-pnl-row"><span class="audit-kv">Committed: <strong>${e.committed_count||0}</strong></span><span class="audit-kv">Cancelled: <strong>${e.cancelled_count||0}</strong></span><span class="audit-kv">Staked: <strong>€${(e.total_staked||0).toFixed(2)}</strong></span>${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>`;
       if((e.bets||[]).length)body+=(e.bets||[]).map(b=>`<div class="audit-patch"><span class="patch-section">${getTeam((b.match||'').split(' vs ')[0]).abbr}</span><span class="patch-reason">${b.pick} @ ${b.odds} · €${b.stake} · conf=${b.confidence}</span></div>`).join('');
-    }else if(ag==='settler'){
+    }else if(ag==='setter'||ag==='settler'){
       if((e.settled_count||0)===0){
         body+=`<div class="audit-notes" style="color:var(--muted);font-style:italic">📭 No pending bets to settle — all clear.</div>`;
+        body+=`<div class="audit-pnl-row" style="margin-top:6px"><span class="audit-kv" style="color:var(--muted)">No LLM needed</span><span class="audit-kv">Tokens: <strong>0↑ 0↓</strong></span><span class="audit-kv">Cost: <strong>$0.0000</strong></span></div>`;
       } else {
         body+=`<div class="audit-pnl-row"><span class="audit-kv">Settled: <strong>${e.settled_count||0}</strong></span><span class="audit-kv">${e.wins||0}W/${e.losses||0}L</span><span class="audit-kv">P&L: <strong class="${(e.pnl_today||0)>=0?'pnl-pos':'pnl-neg'}">${(e.pnl_today||0)>=0?'+':''}€${(e.pnl_today||0).toFixed(2)}</strong></span></div>`;
         if((e.skipped||[]).length)body+=`<div style="font-size:.68rem;color:var(--muted);margin-top:4px">⏭️ Skipped: ${e.skipped.join(', ')}</div>`;
