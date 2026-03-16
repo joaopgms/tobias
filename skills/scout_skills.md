@@ -1,7 +1,7 @@
 ---
-version: 2
-updated_at: 2026-03-15T21:28:05.120295+00:00
-updated_by: analyst_2026-03-15
+version: 3
+updated_at: 2026-03-16T11:44:19.767103+00:00
+updated_by: analyst_2026-03-16
 llm: claude-sonnet-4-6
 ---
 
@@ -31,17 +31,17 @@ If BOTH teams have franchise player uncertainty → evaluate net impact; may sti
 Current confirmed franchise player absences (update each session):
   - Anthony Davis (Lakers): OUT — do not back Lakers ML unless opponent also missing anchor
   - Alex Sarr (Wizards): OUT — Wizards already confirmed tank-tier; minimal additional impact on assessment
-  - Kyshawn George (Wizards): OUT — compounds Wizards anchor absence; team fully tank-tier, no bet ON them
+  - Leaky Black (Wizards): OUT — note for completeness; Wizards fully tank-tier regardless
 
 ## SECTION:tanking_teams
 Confirmed tanking-tier teams (all three criteria met):
   - Washington Wizards: 16-50, L10: 0-10, streak: L11 — clearest tank in league, actively losing every game; Alex Sarr OUT compounds
-  - Sacramento Kings: 17-51, L10: 5-5 — worst record in West, no play-in path; slight L10 improvement, monitor
+  - Sacramento Kings: 18-51, L10: 5-5 — worst record in West, no play-in path; slight L10 improvement, monitor
   - Brooklyn Nets: 17-50, L10: 2-8, streak: L3 — bottom East, no play-in path
-  - Utah Jazz: 20-47, L10: 2-8 — no play-in path
-  - Dallas Mavericks: 22-45, L10: 1-9 — meets all three tanking criteria; treat as confirmed tank
+  - Utah Jazz: 20-48, L10: 2-8, streak: L3 — no play-in path
+  - Dallas Mavericks: 23-45, L10: 2-8, streak: W1 — meets all three tanking criteria; treat as confirmed tank despite one-game win
   - Memphis Grizzlies: 23-43, L10: 2-8, streak: L7 — confirmed tank
-  - Milwaukee Bucks: 27-39, L10: 2-8, streak: L4 — confirmed tank-tier; fading hard, verify draft pick ownership before each bet
+  - Milwaukee Bucks: 28-39, L10: 2-8, streak: W1 — confirmed tank-tier; fading hard, verify draft pick ownership before each bet
 
 Tanking criteria (ALL THREE must be met):
   (a) Team owns its own 2026 draft pick
@@ -60,7 +60,7 @@ Hot streaks to track (may create line inefficiencies):
   - OKC Thunder (53-15, L10: 9-1, streak: W8) — best record in league; likely priced efficiently but note for context
   - Los Angeles Lakers (42-25, L10: 8-2, streak: W5) — strong depth performance despite Davis OUT; back only in spread/O-U contexts given anchor absence
   - San Antonio Spurs (49-18, L10: 8-2, streak: W1) — second-best record in league; elite form, likely efficiently priced
-  - Detroit Pistons (48-18, L10: 6-4, streak: W3) — third-best record, strong season
+  - Detroit Pistons (48-19, L10: 5-5, streak: L1) — third-best record but L10 cooling; monitor form shift
 
 ## SECTION:b2b_rules
 B2B teams cover the spread less than 45% of the time historically.
