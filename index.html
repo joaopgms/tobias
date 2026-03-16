@@ -1326,10 +1326,13 @@ function renderAudit(){
       if(patches.length){
         body+=`<div style="margin-bottom:6px;font-size:.68rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px">${patches.length} section${patches.length>1?'s':''} updated</div>`;
         body+=patches.map((p,pi)=>{
+          // Skip if no section name and no reason (malformed entry)
+          if(!(p.section||'').trim() && !(p.reason||'').trim()) return '';
           // Only show diff if before/after have enough content (not truncated)
           const hasDiff = (p.before||'').length > 30 && (p.after||'').length > 30;
           const diffHtml = hasDiff ? simpleDiff(p.before||'', p.after||'', p.section||'?', entries.indexOf(e)*100+pi) : '';
-          return `<div class="audit-patch"><span class="patch-section">${p.section||'?'}</span><span class="patch-reason">${p.reason||''}</span></div>${diffHtml}`;
+          const sectionLabel = (p.section||'').toLowerCase().replace(/_/g,' ');
+          return `<div class="audit-patch"><span class="patch-section">${sectionLabel||'?'}</span><span class="patch-reason">${p.reason||''}</span></div>${diffHtml}`;
         }).join('');
       }
       if(e.notes) body+=`<div class="audit-notes">📝 ${e.notes}</div>`;
