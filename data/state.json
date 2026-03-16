@@ -18,10 +18,11 @@
   "commit_status": "pending",
   "commit_updated_at": null,
   "commit_date": null,
-  "analyst_updated_at": null,
+  "analyst_updated_at": "2026-03-16T22:35:45.845034+00:00",
   "settler_updated_at": "2026-03-16T22:35:27.988264+00:00",
   "agent_models": {
-    "settler": "no-llm"
+    "settler": "no-llm",
+    "analyst": "claude-sonnet-4-6"
   },
   "last_report": "",
   "draft_picks": [],
