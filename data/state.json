@@ -18,7 +18,7 @@
   "commit_status": "pending",
   "commit_updated_at": null,
   "commit_date": null,
-  "analyst_updated_at": "2026-03-15T21:28:05.120295+00:00",
+  "analyst_updated_at": "2026-03-16T11:44:19.767103+00:00",
   "settler_updated_at": "2026-03-16T10:54:34.142023+00:00",
   "agent_models": {
     "settler": "no-llm",
