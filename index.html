@@ -95,6 +95,59 @@
     .agent-meta-label{font-size:.6rem;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);min-width:58px;flex-shrink:0}
     .agent-meta-val{font-size:.72rem;color:var(--text);font-weight:600}
     /* SCOUT CARD */
+    /* Report nav buttons */
+    .report-nav-btn{display:inline-flex;align-items:center;gap:7px;padding:8px 16px;border-radius:var(--r-pill);font-size:.72rem;font-weight:700;cursor:pointer;border:none;font-family:inherit;transition:all .15s;text-decoration:none}
+    .report-nav-btn.scout{background:var(--burg-soft);color:var(--burg);border:1.5px solid var(--burg-mid)}
+    .report-nav-btn.scout:hover{background:var(--burg);color:#fff}
+    .report-nav-btn.commit{background:#ecfdf5;color:#166534;border:1.5px solid #b3e0cc}
+    .report-nav-btn.commit:hover{background:#166534;color:#fff}
+    .report-nav-btn .nav-dot{width:7px;height:7px;border-radius:50%;background:currentColor;animation:blink 1.2s infinite}
+
+    /* Game cards */
+    .game-cards-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+    .game-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
+    .game-card.drafted{border-left:4px solid var(--green)}
+    .game-card.rejected{border-left:4px solid var(--muted);opacity:.85}
+    .game-card.no-edge{border-left:4px solid var(--border2)}
+    .game-card.confirmed{border-left:4px solid var(--green)}
+    .game-card.cancelled{border-left:4px solid var(--burg);opacity:.8}
+    .game-card-header{padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:8px;cursor:pointer;user-select:none}
+    .game-card-header:hover{background:var(--surface)}
+    .game-card-teams{display:flex;align-items:center;gap:8px;font-weight:800;font-size:.82rem}
+    .game-card-decision{display:flex;align-items:center;gap:6px;flex-shrink:0}
+    .game-card-badge{font-size:.64rem;font-weight:700;padding:3px 9px;border-radius:var(--r-pill);white-space:nowrap}
+    .badge-drafted{background:#dcfce7;color:#166534;border:1px solid #b3e0cc}
+    .badge-rejected{background:var(--surface);color:var(--muted);border:1px solid var(--border2)}
+    .badge-no-edge{background:var(--surface);color:var(--muted);border:1px solid var(--border2)}
+    .badge-confirmed{background:#dcfce7;color:#166534;border:1px solid #b3e0cc}
+    .badge-cancelled{background:var(--burg-soft);color:var(--burg);border:1px solid var(--burg-mid)}
+    .game-card-chips{display:flex;gap:6px;flex-wrap:wrap;padding:0 16px 8px}
+    .game-card-body{padding:0 16px 14px;border-top:1px solid var(--border2);display:none}
+    .game-card-body.open{display:block}
+    .game-card-reasoning{font-size:.74rem;color:var(--text);line-height:1.6;margin-top:10px}
+    .game-card-factors{font-size:.7rem;color:var(--muted);line-height:1.55;margin-top:6px}
+    .game-card-time{font-size:.65rem;color:var(--muted);font-weight:500}
+
+    /* Report summary box */
+    .report-summary-box{background:var(--surface);border:1px solid var(--border2);border-radius:var(--r-sm);padding:14px 16px;margin-bottom:16px;font-size:.76rem;line-height:1.65;color:var(--text)}
+    .report-summary-box strong{color:var(--text)}
+
+    /* Report history rows */
+    .report-history-row{background:var(--card);border:1px solid var(--border);border-radius:var(--r-sm);margin-bottom:6px;overflow:hidden}
+    .report-history-header{padding:10px 16px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;font-size:.74rem}
+    .report-history-header:hover{background:var(--surface)}
+    .report-history-body{display:none;padding:12px 16px;border-top:1px solid var(--border2)}
+    .report-history-body.open{display:block}
+    .report-history-date{font-weight:700;color:var(--text)}
+    .report-history-meta{display:flex;gap:10px;color:var(--muted);font-size:.68rem}
+
+    /* Tab panels */
+    .report-tab-wrap{margin:16px 32px 24px}
+    .report-tab-title{font-size:.65rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+    .report-tab-title span{color:var(--burg)}
+    .report-reset-btn{font-size:.65rem;color:var(--muted);background:none;border:1px solid var(--border);border-radius:var(--r-sm);padding:4px 10px;cursor:pointer;font-family:inherit;float:right}
+    .report-reset-btn:hover{color:var(--burg);border-color:var(--burg-mid)}
+
     .scout-card{margin:16px 32px 0;background:var(--card);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow)}
     .scout-card-header{padding:12px 18px;border-bottom:1px solid var(--border2);display:flex;justify-content:space-between;align-items:center}
     .scout-card-title{font-size:.68rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--burg)}
@@ -344,9 +397,11 @@
     </div>
   </div>
   <div class="main-tabs">
-    <button class="main-tab active" data-tab="live" onclick="switchTab('live')">🏀 Live</button>
+    <button class="main-tab active" data-tab="live" onclick="switchTab('live')">🏀 Board</button>
+    <button class="main-tab" data-tab="scout" onclick="switchTab('scout')">🔍 Scout</button>
+    <button class="main-tab" data-tab="commit" onclick="switchTab('commit')">🎯 Commit</button>
     <button class="main-tab" data-tab="history" onclick="switchTab('history')">📋 History</button>
-    <button class="main-tab" data-tab="audit" onclick="switchTab('audit')">🔍 Audit</button>
+    <button class="main-tab" data-tab="audit" onclick="switchTab('audit')">🧠 Audit</button>
     <button class="main-tab" data-tab="settings" onclick="switchTab('settings')">⚙️ Settings</button>
   </div>
 </header>
@@ -393,7 +448,25 @@
       <div class="agent-meta-row"><span class="agent-meta-label">Next run</span><span class="agent-meta-val" id="settlerNextRun">-</span></div>
     </div>
   </div>
-  <div class="scout-card">
+  <div class="report-nav-bar" id="reportNavBar" style="display:none;margin:0 32px 4px;display:flex;gap:8px;flex-wrap:wrap"></div>
+  <div class="chart-section">
+    <div class="section-header"><div class="section-title">BANKROLL <span>OVER TIME</span></div><div style="font-size:.7rem;color:var(--muted)" id="chartLabel"></div></div>
+    <div class="chart-wrap"><div id="bankrollChart"></div></div>
+  </div>
+  <div class="analytics-section">
+    <div class="analytics-card">
+      <div class="section-header"><div class="section-title">W / L <span>BREAKDOWN</span></div><div style="font-size:.68rem;color:var(--muted)" id="wlSub"></div></div>
+      <div class="donut-wrap">
+        <div class="donut-canvas-wrap"><canvas id="wlChart"></canvas><div class="donut-center"><div class="donut-pct" id="donutPct">-</div><div class="donut-lbl">Win Rate</div></div></div>
+        <div class="donut-legend">
+          <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div><span id="legendWon">0 Won</span></div>
+          <div class="legend-item"><div class="legend-dot" style="background:var(--burg)"></div><span id="legendLost">0 Lost</span></div>
+          <div class="legend-item"><div class="legend-dot" style="background:var(--yellow)"></div><span id="legendPending">0 Pending</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="analytics-card"><div class="section-header"><div class="section-title">BET <span>ANALYTICS</span></div></div><div class="stats-grid" id="analyticsStats"></div></div>
+  </div>  <div class="scout-card">
     <div class="scout-card-header">
       <div><div class="scout-card-title" id="reportCardTitle">🧠 Scout Report</div><div class="scout-card-subtitle" id="scoutUpdatedAt">From last run</div></div>
       <div style="display:flex;gap:6px">
@@ -417,23 +490,28 @@
     </div>
     <div class="draft-grid" id="draftGrid"></div>
   </div>
-  <div class="chart-section">
-    <div class="section-header"><div class="section-title">BANKROLL <span>OVER TIME</span></div><div style="font-size:.7rem;color:var(--muted)" id="chartLabel"></div></div>
-    <div class="chart-wrap"><div id="bankrollChart"></div></div>
-  </div>
-  <div class="analytics-section">
-    <div class="analytics-card">
-      <div class="section-header"><div class="section-title">W / L <span>BREAKDOWN</span></div><div style="font-size:.68rem;color:var(--muted)" id="wlSub"></div></div>
-      <div class="donut-wrap">
-        <div class="donut-canvas-wrap"><canvas id="wlChart"></canvas><div class="donut-center"><div class="donut-pct" id="donutPct">-</div><div class="donut-lbl">Win Rate</div></div></div>
-        <div class="donut-legend">
-          <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div><span id="legendWon">0 Won</span></div>
-          <div class="legend-item"><div class="legend-dot" style="background:var(--burg)"></div><span id="legendLost">0 Lost</span></div>
-          <div class="legend-item"><div class="legend-dot" style="background:var(--yellow)"></div><span id="legendPending">0 Pending</span></div>
-        </div>
-      </div>
+
+</div>
+
+<!-- SCOUT TAB -->
+<div class="tab-panel" id="tab-scout">
+  <div class="report-tab-wrap">
+    <div class="report-tab-title">🔍 SCOUT <span>REPORT</span>
+      <span class="report-reset-btn" style="cursor:default" title="To reset: replace data/scout_reports.js with empty array and push">↺ reset via git</span>
     </div>
-    <div class="analytics-card"><div class="section-header"><div class="section-title">BET <span>ANALYTICS</span></div></div><div class="stats-grid" id="analyticsStats"></div></div>
+    <div id="scoutTodaySection"></div>
+    <div id="scoutHistorySection"></div>
+  </div>
+</div>
+
+<!-- COMMIT TAB -->
+<div class="tab-panel" id="tab-commit">
+  <div class="report-tab-wrap">
+    <div class="report-tab-title">🎯 COMMIT <span>REPORT</span>
+      <span class="report-reset-btn" style="cursor:default" title="To reset: replace data/commit_reports.js with empty array and push">↺ reset via git</span>
+    </div>
+    <div id="commitTodaySection"></div>
+    <div id="commitHistorySection"></div>
   </div>
 </div>
 
@@ -671,6 +749,8 @@
 
 <div id="copyToast" class="copy-toast"></div>
 <script src="data/data.js"></script>
+<script src="data/scout_reports.js"></script>
+<script src="data/commit_reports.js"></script>
 <script>
 // -- ALL 30 NBA TEAMS -------------------------------------------------------
 const NBA_TEAMS={
@@ -1256,7 +1336,8 @@ function renderAudit(){
       if(!patches.length&&e.no_change_reason)body+=`<div class="audit-no-change">No changes: ${e.no_change_reason}</div>`;
       body+=`<div class="audit-pnl-row"><span class="audit-kv">Bankroll: <strong>€${(e.bankroll||0).toFixed(2)}</strong></span><span class="audit-kv">P&L: <strong>€${(e.net_pnl||0).toFixed(2)}</strong></span>${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>`;
     }else if(ag==='scout'){
-      body+=`<div class="audit-pnl-row"><span class="audit-kv">Picks: <strong>${e.draft_count||0}</strong></span><span class="audit-kv">Odds: <strong>${e.odds_source||'-'}</strong></span><span class="audit-kv">Bankroll: <strong>€${(e.bankroll||0).toFixed(2)}</strong></span>${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>`;
+      const retriesBadge = e.retries>0 ? `<span class="audit-kv" style="color:var(--yellow)">⟳ <strong>${e.retries} retr${e.retries===1?'y':'ies'}</strong></span>` : '';
+      body+=`<div class="audit-pnl-row"><span class="audit-kv">Picks: <strong>${e.draft_count||0}</strong></span><span class="audit-kv">Odds: <strong>${e.odds_source||'-'}</strong></span><span class="audit-kv">Bankroll: <strong>€${(e.bankroll||0).toFixed(2)}</strong></span>${retriesBadge}${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>`;
       if((e.picks||[]).length)body+=(e.picks||[]).map(p=>`<div class="audit-patch"><span class="patch-section">${getTeam((p.match||'').split(' vs ')[0]).abbr}</span><span class="patch-reason">${p.pick} @ ${p.odds} · conf=${p.confidence}</span></div>`).join('');
       if(e.error)body+=`<div style="color:var(--burg);font-size:.72rem;margin-top:6px">⚠️ ${e.error}</div>`;
     }else if(ag==='commit'){
@@ -1469,6 +1550,334 @@ function showSaveStatus(type, msg) {
 }
 
 // -- TABS -------------------------------------------------------------------
+// -- REPORT TABS JS ----------------------------------------------------------
+
+function toggleGameCard(id){
+  const body=document.getElementById(id);
+  if(!body)return;
+  body.classList.toggle('open');
+  const btn=body.previousElementSibling.querySelector('.gc-toggle');
+  if(btn)btn.textContent=body.classList.contains('open')?'▲':'▼';
+}
+
+function toggleHistoryRow(id){
+  const body=document.getElementById(id);
+  if(!body)return;
+  body.classList.toggle('open');
+  const btn=body.previousElementSibling.querySelector('.hr-toggle');
+  if(btn)btn.textContent=body.classList.contains('open')?'▲':'▼';
+}
+
+function buildGameCard(game, idx, prefix) {
+  const pts=(game.match||game.home&&game.away?`${game.home||''} vs ${game.away||''}`:game.match||'').split(' vs ');
+  const hm=pts[0]||'', aw=pts[1]||'';
+  const pick=game.pick||'';
+  const conf=game.confidence||0;
+  const decision=pick?'drafted':(game.reason?'rejected':'no-edge');
+  const badgeClass=decision==='drafted'?'badge-drafted':decision==='rejected'?'badge-rejected':'badge-no-edge';
+  const badgeText=decision==='drafted'?'✅ Drafted':decision==='rejected'?'❌ Rejected':'— No Edge';
+  const cardId=`${prefix}-gc-${idx}`;
+  const timeStr=game.time?`<span class="game-card-time">${fmt(game.time)}</span>`:'';
+
+  let chipsHtml='';
+  if(pick){
+    chipsHtml+=`<span class="report-chip"><span>Pick</span>${pick}</span>`;
+    if(game.odds) chipsHtml+=`<span class="report-chip"><span>Odds</span>${(+game.odds).toFixed(2)}</span>`;
+    if(game.stake) chipsHtml+=`<span class="report-chip"><span>Stake</span>€${(+game.stake).toFixed(0)}</span>`;
+    if(game.potential_return) chipsHtml+=`<span class="report-chip"><span>Pot.</span>€${(+game.potential_return).toFixed(0)}</span>`;
+    if(conf) chipsHtml+=`<span class="conf-pill ${CC(conf)}">${conf}/100 ${CL(conf)}</span>`;
+  }
+
+  const anchors=(game.anchor_players||[]).length?
+    `<div style="font-size:.68rem;color:var(--teal);margin-top:6px">⚓ ${(game.anchor_players||[]).join(', ')}</div>`:'';
+  const reasoning=game.reasoning?
+    `<div class="game-card-reasoning">${game.reasoning}</div>`:'';
+  const reason=game.reason?
+    `<div class="game-card-factors">Reason: ${game.reason}</div>`:'';
+
+  return `<div class="game-card ${decision}">
+    <div class="game-card-header" onclick="toggleGameCard('${cardId}')">
+      <div class="game-card-teams">
+        ${logoImg(hm,20)} ${getTeam(hm).short}
+        <span style="color:var(--muted);font-size:.7rem;font-weight:400">vs</span>
+        ${logoImg(aw,20)} ${getTeam(aw).short}
+        ${timeStr}
+      </div>
+      <div class="game-card-decision">
+        <span class="game-card-badge ${badgeClass}">${badgeText}</span>
+        <span class="gc-toggle" style="font-size:.65rem;color:var(--muted);margin-left:4px">▼</span>
+      </div>
+    </div>
+    ${chipsHtml?`<div class="game-card-chips">${chipsHtml}</div>`:''}
+    <div class="game-card-body" id="${cardId}">
+      ${anchors}${reasoning}${reason}
+    </div>
+  </div>`;
+}
+
+function buildCommitCard(bet, idx, prefix, isCancelled=false) {
+  const pts=(bet.match||'').split(' vs ');
+  const hm=pts[0]||'', aw=pts[1]||'';
+  const cardId=`${prefix}-cc-${idx}`;
+  const badgeClass=isCancelled?'badge-cancelled':'badge-confirmed';
+  const badgeText=isCancelled?'❌ Cancelled':'✅ Confirmed';
+  const cardClass=isCancelled?'cancelled':'confirmed';
+  const timeStr=bet.time?`<span class="game-card-time">${fmt(bet.time)}</span>`:'';
+
+  let chipsHtml='';
+  if(!isCancelled){
+    if(bet.pick) chipsHtml+=`<span class="report-chip"><span>Pick</span>${bet.pick}</span>`;
+    if(bet.odds) chipsHtml+=`<span class="report-chip"><span>Odds</span>${(+bet.odds).toFixed(2)}</span>`;
+    if(bet.stake) chipsHtml+=`<span class="report-chip"><span>Stake</span>€${(+bet.stake).toFixed(0)}</span>`;
+    if(bet.potential_return) chipsHtml+=`<span class="report-chip"><span>Pot.</span>€${(+bet.potential_return).toFixed(0)}</span>`;
+    const conf=bet.confidence||0;
+    if(conf) chipsHtml+=`<span class="conf-pill ${CC(conf)}">${conf}/100 ${CL(conf)}</span>`;
+  }
+
+  const anchors=!isCancelled&&(bet.anchor_players||[]).length?
+    `<div style="font-size:.68rem;color:var(--teal);margin-top:6px">⚓ ${(bet.anchor_players||[]).join(', ')}</div>`:'';
+  const reasoning=bet.reasoning?`<div class="game-card-reasoning">${bet.reasoning}</div>`:'';
+  const cancelReason=isCancelled&&bet.reason?`<div class="report-cancelled-reason">${bet.reason}</div>`:'';
+
+  return `<div class="game-card ${cardClass}">
+    <div class="game-card-header" onclick="toggleGameCard('${cardId}')">
+      <div class="game-card-teams">
+        ${logoImg(hm,20)} ${getTeam(hm).short}
+        <span style="color:var(--muted);font-size:.7rem;font-weight:400">vs</span>
+        ${logoImg(aw,20)} ${getTeam(aw).short}
+        ${timeStr}
+      </div>
+      <div class="game-card-decision">
+        <span class="game-card-badge ${badgeClass}">${badgeText}</span>
+        <span class="gc-toggle" style="font-size:.65rem;color:var(--muted);margin-left:4px">▼</span>
+      </div>
+    </div>
+    ${chipsHtml?`<div class="game-card-chips">${chipsHtml}</div>`:''}
+    <div class="game-card-body" id="${cardId}">
+      ${anchors}${reasoning}${cancelReason}
+    </div>
+  </div>`;
+}
+
+function extractSummaryFromReport(reportMd) {
+  if(!reportMd) return '';
+  // Find the last section or a "summary" section in the markdown
+  const lines = reportMd.split('\n');
+  let summaryLines = [];
+  let inSummary = false;
+  for(const line of lines){
+    if(/^#{1,3}.*summar/i.test(line)||/^#{1,3}.*overall/i.test(line)||/^#{1,3}.*tonight/i.test(line)){
+      inSummary=true; continue;
+    }
+    if(inSummary && /^#/.test(line)) inSummary=false;
+    if(inSummary && line.trim()) summaryLines.push(line);
+  }
+  // If no dedicated summary section, use the last non-game paragraph
+  if(!summaryLines.length){
+    let lastPara='';
+    let para='';
+    for(const line of lines){
+      if(/^###/.test(line)){lastPara=para;para='';}
+      else para+=line+'\n';
+    }
+    summaryLines = (lastPara||para).trim().split('\n').filter(l=>l.trim());
+  }
+  return summaryLines.slice(0,5).join('\n');
+}
+
+function renderScoutTab(){
+  const reports = typeof SCOUT_REPORTS!=='undefined'?SCOUT_REPORTS:[];
+  const today = new Date().toISOString().slice(0,10);
+
+  // Today's report
+  const todayEl = document.getElementById('scoutTodaySection');
+  const todayReport = reports.filter(r=>r.date===today).pop();
+
+  if(todayEl){
+    if(!todayReport){
+      todayEl.innerHTML=`<div style="text-align:center;padding:40px;color:var(--muted);font-size:.82rem">No scout report yet today. Scout runs at 14:00 UTC.</div>`;
+    } else {
+      const picks=(todayReport.picks||[]);
+      const rejected=(todayReport.rejected||[]);
+      const allGames=[
+        ...picks.map(p=>({...p,_type:'drafted'})),
+        ...rejected.map(r=>({...r,_type:'rejected'}))
+      ];
+      // KPI row
+      let h=`<div class="report-summary">
+        <div class="report-kpi"><div class="report-kpi-label">Picks</div><div class="report-kpi-val">${picks.length}</div></div>
+        <div class="report-kpi"><div class="report-kpi-label">Games reviewed</div><div class="report-kpi-val">${allGames.length}</div></div>
+        <div class="report-kpi"><div class="report-kpi-label">Odds source</div><div class="report-kpi-val" style="font-size:.72rem">${todayReport.odds_source||'-'}</div></div>
+        <div class="report-kpi"><div class="report-kpi-label">Cost</div><div class="report-kpi-val" style="font-size:.72rem">$${(todayReport.cost_usd||0).toFixed(4)}</div></div>
+      </div>`;
+      // Game cards
+      if(allGames.length){
+        h+='<div class="game-cards-grid">';
+        allGames.forEach((g,i)=>{ h+=buildGameCard(g,i,'st'); });
+        h+='</div>';
+      }
+      // Summary
+      const summary=extractSummaryFromReport(todayReport.report||'');
+      if(summary){
+        h+=`<div class="report-summary-box"><strong>Scout Summary</strong><br>${summary.replace(/\n/g,'<br>')}</div>`;
+      }
+      todayEl.innerHTML=h;
+    }
+  }
+
+  // History
+  const histEl = document.getElementById('scoutHistorySection');
+  const pastReports = reports.filter(r=>r.date!==today).reverse();
+  if(histEl){
+    if(!pastReports.length){
+      histEl.innerHTML='';
+    } else {
+      let h='<div class="report-tab-title" style="margin-top:20px">HISTORY</div>';
+      pastReports.forEach((r,i)=>{
+        const rowId=`sh-${i}`;
+        const picks=(r.picks||[]).length;
+        const cost=`$${(r.cost_usd||0).toFixed(4)}`;
+        h+=`<div class="report-history-row">
+          <div class="report-history-header" onclick="toggleHistoryRow('${rowId}-body')">
+            <div>
+              <span class="report-history-date">${r.date}</span>
+              <span class="report-history-meta" style="display:inline-flex;margin-left:12px">
+                <span>${picks} picks</span>
+                <span>${r.odds_source||'-'}</span>
+                <span>${cost}</span>
+              </span>
+            </div>
+            <span class="hr-toggle" style="font-size:.65rem;color:var(--muted)">▼</span>
+          </div>
+          <div class="report-history-body" id="${rowId}-body">
+            <div class="game-cards-grid">
+              ${[...(r.picks||[]).map(p=>({...p,_type:'drafted'})),
+                 ...(r.rejected||[]).map(rj=>({...rj,_type:'rejected'}))]
+                .map((g,gi)=>buildGameCard(g,gi,`sh${i}`)).join('')}
+            </div>
+            ${extractSummaryFromReport(r.report||'')?
+              `<div class="report-summary-box" style="margin-top:8px">${extractSummaryFromReport(r.report||'').replace(/\n/g,'<br>')}</div>`:''}
+          </div>
+        </div>`;
+      });
+      histEl.innerHTML=h;
+    }
+  }
+}
+
+function renderCommitTab(){
+  const reports = typeof COMMIT_REPORTS!=='undefined'?COMMIT_REPORTS:[];
+  const today = new Date().toISOString().slice(0,10);
+
+  const todayEl = document.getElementById('commitTodaySection');
+  const todayReport = reports.filter(r=>r.date===today).pop();
+
+  if(todayEl){
+    if(!todayReport){
+      todayEl.innerHTML=`<div style="text-align:center;padding:40px;color:var(--muted);font-size:.82rem">No commit report yet today. Commit fires 15 min before first tip-off.</div>`;
+    } else {
+      const bets=(todayReport.bets||[]);
+      const cancelled=(todayReport.cancelled||[]);
+      const lateRej=(todayReport.late_rejections||[]);
+      let h=`<div class="report-summary">
+        <div class="report-kpi"><div class="report-kpi-label">Committed</div><div class="report-kpi-val">${bets.length}</div></div>
+        <div class="report-kpi"><div class="report-kpi-label">Staked</div><div class="report-kpi-val">€${(todayReport.total_staked||0).toFixed(0)}</div></div>
+        <div class="report-kpi"><div class="report-kpi-label">Cancelled</div><div class="report-kpi-val">${cancelled.length}</div></div>
+        <div class="report-kpi"><div class="report-kpi-label">Cost</div><div class="report-kpi-val" style="font-size:.72rem">$${(todayReport.cost_usd||0).toFixed(4)}</div></div>
+      </div>`;
+      // Committed bets
+      if(bets.length){
+        h+='<div class="game-cards-grid">';
+        bets.forEach((b,i)=>{ h+=buildCommitCard(b,i,'ct',false); });
+        h+='</div>';
+      }
+      // Cancelled
+      if(cancelled.length){
+        h+=`<div style="font-size:.62rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin:12px 0 6px">Cancelled Picks</div>`;
+        h+='<div class="game-cards-grid">';
+        cancelled.forEach((b,i)=>{ h+=buildCommitCard(b,i,'cc',true); });
+        h+='</div>';
+      }
+      // Late scout rejections
+      if(lateRej.length){
+        h+=`<div style="font-size:.62rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin:12px 0 6px">Late Scout — Checked, Not Added</div>`;
+        h+='<div class="game-cards-grid">';
+        lateRej.forEach((g,i)=>{ h+=buildGameCard(g,i,'cr'); });
+        h+='</div>';
+      }
+      // Summary
+      const summary=extractSummaryFromReport(todayReport.report||'');
+      if(summary){
+        h+=`<div class="report-summary-box"><strong>Commit Summary</strong><br>${summary.replace(/\n/g,'<br>')}</div>`;
+      }
+      todayEl.innerHTML=h;
+    }
+  }
+
+  // History
+  const histEl = document.getElementById('commitHistorySection');
+  const pastReports = reports.filter(r=>r.date!==today).reverse();
+  if(histEl){
+    if(!pastReports.length){ histEl.innerHTML=''; return; }
+    let h='<div class="report-tab-title" style="margin-top:20px">HISTORY</div>';
+    pastReports.forEach((r,i)=>{
+      const rowId=`ch-${i}`;
+      const bets=(r.bets||[]).length;
+      h+=`<div class="report-history-row">
+        <div class="report-history-header" onclick="toggleHistoryRow('${rowId}-body')">
+          <div>
+            <span class="report-history-date">${r.date}</span>
+            <span class="report-history-meta" style="display:inline-flex;margin-left:12px">
+              <span>${bets} bets · €${(r.total_staked||0).toFixed(0)} staked</span>
+              <span>$${(r.cost_usd||0).toFixed(4)}</span>
+            </span>
+          </div>
+          <span class="hr-toggle" style="font-size:.65rem;color:var(--muted)">▼</span>
+        </div>
+        <div class="report-history-body" id="${rowId}-body">
+          <div class="game-cards-grid">
+            ${(r.bets||[]).map((b,bi)=>buildCommitCard(b,bi,`ch${i}`,false)).join('')}
+            ${(r.cancelled||[]).map((b,bi)=>buildCommitCard(b,bi,`chc${i}`,true)).join('')}
+          </div>
+          ${extractSummaryFromReport(r.report||'')?
+            `<div class="report-summary-box" style="margin-top:8px">${extractSummaryFromReport(r.report||'').replace(/\n/g,'<br>')}</div>`:''}
+        </div>
+      </div>`;
+    });
+    histEl.innerHTML=h;
+  }
+}
+
+function resetReportHistory(type){
+  if(!confirm(`Reset ${type} report history? This clears the rolling history from the dashboard. The archive.json is preserved.`)) return;
+  // Just clear the local display — agents will repopulate on next run
+  if(type==='scout'){
+    document.getElementById('scoutHistorySection').innerHTML='';
+  } else {
+    document.getElementById('commitHistorySection').innerHTML='';
+  }
+  showToast(`${type} history cleared from view`);
+}
+
+function renderReportNavBar(){
+  const bar = document.getElementById('reportNavBar');
+  if(!bar) return;
+  const reports = typeof SCOUT_REPORTS!=='undefined'?SCOUT_REPORTS:[];
+  const commitReports = typeof COMMIT_REPORTS!=='undefined'?COMMIT_REPORTS:[];
+  const today = new Date().toISOString().slice(0,10);
+  const hasScout = reports.some(r=>r.date===today);
+  const hasCommit = commitReports.some(r=>r.date===today);
+  let btns='';
+  if(hasScout){
+    btns+=`<button class="report-nav-btn scout" onclick="switchTab('scout')"><span class="nav-dot"></span>New Scout Report →</button>`;
+  }
+  if(hasCommit){
+    btns+=`<button class="report-nav-btn commit" onclick="switchTab('commit')"><span class="nav-dot"></span>Commit Report →</button>`;
+  }
+  bar.innerHTML=btns;
+  bar.style.display=btns?'flex':'none';
+}
+
 function switchTab(tab){
   document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.main-tab').forEach(b=>b.classList.remove('active'));
@@ -1477,6 +1886,8 @@ function switchTab(tab){
   if(tab==='audit')renderAudit();
   if(tab==='settings')renderSettings();
   if(tab==='history')renderTable();
+  if(tab==='scout')renderScoutTab();
+  if(tab==='commit')renderCommitTab();
 }
 
 // -- SHARE ------------------------------------------------------------------
