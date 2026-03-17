@@ -21,7 +21,7 @@ from datetime import datetime, date, timezone
 
 from core.llm import call_llm, call_llm_full, extract_tag, agent_model_name
 from core.espn import fetch_scoreboard, fetch_injuries, fetch_standings, fetch_first_game_time_utc
-from core.odds import fetch_betano_nba_odds, format_odds_for_prompt, odds_available
+from core.odds import fetch_betano_nba_odds, format_odds_for_prompt, odds_available, get_odds_failure_reasons
 from core.validators import validate_all_drafts, ValidationError
 
 log = logging.getLogger(__name__)
@@ -195,6 +195,7 @@ def run(store) -> None:
     injuries  = fetch_injuries()
     standings = fetch_standings()
     odds      = fetch_betano_nba_odds()
+    odds_failures = get_odds_failure_reasons()  # capture before anything else
     first_game_time = fetch_first_game_time_utc()
 
     if not games:
@@ -373,6 +374,7 @@ def run(store) -> None:
                   odds_source=odds[0].get("odds_source", "?") if odds else "none",
                   bankroll=state["bankroll"],
                   retry_count=retry_count,
+                  odds_failures=odds_failures,
                   llm_meta=llm_result.to_audit_dict() if llm_result else {})
 
     # ── 14. Store report for Scout tab history ───────────────────────────────
@@ -399,7 +401,7 @@ def run(store) -> None:
 def _append_audit(store, ts, llm, state, history, report_raw="",
                   draft_count=0, picks=None,
                   first_game_time="", odds_source="", bankroll=0, error="",
-                  retry_count=0, llm_meta=None):
+                  retry_count=0, odds_failures=None, llm_meta=None):
     entry = {
         "ts":               ts,
         "agent":            "scout",
@@ -408,6 +410,7 @@ def _append_audit(store, ts, llm, state, history, report_raw="",
         "picks":            picks or [],
         "first_game_time":  first_game_time,
         "odds_source":      odds_source,
+        "odds_failures":    odds_failures or [],
         "bankroll":         round(bankroll, 2),
         "error":            error,
         "retries":          retry_count,

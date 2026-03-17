@@ -170,6 +170,9 @@ def _normalise_theodds(g: dict) -> dict:
 NO_ODDS_SENTINEL = [{"odds_source": "no_odds", "odds_estimated": True,
                      "reason": "No odds API available"}]
 
+# Track failure reasons across tiers for diagnostics
+_odds_failure_reasons: list[str] = []
+
 
 # ── Public interface ────────────────────────────────────────────────────────────
 def fetch_betano_nba_odds(target_date: date | None = None) -> list[dict]:

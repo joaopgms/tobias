@@ -105,7 +105,7 @@
 
     /* Game cards */
     .game-cards-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
-    .game-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
+    .game-card{background:#ffffff;border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
     .game-card.drafted{border-left:4px solid var(--green)}
     .game-card.rejected{border-left:4px solid var(--muted);opacity:.85}
     .game-card.no-edge{border-left:4px solid var(--border2)}
@@ -122,18 +122,18 @@
     .badge-confirmed{background:#dcfce7;color:#166534;border:1px solid #b3e0cc}
     .badge-cancelled{background:var(--burg-soft);color:var(--burg);border:1px solid var(--burg-mid)}
     .game-card-chips{display:flex;gap:6px;flex-wrap:wrap;padding:0 16px 8px}
-    .game-card-body{padding:0 16px 14px;border-top:1px solid var(--border2);display:none}
+    .game-card-body{padding:0 16px 14px;border-top:1px solid var(--border2);display:none;background:#fafafa}
     .game-card-body.open{display:block}
     .game-card-reasoning{font-size:.74rem;color:var(--text);line-height:1.6;margin-top:10px}
     .game-card-factors{font-size:.7rem;color:var(--muted);line-height:1.55;margin-top:6px}
     .game-card-time{font-size:.65rem;color:var(--muted);font-weight:500}
 
     /* Report summary box */
-    .report-summary-box{background:var(--surface);border:1px solid var(--border2);border-radius:var(--r-sm);padding:14px 16px;margin-bottom:16px;font-size:.76rem;line-height:1.65;color:var(--text)}
+    .report-summary-box{background:#ffffff;border:1px solid var(--border);border-radius:var(--r-sm);padding:14px 16px;margin-bottom:16px;font-size:.76rem;line-height:1.65;color:var(--text)}
     .report-summary-box strong{color:var(--text)}
 
     /* Report history rows */
-    .report-history-row{background:var(--card);border:1px solid var(--border);border-radius:var(--r-sm);margin-bottom:6px;overflow:hidden}
+    .report-history-row{background:#ffffff;border:1px solid var(--border);border-radius:var(--r-sm);margin-bottom:6px;overflow:hidden}
     .report-history-header{padding:10px 16px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;font-size:.74rem}
     .report-history-header:hover{background:var(--surface)}
     .report-history-body{display:none;padding:12px 16px;border-top:1px solid var(--border2)}
@@ -1331,9 +1331,18 @@ function renderAudit(){
             ? `<span class="audit-kv" style="color:var(--yellow)">⟳ <strong>${e.retries} retr${e.retries===1?'y':'ies'}</strong></span>`
             : `<span class="audit-kv" style="color:var(--muted)">⟳ <strong>no retries</strong></span>`)
         : '';
-      const noOddsBadge = e.odds_source==='no_odds'
-        ? `<span class="audit-kv" style="color:var(--yellow)">⚠️ <strong>no live odds — picks deferred</strong></span>` : '';
-      body+=`<div class="audit-pnl-row"><span class="audit-kv">Picks: <strong>${e.draft_count||0}</strong></span><span class="audit-kv">Odds: <strong>${e.odds_source||'-'}</strong></span><span class="audit-kv">Bankroll: <strong>€${(e.bankroll||0).toFixed(2)}</strong></span>${retriesBadge}${noOddsBadge}${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>`;
+      // Odds failure breakdown
+      const oddsFailures = e.odds_failures||[];
+      let oddsDiag = '';
+      if(e.odds_source==='no_odds'){
+        if(oddsFailures.length){
+          const lines = oddsFailures.map((r,i)=>`<div style="margin-top:3px">⚠️ Tier ${i+1}: ${r}</div>`).join('');
+          oddsDiag = `<div style="font-size:.68rem;color:var(--yellow);margin-top:6px;line-height:1.5">${lines}<div style="margin-top:4px;color:var(--muted)">→ No live odds — picks deferred to next cycle</div></div>`;
+        } else {
+          oddsDiag = `<div style="font-size:.68rem;color:var(--yellow);margin-top:6px">⚠️ No live odds available — picks deferred</div>`;
+        }
+      }
+      body+=`<div class="audit-pnl-row"><span class="audit-kv">Picks: <strong>${e.draft_count||0}</strong></span><span class="audit-kv">Odds: <strong>${e.odds_source||'-'}</strong></span><span class="audit-kv">Bankroll: <strong>€${(e.bankroll||0).toFixed(2)}</strong></span>${retriesBadge}${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>${oddsDiag}`;
       if((e.picks||[]).length)body+=(e.picks||[]).map(p=>`<div class="audit-patch"><span class="patch-section">${getTeam((p.match||'').split(' vs ')[0]).abbr}</span><span class="patch-reason">${p.pick} @ ${p.odds} · conf=${p.confidence}</span></div>`).join('');
       if(e.error)body+=`<div style="color:var(--burg);font-size:.72rem;margin-top:6px">⚠️ ${e.error}</div>`;
     }else if(ag==='commit'){
