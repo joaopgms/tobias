@@ -1,7 +1,7 @@
 ---
-version: 4
-updated_at: 2026-03-16T22:35:45.845034+00:00
-updated_by: analyst_2026-03-16
+version: 1
+updated_at: null
+updated_by: bootstrap
 llm: claude-sonnet-4-6
 ---
 
