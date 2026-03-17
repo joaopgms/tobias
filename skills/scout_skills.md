@@ -1,7 +1,7 @@
 ---
-version: 1
-updated_at: null
-updated_by: bootstrap
+version: 2
+updated_at: 2026-03-17T11:41:44.188231+00:00
+updated_by: analyst_2026-03-17
 llm: claude-sonnet-4-6
 ---
 
@@ -29,18 +29,19 @@ Franchise player Day-To-Day → confidence -5, stake -10%.
 If BOTH teams have franchise player uncertainty → evaluate net impact; may still be value on the less-affected side.
 
 Current confirmed franchise player absences (update each session):
-  - Anthony Davis (Lakers): OUT — do not back Lakers ML unless opponent also missing anchor; Lakers still posting W8 in L10/W5 streak on depth alone — spread/O-U contexts may still offer value
+  - Anthony Davis (Lakers): OUT — do not back Lakers ML unless opponent also missing anchor; Lakers posting W6 in L10/W6 streak on depth alone — spread/O-U contexts may still offer value
   - Alex Sarr (Wizards): OUT — Wizards already confirmed tank-tier; minimal additional impact on assessment
   - Leaky Black (Wizards): OUT — note for completeness; Wizards fully tank-tier regardless
+  - Kyshawn George (Wizards): OUT — further compounds Wizards tank-tier status
 
 ## SECTION:tanking_teams
 Confirmed tanking-tier teams (all three criteria met):
-  - Washington Wizards: 16-50, L10: 0-10, streak: L11 — clearest tank in league, actively losing every game; Alex Sarr OUT compounds; L11 streak is extreme
+  - Washington Wizards: 16-51, L10: 0-10, streak: L12 — clearest tank in league, actively losing every game; Alex Sarr + Leaky Black + Kyshawn George all OUT; L12 streak is extreme
   - Sacramento Kings: 18-51, L10: 5-5 — worst record in West, no play-in path; L10 improvement is anomaly, treat with caution
-  - Brooklyn Nets: 17-50, L10: 2-8, streak: L3 — bottom East, no play-in path
+  - Brooklyn Nets: 17-51, L10: 2-8, streak: L4 — bottom East, no play-in path
   - Utah Jazz: 20-48, L10: 2-8, streak: L3 — no play-in path
-  - Dallas Mavericks: 23-45, L10: 2-8, streak: W1 — confirmed tank; one-game win irrelevant to trend
-  - Memphis Grizzlies: 23-43, L10: 2-8, streak: L7 — confirmed tank
+  - Dallas Mavericks: 23-46, L10: 2-8, streak: L1 — confirmed tank; streak back to losing
+  - Memphis Grizzlies: 23-44, L10: 2-8, streak: L8 — confirmed tank, L8 streak deepening
   - Milwaukee Bucks: 28-39, L10: 2-8, streak: W1 — confirmed tank-tier; verify draft pick ownership before each bet
 
 Tanking criteria (ALL THREE must be met):
@@ -51,17 +52,18 @@ Tanking criteria (ALL THREE must be met):
 When betting AGAINST tanking teams: treat as edge-positive. When betting ON tanking teams: require odds ≥ 2.20 and strong situational reason (e.g. opponent B2B, major injury).
 
 Emerging tank-watch:
-  - Chicago Bulls (27-40, L10: 3-7, streak: L2) — monitor play-in race and pick ownership; trending toward tank
-  - New Orleans Pelicans (22-46, L10: 6-4, streak: L1) — record is tank-tier but L10 shows fight; watch motivation shift
-  - Golden State Warriors (32-35, L10: 2-8, streak: L5) — play-in bubble but L10:2-8 and L5 streak suggest significant fade; monitor if they fall out of play-in contention
+  - Chicago Bulls (28-40, L10: 4-6, streak: W1) — monitor play-in race and pick ownership; L10 still weak
+  - New Orleans Pelicans (23-46, L10: 6-4, streak: W1) — record is tank-tier but L10 shows fight; watch motivation shift
+  - Golden State Warriors (33-35, L10: 3-7, streak: W1) — still in play-in bubble but L10:3-7 suggests fade risk; one-game win break in streak, monitor closely
 
 Hot streaks to track (may create line inefficiencies):
-  - Atlanta Hawks (36-31, L10: 9-1, streak: W9) — elite recent form; W9 streak risks sharp regression, verify line before committing
-  - Orlando Magic (38-28, L10: 8-2, streak: W7) — strong run; monitor for inflated lines
+  - Atlanta Hawks (37-31, L10: 10-0, streak: W10) — perfect L10, W10 streak; extreme regression risk, books likely adjusting lines sharply, verify before committing
   - OKC Thunder (53-15, L10: 9-1, streak: W8) — best record in league; likely priced efficiently
-  - Los Angeles Lakers (42-25, L10: 8-2, streak: W5) — strong depth despite Davis OUT; spread/O-U contexts only given anchor absence
-  - San Antonio Spurs (49-18, L10: 8-2, streak: W1) — second-best record; elite form, likely efficiently priced
+  - Los Angeles Lakers (43-25, L10: 9-1, streak: W6) — elite recent form despite Davis OUT; spread/O-U contexts only given anchor absence
+  - San Antonio Spurs (50-18, L10: 8-2, streak: W2) — second-best record; elite form, likely efficiently priced
   - Detroit Pistons (48-19, L10: 5-5, streak: L1) — third-best record but L10 cooling significantly; potential fade candidate if trend continues
+  - New York Knicks (44-25, L10: 7-3, streak: W3) — consistent form; monitor for value
+  - Orlando Magic (38-29, L10: 7-3, streak: L1) — strong season record; streak broken, watch for reset opportunity
 
 ## SECTION:b2b_rules
 B2B teams cover the spread less than 45% of the time historically.
