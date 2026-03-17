@@ -29,5 +29,6 @@ jobs:
           GITHUB_TOKEN:      ${{ secrets.GH_PAT }}
           GITHUB_REPO:       ${{ github.repository }}
           ODDSPAPI_KEY:      ${{ secrets.ODDSPAPI_KEY }}
+          THE_ODDS_API_KEY:  ${{ secrets.THE_ODDS_API_KEY }}
           LLM_PROVIDER:      ${{ vars.LLM_PROVIDER || 'claude' }}
         run: python run.py commit_if_ready
