@@ -1,35 +1,76 @@
 ---
-version: 1
-updated_at: null
-updated_by: bootstrap
-llm: bootstrap
+version: 2
+updated_at: 2026-03-17T00:00:00.000000+00:00
+updated_by: manual_training
+llm: claude-sonnet-4-6
 ---
 
+## SECTION:odds_validation
+Commit MUST re-validate odds before confirming any pick. Apply the same ruleset as Scout with one relaxed floor:
+- ML floor: 1.65 (Scout floor is 1.70 — Commit allows 0.05 drift as Scout already validated the edge)
+- ML ceiling: 2.50 (same as Scout — do not confirm if odds drifted above 2.50, re-evaluate)
+- Spread target: 1.80–2.30 (same as Scout)
+- O/U target: 1.80–2.05 (same as Scout)
+- EV requirement: EV = (confidence/100 × odds) - 1 ≥ 0.05. Recalculate EV at commit-time odds.
+If current odds fall below 1.65 or above 2.50 → do NOT confirm. Treat as cancel with reason "odds out of valid range at commit time".
+
 ## SECTION:line_movement_rules
-Line moved > 0.10 in your favour → confirm pick, note improvement.
-Line moved > 0.10 against → investigate WHY before confirming (injury? sharp money?).
-Line moved > 0.20 either way → treat as major signal, always re-research first.
+Compare current odds to Scout's drafted odds (stored in draft pick).
+Movement in your favour (odds improved, e.g. 2.38 → 2.55):
+  → Confirm at ORIGINAL stake. Do not increase stake. Note improvement in report.
+  → Rationale: Scout set confidence based on analysis, not on odds alone. Pressing on line movement introduces discipline risk.
+Movement against (odds worsened, e.g. 2.38 → 2.15):
+  → Still above 1.65 floor: re-evaluate with confidence -10. Recalculate EV at new odds. Confirm only if EV ≥ 0.05.
+  → Below 1.65 floor: cancel. Reason: "Odds fell below confirmation floor (1.65)".
+Movement > 0.20 in either direction: treat as major signal. Always check for undisclosed injuries or lineup changes before confirming.
+Movement > 0.30: cancel unless you can explicitly explain why (e.g. confirmed injury news that you already knew about).
 
 ## SECTION:injury_check_rules
-Anchor player confirmed OUT → cancel pick immediately. Reason: "Anchor [name] OUT confirmed".
-Anchor player upgraded (was Questionable, now Probable/Active) → re-evaluate odds; may increase confidence.
-New injury discovered since scout (not in anchor_players) → re-evaluate impact before confirming.
+Anchor player confirmed OUT → cancel immediately. Reason: "Anchor [name] OUT confirmed at commit time".
+Anchor player upgraded (was OUT/Doubtful, now Active) → re-evaluate with confidence +10. May increase EV.
+New injury discovered since Scout (not in anchor_players) → re-evaluate full pick. Apply franchise_player_rules from scout_skills.
+No injury update available → proceed with Scout's original assessment.
+
+## SECTION:line_anomaly_check
+Run the same anomaly check as Scout before confirming ANY pick AND before adding any new late picks:
+- Tank-tier team priced as favourite at ≤ 1.35 → do not confirm/add
+- Home team with materially better record priced as underdog at ≥ 2.20 → investigate before confirming
+- Implied probability gap > 40pts vs actual record gap → flag and investigate
+- Line moved > 0.30 in last 2 hours with no news → cancel/defer
+If an anomaly that Scout flagged at 14:00 now has an explanation (e.g. star player confirmed OUT) → the anomaly is resolved. Re-evaluate pick at current odds if applicable.
 
 ## SECTION:late_scout_triggers
-Actively hunt for new edges that emerged since 14:00 scout:
-- Stars ruled out in the last 2–3 hours (books often slow to react)
-- Significant line movement suggesting sharp money
-- Back-to-back confirmed late
-- Odds that drifted INTO the 1.70–2.50 range since scout
+Hunt for new edges that emerged since 14:00 Scout. Apply ALL of the following gates before adding a new pick:
+- Time gate: only add new picks if first_game_time - now > 20 minutes. Never add picks with < 20 min to tip-off.
+- Quantity gate: max 1 new pick added at Commit phase per day.
+- Confidence gate: new picks require confidence ≥ 60 (higher bar than Scout's 40 minimum — less analysis time available).
+- EV gate: same EV ≥ 0.05 requirement applies.
+- Odds gate: same odds_validation rules apply (1.65–2.50 ML).
+Triggers worth acting on:
+  - Star ruled out in last 2-3 hours and books haven't fully adjusted
+  - Odds drifted INTO valid range (1.65–2.50) since Scout
+  - B2B confirmed late that Scout didn't have
+  - Line anomaly from Scout now has a confirmed explanation that creates value on the other side
 
 ## SECTION:cancel_criteria
 Cancel a draft pick if ANY of:
-- Anchor player confirmed OUT
+- Anchor player confirmed OUT at commit time
+- Odds fell below 1.65 floor (ML) or outside valid range
 - Line moved > 0.20 against with no clear explanation
-- New information fundamentally changes the edge (e.g. opponent's star back from injury)
-- Total exposure would exceed 70% of bankroll after adding this pick
+- Line moved > 0.30 for any reason without explicit justification
+- New information fundamentally changes the edge (opponent's star back from injury)
+- Total exposure would exceed 70% of bankroll after all picks
+- EV recalculated at current odds falls below 0.05
 
 ## SECTION:commit_staking
-Same confidence/staking rules as scout.
+Apply exact same confidence/staking tiers as scout_skills confidence_staking section.
 Recalculate stake based on CURRENT bankroll at commit time (not scout time).
-If total committed stake (draft picks + new picks) > 70% bankroll → reduce lowest-confidence picks first.
+Do NOT increase stake even if odds improved since Scout — original stake stands.
+If total committed stake > 70% bankroll → reduce lowest-confidence picks first.
+If a pick's confidence was adjusted (injury news, line movement) → recalculate stake at new confidence level.
+
+85–100 Elite: up to 30% of bankroll
+70–84 High: 20–25%
+55–69 Medium: 15–20%
+40–54 Speculative: 10%
+0–39: Do not confirm

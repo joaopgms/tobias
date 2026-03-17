@@ -1,17 +1,27 @@
 ---
-version: 2
-updated_at: 2026-03-17T11:41:44.188231+00:00
-updated_by: analyst_2026-03-17
+version: 3
+updated_at: 2026-03-17T00:00:00.000000+00:00
+updated_by: manual_training
 llm: claude-sonnet-4-6
 ---
 
 ## SECTION:odds_targets
-Target Betano ML range: 1.70–2.50 (decimal).
+Target ML range: 1.70–2.50 (decimal).
 Minimum one side of the game must fall in this range to be considered.
-Spread odds target: 1.75–2.10. O/U: 1.80–2.05.
+Spread odds target: 1.80–2.30. O/U: 1.80–2.05.
+These are Scout targets. Commit uses a relaxed floor of 1.65 for confirmation only (Scout already validated the edge).
 
 ## SECTION:priority_stats
-Priority order for scouting:
+Priority order for scouting — follow this exact sequence, stop early if a game is disqualified:
+
+0. LINE ANOMALY CHECK (run first, before any analysis)
+   Flag as anomaly if ANY of:
+   - Tank-tier team (confirmed) priced as favourite at ≤ 1.35
+   - Home team with materially better record priced as underdog at ≥ 2.20
+   - Implied probability gap > 40pts vs actual record gap (e.g. 50-win team priced like a 20-win team)
+   - Line moved > 0.30 in last 2 hours with no news explanation
+   If anomaly found → do NOT draft. Note it explicitly in scout_report. Flag for Commit to monitor — the answer (injury, lineup change) may emerge by tip-off.
+
 1. NetRtg L15 — most predictive short-term signal
 2. Back-to-back + schedule density (games_l7)
 3. Franchise player injury status
@@ -21,9 +31,17 @@ Priority order for scouting:
 7. H2H last 3 meetings
 8. Season NetRtg (baseline context)
 
+## SECTION:ev_requirement
+Every drafted pick MUST satisfy: EV = (confidence/100 × odds) - 1 ≥ 0.05 (5% minimum EV).
+Calculate and state EV explicitly in reasoning for every pick.
+Example: conf 60, odds 2.10 → EV = (0.60 × 2.10) - 1 = 0.26 ✅
+Example: conf 55, odds 1.75 → EV = (0.55 × 1.75) - 1 = -0.04 ❌ do not draft
+If EV < 0.05 → do NOT draft regardless of confidence tier.
+EV ≥ 0.15 = strong edge. EV 0.05–0.14 = marginal, proceed with caution.
+
 ## SECTION:franchise_player_rules
 Franchise player OUT → do NOT bet that team to win unless opponent also missing a star or is confirmed tanking.
-Franchise player Doubtful → confidence -15, stake -30%. Only proceed if EV still ≥ 8%.
+Franchise player Doubtful → confidence -15, stake -30%. Only proceed if EV still ≥ 0.05.
 Franchise player Questionable/GTD → confidence -10, stake -20%. Flag explicitly in reasoning.
 Franchise player Day-To-Day → confidence -5, stake -10%.
 If BOTH teams have franchise player uncertainty → evaluate net impact; may still be value on the less-affected side.
@@ -77,10 +95,11 @@ Heavy load (4+ games in 7 days) amplifies B2B impact — note as HIGH FATIGUE.
 55–69 Medium: 15–20%
 40–54 Speculative: 10%
 0–39: Do not draft
-Max 70% of bankroll across all picks per day.
-Always keep 30% in reserve.
+Max 70% of bankroll across all picks per day. Always keep 30% in reserve.
+EV requirement still applies at all tiers — EV < 0.05 overrides confidence tier.
 
 ## SECTION:selectivity
-Draft only picks with genuine edge (confidence ≥ 40). Quality over quantity.
-0 or 1 picks is a valid result. Never force picks to fill a quota.
-If no game clears the bar → output empty draft_picks with reasoning.
+Draft only picks with genuine edge (confidence ≥ 40 AND EV ≥ 0.05). Quality over quantity.
+0 or 1 picks is a valid and good result. Never force picks to fill a quota.
+If no game clears the bar → output empty draft_picks with clear reasoning in scout_report.
+Flag any line anomalies for Commit to monitor — deferred picks may become valid by tip-off.

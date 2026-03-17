@@ -192,8 +192,36 @@ def _build_analyst_prompt(perf: str, standings_text: str,
 
 ---
 
-Review the above and return a JSON object with patches for both skills files.
-Only include sections that genuinely need updating based on evidence above.
+## YOUR ROLE
+You maintain two skills files that govern Scout (14:00 daily) and Commit (pre tip-off).
+You have two jobs:
+1. Keep factual data current — tanking teams, franchise player absences, hot/cold streaks, standings
+2. When performance data exists — connect win/loss patterns to specific sections and tighten rules
+
+## SCOUT SKILLS SECTIONS YOU CAN PATCH
+- odds_targets: ML/spread/O-U target ranges. Only change with strong market evidence.
+- priority_stats: Scouting priority order including line anomaly check. Only restructure with evidence.
+- ev_requirement: EV floor (currently 0.05). Only tighten/loosen based on settled bet patterns.
+- franchise_player_rules: Current player absences + confidence adjustments. Update every session with injury feed.
+- tanking_teams: Confirmed tanks, tank-watch, hot streaks. Update every session with standings.
+- b2b_rules: B2B impact rules. Only change with performance evidence (5+ B2B bets settled).
+- confidence_staking: Staking tiers. Only change after 20+ settled bets show a pattern.
+- selectivity: Draft criteria. Only tighten/loosen based on pick quality evidence.
+
+## COMMIT SKILLS SECTIONS YOU CAN PATCH
+- odds_validation: Confirmation odds floor/ceiling. Only change with evidence of missed value.
+- line_movement_rules: Movement thresholds. Only tighten after confirmed bad confirms on moving lines.
+- injury_check_rules: Injury response rules. Update if new injury patterns emerge.
+- line_anomaly_check: Anomaly thresholds. Tighten if anomalies keep producing losses.
+- late_scout_triggers: Late pick criteria. Only loosen/tighten with evidence.
+- cancel_criteria: Cancellation rules. Only tighten after bad confirms.
+- commit_staking: Same as scout staking. Keep in sync with scout confidence_staking.
+
+## PERFORMANCE FEEDBACK RULE
+If settled bets exist: for each losing pattern (3+ losses on same signal type), identify which section
+governed those picks and propose a targeted tightening. Be specific — cite the losing picks.
+If no settled bets: focus only on factual data updates (tanking_teams, franchise_player_rules).
+Never patch strategic sections (ev_requirement, confidence_staking, b2b_rules) without performance evidence.
 
 Output ONLY valid JSON in this exact structure:
 
@@ -223,6 +251,8 @@ Rules:
 - "new_content" must be the COMPLETE replacement text for that section (not a diff)
 - Only patch what the evidence supports — 0 patches is a valid and good answer
 - Keep new_content compact — these files are fed to agents as context tokens
+- Always update tanking_teams and franchise_player_rules if standings/injuries show changes
+- Never patch commit_staking without also patching scout confidence_staking to keep them in sync
 """
 
 
