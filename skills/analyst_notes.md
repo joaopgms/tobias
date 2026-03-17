@@ -1,19 +1,19 @@
 ---
-date: 2026-03-16
+date: 2026-03-17
 llm: claude-sonnet-4-6
-scout_patches: 2
+scout_patches: 0
 commit_patches: 0
 ---
 
-## Today's Analysis — 2026-03-16
+## Today's Analysis — 2026-03-17
 
-No bets have been placed yet so there is no performance data to act on. The standings reveal a notable new trend: Golden State (32-35, L10:2-8, L5 streak) is fading hard and approaching tank-watch territory despite still technically being in the play-in picture. The Detroit Pistons (48-19) show a meaningful cooling pattern with L10:5-5 after a strong start, suggesting possible regression. The Washington Wizards' L11 losing streak is the most extreme tanking signal in the league and should be treated as the highest-confidence 'fade' setup when matchups arise.
+No bets have been settled yet so there is no performance signal to act on. The standings and injury data are consistent with the current skills files — franchise player absences, tanking-tier classifications, hot streaks, and tank-watch candidates all match existing guidance. Anthony Davis remains OUT for the Lakers, Alex Sarr and Leaky Black remain OUT for the Wizards, and all tanking/hot-streak entries are already accurately reflected in scout_skills.md.
 
-
+## No changes this run
+All current standings, injury statuses, and team form data are already accurately captured in the existing skills files. No settled bets exist to generate performance-based evidence for rule changes. Zero patches are warranted.
 
 ## Scout patches applied
-- [franchise_player_rules] Standings confirm Lakers are 42-25 with L10:8-2 and W5 streak despite Davis OUT, validating the existing spread/O-U carve-out and ensuring future scouts don't dismiss Lakers entirely in non-ML contexts.
-- [tanking_teams] Golden State Warriors' L10:2-8 and L5 losing streak represent a meaningful new tank-watch addition not previously captured, and Detroit's cooling L10 warrants upgraded caution language.
+None
 
 ## Commit patches applied
 None
