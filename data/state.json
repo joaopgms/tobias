@@ -9,12 +9,12 @@
   "net_pnl": 0.0,
   "bust": false,
   "bust_at": null,
-  "last_updated": null,
-  "first_game_time": null,
+  "last_updated": "2026-03-17T17:15:14.541945+00:00",
+  "first_game_time": "2026-03-17T23:00:00Z",
   "llm_provider": "claude",
-  "scout_status": "pending",
+  "scout_status": "live",
   "scout_error": "",
-  "scout_updated_at": null,
+  "scout_updated_at": "2026-03-17T17:15:14.541945+00:00",
   "commit_status": "pending",
   "commit_updated_at": null,
   "commit_date": null,
@@ -25,10 +25,77 @@
     "analyst": "claude-sonnet-4-6",
     "scout": "claude-sonnet-4-6"
   },
-  "last_report": "",
-  "draft_picks": [],
+  "last_report": "## SCOUT REPORT — 2026-03-17 NBA Slate\n\n---\n\n### CRITICAL NOTICE: WIDESPREAD ODDS ANOMALIES DETECTED\n\nBefore individual game breakdowns, a systemic issue must be flagged: **six of eight games tonight contain extreme line anomalies** where the odds are irreconcilable with team records and standings. These could reflect: (a) a data feed error in away/home ML ordering, (b) massive undisclosed injuries breaking simultaneously across multiple teams, or (c) corrupted odds data from the source (theodds_unibet). Commit phase should urgently verify odds against a secondary source before any action.\n\n---\n\n### DRAFTED GAMES\n\n**Minnesota Timberwolves vs Phoenix Suns — DRAFTED: Minnesota ML @ 2.33**\n\n- **Odds**: Phoenix (away) 1.62 / Minnesota (home) 2.33\n- **Edge Assessment**: Minnesota (41-27, L10:6-4) is the home team with a marginally better record and identical recent form to Phoenix (39-29, L10:6-4). Home court advantage + slightly superior season record supports Minnesota being favoured, yet they are priced as 2.33 underdogs. No injury report data flags any Minnesota or Phoenix player as unavailable tonight. Phoenix's road favourite pricing is unexplained by available data, which introduces uncertainty and caps confidence at speculative tier.\n- **Key Factors**: Home court for Minnesota; identical L10 (6-4 both); record edge Minnesota (41-27 vs 39-29); no reported franchise player injuries either side; both teams in Western playoff race (motivation strong); no B2B flagged.\n- **Risks**: Unknown reason for Phoenix's pricing advantage — could reflect matchup-specific data (NetRtg, pace, rest) not captured here; confidence capped at 52 to reflect this uncertainty.\n- **EV Calculation**: EV = (0.52 × 2.33) - 1 = 1.2116 - 1 = **+0.21 ✅** (strong edge threshold)\n- **Stake**: 10% of bankroll = €100 (Speculative tier, confidence 52)\n- **Decision**: DRAFTED ✅\n\n---\n\n### REJECTED / NO EDGE / ANOMALY GAMES\n\n**Charlotte Hornets vs Miami Heat — Odds outside target range; no qualifying ML side.**\nOdds: 2.60 / 1.50 | Charlotte at 2.60 is above 2.50 ceiling; Miami at 1.50 below 1.70 floor.\n\n**Washington Wizards vs Detroit Pistons — LINE ANOMALY: Detroit (48-19) priced at 11.0 away, Wizards (16-51 tank) at 1.05 home.**\nOdds: 1.05 / 11.0 | Extreme record vs odds mismatch; likely data error or catastrophic Pistons injury news — flag for Commit to verify.\n\n**Orlando Magic vs OKC Thunder — LINE ANOMALY: OKC (53-15, league-best) priced at 4.10 away (~24% implied win probability).**\nOdds: 1.25 / 4.10 | Top team in NBA priced as extreme underdog; data integrity concern; also OKC ML outside target range.\n\n**New York Knicks vs Indiana Pacers — LINE ANOMALY: Knicks (44-25) home at 6.50, Indiana away at 1.12.**\nOdds: 6.50 / 1.12 | Home team with strong record as massive underdog exceeds anomaly threshold; do not draft.\n\n**Milwaukee Bucks vs Cleveland Cavaliers — LINE ANOMALY: Bucks (28-39, confirmed tank-tier) home at 1.20, Cavaliers (41-27) at 4.60.**\nOdds: 1.20 / 4.60 | Tank-tier home team as heavy favourite over a 41-win team; irreconcilable with records; flag for Commit.\n\n**Denver Nuggets vs Philadelphia 76ers — LINE ANOMALY: Nuggets (41-27) home at 8.00, 76ers (37-31) away at 1.09.**\nOdds: 8.00 / 1.09 | Home team with better record as extreme underdog; data error suspected.\n\n**Sacramento Kings vs San Antonio Spurs — LINE ANOMALY: Spurs (50-18, 2nd best record) priced at 6.75 away vs Kings (18-51 tank) at 1.11.**\nOdds: 1.11 / 6.75 | Second-best team in the league priced as extreme underdog at a confirmed tank-tier venue; clear data anomaly.\n\n---\n\n### SLATE SUMMARY\n\nTonight's slate is severely compromised by what appears to be a systematic odds data integrity issue — six of eight games show line anomalies where implied probabilities are wildly inconsistent with team records and standings. Only the Phoenix @ Minnesota game passes the anomaly filter, offering Minnesota ML at 2.33 with a calculated EV of +0.21 at speculative confidence (52). The Commit agent should urgently cross-reference tonight's odds against a secondary source; if the anomalous games resolve to sensible lines, several additional edges may emerge — particularly Detroit vs Washington (Pistons should be strong favourites) and Spurs vs Kings (Spurs should be strong favourites visiting a tank-tier opponent).",
+  "draft_picks": [
+    {
+      "id": "nba_draft_20260317_001",
+      "match": "Minnesota Timberwolves vs Phoenix Suns",
+      "time": "2026-03-18T00:00:00Z",
+      "pick": "Minnesota Timberwolves ML",
+      "odds": 2.33,
+      "stake": 100.0,
+      "potential_return": 233.0,
+      "confidence": 52,
+      "reasoning": "Minnesota (41-27, L10:6-4) is home team with slightly better record and identical recent form vs Phoenix (39-29, L10:6-4), yet priced as underdog at 2.33. No franchise player injuries reported for either team tonight. Home court advantage + marginally superior record supports Minnesota. The pricing discrepancy (home team with better record as underdog) is unusual but no anomaly threshold is strictly triggered (record gap is modest at ~2 games). Injury report does not flag any Minnesota players. Phoenix's road favourite pricing unexplained by available data — uncertainty warrants speculative tier only. EV = (0.52 × 2.33) - 1 = 0.21 ✅ (strong edge if confidence holds). Stake: 10% (Speculative tier, confidence 52).",
+      "anchor_players": [
+        "Anthony Edwards",
+        "Devin Booker"
+      ],
+      "drafted_at": "2026-03-17T17:15:17Z"
+    }
+  ],
   "pending_bets": [],
   "settled_bets": [],
-  "rejected_games": [],
+  "rejected_games": [
+    {
+      "match": "Charlotte Hornets vs Miami Heat",
+      "reason": "Both ML sides outside target range (1.70–2.50); Charlotte 2.60 above ceiling, Miami 1.50 below floor",
+      "ml_home": 2.6,
+      "ml_away": 1.5,
+      "decision": "rejected"
+    },
+    {
+      "match": "Washington Wizards vs Detroit Pistons",
+      "reason": "LINE ANOMALY: Detroit (48-19, 3rd best record) priced at 11.0 away vs Wizards (16-51, tank-tier) at 1.05 home — extreme mismatch vs actual records; likely data error or major unreported Pistons injuries; do not draft",
+      "ml_home": 1.05,
+      "ml_away": 11.0,
+      "decision": "anomaly"
+    },
+    {
+      "match": "Orlando Magic vs Oklahoma City Thunder",
+      "reason": "LINE ANOMALY: OKC (53-15, best record in league) priced at 4.10 away — implied ~24% win probability for the top team in the NBA is extreme; possible data error; also OKC ML outside target range even if valid",
+      "ml_home": 1.25,
+      "ml_away": 4.1,
+      "decision": "anomaly"
+    },
+    {
+      "match": "New York Knicks vs Indiana Pacers",
+      "reason": "LINE ANOMALY: Knicks (44-25) home at 6.50 while Indiana (away) at 1.12 — home team with strong record priced as massive underdog (≥2.20); likely data error or major unreported Knicks injuries",
+      "ml_home": 6.5,
+      "ml_away": 1.12,
+      "decision": "anomaly"
+    },
+    {
+      "match": "Milwaukee Bucks vs Cleveland Cavaliers",
+      "reason": "LINE ANOMALY: Milwaukee (28-39, confirmed tank-tier) priced as heavy home favourite at 1.20 vs Cleveland (41-27) at 4.60 — home team with materially worse record priced as heavy favourite; extreme anomaly",
+      "ml_home": 1.2,
+      "ml_away": 4.6,
+      "decision": "anomaly"
+    },
+    {
+      "match": "Denver Nuggets vs Philadelphia 76ers",
+      "reason": "LINE ANOMALY: Denver (41-27) home at 8.00 while Philadelphia (37-31) away at 1.09 — home team with better record priced as extreme underdog; likely data error",
+      "ml_home": 8.0,
+      "ml_away": 1.09,
+      "decision": "anomaly"
+    },
+    {
+      "match": "Sacramento Kings vs San Antonio Spurs",
+      "reason": "LINE ANOMALY: Spurs (50-18, 2nd best record) priced at 6.75 away vs Kings (18-51, confirmed tank-tier) at 1.11 home — extreme mismatch vs actual records; likely data error",
+      "ml_home": 1.11,
+      "ml_away": 6.75,
+      "decision": "anomaly"
+    }
+  ],
   "late_scout_rejections": []
 }
