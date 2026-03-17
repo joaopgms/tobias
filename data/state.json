@@ -9,12 +9,12 @@
   "net_pnl": 0.0,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-03-17T17:40:56.659764+00:00",
-  "first_game_time": "2026-03-17T23:00:00Z",
+  "last_updated": null,
+  "first_game_time": null,
   "llm_provider": "claude",
-  "scout_status": "live",
+  "scout_status": "pending",
   "scout_error": "",
-  "scout_updated_at": "2026-03-17T17:40:56.659764+00:00",
+  "scout_updated_at": null,
   "commit_status": "pending",
   "commit_updated_at": null,
   "commit_date": null,
@@ -25,43 +25,10 @@
     "analyst": "claude-sonnet-4-6",
     "scout": "claude-sonnet-4-6"
   },
-  "last_report": "### Charlotte Hornets vs Miami Heat\n- **Edge assessment:** No qualifying odds in target range\n- **Key factors:** Both teams at L10: 7-3 (identical recent form); Heat have better overall record (38-30 vs 34-34); Heat as road favorites at 1.5; Hornets as home underdogs at 2.6; Trae Young \"OUT\" in injury feed is a data error (Young plays for Atlanta Hawks, not relevant here)\n- **Odds:** ML: Heat 1.5 / Hornets 2.6 | Spread: -5.0 (Heat favored) | O/U: None\n- **Decision:** REJECTED — Heat ML 1.5 is below 1.70 floor; Hornets ML 2.6 is above 2.50 ceiling. Neither ML in target range. Spread odds not confirmed. No qualifying bet structure.\n\n---\n\n### Washington Wizards vs Detroit Pistons\n- **Edge assessment:** LINE ANOMALY — data almost certainly wrong\n- **Key factors:** Wizards are confirmed tank-tier (16-51, L10: 0-10, streak: L12); Alex Sarr, Leaky Black, Kyshawn George all OUT; Pistons are 48-19 (third-best record). Wizards priced at 1.05 as massive favorites defies all logic. Anomaly rule triggered: tank-tier team priced at ≤1.35.\n- **Odds:** ML: Pistons 11.0 / Wizards 1.05 | Spread: 19.5 | O/U: None\n- **Decision:** REJECTED — LINE ANOMALY. Wizards (worst record, confirmed tank, all starters out) cannot be 95% favorites over a 48-win Pistons team. Feed likely has home/away flipped. Flag for Commit to monitor — if corrected, Pistons ML would likely be in the 1.10–1.20 range (too short for value) but spread context may offer edge.\n\n---\n\n### Orlando Magic vs Oklahoma City Thunder\n- **Edge assessment:** LINE ANOMALY — data almost certainly wrong\n- **Key factors:** OKC is 53-15, best record in the entire league, on a W8 streak. Orlando is 38-29, strong but clearly inferior. OKC at 4.0 ML (25% implied) while being listed as -9.5 spread favorite is internally inconsistent. If OKC is covering -9.5, they should be ML favorites around 1.40–1.60, not 4.0.\n- **Odds:** ML: OKC 4.0 / Orlando 1.25 | Spread: -9.5 | O/U: None\n- **Decision:** REJECTED — LINE ANOMALY. Internal inconsistency between spread and ML strongly suggests data error. Do not draft. Flag for Commit.\n\n---\n\n### New York Knicks vs Indiana Pacers\n- **Edge assessment:** LINE ANOMALY — data almost certainly wrong\n- **Key factors:** Knicks are 44-25, home at Madison Square Garden, L10: 7-3. Pacers are a decent team but should not be 89% road favorites at MSG. Knicks at 6.5 (implied ~13%) as home team with a winning record is impossible without major unlisted injuries or a catastrophic roster situation.\n- **Odds:** ML: Pacers 1.12 / Knicks 6.5 | Spread: -14.5 | O/U: None\n- **Decision:** REJECTED — LINE ANOMALY. Home/away appears to be swapped in the data feed. Knicks at MSG as massive underdogs over Pacers is implausible. Flag for Commit.\n\n---\n\n### Milwaukee Bucks vs Cleveland Cavaliers\n- **Edge assessment:** LINE ANOMALY — tank-tier team improperly favored\n- **Key factors:** Bucks are confirmed tank-tier (28-39, L10: 2-8, W1 break in streak); Cavs are 41-27, L10: 5-5, legitimate playoff contender. Bucks at 1.21 as home favorites (83% implied) over a significantly better Cavs team triggers the anomaly rule (confirmed tank-tier team priced at ≤1.35).\n- **Odds:** ML: Cavs 4.6 / Bucks 1.21 | Spread: -10.5 | O/U: None\n- **Decision:** REJECTED — LINE ANOMALY. Even accounting for home court, Bucks being massive favorites over a 41-win Cavs team while in confirmed tank mode is highly suspicious. Flag for Commit monitoring.\n\n---\n\n### Minnesota Timberwolves vs Phoenix Suns\n- **Edge assessment:** Marginal — Wolves ML 2.32 is in target range but EV falls just short\n- **Key factors:** Wolves (41-27, L10: 6-4) are home team; Suns (39-29, L10: 6-4) are on the road. Both teams have identical L10 records. No franchise player injuries listed for either team. Books favor Suns by 3.5 points as road team, which is counterintuitive given Wolves' slight record edge and home court advantage — books likely see matchup-specific factors not visible in available data. Wolves ML at 2.32 is attractive on paper but confidence cannot exceed 45% given the books' strong road-team lean.\n- **Odds:** ML: Suns 1.63 / Wolves 2.32 | Spread: -3.5 (Suns favored) | O/U: None\n- **Decision:** REJECTED — EV = (0.45 × 2.32) - 1 = 0.044, just below the 0.05 threshold. With equal L10 records and home court for Wolves, the case for value exists in principle, but the books' counterintuitive Suns lean warrants respecting the line. Confidence set at 45%, EV fails. Do not draft.\n\n---\n\n### Denver Nuggets vs Philadelphia 76ers\n- **Edge assessment:** LINE ANOMALY — data almost certainly wrong\n- **Key factors:** 76ers (37-31) priced at 1.09 (92% implied) as road favorites over home Nuggets (41-27) — Nuggets have equal or better record and home court advantage. Denver's altitude home court is one of the most significant advantages in the league. 76ers being near-certain road favorites at these numbers is implausible.\n- **Odds:** ML: 76ers 1.09 / Nuggets 8.0 | Spread: -15.5 | O/U: None\n- **Decision:** REJECTED — LINE ANOMALY. Home/away likely swapped. If corrected (Nuggets as ~1.09 home favorite over 76ers), no qualifying odds in target range anyway. Flag for Commit.\n\n---\n\n### Sacramento Kings vs San Antonio Spurs\n- **Edge assessment:** LINE ANOMALY — tank-tier team improperly favored\n- **Key factors:** Kings are confirmed tank-tier (18-51, worst record in Western Conference). Spurs are 50-18, second-best record in the entire league. Kings at 1.10 as home favorites (91% implied) over the league's #2 team is impossible without catastrophic Spurs injuries not yet reported.\n- **Odds:** ML: Spurs 7.0 / Kings 1.10 | Spread: 14.0 | O/U: None\n- **Decision:** REJECTED — LINE ANOMALY. Kings (18-51, tank-tier) cannot be 91% favorites over 50-18 Spurs. Almost certainly a data feed error (home/away swap). If corrected, Spurs ML would likely be ~1.10–1.20 (too short for value). Flag for Commit.\n\n---\n\n## Slate Summary\n\nTonight's slate is severely compromised by what appears to be a systematic home/away team swap in the Betano/theodds_unibet odds feed, affecting at least 5 of 8 games (Pistons/Wizards, OKC/Orlando, Pacers/Knicks, 76ers/Nuggets, Spurs/Kings, and possibly Bucks/Cavs). Every anomaly involves tank-tier or historically weak teams being priced as heavy favorites over significantly stronger opponents — a pattern that is statistically impossible without catastrophic unlisted injuries. The only game with odds near the target range and no clear anomaly is Suns @ Wolves, but even there the Suns' road-favorite status is unusual and the EV on Wolves ML (0.044) falls just below the 0.05 threshold. Tonight is a valid zero-pick session: the data quality is too poor to commit stakes with confidence. Commit should aggressively monitor corrected odds 15 minutes before tip-off, as several games (particularly Pistons vs Wizards, which presents a natural edge against a confirmed tanking team) may become viable once the data feed is corrected.",
+  "last_report": "",
   "draft_picks": [],
   "pending_bets": [],
   "settled_bets": [],
-  "rejected_games": [
-    {
-      "match": "Charlotte Hornets vs Miami Heat",
-      "reason": "No odds in target range — Heat ML 1.5 (below 1.70 floor), Hornets ML 2.6 (above 2.50 ceiling); spread odds not confirmed; both teams L10:7-3 makes edge unclear"
-    },
-    {
-      "match": "Washington Wizards vs Detroit Pistons",
-      "reason": "LINE ANOMALY — Wizards (16-51, confirmed tank-tier, L10:0-10, all stars OUT) priced at 1.05 as massive favorite over 48-19 Pistons; odds almost certainly data error (home/away flip); do not draft, flag for Commit monitoring"
-    },
-    {
-      "match": "Orlando Magic vs Oklahoma City Thunder",
-      "reason": "LINE ANOMALY — OKC (53-15, best record in league) listed at 4.0 ML while Orlando is -9.5 spread favorite at 1.25; implies Orlando favored by 9.5 over league's top team; likely data feed error; do not draft"
-    },
-    {
-      "match": "New York Knicks vs Indiana Pacers",
-      "reason": "LINE ANOMALY — Knicks (44-25, home team at MSG) priced at 6.5 (implied ~13%) while Pacers are 1.12 road favorites; clear home/away data flip in odds feed; do not draft"
-    },
-    {
-      "match": "Milwaukee Bucks vs Cleveland Cavaliers",
-      "reason": "LINE ANOMALY — Bucks confirmed tank-tier (28-39, L10:2-8) priced at 1.21 (implied ~83%) as home favorite over Cavs (41-27); tank-tier team priced at ≤1.35 triggers anomaly rule; do not draft, flag for Commit"
-    },
-    {
-      "match": "Minnesota Timberwolves vs Phoenix Suns",
-      "reason": "No clear edge — Wolves ML 2.32 is in target range but Suns favored by 3.5 as road team despite Wolves having better record and home court; confidence capped at 45%, EV = (0.45 × 2.32) - 1 = 0.044, below 0.05 threshold; marginal rejection"
-    },
-    {
-      "match": "Denver Nuggets vs Philadelphia 76ers",
-      "reason": "LINE ANOMALY — 76ers (37-31) priced at 1.09 (implied ~92%) as road favorites over home Nuggets (41-27); Nuggets at 8.0 as strong home team is implausible; likely data feed error; do not draft"
-    },
-    {
-      "match": "Sacramento Kings vs San Antonio Spurs",
-      "reason": "LINE ANOMALY — Kings (18-51, confirmed tank-tier) priced at 1.10 as home favorite over Spurs (50-18, second-best record in league); tank-tier team at ≤1.35 triggers anomaly rule; almost certainly data error; do not draft"
-    }
-  ],
+  "rejected_games": [],
   "late_scout_rejections": []
 }
