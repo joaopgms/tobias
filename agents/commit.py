@@ -221,6 +221,7 @@ def run(store, force: bool = False) -> None:
     # ── 5. Fetch live data ────────────────────────────────────────────────────
     log.info("Commit: fetching live odds + injuries…")
     odds      = fetch_betano_nba_odds()
+    odds_failures = get_odds_failure_reasons()
     injuries  = fetch_injuries()
     odds_str      = format_odds_for_prompt(odds)
     injuries_str  = _injuries_text(injuries)
