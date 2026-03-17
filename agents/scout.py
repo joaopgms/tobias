@@ -112,8 +112,9 @@ ALL games must appear — missing a game from the report is not acceptable.
 </first_game_time>
 
 <rejected_games>
-[JSON array of {{"match": "HOME vs AWAY", "reason": "why not picked"}}
-Use [] if all games were drafted or if no games tonight.]
+[REQUIRED — JSON array for EVERY game NOT drafted. Include ALL rejected/no-edge games.
+Format: {{"match": "HOME vs AWAY", "reason": "brief reason (odds out of range / line anomaly / no edge / etc)"}}
+If you drafted ALL games tonight use []. Otherwise every non-drafted game MUST appear here.]
 </rejected_games>
 """
 
@@ -245,6 +246,7 @@ def run(store) -> None:
     draft_raw     = extract_tag(raw, "draft_picks")
     fgt_raw       = extract_tag(raw, "first_game_time")
     report_raw    = extract_tag(raw, "scout_report") or ""
+    rejected_raw  = extract_tag(raw, "rejected_games")
     retry_count   = 0  # will increment if retries needed
 
     if draft_raw is None:
@@ -275,7 +277,10 @@ def run(store) -> None:
                 if draft_raw_r is not None:
                     draft_raw  = draft_raw_r
                     fgt_raw    = extract_tag(retry_result.text, "first_game_time") or fgt_raw
-                    new_report = extract_tag(retry_result.text, "scout_report") or ""
+                    new_report   = extract_tag(retry_result.text, "scout_report") or ""
+                    new_rejected = extract_tag(retry_result.text, "rejected_games")
+                    if new_rejected is not None:
+                        rejected_raw = new_rejected
                     # Only use retry report if it's not the fallback placeholder
                     FALLBACK_MSG = "No analysis available"
                     if new_report and FALLBACK_MSG not in new_report:

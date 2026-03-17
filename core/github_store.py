@@ -259,8 +259,6 @@ const SCOUT_ERROR = {js_str(state.get('scout_error', ''))};
 const SCOUT_UPDATED_AT = {js_str(state.get('scout_updated_at') or '')};
 const COMMIT_STATUS = {js_str(state.get('commit_status', 'pending'))};
 const COMMIT_UPDATED_AT = {js_str(state.get('commit_updated_at') or '')};
-const SCOUT_REPORT = {js_str(scout_report)};
-const COMMIT_REPORT = {js_str(commit_report)};
 const LLM_PROVIDER = {js_str(state.get('llm_provider', 'claude'))};
 const CONFIG_DATA = {json.dumps(cfg, indent=2, ensure_ascii=False)};
 const SCOUT_SKILLS = {js_str(scout_skills_text)};

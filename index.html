@@ -54,8 +54,9 @@
     .live-dot{width:7px;height:7px;border-radius:50%;background:var(--green-neon);animation:blink 1.6s ease-in-out infinite;box-shadow:0 0 6px var(--green-neon)}
     @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
     /* MAIN TABS */
-    .main-tabs{display:flex;padding:0 32px;border-top:1px solid var(--border2);background:var(--surface);gap:2px}
-    .main-tab{padding:10px 16px;font-size:.68rem;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);cursor:pointer;border:none;background:transparent;border-bottom:2.5px solid transparent;margin-bottom:-1px;transition:all .15s;font-family:inherit}
+    .main-tabs{display:flex;padding:0 32px;border-top:1px solid var(--border2);background:var(--surface);gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+    .main-tabs::-webkit-scrollbar{display:none}
+    .main-tab{padding:10px 16px;font-size:.68rem;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);cursor:pointer;border:none;background:transparent;border-bottom:2.5px solid transparent;margin-bottom:-1px;transition:all .15s;font-family:inherit;white-space:nowrap;flex-shrink:0}
     .main-tab:hover{color:var(--text)}.main-tab.active{color:var(--burg);border-bottom-color:var(--burg)}
     .main-tab .dot{width:6px;height:6px;border-radius:50%;display:inline-block;margin-left:5px;vertical-align:middle}
     .main-tab .dot.on{background:var(--green-neon);box-shadow:0 0 5px var(--green-neon)}.main-tab .dot.off{background:var(--muted)}
@@ -466,7 +467,7 @@
       </div>
     </div>
     <div class="analytics-card"><div class="section-header"><div class="section-title">BET <span>ANALYTICS</span></div></div><div class="stats-grid" id="analyticsStats"></div></div>
-  </div>  <div class="draft-section" id="draftSection" style="display:none">
+  </div>  <div class="draft-section" style="margin-bottom:32px" id="draftSection" style="display:none">
     <div class="draft-header">
       <div><div class="draft-title">⏳ Tonight's Draft Picks - awaiting commit</div><div class="draft-subtitle" id="draftSubtitle"></div></div>
       <div class="table-head-actions">
@@ -1713,7 +1714,7 @@ function renderScoutTab(){
       // KPI row
       let h=`<div class="report-summary">
         <div class="report-kpi"><div class="report-kpi-label">Picks</div><div class="report-kpi-val">${picks.length}</div></div>
-        <div class="report-kpi"><div class="report-kpi-label">Games reviewed</div><div class="report-kpi-val">${allGames.length}</div></div>
+        <div class="report-kpi"><div class="report-kpi-label">Games reviewed</div><div class="report-kpi-val">${picks.length + rejected.length}</div></div>
         <div class="report-kpi"><div class="report-kpi-label">Odds source</div><div class="report-kpi-val" style="font-size:.72rem">${todayReport.odds_source||'-'}</div></div>
         <div class="report-kpi"><div class="report-kpi-label">Cost</div><div class="report-kpi-val" style="font-size:.72rem">$${(todayReport.cost_usd||0).toFixed(4)}</div></div>
       </div>`;
