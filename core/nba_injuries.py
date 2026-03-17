@@ -3,14 +3,17 @@ core/nba_injuries.py
 Official NBA Injury Report fetcher.
 
 Source: https://official.nba.com/nba-injury-report-2025-26-season/
-PDFs published at: https://ak-static.cms.nba.com/referee/injury/Injury-Report_YYYY-MM-DD_HH_MMAM/PM.pdf
+PDFs: https://ak-static.cms.nba.com/referee/injury/Injury-Report_YYYY-MM-DD_HH_MMam/pm.pdf
+Updated every 15 minutes throughout game day.
 
-Teams are legally required to report by:
-  - 5pm local time day before (non-B2B games)
-  - 1pm local time on game day
-  - Updated continuously throughout the day
-
-PDF columns: Game Date | Game Time | Matchup | Team | Player Name | Current Status | Reason
+PDF column layout (x positions, approximate):
+  x~24:  Game Date
+  x~121: Game Time
+  x~201: Matchup
+  x~265: Team Name
+  x~426: Player Name  (Last, First format)
+  x~587: Status
+  x~667: Reason
 """
 
 import io
@@ -21,95 +24,140 @@ from datetime import datetime, timezone, timedelta
 log = logging.getLogger(__name__)
 
 PDF_BASE = "https://ak-static.cms.nba.com/referee/injury/Injury-Report_{date}_{time}.pdf"
-INDEX_URL = "https://official.nba.com/nba-injury-report-2025-26-season/"
 
-# Time slots published throughout the day (ET)
-# We'll try the most recent ones before Scout's 14:00 UTC run
 TIME_SLOTS = [
-    "06_00PM", "05_45PM", "05_30PM", "05_15PM", "05_00PM",
-    "04_45PM", "04_30PM", "04_15PM", "04_00PM", "03_45PM",
-    "03_30PM", "03_15PM", "03_00PM", "02_45PM", "02_30PM",
-    "02_15PM", "02_00PM", "01_45PM", "01_30PM", "01_15PM",
-    "01_00PM", "12_45PM", "12_30PM", "12_15PM", "12_00PM",
-    "11_45AM", "11_30AM", "11_15AM", "11_00AM",
-    "10_45AM", "10_30AM", "10_15AM", "10_00AM",
+    "06_00PM","05_45PM","05_30PM","05_15PM","05_00PM",
+    "04_45PM","04_30PM","04_15PM","04_00PM","03_45PM",
+    "03_30PM","03_15PM","03_00PM","02_45PM","02_30PM",
+    "02_15PM","02_00PM","01_45PM","01_30PM","01_15PM",
+    "01_00PM","12_45PM","12_30PM","12_15PM","12_00PM",
+    "11_45AM","11_30AM","11_15AM","11_00AM",
+    "10_45AM","10_30AM","10_15AM","10_00AM",
 ]
+
+# Column x-position boundaries
+COL_TEAM   = (240, 420)   # team name column
+COL_PLAYER = (420, 570)   # player name column
+COL_STATUS = (570, 650)   # status column
+COL_REASON = (650, 900)   # reason column
 
 
 def _try_pdf_url(date_str: str, time_slot: str) -> bytes | None:
-    """Try to fetch a specific PDF. Returns bytes or None."""
     url = PDF_BASE.format(date=date_str, time=time_slot)
     try:
-        resp = requests.get(url, timeout=10,
-                            headers={"User-Agent": "Mozilla/5.0"})
-        if resp.status_code == 200 and resp.headers.get("content-type","").startswith("application/pdf"):
-            log.info(f"NBA injuries: fetched {url}")
+        resp = requests.get(url, timeout=10, headers={"User-Agent": "Mozilla/5.0"})
+        if resp.status_code == 200 and "pdf" in resp.headers.get("content-type", ""):
             return resp.content
     except Exception:
         pass
     return None
 
 
+def _words_in_col(words: list, x_min: float, x_max: float) -> list:
+    """Return words whose x0 falls within the column range."""
+    return [w for w in words if x_min <= w["x0"] < x_max]
+
+
 def _parse_injury_pdf(pdf_bytes: bytes) -> dict:
     """
-    Parse the NBA official injury PDF into a dict keyed by team name.
-    Returns: {team_name: [{name, status, reason, game_time, matchup}, ...]}
+    Parse NBA official injury PDF using column-position-aware word extraction.
+    Groups words by y-position (row), then assigns each word to a column by x-position.
     """
     try:
         import pdfplumber
     except ImportError:
-        log.warning("pdfplumber not installed — run: pip install pdfplumber")
+        log.warning("pdfplumber not installed — pip install pdfplumber")
         return {}
 
     injuries = {}
+    current_team = None
+
     try:
         with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
             for page in pdf.pages:
-                table = page.extract_table()
-                if not table:
-                    continue
-                # Find header row
-                headers = [str(h).strip().lower() if h else "" for h in table[0]]
-                # Expected: game date, game time, matchup, team, player name, current status, reason
-                # Map column indices
-                col = {}
-                for i, h in enumerate(headers):
-                    if "team" in h and "matchup" not in h:  col["team"] = i
-                    elif "player" in h:                      col["player"] = i
-                    elif "status" in h:                      col["status"] = i
-                    elif "reason" in h:                      col["reason"] = i
-                    elif "matchup" in h:                     col["matchup"] = i
-                    elif "game time" in h or "time" in h:    col["time"] = i
-
-                if "team" not in col or "player" not in col or "status" not in col:
-                    log.warning(f"NBA injuries: unexpected PDF columns: {headers}")
+                words = page.extract_words(x_tolerance=1, y_tolerance=3,
+                                           keep_blank_chars=True)
+                if not words:
                     continue
 
-                for row in table[1:]:
-                    if not row or not any(row):
-                        continue
-                    team   = str(row[col["team"]] or "").strip()
-                    player = str(row[col["player"]] or "").strip()
-                    status = str(row[col["status"]] or "").strip()
-                    reason = str(row.get(col.get("reason", -1), "") or "").strip()
+                # Group words by y-position (same row)
+                rows = {}
+                for w in words:
+                    y = round(w["top"])
+                    rows.setdefault(y, []).append(w)
 
-                    if not team or not player or not status:
-                        continue
-                    # Skip "NOT YET SUBMITTED" rows
-                    if "not yet" in status.lower() or "submitted" in status.lower():
+                # Track multi-line reason (some reasons wrap to next line)
+                last_player = None
+                last_team = None
+
+                for y in sorted(rows.keys()):
+                    row_words = rows[y]
+
+                    team_words   = _words_in_col(row_words, *COL_TEAM)
+                    player_words = _words_in_col(row_words, *COL_PLAYER)
+                    status_words = _words_in_col(row_words, *COL_STATUS)
+                    reason_words = _words_in_col(row_words, *COL_REASON)
+
+                    team_text   = " ".join(w["text"] for w in team_words).strip()
+                    player_text = " ".join(w["text"] for w in player_words).strip()
+                    status_text = " ".join(w["text"] for w in status_words).strip()
+                    reason_text = " ".join(w["text"] for w in reason_words).strip()
+
+                    # Update current team if team column has content
+                    if team_text and team_text not in ("Team", "NOT YET SUBMITTED"):
+                        current_team = team_text
+
+                    # Skip header rows
+                    if status_text in ("Current Status", "Status") or player_text == "Player Name":
                         continue
 
-                    if team not in injuries:
-                        injuries[team] = []
-                    injuries[team].append({
-                        "name":   player,
-                        "status": status,
-                        "reason": reason,
-                        "pos":    "",  # not in NBA official report
-                    })
+                    # If we have a player + status in this row — it's a data row
+                    if player_text and status_text and current_team:
+                        # Skip "NOT YET SUBMITTED" rows
+                        if "not yet" in player_text.lower() or "not yet" in status_text.lower():
+                            continue
+
+                        # Normalise "Last, First" → "First Last"
+                        if "," in player_text:
+                            parts = player_text.split(",", 1)
+                            player_name = f"{parts[1].strip()} {parts[0].strip()}"
+                        else:
+                            player_name = player_text
+
+                        if current_team not in injuries:
+                            injuries[current_team] = []
+
+                        entry = {
+                            "name":   player_name,
+                            "status": status_text,
+                            "reason": reason_text,
+                            "pos":    "",
+                        }
+                        injuries[current_team].append(entry)
+                        last_player = entry
+                        last_team = current_team
+
+                    elif reason_text and not player_text and not status_text and last_player:
+                        # Continuation row — append to last player's reason
+                        last_player["reason"] = (last_player["reason"] + " " + reason_text).strip()
 
     except Exception as e:
         log.error(f"NBA injuries: PDF parse error: {e}")
+
+    # Clean up reason bleed from multi-line PDF rows
+    for team, players in injuries.items():
+        for p in players:
+            reason = p["reason"]
+            for marker in ["Injury/Illness - ", "NOT YET SUBMITTED",
+                           "G League - Two-Way G League", "G League - On Assignment G League"]:
+                idx = reason.find(marker, 5)
+                if idx > 0:
+                    reason = reason[:idx].strip()
+            p["reason"] = reason
+
+    # Remove junk team entries (header artifacts)
+    injuries = {k: v for k, v in injuries.items()
+                if k not in ("Injury Report:", "Team") and len(v) > 0}
 
     return injuries
 
@@ -117,55 +165,48 @@ def _parse_injury_pdf(pdf_bytes: bytes) -> dict:
 def fetch_official_nba_injuries(target_date: datetime | None = None) -> dict:
     """
     Fetch the most recent NBA official injury report PDF for the given date.
-    Falls back to ESPN if PDF unavailable.
-
     Returns dict: {team_name: [{name, status, reason, pos}, ...]}
+    Returns {} if unavailable — caller should fall back to ESPN.
     """
     if target_date is None:
         target_date = datetime.now(timezone.utc)
 
-    # NBA reports use ET — convert UTC to ET (UTC-4 in March)
-    et_offset = timedelta(hours=-4)
-    et_time = target_date + et_offset
+    # NBA reports use ET (UTC-4 in March/April)
+    et_time = target_date + timedelta(hours=-4)
     date_str = et_time.strftime("%Y-%m-%d")
 
-    log.info(f"NBA injuries: fetching official report for {date_str} (ET)")
-
-    # Try time slots from most recent downward
-    # Build list of slots up to current ET time
-    current_et_hour = et_time.hour
-    current_et_min  = et_time.minute
+    log.info(f"NBA injuries: fetching official report for {date_str} ET")
 
     for slot in TIME_SLOTS:
         pdf_bytes = _try_pdf_url(date_str, slot)
-        if pdf_bytes:
-            injuries = _parse_injury_pdf(pdf_bytes)
-            if injuries:
-                log.info(f"NBA injuries: {sum(len(v) for v in injuries.values())} players across {len(injuries)} teams")
-                return injuries
-            else:
-                log.warning(f"NBA injuries: PDF fetched but no data parsed from slot {slot}")
+        if not pdf_bytes:
+            continue
+        result = _parse_injury_pdf(pdf_bytes)
+        if result:
+            total = sum(len(v) for v in result.values())
+            log.info(f"NBA injuries: {total} players across {len(result)} teams (slot {slot})")
+            return result
+        log.warning(f"NBA injuries: slot {slot} fetched but 0 players parsed — trying next")
 
-    log.warning("NBA injuries: no official PDF available — returning empty")
+    log.warning("NBA injuries: no data from any slot — ESPN fallback will be used")
     return {}
 
 
-def format_injuries_for_prompt(injuries: dict, max_teams: int = 30) -> str:
-    """Format official injuries into compact text for LLM prompt."""
+def format_injuries_for_prompt(injuries: dict) -> str:
+    """Format official injuries into compact prompt text."""
     if not injuries:
         return "No injury reports available from NBA official source."
 
-    lines = [f"Source: NBA Official Injury Report ({sum(len(v) for v in injuries.values())} players, {len(injuries)} teams)"]
-    priority_statuses = {"Out", "Doubtful", "Questionable", "Game Time Decision", "GTD"}
+    NOTABLE = {"out", "doubtful", "questionable", "game time decision"}
+    lines = [f"Source: NBA Official Injury Report ({len(injuries)} teams reporting)"]
 
-    for team, players in list(injuries.items())[:max_teams]:
-        notable = [p for p in players if any(s.lower() in p["status"].lower()
-                   for s in ["out", "doubtful", "questionable", "game time", "gtd"])]
+    for team, players in injuries.items():
+        notable = [p for p in players if p["status"].lower() in NOTABLE]
         if notable:
             parts = []
-            for p in notable[:5]:
-                r = f" ({p['reason']})" if p.get('reason') else ""
+            for p in notable[:6]:
+                r = f" ({p['reason']})" if p.get("reason") else ""
                 parts.append(f"{p['name']} {p['status']}{r}")
             lines.append(f"{team}: {', '.join(parts)}")
 
-    return "\n".join(lines)
+    return "\n".join(lines) if len(lines) > 1 else "No notable injuries reported."
