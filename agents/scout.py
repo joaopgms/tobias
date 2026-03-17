@@ -87,22 +87,6 @@ Draft pick IDs: nba_draft_{today.replace('-','')}_{'{001, 002...}'}
 IMPORTANT: You MUST end your response with ALL FOUR of these XML tags in this exact format.
 Do not add any text after the closing </scout_report> tag.
 
-<scout_report>
-Write a structured scouting report covering EVERY game listed in TONIGHT'S GAMES above.
-Use the ESPN slate as the authoritative game list — not the odds feed (odds may be incomplete).
-
-For each game use this format:
-
-### HOME vs AWAY
-- **Edge assessment:** [value exists or not]
-- **Key factors:** [B2B, injuries, tanking status, form, line]
-- **Odds:** [list available odds or "no odds available for this game"]
-- **Decision:** DRAFTED [pick @ odds] | REJECTED [reason] | NO ODDS — DEFERRED | NO EDGE [reason]
-
-End with a 3-5 sentence summary of tonight's overall slate quality.
-ALL games must appear — missing a game from the report is not acceptable.
-</scout_report>
-
 <draft_picks>
 [JSON array of draft pick objects — use [] if no picks meet criteria]
 </draft_picks>
@@ -116,6 +100,27 @@ ALL games must appear — missing a game from the report is not acceptable.
 Format: {{"match": "HOME vs AWAY", "reason": "brief reason (odds out of range / line anomaly / no edge / etc)"}}
 If you drafted ALL games tonight use []. Otherwise every non-drafted game MUST appear here.]
 </rejected_games>
+
+<scout_report>
+Write a structured scouting report covering EVERY game on tonight's slate.
+Use the ESPN slate as the authoritative game list.
+
+FORMAT RULES:
+- DRAFTED games: full breakdown (edge assessment, key factors, odds, EV calculation, decision)
+- REJECTED/NO EDGE/DEFERRED games: two lines max —
+  Line 1: "HOME vs AWAY — [decision reason in ≤15 words]"
+  Line 2: "Odds: [home ML] / [away ML] | [one key factor]"
+
+Example rejected format:
+Heat vs Hornets — Odds outside range, no qualifying side.
+Odds: 1.49 / 2.65 | Both outside 1.70–2.50 floor/ceiling.
+
+Wizards vs Pistons — Line anomaly, Pistons at 10.0 vs confirmed tank-tier home.
+Odds: 1.06 / 10.0 | Extreme mismatch implies unreported Pistons injuries.
+
+End with a 2-3 sentence slate summary.
+ALL games must appear. Missing a game is not acceptable.
+</scout_report>
 """
 
 
@@ -227,7 +232,7 @@ def run(store) -> None:
             SCOUT_SYSTEM,
             _build_scout_prompt(skills, games_str, odds_str, injuries_str,
                                  standings_str, state, today),
-            max_tokens=6000,
+            max_tokens=10000,
             agent="scout",
         )
         raw = llm_result.text
