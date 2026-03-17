@@ -1,7 +1,7 @@
 ---
-version: 3
-updated_at: 2026-03-17T00:00:00.000000+00:00
-updated_by: manual_training
+version: 4
+updated_at: 2026-03-17T16:41:53.182985+00:00
+updated_by: analyst_2026-03-17
 llm: claude-sonnet-4-6
 ---
 
@@ -47,10 +47,11 @@ Franchise player Day-To-Day → confidence -5, stake -10%.
 If BOTH teams have franchise player uncertainty → evaluate net impact; may still be value on the less-affected side.
 
 Current confirmed franchise player absences (update each session):
-  - Anthony Davis (Lakers): OUT — do not back Lakers ML unless opponent also missing anchor; Lakers posting W6 in L10/W6 streak on depth alone — spread/O-U contexts may still offer value
-  - Alex Sarr (Wizards): OUT — Wizards already confirmed tank-tier; minimal additional impact on assessment
-  - Leaky Black (Wizards): OUT — note for completeness; Wizards fully tank-tier regardless
+  - Anthony Davis (Lakers): OUT — do not back Lakers ML unless opponent also missing anchor; Lakers posting W6 streak on depth alone — spread/O-U contexts may still offer value
   - Kyshawn George (Wizards): OUT — further compounds Wizards tank-tier status
+  - D'Angelo Russell (Lakers): OUT — secondary piece, not franchise anchor; Davis already noted; note cumulative depth reduction
+  - Alex Sarr (Wizards): OUT — Wizards already confirmed tank-tier; minimal additional impact
+  - Leaky Black (Wizards): OUT — note for completeness; Wizards fully tank-tier regardless
 
 ## SECTION:tanking_teams
 Confirmed tanking-tier teams (all three criteria met):
@@ -77,7 +78,7 @@ Emerging tank-watch:
 Hot streaks to track (may create line inefficiencies):
   - Atlanta Hawks (37-31, L10: 10-0, streak: W10) — perfect L10, W10 streak; extreme regression risk, books likely adjusting lines sharply, verify before committing
   - OKC Thunder (53-15, L10: 9-1, streak: W8) — best record in league; likely priced efficiently
-  - Los Angeles Lakers (43-25, L10: 9-1, streak: W6) — elite recent form despite Davis OUT; spread/O-U contexts only given anchor absence
+  - Los Angeles Lakers (43-25, L10: 9-1, streak: W6) — elite recent form despite Davis + Russell OUT; spread/O-U contexts only given anchor absences
   - San Antonio Spurs (50-18, L10: 8-2, streak: W2) — second-best record; elite form, likely efficiently priced
   - Detroit Pistons (48-19, L10: 5-5, streak: L1) — third-best record but L10 cooling significantly; potential fade candidate if trend continues
   - New York Knicks (44-25, L10: 7-3, streak: W3) — consistent form; monitor for value
