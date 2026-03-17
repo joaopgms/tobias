@@ -88,16 +88,19 @@ IMPORTANT: You MUST end your response with ALL FOUR of these XML tags in this ex
 Do not add any text after the closing </scout_report> tag.
 
 <scout_report>
-Write a structured scouting report covering EVERY game on tonight's slate.
+Write a structured scouting report covering EVERY game listed in TONIGHT'S GAMES above.
+Use the ESPN slate as the authoritative game list — not the odds feed (odds may be incomplete).
+
 For each game use this format:
 
 ### HOME vs AWAY
-- **Edge assessment:** [why value exists or why it doesn't]
-- **Key factors:** [B2B, injuries, tanking status, form, odds range]
-- **Decision:** DRAFTED [pick @ odds] | REJECTED [reason] | NO EDGE [reason]
+- **Edge assessment:** [value exists or not]
+- **Key factors:** [B2B, injuries, tanking status, form, line]
+- **Odds:** [list available odds or "no odds available for this game"]
+- **Decision:** DRAFTED [pick @ odds] | REJECTED [reason] | NO ODDS — DEFERRED | NO EDGE [reason]
 
-End with a brief summary of tonight's overall slate quality.
-Even if 0 picks were drafted, the full per-game breakdown is required.
+End with a 3-5 sentence summary of tonight's overall slate quality.
+ALL games must appear — missing a game from the report is not acceptable.
 </scout_report>
 
 <draft_picks>
