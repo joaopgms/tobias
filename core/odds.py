@@ -210,6 +210,11 @@ def fetch_betano_nba_odds(target_date: date | None = None) -> list[dict]:
     return NO_ODDS_SENTINEL
 
 
+def get_odds_failure_reasons() -> list[str]:
+    """Return the failure reasons from the last fetch_betano_nba_odds call."""
+    return list(_odds_failure_reasons)
+
+
 def odds_available(games: list[dict]) -> bool:
     """Returns True if real odds are available (not the no-odds sentinel)."""
     if not games:
