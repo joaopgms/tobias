@@ -1741,44 +1741,9 @@ function renderScoutTab(){
     }
   }
 
-  // History
+  // History removed — archive.json is the permanent record
   const histEl = document.getElementById('scoutHistorySection');
-  const pastReports = reports.filter(r=>r.date!==today).reverse();
-  if(histEl){
-    if(!pastReports.length){
-      histEl.innerHTML='';
-    } else {
-      let h='<div class="report-tab-title" style="margin-top:20px">HISTORY</div>';
-      pastReports.forEach((r,i)=>{
-        const rowId=`sh-${i}`;
-        const picks=(r.picks||[]).length;
-        const cost=`$${(r.cost_usd||0).toFixed(4)}`;
-        h+=`<div class="report-history-row">
-          <div class="report-history-header" onclick="toggleHistoryRow('${rowId}-body')">
-            <div>
-              <span class="report-history-date">${r.date}</span>
-              <span class="report-history-meta" style="display:inline-flex;margin-left:12px">
-                <span>${picks} picks</span>
-                <span>${r.odds_source||'-'}</span>
-                <span>${cost}</span>
-              </span>
-            </div>
-            <span class="hr-toggle" style="font-size:.65rem;color:var(--muted)">▼</span>
-          </div>
-          <div class="report-history-body" id="${rowId}-body">
-            <div class="game-cards-grid">
-              ${[...(r.picks||[]).map(p=>({...p,_type:'drafted'})),
-                 ...(r.rejected||[]).map(rj=>({...rj,_type:'rejected'}))]
-                .map((g,gi)=>buildGameCard(g,gi,`sh${i}`)).join('')}
-            </div>
-            ${extractSummaryFromReport(r.report||'')?
-              `<div class="report-summary-box" style="margin-top:8px">${extractSummaryFromReport(r.report||'').replace(/\n/g,'<br>')}</div>`:''}
-          </div>
-        </div>`;
-      });
-      histEl.innerHTML=h;
-    }
-  }
+  if(histEl) histEl.innerHTML='';
 }
 
 function renderCommitTab(){
@@ -1830,38 +1795,9 @@ function renderCommitTab(){
     }
   }
 
-  // History
+  // History removed — archive.json is the permanent record
   const histEl = document.getElementById('commitHistorySection');
-  const pastReports = reports.filter(r=>r.date!==today).reverse();
-  if(histEl){
-    if(!pastReports.length){ histEl.innerHTML=''; return; }
-    let h='<div class="report-tab-title" style="margin-top:20px">HISTORY</div>';
-    pastReports.forEach((r,i)=>{
-      const rowId=`ch-${i}`;
-      const bets=(r.bets||[]).length;
-      h+=`<div class="report-history-row">
-        <div class="report-history-header" onclick="toggleHistoryRow('${rowId}-body')">
-          <div>
-            <span class="report-history-date">${r.date}</span>
-            <span class="report-history-meta" style="display:inline-flex;margin-left:12px">
-              <span>${bets} bets · €${(r.total_staked||0).toFixed(0)} staked</span>
-              <span>$${(r.cost_usd||0).toFixed(4)}</span>
-            </span>
-          </div>
-          <span class="hr-toggle" style="font-size:.65rem;color:var(--muted)">▼</span>
-        </div>
-        <div class="report-history-body" id="${rowId}-body">
-          <div class="game-cards-grid">
-            ${(r.bets||[]).map((b,bi)=>buildCommitCard(b,bi,`ch${i}`,false)).join('')}
-            ${(r.cancelled||[]).map((b,bi)=>buildCommitCard(b,bi,`chc${i}`,true)).join('')}
-          </div>
-          ${extractSummaryFromReport(r.report||'')?
-            `<div class="report-summary-box" style="margin-top:8px">${extractSummaryFromReport(r.report||'').replace(/\n/g,'<br>')}</div>`:''}
-        </div>
-      </div>`;
-    });
-    histEl.innerHTML=h;
-  }
+  if(histEl) histEl.innerHTML='';
 }
 
 function resetReportHistory(type){
