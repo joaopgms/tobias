@@ -1593,6 +1593,14 @@ function buildGameCard(game, idx, prefix) {
     if(game.stake) chipsHtml+=`<span class="report-chip"><span>Stake</span>€${(+game.stake).toFixed(0)}</span>`;
     if(game.potential_return) chipsHtml+=`<span class="report-chip"><span>Pot.</span>€${(+game.potential_return).toFixed(0)}</span>`;
     if(conf) chipsHtml+=`<span class="conf-pill ${CC(conf)}">${conf}/100 ${CL(conf)}</span>`;
+  } else {
+    // Rejected game — show ML odds if available
+    if(game.ml_home!=null) chipsHtml+=`<span class="report-chip" style="opacity:.7"><span>Home ML</span>${(+game.ml_home).toFixed(2)}</span>`;
+    if(game.ml_away!=null) chipsHtml+=`<span class="report-chip" style="opacity:.7"><span>Away ML</span>${(+game.ml_away).toFixed(2)}</span>`;
+    // decision badge
+    const decisionMap={'anomaly':'⚠️ Anomaly','deferred':'⏳ Deferred','no_edge':'— No Edge','rejected':'❌ Rejected'};
+    const decLabel=decisionMap[game.decision]||'';
+    if(decLabel) chipsHtml+=`<span class="report-chip" style="opacity:.7;font-size:.63rem">${decLabel}</span>`;
   }
 
   const anchors=(game.anchor_players||[]).length?

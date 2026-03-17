@@ -97,7 +97,14 @@ Do not add any text after the closing </scout_report> tag.
 
 <rejected_games>
 [REQUIRED — JSON array for EVERY game NOT drafted. Include ALL rejected/no-edge games.
-Format: {{"match": "HOME vs AWAY", "reason": "brief reason (odds out of range / line anomaly / no edge / etc)"}}
+Format: {{
+  "match": "HOME vs AWAY",
+  "reason": "brief reason (odds out of range / line anomaly / no edge / etc)",
+  "ml_home": 1.85,
+  "ml_away": 2.10,
+  "decision": "rejected" | "no_edge" | "anomaly" | "deferred"
+}}
+ml_home and ml_away should be the decimal odds available, or null if no odds.
 If you drafted ALL games tonight use []. Otherwise every non-drafted game MUST appear here.]
 </rejected_games>
 
