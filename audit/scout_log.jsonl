@@ -1,2 +1,0 @@
-﻿
-{"ts": "2026-03-17T16:59:12.821708+00:00", "agent": "scout", "llm": "claude-sonnet-4-6", "draft_count": 0, "picks": [], "first_game_time": "2026-03-17T23:00:00Z", "odds_source": "theodds_unibet", "odds_failures": [], "bankroll": 1000.0, "error": "", "retries": 0, "model": "claude-sonnet-4-6", "tokens_in": 4204, "tokens_out": 7224, "cost_usd": 0.120972}
