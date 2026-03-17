@@ -9,12 +9,12 @@
   "net_pnl": 0.0,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-03-17T15:02:58.175564+00:00",
-  "first_game_time": "2026-03-17T23:00:00Z",
+  "last_updated": null,
+  "first_game_time": null,
   "llm_provider": "claude",
-  "scout_status": "live",
+  "scout_status": "pending",
   "scout_error": "",
-  "scout_updated_at": "2026-03-17T15:02:58.175564+00:00",
+  "scout_updated_at": null,
   "commit_status": "pending",
   "commit_updated_at": null,
   "commit_date": null,
@@ -25,24 +25,8 @@
     "analyst": "claude-sonnet-4-6",
     "scout": "claude-sonnet-4-6"
   },
-  "last_report": "### CHARLOTTE HORNETS vs MIAMI HEAT\n- **Edge assessment:** Marginal value exists on Charlotte ML\n- **Key factors:** Charlotte home (Spectrum Center), both teams L10: 7-3, Charlotte in play-in race (motivation factor), Miami away with marginally better overall record (38-30 vs 34-34), no flagged injuries for either team, -4.0 spread implies modest Miami edge but Charlotte at 2.38 offers slight positive EV for home underdog with equal recent form\n- **Odds:** Charlotte ML 2.38 ✓ (in target range) | Miami ML 1.60 ✗ (below target floor)\n- **Decision:** DRAFTED Charlotte ML @ 2.38 — thin but positive edge; home team with identical L10 form at playoff-motivation price point; confidence 52 (speculative)\n\n---\n\n### OKLAHOMA CITY THUNDER vs ORLANDO MAGIC\n- **Edge assessment:** No qualifying odds\n- **Key factors:** OKC is best team in league (53-15, L10: 9-1, streak: W8) — likely priced efficiently. Orlando at home (38-29, L10: 7-3) is a strong home team but OKC ML 4.1 and Orlando ML 1.25 both fall outside the 1.70–2.50 target range entirely\n- **Odds:** OKC ML 4.10 ✗ | Orlando ML 1.25 ✗ — both outside target range\n- **Decision:** REJECTED — no odds in ML target range; Orlando would need to be 1.70+ to qualify\n\n---\n\n### WASHINGTON WIZARDS vs DETROIT PISTONS\n- **Edge assessment:** Extreme mismatch, no qualifying odds\n- **Key factors:** Washington confirmed deepest tank (16-51, L10: 0-10, L12 streak, Alex Sarr + Leaky Black + Kyshawn George all OUT); Detroit is elite (48-19) though L10: 5-5 shows slight cooling. Line is 18-point spread. Detroit ML 9.5 and Washington ML 1.06 both wildly outside target range\n- **Odds:** Detroit ML 9.50 ✗ | Washington ML 1.06 ✗ — no qualifying spread odds provided either\n- **Decision:** REJECTED — no odds in target range; spread of 18.0 noted but no qualifying spread odds to evaluate\n\n---\n\n### NEW YORK KNICKS vs INDIANA PACERS\n- **Edge assessment:** No qualifying odds\n- **Key factors:** Knicks (44-25, L10: 7-3, streak: W3) are strong at home, -15.5 spread is extreme. Knicks ML 7.5 and Indiana ML 1.09 both far outside target range. This line implies Indiana may have significant injuries not captured in the limited report\n- **Odds:** Knicks ML 7.50 ✗ | Indiana ML 1.09 ✗ — outside target range\n- **Decision:** REJECTED — no odds in target range; anomalous spread warrants monitoring\n\n---\n\n### MILWAUKEE BUCKS vs CLEVELAND CAVALIERS\n- **Edge assessment:** No qualifying odds; anomalous line\n- **Key factors:** Milwaukee is confirmed tank-tier (28-39, L10: 2-8, streak: W1) yet priced as heavy ML favorite (1.22) over Cleveland (41-27, L10: 5-5) at 4.4. This extreme line anomaly strongly implies a major Cleveland injury not captured in the available report. Cleveland ML 4.4 and Milwaukee ML 1.22 both outside target range. Per tanking rules, backing Milwaukee at 1.22 requires ≥ 2.20 and a strong situational reason — does not qualify\n- **Odds:** Milwaukee ML 1.22 ✗ | Cleveland ML 4.40 ✗ — outside target range\n- **Decision:** REJECTED — no odds in target range; line anomaly (tank team as heavy home favorite) flags major Cleveland injury risk; would need Cleveland ML closer to 2.20–2.50 with injury confirmation to proceed\n\n---\n\n### MINNESOTA TIMBERWOLVES vs PHOENIX SUNS\n- **Edge assessment:** Anomalous line — Minnesota ML 2.45 in target range but extreme caution required\n- **Key factors:** Minnesota (41-27, L10: 6-4) is home with a better record than Phoenix (39-29, L10: 6-4), yet priced as the home underdog at 2.45 with Phoenix at 1.56. This is a major line anomaly — a home team with a better record being a 4-point underdog strongly implies an unlisted major Minnesota injury (likely Anthony Edwards or Rudy Gobert). The limited injury report does not confirm or deny Minnesota absences. Per franchise player rules: if Anthony Edwards is OUT, do NOT back Minnesota ML. Without confirmed injury status, backing Minnesota ML at 2.45 carries catastrophic downside risk\n- **Odds:** Phoenix ML 1.56 ✗ | Minnesota ML 2.45 ✓ (in range) — but injury uncertainty disqualifies\n- **Decision:** REJECTED — despite Minnesota ML 2.45 being in target range, the extreme line anomaly implies a franchise player absence for Minnesota that is not confirmed; backing Minnesota without injury clarity violates franchise player rules; no bet\n\n---\n\n### DENVER NUGGETS vs PHILADELPHIA 76ERS\n- **Edge assessment:** No qualifying odds\n- **Key factors:** Denver (41-27, L10: 5-5) massive home favorite. Both ML odds (Philadelphia 1.09, Denver 7.5) wildly outside target range. Extreme spread (-15.5) implies significant Philadelphia injury load\n- **Odds:** Denver ML 7.50 ✗ | Philadelphia ML 1.09 ✗ — outside target range\n- **Decision:** REJECTED — no odds in target range\n\n---\n\n### SACRAMENTO KINGS vs SAN ANTONIO SPURS\n- **Edge assessment:** No qualifying odds; extreme anomaly\n- **Key factors:** Sacramento is confirmed tank-tier (18-51, L10: 5-5) yet priced as heavy ML favorite (1.11) over elite San Antonio (50-18, L10: 8-2). Spurs ML at 6.75 strongly implies Victor Wembanyama or another key Spurs player is OUT. Per franchise player rules + tanking rules: backing Sacramento at 1.11 does not meet the ≥ 2.20 threshold required when betting ON tanking teams; Spurs ML 6.75 is in extreme value territory IF healthy but likely reflects a major absence\n- **Odds:** Sacramento ML 1.11 ✗ | San Antonio ML 6.75 ✗ — both outside target range\n- **Decision:** REJECTED — no odds in target range; anomalous line likely driven by major Spurs injury\n\n---\n\n## Slate Summary\n\nTonight's slate is characterized by multiple extreme line anomalies — Milwaukee (tank-tier) priced as heavy favorite over Cleveland, Sacramento (tank-tier) priced as heavy favorite over elite San Antonio, and Minnesota priced as a home underdog against Phoenix despite a better record. These anomalies almost certainly reflect significant undisclosed injuries not captured in tonight's limited injury report, and the skills criteria demand caution when franchise player status is unclear. Only one game (Charlotte vs Miami) offers odds in the target range without red-flag anomalies. That Charlotte ML at 2.38 represents a thin but genuine edge with both teams posting identical L10 records (7-3) and Charlotte at home with play-in motivation. The overall slate quality is low for betting purposes — seven of eight games either have no qualifying odds or show anomalous lines that signal injury uncertainty. One speculative pick is warranted; the rest of the bankroll goes to reserve.",
-  "draft_picks": [
-    {
-      "id": "nba_draft_20260317_001",
-      "match": "Charlotte Hornets vs Miami Heat",
-      "time": "2026-03-17T23:00:00Z",
-      "pick": "Charlotte Hornets ML",
-      "odds": 2.38,
-      "stake": 100,
-      "potential_return": 238.0,
-      "confidence": 52,
-      "reasoning": "Charlotte is the home team at Spectrum Center with identical L10 form to Miami (both 7-3). Charlotte (34-34) is fighting for play-in positioning — strong motivation factor per skills priority #4. Miami (38-30) is a slightly better overall team and modest road favorite (-4.0 spread), but the 2.38 ML price on the home team with equal recent form creates a thin positive EV (break-even ~42%, estimated Charlotte win probability ~43-45%). No franchise player injuries flagged for either team. Odds squarely in target range (1.70–2.50). Speculative tier (confidence 52) → 10% stake = €100.",
-      "anchor_players": [
-        "No confirmed absences for Charlotte or Miami"
-      ],
-      "drafted_at": "2026-03-17T15:03:01Z"
-    }
-  ],
+  "last_report": "",
+  "draft_picks": [],
   "pending_bets": [],
   "settled_bets": [],
   "rejected_games": [],
