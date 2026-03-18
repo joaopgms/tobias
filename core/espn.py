@@ -244,8 +244,8 @@ def _fetch_advanced_stats_espn() -> dict[str, dict]:
         url = (f"https://site.api.espn.com/apis/site/v2/sports/basketball/nba"
                f"/teams/{team_id}/statistics")
         try:
-            data = _get(url, timeout=8)
-            splits = data.get("splits", {}).get("categories", [])
+            data = _get(url, timeout=5)
+            splits = (data.get("splits") or {}).get("categories", [])
             stats = {}
             for cat in splits:
                 for s in cat.get("stats", []):
@@ -289,7 +289,9 @@ def _fetch_advanced_stats_bref() -> dict[str, dict]:
     """
     try:
         import re
-        url = "https://www.basketball-reference.com/leagues/NBA_2026.html"
+        from datetime import datetime
+        season_year = datetime.now().year if datetime.now().month >= 10 else datetime.now().year
+        url = f"https://www.basketball-reference.com/leagues/NBA_{season_year}.html"
         req = urllib.request.Request(url, headers={
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
             "Accept": "text/html,application/xhtml+xml",
@@ -298,20 +300,36 @@ def _fetch_advanced_stats_bref() -> dict[str, dict]:
         with urllib.request.urlopen(req, timeout=20, context=_SSL) as r:
             html = r.read().decode("utf-8", errors="ignore")
 
-        # Find the misc/advanced stats table — has NRtg, Pace, ORtg, DRtg
-        # Table id: div_misc_stats or div_team-stats-per_poss
-        table_match = re.search(
-            r'id="div_misc_stats".*?<table.*?>(.*?)</table>',
-            html, re.DOTALL
-        )
-        if not table_match:
-            # Try alternate table
+        # Try multiple possible table IDs — BRef changes these occasionally
+        table_match = None
+        for table_id in ["misc_stats", "div_misc_stats", "team-stats-per_poss",
+                          "advanced-team", "per_poss-team"]:
             table_match = re.search(
-                r'<table[^>]*id="misc_stats"[^>]*>(.*?)</table>',
+                rf'<table[^>]*id="{table_id}"[^>]*>(.*?)</table>',
                 html, re.DOTALL
             )
+            if table_match:
+                log.info(f"Basketball-Reference: found table '{table_id}'")
+                break
+            # Also try div wrapper
+            div_match = re.search(
+                rf'id="div_{table_id}".*?<table[^>]*>(.*?)</table>',
+                html, re.DOTALL
+            )
+            if div_match:
+                table_match = div_match
+                log.info(f"Basketball-Reference: found div_{table_id}")
+                break
+
         if not table_match:
-            log.warning("Basketball-Reference: misc_stats table not found")
+            # Last resort: find any table with NRtg column
+            table_match = re.search(
+                r'<table[^>]*>(.*?net_rtg.*?)</table>',
+                html, re.DOTALL | re.IGNORECASE
+            )
+
+        if not table_match:
+            log.warning("Basketball-Reference: no advanced stats table found")
             return {}
 
         table_html = table_match.group(1)
