@@ -1,7 +1,7 @@
 ---
-version: 5
-updated_at: 2026-03-18T12:00:00.000000+00:00
-updated_by: manual_review
+version: 6
+updated_at: 2026-03-18T21:35:40.061065+00:00
+updated_by: analyst_2026-03-18
 llm: claude-sonnet-4-6
 ---
 
@@ -84,28 +84,82 @@ Franchise player Questionable/GTD → confidence -10, stake -20%. Flag explicitl
 Franchise player Day-To-Day → confidence -5, stake -10%.
 If BOTH teams have franchise player uncertainty → evaluate net impact.
 
-Known absences (only apply when that team is IN the game being evaluated):
-  - Anthony Davis (Wizards): OUT (finger/groin, season-ending) — only relevant in Wizards games
-  - D'Angelo Russell (Wizards): OUT (illness) — only relevant in Wizards games
-  - Alex Sarr (Wizards): OUT — only relevant in Wizards games
-  - Leaky Black (Wizards): OUT — only relevant in Wizards games
-  - Kyshawn George (Wizards): OUT — only relevant in Wizards games
-  NOTE: AD and D'Angelo Russell were traded from Lakers to Wizards on Feb 5, 2026.
-  The Los Angeles Lakers no longer have these players — do NOT apply their absences to Lakers games.
+Known absences (⚠ roster-only flags — confirmed via ESPN roster cross-reference, NOT official injury report):
+  These are flagged as likely OUT but must be re-verified against NBA official PDF each session.
 
-Franchise players requiring per-session injury verification (check NBA official PDF every run):
-  - Cade Cunningham (Detroit Pistons) — verify before ANY pick involving Detroit only.
-  - Any top-5 record team — verify injury status before drafting picks involving them.
+  Oklahoma City Thunder:
+    - Jalen Williams (G): OUT [⚠ roster only] — FRANCHISE PLAYER. Do NOT bet OKC ML without re-verification.
+    - Isaiah Hartenstein (C): OUT [⚠ roster only]
+    - Luguentz Dort (G): OUT [⚠ roster only]
+    - Branden Carlson (C): OUT [⚠ roster only]
+    - Thomas Sorber (C): OUT [⚠ roster only]
+
+  San Antonio Spurs:
+    - David Jones Garcia (F): OUT [⚠ roster only]
+
+  Detroit Pistons:
+    - Cade Cunningham (G): OUT [⚠ roster only] — FRANCHISE PLAYER. Do NOT bet Detroit ML without re-verification.
+    - Isaiah Stewart (F): OUT [⚠ roster only]
+
+  New York Knicks:
+    - Miles McBride (G): OUT [⚠ roster only]
+
+  Boston Celtics:
+    - Nikola Vucevic (C): OUT [⚠ roster only]
+
+  Los Angeles Lakers:
+    - Maxi Kleber (F): OUT [⚠ roster only]
+    NOTE: Anthony Davis and D'Angelo Russell were traded to Wizards on Feb 5, 2026. Do NOT apply their absences to Lakers games.
+
+  Minnesota Timberwolves:
+    - Anthony Edwards (G): OUT [⚠ roster only] — FRANCHISE PLAYER. Do NOT bet Minnesota ML without re-verification.
+    - Naz Reid (C): OUT [⚠ roster only]
+
+  Denver Nuggets:
+    - Aaron Gordon (F): OUT [⚠ roster only]
+    - Peyton Watson (G): OUT [⚠ roster only]
+
+  Cleveland Cavaliers:
+    - Jarrett Allen (C): OUT [⚠ roster only]
+    - Craig Porter Jr. (G): OUT [⚠ roster only]
+    - Tyrese Proctor (G): OUT [⚠ roster only]
+
+  Houston Rockets:
+    - Fred VanVleet (G): OUT [⚠ roster only]
+    - Steven Adams (C): OUT [⚠ roster only]
+    - Jae'Sean Tate (F): OUT [⚠ roster only]
+
+  Phoenix Suns:
+    - Dillon Brooks (F): OUT [⚠ roster only]
+    - Mark Williams (C): OUT [⚠ roster only]
+
+  Toronto Raptors:
+    - Chucky Hepburn (G): OUT [⚠ roster only]
+    - Collin Murray-Boyles (F): OUT [⚠ roster only]
+
+  Washington Wizards:
+    - Anthony Davis (F): OUT [⚠ roster only] — FRANCHISE PLAYER
+    - D'Angelo Russell (G): OUT [⚠ roster only] — FRANCHISE PLAYER
+    - Trae Young (G): OUT [⚠ roster only] — FRANCHISE PLAYER
+    - Leaky Black (F): OUT [⚠ roster only]
+    - Kyshawn George (F): OUT [⚠ roster only]
+    - Cam Whitmore (F): OUT [⚠ roster only]
+
+Franchise players requiring mandatory NBA official PDF verification before ANY pick involving their team:
+  - Jalen Williams (OKC) — team is 54-15; if OUT, major confidence impact on OKC picks
+  - Cade Cunningham (Detroit) — verify before ANY Detroit pick
+  - Anthony Edwards (Minnesota) — verify before ANY Minnesota pick
+  - Any player flagged ⚠ roster only — these are NOT confirmed via official injury report
 
 ## SECTION:tanking_teams
 Confirmed tanking-tier teams (all three criteria met):
-  - Washington Wizards: 16-51, L10: 0-10, streak: L12 — clearest tank; multiple stars OUT
-  - Sacramento Kings: 18-51, L10: 5-5 — worst record in West; L10 improvement is anomaly
+  - Washington Wizards: 16-52, L10: 0-10, streak: L13 — clearest tank; 6 players OUT including all franchise players
+  - Sacramento Kings: 18-52, L10: 5-5, streak: L1 — worst record in West; L10 improvement unreliable
   - Brooklyn Nets: 17-51, L10: 2-8, streak: L4 — bottom East
   - Utah Jazz: 20-48, L10: 2-8, streak: L3
   - Dallas Mavericks: 23-46, L10: 2-8, streak: L1 — confirmed tank
-  - Memphis Grizzlies: 23-44, L10: 2-8, streak: L8 — deepening
-  - Milwaukee Bucks: 28-39, L10: 2-8, streak: W1 — verify pick ownership before each bet
+  - Memphis Grizzlies: 23-44, L10: 2-8, streak: L8 — deepening; no signs of fight
+  - Milwaukee Bucks: 28-40, L10: 2-8, streak: L1 — verify pick ownership before each bet
 
 Tanking criteria (ALL THREE must be met):
   (a) Team owns its own 2026 draft pick
@@ -116,15 +170,20 @@ When betting AGAINST tanking teams: edge-positive.
 When betting ON tanking teams: require odds ≥ 2.20 and strong situational reason.
 
 Emerging tank-watch:
-  - Chicago Bulls (28-40, L10: 4-6) — monitor play-in race
-  - New Orleans Pelicans (23-46, L10: 6-4) — record tank-tier but L10 shows fight
-  - Golden State Warriors (33-35, L10: 3-7) — play-in bubble but fading
+  - Chicago Bulls (28-40, L10: 4-6) — borderline play-in; monitor
+  - New Orleans Pelicans (23-46, L10: 6-4) — record tank-tier but L10 shows fight; unpredictable
+  - Golden State Warriors (33-35, L10: 3-7) — play-in bubble fading fast
 
 Hot streaks (may create line inefficiencies):
-  - Atlanta Hawks (37-31, L10: 10-0, W10) — extreme regression risk; verify odds before committing
-  - OKC Thunder (53-15, L10: 9-1) — efficiently priced
-  - San Antonio Spurs (50-18, L10: 8-2) — efficiently priced
-  - Los Angeles Lakers (43-25, L10: 9-1) — Davis+Russell OUT; spreads/totals only
+  - Atlanta Hawks (37-31, L10: 10-0, W10) — extreme regression risk; overall .544 W% implies ~.500 true talent. Verify opponent odds ≥ 1.80 for fade opportunity.
+  - OKC Thunder (54-15, L10: 9-1, W9) — efficiently priced; Jalen Williams OUT [⚠ roster only] — verify before drafting OKC picks
+  - San Antonio Spurs (51-18, L10: 8-2, W3) — efficiently priced
+  - Los Angeles Lakers (43-25, L10: 9-1, W6) — hot streak; Maxi Kleber OUT but no franchise player concern
+  - Detroit Pistons (49-19, L10: 5-5) — Cade Cunningham OUT [⚠ roster only]; do not bet Detroit ML without verification
+
+Schedule seeding context (late March):
+  - OKC (54-15), Spurs (51-18), Pistons (49-19) locked into top-3 seeds — star rest risk increasing
+  - Play-in bubble (seeds 7-10): Charlotte, Portland, Golden State, Clippers — motivation-positive for these teams
 
 ## SECTION:b2b_rules
 B2B and rest day rules — apply numeric confidence adjustments:
