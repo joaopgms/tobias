@@ -1775,10 +1775,12 @@ function renderCommitTab(){
       const bets=(todayReport.bets||[]);
       const cancelled=(todayReport.cancelled||[]);
       const lateRej=(todayReport.late_rejections||[]);
+      const lateRejCount=(todayReport.late_rejections||[]).length;
       let h=`<div class="report-summary">
         <div class="report-kpi"><div class="report-kpi-label">Committed</div><div class="report-kpi-val">${bets.length}</div></div>
         <div class="report-kpi"><div class="report-kpi-label">Staked</div><div class="report-kpi-val">€${(todayReport.total_staked||0).toFixed(0)}</div></div>
         <div class="report-kpi"><div class="report-kpi-label">Cancelled</div><div class="report-kpi-val">${cancelled.length}</div></div>
+        <div class="report-kpi"><div class="report-kpi-label">Late checked</div><div class="report-kpi-val">${lateRejCount}</div></div>
         <div class="report-kpi"><div class="report-kpi-label">Cost</div><div class="report-kpi-val" style="font-size:.72rem">$${(todayReport.cost_usd||0).toFixed(4)}</div></div>
       </div>`;
       // Committed bets

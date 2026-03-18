@@ -119,7 +119,22 @@ Use [] if you found no new edges to evaluate.]
 </late_scout_rejections>
 
 <commit_report>
-[Full commit report — markdown formatted]
+Structure your report with one section per bet decision.
+
+For each CONFIRMED bet write:
+### CONFIRMED — [pick name]
+- Match: [HOME vs AWAY] | Tip: [time]
+- Pick: [pick] | Scout odds: [scout_odds] | Commit odds: [current_odds] | Move: [delta]
+- ML: [ml_home]/[ml_away] | ATS: [spread_pt] ([sp_h]/[sp_a]) | O/U: [total] (O:[over]/U:[under])
+- Stake: [stake] | Pot: [potential_return] | Conf: [confidence]/100 | EV: [ev]
+- Decision: [reason for confirming]
+
+For each CANCELLED pick write:
+### CANCELLED — [pick name]
+- Reason: [specific reason]
+- Odds at cancel: [current_odds] (was [scout_odds] at scout time)
+
+End with 2-3 sentence slate summary.
 </commit_report>
 """
 
@@ -364,6 +379,29 @@ def run(store, force: bool = False) -> None:
                   bankroll_after=state["bankroll"],
                   bust=busted,
                   llm_meta=llm_result.to_audit_dict() if llm_result else {})
+
+    # ── 16. Store report for Commit tab ──────────────────────────────────────
+    commit_entry = {
+        "ts":              now_iso,
+        "date":            today,
+        "llm":             llm,
+        "committed_count": len(committed_bets),
+        "cancelled_count": len(cancelled_picks),
+        "total_staked":    round(total_staked, 2),
+        "bankroll_before": round(bankroll_before, 2),
+        "bankroll_after":  round(state["bankroll"], 2),
+        "bets":            committed_bets,
+        "cancelled":       cancelled_picks,
+        "late_rejections": state.get("late_scout_rejections", []),
+        "report":          report_raw,
+        "odds_failures":   odds_failures if "odds_failures" in dir() else [],
+        **(llm_result.to_audit_dict() if llm_result else {}),
+    }
+    try:
+        store.append_report("commit", commit_entry)
+        log.info("Commit: report stored to commit_reports.js")
+    except Exception as e:
+        log.warning(f"Commit: failed to store report: {e}")
 
     log.info(
         f"Commit done — {len(committed_bets)} bets, €{total_staked:.2f} staked | "
