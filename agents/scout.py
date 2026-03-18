@@ -249,7 +249,11 @@ def run(store) -> None:
     standings_str = _standings_text(standings)
 
     adv_str = format_advanced_stats_for_prompt(adv_stats, games)
-    log.info(f"Scout: {len(games)} games | odds source: {odds[0].get('odds_source','?') if odds else 'none'}")
+    adv_available = bool(adv_stats)
+    if not adv_available:
+        log.warning("Scout: advanced stats unavailable — session limited to ML only (spreads/totals banned)")
+        adv_str = "ADVANCED STATS UNAVAILABLE — ML only session. Spreads and totals cannot be evaluated."
+    log.info(f"Scout: {len(games)} games | odds source: {odds[0].get('odds_source','?') if odds else 'none'} | adv_stats: {'ok' if adv_available else 'MISSING'}")
 
     # ── 6. Call LLM ───────────────────────────────────────────────────────────
     log.info("Scout: calling LLM…")

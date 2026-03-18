@@ -198,12 +198,17 @@ def fetch_first_game_time_utc(target_date: date | None = None) -> str | None:
 # ── Advanced stats (NBA.com) ───────────────────────────────────────────────────
 
 _NBA_STATS_HEADERS = {
-    "User-Agent":  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-    "Referer":     "https://www.nba.com/",
-    "Accept":      "application/json, */*",
-    "Origin":      "https://www.nba.com",
+    "User-Agent":        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Referer":           "https://www.nba.com/stats/teams/advanced",
+    "Accept":            "application/json, text/plain, */*",
+    "Accept-Language":   "en-US,en;q=0.9",
+    "Accept-Encoding":   "gzip, deflate, br",
+    "Origin":            "https://www.nba.com",
+    "Connection":        "keep-alive",
     "x-nba-stats-origin": "stats",
     "x-nba-stats-token":  "true",
+    "Cache-Control":     "no-cache",
+    "Pragma":            "no-cache",
 }
 
 def fetch_advanced_stats() -> dict[str, dict]:
@@ -222,9 +227,26 @@ def fetch_advanced_stats() -> dict[str, dict]:
         "&ShotClockRange=&StarterBench=&TeamID=0&TwoWay=0&VsConference=&VsDivision="
     )
     try:
+        import time
         req = urllib.request.Request(url, headers=_NBA_STATS_HEADERS)
-        with urllib.request.urlopen(req, timeout=15, context=_SSL) as r:
-            data = json.loads(r.read().decode())
+        # NBA.com can be slow — retry once on timeout
+        for attempt in range(2):
+            try:
+                with urllib.request.urlopen(req, timeout=20, context=_SSL) as r:
+                    raw = r.read()
+                    # Handle gzip
+                    try:
+                        import gzip
+                        data = json.loads(gzip.decompress(raw).decode())
+                    except Exception:
+                        data = json.loads(raw.decode())
+                break
+            except Exception as e:
+                if attempt == 0:
+                    log.warning(f"NBA advanced stats attempt 1 failed: {e} — retrying in 3s")
+                    time.sleep(3)
+                else:
+                    raise
 
         rs = data.get("resultSets", [{}])[0]
         headers = rs.get("headers", [])
@@ -252,7 +274,7 @@ def fetch_advanced_stats() -> dict[str, dict]:
         return result
 
     except Exception as e:
-        log.warning(f"NBA advanced stats error: {e}")
+        log.warning(f"NBA advanced stats unavailable: {e} — Scout will be limited to ML only this session")
         return {}
 
 

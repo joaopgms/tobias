@@ -1,7 +1,7 @@
 ---
 version: 5
-updated_at: 2026-03-18T11:43:49.772486+00:00
-updated_by: analyst_2026-03-18
+updated_at: 2026-03-18T12:00:00.000000+00:00
+updated_by: manual_review
 llm: claude-sonnet-4-6
 ---
 
@@ -86,15 +86,20 @@ Current confirmed absences (update each session):
   - Kyshawn George (Wizards): OUT
   - D'Angelo Russell (Lakers): OUT — further weakens Lakers ML case
 
+Franchise players requiring per-session injury verification (check NBA official PDF every run):
+  - Cade Cunningham (Detroit Pistons, 49-19) — verify status before ANY pick involving Detroit.
+    Pistons are 3rd overall; his absence would fundamentally change game projections.
+  - Any player on a team in top-5 record — always check injury status regardless of prior session.
+
 ## SECTION:tanking_teams
 Confirmed tanking-tier teams (all three criteria met):
-  - Washington Wizards: 16-52, L10: 0-10, streak: L13 — clearest tank; multiple stars OUT
-  - Sacramento Kings: 18-52, L10: 5-5 — worst record in West; L10 improvement is anomaly
+  - Washington Wizards: 16-51, L10: 0-10, streak: L12 — clearest tank; multiple stars OUT
+  - Sacramento Kings: 18-51, L10: 5-5 — worst record in West; L10 improvement is anomaly
   - Brooklyn Nets: 17-51, L10: 2-8, streak: L4 — bottom East
   - Utah Jazz: 20-48, L10: 2-8, streak: L3
   - Dallas Mavericks: 23-46, L10: 2-8, streak: L1 — confirmed tank
   - Memphis Grizzlies: 23-44, L10: 2-8, streak: L8 — deepening
-  - Milwaukee Bucks: 28-40, L10: 2-8, streak: L1 — verify pick ownership before each bet
+  - Milwaukee Bucks: 28-39, L10: 2-8, streak: W1 — verify pick ownership before each bet
 
 Tanking criteria (ALL THREE must be met):
   (a) Team owns its own 2026 draft pick
@@ -111,11 +116,9 @@ Emerging tank-watch:
 
 Hot streaks (may create line inefficiencies):
   - Atlanta Hawks (37-31, L10: 10-0, W10) — extreme regression risk; verify odds before committing
-  - OKC Thunder (54-15, L10: 9-1, W9) — efficiently priced; elite tier
-  - San Antonio Spurs (51-18, L10: 8-2) — efficiently priced
-  - Los Angeles Lakers (43-25, L10: 9-1, W6) — Davis+Russell OUT; spreads/totals only
-  - Detroit Pistons (49-19, L10: 5-5) — top-3 record but L10 cooling; monitor
-  - New York Knicks (45-25, L10: 7-3, W4) — strong mid-season form
+  - OKC Thunder (53-15, L10: 9-1) — efficiently priced
+  - San Antonio Spurs (50-18, L10: 8-2) — efficiently priced
+  - Los Angeles Lakers (43-25, L10: 9-1) — Davis+Russell OUT; spreads/totals only
 
 ## SECTION:b2b_rules
 B2B and rest day rules — apply numeric confidence adjustments:
@@ -151,7 +154,18 @@ EV requirement overrides confidence tier — EV < 0.05 means no bet regardless.
 Draft only picks with genuine edge (confidence ≥ floor for market type AND EV ≥ 0.05).
 0 or 1 picks is a valid and good result. Never force picks.
 Flag line anomalies for Commit — deferred picks may become valid by tip-off.
-When advanced stats unavailable, do not bet spreads or totals.
+When advanced stats unavailable, do not bet spreads or totals (ML-only session — log explicitly).
+
+HOT STREAK FADE RULE:
+When a non-elite team (outside top-8 record) shows L10 ≥ 9-1 AND season record implies
+sub-.550 true talent (i.e. their overall W% is below .550 despite the hot streak):
+  → Flag opponent as having regression-based edge
+  → Check current ML odds on the opponent explicitly
+  → If opponent odds are ≥ 1.80 (books haven't fully priced regression risk), add confidence +10
+  → Do NOT fade the hot team blindly — require opponent to also have neutral or positive stats
+  → This rule applies regardless of market (ML, spread, total)
+Current example: Atlanta Hawks (37-31, W10) — overall .544 W% implies ~.500 true talent.
+Any opponent at ≥ 1.80 against Atlanta warrants explicit regression-fade evaluation.
 
 ## SECTION:data_quality_rules
 INJURY FEED QUALITY GATES — apply before any pick is drafted:
