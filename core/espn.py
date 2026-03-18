@@ -193,3 +193,91 @@ def fetch_first_game_time_utc(target_date: date | None = None) -> str | None:
         return None
     earliest = min(times)
     return earliest.strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+# ── Advanced stats (NBA.com) ───────────────────────────────────────────────────
+
+_NBA_STATS_HEADERS = {
+    "User-Agent":  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+    "Referer":     "https://www.nba.com/",
+    "Accept":      "application/json, */*",
+    "Origin":      "https://www.nba.com",
+    "x-nba-stats-origin": "stats",
+    "x-nba-stats-token":  "true",
+}
+
+def fetch_advanced_stats() -> dict[str, dict]:
+    """
+    Fetch team advanced stats from NBA.com stats API.
+    Returns {team_name: {net_rtg, off_rtg, def_rtg, pace, ts_pct, ...}}
+    No API key required — public endpoint.
+    """
+    url = (
+        "https://stats.nba.com/stats/leaguedashteamstats"
+        "?Conference=&DateFrom=&DateTo=&Division=&GameScope=&GameSegment="
+        "&Height=&LastNGames=0&LeagueID=00&Location=&MeasureType=Advanced"
+        "&Month=0&OpponentTeamID=0&Outcome=&PORound=0&PaceAdjust=N"
+        "&PerMode=PerGame&Period=0&PlayerExperience=&PlayerPosition="
+        "&PlusMinus=N&Rank=N&Season=2025-26&SeasonSegment=&SeasonType=Regular+Season"
+        "&ShotClockRange=&StarterBench=&TeamID=0&TwoWay=0&VsConference=&VsDivision="
+    )
+    try:
+        req = urllib.request.Request(url, headers=_NBA_STATS_HEADERS)
+        with urllib.request.urlopen(req, timeout=15, context=_SSL) as r:
+            data = json.loads(r.read().decode())
+
+        rs = data.get("resultSets", [{}])[0]
+        headers = rs.get("headers", [])
+        rows    = rs.get("rowSet", [])
+
+        # Map header → index
+        h = {name: i for i, name in enumerate(headers)}
+
+        result = {}
+        for row in rows:
+            team_name = row[h.get("TEAM_NAME", 1)] if "TEAM_NAME" in h else None
+            if not team_name:
+                continue
+            result[team_name] = {
+                "net_rtg":  round(float(row[h["NET_RATING"]]  if "NET_RATING"  in h else 0), 1),
+                "off_rtg":  round(float(row[h["OFF_RATING"]]  if "OFF_RATING"  in h else 0), 1),
+                "def_rtg":  round(float(row[h["DEF_RATING"]]  if "DEF_RATING"  in h else 0), 1),
+                "pace":     round(float(row[h["PACE"]]         if "PACE"        in h else 0), 1),
+                "ts_pct":   round(float(row[h["TS_PCT"]]       if "TS_PCT"      in h else 0), 3),
+                "ast_pct":  round(float(row[h["AST_PCT"]]      if "AST_PCT"     in h else 0), 3),
+                "reb_pct":  round(float(row[h["REB_PCT"]]      if "REB_PCT"     in h else 0), 3),
+            }
+
+        log.info(f"NBA advanced stats: {len(result)} teams")
+        return result
+
+    except Exception as e:
+        log.warning(f"NBA advanced stats error: {e}")
+        return {}
+
+
+def format_advanced_stats_for_prompt(stats: dict, games: list[dict]) -> str:
+    """
+    Format advanced stats for only the teams playing tonight.
+    Compact — only relevant matchups.
+    """
+    if not stats or not games:
+        return "Advanced stats unavailable."
+
+    lines = ["Source: NBA.com Advanced Stats (OffRtg / DefRtg / NetRtg / Pace)"]
+    seen = set()
+    for g in games:
+        for team in [g.get("home",""), g.get("away","")]:
+            if not team or team in seen:
+                continue
+            seen.add(team)
+            s = stats.get(team)
+            if s:
+                lines.append(
+                    f"{team}: OffRtg {s['off_rtg']} | DefRtg {s['def_rtg']} "
+                    f"| NetRtg {s['net_rtg']:+.1f} | Pace {s['pace']}"
+                )
+            else:
+                lines.append(f"{team}: stats unavailable")
+
+    return "\n".join(lines)

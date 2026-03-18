@@ -24,7 +24,7 @@ import logging
 from datetime import datetime, date, timezone
 
 from core.llm import call_llm, call_llm_full, call_llm_full, extract_tag, agent_model_name
-from core.espn import fetch_standings, fetch_injuries
+from core.espn import fetch_standings, fetch_injuries, fetch_advanced_stats
 
 log = logging.getLogger(__name__)
 
@@ -173,7 +173,7 @@ Reasoning quality matters more than frequency of changes."""
 
 
 def _build_analyst_prompt(perf: str, standings_text: str,
-                           injuries_text: str,
+                           injuries_text: str, advanced_stats: str,
                            scout_content: str, commit_content: str) -> str:
     return f"""## PERFORMANCE REVIEW
 {perf}
@@ -183,6 +183,9 @@ def _build_analyst_prompt(perf: str, standings_text: str,
 
 ## CURRENT INJURY LANDSCAPE
 {injuries_text}
+
+## ADVANCED STATS (OffRtg / DefRtg / NetRtg / Pace — all 30 teams)
+{advanced_stats}
 
 ## CURRENT scout_skills.md
 {scout_content}
@@ -242,21 +245,49 @@ Output ONLY valid JSON in this exact structure:
       "reason": "one sentence explaining the evidence for this change"
     }}
   ],
-  "analyst_notes": "2-3 sentences summarising today's key findings and any macro NBA trends worth watching",
-  "no_change_reason": "if no patches needed, explain why here — otherwise leave empty"
+  "analyst_notes": "2-3 sentences summarising today's key findings and macro NBA trends",
+  "no_change_reason": "if no patches needed, explain why — otherwise leave empty",
+  "intelligence_gaps": [
+    {{
+      "gap": "one sentence describing missing data, stat, or rule",
+      "why": "why it matters — what decision it would have changed or improved",
+      "suggestion": "proposed action (e.g. add pace to scout context, add section X, fetch stat Y)"
+    }}
+  ]
 }}
 
 Rules:
-- "action" must be "replace" or "add" (add = new section) — never delete sections
-- "new_content" must be the COMPLETE replacement text for that section (not a diff)
-- Only patch what the evidence supports — 0 patches is a valid and good answer
+- "action" must be "replace" or "add" — never delete sections
+- "new_content" must be the COMPLETE replacement text (not a diff)
+- Only patch what the evidence supports — 0 patches is valid
 - Keep new_content compact — these files are fed to agents as context tokens
-- Always update tanking_teams and franchise_player_rules if standings/injuries show changes
-- Never patch commit_staking without also patching scout confidence_staking to keep them in sync
+- Always update tanking_teams and franchise_player_rules if data changed
+- Never patch commit_staking without also patching scout confidence_staking
+- intelligence_gaps: run through this checklist every session:
+    1. Was there a line anomaly that advanced stats would have explained?
+    2. Is there a stat trend (pace, DefRtg cluster, injury pattern) my agents don't track yet?
+    3. Did any section produce a bad outcome this week that evidence now contradicts?
+    4. Are there upcoming schedule patterns (B2B clusters, playoff seeding races) worth noting?
+    5. Is the injury feed coverage adequate, or do I need a better source for any team?
+  Output [] if nothing genuinely worth flagging. Quality over quantity.
 """
 
 
 # ── Standings + injuries → compact text ───────────────────────────────────────
+
+def _advanced_stats_text(stats: dict) -> str:
+    """Compact advanced stats for top/bottom teams — relevant for Analyst context."""
+    if not stats:
+        return "Advanced stats unavailable."
+    # Sort by NetRtg
+    ranked = sorted(stats.items(), key=lambda x: x[1].get("net_rtg", 0), reverse=True)
+    lines = ["Team: OffRtg / DefRtg / NetRtg / Pace"]
+    for team, s in ranked:
+        lines.append(
+            f"{team}: {s['off_rtg']} / {s['def_rtg']} / {s['net_rtg']:+.1f} / {s['pace']}"
+        )
+    return "\n".join(lines[:30])
+
 
 def _standings_text(standings: dict) -> str:
     if not standings:
@@ -306,13 +337,15 @@ def run(store) -> None:
     state, history = store.read_state_and_history()
 
     # ── 2. Fetch NBA context ───────────────────────────────────────────────────
-    log.info("Analyst: fetching standings + injuries…")
-    standings = fetch_standings()
-    injuries  = fetch_injuries()
+    log.info("Analyst: fetching standings + injuries + advanced stats…")
+    standings  = fetch_standings()
+    injuries   = fetch_injuries()
+    adv_stats  = fetch_advanced_stats()
 
     perf           = _perf_summary(state)
     standings_str  = _standings_text(standings)
     injuries_str   = _injuries_text(injuries)
+    adv_str        = _advanced_stats_text(adv_stats)
 
     # ── 3. Load current skills files ──────────────────────────────────────────
     scout_content  = store.read_md("scout_skills")
@@ -328,10 +361,10 @@ def run(store) -> None:
     log.info("Analyst: calling LLM for skills review…")
     system = ANALYST_SYSTEM
     user   = _build_analyst_prompt(perf, standings_str, injuries_str,
-                                    scout_content, commit_content)
+                                    adv_str, scout_content, commit_content)
     state["agent_models"] = state.get("agent_models", {})
     state["agent_models"]["analyst"] = llm
-    llm_result = call_llm_full(system, user, max_tokens=2048, agent="analyst")
+    llm_result = call_llm_full(system, user, max_tokens=4096, agent="analyst")
     raw = llm_result.text
 
     # ── 6. Parse LLM response ─────────────────────────────────────────────────
@@ -363,10 +396,15 @@ def run(store) -> None:
         store.write_data_js(state, history, config=store.read_config())
         return
 
-    scout_patches  = result.get("scout_patches", [])
-    commit_patches = result.get("commit_patches", [])
-    analyst_notes  = result.get("analyst_notes", "")
-    no_change      = result.get("no_change_reason", "")
+    scout_patches      = result.get("scout_patches", [])
+    commit_patches     = result.get("commit_patches", [])
+    analyst_notes      = result.get("analyst_notes", "")
+    no_change          = result.get("no_change_reason", "")
+    intelligence_gaps  = result.get("intelligence_gaps", [])
+    if intelligence_gaps:
+        log.info(f"Analyst: {len(intelligence_gaps)} intelligence gap(s) identified")
+        for g in intelligence_gaps:
+            log.info(f"  🔍 GAP: {g.get('gap','?')[:100]}")
 
     log.info(f"Analyst: {len(scout_patches)} scout patches, {len(commit_patches)} commit patches")
 
@@ -409,6 +447,9 @@ commit_patches: {len(commit_applied)}
 
 ## Commit patches applied
 {chr(10).join(f"- [{p['section']}] {p['reason']}" for p in commit_applied) or "None"}
+
+## Intelligence gaps identified
+{chr(10).join(f"- **{g.get('gap','')}** — {g.get('why','')} → {g.get('suggestion','')}" for g in intelligence_gaps) or "None"}
 """
     state["analyst_updated_at"] = now_iso
     store.write_json("state", state, f"analyst: updated_at {today}")
@@ -421,6 +462,7 @@ commit_patches: {len(commit_applied)}
                   commit_patches=commit_applied,
                   notes=analyst_notes,
                   no_change=no_change,
+                  intelligence_gaps=intelligence_gaps,
                   bankroll=state["bankroll"],
                   net_pnl=state.get("net_pnl", 0),
                   llm_meta=llm_result.to_audit_dict())
@@ -434,6 +476,7 @@ commit_patches: {len(commit_applied)}
 def _append_audit(store, ts: str, llm: str, error: str = "",
                   scout_patches: list = None, commit_patches: list = None,
                   notes: str = "", no_change: str = "",
+                  intelligence_gaps: list = None,
                   bankroll: float = 0, net_pnl: float = 0,
                   llm_meta: dict = None):
     entry = {
@@ -447,6 +490,7 @@ def _append_audit(store, ts: str, llm: str, error: str = "",
         "commit_patches":   commit_patches or [],
         "notes":            notes,
         "no_change_reason": no_change,
+        "intelligence_gaps": intelligence_gaps or [],
         **(llm_meta or {}),
     }
     try:

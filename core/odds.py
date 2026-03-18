@@ -63,6 +63,7 @@ def _normalise_oddspapi(g: dict) -> dict:
     away = g.get("away_team", "")
     start = g.get("commence_time", "")
     ml_home = ml_away = spread = spread_odds_home = spread_odds_away = ou = None
+    over_odds_op = under_odds_op = None
     for bm in g.get("bookmakers", []):
         if bm.get("key", "").lower() != BETANO_KEY:
             continue
@@ -81,7 +82,12 @@ def _normalise_oddspapi(g: dict) -> dict:
                         spread_odds_away = o.get("price")
             elif key == "totals":
                 for o in outcomes:
-                    if o["name"] == "Over": ou = o.get("point")
+                    if o["name"] == "Over":
+                        ou = o.get("point"); over_odds_op = o.get("price")
+                    elif o["name"] == "Under":
+                        under_odds_op = o.get("price"); over_odds = o.get("price")
+                    elif o["name"] == "Under":
+                        under_odds = o.get("price")
     return {
         "home": home, "away": away, "time": start,
         "ml_home_dec": ml_home, "ml_away_dec": ml_away,
@@ -124,6 +130,8 @@ def _normalise_theodds(g: dict) -> dict:
     away = g.get("away_team", "")
     start = g.get("commence_time", "")
     ml_home = ml_away = spread = spread_odds_home = spread_odds_away = ou = None
+    over_odds_op = under_odds_op = None
+    over_odds = under_odds = None
     bookmaker_used = "unknown"
 
     # Try bookmakers in priority order
@@ -155,7 +163,12 @@ def _normalise_theodds(g: dict) -> dict:
                         spread_odds_away = o.get("price")
             elif key == "totals":
                 for o in outcomes:
-                    if o["name"] == "Over": ou = o.get("point")
+                    if o["name"] == "Over":
+                        ou = o.get("point"); over_odds_op = o.get("price")
+                    elif o["name"] == "Under":
+                        under_odds_op = o.get("price"); over_odds = o.get("price")
+                    elif o["name"] == "Under":
+                        under_odds = o.get("price")
 
     return {
         "home": home, "away": away, "time": start,
@@ -163,6 +176,7 @@ def _normalise_theodds(g: dict) -> dict:
         "spread": spread, "spread_odds_home": spread_odds_home,
         "spread_odds_away": spread_odds_away, "over_under": ou,
         "odds_source": f"theodds_{bookmaker_used}", "odds_estimated": False,
+        "over_odds": over_odds, "under_odds": under_odds,
     }
 
 
@@ -240,5 +254,9 @@ def format_odds_for_prompt(games: list[dict]) -> str:
         home = g.get("home", "?"); away = g.get("away", "?")
         ml_h = g.get("ml_home_dec", "?"); ml_a = g.get("ml_away_dec", "?")
         sp   = g.get("spread", "N/A"); ou = g.get("over_under", "N/A")
-        lines.append(f"{away} @ {home} | ML: {ml_h}/{ml_a} | Spread: {sp} | O/U: {ou}")
+        sp_h = g.get("spread_odds_home", "?"); sp_a = g.get("spread_odds_away", "?")
+        ov   = g.get("over_odds", "?");  un = g.get("under_odds", "?")
+        spread_str = f"{sp} ({sp_h}/{sp_a})" if sp and sp != "N/A" else "N/A"
+        ou_str     = f"{ou} (O:{ov}/U:{un})" if ou and ou != "N/A" else "N/A"
+        lines.append(f"{away} @ {home} | ML: {ml_h}/{ml_a} | Spread: {spread_str} | O/U: {ou_str}")
     return "\n".join(lines)

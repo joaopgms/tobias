@@ -20,7 +20,7 @@ import logging
 from datetime import datetime, date, timezone
 
 from core.llm import call_llm, call_llm_full, extract_tag, agent_model_name
-from core.espn import fetch_scoreboard, fetch_injuries, fetch_standings, fetch_first_game_time_utc
+from core.espn import fetch_scoreboard, fetch_injuries, fetch_standings, fetch_first_game_time_utc, fetch_advanced_stats, format_advanced_stats_for_prompt
 from core.nba_injuries import fetch_official_nba_injuries
 from core.odds import fetch_betano_nba_odds, format_odds_for_prompt, odds_available, get_odds_failure_reasons
 from core.validators import validate_all_drafts, ValidationError
@@ -44,7 +44,7 @@ The system will FAIL and no picks will be saved if these tags are missing."""
 
 def _build_scout_prompt(skills: str, games_text: str, odds_text: str,
                          injuries_text: str, standings_text: str,
-                         state: dict, today: str) -> str:
+                         advanced_stats: str, state: dict, today: str) -> str:
     bankroll = state["bankroll"]
     season   = state["season"]
     game_n   = state["game"]
@@ -67,6 +67,9 @@ def _build_scout_prompt(skills: str, games_text: str, odds_text: str,
 ## STANDINGS
 {standings_text}
 
+## ADVANCED STATS (OffRtg / DefRtg / NetRtg / Pace — tonight's teams only)
+{advanced_stats}
+
 ---
 
 Research the slate above and produce draft picks.
@@ -75,7 +78,12 @@ Draft 0 picks if nothing meets the bar — that is a valid result.
 
 For each draft pick, you MUST include ALL fields:
   id, match, time, pick, odds, stake, potential_return,
-  confidence, reasoning, anchor_players, drafted_at
+  confidence, reasoning, anchor_players, drafted_at, market_type
+
+market_type: "ml" | "spread" | "total"
+  - "ml" = moneyline (Team X to win)
+  - "spread" = ATS (Team X -7.5 or +7.5)
+  - "total" = over/under (Over/Under X.X)
 
 Match string convention: always "HOME TEAM vs AWAY TEAM" (home first).
 Pick: "Team Name ML" or "Team Name -X.X" or "Over X.X" etc.
@@ -204,7 +212,8 @@ def run(store) -> None:
 
     # ── 4. Fetch data ─────────────────────────────────────────────────────────
     log.info("Scout: fetching NBA data…")
-    games     = fetch_scoreboard()
+    games        = fetch_scoreboard()
+    adv_stats    = fetch_advanced_stats()
     # Primary: NBA official injury report (PDFs updated every 15min, legally required)
     injuries = fetch_official_nba_injuries()
     if not injuries:
@@ -237,6 +246,7 @@ def run(store) -> None:
         injuries_str = _injuries_text(injuries)
     standings_str = _standings_text(standings)
 
+    adv_str = format_advanced_stats_for_prompt(adv_stats, games)
     log.info(f"Scout: {len(games)} games | odds source: {odds[0].get('odds_source','?') if odds else 'none'}")
 
     # ── 6. Call LLM ───────────────────────────────────────────────────────────
@@ -246,7 +256,7 @@ def run(store) -> None:
         llm_result = call_llm_full(
             SCOUT_SYSTEM,
             _build_scout_prompt(skills, games_str, odds_str, injuries_str,
-                                 standings_str, state, today),
+                                 standings_str, adv_str, state, today),
             max_tokens=8000,
             agent="scout",
         )
@@ -272,7 +282,7 @@ def run(store) -> None:
     if draft_raw is None:
         log.error("Scout: <draft_picks> tag missing — attempting retries")
         prompt_full = _build_scout_prompt(skills, games_str, odds_str, injuries_str,
-                                           standings_str, state, today)
+                                           standings_str, adv_str, state, today)
         prompt_minimal = (
             f"You are the Scout agent. Today: {today} | Bankroll: €{state['bankroll']:.2f}\n"
             f"Output ONLY these XML tags — nothing else before or after:\n\n"
@@ -282,7 +292,7 @@ def run(store) -> None:
             f"<rejected_games>\n[]\n</rejected_games>"
         )
         retries = [
-            ("Attempt 2 — full prompt", prompt_full, 6000),
+            ("Attempt 2 — full prompt", prompt_full, 10000),
             ("Attempt 3 — minimal prompt", prompt_minimal, 2048),
         ]
         succeeded = False
