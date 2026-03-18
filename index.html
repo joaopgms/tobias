@@ -737,8 +737,6 @@
 
 <div id="copyToast" class="copy-toast"></div>
 <script src="data/data.js"></script>
-<script src="data/scout_reports.js"></script>
-<script src="data/commit_reports.js"></script>
 <script>
 // -- ALL 30 NBA TEAMS -------------------------------------------------------
 const NBA_TEAMS={
@@ -1713,7 +1711,7 @@ function extractSummaryFromReport(reportMd) {
 }
 
 function renderScoutTab(){
-  const reports = typeof SCOUT_REPORTS!=='undefined'?SCOUT_REPORTS:[];
+  const reports = [];
   const today = new Date().toISOString().slice(0,10);
 
   // Today's report
@@ -1758,7 +1756,7 @@ function renderScoutTab(){
 }
 
 function renderCommitTab(){
-  const reports = typeof COMMIT_REPORTS!=='undefined'?COMMIT_REPORTS:[];
+  const reports = [];
   const today = new Date().toISOString().slice(0,10);
 
   const todayEl = document.getElementById('commitTodaySection');
@@ -1827,7 +1825,7 @@ function resetReportHistory(type){
 function renderReportNavBar(){
   const bar = document.getElementById('reportNavBar');
   if(!bar) return;
-  const reports = typeof SCOUT_REPORTS!=='undefined'?SCOUT_REPORTS:[];
+  const reports = [];
   const commitReports = typeof COMMIT_REPORTS!=='undefined'?COMMIT_REPORTS:[];
   const today = new Date().toISOString().slice(0,10);
   const hasScout = reports.some(r=>r.date===today);

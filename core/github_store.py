@@ -25,12 +25,11 @@ class GitHubStore:
         "scout_skills":   "skills/scout_skills.md",
         "commit_skills":  "skills/commit_skills.md",
         "analyst_notes":  "skills/analyst_notes.md",
+        "analyst_rules":  "skills/analyst_rules.md",
         "analyst_log":    "audit/analyst_log.jsonl",
         "scout_log":      "audit/scout_log.jsonl",
         "commit_log":     "audit/commit_log.jsonl",
         "settler_log":       "audit/settler_log.jsonl",
-        "scout_reports_js":  "data/scout_reports.js",
-        "commit_reports_js": "data/commit_reports.js",
         "scout_archive":     "data/scout_archive.json",
         "commit_archive":    "data/commit_archive.json",
     }
