@@ -192,13 +192,30 @@ def fetch_official_nba_injuries(target_date: datetime | None = None) -> dict:
     return {}
 
 
-def format_injuries_for_prompt(injuries: dict) -> str:
-    """Format official injuries into compact prompt text."""
+def format_injuries_for_prompt(injuries: dict, tonight_teams: list | None = None) -> str:
+    """
+    Format official injuries into compact prompt text.
+    If tonight_teams is provided, only show injuries for teams playing tonight.
+    This prevents hallucination where Scout reasons about players not in tonight's games.
+    """
     if not injuries:
         return "No injury reports available from NBA official source."
 
     NOTABLE = {"out", "doubtful", "questionable", "game time decision"}
-    lines = [f"Source: NBA Official Injury Report ({len(injuries)} teams reporting)"]
+
+    # Filter to tonight's teams only if provided
+    if tonight_teams:
+        # Normalise for matching — injuries dict may use full names
+        tonight_lower = [t.lower() for t in tonight_teams]
+        injuries = {
+            team: players for team, players in injuries.items()
+            if any(t in team.lower() or team.lower() in t for t in tonight_lower)
+        }
+
+    if not injuries:
+        return "No injury reports for tonight\'s teams."
+
+    lines = [f"Source: NBA Official Injury Report ({len(injuries)} teams playing tonight)"]
 
     for team, players in injuries.items():
         notable = [p for p in players if p["status"].lower() in NOTABLE]

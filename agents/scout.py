@@ -243,7 +243,8 @@ def run(store) -> None:
     odds_str     = format_odds_for_prompt(odds)
     if injuries_source == "nba_official":
         from core.nba_injuries import format_injuries_for_prompt as _fmt_official
-        injuries_str = _fmt_official(injuries)
+        tonight_teams = [g["home"] for g in games] + [g["away"] for g in games]
+        injuries_str = _fmt_official(injuries, tonight_teams=tonight_teams)
     else:
         injuries_str = _injuries_text(injuries)
     standings_str = _standings_text(standings)
