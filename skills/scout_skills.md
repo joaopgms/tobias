@@ -73,23 +73,27 @@ TOTALS (O/U):
   Only bet totals when advanced stats (Pace, OffRtg, DefRtg) are available.
 
 ## SECTION:franchise_player_rules
+CRITICAL RULE: Only apply injury information to the TWO TEAMS in the specific game being evaluated.
+NEVER mention or apply injuries from teams not playing in that game.
+Example: If evaluating Rockets vs Lakers, ONLY consider Rockets and Lakers injuries.
+Wizards/Pistons/any other team injuries are IRRELEVANT and must NOT be mentioned.
+
 Franchise player OUT → do NOT bet that team to win unless opponent also missing a star or confirmed tanking.
 Franchise player Doubtful → confidence -15, stake -30%. Only proceed if EV still ≥ 0.05.
 Franchise player Questionable/GTD → confidence -10, stake -20%. Flag explicitly in reasoning.
 Franchise player Day-To-Day → confidence -5, stake -10%.
 If BOTH teams have franchise player uncertainty → evaluate net impact.
 
-Current confirmed absences (update each session):
-  - Anthony Davis (Lakers): OUT — do not back Lakers ML; spread/O-U may still offer value
-  - Alex Sarr (Wizards): OUT — Wizards fully tank-tier regardless
-  - Leaky Black (Wizards): OUT
-  - Kyshawn George (Wizards): OUT
-  - D'Angelo Russell (Lakers): OUT — further weakens Lakers ML case
+Known absences (only apply when that team is IN the game being evaluated):
+  - Anthony Davis (Lakers): OUT — only relevant in Lakers games
+  - Alex Sarr (Wizards): OUT — only relevant in Wizards games
+  - Leaky Black (Wizards): OUT — only relevant in Wizards games
+  - Kyshawn George (Wizards): OUT — only relevant in Wizards games
+  - D'Angelo Russell (Lakers): OUT — only relevant in Lakers games
 
 Franchise players requiring per-session injury verification (check NBA official PDF every run):
-  - Cade Cunningham (Detroit Pistons, 49-19) — verify status before ANY pick involving Detroit.
-    Pistons are 3rd overall; his absence would fundamentally change game projections.
-  - Any player on a team in top-5 record — always check injury status regardless of prior session.
+  - Cade Cunningham (Detroit Pistons) — verify before ANY pick involving Detroit only.
+  - Any top-5 record team — verify injury status before drafting picks involving them.
 
 ## SECTION:tanking_teams
 Confirmed tanking-tier teams (all three criteria met):
