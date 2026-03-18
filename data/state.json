@@ -9,102 +9,23 @@
   "net_pnl": 0.0,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-03-18T15:09:41.485142+00:00",
-  "first_game_time": "2026-03-18T23:00:00Z",
+  "last_updated": null,
+  "first_game_time": null,
   "llm_provider": "claude",
-  "scout_status": "live",
+  "scout_status": "pending",
   "scout_error": "",
-  "scout_updated_at": "2026-03-18T15:09:41.485142+00:00",
+  "scout_updated_at": null,
+  "scout_odds_source": "",
   "commit_status": "pending",
   "commit_updated_at": null,
   "commit_date": null,
-  "analyst_updated_at": "2026-03-18T11:43:49.772486+00:00",
-  "settler_updated_at": "2026-03-18T10:54:19.514282+00:00",
-  "agent_models": {
-    "settler": "no-llm",
-    "analyst": "claude-sonnet-4-6",
-    "scout": "claude-sonnet-4-6"
-  },
+  "analyst_updated_at": null,
+  "settler_updated_at": null,
+  "agent_models": {},
   "last_report": "",
-  "draft_picks": [
-    {
-      "id": "nba_draft_20260318_001",
-      "match": "Houston Rockets vs Los Angeles Lakers",
-      "time": "2026-03-19T01:30:00Z",
-      "pick": "Houston Rockets ML",
-      "odds": 1.73,
-      "stake": 150,
-      "potential_return": 259.5,
-      "confidence": 68,
-      "reasoning": "Houston (41-26, L10: 5-5) hosts a severely depleted Lakers team. Anthony Davis (OUT — confirmed absence) and D'Angelo Russell (OUT — confirmed absence) are both missing, stripping LA of their two best players. Maxi Kleber also OUT per tonight's report. Per franchise_player_rules, Lakers ML is explicitly prohibited. Houston at home with a strong season record benefits from 2-3pt home court advantage against a shell Lakers roster. Lakers L10 9-1 streak was built with AD and Russell — tonight's lineup is fundamentally different. Houston has playoff seeding motivation (41-26). No advanced stats available (ML-only session). EV = (68/100 × 1.73) - 1 = 1.1764 - 1 = +0.176 (strong edge, EV ≥ 0.15). Confidence 68 satisfies ML floor of 50. Stake at 15% (medium confidence tier, conservative given ML-only session).",
-      "anchor_players": [
-        "Anthony Davis (Lakers - OUT)",
-        "D'Angelo Russell (Lakers - OUT)",
-        "Maxi Kleber (Lakers - OUT)"
-      ],
-      "drafted_at": "2026-03-18T15:10:35Z",
-      "market_type": "ml"
-    }
-  ],
+  "draft_picks": [],
   "pending_bets": [],
   "settled_bets": [],
-  "rejected_games": [
-    {
-      "match": "Boston Celtics vs Golden State Warriors",
-      "reason": "Celtics ML 1.16 below target range (min 1.70). Warriors ML 5.30 above target range (max 2.50). Stephen Curry OUT — franchise player absent. Multiple Warriors starters OUT (Butler, Seth Curry, Moody). No viable ML pick within odds range.",
-      "ml_home": 1.16,
-      "ml_away": 5.3,
-      "decision": "rejected"
-    },
-    {
-      "match": "Brooklyn Nets vs Oklahoma City Thunder",
-      "reason": "OKC ML 1.04 far below target range (min 1.70). Brooklyn ML 11.50 far above target range (max 2.50). Both teams confirmed as expected result — no value odds available. No spreads/totals (advanced stats unavailable).",
-      "ml_home": 11.5,
-      "ml_away": 1.04,
-      "decision": "rejected"
-    },
-    {
-      "match": "Indiana Pacers vs Portland Trail Blazers",
-      "reason": "Indiana ML 1.17 below target range. Portland ML 5.20 above target range. Damian Lillard OUT (franchise player) — Portland ML prohibited. No viable pick in range.",
-      "ml_home": 1.17,
-      "ml_away": 5.2,
-      "decision": "rejected"
-    },
-    {
-      "match": "Chicago Bulls vs Toronto Raptors",
-      "reason": "Chicago ML 1.33 below target range (min 1.70). Toronto ML 3.40 above target range (max 2.50). Both outside ML target range of 1.70–2.50. No viable pick.",
-      "ml_home": 1.33,
-      "ml_away": 3.4,
-      "decision": "rejected"
-    },
-    {
-      "match": "Minnesota Timberwolves vs Utah Jazz",
-      "reason": "Minnesota ML 1.12 far below target range. Utah ML 6.40 far above target range. Utah confirmed tanking team with multiple stars OUT (JJJ, Kessler, K. George). No viable pick in range.",
-      "ml_home": 1.12,
-      "ml_away": 6.4,
-      "decision": "rejected"
-    },
-    {
-      "match": "New Orleans Pelicans vs LA Clippers",
-      "reason": "Both sides nominally in range (Clippers 1.77, Pelicans 2.08) but dual uncertainty disqualifies both. Kawhi Leonard QUESTIONABLE (franchise player) — Clippers ML confidence drops to ~48, below ML floor 50, EV = -0.15. Dejounte Murray QUESTIONABLE — Pelicans ML confidence drops to ~42, below ML floor 50, EV = -0.13. No pick survives EV/confidence requirements with dual GTD franchise-level players.",
-      "ml_home": 2.08,
-      "ml_away": 1.77,
-      "decision": "no_edge"
-    },
-    {
-      "match": "Dallas Mavericks vs Atlanta Hawks",
-      "reason": "LINE ANOMALY: Dallas Mavericks (confirmed tanking team, 23-46, L10: 2-8) priced as home favourite at 1.30, which is ≤ 1.35 threshold. Per skills rules: 'Tank-tier team priced as favourite at ≤ 1.35' triggers anomaly flag. Do NOT draft. Flagged for Commit to investigate. Atlanta ML at 3.60 also outside target range (max 2.50).",
-      "ml_home": 1.3,
-      "ml_away": 3.6,
-      "decision": "anomaly"
-    },
-    {
-      "match": "Memphis Grizzlies vs Denver Nuggets",
-      "reason": "Memphis ML 5.75 above target range (max 2.50). Denver ML 1.15 below target range (min 1.70). Memphis confirmed tanking team with Ja Morant OUT (franchise player). No viable pick in range.",
-      "ml_home": 5.75,
-      "ml_away": 1.15,
-      "decision": "rejected"
-    }
-  ],
+  "rejected_games": [],
   "late_scout_rejections": []
 }
