@@ -1,7 +1,7 @@
 ---
-version: 5
-updated_at: 2026-03-18T12:00:00.000000+00:00
-updated_by: manual_review
+version: 6
+updated_at: 2026-03-18T20:27:30.142708+00:00
+updated_by: analyst_2026-03-18
 llm: claude-sonnet-4-6
 ---
 
@@ -84,26 +84,68 @@ Franchise player Questionable/GTD → confidence -10, stake -20%. Flag explicitl
 Franchise player Day-To-Day → confidence -5, stake -10%.
 If BOTH teams have franchise player uncertainty → evaluate net impact.
 
+NOTE: All absences below are marked [roster only] — confirmed on ESPN roster but NOT corroborated by the NBA official injury PDF this session. Treat all as probable OUT but verify against NBA official PDF before drafting any pick.
+
 Known absences (only apply when that team is IN the game being evaluated):
-  - Anthony Davis (Lakers): OUT — only relevant in Lakers games
-  - Alex Sarr (Wizards): OUT — only relevant in Wizards games
-  - Leaky Black (Wizards): OUT — only relevant in Wizards games
-  - Kyshawn George (Wizards): OUT — only relevant in Wizards games
-  - D'Angelo Russell (Lakers): OUT — only relevant in Lakers games
+  Oklahoma City Thunder:
+    - Jalen Williams (G): OUT [roster only] — significant; OKC top seed, verify before any OKC pick
+    - Isaiah Hartenstein (C): OUT [roster only]
+    - Luguentz Dort (G): OUT [roster only]
+    - Branden Carlson (C): OUT [roster only]
+    - Thomas Sorber (C): OUT [roster only]
+  San Antonio Spurs:
+    - David Jones Garcia (F): OUT [roster only]
+  Detroit Pistons:
+    - Cade Cunningham (G): OUT [roster only] — franchise anchor; do NOT bet Detroit to win if confirmed
+    - Isaiah Stewart (F): OUT [roster only]
+  New York Knicks:
+    - Miles McBride (G): OUT [roster only]
+  Boston Celtics:
+    - Nikola Vucevic (C): OUT [roster only]
+  Los Angeles Lakers:
+    - Maxi Kleber (F): OUT [roster only]
+  Minnesota Timberwolves:
+    - Anthony Edwards (G): OUT [roster only] — franchise anchor; do NOT bet Minnesota to win if confirmed
+    - Naz Reid (C): OUT [roster only]
+  Denver Nuggets:
+    - Aaron Gordon (F): OUT [roster only]
+    - Peyton Watson (G): OUT [roster only]
+  Cleveland Cavaliers:
+    - Jarrett Allen (C): OUT [roster only]
+    - Craig Porter Jr. (G): OUT [roster only]
+    - Tyrese Proctor (G): OUT [roster only]
+  Houston Rockets:
+    - Fred VanVleet (G): OUT [roster only]
+    - Steven Adams (C): OUT [roster only]
+    - Jae'Sean Tate (F): OUT [roster only]
+  Phoenix Suns:
+    - Dillon Brooks (F): OUT [roster only]
+    - Mark Williams (C): OUT [roster only]
+  Toronto Raptors:
+    - Chucky Hepburn (G): OUT [roster only]
+    - Collin Murray-Boyles (F): OUT [roster only]
+  Washington Wizards:
+    - Leaky Black (F): OUT [roster only]
+    - Anthony Davis (F): OUT [roster only]
+    - Kyshawn George (F): OUT [roster only]
+    - D'Angelo Russell (G): OUT [roster only]
+    - Cam Whitmore (F): OUT [roster only]
 
 Franchise players requiring per-session injury verification (check NBA official PDF every run):
-  - Cade Cunningham (Detroit Pistons) — verify before ANY pick involving Detroit only.
+  - Jalen Williams (OKC) — OKC is #1 seed; his absence materially changes any OKC line.
+  - Cade Cunningham (Detroit) — franchise anchor; verify before ANY pick involving Detroit.
+  - Anthony Edwards (Minnesota) — franchise anchor; verify before ANY pick involving Minnesota.
   - Any top-5 record team — verify injury status before drafting picks involving them.
 
 ## SECTION:tanking_teams
 Confirmed tanking-tier teams (all three criteria met):
-  - Washington Wizards: 16-51, L10: 0-10, streak: L12 — clearest tank; multiple stars OUT
-  - Sacramento Kings: 18-51, L10: 5-5 — worst record in West; L10 improvement is anomaly
+  - Washington Wizards: 16-52, L10: 0-10, streak: L13 — clearest tank; five players OUT including D'Angelo Russell and Cam Whitmore
+  - Sacramento Kings: 18-52, L10: 5-5, streak: L1 — worst record in West; L10 improvement anomaly but record confirms tank-tier
   - Brooklyn Nets: 17-51, L10: 2-8, streak: L4 — bottom East
   - Utah Jazz: 20-48, L10: 2-8, streak: L3
   - Dallas Mavericks: 23-46, L10: 2-8, streak: L1 — confirmed tank
-  - Memphis Grizzlies: 23-44, L10: 2-8, streak: L8 — deepening
-  - Milwaukee Bucks: 28-39, L10: 2-8, streak: W1 — verify pick ownership before each bet
+  - Memphis Grizzlies: 23-44, L10: 2-8, streak: L8 — deepening tank; avoid backing at any price
+  - Milwaukee Bucks: 28-40, L10: 2-8, streak: L1 — verify pick ownership before each bet
 
 Tanking criteria (ALL THREE must be met):
   (a) Team owns its own 2026 draft pick
@@ -114,15 +156,20 @@ When betting AGAINST tanking teams: edge-positive.
 When betting ON tanking teams: require odds ≥ 2.20 and strong situational reason.
 
 Emerging tank-watch:
-  - Chicago Bulls (28-40, L10: 4-6) — monitor play-in race
-  - New Orleans Pelicans (23-46, L10: 6-4) — record tank-tier but L10 shows fight
-  - Golden State Warriors (33-35, L10: 3-7) — play-in bubble but fading
+  - Chicago Bulls (28-40, L10: 4-6, W1) — play-in fringe; not confirmed tank but fading
+  - New Orleans Pelicans (23-46, L10: 6-4, W1) — record is tank-tier but L10 shows genuine fight; use caution
+  - Golden State Warriors (33-35, L10: 3-7, W1) — play-in bubble but trending down
 
 Hot streaks (may create line inefficiencies):
-  - Atlanta Hawks (37-31, L10: 10-0, W10) — extreme regression risk; verify odds before committing
-  - OKC Thunder (53-15, L10: 9-1) — efficiently priced
-  - San Antonio Spurs (50-18, L10: 8-2) — efficiently priced
-  - Los Angeles Lakers (43-25, L10: 9-1) — Davis+Russell OUT; spreads/totals only
+  - Atlanta Hawks (37-31, L10: 10-0, W10) — EXTREME regression risk; .544 overall W% implies ~.500 true talent; apply HOT STREAK FADE RULE — check opponent odds ≥ 1.80 explicitly every session
+  - OKC Thunder (54-15, L10: 9-1, W9) — elite tier, efficiently priced; NOTE: Jalen Williams OUT [roster only] — verify before drafting OKC picks
+  - San Antonio Spurs (51-18, L10: 8-2, W3) — efficiently priced
+  - Los Angeles Lakers (43-25, L10: 9-1, W6) — hot streak but Maxi Kleber OUT; monitor for star rest decisions given seeding comfort
+
+Cold streaks (potential fade targets or value on the team itself if odds inflated):
+  - Memphis Grizzlies (23-44, L10: 2-8, L8) — tank confirmed; avoid backing
+  - Dallas Mavericks (23-46, L10: 2-8, L1) — tank confirmed
+  - Washington Wizards (16-52, L10: 0-10, L13) — avoid backing under any circumstances
 
 ## SECTION:b2b_rules
 B2B and rest day rules — apply numeric confidence adjustments:
