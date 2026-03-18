@@ -107,17 +107,9 @@ Do not add any text after the closing </scout_report> tag.
 </first_game_time>
 
 <rejected_games>
-[REQUIRED — JSON array for EVERY game NOT drafted. Include ALL rejected/no-edge games.
-Format: {{
-  "match": "HOME vs AWAY",
-  "reason": "brief reason (odds out of range / line anomaly / no edge / etc)",
-  "ml_home": 1.85,
-  "ml_away": 2.10,
-  "decision": "rejected" or "anomaly" or "no_edge" or "deferred"
-}}
-ml_home/ml_away = decimal odds available, or null if none.
-decision values: "anomaly" for line anomalies, "deferred" for no-odds games, "rejected" for odds out of range, "no_edge" for no value found.
-If you drafted ALL games use []. Otherwise every non-drafted game MUST appear here.]
+[REQUIRED — JSON array for EVERY game NOT drafted.
+Format: {{"match": "HOME vs AWAY", "reason": "brief", "ml_home": 1.85, "ml_away": 2.10, "decision": "rejected|anomaly|no_edge|deferred"}}
+Use [] only if ALL games were drafted. Every non-drafted game MUST appear here.]
 </rejected_games>
 
 <scout_report>
@@ -264,7 +256,7 @@ def run(store) -> None:
             SCOUT_SYSTEM,
             _build_scout_prompt(skills, games_str, odds_str, injuries_str,
                                  standings_str, adv_str, injuries_source, state, today),
-            max_tokens=8000,
+            max_tokens=12000,
             agent="scout",
         )
         raw = llm_result.text
