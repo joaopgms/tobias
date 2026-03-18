@@ -1,7 +1,7 @@
 ---
-version: 4
-updated_at: 2026-03-18T00:00:00.000000+00:00
-updated_by: manual_training
+version: 5
+updated_at: 2026-03-18T12:00:00.000000+00:00
+updated_by: manual_review
 llm: claude-sonnet-4-6
 ---
 
@@ -24,15 +24,20 @@ Priority order — follow exactly, stop early if game is disqualified:
    If anomaly → do NOT draft. Note in scout_report. Flag for Commit to investigate.
 
 1. NetRtg L15 — most predictive short-term signal
-2. Back-to-back + schedule density (games_l7)
-3. Franchise player injury status
+2. Back-to-back + schedule density (games_l7) — see b2b_rules for numeric adjustments
+3. Franchise player injury status — see franchise_player_rules
 4. Play-in / playoff race motivation
+   LATE SEASON FLAG (March onwards): teams locked into seeding may rest stars;
+   teams fighting for play-in often overperform. Check seeding context explicitly.
 5. L10 record (meaningful sample)
-6. Home/away splits
-7. DefRtg gap — if > 8 points between teams, significant spread edge signal
-8. Pace — if both teams Pace > 100, lean Over; if both < 97, lean Under
-9. H2H last 3 meetings
-10. Season NetRtg (baseline context)
+6. Home court advantage — worth ~2-3 points (~0.10-0.15 odds). Factor into close matchups
+   where NetRtg gap is < 3 points between teams.
+7. Home/away splits
+8. DefRtg gap — if > 8 points between teams, significant spread edge signal
+9. Pace — if both teams Pace > 100, lean Over; if both < 97, lean Under
+10. H2H last 3 meetings — only meaningful if games are from current or last season.
+    Ignore H2H older than 12 months. Books already price H2H in — use as tiebreaker only.
+11. Season NetRtg (baseline context)
 
 ## SECTION:ev_requirement
 Every drafted pick MUST satisfy: EV = (confidence/100 × odds) - 1 ≥ 0.05 (5% minimum EV).
@@ -42,7 +47,8 @@ EV < 0.05 → do NOT draft regardless of confidence tier.
 
 ## SECTION:market_rules
 MONEYLINE (ML):
-  Confidence floor: 40. EV ≥ 0.05. Odds 1.70–2.50.
+  Confidence floor: 50 (raised from 40 — conf 40 at 1.70 odds = negative EV -0.32, no genuine edge).
+  EV ≥ 0.05. Odds 1.70–2.50.
 
 SPREAD (ATS):
   Confidence floor: 60 (higher bar — half-point margins matter).
@@ -50,7 +56,7 @@ SPREAD (ATS):
   Strong spread signals:
     - B2B road team vs rested home (cover rate < 45% historically)
     - DefRtg gap > 8 points (elite defence vs poor offence)
-    - Tank team as underdog covering large spread (tankers don't cover)
+    - Tank team as large underdog (tankers don't cover spreads)
     - NetRtg L15 gap > 6 points
   Avoid spreads when:
     - Injury feed coverage low (< 10 teams reporting) — undisclosed absences corrupt lines
@@ -110,18 +116,32 @@ Hot streaks (may create line inefficiencies):
   - Los Angeles Lakers (43-25, L10: 9-1) — Davis+Russell OUT; spreads/totals only
 
 ## SECTION:b2b_rules
-B2B teams cover the spread less than 45% of the time historically.
-B2B vs rested = clear edge especially for spreads.
-Heavy load (4+ games in 7 days) = HIGH FATIGUE — amplifies B2B impact.
-5+ games in 7 days = EXTREME FATIGUE regardless of rest days.
-B2B + away + facing top-10 DefRtg team = strong fade signal.
+B2B and rest day rules — apply numeric confidence adjustments:
+
+Rest days impact (apply to the team with fewer rest days):
+  0 rest days (true B2B):        confidence -20, spread cover rate < 45%
+  1 rest day (short turnaround): confidence -10
+  2+ rest days:                  no adjustment — fully recovered
+
+Amplifiers (stack with rest day penalty):
+  Away game:                     additional -5
+  4+ games in 7 days (heavy):   additional -10
+  5+ games in 7 days (extreme): additional -15 (regardless of rest days)
+  Facing top-10 DefRtg team:     additional -10
+
+Examples:
+  B2B road team vs rested home = -20 (B2B) -5 (away) = -25 total confidence adjustment
+  B2B road, heavy schedule, elite defence = -20 -5 -10 -10 = -45 → likely below threshold
+
+These adjustments are applied to the favoured team's base confidence.
+B2B edge is most reliable for spread bets (cover rate impact is measurable).
 
 ## SECTION:confidence_staking
 85–100 Elite: up to 30% of bankroll
 70–84 High: 20–25%
 55–69 Medium: 15–20%
-40–54 Speculative: 10%
-0–39: Do not draft
+50–54 Speculative: 10%
+0–49: Do not draft
 Max 70% of bankroll across all picks per day. Always keep 30% in reserve.
 EV requirement overrides confidence tier — EV < 0.05 means no bet regardless.
 

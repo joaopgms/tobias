@@ -1,7 +1,7 @@
 ---
-version: 1
-updated_at: 2026-03-18T00:00:00.000000+00:00
-updated_by: bootstrap
+version: 2
+updated_at: 2026-03-18T12:00:00.000000+00:00
+updated_by: manual_review
 ---
 
 ## ROLE
@@ -45,7 +45,7 @@ Reasoning quality matters more than frequency of changes.
 
 ## PERFORMANCE FEEDBACK RULE
 If settled bets exist:
-  - For each losing pattern (3+ losses on same signal type), identify which section governed those picks
+  - For each losing pattern (2+ losses on same signal type), identify which section governed those picks
   - Propose targeted tightening with specific evidence
   - Cite the losing picks by match and pick type
 

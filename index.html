@@ -446,6 +446,7 @@
       <div class="agent-meta-row"><span class="agent-meta-label">Model</span><span class="agent-meta-val" id="commitLlm">-</span></div>
       <div class="agent-meta-row"><span class="agent-meta-label">Last run</span><span class="agent-meta-val" id="commitTime">-</span></div>
       <div class="agent-meta-row"><span class="agent-meta-label">First game</span><span class="agent-meta-val" id="firstGameTime">-</span></div>
+      <div class="agent-meta-row"><span class="agent-meta-label">Commit at</span><span class="agent-meta-val" id="commitAtTime" style="color:var(--burg);font-weight:700">-</span></div>
     </div>
     <div class="agent-card">
       <div class="agent-card-header"><span class="agent-name">✅ Setter</span><span class="agent-pill done" id="settlerPill"><span class="agent-dot done"></span><span>Daily</span></span></div>
@@ -962,6 +963,9 @@ function renderAgents(){
   // First game time
   const fgt=ST.first_game_time;
   document.getElementById('firstGameTime').textContent = fgt ? fmt(fgt) : '-';
+  const commitAtDt = fgt ? new Date(new Date(fgt).getTime() - 30*60*1000) : null;
+  const commitAtEl = document.getElementById('commitAtTime');
+  if(commitAtEl) commitAtEl.textContent = commitAtDt ? fmt(commitAtDt.toISOString()) : '-';
   // Next run timestamps
   const elAN=document.getElementById('analystNextRun'); if(elAN) elAN.textContent=nextRunAt(11);
   const elSC=document.getElementById('scoutNextRun');   if(elSC) elSC.textContent=nextRunAt(14);
@@ -1325,6 +1329,15 @@ function renderAudit(){
       if(!patches.length&&e.no_change_reason)body+=`<div class="audit-no-change">No changes: ${e.no_change_reason}</div>`;
       body+=`<div class="audit-pnl-row"><span class="audit-kv">Bankroll: <strong>€${(e.bankroll||0).toFixed(2)}</strong></span><span class="audit-kv">P&L: <strong>€${(e.net_pnl||0).toFixed(2)}</strong></span>${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>`;
     }else if(ag==='scout'){
+      // Injuries source badge
+      const injSrc = e.injuries_source||'';
+      const injBadge = injSrc
+        ? (injSrc==='nba_official'
+            ? `<span class="audit-kv" style="color:var(--green)">🏥 <strong>NBA official PDF</strong></span>`
+            : injSrc==='espn'
+            ? `<span class="audit-kv" style="color:var(--yellow)">⚠️ <strong>ESPN fallback</strong></span>`
+            : `<span class="audit-kv" style="color:var(--muted)">🏥 <strong>${injSrc}</strong></span>`)
+        : '';
       const hasRetries = typeof e.retries !== 'undefined';
       const retriesBadge = hasRetries
         ? (e.retries>0
@@ -1342,7 +1355,7 @@ function renderAudit(){
           oddsDiag = `<div style="font-size:.68rem;color:var(--yellow);margin-top:6px">⚠️ No live odds available — picks deferred</div>`;
         }
       }
-      body+=`<div class="audit-pnl-row"><span class="audit-kv">Picks: <strong>${e.draft_count||0}</strong></span><span class="audit-kv">Odds: <strong>${e.odds_source||'-'}</strong></span><span class="audit-kv">Bankroll: <strong>€${(e.bankroll||0).toFixed(2)}</strong></span>${retriesBadge}${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>${oddsDiag}`;
+      body+=`<div class="audit-pnl-row"><span class="audit-kv">Picks: <strong>${e.draft_count||0}</strong></span><span class="audit-kv">Odds: <strong>${e.odds_source||'-'}</strong></span><span class="audit-kv">Bankroll: <strong>€${(e.bankroll||0).toFixed(2)}</strong></span>${injBadge}${retriesBadge}${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>${oddsDiag}`;
       if((e.picks||[]).length)body+=(e.picks||[]).map(p=>`<div class="audit-patch"><span class="patch-section">${getTeam((p.match||'').split(' vs ')[0]).abbr}</span><span class="patch-reason">${p.pick} @ ${p.odds} · conf=${p.confidence}</span></div>`).join('');
       if(e.error)body+=`<div style="color:var(--burg);font-size:.72rem;margin-top:6px">⚠️ ${e.error}</div>`;
     }else if(ag==='commit'){
