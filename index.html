@@ -1322,13 +1322,15 @@ function renderAudit(){
       if(igCount) summaryParts.push(`${igCount} gap${igCount>1?'s':''}`);
       const summaryText = summaryParts.length ? summaryParts.join(' · ') : 'No changes this run';
       const entryJson = JSON.stringify(e).replace(/\\/g,'\\\\').replace(/"/g,'&quot;');
-      // KPI row first
-      body+=`<div class="audit-pnl-row"><span class="audit-kv">Bankroll: <strong>€${(e.bankroll||0).toFixed(2)}</strong></span><span class="audit-kv">P&L: <strong>€${(e.net_pnl||0).toFixed(2)}</strong></span>${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>`;
-      // Summary + Full report button inline below KPI
-      body+=`<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:6px">
+      // Summary + Full report button first, then KPI row below
+      body+=`<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
         <span style="font-size:.70rem;color:var(--muted)">${summaryText}</span>
-        <button onclick="openAnalystModal(JSON.parse(this.dataset.entry))" data-entry="${entryJson}" style="font-size:.62rem;font-weight:700;letter-spacing:.6px;text-transform:uppercase;background:var(--burg-soft);color:var(--burg);border:1px solid var(--burg);border-radius:var(--r-sm);padding:4px 10px;cursor:pointer;font-family:inherit;white-space:nowrap">📋 Full report →</button>
+        <button onclick="openAnalystModal(JSON.parse(this.dataset.entry))" data-entry="${entryJson}" style="font-size:.62rem;font-weight:700;letter-spacing:.6px;text-transform:uppercase;background:var(--burg-soft);color:var(--burg);border:1px solid var(--burg);border-radius:var(--r-sm);padding:3px 9px;cursor:pointer;font-family:inherit;white-space:nowrap">📋 Full report →</button>
       </div>`;
+      // KPI row below
+      body+=`<div class="audit-pnl-row"><span class="audit-kv">Bankroll: <strong>€${(e.bankroll||0).toFixed(2)}</strong></span><span class="audit-kv">P&L: <strong>€${(e.net_pnl||0).toFixed(2)}</strong></span>${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>`;
+      // KPI row below
+      body+=`<div class="audit-pnl-row" style="margin-top:4px"><span class="audit-kv">Bankroll: <strong>€${(e.bankroll||0).toFixed(2)}</strong></span><span class="audit-kv">P&L: <strong>€${(e.net_pnl||0).toFixed(2)}</strong></span>${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>`;
         }else if(ag==='scout'){
       // Injuries source badge
       const injSrc = e.injuries_source||'';
