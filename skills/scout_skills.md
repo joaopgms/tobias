@@ -1,6 +1,6 @@
 ---
-version: 6
-updated_at: 2026-03-18T20:27:30.142708+00:00
+version: 7
+updated_at: 2026-03-18T20:34:29.809172+00:00
 updated_by: analyst_2026-03-18
 llm: claude-sonnet-4-6
 ---
@@ -88,7 +88,7 @@ NOTE: All absences below are marked [roster only] — confirmed on ESPN roster b
 
 Known absences (only apply when that team is IN the game being evaluated):
   Oklahoma City Thunder:
-    - Jalen Williams (G): OUT [roster only] — significant; OKC top seed, verify before any OKC pick
+    - Jalen Williams (G): OUT [roster only] — franchise anchor; OKC top seed, verify before any OKC pick
     - Isaiah Hartenstein (C): OUT [roster only]
     - Luguentz Dort (G): OUT [roster only]
     - Branden Carlson (C): OUT [roster only]
@@ -164,7 +164,8 @@ Hot streaks (may create line inefficiencies):
   - Atlanta Hawks (37-31, L10: 10-0, W10) — EXTREME regression risk; .544 overall W% implies ~.500 true talent; apply HOT STREAK FADE RULE — check opponent odds ≥ 1.80 explicitly every session
   - OKC Thunder (54-15, L10: 9-1, W9) — elite tier, efficiently priced; NOTE: Jalen Williams OUT [roster only] — verify before drafting OKC picks
   - San Antonio Spurs (51-18, L10: 8-2, W3) — efficiently priced
-  - Los Angeles Lakers (43-25, L10: 9-1, W6) — hot streak but Maxi Kleber OUT; monitor for star rest decisions given seeding comfort
+  - Los Angeles Lakers (43-25, L10: 9-1, W6) — hot streak; Maxi Kleber OUT; monitor for star rest decisions given seeding comfort
+  - Detroit Pistons (49-19, L10: 5-5, W1) — NOTE: Cade Cunningham OUT [roster only]; hot record but anchor absent materially changes value
 
 Cold streaks (potential fade targets or value on the team itself if odds inflated):
   - Memphis Grizzlies (23-44, L10: 2-8, L8) — tank confirmed; avoid backing
