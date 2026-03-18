@@ -3,7 +3,7 @@ agents/commit.py
 Tobias — Commit Agent (self-gating, every 30 min)
 
 Responsibilities:
-  1. Self-gate: only run when now >= first_game_time - 15min
+  1. Self-gate: only run when now >= first_game_time - 30min
   2. Load commit_skills.md (Analyst-maintained criteria)
   3. Fetch live Betano odds for line movement check
   4. Fetch fresh injury reports for anchor player check
@@ -187,7 +187,7 @@ def should_run(state: dict) -> bool:
         return False
     try:
         game_time = datetime.fromisoformat(fgt.replace("Z", "+00:00"))
-        return datetime.now(timezone.utc) >= game_time - timedelta(minutes=15)
+        return datetime.now(timezone.utc) >= game_time - timedelta(minutes=30)
     except Exception:
         return False
 
