@@ -1598,11 +1598,21 @@ function buildGameCard(game, idx, prefix) {
     if(game.stake) chipsHtml+=`<span class="report-chip"><span>Stake</span>€${(+game.stake).toFixed(0)}</span>`;
     if(game.potential_return) chipsHtml+=`<span class="report-chip"><span>Pot.</span>€${(+game.potential_return).toFixed(0)}</span>`;
     if(conf) chipsHtml+=`<span class="conf-pill ${CC(conf)}">${conf}/100 ${CL(conf)}</span>`;
+    // Full market odds row
+    const mlH=game.ml_home??game.ml_home_dec; const mlA=game.ml_away??game.ml_away_dec;
+    const spH=game.spread_odds_home; const spA=game.spread_odds_away; const spPt=game.spread;
+    const ovO=game.over_odds; const unO=game.under_odds; const ouPt=game.over_under;
+    if(mlH||mlA) chipsHtml+=`<span class="report-chip" style="opacity:.75;font-size:.63rem"><span>ML</span>${mlH??'?'}/${mlA??'?'}</span>`;
+    if(spPt&&(spH||spA)) chipsHtml+=`<span class="report-chip" style="opacity:.75;font-size:.63rem"><span>ATS ${spPt>0?'+':''}${spPt}</span>${spH??'?'}/${spA??'?'}</span>`;
+    if(ouPt&&(ovO||unO)) chipsHtml+=`<span class="report-chip" style="opacity:.75;font-size:.63rem"><span>O/U ${ouPt}</span>O:${ovO??'?'}/U:${unO??'?'}</span>`;
   } else {
     // Rejected game — show ML odds if available
-    if(game.ml_home!=null) chipsHtml+=`<span class="report-chip" style="opacity:.7"><span>Home ML</span>${(+game.ml_home).toFixed(2)}</span>`;
-    if(game.ml_away!=null) chipsHtml+=`<span class="report-chip" style="opacity:.7"><span>Away ML</span>${(+game.ml_away).toFixed(2)}</span>`;
-    // decision badge
+    const mlH2=game.ml_home; const mlA2=game.ml_away;
+    const spH2=game.spread_odds_home; const spA2=game.spread_odds_away; const spPt2=game.spread;
+    const ovO2=game.over_odds; const unO2=game.under_odds; const ouPt2=game.over_under;
+    if(mlH2!=null||mlA2!=null) chipsHtml+=`<span class="report-chip" style="opacity:.7;font-size:.63rem"><span>ML</span>${mlH2!=null?(+mlH2).toFixed(2):'?'}/${mlA2!=null?(+mlA2).toFixed(2):'?'}</span>`;
+    if(spPt2&&(spH2||spA2)) chipsHtml+=`<span class="report-chip" style="opacity:.7;font-size:.63rem"><span>ATS ${spPt2>0?'+':''}${spPt2}</span>${spH2!=null?(+spH2).toFixed(2):'?'}/${spA2!=null?(+spA2).toFixed(2):'?'}</span>`;
+    if(ouPt2&&(ovO2||unO2)) chipsHtml+=`<span class="report-chip" style="opacity:.7;font-size:.63rem"><span>O/U ${ouPt2}</span>O:${ovO2!=null?(+ovO2).toFixed(2):'?'}/U:${unO2!=null?(+unO2).toFixed(2):'?'}</span>`;
     const decisionMap={'anomaly':'⚠️ Anomaly','deferred':'⏳ Deferred','no_edge':'— No Edge','rejected':'❌ Rejected'};
     const decLabel=decisionMap[game.decision]||'';
     if(decLabel) chipsHtml+=`<span class="report-chip" style="opacity:.7;font-size:.63rem">${decLabel}</span>`;
