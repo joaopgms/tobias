@@ -1312,23 +1312,23 @@ function renderAudit(){
     const agIcon=ag==='analyst'?'🧠':ag==='scout'?'🔍':ag==='commit'?'🎯':'✅';
     let body='';
     if(ag==='analyst'){
-      const patches=[...(e.scout_patches||[]),(e.commit_patches||[])];
-      if(patches.length){
-        body+=`<div style="margin-bottom:6px;font-size:.68rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px">${patches.length} section${patches.length>1?'s':''} updated</div>`;
-        body+=patches.map((p,pi)=>{
-          // Skip if no section name and no reason (malformed entry)
-          if(!(p.section||'').trim() && !(p.reason||'').trim()) return '';
-          // Only show diff if before/after have enough content (not truncated)
-          const hasDiff = (p.before||'').length > 30 && (p.after||'').length > 30;
-          const diffHtml = hasDiff ? simpleDiff(p.before||'', p.after||'', p.section||'?', entries.indexOf(e)*100+pi) : '';
-          const sectionLabel = (p.section||'').toLowerCase().replace(/_/g,' ');
-          return `<div class="audit-patch"><span class="patch-section">${sectionLabel||'?'}</span><span class="patch-reason">${p.reason||''}</span></div>${diffHtml}`;
-        }).join('');
-      }
-      if(e.notes) body+=`<div class="audit-notes">📝 ${e.notes}</div>`;
-      if(!patches.length&&e.no_change_reason)body+=`<div class="audit-no-change">No changes: ${e.no_change_reason}</div>`;
-      body+=`<div class="audit-pnl-row"><span class="audit-kv">Bankroll: <strong>€${(e.bankroll||0).toFixed(2)}</strong></span><span class="audit-kv">P&L: <strong>€${(e.net_pnl||0).toFixed(2)}</strong></span>${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>`;
-    }else if(ag==='scout'){
+      // Compact summary + CTA button
+      const spCount=(e.scout_patches||[]).length;
+      const cpCount=(e.commit_patches||[]).length;
+      const igCount=(e.intelligence_gaps||[]).length;
+      const summaryParts=[];
+      if(spCount) summaryParts.push(`${spCount} scout patch${spCount>1?'es':''}`);
+      if(cpCount) summaryParts.push(`${cpCount} commit patch${cpCount>1?'es':''}`);
+      if(igCount) summaryParts.push(`${igCount} gap${igCount>1?'s':''}`);
+      const summaryText = summaryParts.length ? summaryParts.join(' · ') : 'No changes this run';
+      const entryJson = JSON.stringify(e).replace(/\\/g,'\\\\').replace(/"/g,'&quot;');
+      body+=`<div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+        <span style="font-size:.70rem;color:var(--muted)">${summaryText}</span>
+        <button onclick="openAnalystModal(JSON.parse(this.dataset.entry))" data-entry="${entryJson}" style="font-size:.62rem;font-weight:700;letter-spacing:.6px;text-transform:uppercase;background:var(--burg-soft);color:var(--burg);border:1px solid var(--burg);border-radius:var(--r-sm);padding:4px 10px;cursor:pointer;font-family:inherit;white-space:nowrap">📋 Full report →</button>
+      </div>`;
+      // KPI row
+      body+=`<div class="audit-pnl-row" style="margin-top:6px"><span class="audit-kv">Bankroll: <strong>€${(e.bankroll||0).toFixed(2)}</strong></span><span class="audit-kv">P&L: <strong>€${(e.net_pnl||0).toFixed(2)}</strong></span>${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>`;
+        }else if(ag==='scout'){
       // Injuries source badge
       const injSrc = e.injuries_source||'';
       const injBadge = injSrc
