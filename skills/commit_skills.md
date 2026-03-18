@@ -62,6 +62,16 @@ Cancel a draft pick if ANY of:
 - Total exposure would exceed 70% of bankroll after all picks
 - EV recalculated at current odds falls below 0.05
 
+## SECTION:data_quality_rules
+INJURY FEED QUALITY GATES — same as Scout, applied at commit time:
+
+Source: nba_official → normal rules apply.
+Source: espn fallback → confidence CAP 50, spreads/totals BANNED.
+  If a draft pick has confidence > 50 and injury source is ESPN → reduce to 50 before confirming.
+  If a draft pick is a spread or total and injury source is ESPN → CANCEL, reason: "ESPN fallback — spread/total too risky without full injury data."
+Source: espn + < 5 teams → cancel ALL picks, reason: "Critically incomplete injury data at commit time."
+Source: none → cancel ALL picks.
+
 ## SECTION:commit_staking
 Apply exact same confidence/staking tiers as scout_skills confidence_staking section.
 Recalculate stake based on CURRENT bankroll at commit time (not scout time).

@@ -44,7 +44,8 @@ The system will FAIL and no picks will be saved if these tags are missing."""
 
 def _build_scout_prompt(skills: str, games_text: str, odds_text: str,
                          injuries_text: str, standings_text: str,
-                         advanced_stats: str, state: dict, today: str) -> str:
+                         advanced_stats: str, injuries_source: str,
+                         state: dict, today: str) -> str:
     bankroll = state["bankroll"]
     season   = state["season"]
     game_n   = state["game"]
@@ -62,6 +63,7 @@ def _build_scout_prompt(skills: str, games_text: str, odds_text: str,
 {odds_text}
 
 ## INJURY REPORTS
+Source: {injuries_source}
 {injuries_text}
 
 ## STANDINGS
@@ -256,7 +258,7 @@ def run(store) -> None:
         llm_result = call_llm_full(
             SCOUT_SYSTEM,
             _build_scout_prompt(skills, games_str, odds_str, injuries_str,
-                                 standings_str, adv_str, state, today),
+                                 standings_str, adv_str, injuries_source, state, today),
             max_tokens=8000,
             agent="scout",
         )
@@ -282,7 +284,7 @@ def run(store) -> None:
     if draft_raw is None:
         log.error("Scout: <draft_picks> tag missing — attempting retries")
         prompt_full = _build_scout_prompt(skills, games_str, odds_str, injuries_str,
-                                           standings_str, adv_str, state, today)
+                                           standings_str, adv_str, injuries_source, state, today)
         prompt_minimal = (
             f"You are the Scout agent. Today: {today} | Bankroll: €{state['bankroll']:.2f}\n"
             f"Output ONLY these XML tags — nothing else before or after:\n\n"
@@ -410,6 +412,7 @@ def run(store) -> None:
                          for p in draft_picks],
                   first_game_time=fgt or "",
                   odds_source=odds[0].get("odds_source", "?") if odds else "none",
+                  injuries_source=injuries_source,
                   bankroll=state["bankroll"],
                   retry_count=retry_count,
                   odds_failures=odds_failures,
@@ -439,7 +442,8 @@ def run(store) -> None:
 def _append_audit(store, ts, llm, state, history, report_raw="",
                   draft_count=0, picks=None,
                   first_game_time="", odds_source="", bankroll=0, error="",
-                  retry_count=0, odds_failures=None, llm_meta=None):
+                  retry_count=0, odds_failures=None, injuries_source="unknown",
+                  llm_meta=None):
     entry = {
         "ts":               ts,
         "agent":            "scout",
@@ -449,6 +453,7 @@ def _append_audit(store, ts, llm, state, history, report_raw="",
         "first_game_time":  first_game_time,
         "odds_source":      odds_source,
         "odds_failures":    odds_failures or [],
+        "injuries_source":  injuries_source,
         "bankroll":         round(bankroll, 2),
         "error":            error,
         "retries":          retry_count,

@@ -130,3 +130,27 @@ Draft only picks with genuine edge (confidence ≥ floor for market type AND EV 
 0 or 1 picks is a valid and good result. Never force picks.
 Flag line anomalies for Commit — deferred picks may become valid by tip-off.
 When advanced stats unavailable, do not bet spreads or totals.
+
+## SECTION:data_quality_rules
+INJURY FEED QUALITY GATES — apply before any pick is drafted:
+
+Source: nba_official (PDF)
+  → Full 30-team coverage. Normal confidence rules apply.
+
+Source: espn (fallback)
+  → Partial coverage. Unknown injury status for most teams.
+  → Confidence CAP: 50 on ALL picks regardless of tier.
+  → Spreads and totals BANNED — injury uncertainty corrupts line analysis.
+  → ML only. Flag in scout_report: "ESPN fallback — confidence capped at 50."
+
+Source: espn + coverage < 5 teams reporting
+  → Critically incomplete feed.
+  → Confidence CAP: 40. Only speculative ML picks allowed.
+  → Require odds ≥ 2.00 (wider margin needed to justify uncertainty).
+  → Flag in scout_report: "Critically low injury coverage — high uncertainty."
+
+Source: none / unavailable
+  → 0 picks. Note in scout_report: "No injury data — cannot assess franchise player risk."
+
+These gates override confidence tier and EV calculation.
+Even a conf 80 pick becomes conf 50 if the injury feed is ESPN fallback.

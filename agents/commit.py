@@ -22,6 +22,7 @@ from datetime import datetime, date, timezone, timedelta
 
 from core.llm import call_llm, call_llm_full, extract_tag, agent_model_name
 from core.espn import fetch_injuries, fetch_first_game_time_utc
+from core.nba_injuries import fetch_official_nba_injuries, format_injuries_for_prompt as format_official_injuries
 from core.odds import fetch_betano_nba_odds, format_odds_for_prompt
 from core.validators import validate_all_bets, validate_all_drafts, ValidationError
 
@@ -68,7 +69,8 @@ def _build_commit_prompt(skills: str, draft_picks: list, odds_text: str,
 ## LIVE BETANO ODDS (check for line movement)
 {odds_text}
 
-## FRESH INJURY REPORTS (anchor player check)
+## FRESH INJURY REPORTS
+Source: {injuries_source} — apply data_quality_rules from commit_skills if espn fallback
 {injuries_text}
 
 ---
@@ -237,7 +239,14 @@ def run(store, force: bool = False) -> None:
     log.info("Commit: fetching live odds + injuries…")
     odds      = fetch_betano_nba_odds()
     odds_failures = get_odds_failure_reasons()
-    injuries  = fetch_injuries()
+    # Primary: NBA official injury report PDF
+    injuries = fetch_official_nba_injuries()
+    if not injuries:
+        log.warning("Commit: NBA official injuries unavailable — falling back to ESPN")
+        injuries = fetch_injuries()
+        injuries_source = "espn"
+    else:
+        injuries_source = "nba_official"
     odds_str      = format_odds_for_prompt(odds)
     injuries_str  = _injuries_text(injuries)
 
