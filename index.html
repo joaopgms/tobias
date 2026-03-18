@@ -1322,12 +1322,13 @@ function renderAudit(){
       if(igCount) summaryParts.push(`${igCount} gap${igCount>1?'s':''}`);
       const summaryText = summaryParts.length ? summaryParts.join(' · ') : 'No changes this run';
       const entryJson = JSON.stringify(e).replace(/\\/g,'\\\\').replace(/"/g,'&quot;');
-      body+=`<div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+      // KPI row first
+      body+=`<div class="audit-pnl-row"><span class="audit-kv">Bankroll: <strong>€${(e.bankroll||0).toFixed(2)}</strong></span><span class="audit-kv">P&L: <strong>€${(e.net_pnl||0).toFixed(2)}</strong></span>${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>`;
+      // Summary + Full report button inline below KPI
+      body+=`<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:6px">
         <span style="font-size:.70rem;color:var(--muted)">${summaryText}</span>
         <button onclick="openAnalystModal(JSON.parse(this.dataset.entry))" data-entry="${entryJson}" style="font-size:.62rem;font-weight:700;letter-spacing:.6px;text-transform:uppercase;background:var(--burg-soft);color:var(--burg);border:1px solid var(--burg);border-radius:var(--r-sm);padding:4px 10px;cursor:pointer;font-family:inherit;white-space:nowrap">📋 Full report →</button>
       </div>`;
-      // KPI row
-      body+=`<div class="audit-pnl-row" style="margin-top:6px"><span class="audit-kv">Bankroll: <strong>€${(e.bankroll||0).toFixed(2)}</strong></span><span class="audit-kv">P&L: <strong>€${(e.net_pnl||0).toFixed(2)}</strong></span>${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>`;
         }else if(ag==='scout'){
       // Injuries source badge
       const injSrc = e.injuries_source||'';
@@ -2021,9 +2022,9 @@ function openAnalystModal(entry){
 
 <!-- Analyst Report Modal -->
 <div id="analystModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)" onclick="closeAnalystModal(event)">
-  <div id="analystModalInner" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(680px,94vw);max-height:88vh;background:var(--surface2);border-radius:var(--r-lg);border:1px solid var(--border2);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 24px 64px rgba(0,0,0,.4)">
+  <div id="analystModalInner" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(680px,94vw);max-height:88vh;background:#fff;border-radius:var(--r-lg);border:1px solid var(--border2);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 24px 64px rgba(0,0,0,.5)">
     <!-- Header -->
-    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--border2);background:var(--surface);flex-shrink:0">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid var(--border2);background:#f8f5f0;flex-shrink:0">
       <div>
         <div style="font-size:.62rem;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)">🧠 ANALYST REPORT</div>
         <div id="analystModalDate" style="font-size:.78rem;font-weight:700;color:var(--text);margin-top:2px"></div>
@@ -2031,7 +2032,7 @@ function openAnalystModal(entry){
       <button onclick="document.getElementById('analystModal').style.display='none'" style="background:none;border:1px solid var(--border2);color:var(--muted);cursor:pointer;border-radius:var(--r-sm);padding:4px 10px;font-size:.72rem;font-family:inherit">✕ Close</button>
     </div>
     <!-- Scrollable content -->
-    <div id="analystModalBody" style="overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:16px"></div>
+    <div id="analystModalBody" style="overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:16px;background:#fff;-webkit-overflow-scrolling:touch"></div>
   </div>
 </div>
 </body>
