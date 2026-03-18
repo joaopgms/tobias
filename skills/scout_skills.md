@@ -1,7 +1,12 @@
 ---
 version: 5
+<<<<<<< HEAD
 updated_at: 2026-03-18T12:00:00.000000+00:00
 updated_by: manual_review
+=======
+updated_at: 2026-03-18T11:43:49.772486+00:00
+updated_by: analyst_2026-03-18
+>>>>>>> b05379d482d1f4b452803d5ce316f8d02ffe3617
 llm: claude-sonnet-4-6
 ---
 
@@ -88,13 +93,13 @@ Current confirmed absences (update each session):
 
 ## SECTION:tanking_teams
 Confirmed tanking-tier teams (all three criteria met):
-  - Washington Wizards: 16-51, L10: 0-10, streak: L12 — clearest tank; multiple stars OUT
-  - Sacramento Kings: 18-51, L10: 5-5 — worst record in West; L10 improvement is anomaly
+  - Washington Wizards: 16-52, L10: 0-10, streak: L13 — clearest tank; multiple stars OUT
+  - Sacramento Kings: 18-52, L10: 5-5 — worst record in West; L10 improvement is anomaly
   - Brooklyn Nets: 17-51, L10: 2-8, streak: L4 — bottom East
   - Utah Jazz: 20-48, L10: 2-8, streak: L3
   - Dallas Mavericks: 23-46, L10: 2-8, streak: L1 — confirmed tank
   - Memphis Grizzlies: 23-44, L10: 2-8, streak: L8 — deepening
-  - Milwaukee Bucks: 28-39, L10: 2-8, streak: W1 — verify pick ownership before each bet
+  - Milwaukee Bucks: 28-40, L10: 2-8, streak: L1 — verify pick ownership before each bet
 
 Tanking criteria (ALL THREE must be met):
   (a) Team owns its own 2026 draft pick
@@ -111,9 +116,11 @@ Emerging tank-watch:
 
 Hot streaks (may create line inefficiencies):
   - Atlanta Hawks (37-31, L10: 10-0, W10) — extreme regression risk; verify odds before committing
-  - OKC Thunder (53-15, L10: 9-1) — efficiently priced
-  - San Antonio Spurs (50-18, L10: 8-2) — efficiently priced
-  - Los Angeles Lakers (43-25, L10: 9-1) — Davis+Russell OUT; spreads/totals only
+  - OKC Thunder (54-15, L10: 9-1, W9) — efficiently priced; elite tier
+  - San Antonio Spurs (51-18, L10: 8-2) — efficiently priced
+  - Los Angeles Lakers (43-25, L10: 9-1, W6) — Davis+Russell OUT; spreads/totals only
+  - Detroit Pistons (49-19, L10: 5-5) — top-3 record but L10 cooling; monitor
+  - New York Knicks (45-25, L10: 7-3, W4) — strong mid-season form
 
 ## SECTION:b2b_rules
 B2B and rest day rules — apply numeric confidence adjustments:
