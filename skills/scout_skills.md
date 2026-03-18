@@ -1,12 +1,7 @@
 ---
 version: 5
-<<<<<<< HEAD
-updated_at: 2026-03-18T12:00:00.000000+00:00
-updated_by: manual_review
-=======
 updated_at: 2026-03-18T11:43:49.772486+00:00
 updated_by: analyst_2026-03-18
->>>>>>> b05379d482d1f4b452803d5ce316f8d02ffe3617
 llm: claude-sonnet-4-6
 ---
 
