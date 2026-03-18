@@ -1709,13 +1709,12 @@ function renderScoutTab(){
   const rejGames    = ST.rejected_games||[];
   const scoutUpdated = ST.scout_updated_at;
 
-  // Synthesise a todayReport object from state
   const todayReport = (scoutStatus === 'live' || scoutStatus === 'done') ? {
     date:     today,
     picks:    draftPicks,
     rejected: rejGames,
     report:   ST.last_report||'',
-    odds_source: (ST.agent_models||{}).scout_odds||'',
+    odds_source: ST.scout_odds_source||'',
     cost_usd: 0,
     injuries_source: ST.injuries_source||'',
     updated_at: scoutUpdated,

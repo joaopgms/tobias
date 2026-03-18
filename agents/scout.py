@@ -387,6 +387,7 @@ def run(store) -> None:
     state["draft_picks"]      = draft_picks
     state["agent_models"] = state.get("agent_models", {})
     state["agent_models"]["scout"] = llm
+    state["scout_odds_source"]= odds[0].get("odds_source", "none") if odds else "none"
     state["scout_status"]     = "live"
     # Store rejected games for dashboard display
     try:
