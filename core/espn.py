@@ -284,14 +284,16 @@ def _fetch_advanced_stats_espn() -> dict[str, dict]:
 
 def _fetch_advanced_stats_bref() -> dict[str, dict]:
     """
-    Fallback: scrape Basketball-Reference team advanced stats table.
-    URL: https://www.basketball-reference.com/leagues/NBA_2026.html
+    Fallback: scrape Basketball-Reference team RATINGS page.
+    URL: https://www.basketball-reference.com/leagues/NBA_2026_ratings.html
+    This page has ONLY ORtg/DRtg/NRtg/Pace — clean simple table, no merged cells.
+    Much more reliable than the full season summary page.
     """
     try:
         import re
         from datetime import datetime
         season_year = datetime.now().year if datetime.now().month >= 10 else datetime.now().year
-        url = f"https://www.basketball-reference.com/leagues/NBA_{season_year}.html"
+        url = f"https://www.basketball-reference.com/leagues/NBA_{season_year}_ratings.html"
         req = urllib.request.Request(url, headers={
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
             "Accept": "text/html,application/xhtml+xml",
@@ -300,73 +302,106 @@ def _fetch_advanced_stats_bref() -> dict[str, dict]:
         with urllib.request.urlopen(req, timeout=20, context=_SSL) as r:
             html = r.read().decode("utf-8", errors="ignore")
 
-        # Try multiple possible table IDs — BRef changes these occasionally
+        # Ratings page has table id="ratings" with ORtg, DRtg, NRtg, Pace
         table_match = None
-        for table_id in ["misc_stats", "div_misc_stats", "team-stats-per_poss",
-                          "advanced-team", "per_poss-team"]:
-            table_match = re.search(
+        for table_id in ["ratings", "div_ratings", "misc_stats", "advanced-team"]:
+            m = re.search(
                 rf'<table[^>]*id="{table_id}"[^>]*>(.*?)</table>',
                 html, re.DOTALL
             )
-            if table_match:
+            if m:
+                table_match = m
                 log.info(f"Basketball-Reference: found table '{table_id}'")
                 break
-            # Also try div wrapper
-            div_match = re.search(
+            m2 = re.search(
                 rf'id="div_{table_id}".*?<table[^>]*>(.*?)</table>',
                 html, re.DOTALL
             )
-            if div_match:
-                table_match = div_match
+            if m2:
+                table_match = m2
                 log.info(f"Basketball-Reference: found div_{table_id}")
                 break
 
         if not table_match:
-            # Last resort: find any table with NRtg column
-            table_match = re.search(
-                r'<table[^>]*>(.*?net_rtg.*?)</table>',
-                html, re.DOTALL | re.IGNORECASE
-            )
+            # Last resort
+            table_match = re.search(r'<table[^>]*>(.*?o_rtg.*?)</table>', html, re.DOTALL | re.IGNORECASE)
 
         if not table_match:
-            log.warning("Basketball-Reference: no advanced stats table found")
+            log.warning("Basketball-Reference: ratings table not found")
             return {}
 
         table_html = table_match.group(1)
 
-        # Extract headers
-        headers = re.findall(r'<th[^>]*data-stat="([^"]*)"[^>]*>', table_html)
-
-        # Extract rows
+        # Extract rows — handle <a> tags inside cells
         result = {}
         rows = re.findall(r'<tr[^>]*>(.*?)</tr>', table_html, re.DOTALL)
         for row in rows:
-            cells = re.findall(r'<td[^>]*data-stat="([^"]*)"[^>]*>([^<]*)', row)
+            # Skip header rows
+            if '<th' in row and '<td' not in row:
+                continue
+
+            # Extract each cell: get data-stat and inner text (strip all tags)
+            cells = re.findall(r'<td[^>]*data-stat="([^"]*)"[^>]*>(.*?)</td>', row, re.DOTALL)
             if not cells:
                 continue
-            row_data = {k: v.strip() for k, v in cells}
 
-            team_raw = row_data.get("team_name_abbr") or row_data.get("team")
-            if not team_raw:
-                continue
+            row_data = {}
+            for stat_name, cell_html in cells:
+                # Strip all HTML tags to get plain text
+                plain = re.sub(r'<[^>]+>', '', cell_html).strip()
+                row_data[stat_name] = plain
 
-            # Map bref abbr to full name
-            team_name = _bref_abbr_to_full(team_raw)
+            # Team name: try multiple data-stat keys, also try href pattern
+            team_name = None
+            for key in ("team_name_abbr", "team", "team_name"):
+                raw = row_data.get(key, "")
+                if raw:
+                    team_name = _bref_abbr_to_full(raw)
+                    if team_name:
+                        break
+
+            # Fallback: extract from href in row e.g. /teams/LAL/2026.html
+            if not team_name:
+                href_match = re.search(r'/teams/([A-Z]{2,3})/', row)
+                if href_match:
+                    team_name = _bref_abbr_to_full(href_match.group(1))
+
             if not team_name:
                 continue
 
-            def _safe(key):
-                try: return float(row_data.get(key, "") or 0)
-                except: return 0.0
+            def _safe(*keys):
+                for k in keys:
+                    v = row_data.get(k, "")
+                    try:
+                        fv = float(v)
+                        if fv != 0:
+                            return fv
+                    except (ValueError, TypeError):
+                        pass
+                return 0.0
+
+            # Ratings page uses: o_rtg, d_rtg, n_rtg, pace — also try alt names
+            net_rtg = _safe("n_rtg", "net_rtg", "net_rating", "nrtg")
+            off_rtg = _safe("o_rtg", "off_rtg", "off_rating", "ortg")
+            def_rtg = _safe("d_rtg", "def_rtg", "def_rating", "drtg")
+            pace    = _safe("pace", "pace_adj", "poss")
+            ts_pct_raw = _safe("ts_pct", "ts%", "true_shooting")
+            ts_pct = ts_pct_raw / 100 if ts_pct_raw > 1 else ts_pct_raw
 
             result[team_name] = {
-                "net_rtg": _safe("net_rtg"),
-                "off_rtg": _safe("off_rtg"),
-                "def_rtg": _safe("def_rtg"),
-                "pace":    _safe("pace"),
-                "ts_pct":  _safe("ts_pct") / 100 if _safe("ts_pct") > 1 else _safe("ts_pct"),
+                "net_rtg": round(net_rtg, 1),
+                "off_rtg": round(off_rtg, 1),
+                "def_rtg": round(def_rtg, 1),
+                "pace":    round(pace,    1),
+                "ts_pct":  round(ts_pct,  3),
             }
 
+        log.info(f"Basketball-Reference: parsed {len(result)} teams")
+        if len(result) < 20:
+            # Log what fields we actually found for debugging
+            sample_rows = re.findall(r'data-stat="([^"]*)"[^>]*>', table_html)
+            unique_fields = list(dict.fromkeys(sample_rows))[:15]
+            log.warning(f"Basketball-Reference: only {len(result)} teams parsed — fields found: {unique_fields}")
         return result if len(result) >= 20 else {}
 
     except Exception as e:
