@@ -211,71 +211,168 @@ _NBA_STATS_HEADERS = {
     "Pragma":            "no-cache",
 }
 
+
 def fetch_advanced_stats() -> dict[str, dict]:
     """
-    Fetch team advanced stats from NBA.com stats API.
-    Returns {team_name: {net_rtg, off_rtg, def_rtg, pace, ts_pct, ...}}
-    No API key required — public endpoint.
+    Fetch team advanced stats.
+    Primary: ESPN team statistics endpoint (cloud-friendly, no IP blocking).
+    Fallback: Basketball-Reference HTML scrape.
+    Returns {team_name: {net_rtg, off_rtg, def_rtg, pace, ts_pct}}
     """
-    url = (
-        "https://stats.nba.com/stats/leaguedashteamstats"
-        "?Conference=&DateFrom=&DateTo=&Division=&GameScope=&GameSegment="
-        "&Height=&LastNGames=0&LeagueID=00&Location=&MeasureType=Advanced"
-        "&Month=0&OpponentTeamID=0&Outcome=&PORound=0&PaceAdjust=N"
-        "&PerMode=PerGame&Period=0&PlayerExperience=&PlayerPosition="
-        "&PlusMinus=N&Rank=N&Season=2025-26&SeasonSegment=&SeasonType=Regular+Season"
-        "&ShotClockRange=&StarterBench=&TeamID=0&TwoWay=0&VsConference=&VsDivision="
-    )
-    try:
-        import time
-        req = urllib.request.Request(url, headers=_NBA_STATS_HEADERS)
-        # NBA.com can be slow — retry once on timeout
-        for attempt in range(2):
-            try:
-                with urllib.request.urlopen(req, timeout=20, context=_SSL) as r:
-                    raw = r.read()
-                    # Handle gzip
-                    try:
-                        import gzip
-                        data = json.loads(gzip.decompress(raw).decode())
-                    except Exception:
-                        data = json.loads(raw.decode())
-                break
-            except Exception as e:
-                if attempt == 0:
-                    log.warning(f"NBA advanced stats attempt 1 failed: {e} — retrying in 3s")
-                    time.sleep(3)
-                else:
-                    raise
-
-        rs = data.get("resultSets", [{}])[0]
-        headers = rs.get("headers", [])
-        rows    = rs.get("rowSet", [])
-
-        # Map header → index
-        h = {name: i for i, name in enumerate(headers)}
-
-        result = {}
-        for row in rows:
-            team_name = row[h.get("TEAM_NAME", 1)] if "TEAM_NAME" in h else None
-            if not team_name:
-                continue
-            result[team_name] = {
-                "net_rtg":  round(float(row[h["NET_RATING"]]  if "NET_RATING"  in h else 0), 1),
-                "off_rtg":  round(float(row[h["OFF_RATING"]]  if "OFF_RATING"  in h else 0), 1),
-                "def_rtg":  round(float(row[h["DEF_RATING"]]  if "DEF_RATING"  in h else 0), 1),
-                "pace":     round(float(row[h["PACE"]]         if "PACE"        in h else 0), 1),
-                "ts_pct":   round(float(row[h["TS_PCT"]]       if "TS_PCT"      in h else 0), 3),
-                "ast_pct":  round(float(row[h["AST_PCT"]]      if "AST_PCT"     in h else 0), 3),
-                "reb_pct":  round(float(row[h["REB_PCT"]]      if "REB_PCT"     in h else 0), 3),
-            }
-
-        log.info(f"NBA advanced stats: {len(result)} teams")
+    result = _fetch_advanced_stats_espn()
+    if result:
+        log.info(f"Advanced stats: ESPN — {len(result)} teams")
         return result
 
+    log.warning("Advanced stats: ESPN failed — trying Basketball-Reference")
+    result = _fetch_advanced_stats_bref()
+    if result:
+        log.info(f"Advanced stats: Basketball-Reference — {len(result)} teams")
+        return result
+
+    log.warning("Advanced stats: all sources failed — ML only session")
+    return {}
+
+
+def _fetch_advanced_stats_espn() -> dict[str, dict]:
+    """
+    Fetch advanced stats from ESPN team statistics endpoint.
+    Uses the same ESPN API we already use for injuries/standings — no IP blocking.
+    """
+    result = {}
+    for team_name, team_id in ESPN_TEAM_IDS.items():
+        url = (f"https://site.api.espn.com/apis/site/v2/sports/basketball/nba"
+               f"/teams/{team_id}/statistics")
+        try:
+            data = _get(url, timeout=8)
+            splits = data.get("splits", {}).get("categories", [])
+            stats = {}
+            for cat in splits:
+                for s in cat.get("stats", []):
+                    stats[s.get("name","")] = s.get("value", s.get("displayValue"))
+
+            # ESPN stat name mapping — try multiple possible field names
+            def _get(*keys):
+                for k in keys:
+                    v = stats.get(k)
+                    if v is not None:
+                        try: return float(v)
+                        except: pass
+                return None
+
+            net_rtg = _get("netRating","netRtg","net_rtg","netrtg")
+            off_rtg = _get("offensiveRating","offRating","offRtg","off_rtg","oppg")
+            def_rtg = _get("defensiveRating","defRating","defRtg","def_rtg","dppg")
+            pace    = _get("pace","paceAdjust","possessions","poss")
+            ts_pct  = _get("trueShootingPercentage","tsPct","ts_pct","trueshooting")
+
+            if any(v is not None for v in [net_rtg, off_rtg, def_rtg, pace]):
+                result[team_name] = {
+                    "net_rtg": round(float(net_rtg), 1) if net_rtg is not None else 0.0,
+                    "off_rtg": round(float(off_rtg), 1) if off_rtg is not None else 0.0,
+                    "def_rtg": round(float(def_rtg), 1) if def_rtg is not None else 0.0,
+                    "pace":    round(float(pace),    1) if pace    is not None else 0.0,
+                    "ts_pct":  round(float(ts_pct),  3) if ts_pct  is not None else 0.0,
+                }
+        except Exception as e:
+            log.debug(f"ESPN stats {team_name}: {e}")
+            continue
+
+    # Need at least 20 teams to be useful
+    return result if len(result) >= 20 else {}
+
+
+def _fetch_advanced_stats_bref() -> dict[str, dict]:
+    """
+    Fallback: scrape Basketball-Reference team advanced stats table.
+    URL: https://www.basketball-reference.com/leagues/NBA_2026.html
+    """
+    try:
+        import re
+        url = "https://www.basketball-reference.com/leagues/NBA_2026.html"
+        req = urllib.request.Request(url, headers={
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+            "Accept": "text/html,application/xhtml+xml",
+            "Accept-Language": "en-US,en;q=0.9",
+        })
+        with urllib.request.urlopen(req, timeout=20, context=_SSL) as r:
+            html = r.read().decode("utf-8", errors="ignore")
+
+        # Find the misc/advanced stats table — has NRtg, Pace, ORtg, DRtg
+        # Table id: div_misc_stats or div_team-stats-per_poss
+        table_match = re.search(
+            r'id="div_misc_stats".*?<table.*?>(.*?)</table>',
+            html, re.DOTALL
+        )
+        if not table_match:
+            # Try alternate table
+            table_match = re.search(
+                r'<table[^>]*id="misc_stats"[^>]*>(.*?)</table>',
+                html, re.DOTALL
+            )
+        if not table_match:
+            log.warning("Basketball-Reference: misc_stats table not found")
+            return {}
+
+        table_html = table_match.group(1)
+
+        # Extract headers
+        headers = re.findall(r'<th[^>]*data-stat="([^"]*)"[^>]*>', table_html)
+
+        # Extract rows
+        result = {}
+        rows = re.findall(r'<tr[^>]*>(.*?)</tr>', table_html, re.DOTALL)
+        for row in rows:
+            cells = re.findall(r'<td[^>]*data-stat="([^"]*)"[^>]*>([^<]*)', row)
+            if not cells:
+                continue
+            row_data = {k: v.strip() for k, v in cells}
+
+            team_raw = row_data.get("team_name_abbr") or row_data.get("team")
+            if not team_raw:
+                continue
+
+            # Map bref abbr to full name
+            team_name = _bref_abbr_to_full(team_raw)
+            if not team_name:
+                continue
+
+            def _safe(key):
+                try: return float(row_data.get(key, "") or 0)
+                except: return 0.0
+
+            result[team_name] = {
+                "net_rtg": _safe("net_rtg"),
+                "off_rtg": _safe("off_rtg"),
+                "def_rtg": _safe("def_rtg"),
+                "pace":    _safe("pace"),
+                "ts_pct":  _safe("ts_pct") / 100 if _safe("ts_pct") > 1 else _safe("ts_pct"),
+            }
+
+        return result if len(result) >= 20 else {}
+
     except Exception as e:
-        log.warning(f"NBA advanced stats unavailable: {e} — Scout will be limited to ML only this session")
+        log.warning(f"Basketball-Reference scrape failed: {e}")
         return {}
+
+
+# Basketball-Reference abbreviation → full team name
+_BREF_ABBR = {
+    "ATL":"Atlanta Hawks","BOS":"Boston Celtics","BRK":"Brooklyn Nets",
+    "CHO":"Charlotte Hornets","CHI":"Chicago Bulls","CLE":"Cleveland Cavaliers",
+    "DAL":"Dallas Mavericks","DEN":"Denver Nuggets","DET":"Detroit Pistons",
+    "GSW":"Golden State Warriors","HOU":"Houston Rockets","IND":"Indiana Pacers",
+    "LAC":"Los Angeles Clippers","LAL":"Los Angeles Lakers","MEM":"Memphis Grizzlies",
+    "MIA":"Miami Heat","MIL":"Milwaukee Bucks","MIN":"Minnesota Timberwolves",
+    "NOP":"New Orleans Pelicans","NYK":"New York Knicks","OKC":"Oklahoma City Thunder",
+    "ORL":"Orlando Magic","PHI":"Philadelphia 76ers","PHO":"Phoenix Suns",
+    "POR":"Portland Trail Blazers","SAC":"Sacramento Kings","SAS":"San Antonio Spurs",
+    "TOR":"Toronto Raptors","UTA":"Utah Jazz","WAS":"Washington Wizards",
+}
+
+def _bref_abbr_to_full(abbr: str) -> str | None:
+    return _BREF_ABBR.get(abbr.upper().strip())
+
 
 
 def format_advanced_stats_for_prompt(stats: dict, games: list[dict]) -> str:
