@@ -9,14 +9,14 @@
   "net_pnl": 0.0,
   "bust": false,
   "bust_at": null,
-  "last_updated": null,
-  "first_game_time": null,
+  "last_updated": "2026-03-17T18:07:45.333789+00:00",
+  "first_game_time": "2026-03-17T23:00:00Z",
   "llm_provider": "claude",
-  "scout_status": "pending",
+  "scout_status": "live",
   "scout_error": "",
-  "scout_updated_at": null,
-  "commit_status": "pending",
-  "commit_updated_at": null,
+  "scout_updated_at": "2026-03-17T18:07:45.333789+00:00",
+  "commit_status": "done",
+  "commit_updated_at": "2026-03-17T22:57:56.853299+00:00",
   "commit_date": null,
   "analyst_updated_at": "2026-03-17T16:41:53.182985+00:00",
   "settler_updated_at": "2026-03-17T10:53:00.074027+00:00",
@@ -25,10 +25,67 @@
     "analyst": "claude-sonnet-4-6",
     "scout": "claude-sonnet-4-6"
   },
-  "last_report": "",
+  "last_report": "# Scout Report — 2026-03-17 NBA Slate\n\n---\n\n### Charlotte Hornets vs Miami Heat\n- **Edge assessment:** No edge — odds outside target range on both sides\n- **Key factors:** Miami 38-30 (L10:7-3) vs Charlotte 34-34 (L10:7-3); Bam Adebayo **Doubtful** (Right Calf) — franchise-level concern that would trigger -15 confidence and -20% stake; Tidjane Salaun OUT for Charlotte; Miami ML 1.52 is below the 1.70 floor; Charlotte ML 2.60 is above the 2.50 ceiling; no O/U or spread odds provided\n- **Odds:** Miami (away) 1.52 | Charlotte (home) 2.60 | Spread/O-U: not available\n- **Decision:** REJECTED — both ML prices outside the 1.70–2.50 target window; Adebayo Doubtful status adds further uncertainty on Miami side\n\n---\n\n### Washington Wizards vs Detroit Pistons\n- **Edge assessment:** LINE ANOMALY — cannot evaluate\n- **Key factors:** Detroit is 48-19 (3rd-best record in the league, L10:5-5) visiting Washington (16-51, L10:0-10, confirmed tank-tier, L12 losing streak). The odds feed prices Detroit (away) at 11.0 and Washington (home) at 1.05, implying a ~91% win probability for Washington. This is impossible to justify by any reasonable metric — a 48-win team cannot be a 91% underdog against the worst team in the league. Detroit is missing Isaiah Stewart (calf strain) but no other core players. Washington has Alex Sarr, Kyshawn George, Leaky Black, Bilal Coulibaly, and oddly \"Anthony Davis\" (likely a feed error listing Lakers' Davis on Wizards) all OUT. Even so, the 11.0/1.05 line fails the anomaly criteria: home team (materially worse record) priced as heavy favorite against a team with one of the best records in the NBA. **Anomaly flagged.** Commit should monitor: if line corrects to Detroit as ~1.05-1.15 favorite, the edge against Washington (tank-tier) at inflated odds could emerge.\n- **Odds:** Washington (home) 1.05 | Detroit (away) 11.0\n- **Decision:** ANOMALY — LINE ANOMALY FLAGGED. Do not draft. Commit to monitor for line correction.\n\n---\n\n### Orlando Magic vs Oklahoma City Thunder\n- **Edge assessment:** No edge — odds outside target range; key injuries on both sides\n- **Key factors:** OKC 53-15 (L10:9-1, best record in league) but **Jalen Williams OUT** (strain) — a franchise-level contributor. Orlando 38-29 (L10:7-3) but missing **Franz Wagner** (injury management), Anthony Black (abdominal strain), Jonathan Isaac (knee sprain). With Williams out, OKC's ceiling is reduced. Orlando at home is a credible matchup. However, OKC ML 4.10 is well above the 2.50 ceiling, and Orlando ML 1.25 is well below the 1.70 floor. No spread or O/U odds available. The Williams absence might create value in a different market context, but the available lines do not qualify.\n- **Odds:** OKC (away) 4.10 | Orlando (home) 1.25 | Spread/O-U: not available\n- **Decision:** REJECTED — neither ML in 1.70–2.50 target range; no qualifying market available\n\n---\n\n### New York Knicks vs Indiana Pacers\n- **Edge assessment:** LINE ANOMALY — cannot evaluate\n- **Key factors:** Indiana Pacers (away) priced at 1.11 (~90% implied win probability) vs New York Knicks (home, 44-25, L10:7-3) at 6.75 (~13% implied). Indiana's injury report is severe: **Tyrese Haliburton OUT** (tear), **Nembhard Questionable**, McConnell Questionable, Nesmith Questionable, Furphy OUT. On the Knicks side, **Jalen Brunson is Doubtful** (ankle/cervical strain) — a significant blow. Even accounting for both teams' injury situations, Knicks at home with a 44-25 record at 6.75 fails the anomaly threshold: the implied probability gap vs actual record gap is extreme. If Brunson is OUT and Haliburton is OUT, this becomes more balanced, but the 6.75 line for a home team of this quality still looks corrupted. **Anomaly flagged.** Commit should monitor: if Brunson is confirmed OUT and line adjusts to something like Knicks 2.10-2.50, a reduced-confidence pick against a crippled Indiana side might emerge.\n- **Odds:** Indiana (away) 1.11 | Knicks (home) 6.75\n- **Decision:** ANOMALY — LINE ANOMALY FLAGGED. Do not draft. Commit to monitor injury confirmations and potential line correction.\n\n---\n\n### Milwaukee Bucks vs Cleveland Cavaliers\n- **Edge assessment:** LINE ANOMALY — cannot evaluate cleanly\n- **Key factors:** Milwaukee (28-39, L10:2-8, confirmed tank-tier, W1 streak) hosting Cleveland (41-27, L10:5-5). **Giannis Antetokounmpo is Questionable** (left ankle) for Milwaukee. Cleveland missing Jarrett Allen (knee tendonitis) and Craig Porter (groin). With Giannis Questionable, Milwaukee at home could be competitive, but Milwaukee at 1.21 (~83% implied win probability) against a materially better 41-27 team fails the anomaly criteria. The record gap — Cleveland leads by 13 games — combined with Milwaukee's confirmed tank status and L10:2-8 form makes 83% implied probability impossible to justify even with Giannis playing at home. Cleveland ML 4.60 is above the 2.50 ceiling. **Anomaly flagged.** Commit should monitor: if Giannis is confirmed OUT and line adjusts, or if line corrects to reflect Cleveland as appropriate favorite (~1.65-1.85 range), a bet against the tank-tier Bucks may emerge.\n- **Odds:** Milwaukee (home) 1.21 | Cleveland (away) 4.60\n- **Decision:** ANOMALY — LINE ANOMALY FLAGGED. Do not draft. Commit to monitor Giannis status and potential line correction.\n\n---\n\n### Minnesota Timberwolves vs Phoenix Suns\n- **Edge assessment:** No edge — franchise player absence on Minnesota side prevents backing them; Phoenix odds below floor\n- **Key factors:** **Anthony Edwards OUT** (right knee soreness) for Minnesota — per franchise player rules, do NOT bet Minnesota ML unless opponent also missing a star or is confirmed tanking. Phoenix (39-29, L10:6-4) is neither. On the Phoenix side, ML 1.62 is below the 1.70 floor. Minnesota ML 2.33 — Edwards OUT prevents backing them. No O/U or spread odds available. The Edwards absence is a decisive disqualifier for any Timberwolves-side bet, and Phoenix's 1.62 falls just short of the target range minimum. No bet is possible here under current rules.\n- **Odds:** Phoenix (away) 1.62 | Minnesota (home) 2.33 | Spread/O-U: not available\n- **Decision:** REJECTED — Edwards OUT prevents Minnesota ML; Phoenix ML 1.62 below 1.70 floor; no qualifying market available\n\n---\n\n### Denver Nuggets vs Philadelphia 76ers\n- **Edge assessment:** LINE ANOMALY — cannot evaluate\n- **Key factors:** Philadelphia (away, 37-31) listed at 1.08 (~93% implied win probability) vs Denver (home, 41-27) at 8.0. Philadelphia is missing **Joel Embiid OUT** (oblique), **Paul George OUT** (suspended), **Tyrese Maxey OUT** (strain), **Kelly Oubre OUT** (elbow) — essentially their entire starting core. Denver is missing Peyton Watson (strain) but their core with Jokic should be intact. Denver at home at 8.0 against a decimated opponent is clearly anomalous. Philadelphia at 1.08 as the away team missing four major contributors is impossible to justify. The line appears either inverted (home/away swapped in the feed) or severely corrupted. **Clear anomaly flagged.** Commit should monitor: if line corrects to Denver as ~1.05-1.15 favorite at home, the edge betting against the gutted 76ers roster is substantial.\n- **Odds:** Philadelphia (away) 1.08 | Denver (home) 8.00\n- **Decision:** ANOMALY — CLEAR LINE ANOMALY FLAGGED. Do not draft. Commit to verify line and monitor for correction. If corrected, Denver home ML may offer strong value.\n\n---\n\n### Sacramento Kings vs San Antonio Spurs\n- **Edge assessment:** LINE ANOMALY — cannot evaluate\n- **Key factors:** San Antonio (50-18, L10:8-2, 2nd-best record in league) listed at 6.75 (~13% implied win probability) as the away team at Sacramento (18-51, confirmed tank-tier). Sacramento's injury report is devastating: **Zach LaVine OUT** (tendon repair), **Keegan Murray OUT** (ankle), **De'Andre Hunter OUT** (repair), **Drew Eubanks OUT** (thumb), **Devin Carter OUT** (calf), **Malik Monk Questionable** (ankle). Sacramento is effectively fielding a G-League-adjacent roster. San Antonio at 6.75 (~13% implied) for the 2nd-best team in the NBA visiting the worst team in the West — missing all their key players — is a textbook line anomaly. Per skills criteria: \"Tank-tier team (confirmed) priced as favourite at ≤ 1.35\" is an anomaly flag; Sacramento at 1.11 vs 50-18 Spurs triggers this. **Clearest anomaly on the slate.** Commit should monitor: if line corrects to Spurs at ~1.05-1.20 as road favorites against this depleted Sacramento team, the edge is enormous.\n- **Odds:** San Antonio (away) 6.75 | Sacramento (home) 1.11\n- **Decision:** ANOMALY — CLEAREST LINE ANOMALY ON SLATE. Do not draft. Commit to verify and monitor. Corrected line would offer significant value on San Antonio.\n\n---\n\n## Overall Slate Assessment\n\nTonight's slate is entirely compromised by what appears to be a systematic error in the odds feed — multiple games show home/away ML values that are clearly reversed or corrupted, including five of the eight games flagged as line anomalies. The Detroit/Washington line (48-19 team at 11.0 vs 16-51 team at 1.05), the San Antonio/Sacramento line (50-18 Spurs at 6.75 vs 18-51 Kings at 1.11), and the Denver/Philadelphia line (gutted Sixers at 1.08 as road underdogs) are the most egregious examples. The two remaining games with plausible odds (Miami/Charlotte and Phoenix/Minnesota) fail on other grounds: Miami odds are outside the target range and Bam Adebayo is doubtful, while Anthony Edwards is OUT for Minnesota preventing any Timberwolves-side bet and Phoenix's 1.62 falls below the 1.70 floor. **Zero picks are drafted tonight.** The Commit agent should prioritize verifying whether these odds correct by tip-off — particularly the Spurs/Kings, Pistons/Wizards, and Nuggets/76ers games, which could all offer strong edge if lines reflect reality.",
   "draft_picks": [],
   "pending_bets": [],
   "settled_bets": [],
-  "rejected_games": [],
+  "rejected_games": [
+    {
+      "match": "Charlotte Hornets vs Miami Heat",
+      "reason": "Miami ML 1.52 below 1.70 floor; Charlotte ML 2.60 above 2.50 ceiling; Bam Adebayo Doubtful further reduces confidence on Miami; no spread/O-U odds available; no qualifying line in target range",
+      "ml_home": 2.6,
+      "ml_away": 1.52,
+      "decision": "rejected"
+    },
+    {
+      "match": "Washington Wizards vs Detroit Pistons",
+      "reason": "LINE ANOMALY: Detroit (48-19, away) priced at 11.0 vs Washington (16-51, home) at 1.05. A 48-win team cannot be a 91% underdog against a tank-tier 16-win team. Odds feed likely reversed or corrupted. Do not draft. Flag for Commit to monitor for correction by tip-off.",
+      "ml_home": 1.05,
+      "ml_away": 11.0,
+      "decision": "anomaly"
+    },
+    {
+      "match": "Orlando Magic vs OKC Thunder",
+      "reason": "OKC ML 4.10 above 2.50 ceiling; Orlando ML 1.25 below 1.70 floor; Jalen Williams OUT for OKC (franchise-level); Franz Wagner OUT for Orlando; neither ML in target range; no spread/O-U odds",
+      "ml_home": 1.25,
+      "ml_away": 4.1,
+      "decision": "rejected"
+    },
+    {
+      "match": "New York Knicks vs Indiana Pacers",
+      "reason": "LINE ANOMALY: Knicks (44-25, home) at 6.75 vs Indiana (away) at 1.11. Even with Haliburton OUT, Nembhard/McConnell/Nesmith all Questionable, a 44-25 home team at 6.75 implied probability (~13%) is extreme. Brunson Doubtful for Knicks but line still anomalous. Flag for Commit.",
+      "ml_home": 6.75,
+      "ml_away": 1.11,
+      "decision": "anomaly"
+    },
+    {
+      "match": "Milwaukee Bucks vs Cleveland Cavaliers",
+      "reason": "LINE ANOMALY: Milwaukee (28-39, L10:2-8, confirmed tank-tier) at 1.21 vs Cleveland (41-27) at 4.60. Even with Giannis Questionable, Milwaukee at 83% implied win probability vs a materially better team violates the implied probability gap threshold (>40pt gap vs actual record gap). Flag for Commit.",
+      "ml_home": 1.21,
+      "ml_away": 4.6,
+      "decision": "anomaly"
+    },
+    {
+      "match": "Minnesota Timberwolves vs Phoenix Suns",
+      "reason": "Anthony Edwards OUT (franchise player) — rules prohibit backing Minnesota ML; Phoenix ML 1.62 is below the 1.70 floor; no spread/O-U odds available; no qualifying bet possible",
+      "ml_home": 2.33,
+      "ml_away": 1.62,
+      "decision": "rejected"
+    },
+    {
+      "match": "Denver Nuggets vs Philadelphia 76ers",
+      "reason": "LINE ANOMALY: Philadelphia (away, 37-31) at 1.08 implies ~93% win probability despite Embiid OUT, Paul George OUT (suspended), Maxey OUT, Oubre OUT — essentially their entire core missing. Denver (home, 41-27) at 8.0 with largely intact roster. Odds are almost certainly inverted or corrupted. Do not draft. Flag for Commit.",
+      "ml_home": 8.0,
+      "ml_away": 1.08,
+      "decision": "anomaly"
+    },
+    {
+      "match": "Sacramento Kings vs San Antonio Spurs",
+      "reason": "LINE ANOMALY: San Antonio (50-18, 2nd-best record) at 6.75 as away team vs Sacramento (18-51, tank-tier, confirmed) at 1.11. Even accounting for Sacramento's significant injury absences (LaVine, Murray, Hunter, Eubanks, Carter all OUT), a 50-18 team cannot be a ~15% underdog. Line appears corrupted or reversed. Do not draft. Flag for Commit.",
+      "ml_home": 1.11,
+      "ml_away": 6.75,
+      "decision": "anomaly"
+    }
+  ],
   "late_scout_rejections": []
 }
