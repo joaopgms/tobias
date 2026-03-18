@@ -19,9 +19,11 @@
   "commit_status": "pending",
   "commit_updated_at": null,
   "commit_date": null,
-  "analyst_updated_at": null,
+  "analyst_updated_at": "2026-03-18T21:35:40.061065+00:00",
   "settler_updated_at": null,
-  "agent_models": {},
+  "agent_models": {
+    "analyst": "claude-sonnet-4-6"
+  },
   "last_report": "",
   "draft_picks": [],
   "pending_bets": [],
