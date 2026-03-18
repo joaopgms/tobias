@@ -1,6 +1,6 @@
 ---
-version: 2
-updated_at: 2026-03-18T12:00:00.000000+00:00
+version: 3
+updated_at: 2026-03-19T00:00:00.000000+00:00
 updated_by: manual_review
 ---
 
@@ -24,7 +24,11 @@ Reasoning quality matters more than frequency of changes.
 - priority_stats: Scouting priority order. Only restructure with clear evidence.
 - ev_requirement: EV floor. Only tighten/loosen after 10+ settled bets show a pattern.
 - market_rules: ML/spread/total confidence floors and signals. Update when settled bet patterns show a market is over/under-performing.
-- franchise_player_rules: Player absences + confidence adjustments. Update EVERY session with injury feed.
+- franchise_player_rules: Player absences + confidence adjustments. Update EVERY session.
+  MANDATORY: You are provided a VERIFIED FRANCHISE PLAYER STATUSES section built from ESPN roster
+  cross-referenced with the NBA official injury feed. You MUST use ONLY names from that verified
+  list when patching franchise_player_rules. Never write a player name from memory or inference.
+  If a player is not in the verified list, do not include them. No exceptions.
 - tanking_teams: Confirmed tanks, tank-watch, hot/cold streaks. Update EVERY session with standings.
 - b2b_rules: B2B impact rules. Only change after 5+ B2B bets settled.
 - confidence_staking: Staking tiers. Only change after 20+ settled bets show a pattern.

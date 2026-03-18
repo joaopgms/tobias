@@ -24,7 +24,7 @@ import logging
 from datetime import datetime, date, timezone
 
 from core.llm import call_llm, call_llm_full, call_llm_full, extract_tag, agent_model_name
-from core.espn import fetch_standings, fetch_injuries, fetch_advanced_stats
+from core.espn import fetch_standings, fetch_injuries, fetch_advanced_stats, fetch_franchise_player_statuses
 
 log = logging.getLogger(__name__)
 
@@ -163,19 +163,21 @@ def _perf_summary(state: dict) -> str:
 
 # ── LLM prompt ────────────────────────────────────────────────────────────────
 
-ANALYST_SYSTEM = """You are the Analyst agent for Tobias, an autonomous NBA betting simulation.
-Your job is to review performance data and current NBA context, then decide which sections
-of the scouting and commit skills files need updating.
-
-You output structured JSON patches — nothing else.
-Be conservative: only patch sections where you have clear evidence the current guidance is wrong or outdated.
-Reasoning quality matters more than frequency of changes."""
+ANALYST_SYSTEM = "You are the Analyst agent for Tobias. Follow your rules file exactly."
+# Full instructions loaded from skills/analyst_rules.md at runtime
 
 
 def _build_analyst_prompt(perf: str, standings_text: str,
                            injuries_text: str, advanced_stats: str,
-                           scout_content: str, commit_content: str) -> str:
-    return f"""## PERFORMANCE REVIEW
+                           franchise_status: str,
+                           scout_content: str, commit_content: str,
+                           analyst_rules: str = "") -> str:
+    return f"""## YOUR RULES (from analyst_rules.md — follow exactly)
+{analyst_rules}
+
+---
+
+## PERFORMANCE REVIEW
 {perf}
 
 ## CURRENT NBA STANDINGS (top/bottom relevant teams)
@@ -183,6 +185,9 @@ def _build_analyst_prompt(perf: str, standings_text: str,
 
 ## CURRENT INJURY LANDSCAPE
 {injuries_text}
+
+## VERIFIED FRANCHISE PLAYER STATUSES (ESPN roster + NBA injury feed cross-reference)
+{franchise_status}
 
 ## ADVANCED STATS (OffRtg / DefRtg / NetRtg / Pace — all 30 teams)
 {advanced_stats}
@@ -195,7 +200,7 @@ def _build_analyst_prompt(perf: str, standings_text: str,
 
 ---
 
-## YOUR ROLE
+## NOW
 You maintain two skills files that govern Scout (14:00 daily) and Commit (pre tip-off).
 You have two jobs:
 1. Keep factual data current — tanking teams, franchise player absences, hot/cold streaks, standings
@@ -275,6 +280,21 @@ Rules:
 
 # ── Standings + injuries → compact text ───────────────────────────────────────
 
+def _franchise_status_text(statuses: dict) -> str:
+    """Format verified franchise player statuses for Analyst prompt."""
+    if not statuses:
+        return "Franchise player verification: no notable absences confirmed from roster + injury feed."
+    lines = ["VERIFIED FRANCHISE PLAYER ABSENCES (confirmed via ESPN roster + NBA injury feed):"]
+    for team, players in statuses.items():
+        for p in players:
+            verified = "✓ VERIFIED" if p["verified"] else "⚠ roster only"
+            r = f" — {p['reason']}" if p.get("reason") else ""
+            lines.append(f"  {team}: {p['name']} ({p['position']}) {p['status']}{r} [{verified}]")
+    lines.append("Use ONLY these verified names when patching franchise_player_rules.")
+    lines.append("Do NOT write any player name not in this list.")
+    return "\n".join(lines)
+
+
 def _advanced_stats_text(stats: dict) -> str:
     """Compact advanced stats for top/bottom teams — relevant for Analyst context."""
     if not stats:
@@ -342,6 +362,27 @@ def run(store) -> None:
     injuries   = fetch_injuries()
     adv_stats  = fetch_advanced_stats()
 
+    # ── Franchise player roster verification ──────────────────────────────────
+    # Identify franchise-tier teams (top-10 by wins) + known injury-sensitive teams
+    franchise_teams = []
+    seen = set()
+    rows = sorted(
+        [(int(v.get("wins", 0)), k) for k, v in standings.items() if len(k) > 3],
+        reverse=True
+    )
+    for _, team in rows[:12]:
+        if team not in seen:
+            franchise_teams.append(team)
+            seen.add(team)
+    # Always include known high-absence teams
+    for team in ["Los Angeles Lakers", "Washington Wizards", "Detroit Pistons"]:
+        if team not in seen:
+            franchise_teams.append(team)
+
+    log.info(f"Analyst: verifying rosters for {len(franchise_teams)} franchise-tier teams")
+    franchise_statuses = fetch_franchise_player_statuses(franchise_teams, injuries)
+    franchise_str = _franchise_status_text(franchise_statuses)
+
     perf           = _perf_summary(state)
     standings_str  = _standings_text(standings)
     injuries_str   = _injuries_text(injuries)
@@ -350,6 +391,9 @@ def run(store) -> None:
     # ── 3. Load current skills files ──────────────────────────────────────────
     scout_content  = store.read_md("scout_skills")
     commit_content = store.read_md("commit_skills")
+    analyst_rules  = store.read_md("analyst_rules")
+    if not analyst_rules:
+        log.warning("Analyst: analyst_rules.md missing — using minimal system prompt")
 
     # ── 4. Parse current version numbers ──────────────────────────────────────
     scout_meta,  _ = _parse_frontmatter(scout_content)
@@ -361,7 +405,8 @@ def run(store) -> None:
     log.info("Analyst: calling LLM for skills review…")
     system = ANALYST_SYSTEM
     user   = _build_analyst_prompt(perf, standings_str, injuries_str,
-                                    adv_str, scout_content, commit_content)
+                                    adv_str, franchise_str, scout_content,
+                                    commit_content, analyst_rules)
     state["agent_models"] = state.get("agent_models", {})
     state["agent_models"]["analyst"] = llm
     llm_result = call_llm_full(system, user, max_tokens=4096, agent="analyst")

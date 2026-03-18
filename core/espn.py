@@ -303,3 +303,104 @@ def format_advanced_stats_for_prompt(stats: dict, games: list[dict]) -> str:
                 lines.append(f"{team}: stats unavailable")
 
     return "\n".join(lines)
+
+
+# ── Team rosters ───────────────────────────────────────────────────────────────
+
+# ESPN team ID map — all 30 NBA teams
+ESPN_TEAM_IDS = {
+    "Atlanta Hawks": 1, "Boston Celtics": 2, "Brooklyn Nets": 17,
+    "Charlotte Hornets": 30, "Chicago Bulls": 4, "Cleveland Cavaliers": 5,
+    "Dallas Mavericks": 6, "Denver Nuggets": 7, "Detroit Pistons": 8,
+    "Golden State Warriors": 9, "Houston Rockets": 10, "Indiana Pacers": 11,
+    "Los Angeles Clippers": 12, "Los Angeles Lakers": 13, "Memphis Grizzlies": 29,
+    "Miami Heat": 14, "Milwaukee Bucks": 15, "Minnesota Timberwolves": 16,
+    "New Orleans Pelicans": 3, "New York Knicks": 18, "Oklahoma City Thunder": 25,
+    "Orlando Magic": 19, "Philadelphia 76ers": 20, "Phoenix Suns": 21,
+    "Portland Trail Blazers": 22, "Sacramento Kings": 23, "San Antonio Spurs": 24,
+    "Toronto Raptors": 28, "Utah Jazz": 26, "Washington Wizards": 27,
+}
+
+def fetch_team_roster(team_name: str) -> list[dict]:
+    """
+    Fetch current roster for a team from ESPN.
+    Returns list of {name, position, jersey, status} dicts.
+    """
+    team_id = ESPN_TEAM_IDS.get(team_name)
+    if not team_id:
+        # Try partial match
+        for name, tid in ESPN_TEAM_IDS.items():
+            if team_name.lower() in name.lower() or name.lower() in team_name.lower():
+                team_id = tid
+                break
+    if not team_id:
+        log.warning(f"ESPN roster: unknown team '{team_name}'")
+        return []
+
+    url = f"https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/{team_id}/roster"
+    try:
+        data = _get(url)
+        roster = []
+        for group in data.get("athletes", []):
+            # ESPN returns athletes grouped by position
+            items = group if isinstance(group, list) else group.get("items", [group])
+            for athlete in items:
+                if not isinstance(athlete, dict):
+                    continue
+                injuries = athlete.get("injuries", [])
+                inj_status = injuries[0].get("status", "") if injuries else ""
+                roster.append({
+                    "name":     athlete.get("displayName", athlete.get("fullName", "")),
+                    "position": athlete.get("position", {}).get("abbreviation", ""),
+                    "jersey":   athlete.get("jersey", ""),
+                    "status":   inj_status,
+                })
+        log.info(f"ESPN roster {team_name}: {len(roster)} players")
+        return roster
+    except Exception as e:
+        log.warning(f"ESPN roster error for {team_name}: {e}")
+        return []
+
+
+def fetch_franchise_player_statuses(franchise_teams: list[str],
+                                     injuries: dict) -> dict[str, list[dict]]:
+    """
+    For each franchise-tier team, fetch roster and cross-reference with injury feed.
+    Returns {team_name: [{name, position, status, reason, verified}]}
+    verified=True means confirmed from both roster + injury feed.
+    """
+    result = {}
+    for team in franchise_teams:
+        roster = fetch_team_roster(team)
+        if not roster:
+            log.warning(f"Franchise player check: no roster for {team}")
+            continue
+
+        team_injuries = injuries.get(team, [])
+        inj_by_name = {p["name"].lower(): p for p in team_injuries}
+
+        notable = []
+        for player in roster:
+            name_lower = player["name"].lower()
+            # Check injury feed
+            inj = inj_by_name.get(name_lower)
+            # Also try last name match
+            if not inj:
+                last = name_lower.split()[-1]
+                inj = next((p for n, p in inj_by_name.items() if last in n), None)
+
+            status = inj["status"] if inj else player.get("status", "")
+            if status.lower() in ("out", "doubtful", "questionable", "game time decision", "gtd"):
+                notable.append({
+                    "name":     player["name"],
+                    "position": player["position"],
+                    "status":   status,
+                    "reason":   inj.get("reason", "") if inj else "",
+                    "verified": bool(inj),  # True = confirmed in injury feed
+                })
+
+        if notable:
+            result[team] = notable
+        log.info(f"Franchise check {team}: {len(notable)} notable absences")
+
+    return result

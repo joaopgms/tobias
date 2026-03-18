@@ -1700,12 +1700,26 @@ function extractSummaryFromReport(reportMd) {
 }
 
 function renderScoutTab(){
-  const reports = [];
   const today = new Date().toISOString().slice(0,10);
-
-  // Today's report
   const todayEl = document.getElementById('scoutTodaySection');
-  const todayReport = reports.filter(r=>r.date===today).pop();
+
+  // Build today's report directly from STATE_DATA
+  const scoutStatus = ST.scout_status||'pending';
+  const draftPicks  = ST.draft_picks||[];
+  const rejGames    = ST.rejected_games||[];
+  const scoutUpdated = ST.scout_updated_at;
+
+  // Synthesise a todayReport object from state
+  const todayReport = (scoutStatus === 'live' || scoutStatus === 'done') ? {
+    date:     today,
+    picks:    draftPicks,
+    rejected: rejGames,
+    report:   ST.last_report||'',
+    odds_source: (ST.agent_models||{}).scout_odds||'',
+    cost_usd: 0,
+    injuries_source: ST.injuries_source||'',
+    updated_at: scoutUpdated,
+  } : null;
 
   if(todayEl){
     if(!todayReport){
