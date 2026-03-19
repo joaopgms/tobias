@@ -1,7 +1,7 @@
 ---
-version: 6
-updated_at: 2026-03-18T21:35:40.061065+00:00
-updated_by: analyst_2026-03-18
+version: 7
+updated_at: 2026-03-19T11:34:27.606658+00:00
+updated_by: analyst_2026-03-19
 llm: claude-sonnet-4-6
 ---
 
@@ -99,6 +99,7 @@ Known absences (⚠ roster-only flags — confirmed via ESPN roster cross-refere
 
   Detroit Pistons:
     - Cade Cunningham (G): OUT [⚠ roster only] — FRANCHISE PLAYER. Do NOT bet Detroit ML without re-verification.
+    - Wendell Moore Jr. (F): OUT [⚠ roster only]
     - Isaiah Stewart (F): OUT [⚠ roster only]
 
   New York Knicks:
@@ -113,7 +114,6 @@ Known absences (⚠ roster-only flags — confirmed via ESPN roster cross-refere
 
   Minnesota Timberwolves:
     - Anthony Edwards (G): OUT [⚠ roster only] — FRANCHISE PLAYER. Do NOT bet Minnesota ML without re-verification.
-    - Naz Reid (C): OUT [⚠ roster only]
 
   Denver Nuggets:
     - Aaron Gordon (F): OUT [⚠ roster only]
@@ -146,20 +146,20 @@ Known absences (⚠ roster-only flags — confirmed via ESPN roster cross-refere
     - Cam Whitmore (F): OUT [⚠ roster only]
 
 Franchise players requiring mandatory NBA official PDF verification before ANY pick involving their team:
-  - Jalen Williams (OKC) — team is 54-15; if OUT, major confidence impact on OKC picks
+  - Jalen Williams (OKC) — team is 55-15; if OUT, major confidence impact on OKC picks
   - Cade Cunningham (Detroit) — verify before ANY Detroit pick
   - Anthony Edwards (Minnesota) — verify before ANY Minnesota pick
   - Any player flagged ⚠ roster only — these are NOT confirmed via official injury report
 
 ## SECTION:tanking_teams
 Confirmed tanking-tier teams (all three criteria met):
-  - Washington Wizards: 16-52, L10: 0-10, streak: L13 — clearest tank; 6 players OUT including all franchise players
-  - Sacramento Kings: 18-52, L10: 5-5, streak: L1 — worst record in West; L10 improvement unreliable
-  - Brooklyn Nets: 17-51, L10: 2-8, streak: L4 — bottom East
-  - Utah Jazz: 20-48, L10: 2-8, streak: L3
-  - Dallas Mavericks: 23-46, L10: 2-8, streak: L1 — confirmed tank
-  - Memphis Grizzlies: 23-44, L10: 2-8, streak: L8 — deepening; no signs of fight
-  - Milwaukee Bucks: 28-40, L10: 2-8, streak: L1 — verify pick ownership before each bet
+  - Washington Wizards: 16-52, L10: 0-10, streak: L13 — clearest tank; 6 players OUT including all franchise players (Davis, Russell, Young all OUT)
+  - Sacramento Kings: 18-52, L10: 5-5, streak: L1 — worst record in West; L10 improvement unreliable, NetRtg -10.1 worst in league
+  - Brooklyn Nets: 17-52, L10: 2-8, streak: L5 — bottom East; NetRtg -9.7
+  - Utah Jazz: 20-49, L10: 2-8, streak: L4 — NetRtg -7.8
+  - Dallas Mavericks: 23-47, L10: 2-8, streak: L2 — confirmed tank; NetRtg -5.1
+  - Memphis Grizzlies: 24-44, L10: 2-8, streak: W1 — single-game win does not reverse tank signal; NetRtg -2.9
+  - Milwaukee Bucks: 28-40, L10: 2-8, streak: L1 — NetRtg -5.2; verify pick ownership before each bet
 
 Tanking criteria (ALL THREE must be met):
   (a) Team owns its own 2026 draft pick
@@ -170,20 +170,21 @@ When betting AGAINST tanking teams: edge-positive.
 When betting ON tanking teams: require odds ≥ 2.20 and strong situational reason.
 
 Emerging tank-watch:
-  - Chicago Bulls (28-40, L10: 4-6) — borderline play-in; monitor
-  - New Orleans Pelicans (23-46, L10: 6-4) — record tank-tier but L10 shows fight; unpredictable
-  - Golden State Warriors (33-35, L10: 3-7) — play-in bubble fading fast
+  - Chicago Bulls (28-41, L10: 4-6, streak: L1) — borderline play-in; NetRtg -4.4; monitor
+  - New Orleans Pelicans (24-46, L10: 6-4, streak: W2) — record tank-tier but L10 shows fight; unpredictable; treat as volatile, not confirmed tank
+  - Golden State Warriors (33-36, L10: 2-8, streak: L1) — play-in bubble fading; NetRtg +0.6 still above water but L10 alarming
 
 Hot streaks (may create line inefficiencies):
-  - Atlanta Hawks (37-31, L10: 10-0, W10) — extreme regression risk; overall .544 W% implies ~.500 true talent. Verify opponent odds ≥ 1.80 for fade opportunity.
-  - OKC Thunder (54-15, L10: 9-1, W9) — efficiently priced; Jalen Williams OUT [⚠ roster only] — verify before drafting OKC picks
-  - San Antonio Spurs (51-18, L10: 8-2, W3) — efficiently priced
-  - Los Angeles Lakers (43-25, L10: 9-1, W6) — hot streak; Maxi Kleber OUT but no franchise player concern
-  - Detroit Pistons (49-19, L10: 5-5) — Cade Cunningham OUT [⚠ roster only]; do not bet Detroit ML without verification
+  - Atlanta Hawks (38-31, L10: 10-0, streak: W11) — EXTREME regression risk; overall .551 W% borderline, 11-game win streak for a ~.500 true talent team is historically unsustainable. Verify opponent odds ≥ 1.80 for fade opportunity. Apply HOT STREAK FADE RULE.
+  - OKC Thunder (55-15, L10: 10-0, streak: W10) — elite team but Jalen Williams OUT [⚠ roster only]; NetRtg +10.9 best in league. Verify before drafting OKC picks.
+  - San Antonio Spurs (51-18, L10: 8-2, streak: W3) — efficiently priced; NetRtg +7.2
+  - Los Angeles Lakers (44-25, L10: 9-1, streak: W7) — strong hot streak; NetRtg only +1.4 vs record suggests positive run differential luck; monitor for regression
+  - Detroit Pistons (49-19, L10: 5-5, streak: W1) — Cade Cunningham OUT [⚠ roster only]; do not bet Detroit ML without verification
 
 Schedule seeding context (late March):
-  - OKC (54-15), Spurs (51-18), Pistons (49-19) locked into top-3 seeds — star rest risk increasing
-  - Play-in bubble (seeds 7-10): Charlotte, Portland, Golden State, Clippers — motivation-positive for these teams
+  - OKC (55-15), Spurs (51-18), Pistons (49-19) locked into top-3 seeds — star rest risk increasing as postseason approaches
+  - Play-in bubble (seeds 7-10 East/West): Charlotte, Portland, Golden State, Clippers, Philadelphia — motivation-positive for these teams
+  - Lakers (44-25) now firmly in top-3 West conversation — motivation still high
 
 ## SECTION:b2b_rules
 B2B and rest day rules — apply numeric confidence adjustments:
