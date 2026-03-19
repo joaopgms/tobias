@@ -52,7 +52,8 @@ The system will FAIL if <committed_bets> tag is missing. Even if all picks are c
 
 
 def _build_commit_prompt(skills: str, draft_picks: list, odds_text: str,
-                          injuries_text: str, state: dict, today: str) -> str:
+                          injuries_text: str, injuries_source: str,
+                          state: dict, today: str) -> str:
     bankroll = state["bankroll"]
     now_iso  = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
@@ -247,8 +248,15 @@ def run(store, force: bool = False) -> None:
         injuries_source = "espn"
     else:
         injuries_source = "nba_official"
-    odds_str      = format_odds_for_prompt(odds)
-    injuries_str  = _injuries_text(injuries)
+    odds_str = format_odds_for_prompt(odds)
+    # Filter injuries to tonight's teams only, use official formatter if available
+    from core.espn import fetch_scoreboard
+    scoreboard = fetch_scoreboard()
+    tonight_teams = [g["home"] for g in scoreboard] + [g["away"] for g in scoreboard]
+    if injuries_source == "nba_official":
+        injuries_str = format_official_injuries(injuries, tonight_teams=tonight_teams)
+    else:
+        injuries_str = _injuries_text({t: p for t, p in injuries.items() if t in tonight_teams})
 
     # ── 6. Call LLM ───────────────────────────────────────────────────────────
     log.info("Commit: calling LLM for final decision…")
@@ -257,7 +265,7 @@ def run(store, force: bool = False) -> None:
         llm_result = call_llm_full(
             COMMIT_SYSTEM,
             _build_commit_prompt(skills, draft_picks, odds_str,
-                                  injuries_str, state, today),
+                                  injuries_str, injuries_source, state, today),
             max_tokens=4096,
             agent="commit",
         )
@@ -324,8 +332,6 @@ def run(store, force: bool = False) -> None:
     # ── 11. Update state ──────────────────────────────────────────────────────
     state["agent_models"] = state.get("agent_models", {})
     state["agent_models"]["commit"] = llm
-    state["agent_models"] = state.get("agent_models", {})
-    state["agent_models"]["commit"] = llm
     state["pending_bets"]      = state.get("pending_bets", []) + committed_bets
     state["draft_picks"]       = []                    # clear after commit
     state["commit_status"]     = "done"
@@ -387,6 +393,7 @@ def run(store, force: bool = False) -> None:
                   bankroll_before=bankroll_before,
                   bankroll_after=state["bankroll"],
                   bust=busted,
+                  injuries_source=injuries_source,
                   llm_meta=llm_result.to_audit_dict() if llm_result else {})
 
     # ── 16. Store report for Commit tab ──────────────────────────────────────
@@ -403,7 +410,7 @@ def run(store, force: bool = False) -> None:
         "cancelled":       cancelled_picks,
         "late_rejections": state.get("late_scout_rejections", []),
         "report":          report_raw,
-        "odds_failures":   odds_failures if "odds_failures" in dir() else [],
+        "odds_failures":   odds_failures,
         **(llm_result.to_audit_dict() if llm_result else {}),
     }
     try:
@@ -434,7 +441,7 @@ def _injuries_text(injuries: dict) -> str:
 def _append_audit(store, ts, llm, state, history, report_raw="",
                   committed=None, cancelled=None,
                   total_staked=0, bankroll_before=0, bankroll_after=0, bust=False,
-                  llm_meta=None):
+                  injuries_source="unknown", llm_meta=None):
     entry = {
         "ts":              ts,
         "agent":           "commit",
@@ -450,6 +457,7 @@ def _append_audit(store, ts, llm, state, history, report_raw="",
         "bankroll_before": round(bankroll_before, 2),
         "bankroll_after":  round(bankroll_after, 2),
         "bust":            bust,
+        "injuries_source":  injuries_source,
         **(llm_meta or {}),
     }
     try:
