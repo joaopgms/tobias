@@ -23,7 +23,7 @@ from datetime import datetime, date, timezone, timedelta
 from core.llm import call_llm, call_llm_full, extract_tag, agent_model_name
 from core.espn import fetch_injuries, fetch_first_game_time_utc
 from core.nba_injuries import fetch_official_nba_injuries, format_injuries_for_prompt as format_official_injuries
-from core.odds import fetch_betano_nba_odds, format_odds_for_prompt
+from core.odds import fetch_betano_nba_odds, format_odds_for_prompt, get_odds_failure_reasons
 from core.validators import validate_all_bets, validate_all_drafts, ValidationError
 
 log = logging.getLogger(__name__)
