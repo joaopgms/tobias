@@ -381,6 +381,16 @@ def run(store) -> None:
     state["agent_models"]["scout"] = llm
     state["scout_odds_source"]= odds[0].get("odds_source", "none") if odds else "none"
     state["scout_status"]     = "live"
+    # Store full scout report data — persists even after commit clears draft_picks
+    state["scout_report_data"] = {
+        "date":             today,
+        "picks":            draft_picks,
+        "rejected":         json.loads(rejected_raw) if rejected_raw else [],
+        "report":           report_raw,
+        "odds_source":      odds[0].get("odds_source", "none") if odds else "none",
+        "injuries_source":  injuries_source,
+        "updated_at":       now_iso,
+    }
     # Store rejected games for dashboard display
     try:
         state["rejected_games"] = json.loads(rejected_raw) if rejected_raw else []

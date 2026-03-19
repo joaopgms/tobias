@@ -1758,15 +1758,17 @@ function renderScoutTab(){
 }
 
 function renderCommitTab(){
-  const reports = [];
   const today = new Date().toISOString().slice(0,10);
-
   const todayEl = document.getElementById('commitTodaySection');
-  const todayReport = reports.filter(r=>r.date===today).pop();
+
+  // Read from STATE_DATA.commit_report_data (written by commit agent)
+  const commitStatus = ST.commit_status||'pending';
+  const crd = ST.commit_report_data||null;
+  const todayReport = (commitStatus==='done' && crd && crd.date===today) ? crd : null;
 
   if(todayEl){
     if(!todayReport){
-      todayEl.innerHTML=`<div style="text-align:center;padding:40px;color:var(--muted);font-size:.82rem">No commit report yet today. Commit fires 15 min before first tip-off.</div>`;
+      todayEl.innerHTML=`<div style="text-align:center;padding:40px;color:var(--muted);font-size:.82rem">No commit report yet today. Commit fires 30 min before first tip-off.</div>`;
     } else {
       const bets=(todayReport.bets||[]);
       const cancelled=(todayReport.cancelled||[]);

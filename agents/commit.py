@@ -334,11 +334,22 @@ def run(store, force: bool = False) -> None:
     state["agent_models"]["commit"] = llm
     state["pending_bets"]      = state.get("pending_bets", []) + committed_bets
     state["draft_picks"]       = []                    # clear after commit
+    # NOTE: rejected_games intentionally kept — Scout tab needs them until next Scout run
     state["commit_status"]     = "done"
     state["commit_date"]       = today   # date-based idempotency key
     state["commit_updated_at"] = now_iso
     state["last_updated"]      = now_iso
     state["last_report"]       = report_raw
+    # Store commit report data for dashboard Commit tab
+    state["commit_report_data"] = {
+        "date":            today,
+        "bets":            committed_bets,
+        "cancelled":       cancelled_picks,
+        "late_rejections": state.get("late_scout_rejections", []),
+        "total_staked":    round(total_staked, 2),
+        "bankroll_before": round(bankroll_before, 2),
+        "report":          report_raw,
+    }
     try:
         state["late_scout_rejections"] = json.loads(late_rejections_raw) if late_rejections_raw else []
     except Exception:
