@@ -1,1 +1,54 @@
-[]
+[
+  {
+    "ts": "2026-03-19T22:53:50.149474+00:00",
+    "date": "2026-03-19",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 1,
+    "cancelled_count": 1,
+    "total_staked": 100.0,
+    "bankroll_before": 1000.0,
+    "bankroll_after": 900.0,
+    "bets": [
+      {
+        "id": "nba_bet_20260319_001",
+        "match": "Miami Heat vs Los Angeles Lakers",
+        "time": "2026-03-20T00:00:00Z",
+        "pick": "Miami Heat ML",
+        "odds": 2.38,
+        "stake": 100,
+        "potential_return": 238.0,
+        "confidence": 53,
+        "reasoning": "Scout identified Miami Heat ML at 2.25 based on superior NetRtg (+3.1 vs Lakers +1.4), home court advantage, and Lakers' hot streak flagged as potentially luck-driven. At commit time, odds improved to 2.38 (+0.13 in our favour), consistent with news that Luka Doncic (Questionable, Right Hip) and LeBron James (Questionable, Left Foot Arthritis) are both uncertain for Lakers — two franchise-level players potentially unavailable. Austin Reaves also Questionable. Heat are missing Jaquez Jr. (confirmed OUT, was Questionable at Scout), Andrew Wiggins (OUT, new), and Terry Rozier (OUT, new), but their core rotation (Butler, Adebayo) remains intact. Net injury impact heavily favours Heat: Lakers potentially missing two franchise players outweighs Heat's role-player absences. Books have moved from 2.25 to 2.38, partially pricing in LAL risks, but 2.38 still offers strong value. EV at commit odds: (0.53 × 2.38) - 1 = 0.2614 = 26.1%, well above 0.05 threshold. Odds within ML valid range (1.65–2.50). Confidence maintained at 53 (Speculative): LAL injury upside offset by Heat's additional absences. Stake: 10% of €1000 = €100. Original stake unchanged per rules (do not increase even on improved odds). Total exposure: 10% of bankroll.",
+        "anchor_players": [
+          "Luka Doncic (Questionable — Lakers, franchise player, Right Hip Soreness)",
+          "LeBron James (Questionable — Lakers, franchise player, Left Foot Arthritis)",
+          "Austin Reaves (Questionable — Lakers, Contusion)",
+          "Maxi Kleber (OUT — Lakers, Back Strain)",
+          "Jaime Jaquez Jr. (OUT — Heat, Left Hip Tightness, upgraded from Questionable)",
+          "Andrew Wiggins (OUT — Heat, Sesamoiditis, new at commit)",
+          "Terry Rozier (OUT — Heat, Not With Team, new at commit)"
+        ],
+        "committed_at": "2026-03-19T22:53:53Z",
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null
+      }
+    ],
+    "cancelled": [
+      {
+        "id": "nba_draft_20260319_001",
+        "match": "Charlotte Hornets vs Orlando Magic",
+        "pick": "Charlotte Hornets +5.5",
+        "reason": "New information fundamentally changes the edge. Scout's entire thesis was anchored on Franz Wagner (Orlando franchise player) being OUT. At commit time, Wagner does NOT appear on the official NBA injury report — only Anthony Black (OUT) and Wendell Carter Jr. (OUT, new) are listed for Orlando. Jonathan Isaac is also absent from the official report. Without confirmed Wagner absence, the franchise player edge that justified the pick evaporates entirely. Additionally, Jonathan Isaac's status is unconfirmed. The core rationale — covering -5.5 on road without their best player — no longer applies if Wagner is active. Cancel per cancel_criteria: 'New information fundamentally changes the edge.'"
+      }
+    ],
+    "late_rejections": [],
+    "report": "",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 5054,
+    "tokens_out": 4096,
+    "cost_usd": 0.076602
+  }
+]
