@@ -1,1 +1,110 @@
-[]
+[
+  {
+    "ts": "2026-03-19T14:54:08.611052+00:00",
+    "date": "2026-03-19",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_unibet",
+    "draft_count": 2,
+    "picks": [
+      {
+        "id": "nba_draft_20260319_001",
+        "match": "Charlotte Hornets vs Orlando Magic",
+        "time": "2026-03-19T23:00:00Z",
+        "pick": "Charlotte Hornets +5.5",
+        "odds": 1.88,
+        "stake": 150,
+        "potential_return": 282.0,
+        "confidence": 63,
+        "reasoning": "Orlando Magic are significantly depleted with Franz Wagner OUT (franchise player, high ankle sprain), Anthony Black OUT, and Jonathan Isaac OUT — three of their core rotation players unavailable. Franchise player rule: Wagner OUT means do NOT bet Orlando to win; conversely, Charlotte gains material edge. Charlotte's NetRtg (+3.8) is superior to Orlando's (+1.2), a +2.6 gap in Charlotte's favour. Charlotte L10: 7-3, home court advantage worth ~2-3 points. Charlotte (35-34) is fighting for play-in/seeding positioning (motivation-positive). Orlando covering -5.5 on the road without their best player is highly unlikely. Spread odds 1.88 in target range (1.80-2.30). Confidence 63 meets spread floor of 60. EV = (0.63 × 1.88) - 1 = 0.1844 = 18.4% — strong edge. No B2B concerns flagged. No anomaly. Stake: Medium tier (55-69), 15% of bankroll = €150.",
+        "anchor_players": [
+          "Franz Wagner (OUT — Orlando, franchise player)",
+          "Anthony Black (OUT — Orlando)",
+          "Jonathan Isaac (OUT — Orlando)"
+        ],
+        "drafted_at": "2026-03-19T14:54:15Z",
+        "market_type": "spread"
+      },
+      {
+        "id": "nba_draft_20260319_002",
+        "match": "Miami Heat vs Los Angeles Lakers",
+        "time": "2026-03-20T00:00:00Z",
+        "pick": "Miami Heat ML",
+        "odds": 2.25,
+        "stake": 100,
+        "potential_return": 225.0,
+        "confidence": 53,
+        "reasoning": "Miami Heat have better underlying NetRtg (+3.1 vs Lakers +1.4, a +1.7 gap in Heat's favour) and home court advantage (worth ~2-3 points / 0.10-0.15 odds). Lakers' hot streak (L10: 9-1, W7) is flagged in skills as potentially luck-driven given their low NetRtg (+1.4), suggesting regression risk. Heat L10: 7-3, seeding motivation, full roster (Jaquez Jr. questionable but not franchise level, -5 confidence applied). Lakers injuries: Maxi Kleber OUT (non-franchise, minor). No franchise player concerns for either team. Heat at home in a close matchup where NetRtg gap + home court both favour them. Market may be overvaluing Lakers' recent hot streak. Odds 2.25 in target range (1.70-2.50). Confidence 53 meets ML floor of 50. EV = (0.53 × 2.25) - 1 = 0.1925 = 19.25% — marginal/medium edge, proceed with caution. Stake: Speculative tier (50-54), 10% of bankroll = €100.",
+        "anchor_players": [
+          "Jaime Jaquez Jr. (Questionable — Heat, hip)",
+          "Maxi Kleber (OUT — Lakers, non-franchise)"
+        ],
+        "drafted_at": "2026-03-19T14:54:15Z",
+        "market_type": "ml"
+      }
+    ],
+    "rejected": [
+      {
+        "match": "Washington Wizards vs Detroit Pistons",
+        "reason": "LINE ANOMALY: Washington (16-52, L10: 0-10, confirmed worst team in NBA) priced at 1.09 ML as home favourites against Detroit (49-19). Tank-tier home team at ≤1.35 is an anomaly trigger. Spread of 14.5 in Washington's favour also defies standings. Do not draft — flag for Commit to investigate data error or line reversal.",
+        "ml_home": 1.09,
+        "ml_away": 7.5,
+        "decision": "anomaly"
+      },
+      {
+        "match": "Charlotte Hornets vs Orlando Magic",
+        "reason": "DRAFTED — Charlotte +5.5 @ 1.88",
+        "ml_home": 2.7,
+        "ml_away": 1.48,
+        "decision": "rejected"
+      },
+      {
+        "match": "Miami Heat vs Los Angeles Lakers",
+        "reason": "DRAFTED — Miami Heat ML @ 2.25",
+        "ml_home": 2.25,
+        "ml_away": 1.66,
+        "decision": "rejected"
+      },
+      {
+        "match": "Chicago Bulls vs Cleveland Cavaliers",
+        "reason": "LINE ANOMALY: Cleveland (42-27) priced at ML 5.80 as massive underdog vs Chicago (28-41) with Chicago as 13.5-point favourite. A team 14 games better in the standings cannot be a 5.80 ML underdog. This is a clear data error or line reversal. Do not draft — flag for Commit.",
+        "ml_home": 1.14,
+        "ml_away": 5.8,
+        "decision": "anomaly"
+      },
+      {
+        "match": "New Orleans Pelicans vs LA Clippers",
+        "reason": "NO EDGE: Clippers advanced stats unavailable (ML-only session per rules). Clippers ML 1.80 yields negative EV at maximum confidence of 55 (EV = -0.01). Pelicans ML 2.04 — confidence too low (max ~42) for 24-46 team with NetRtg -3.9. No qualifying edge in any market.",
+        "ml_home": 2.04,
+        "ml_away": 1.8,
+        "decision": "no_edge"
+      },
+      {
+        "match": "San Antonio Spurs vs Phoenix Suns",
+        "reason": "LINE ANOMALY: San Antonio Spurs (51-18, 2nd best record in NBA) priced at 4.30 ML as massive home underdogs vs Phoenix Suns (39-30) at 1.23. Elite team at home cannot be priced at 4.30. This is a data reversal or extreme error. Do not draft — flag for Commit.",
+        "ml_home": 4.3,
+        "ml_away": 1.23,
+        "decision": "anomaly"
+      },
+      {
+        "match": "Utah Jazz vs Milwaukee Bucks",
+        "reason": "NO EDGE: Both teams confirmed tankers (Jazz 20-49 NetRtg -7.8, Bucks 28-40 NetRtg -5.2). Giannis Antetokounmpo OUT (franchise player — hyperextension). Jazz ML 1.48 below target range. Bucks ML 2.70 has confidence max ~48 (Giannis OUT, both teams tanking) — below ML floor of 50. Jazz spread -5.0 @ 1.93 has negative EV at 50% confidence. No qualifying edge.",
+        "ml_home": 1.48,
+        "ml_away": 2.7,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Sacramento Kings vs Philadelphia 76ers",
+        "reason": "NO EDGE: Embiid DOUBTFUL (franchise player, oblique strain) = game-time decision → spreads banned per rules. 76ers ML 2.30 — confidence collapses to ~20 after Embiid doubtful (-15) adjustment and accounting for Maxey OUT + PG suspended. Kings ML 1.63 below target range. No qualifying edge.",
+        "ml_home": 1.63,
+        "ml_away": 2.3,
+        "decision": "no_edge"
+      }
+    ],
+    "report": "# Scout Report — 2026-03-19 NBA Slate\n\n**Injury Feed:** NBA Official PDF (full coverage — normal confidence rules apply)\n**Advanced Stats:** Available for most teams; Clippers stats unavailable (ML-only for that game)\n**Pace Data:** All values 0.0 — Pace-based totals analysis not possible; O/U market also not available tonight\n\n---\n\n### Charlotte Hornets vs Orlando Magic\n- **Edge assessment:** Value exists — Charlotte +5.5 on spread\n- **Key factors:** Franz Wagner OUT (Orlando franchise player — high ankle sprain) alongside Anthony Black OUT and Jonathan Isaac OUT devastates Orlando's rotation. Charlotte has better NetRtg (+3.8 vs +1.2), home court advantage, and is motivated (35-34, fighting for play-in positioning). Charlotte L10: 7-3. Orlando missing their three core contributors makes covering -5.5 on the road extremely unlikely.\n- **Odds:** ML: Orlando 1.48 / Charlotte 2.70 | Spread: Orlando -5.5 (1.94) / Charlotte +5.5 (1.88). Note: Neither ML falls in 1.70-2.50 target range; spread is the qualifying market.\n- **Decision:** DRAFTED — Charlotte +5.5 @ 1.88 | Confidence: 63 | EV: 18.4% | Stake: €150\n\n---\n\n### Washington Wizards vs Detroit Pistons\n- **Edge assessment:** LINE ANOMALY — cannot assess\n- **Key factors:** Washington (16-52, L10: 0-10, confirmed worst team in NBA, all franchise players OUT) is priced at 1.09 ML as home favourites against Detroit (49-19). This defies all statistical logic. The 14.5-point spread also going Washington's way is implausible. Either the home/away data is reversed or there is a data feed error. Cade Cunningham is OUT for Detroit (confirmed via official report), but this still cannot justify Washington at 1.09. Wizards advanced stats: NetRtg -10.9 (worst in league).\n- **Odds:** ML: Washington 1.09 / Detroit 7.50 | Spread: 14.5 (1.92/1.90)\n- **Decision:** ANOMALY — Do NOT draft. Flag for Commit to verify line source and correct team assignment.\n\n---\n\n### Miami Heat vs Los Angeles Lakers\n- **Edge assessment:** Marginal value on Heat ML\n- **Key factors:** Heat NetRtg +3.1 vs Lakers +1.4 (Heat +1.7 advantage). Heat home court. Lakers on hot streak (W7, L10: 9-1) but skills flag their low NetRtg as regression risk — the streak may be luck-driven. Heat L10: 7-3, seeding motivation. Jaquez Jr. questionable (hip) — minor confidence reduction applied (-5). No franchise player concerns for either team. Maxi Kleber OUT for Lakers is non-franchise, minimal impact.\n- **Odds:** ML: Heat 2.25 / Lakers 1.66 | Spread: Lakers -3.0 (1.89) / Heat +3.0 (1.93)\n- **Decision:** DRAFTED — Miami Heat ML @ 2.25 | Confidence: 53 | EV: 19.25% | Stake: €100 (speculative)\n\n---\n\n### Chicago Bulls vs Cleveland Cavaliers\n- **Edge assessment:** LINE ANOMALY — cannot assess\n- **Key factors:** Cleveland (42-27, NetRtg +4.2) is priced at 5.80 ML as a massive underdog to Chicago (28-41, NetRtg -4.4) with Chicago as a 13.5-point home favourite. This is statistically impossible to justify — Cleveland has 14 more wins, a superior NetRtg by 8.6 points, and comparable L10 records. The line implies Cleveland is the vastly inferior team, which contradicts all available data. Jarrett Allen OUT for Cleveland is a known absence but cannot account for a 13.5-point spread swing.\n- **Odds:** ML: Chicago 1.14 / Cleveland 5.80 | Spread: 13.5 (1.90/1.92)\n- **Decision:** ANOMALY — Do NOT draft. Flag for Commit — probable home/away reversal or data error.\n\n---\n\n### New Orleans Pelicans vs LA Clippers\n- **Edge assessment:** No qualifying edge\n- **Key factors:** Clippers advanced stats unavailable → ML-only session per rules. Clippers better record (34-35 vs 24-46) and play-in motivation. Pelicans L10: 6-4 (fighting despite tank-tier record — treated as volatile per skills). Clippers ML 1.80 yields EV of -0.01 at maximum confidence of 55 (below the 5% threshold). Pelicans ML 2.04 requires confidence well above what their 24-46 record and -3.9 NetRtg can support.\n- **Odds:** ML: Pelicans 2.04 / Clippers 1.80 | Spread: Clippers -1.5 (1.89/1.93)\n- **Decision:** NO EDGE — Clippers ML negative EV; Pelicans ML insufficient confidence. Spreads/totals banned without Clippers advanced stats.\n\n---\n\n### San Antonio Spurs vs Phoenix Suns\n- **Edge assessment:** LINE ANOMALY — cannot assess\n- **Key factors:** San Antonio Spurs (51-18, 2nd best record in NBA, NetRtg +7.2, L10: 8-2) are priced at 4.30 ML as home underdogs to Phoenix Suns (39-30, NetRtg +1.0) at 1.23. An elite team at home with a 12-game record advantage cannot be priced as massive underdogs at 4.30. Suns injury report shows multiple absences (Brooks OUT, Mark Williams OUT, Allen/O'Neale questionable) but this still cannot justify this extreme pricing reversal. Probable home/away data error.\n- **Odds:** ML: Spurs 4.30 / Suns 1.23 | Spread: Suns -10.0 (1.94/1.88)\n- **Decision:** ANOMALY — Do NOT draft. Flag for Commit — probable home/away reversal. If corrected, Spurs home ML would likely be in the 1.40-1.60 range (out of target) with Suns at 2.40-2.70.\n\n---\n\n### Utah Jazz vs Milwaukee Bucks\n- **Edge assessment:** No qualifying edge\n- **Key factors:** Both teams are confirmed tankers (Jazz 20-49, NetRtg -7.8; Bucks 28-40, NetRtg -5.2). Giannis Antetokounmpo OUT (hyperextension/bone bruise) — Bucks franchise player. Jazz are home team. Jazz ML 1.48 below target range. Bucks ML 2.70 mathematically shows EV potential but confidence cannot reach the 50 ML floor (max ~48) — Giannis OUT removes Bucks' only genuine advantage, and Bucks themselves are a confirmed tank. Jazz spread -5.0 negative EV. This is a tank-vs-tank game with low predictability.\n- **Odds:** ML: Jazz 1.48 / Bucks 2.70 | Spread: Jazz -5.0 (1.93/1.89)\n- **Decision:** NO EDGE — Giannis OUT collapses Bucks confidence below floor; Jazz ML out of range; spread negative EV.\n\n---\n\n### Sacramento Kings vs Philadelphia 76ers\n- **Edge assessment:** No qualifying edge due to injury uncertainty\n- **Key factors:** Philadelphia is missing Joel Embiid (DOUBTFUL — oblique), Tyrese Maxey (OUT), Paul George (OUT — suspended), and Kelly Oubre (OUT). This is a catastrophically depleted 76ers squad. Kings are confirmed tank-tier (18-52, NetRtg -10.1) but at home against this shell roster are justifiably favoured. Embiid DOUBTFUL = game-time decision → spreads banned per rules. 76ers ML 2.30 — confidence after applying franchise player rules (Embiid doubtful -15, base already low given Maxey/PG absence) collapses to ~20 — far below the 50 ML floor. Kings ML 1.63 is below target range. No qualifying pick available.\n- **Odds:** ML: Kings 1.63 / 76ers 2.30 | Spread: Kings -3.5 (1.87) / 76ers +3.5 (1.95)\n- **Decision:** NO EDGE — Embiid game-time decision bans spreads; 76ers ML confidence too low; Kings ML out of range.\n\n---\n\n## Overall Slate Assessment\n\nTonight's slate is significantly impaired by **three apparent line anomalies** (Detroit/Washington, Cleveland/Chicago, Suns/Spurs) where home/away assignments appear reversed in the odds feed — these represent the biggest opportunity cost as they prevent evaluation of potentially strong edges (e.g., Detroit vs Washington and Cleveland vs Chicago both involve clear quality mismatches). The **Pace data being unavailable** (all zeros) eliminates totals analysis, though O/U markets are absent anyway. Two genuine picks were identified: Charlotte +5.5 benefits from Orlando's devastating injury situation (Wagner, Black, Isaac all OUT) with a strong EV of 18.4%, and Miami Heat ML at 2.25 offers regression-fade value against the Lakers' hot streak at 19.3% EV. Commit should prioritise re-verifying the three flagged anomalies — if line assignments are corrected, Detroit ML and Cleveland ML could become strong edges at corrected odds. Total bankroll at risk: €250 (25%), well within the 70% daily cap.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 7873,
+    "tokens_out": 11000,
+    "cost_usd": 0.188619
+  }
+]
