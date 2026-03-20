@@ -17,11 +17,11 @@ If current odds fall outside valid range → do NOT confirm. Cancel with reason 
 ## SECTION:line_movement_rules
 Compare current odds to Scout's drafted odds (stored in draft pick).
 Movement in your favour (odds improved, e.g. 2.38 → 2.55):
-  → Confirm at ORIGINAL stake. Do not increase stake. Note improvement in report.
-  → Rationale: Scout set confidence based on analysis, not on odds alone.
+→ Confirm at ORIGINAL stake. Do not increase stake. Note improvement in report.
+→ Rationale: Scout set confidence based on analysis, not on odds alone.
 Movement against (odds worsened, e.g. 2.38 → 2.15):
-  → Still above floor: re-evaluate with confidence -10. Recalculate EV at new odds. Confirm only if EV ≥ 0.05.
-  → Below floor: cancel. Reason: "Odds fell below confirmation floor".
+→ Still above floor: re-evaluate with confidence -10. Recalculate EV at new odds. Confirm only if EV ≥ 0.05.
+→ Below floor: cancel. Reason: "Odds fell below confirmation floor".
 Movement > 0.20 in either direction: treat as major signal. Always check for undisclosed injuries or lineup changes.
 Movement > 0.30: cancel unless you can explicitly explain the cause.
 
@@ -33,12 +33,12 @@ No injury update available → proceed with Scout's original assessment.
 
 CRITICAL — QUESTIONABLE/GTD RULE:
 If your bet thesis DEPENDS on a key player being OUT (i.e. their absence is why you have the edge):
-  - Player listed Questionable or GTD → DO NOT confirm. Cancel: "Pick depends on unconfirmed absence."
-  - Player listed Doubtful → proceed with confidence -15, stake -20% ONLY if EV still ≥ 0.05 without them.
-  - Only confirm injury-dependent picks when player is listed OUT or officially scratched (DNP).
+- Player listed Questionable or GTD → DO NOT confirm. Cancel: "Pick depends on unconfirmed absence."
+- Player listed Doubtful → proceed with confidence -15, stake -20% ONLY if EV still ≥ 0.05 without them.
+- Only confirm injury-dependent picks when player is listed OUT or officially scratched (DNP).
 If your bet thesis does NOT depend on their absence (edge exists regardless):
-  - Questionable → apply standard confidence -10, stake -20% per franchise_player_rules.
-  - Proceed if EV ≥ 0.05 after adjustment.
+- Questionable → apply standard confidence -10, stake -20% per franchise_player_rules.
+- Proceed if EV ≥ 0.05 after adjustment.
 
 ## SECTION:line_anomaly_check
 Run the same anomaly check as Scout before confirming ANY pick AND before adding any late picks:
@@ -56,10 +56,10 @@ Hunt for new edges that emerged since 14:00 Scout:
 - EV gate: EV ≥ 0.05 required.
 - Odds gate: same odds_validation rules apply.
 Triggers worth acting on:
-  - Star ruled out in last 2-3 hours and books haven't fully adjusted
-  - Odds drifted INTO valid range since Scout
-  - B2B confirmed late that Scout didn't have
-  - Line anomaly from Scout now has confirmed explanation creating value on the other side
+- Star ruled out in last 2-3 hours and books haven't fully adjusted
+- Odds drifted INTO valid range since Scout
+- B2B confirmed late that Scout didn't have
+- Line anomaly from Scout now has confirmed explanation creating value on the other side
 
 ## SECTION:cancel_criteria
 Cancel a draft pick if ANY of:
@@ -76,8 +76,8 @@ INJURY FEED QUALITY GATES — same as Scout, applied at commit time:
 
 Source: nba_official → normal rules apply.
 Source: espn fallback → confidence CAP 50, spreads/totals BANNED.
-  If a draft pick has confidence > 50 and injury source is ESPN → reduce to 50 before confirming.
-  If a draft pick is a spread or total and injury source is ESPN → CANCEL: "ESPN fallback — spread/total too risky."
+If a draft pick has confidence > 50 and injury source is ESPN → reduce to 50 before confirming.
+If a draft pick is a spread or total and injury source is ESPN → CANCEL: "ESPN fallback — spread/total too risky."
 Source: espn + < 5 teams → cancel ALL picks: "Critically incomplete injury data at commit time."
 Source: none → cancel ALL picks.
 
