@@ -219,8 +219,19 @@ Max 70% of bankroll across all picks per day. Always keep 30% in reserve.
 EV requirement overrides confidence tier — EV < 0.05 means no bet regardless.
 
 ## SECTION:selectivity
-Draft only picks with genuine edge (confidence ≥ floor for market type AND EV ≥ 0.05).
-0 or 1 picks is a valid and good result. Never force picks.
+Draft picks with genuine edge (confidence ≥ floor for market type AND EV ≥ 0.05).
+
+TARGET: Aim for 2-4 picks per session when the slate supports it.
+- 1 pick is acceptable on difficult nights (extreme mismatches, low odds range).
+- 0 picks is valid when no game meets quality thresholds — do NOT force picks.
+- 5+ picks in a single session requires exceptional justification.
+
+SPREAD AND TOTAL BETS:
+- Actively look for spread edges in EVERY session — do not default to ML only.
+- Spreads are valid whenever: advanced stats available AND NBA official injury PDF available.
+- When a game has a clear NetRtg gap (> 6pts) or B2B situation, EVALUATE the spread first.
+- ML and spread can coexist on the same game if both markets offer independent edges.
+
 Flag line anomalies for Commit — deferred picks may become valid by tip-off.
 When advanced stats unavailable, do not bet spreads or totals (ML-only session — log explicitly).
 
