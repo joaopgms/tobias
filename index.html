@@ -1211,7 +1211,7 @@ function renderTable(){
     const pnl=b.pnl!=null?`<span class="${b.pnl>=0?'pnl-pos':'pnl-neg'}">${b.pnl>=0?'+':''}€${b.pnl.toFixed(2)}</span>`:'-';
     const gameTime = b.time ? fmt(b.time) : (b.date||'-');
     return`<tr><td style='white-space:nowrap'><span style="font-size:.72rem;color:var(--muted)">${gameTime}</span></td>
-      <td><div class="team-cell">${logoImg(h)}<span>${getTeam(h).short}</span><span style="color:var(--muted);margin:0 4px;font-size:.7rem">vs</span>${logoImg(a)}<span>${getTeam(a).short}</span></div></td>
+      <td><div class="team-cell">${logoImg(h)}<span>${getTeam(h).short}</span><span style="font-size:.55rem;font-weight:700;color:var(--muted);background:var(--surface);border:1px solid var(--border2);border-radius:3px;padding:0 3px;margin-left:2px">H</span><span style="color:var(--muted);margin:0 4px;font-size:.7rem">vs</span>${logoImg(a)}<span>${getTeam(a).short}</span><span style="font-size:.55rem;font-weight:700;color:var(--muted);background:var(--surface);border:1px solid var(--border2);border-radius:3px;padding:0 3px;margin-left:2px">A</span></div></td>
       <td>${(b.odds||0).toFixed(2)}</td><td>€${(b.stake||0).toFixed(2)}</td><td>€${(b.potential_return||0).toFixed(2)}</td>
       <td>${rb}</td><td>${pnl}</td>
       <td><span class="conf-pill ${CC(b.confidence)}">${b.confidence}/100</span></td>
@@ -1653,9 +1653,9 @@ function buildGameCard(game, idx, prefix) {
   return `<div class="game-card ${decision}">
     <div class="game-card-header" onclick="toggleGameCard('${cardId}')">
       <div class="game-card-teams">
-        ${logoImg(hm,20)} ${getTeam(hm).short}
+        ${logoImg(hm,20)} ${getTeam(hm).short} <span style="font-size:.55rem;font-weight:700;color:var(--muted);background:var(--surface);border:1px solid var(--border2);border-radius:3px;padding:0 3px">H</span>
         <span style="color:var(--muted);font-size:.7rem;font-weight:400">vs</span>
-        ${logoImg(aw,20)} ${getTeam(aw).short}
+        ${logoImg(aw,20)} ${getTeam(aw).short} <span style="font-size:.55rem;font-weight:700;color:var(--muted);background:var(--surface);border:1px solid var(--border2);border-radius:3px;padding:0 3px">A</span>
         ${timeStr}
       </div>
       <div class="game-card-decision">
@@ -1698,9 +1698,9 @@ function buildCommitCard(bet, idx, prefix, isCancelled=false) {
   return `<div class="game-card ${cardClass}">
     <div class="game-card-header" onclick="toggleGameCard('${cardId}')">
       <div class="game-card-teams">
-        ${logoImg(hm,20)} ${getTeam(hm).short}
+        ${logoImg(hm,20)} ${getTeam(hm).short} <span style="font-size:.55rem;font-weight:700;color:var(--muted);background:var(--surface);border:1px solid var(--border2);border-radius:3px;padding:0 3px">H</span>
         <span style="color:var(--muted);font-size:.7rem;font-weight:400">vs</span>
-        ${logoImg(aw,20)} ${getTeam(aw).short}
+        ${logoImg(aw,20)} ${getTeam(aw).short} <span style="font-size:.55rem;font-weight:700;color:var(--muted);background:var(--surface);border:1px solid var(--border2);border-radius:3px;padding:0 3px">A</span>
         ${timeStr}
       </div>
       <div class="game-card-decision">
