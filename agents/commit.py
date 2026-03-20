@@ -384,12 +384,16 @@ def run(store, force: bool = False) -> None:
     # Store commit report data for dashboard Commit tab
     state["commit_report_data"] = {
         "date":            today,
+        "ts":              now_iso,
         "bets":            committed_bets,
         "cancelled":       cancelled_picks,
         "late_rejections": state.get("late_scout_rejections", []),
         "total_staked":    round(total_staked, 2),
         "bankroll_before": round(bankroll_before, 2),
         "report":          report_raw,
+        "tokens_in":       llm_result.tokens_in if llm_result else 0,
+        "tokens_out":      llm_result.tokens_out if llm_result else 0,
+        "cost_usd":        llm_result.cost_usd if llm_result else 0,
     }
     try:
         state["late_scout_rejections"] = json.loads(late_rejections_raw) if late_rejections_raw else []

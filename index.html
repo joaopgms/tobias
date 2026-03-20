@@ -1199,7 +1199,7 @@ function renderTable(){
       <td>${(b.odds||0).toFixed(2)}</td><td>€${(b.stake||0).toFixed(2)}</td><td>€${(b.potential_return||0).toFixed(2)}</td>
       <td>${rb}</td><td>${pnl}</td>
       <td><span class="conf-pill ${CC(b.confidence)}">${b.confidence}/100</span></td>
-      <td class="reasoning-cell" style="font-size:.7rem;color:var(--muted);line-height:1.5">${b.reasoning||''}</td>
+
     </tr>`;
   }).join('');
   document.getElementById('betCardsMobile').innerHTML=bets.map(b=>{
@@ -1756,12 +1756,19 @@ function renderScoutTab(){
         ...picks.map(p=>({...p,_type:'drafted'})),
         ...rejected.map(r=>({...r,_type:'rejected'}))
       ];
+      // Report date header
+      const scoutReportDate = todayReport.updated_at ? fmt(todayReport.updated_at) : (todayReport.date||'-');
+      const scoutMatchDate = todayReport.date||today;
       // KPI row
-      let h=`<div class="report-summary">
+      let h=`<div style="font-size:.62rem;color:var(--muted);margin-bottom:6px;display:flex;gap:16px;flex-wrap:wrap">
+        <span>Report generated: <strong style="color:var(--text)">${scoutReportDate}</strong></span>
+        <span>Match date: <strong style="color:var(--text)">${scoutMatchDate}</strong></span>
+      </div>`;
+      h+=`<div class="report-summary">
         <div class="report-kpi"><div class="report-kpi-label">Picks</div><div class="report-kpi-val">${picks.length}</div></div>
         <div class="report-kpi"><div class="report-kpi-label">Games reviewed</div><div class="report-kpi-val">${picks.length + rejected.length}</div></div>
         <div class="report-kpi"><div class="report-kpi-label">Odds source</div><div class="report-kpi-val" style="font-size:.72rem">${todayReport.odds_source||'-'}</div></div>
-        <div class="report-kpi"><div class="report-kpi-label">Cost</div><div class="report-kpi-val" style="font-size:.72rem">$${(todayReport.cost_usd||0).toFixed(4)}</div></div>
+        <div class="report-kpi"><div class="report-kpi-label">Cost</div><div class="report-kpi-val" style="font-size:.72rem">${todayReport.cost_usd ? '$'+todayReport.cost_usd.toFixed(4) : todayReport.tokens_out ? todayReport.tokens_out+'↓ tokens' : '-'}</div></div>
       </div>`;
       // Game cards
       if(allGames.length){
@@ -1800,12 +1807,18 @@ function renderCommitTab(){
       const cancelled=(todayReport.cancelled||[]);
       const lateRej=(todayReport.late_rejections||[]);
       const lateRejCount=(todayReport.late_rejections||[]).length;
-      let h=`<div class="report-summary">
+      const commitReportDate = todayReport.ts ? fmt(todayReport.ts) : (todayReport.updated_at ? fmt(todayReport.updated_at) : '-');
+      const commitMatchDate = todayReport.date||today;
+      let h=`<div style="font-size:.62rem;color:var(--muted);margin-bottom:6px;display:flex;gap:16px;flex-wrap:wrap">
+        <span>Report generated: <strong style="color:var(--text)">${commitReportDate}</strong></span>
+        <span>Match date: <strong style="color:var(--text)">${commitMatchDate}</strong></span>
+      </div>`;
+      h+=`<div class="report-summary">
         <div class="report-kpi"><div class="report-kpi-label">Committed</div><div class="report-kpi-val">${bets.length}</div></div>
         <div class="report-kpi"><div class="report-kpi-label">Staked</div><div class="report-kpi-val">€${(todayReport.total_staked||0).toFixed(0)}</div></div>
         <div class="report-kpi"><div class="report-kpi-label">Cancelled</div><div class="report-kpi-val">${cancelled.length}</div></div>
         <div class="report-kpi"><div class="report-kpi-label">Late checked</div><div class="report-kpi-val">${lateRejCount}</div></div>
-        <div class="report-kpi"><div class="report-kpi-label">Cost</div><div class="report-kpi-val" style="font-size:.72rem">$${(todayReport.cost_usd||0).toFixed(4)}</div></div>
+        <div class="report-kpi"><div class="report-kpi-label">Cost</div><div class="report-kpi-val" style="font-size:.72rem">${todayReport.cost_usd ? '$'+todayReport.cost_usd.toFixed(4) : todayReport.tokens_out ? todayReport.tokens_out+'↓ tokens' : '-'}</div></div>
       </div>`;
       // Committed bets
       if(bets.length){
@@ -1972,8 +1985,18 @@ function openAnalystModal(entry){
       <div style="font-size:.6rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--teal);margin-bottom:8px">🔍 INTELLIGENCE GAPS (${gaps.length})</div>
       <div style="display:flex;flex-direction:column;gap:8px">`;
     gaps.forEach((g,i)=>{
+      const conf = g.confidence!=null ? Math.round(g.confidence*100) : null;
+      const confBadge = conf!=null
+        ? `<span style="font-size:.6rem;font-weight:700;background:${conf>=70?'#dcfce7':'#fef9c3'};color:${conf>=70?'#166534':'#854d0e'};border-radius:999px;padding:1px 7px;margin-left:6px">${conf}% confidence</span>`
+        : '';
+      const patchedBadge = g.patched
+        ? `<span style="font-size:.6rem;font-weight:700;background:var(--burg-soft);color:var(--burg);border-radius:999px;padding:1px 7px;margin-left:4px">PATCHED</span>`
+        : `<span style="font-size:.6rem;font-weight:700;background:var(--surface);color:var(--muted);border-radius:999px;padding:1px 7px;margin-left:4px;border:1px solid var(--border2)">not patched</span>`;
       html += `<div style="background:var(--surface);border-radius:var(--r-sm);padding:12px 14px;border-left:3px solid var(--teal)">
-        <div style="font-size:.74rem;font-weight:700;color:var(--text);margin-bottom:4px">${i+1}. ${g.gap||''}</div>
+        <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:6px">
+          <span style="font-size:.74rem;font-weight:700;color:var(--text)">${i+1}. ${g.gap||''}</span>
+          ${confBadge}${patchedBadge}
+        </div>
         <div style="font-size:.69rem;color:var(--muted);margin-bottom:3px"><strong>Why:</strong> ${g.why||''}</div>
         <div style="font-size:.69rem;color:var(--teal)"><strong>→</strong> ${g.suggestion||''}</div>
       </div>`;
