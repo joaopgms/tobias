@@ -51,27 +51,35 @@ CRITICAL FORMATTING RULE: Your response MUST end with these exact XML tags.
 The system will FAIL if <committed_bets> tag is missing. Even if all picks are cancelled, output <committed_bets>[]</committed_bets>."""
 
 
-def _build_commit_prompt(skills: str, draft_picks: list, odds_text: str,
+def _build_commit_prompt(skills: str, draft_picks: list, rejected_games: list,
+                          games_text: str, odds_text: str,
                           injuries_text: str, injuries_source: str,
                           state: dict, today: str) -> str:
     bankroll = state["bankroll"]
     now_iso  = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
-    picks_json = json.dumps(draft_picks, indent=2)
+    picks_json     = json.dumps(draft_picks, indent=2)
+    rejected_json  = json.dumps(rejected_games, indent=2) if rejected_games else "[]"
 
     return f"""## YOUR SKILLS (follow these criteria exactly)
 {skills}
 
 ## NOW: {now_iso} | Bankroll: €{bankroll:.2f}
 
+## TONIGHT'S FULL SLATE
+{games_text}
+
 ## DRAFT PICKS TO REVIEW
 {picks_json}
 
-## LIVE BETANO ODDS (check for line movement)
+## SCOUT REJECTED GAMES (from 14:00 Scout run — re-evaluate for late changes)
+{rejected_json}
+
+## LIVE BETANO ODDS (check for line movement vs Scout odds in draft picks)
 {odds_text}
 
-## FRESH INJURY REPORTS
-Source: {injuries_source} — apply data_quality_rules from commit_skills if espn fallback
+## FRESH INJURY REPORTS (NBA official PDF — verify anchor players)
+Source: {injuries_source}
 {injuries_text}
 
 ---
@@ -86,10 +94,13 @@ For each pick, check:
 - New injury info changes the edge? → re-evaluate
 
 ### Task 2 — Late scout
-Hunt for new edges that emerged since 14:00:
-- Stars ruled out in the last few hours
-- Significant line movement
-- Any game not covered by a draft pick with value
+Re-examine ALL games from tonight's slate, especially Scout's rejected games above.
+Check what has changed since 14:00 Scout:
+- Any anchor player status changed? (Questionable → OUT, or OUT → Available)
+- Significant line movement on any game?
+- Any game Scout rejected that now has value at current odds?
+Apply the same rules as Scout: only add picks with genuine edge (conf ≥ 60, EV ≥ 0.05, odds in range).
+Max 1 new pick. Only if first_game_time - now > 20 minutes.
 
 ### Task 3 — Confirm final list and commit
 - Recalculate stakes based on current bankroll (€{bankroll:.2f})
@@ -259,12 +270,17 @@ def run(store, force: bool = False) -> None:
         injuries_str = _injuries_text({t: p for t, p in injuries.items() if t in tonight_teams})
 
     # ── 6. Call LLM ───────────────────────────────────────────────────────────
+    # Build full tonight slate text for LLM context
+    games_str = _games_text(scoreboard)
+    rejected_games = state.get("rejected_games", [])
+    log.info(f"Commit: {len(scoreboard)} games tonight | {len(draft_picks)} draft picks | {len(rejected_games)} rejected | injuries: {injuries_source}")
     log.info(f"Commit: injuries source: {injuries_source} — calling LLM for final decision…")
     llm_result = None
     try:
         llm_result = call_llm_full(
             COMMIT_SYSTEM,
-            _build_commit_prompt(skills, draft_picks, odds_str,
+            _build_commit_prompt(skills, draft_picks, rejected_games,
+                                  games_str, odds_str,
                                   injuries_str, injuries_source, state, today),
             max_tokens=8000,
             agent="commit",
@@ -434,6 +450,25 @@ def run(store, force: bool = False) -> None:
         f"Commit done — {len(committed_bets)} bets, €{total_staked:.2f} staked | "
         f"bankroll €{bankroll_before:.2f} → €{state['bankroll']:.2f}"
     )
+
+
+def _games_text(games: list) -> str:
+    """Format tonight's scoreboard for Commit prompt."""
+    if not games:
+        return "No games scheduled."
+    lines = []
+    for g in games:
+        t = g.get("time", "")
+        time_str = ""
+        if t:
+            try:
+                from datetime import datetime, timezone
+                dt = datetime.fromisoformat(t.replace("Z", "+00:00"))
+                time_str = dt.strftime("%H:%M UTC")
+            except Exception:
+                time_str = t
+        lines.append(f"{g.get('away','?')} @ {g.get('home','?')} — {time_str}")
+    return "\n".join(lines)
 
 
 def _injuries_text(injuries: dict) -> str:
