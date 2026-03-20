@@ -16,7 +16,7 @@
           "net_pnl": null,
           "total_bets": 1,
           "wins": 0,
-          "losses": 0,
+          "losses": 1,
           "bust": false
         }
       ]
@@ -61,10 +61,10 @@
             "Terry Rozier (OUT — Heat, Not With Team, new at commit)"
           ],
           "committed_at": "2026-03-19T22:53:53Z",
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -100.0,
+          "settled_at": "2026-03-20T12:30:55.431755+00:00"
         }
       ],
       "summary": "Day 2026-03-19 commit — 1 bets totalling €100.00. 1 cancelled. Bankroll: €1000.00 → €900.00."
