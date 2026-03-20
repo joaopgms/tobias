@@ -21,7 +21,7 @@ import logging
 from datetime import datetime, date, timezone, timedelta
 
 from core.llm import call_llm, call_llm_full, extract_tag, agent_model_name
-from core.espn import fetch_injuries, fetch_first_game_time_utc, fetch_netrtg_l15
+from core.espn import fetch_injuries, fetch_first_game_time_utc, fetch_netrtg_l15, fetch_standings, fetch_advanced_stats
 from core.nba_injuries import fetch_official_nba_injuries, format_injuries_for_prompt as format_official_injuries
 from core.odds import fetch_betano_nba_odds, format_odds_for_prompt, get_odds_failure_reasons
 from core.validators import validate_all_bets, validate_all_drafts, ValidationError
@@ -54,7 +54,8 @@ The system will FAIL if <committed_bets> tag is missing. Even if all picks are c
 def _build_commit_prompt(skills: str, draft_picks: list, rejected_games: list,
                           games_text: str, odds_text: str,
                           injuries_text: str, injuries_source: str,
-                          netrtg_l15_text: str,
+                          netrtg_l15_text: str, standings_text: str,
+                          adv_stats_text: str,
                           state: dict, today: str) -> str:
     bankroll = state["bankroll"]
     now_iso  = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -81,6 +82,12 @@ def _build_commit_prompt(skills: str, draft_picks: list, rejected_games: list,
 
 ## LIVE BETANO ODDS (check for line movement vs Scout odds in draft picks)
 {odds_text}
+
+## STANDINGS
+{standings_text}
+
+## ADVANCED STATS (season — tonight's teams)
+{adv_stats_text}
 
 ## FRESH INJURY REPORTS (NBA official PDF — verify anchor players)
 Source: {injuries_source}
@@ -284,6 +291,11 @@ def run(store, force: bool = False) -> None:
     else:
         log.info(f"Commit: NetRtg L15 loaded from state ({len(netrtg_l15)} teams)")
     netrtg_l15_str = _format_netrtg_l15_commit(netrtg_l15, scoreboard)
+    # Standings and advanced stats — same as Scout for late scout evaluation
+    standings   = fetch_standings()
+    standings_str = _format_standings(standings)
+    adv_stats   = fetch_advanced_stats()
+    adv_str     = _format_adv_stats(adv_stats, scoreboard)
     rejected_games = state.get("rejected_games", [])
     log.info(f"Commit: {len(scoreboard)} games tonight | {len(draft_picks)} draft picks | {len(rejected_games)} rejected | injuries: {injuries_source}")
     log.info(f"Commit: injuries source: {injuries_source} — calling LLM for final decision…")
@@ -294,7 +306,8 @@ def run(store, force: bool = False) -> None:
             _build_commit_prompt(skills, draft_picks, rejected_games,
                                   games_str, odds_str,
                                   injuries_str, injuries_source,
-                                  netrtg_l15_str, state, today),
+                                  netrtg_l15_str, standings_str,
+                                  adv_str, state, today),
             max_tokens=8000,
             agent="commit",
         )
@@ -463,6 +476,36 @@ def run(store, force: bool = False) -> None:
         f"Commit done — {len(committed_bets)} bets, €{total_staked:.2f} staked | "
         f"bankroll €{bankroll_before:.2f} → €{state['bankroll']:.2f}"
     )
+
+
+def _format_standings(standings: list) -> str:
+    if not standings:
+        return "Standings unavailable."
+    lines = []
+    for t in standings[:30]:
+        rec = f"{t.get('wins',0)}-{t.get('losses',0)}"
+        l10 = t.get("last_10", "")
+        strk = t.get("streak", "")
+        lines.append(f"  {t.get('team','?')}: {rec} | L10: {l10} | Streak: {strk}")
+    return "STANDINGS:\n" + "\n".join(lines)
+
+
+def _format_adv_stats(adv_stats: dict, games: list) -> str:
+    if not adv_stats:
+        return "Advanced stats unavailable."
+    tonight = set()
+    for g in games:
+        tonight.add(g.get("home",""))
+        tonight.add(g.get("away",""))
+    lines = ["ADVANCED STATS (season — OffRtg/DefRtg/NetRtg/Pace):"]
+    for team in sorted(tonight):
+        s = adv_stats.get(team)
+        if s:
+            lines.append(
+                f"  {team}: OffRtg={s.get('off_rtg',0):.1f} DefRtg={s.get('def_rtg',0):.1f} "
+                f"NetRtg={s.get('net_rtg',0):.1f} Pace={s.get('pace',0):.1f}"
+            )
+    return "\n".join(lines) if len(lines) > 1 else "Advanced stats unavailable."
 
 
 def _format_netrtg_l15_commit(netrtg_l15: dict, games: list) -> str:
