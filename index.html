@@ -1335,7 +1335,16 @@ function renderAudit(){
       if((e.picks||[]).length)body+=(e.picks||[]).map(p=>`<div class="audit-patch"><span class="patch-section">${getTeam((p.match||'').split(' vs ')[0]).abbr}</span><span class="patch-reason">${p.pick} @ ${p.odds} · conf=${p.confidence}</span></div>`).join('');
       if(e.error)body+=`<div style="color:var(--burg);font-size:.72rem;margin-top:6px">⚠️ ${e.error}</div>`;
     }else if(ag==='commit'){
-      body+=`<div class="audit-pnl-row"><span class="audit-kv">Committed: <strong>${e.committed_count||0}</strong></span><span class="audit-kv">Cancelled: <strong>${e.cancelled_count||0}</strong></span><span class="audit-kv">Staked: <strong>€${(e.total_staked||0).toFixed(2)}</strong></span>${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>`;
+      // Injury source badge — same as Scout
+      const cInjSrc = e.injuries_source||'';
+      const cInjBadge = cInjSrc==='nba_official'
+        ? `<span class="audit-kv" style="color:var(--green)">🏥 <strong>NBA official PDF</strong></span>`
+        : cInjSrc==='espn'
+        ? `<span class="audit-kv" style="color:var(--yellow)">⚠️ <strong>ESPN fallback</strong></span>`
+        : cInjSrc
+        ? `<span class="audit-kv" style="color:var(--muted)">🏥 ${cInjSrc}</span>`
+        : `<span class="audit-kv" style="color:var(--muted);font-style:italic">🏥 injury source unknown</span>`;
+      body+=`<div class="audit-pnl-row"><span class="audit-kv">Committed: <strong>${e.committed_count||0}</strong></span><span class="audit-kv">Cancelled: <strong>${e.cancelled_count||0}</strong></span><span class="audit-kv">Staked: <strong>€${(e.total_staked||0).toFixed(2)}</strong></span>${cInjBadge}${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>`;
       // Committed bets
       if((e.bets||[]).length){
         body+=`<div style="margin-top:6px">`;
