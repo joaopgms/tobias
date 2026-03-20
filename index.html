@@ -1680,7 +1680,10 @@ function buildCommitCard(bet, idx, prefix, isCancelled=false) {
   const cardClass=isCancelled?'cancelled':'confirmed';
   const timeStr=bet.time?`<span class="game-card-time">${fmt(bet.time)}</span>`:'';
 
+  const ccMlH=bet.ml_home??null; const ccMlA=bet.ml_away??null;
   let chipsHtml='';
+  // Always show ML odds for both sides
+  if(ccMlH||ccMlA) chipsHtml+=`<span class="report-chip" style="font-size:.63rem"><span>ML</span>${ccMlH?(+ccMlH).toFixed(2):'?'}/${ccMlA?(+ccMlA).toFixed(2):'?'}</span>`;
   if(!isCancelled){
     if(bet.pick) chipsHtml+=`<span class="report-chip"><span>Pick</span>${bet.pick}</span>`;
     if(bet.odds) chipsHtml+=`<span class="report-chip"><span>Odds</span>${(+bet.odds).toFixed(2)}</span>`;
