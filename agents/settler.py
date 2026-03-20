@@ -168,7 +168,7 @@ def run(store) -> None:
 
     # ── 2. Fetch scores grouped by date ───────────────────────────────────────
     dates_needed = sorted(set(
-        b.get("settled_at", "")[:10] or str(today)
+        (b.get("settled_at") or "")[:10] or str(today)
         for b in pending
     ))
     # pending bets have no settled_at yet — use match date from ID
