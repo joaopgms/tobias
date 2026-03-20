@@ -20,7 +20,7 @@ import logging
 from datetime import datetime, date, timezone
 
 from core.llm import call_llm, call_llm_full, extract_tag, agent_model_name
-from core.espn import fetch_scoreboard, fetch_injuries, fetch_standings, fetch_first_game_time_utc, fetch_advanced_stats, format_advanced_stats_for_prompt
+from core.espn import fetch_scoreboard, fetch_injuries, fetch_standings, fetch_first_game_time_utc, fetch_advanced_stats, fetch_netrtg_l15, format_advanced_stats_for_prompt
 from core.nba_injuries import fetch_official_nba_injuries
 from core.odds import fetch_betano_nba_odds, format_odds_for_prompt, odds_available, get_odds_failure_reasons
 from core.validators import validate_all_drafts, ValidationError
