@@ -21,7 +21,7 @@ import logging
 from datetime import datetime, date, timezone, timedelta
 
 from core.llm import call_llm, call_llm_full, extract_tag, agent_model_name
-from core.espn import fetch_injuries, fetch_first_game_time_utc
+from core.espn import fetch_injuries, fetch_first_game_time_utc, fetch_netrtg_l15
 from core.nba_injuries import fetch_official_nba_injuries, format_injuries_for_prompt as format_official_injuries
 from core.odds import fetch_betano_nba_odds, format_odds_for_prompt, get_odds_failure_reasons
 from core.validators import validate_all_bets, validate_all_drafts, ValidationError
@@ -54,6 +54,7 @@ The system will FAIL if <committed_bets> tag is missing. Even if all picks are c
 def _build_commit_prompt(skills: str, draft_picks: list, rejected_games: list,
                           games_text: str, odds_text: str,
                           injuries_text: str, injuries_source: str,
+                          netrtg_l15_text: str,
                           state: dict, today: str) -> str:
     bankroll = state["bankroll"]
     now_iso  = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -74,6 +75,9 @@ def _build_commit_prompt(skills: str, draft_picks: list, rejected_games: list,
 
 ## SCOUT REJECTED GAMES (from 14:00 Scout run — re-evaluate for late changes)
 {rejected_json}
+
+## NETRTG L15 (primary signal — last 15 games)
+{netrtg_l15_text}
 
 ## LIVE BETANO ODDS (check for line movement vs Scout odds in draft picks)
 {odds_text}
@@ -272,6 +276,14 @@ def run(store, force: bool = False) -> None:
     # ── 6. Call LLM ───────────────────────────────────────────────────────────
     # Build full tonight slate text for LLM context
     games_str = _games_text(scoreboard)
+    # NetRtg L15 — read from state (Analyst/Scout already fetched it today)
+    netrtg_l15 = state.get("netrtg_l15") or {}
+    if not netrtg_l15:
+        log.info("Commit: NetRtg L15 not in state — fetching fresh")
+        netrtg_l15 = fetch_netrtg_l15()
+    else:
+        log.info(f"Commit: NetRtg L15 loaded from state ({len(netrtg_l15)} teams)")
+    netrtg_l15_str = _format_netrtg_l15_commit(netrtg_l15, scoreboard)
     rejected_games = state.get("rejected_games", [])
     log.info(f"Commit: {len(scoreboard)} games tonight | {len(draft_picks)} draft picks | {len(rejected_games)} rejected | injuries: {injuries_source}")
     log.info(f"Commit: injuries source: {injuries_source} — calling LLM for final decision…")
@@ -281,7 +293,8 @@ def run(store, force: bool = False) -> None:
             COMMIT_SYSTEM,
             _build_commit_prompt(skills, draft_picks, rejected_games,
                                   games_str, odds_str,
-                                  injuries_str, injuries_source, state, today),
+                                  injuries_str, injuries_source,
+                                  netrtg_l15_str, state, today),
             max_tokens=8000,
             agent="commit",
         )
@@ -450,6 +463,18 @@ def run(store, force: bool = False) -> None:
         f"Commit done — {len(committed_bets)} bets, €{total_staked:.2f} staked | "
         f"bankroll €{bankroll_before:.2f} → €{state['bankroll']:.2f}"
     )
+
+
+def _format_netrtg_l15_commit(netrtg_l15: dict, games: list) -> str:
+    """Format NetRtg L15 for ALL 30 teams — Commit needs full picture for late scout."""
+    if not netrtg_l15:
+        return "NetRtg L15 unavailable."
+    lines = ["NETRTG L15 (last 15 games — primary signal, all teams):"]
+    for team in sorted(netrtg_l15.keys()):
+        val = netrtg_l15[team]
+        sign = "+" if val >= 0 else ""
+        lines.append(f"  {team}: {sign}{val}")
+    return "\n".join(lines)
 
 
 def _games_text(games: list) -> str:
