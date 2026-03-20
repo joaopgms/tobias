@@ -44,7 +44,8 @@ The system will FAIL and no picks will be saved if these tags are missing."""
 
 def _build_scout_prompt(skills: str, games_text: str, odds_text: str,
                          injuries_text: str, standings_text: str,
-                         advanced_stats: str, injuries_source: str,
+                         advanced_stats: str, netrtg_l15_text: str,
+                         injuries_source: str,
                          state: dict, today: str) -> str:
     bankroll = state["bankroll"]
     season   = state["season"]
@@ -208,6 +209,14 @@ def run(store) -> None:
     log.info("Scout: fetching NBA data…")
     games        = fetch_scoreboard()
     adv_stats    = fetch_advanced_stats()
+    # NetRtg L15 — use Analyst-cached value if available (saves 30 API calls)
+    # If Analyst hasn't run yet today, fetch fresh
+    netrtg_l15 = state.get("netrtg_l15") or {}
+    if not netrtg_l15:
+        log.info("Scout: NetRtg L15 not in state — fetching fresh")
+        netrtg_l15 = fetch_netrtg_l15()
+    else:
+        log.info(f"Scout: NetRtg L15 loaded from state ({len(netrtg_l15)} teams)")
     # Primary: NBA official injury report (PDFs updated every 15min, legally required)
     injuries = fetch_official_nba_injuries()
     if not injuries:
@@ -241,8 +250,10 @@ def run(store) -> None:
         injuries_str = _injuries_text(injuries)
     standings_str = _standings_text(standings)
 
-    adv_str = format_advanced_stats_for_prompt(adv_stats, games)
+    adv_str       = format_advanced_stats_for_prompt(adv_stats, games)
     adv_available = bool(adv_stats)
+    # Format NetRtg L15 for prompt
+    netrtg_l15_str = _format_netrtg_l15_for_prompt(netrtg_l15, games) if netrtg_l15 else ""
     if not adv_available:
         log.warning("Scout: advanced stats unavailable — session limited to ML only (spreads/totals banned)")
         adv_str = "ADVANCED STATS UNAVAILABLE — ML only session. Spreads and totals cannot be evaluated."
@@ -281,7 +292,8 @@ def run(store) -> None:
     if draft_raw is None:
         log.error("Scout: <draft_picks> tag missing — attempting retries")
         prompt_full = _build_scout_prompt(skills, games_str, odds_str, injuries_str,
-                                           standings_str, adv_str, injuries_source, state, today)
+                                           standings_str, adv_str, netrtg_l15_str,
+                                           injuries_source, state, today)
         prompt_minimal = (
             f"You are the Scout agent. Today: {today} | Bankroll: €{state['bankroll']:.2f}\n"
             f"Output ONLY these XML tags — nothing else before or after:\n\n"

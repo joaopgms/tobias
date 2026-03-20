@@ -361,6 +361,8 @@ def run(store) -> None:
     standings  = fetch_standings()
     injuries   = fetch_injuries()
     adv_stats  = fetch_advanced_stats()
+    netrtg_l15 = fetch_netrtg_l15()
+    log.info(f"NetRtg L15: {len(netrtg_l15)}/30 teams available")
 
     # ── Franchise player roster verification ──────────────────────────────────
     # Identify franchise-tier teams (top-10 by wins) + known injury-sensitive teams
@@ -497,6 +499,8 @@ commit_patches: {len(commit_applied)}
 {chr(10).join(f"- **{g.get('gap','')}** — {g.get('why','')} → {g.get('suggestion','')}" for g in intelligence_gaps) or "None"}
 """
     state["analyst_updated_at"] = now_iso
+    if netrtg_l15:
+        state["netrtg_l15"] = netrtg_l15
     store.write_json("state", state, f"analyst: updated_at {today}")
     store.write_md("analyst_notes", notes_content,
                    f"analyst: notes {today}")

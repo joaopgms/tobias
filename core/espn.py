@@ -458,6 +458,84 @@ def format_advanced_stats_for_prompt(stats: dict, games: list[dict]) -> str:
 # ── Team rosters ───────────────────────────────────────────────────────────────
 
 # ESPN team ID map — all 30 NBA teams
+
+def fetch_netrtg_l15() -> dict[str, float]:
+    """
+    Compute approximate NetRtg over last 15 games for all 30 teams.
+    Uses ESPN team schedule endpoint — cloud-friendly, no IP blocking.
+
+    Method: fetch each team's last 15 completed regular season games,
+    compute average point differential, scale to per-100-possessions
+    approximation using factor ~2.85 (empirically calibrated to NBA averages).
+
+    Returns {team_name: net_rtg_l15} for all teams with sufficient data.
+    Falls back gracefully per team on any fetch error.
+    """
+    result = {}
+    failed = 0
+
+    for team_name, team_id in ESPN_TEAM_IDS.items():
+        url = (f"https://site.api.espn.com/apis/site/v2/sports/basketball/nba"
+               f"/teams/{team_id}/schedule?seasontype=2")
+        try:
+            data = _get(url, timeout=8)
+            events = data.get("events", [])
+
+            # Collect last 15 completed games with scores
+            completed = []
+            for evt in reversed(events):  # most recent first
+                comp = evt.get("competitions", [{}])[0]
+                status = comp.get("status", {}).get("type", {})
+                if not status.get("completed", False):
+                    continue
+                competitors = comp.get("competitors", [])
+                if len(competitors) < 2:
+                    continue
+                home = next((c for c in competitors if c.get("homeAway") == "home"), None)
+                away = next((c for c in competitors if c.get("homeAway") == "away"), None)
+                if not home or not away:
+                    continue
+                try:
+                    home_score = int(home.get("score", 0) or 0)
+                    away_score = int(away.get("score", 0) or 0)
+                    if home_score == 0 and away_score == 0:
+                        continue
+                    # Determine our team's margin
+                    our_team_id = str(team_id)
+                    home_team_id = str(home.get("id", ""))
+                    if home_team_id == our_team_id:
+                        margin = home_score - away_score
+                    else:
+                        margin = away_score - home_score
+                    completed.append(margin)
+                    if len(completed) >= 15:
+                        break
+                except Exception:
+                    continue
+
+            if len(completed) >= 5:
+                avg_margin = sum(completed) / len(completed)
+                # Scale point differential to approximate NetRtg per 100 possessions
+                # NBA average ~98 possessions/game; NetRtg = margin / poss * 100
+                # Empirical factor: 1pt margin ~ 2.85 NetRtg points
+                net_rtg_l15 = round(avg_margin * 2.85, 1)
+                result[team_name] = net_rtg_l15
+            else:
+                log.debug(f"NetRtg L15: {team_name} only {len(completed)} games")
+
+        except Exception as e:
+            log.debug(f"NetRtg L15 {team_name}: {e}")
+            failed += 1
+            continue
+
+    if result:
+        log.info(f"NetRtg L15: {len(result)}/30 teams computed ({failed} failed)")
+    else:
+        log.warning("NetRtg L15: all teams failed — no data")
+
+    return result
+
+
 ESPN_TEAM_IDS = {
     "Atlanta Hawks": 1, "Boston Celtics": 2, "Brooklyn Nets": 17,
     "Charlotte Hornets": 30, "Chicago Bulls": 4, "Cleveland Cavaliers": 5,

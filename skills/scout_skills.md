@@ -23,9 +23,12 @@ Flag as anomaly if ANY of:
 - Line moved > 0.30 in last 2 hours with no news explanation
 If anomaly → do NOT draft. Note in scout_report. Flag for Commit to investigate.
 
-1. NetRtg L15 — most predictive short-term signal
-   NOTE: If NetRtg L15 is unavailable (only season NetRtg available), season NetRtg may be used
-   as fallback but apply confidence -5 on any pick where the L15 signal would have been decisive.
+1. NetRtg L15 — most predictive short-term signal (now available in prompt above season stats)
+   Source: computed from ESPN game logs (last 15 completed games, point differential scaled to NetRtg)
+   This is an approximation — treat as directionally accurate, not exact.
+   Use L15 as the PRIMARY directional signal. Season NetRtg as secondary context.
+   If NetRtg L15 is missing for a team: apply confidence -5 on any pick where L15 would be decisive.
+   NetRtg L15 gap threshold: >= 4.0 points = meaningful edge signal (lower than season threshold due to approximation).
 2. Back-to-back + schedule density (games_l7) — see b2b_rules for numeric adjustments
 3. Franchise player injury status — see franchise_player_rules
 4. Play-in / playoff race motivation
