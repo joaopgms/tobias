@@ -404,7 +404,7 @@ def run(store) -> None:
 
     log.info(f"Scout: {len(draft_picks)} draft picks drafted")
     for p in draft_picks:
-        log.info(f"  📋 {p['match']} — {p['pick']} @ {p['odds']} (conf={p['confidence']})")
+        log.info(f"  PICK: {p['match']} — {p['pick']} @ {p['odds']} (conf={p['confidence']})")
 
     # ── 12. Validate & write ──────────────────────────────────────────────────
     commit_msg = f"scout: {len(draft_picks)} draft picks for {today}"

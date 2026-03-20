@@ -81,7 +81,7 @@ def _check_bust(state: dict, history: dict) -> tuple[dict, dict, bool]:
     if bankroll >= BUST_THRESHOLD or pending:
         return state, history, False
 
-    log.warning(f"💥 BUST — bankroll €{bankroll:.2f} with no pending bets")
+    log.warning(f"BUST — bankroll EUR{bankroll:.2f} with no pending bets")
     now = datetime.now(timezone.utc).isoformat()
 
     # Close current game in history
@@ -105,7 +105,7 @@ def _check_bust(state: dict, history: dict) -> tuple[dict, dict, bool]:
         "type":            "bust",
         "bankroll_before": round(bankroll, 2),
         "bankroll_after":  _bust_reset_amount(state),
-        "summary":         f"💥 Game {game_n} bust at €{bankroll:.2f}. Resetting to €{_bust_reset_amount(state):.0f}.",
+        "summary":         f"Game {game_n} bust at EUR{bankroll:.2f}. Resetting to EUR{_bust_reset_amount(state):.0f}.",
     })
 
     # Reset state for new game
@@ -231,9 +231,9 @@ def run(store) -> None:
         if won:
             state["bankroll"]      = round(state["bankroll"] + returned, 2)
             state["total_returned"] = round(state.get("total_returned", 0) + returned, 2)
-            log.info(f"  ✅ WON  {match} | +€{pnl:.2f} | bankroll → €{state['bankroll']:.2f}")
+            log.info(f"  WON  {match} | +EUR{pnl:.2f} | bankroll EUR{state['bankroll']:.2f}")
         else:
-            log.info(f"  ❌ LOST {match} | -€{stake:.2f} | bankroll → €{state['bankroll']:.2f}")
+            log.info(f"  LOST {match} | -EUR{stake:.2f} | bankroll EUR{state['bankroll']:.2f}")
 
         state["net_pnl"] = round(
             state.get("net_pnl", 0) + pnl, 2)

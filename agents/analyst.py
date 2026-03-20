@@ -153,7 +153,7 @@ def _perf_summary(state: dict) -> str:
     ]
     for b in recent[:5]:
         result = b.get("result", "?")
-        icon   = "✅" if result == "WON" else "❌"
+        icon   = "W" if result == "WON" else "L"
         lines.append(
             f"  {icon} {b.get('match','?')} | {b.get('pick','?')} @ {b.get('odds','?')} "
             f"| conf={b.get('confidence','?')} | pnl=€{b.get('pnl',0):+.2f}"
@@ -287,7 +287,7 @@ def _franchise_status_text(statuses: dict) -> str:
     lines = ["VERIFIED FRANCHISE PLAYER ABSENCES (confirmed via ESPN roster + NBA injury feed):"]
     for team, players in statuses.items():
         for p in players:
-            verified = "✓ VERIFIED" if p["verified"] else "⚠ roster only"
+            verified = "[VERIFIED]" if p["verified"] else "[roster-only]"
             r = f" — {p['reason']}" if p.get("reason") else ""
             lines.append(f"  {team}: {p['name']} ({p['position']}) {p['status']}{r} [{verified}]")
     lines.append("Use ONLY these verified names when patching franchise_player_rules.")
@@ -449,7 +449,7 @@ def run(store) -> None:
     if intelligence_gaps:
         log.info(f"Analyst: {len(intelligence_gaps)} intelligence gap(s) identified")
         for g in intelligence_gaps:
-            log.info(f"  🔍 GAP: {g.get('gap','?')[:100]}")
+            log.info(f"  GAP: {g.get('gap','?')[:100]}")
 
     log.info(f"Analyst: {len(scout_patches)} scout patches, {len(commit_patches)} commit patches")
 

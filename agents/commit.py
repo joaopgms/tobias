@@ -161,7 +161,7 @@ def _check_bust(state: dict, history: dict) -> tuple[dict, dict, bool]:
     if bankroll >= BUST_THRESHOLD or pending:
         return state, history, False
 
-    log.warning(f"💥 BUST — bankroll €{bankroll:.2f}")
+    log.warning(f"BUST — bankroll EUR{bankroll:.2f}")
     now = datetime.now(timezone.utc).isoformat()
     season = state["season"]
     game_n = state["game"]
@@ -183,7 +183,7 @@ def _check_bust(state: dict, history: dict) -> tuple[dict, dict, bool]:
         "type":            "bust",
         "bankroll_before": round(bankroll, 2),
         "bankroll_after":  _bust_reset_amount(state),
-        "summary":         f"💥 Game {game_n} bust at €{bankroll:.2f}. Resetting to €{_bust_reset_amount(state):.0f}.",
+        "summary":         f"Game {game_n} bust at EUR{bankroll:.2f}. Resetting to EUR{_bust_reset_amount(state):.0f}.",
     })
 
     new_game = game_n + 1
@@ -343,7 +343,7 @@ def run(store, force: bool = False) -> None:
         state["bankroll"]      = round(state["bankroll"] - stake, 2)
         state["total_staked"]  = round(state.get("total_staked", 0) + stake, 2)
         total_staked          += stake
-        log.info(f"  🎯 {bet['match']} — {bet['pick']} @ {bet['odds']} | €{stake:.2f}")
+        log.info(f"  BET: {bet['match']} — {bet['pick']} @ {bet['odds']} | EUR{stake:.2f}")
 
     # ── 11. Update state ──────────────────────────────────────────────────────
     state["agent_models"] = state.get("agent_models", {})
