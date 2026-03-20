@@ -6,10 +6,10 @@
   "bankroll_peak": 1000.0,
   "total_staked": 100.0,
   "total_returned": 0.0,
-  "net_pnl": 0.0,
+  "net_pnl": -100.0,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-03-19T22:53:50.149474+00:00",
+  "last_updated": "2026-03-20T12:30:55.431755+00:00",
   "first_game_time": "2026-03-19T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
@@ -20,7 +20,7 @@
   "commit_updated_at": "2026-03-19T22:53:50.149474+00:00",
   "commit_date": "2026-03-19",
   "analyst_updated_at": "2026-03-20T11:29:56.651328+00:00",
-  "settler_updated_at": "2026-03-19T10:42:02.208689+00:00",
+  "settler_updated_at": "2026-03-20T12:30:55.431755+00:00",
   "agent_models": {
     "settler": "no-llm",
     "analyst": "claude-sonnet-4-6",
@@ -29,7 +29,8 @@
   },
   "last_report": "",
   "draft_picks": [],
-  "pending_bets": [
+  "pending_bets": [],
+  "settled_bets": [
     {
       "id": "nba_bet_20260319_001",
       "match": "Miami Heat vs Los Angeles Lakers",
@@ -50,13 +51,12 @@
         "Terry Rozier (OUT — Heat, Not With Team, new at commit)"
       ],
       "committed_at": "2026-03-19T22:53:53Z",
-      "result": null,
-      "returned": null,
-      "pnl": null,
-      "settled_at": null
+      "result": "LOST",
+      "returned": 0.0,
+      "pnl": -100.0,
+      "settled_at": "2026-03-20T12:30:55.431755+00:00"
     }
   ],
-  "settled_bets": [],
   "rejected_games": [
     {
       "match": "Washington Wizards vs Detroit Pistons",
