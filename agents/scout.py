@@ -266,7 +266,8 @@ def run(store) -> None:
         llm_result = call_llm_full(
             SCOUT_SYSTEM,
             _build_scout_prompt(skills, games_str, odds_str, injuries_str,
-                                 standings_str, adv_str, injuries_source, state, today),
+                                 standings_str, adv_str, netrtg_l15_str,
+                                 injuries_source, state, today),
             max_tokens=12000,
             agent="scout",
         )
@@ -278,6 +279,7 @@ def run(store) -> None:
         state["last_updated"] = now_iso
         store.write_json("state", state, f"scout: LLM error {today}")
         _append_audit(store, now_iso, state.get("llm_provider","claude"),
+                      state, history,
                       error=str(e), bankroll=state["bankroll"])
         store.write_data_js(state, history, config=store.read_config())
         return
