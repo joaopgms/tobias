@@ -398,12 +398,15 @@ def run(store) -> None:
     # Store full scout report data — persists even after commit clears draft_picks
     state["scout_report_data"] = {
         "date":             today,
+        "updated_at":       now_iso,
         "picks":            draft_picks,
         "rejected":         json.loads(rejected_raw) if rejected_raw else [],
         "report":           report_raw,
         "odds_source":      odds[0].get("odds_source", "none") if odds else "none",
         "injuries_source":  injuries_source,
-        "updated_at":       now_iso,
+        "tokens_in":        llm_result.tokens_in if llm_result else 0,
+        "tokens_out":       llm_result.tokens_out if llm_result else 0,
+        "cost_usd":         llm_result.cost_usd if llm_result else 0,
     }
     # Store rejected games for dashboard display
     try:
