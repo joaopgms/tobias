@@ -1,5 +1,5 @@
 ---
-version: 3
+version: 4
 updated_at: 2026-03-19T00:00:00.000000+00:00
 updated_by: manual_review
 ---
@@ -56,6 +56,10 @@ If settled bets exist:
 If no settled bets yet:
   - Focus ONLY on factual updates (tanking_teams, franchise_player_rules)
   - Do NOT patch strategic sections (ev_requirement, confidence_staking, b2b_rules, market_rules) without data
+
+CONFIDENCE GATE: Only propose a patch if you have confidence ≥ 0.7 that the change is correct.
+If confidence < 0.7 → flag as intelligence gap instead, do NOT patch.
+This prevents premature rule changes from insufficient evidence.
 
 ---
 
@@ -131,3 +135,7 @@ Rules:
 - Always update tanking_teams and franchise_player_rules when data changed
 - Never patch commit_staking without also patching scout confidence_staking
 - intelligence_gaps: output [] if nothing genuinely worth flagging
+- MANDATORY: if an intelligence_gap has a concrete suggestion to ADD or PATCH a rule section,
+  AND you have confidence ≥ 0.7 the change is correct, you MUST also include it as a patch.
+  Do not identify gaps and then fail to act on them when the evidence is clear.
+  Example: if Pace=0.0 for all teams is a data quality issue → add it to data_quality_rules.

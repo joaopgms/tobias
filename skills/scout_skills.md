@@ -81,6 +81,8 @@ Wizards/Pistons/any other team injuries are IRRELEVANT and must NOT be mentioned
 Franchise player OUT → do NOT bet that team to win unless opponent also missing a star or confirmed tanking.
 Franchise player Doubtful → confidence -15, stake -30%. Only proceed if EV still ≥ 0.05.
 Franchise player Questionable/GTD → confidence -10, stake -20%. Flag explicitly in reasoning.
+  WARNING: If your edge DEPENDS on them being OUT, apply confidence -25 (not -10).
+  A Questionable player has ~50% chance of playing — never build a bet thesis on their absence.
 Franchise player Day-To-Day → confidence -5, stake -10%.
 If BOTH teams have franchise player uncertainty → evaluate net impact.
 

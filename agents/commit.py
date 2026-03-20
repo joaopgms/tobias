@@ -259,14 +259,14 @@ def run(store, force: bool = False) -> None:
         injuries_str = _injuries_text({t: p for t, p in injuries.items() if t in tonight_teams})
 
     # ── 6. Call LLM ───────────────────────────────────────────────────────────
-    log.info("Commit: calling LLM for final decision…")
+    log.info(f"Commit: injuries source: {injuries_source} — calling LLM for final decision…")
     llm_result = None
     try:
         llm_result = call_llm_full(
             COMMIT_SYSTEM,
             _build_commit_prompt(skills, draft_picks, odds_str,
                                   injuries_str, injuries_source, state, today),
-            max_tokens=4096,
+            max_tokens=8000,
             agent="commit",
         )
         raw = llm_result.text

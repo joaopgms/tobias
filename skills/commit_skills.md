@@ -1,5 +1,5 @@
 ---
-version: 3
+version: 4
 updated_at: 2026-03-18T12:00:00.000000+00:00
 updated_by: manual_review
 llm: claude-sonnet-4-6
@@ -30,6 +30,15 @@ Anchor player confirmed OUT → cancel immediately. Reason: "Anchor [name] OUT c
 Anchor player upgraded (was OUT/Doubtful, now Active) → re-evaluate with confidence +10. May increase EV.
 New injury discovered since Scout (not in anchor_players) → re-evaluate full pick. Apply franchise_player_rules from scout_skills.
 No injury update available → proceed with Scout's original assessment.
+
+CRITICAL — QUESTIONABLE/GTD RULE:
+If your bet thesis DEPENDS on a key player being OUT (i.e. their absence is why you have the edge):
+  - Player listed Questionable or GTD → DO NOT confirm. Cancel: "Pick depends on unconfirmed absence."
+  - Player listed Doubtful → proceed with confidence -15, stake -20% ONLY if EV still ≥ 0.05 without them.
+  - Only confirm injury-dependent picks when player is listed OUT or officially scratched (DNP).
+If your bet thesis does NOT depend on their absence (edge exists regardless):
+  - Questionable → apply standard confidence -10, stake -20% per franchise_player_rules.
+  - Proceed if EV ≥ 0.05 after adjustment.
 
 ## SECTION:line_anomaly_check
 Run the same anomaly check as Scout before confirming ANY pick AND before adding any late picks:
