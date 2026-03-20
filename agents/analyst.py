@@ -106,8 +106,8 @@ def _apply_patches(current_content: str, patches: list[dict],
                 "section": section,
                 "action":  "replace",
                 "reason":  reason,
-                "before":  before[:200],   # truncate for log compactness
-                "after":   new_sec[:200],
+                "before":  before,
+                "after":   new_sec,
             })
             log.info(f"  Patched [{section}]: {reason[:80]}")
 
@@ -118,7 +118,7 @@ def _apply_patches(current_content: str, patches: list[dict],
                 "action":  "add",
                 "reason":  reason,
                 "before":  "[did not exist]",
-                "after":   new_sec[:200],
+                "after":   new_sec,
             })
             log.info(f"  Added   [{section}]: {reason[:80]}")
 

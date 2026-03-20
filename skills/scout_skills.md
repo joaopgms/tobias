@@ -24,6 +24,8 @@ Flag as anomaly if ANY of:
 If anomaly → do NOT draft. Note in scout_report. Flag for Commit to investigate.
 
 1. NetRtg L15 — most predictive short-term signal
+   NOTE: If NetRtg L15 is unavailable (only season NetRtg available), season NetRtg may be used
+   as fallback but apply confidence -5 on any pick where the L15 signal would have been decisive.
 2. Back-to-back + schedule density (games_l7) — see b2b_rules for numeric adjustments
 3. Franchise player injury status — see franchise_player_rules
 4. Play-in / playoff race motivation
