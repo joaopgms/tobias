@@ -44,7 +44,7 @@ The system will FAIL and no picks will be saved if these tags are missing."""
 
 def _build_scout_prompt(skills: str, games_text: str, odds_text: str,
                          injuries_text: str, standings_text: str,
-                         advanced_stats: str, netrtg_l15_text: str,
+                         advanced_stats: str,
                          injuries_source: str,
                          state: dict, today: str) -> str:
     bankroll = state["bankroll"]
@@ -114,19 +114,9 @@ Use [] only if ALL games were drafted. Every non-drafted game MUST appear here.]
 </rejected_games>
 
 <scout_report>
-Write a structured scouting report covering EVERY game listed in TONIGHT'S GAMES above.
-Use the ESPN slate as the authoritative game list — not the odds feed (odds may be incomplete).
-
-For each game use this format:
-
-### HOME vs AWAY
-- **Edge assessment:** [value exists or not]
-- **Key factors:** [B2B, injuries, tanking status, form, line]
-- **Odds:** [list available odds or "no odds available for this game"]
-- **Decision:** DRAFTED [pick @ odds] | REJECTED [reason] | NO ODDS — DEFERRED | NO EDGE [reason]
-
-End with a 3-5 sentence summary of tonight's overall slate quality.
-ALL games must appear — missing a game from the report is not acceptable.
+For each DRAFTED pick write a short paragraph: edge, key factors, odds, reasoning.
+For all other games write a single line: "HOME vs AWAY — REJECTED/NO EDGE/DEFERRED: [one-line reason]"
+End with 2-3 sentences on tonight's overall slate quality.
 </scout_report>
 """
 
@@ -257,8 +247,6 @@ def run(store) -> None:
 
     adv_str       = format_advanced_stats_for_prompt(adv_stats, games)
     adv_available = bool(adv_stats)
-    # Format NetRtg L15 for prompt
-    netrtg_l15_str = _format_netrtg_l15_for_prompt(netrtg_l15, games) if netrtg_l15 else ""
     if not adv_available:
         log.warning("Scout: advanced stats unavailable — session limited to ML only (spreads/totals banned)")
         adv_str = "ADVANCED STATS UNAVAILABLE — ML only session. Spreads and totals cannot be evaluated."
@@ -271,9 +259,9 @@ def run(store) -> None:
         llm_result = call_llm_full(
             SCOUT_SYSTEM,
             _build_scout_prompt(skills, games_str, odds_str, injuries_str,
-                                 standings_str, adv_str, netrtg_l15_str,
+                                 standings_str, adv_str,
                                  injuries_source, state, today),
-            max_tokens=12000,
+            max_tokens=6000,
             agent="scout",
         )
         raw = llm_result.text
@@ -299,7 +287,7 @@ def run(store) -> None:
     if draft_raw is None:
         log.error("Scout: <draft_picks> tag missing — attempting retries")
         prompt_full = _build_scout_prompt(skills, games_str, odds_str, injuries_str,
-                                           standings_str, adv_str, netrtg_l15_str,
+                                           standings_str, adv_str,
                                            injuries_source, state, today)
         prompt_minimal = (
             f"You are the Scout agent. Today: {today} | Bankroll: €{state['bankroll']:.2f}\n"
@@ -310,7 +298,7 @@ def run(store) -> None:
             f"<rejected_games>\n[]\n</rejected_games>"
         )
         retries = [
-            ("Attempt 2 — full prompt", prompt_full, 10000),
+            ("Attempt 2 — full prompt", prompt_full, 6000),
             ("Attempt 3 — minimal prompt", prompt_minimal, 2048),
         ]
         succeeded = False
@@ -396,6 +384,7 @@ def run(store) -> None:
 
     # ── 11. Update state ──────────────────────────────────────────────────────
     state["draft_picks"]      = draft_picks
+    state["netrtg_l15"]       = netrtg_l15   # cache for Commit + Analyst
     # Cache pre-formatted context for Commit — avoids re-fetching static data 2-3h later
     state["cached_context"] = {
         "cached_at":    today,
