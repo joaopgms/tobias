@@ -16,7 +16,7 @@
           "net_pnl": null,
           "total_bets": 2,
           "wins": 0,
-          "losses": 1,
+          "losses": 2,
           "bust": false
         }
       ]
@@ -108,10 +108,10 @@
             "Jaylen Brown",
             "Jrue Holiday"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -225.0,
+          "settled_at": "2026-03-21T11:55:03.085342+00:00",
           "committed_at": "2026-03-21T00:04:32Z"
         }
       ],
