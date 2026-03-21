@@ -166,28 +166,40 @@ def run(store) -> None:
 
     log.info(f"Settler: {len(pending)} pending bets to check")
 
-    # ── 2. Fetch scores grouped by date ───────────────────────────────────────
-    dates_needed = sorted(set(
-        (b.get("settled_at") or "")[:10] or str(today)
-        for b in pending
-    ))
-    # pending bets have no settled_at yet — use match date from ID
-    # ID format: nba_bet_YYYYMMDD_NNN
+    # ── 2. Fetch scores — flat dict across all relevant dates ─────────────────
+    # ID format: nba_bet_YYYYMMDD_NNN (YYYYMMDD is UTC date of commit run)
+    # ESPN uses Eastern Time dates — a post-midnight UTC commit (e.g. 00:04 UTC Mar 21)
+    # is still a Mar 20 ET game. So we fetch both the ID date AND the previous day.
+    from datetime import timedelta
+
     def _bet_date(bet):
         try:
             return bet["id"].split("_")[2]          # YYYYMMDD
         except Exception:
-            return str(today - __import__('datetime').timedelta(days=1))
+            return (today - timedelta(days=1)).strftime("%Y%m%d")
 
-    dates_needed = sorted(set(_bet_date(b) for b in pending))
-    scores_by_date: dict[str, dict] = {}
-    for d_str in dates_needed:
+    def _d_obj(d_str):
+        return date.fromisoformat(f"{d_str[:4]}-{d_str[4:6]}-{d_str[6:8]}")
+
+    dates_to_fetch: set[str] = set()
+    for b in pending:
+        d_str = _bet_date(b)
+        dates_to_fetch.add(d_str)
+        try:                                        # also try previous day (ET vs UTC gap)
+            dates_to_fetch.add((_d_obj(d_str) - timedelta(days=1)).strftime("%Y%m%d"))
+        except Exception:
+            pass
+
+    all_scores: dict[str, dict] = {}               # flat match->result across all dates
+    for d_str in sorted(dates_to_fetch):
         try:
-            d_obj = date.fromisoformat(f"{d_str[:4]}-{d_str[4:6]}-{d_str[6:8]}")
-            if d_obj <= today:            # settle past AND same-day games (post-midnight commits)
-                scores_by_date[d_str] = fetch_final_scores(d_obj)
+            d_obj = _d_obj(d_str)
+            if d_obj <= today:
+                fetched = fetch_final_scores(d_obj)
+                log.info(f"  Fetched scores for {d_str}: {len(fetched)} keys")
+                all_scores.update(fetched)
             else:
-                log.info(f"  Skipping {d_str} — today's games not final yet")
+                log.info(f"  Skipping {d_str} — games not final yet")
         except Exception as e:
             log.warning(f"  Could not fetch scores for {d_str}: {e}")
 
@@ -198,15 +210,13 @@ def run(store) -> None:
     bankroll_before = state["bankroll"]
 
     for bet in pending:
-        bet_date = _bet_date(bet)
-        scores   = scores_by_date.get(bet_date, {})
-        match    = bet.get("match", "")
+        match  = bet.get("match", "")
 
-        # Try to find result
-        result = scores.get(match)
+        # Try to find result in flat scores dict
+        result = all_scores.get(match)
         if result is None:
             # Try partial match
-            for key, res in scores.items():
+            for key, res in all_scores.items():
                 if res.get("home", "") in match or res.get("away", "") in match:
                     result = res
                     break
