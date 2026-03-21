@@ -248,20 +248,25 @@
     .badge-won{background:var(--green-soft);color:var(--green);border-color:#b3e0cc}.badge-lost{background:var(--burg-soft);color:var(--burg);border-color:var(--burg-mid)}.badge-pending{background:var(--yellow-soft);color:var(--yellow);border-color:var(--yellow-mid)}
     .pnl-pos{color:var(--green);font-weight:700}.pnl-neg{color:var(--burg);font-weight:700}
     .reasoning-cell{font-size:.68rem;color:var(--muted);line-height:1.5;white-space:normal!important;min-width:180px;max-width:320px}
-    .bet-cards-mobile{display:none;padding:8px 4px}
-    .bet-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;margin-bottom:10px;box-shadow:var(--shadow)}
-    .bet-card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
-    .bet-card-date{font-size:.65rem;color:var(--muted);font-weight:600}
-    .bet-card-matchup{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
-    .bet-card-team{display:flex;flex-direction:column;align-items:center;gap:4px;flex:1}
-    .bet-card-team-name{font-size:.8rem;font-weight:800;text-align:center}
-    .bet-card-venue{font-size:.6rem;color:var(--muted)}
-    .bet-card-vs{font-size:.7rem;font-weight:800;color:var(--muted);padding:0 8px}
-    .bet-card-pick{font-size:.85rem;font-weight:800;color:var(--burg);margin-bottom:6px}
-    .bet-card-row{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
-    .bet-card-chip{display:inline-flex;align-items:center;gap:5px;background:var(--surface);border:1px solid var(--border2);border-radius:var(--r-pill);padding:3px 9px;font-size:.68rem}
+    .bet-cards-mobile{display:none;padding:4px 0}
+    .bet-row{display:flex;align-items:center;gap:8px;padding:9px 12px;border-bottom:1px solid var(--border2);cursor:pointer;background:var(--card);transition:background .12s;user-select:none}
+    .bet-row:first-child{border-top:1px solid var(--border2)}
+    .bet-row:active{background:var(--surface)}
+    .bet-row-date{font-size:.6rem;color:var(--muted);white-space:nowrap;min-width:42px}
+    .bet-row-teams{display:flex;align-items:center;gap:5px;flex:1;min-width:0}
+    .bet-row-logo{width:20px;height:20px;object-fit:contain;flex-shrink:0}
+    .bet-row-abbr{font-size:.72rem;font-weight:800;color:var(--text)}
+    .bet-row-vs{font-size:.6rem;color:var(--muted);margin:0 2px}
+    .bet-row-result{flex-shrink:0}
+    .bet-row-chevron{font-size:.6rem;color:var(--muted);flex-shrink:0;transition:transform .2s}
+    .bet-row-chevron.open{transform:rotate(180deg)}
+    .bet-expand{display:none;padding:10px 12px 14px;background:var(--surface);border-bottom:1px solid var(--border2)}
+    .bet-expand.open{display:block}
+    .bet-expand-pick{font-size:.8rem;font-weight:800;color:var(--burg);margin-bottom:6px}
+    .bet-expand-chips{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:6px}
+    .bet-card-chip{display:inline-flex;align-items:center;gap:5px;background:var(--card);border:1px solid var(--border2);border-radius:var(--r-pill);padding:3px 9px;font-size:.68rem}
     .bet-card-chip span:first-child{font-size:.58rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
-    .bet-card-reasoning{font-size:.7rem;color:var(--muted);margin-top:6px;padding-top:8px;border-top:1px solid var(--border2);line-height:1.5}
+    .bet-expand-analysis{font-size:.68rem;color:var(--muted);margin-top:6px;padding-top:6px;border-top:1px solid var(--border2);line-height:1.5}
     .mobile-logo{width:38px;height:38px;object-fit:contain}
     .btn-wa,.btn-copy{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:var(--r-sm);font-size:.72rem;font-weight:700;cursor:pointer;transition:all .15s;border:1px solid transparent;font-family:inherit}
     .btn-wa{background:#25d366;color:#fff;border-color:#25d366}.btn-wa:hover{background:#128c7e}
@@ -1219,22 +1224,26 @@ function renderTable(){
       <td class="reasoning-cell">${oneLiner(b.reasoning)}</td>
     </tr>`;
   }).join('');
-  document.getElementById('betCardsMobile').innerHTML=bets.map(b=>{
+  document.getElementById('betCardsMobile').innerHTML=bets.map((b,i)=>{
     const pts=(b.match||'').split(' vs ');const h=pts[0]||'',a=pts[1]||'';
     const rb=b.result?`<span class="badge badge-${b.result.toLowerCase()}">${b.result}</span>`:`<span class="badge badge-pending">⏳</span>`;
     const pnl=b.pnl!=null?`<span class="bet-card-chip"><span>P&L</span><span class="${b.pnl>=0?'pnl-pos':'pnl-neg'}">${b.pnl>=0?'+':''}€${b.pnl.toFixed(2)}</span></span>`:'';
-    return`<div class="bet-card">
-      <div class="bet-card-top"><span class="bet-card-date">${b.time?fmt(b.time):b.date||''}</span>${rb}</div>
-      <div class="bet-card-matchup"><div class="bet-card-team">${mobileLogo(h)}<div class="bet-card-team-name">${getTeam(h).short}</div><div class="bet-card-venue">🏠 Home</div></div>
-        <div class="bet-card-vs">VS</div>
-        <div class="bet-card-team">${mobileLogo(a)}<div class="bet-card-team-name">${getTeam(a).short}</div><div class="bet-card-venue">✈️ Away</div></div>
-      </div>
-      <div class="bet-card-pick">${b.pick}</div>
-      <div class="bet-card-row"><span class="bet-card-chip"><span>Odds</span>${(b.odds||0).toFixed(2)}</span><span class="bet-card-chip"><span>Stake</span>€${(b.stake||0).toFixed(2)}</span><span class="bet-card-chip"><span>Pot.</span>€${(b.potential_return||0).toFixed(2)}</span>${pnl}<span class="conf-pill ${CC(b.confidence)}">${b.confidence}/100 ${CL(b.confidence)}</span></div>
-      ${b.reasoning?`<div class="bet-card-reasoning">${oneLiner(b.reasoning)}</div>`:''}
+    const eid=`bx-${i}`;
+    const logoM=n=>`<img src="${logoUrl(n)}" class="bet-row-logo" onerror="this.style.display='none'" alt="${getTeam(n).abbr}"/>`;
+    return`<div class="bet-row" onclick="toggleBetRow('${eid}')">
+      <span class="bet-row-date">${(b.time?fmt(b.time):b.date||'').replace(',','')}</span>
+      <div class="bet-row-teams">${logoM(h)}<span class="bet-row-abbr">${getTeam(h).abbr}</span><span class="bet-row-vs">vs</span>${logoM(a)}<span class="bet-row-abbr">${getTeam(a).abbr}</span></div>
+      <span class="bet-row-result">${rb}</span>
+      <span class="bet-row-chevron" id="${eid}-chev">▼</span>
+    </div>
+    <div class="bet-expand" id="${eid}">
+      <div class="bet-expand-pick">${b.pick}</div>
+      <div class="bet-expand-chips"><span class="bet-card-chip"><span>Odds</span>${(b.odds||0).toFixed(2)}</span><span class="bet-card-chip"><span>Stake</span>€${(b.stake||0).toFixed(2)}</span><span class="bet-card-chip"><span>Pot.</span>€${(b.potential_return||0).toFixed(2)}</span>${pnl}<span class="conf-pill ${CC(b.confidence)}">${b.confidence}/100 ${CL(b.confidence)}</span></div>
+      ${b.reasoning?`<div class="bet-expand-analysis">${oneLiner(b.reasoning)}</div>`:''}
     </div>`;
   }).join('');
 }
+function toggleBetRow(id){const el=document.getElementById(id);const ch=document.getElementById(id+'-chev');if(!el)return;el.classList.toggle('open');if(ch)ch.classList.toggle('open');}
 function sortBy(c){if(sortCol===c)sortDir*=-1;else{sortCol=c;sortDir=-1;}renderTable();}
 function resetFilters(){['filterResult','filterDate','filterSearch'].forEach(id=>{const el=document.getElementById(id);if(el)(el.tagName==='SELECT'?el.value='all':el.value='');});renderTable();}
 
