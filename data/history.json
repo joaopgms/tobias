@@ -14,7 +14,7 @@
           "peak_bankroll": 1000.0,
           "final_bankroll": null,
           "net_pnl": null,
-          "total_bets": 1,
+          "total_bets": 2,
           "wins": 0,
           "losses": 1,
           "bust": false
@@ -68,6 +68,54 @@
         }
       ],
       "summary": "Day 2026-03-19 commit — 1 bets totalling €100.00. 1 cancelled. Bankroll: €1000.00 → €900.00."
+    },
+    {
+      "entry_id": "nba_entry_20260321",
+      "season": "2024-25",
+      "game": 1,
+      "timestamp": "2026-03-21T00:04:23.140240+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 900.0,
+      "total_staked": 225.0,
+      "bankroll_after": 675.0,
+      "cancelled_picks": [
+        {
+          "id": "nba_draft_20260320_001",
+          "match": "Brooklyn Nets vs New York Knicks",
+          "pick": "New York Knicks -17.5",
+          "reason": "Spread line moved from -17.5 to -11.5 (6-point shift against the pick) — movement exceeds 0.30 threshold with no clear explanation available at commit time. Per rules: cancel if line moved > 0.30 for any reason without explicit justification."
+        },
+        {
+          "id": "nba_draft_20260320_003",
+          "match": "Minnesota Timberwolves vs Portland Trail Blazers",
+          "pick": "Minnesota Timberwolves ML",
+          "reason": "Odds moved against from 2.15 to 1.98 (-0.17). Per movement-against rules, confidence reduced by 10 (55 → 45). Confidence below 50 floor — do not confirm. EV recalculated at adjusted confidence: (0.45 × 1.98) - 1 = -0.109, well below the 0.05 requirement. Additionally, Portland now implied as slight favorite in spread market (-1.5), indicating market has fundamentally repriced this matchup since Scout."
+        }
+      ],
+      "bets": [
+        {
+          "id": "nba_bet_20260321_001",
+          "match": "Memphis Grizzlies vs Boston Celtics",
+          "time": "2026-03-21T00:00:00Z",
+          "pick": "Boston Celtics -14.0",
+          "odds": 1.9,
+          "stake": 225,
+          "potential_return": 427.5,
+          "confidence": 80,
+          "reasoning": "Celtics NetRtg +7.9 vs Grizzlies -2.9 = 10.8 pt gap (well above 6.0 threshold). Memphis confirmed tanking team (24-44, L10: 2-8) with catastrophic roster depletion confirmed at commit time: Aldama OUT, Caldwell-Pope OUT, Clarke OUT, Edey OUT, Gibson DOUBTFUL. GG Jackson no longer listed as Doubtful (potentially active), which explains the 1.5-point spread compression from -15.5 to -14.0. Boston (46-23, L10: 7-3) anchor players Tatum, Brown, Holiday all confirmed active — not on injury report. Spread moved from -15.5 to -14.0 (easier to cover, effectively line movement in our favor). Odds moved marginally from 1.91 to 1.90 (-0.01, within 0.05 drift allowance). EV = (0.80 × 1.90) - 1 = 0.52. Confidence unchanged at 80 — Memphis depletion confirmed, Celtics core intact, strong motivation for seeding. Strong edge confirmed at commit time.",
+          "anchor_players": [
+            "Jayson Tatum",
+            "Jaylen Brown",
+            "Jrue Holiday"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-03-21T00:04:32Z"
+        }
+      ],
+      "summary": "Day 2026-03-21 commit — 1 bets totalling €225.00. 2 cancelled. Bankroll: €900.00 → €675.00."
     }
   ]
 }
