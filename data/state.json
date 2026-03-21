@@ -1,24 +1,24 @@
 {
   "season": "2024-25",
   "game": 1,
-  "bankroll": 900.0,
+  "bankroll": 675.0,
   "bankroll_initial": 1000.0,
   "bankroll_peak": 1000.0,
-  "total_staked": 100.0,
+  "total_staked": 325.0,
   "total_returned": 0.0,
   "net_pnl": -100.0,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-03-20T18:51:30.299254+00:00",
+  "last_updated": "2026-03-21T00:04:23.140240+00:00",
   "first_game_time": "2026-03-20T23:30:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
   "scout_updated_at": "2026-03-20T18:51:30.299254+00:00",
   "scout_odds_source": "theodds_unibet",
-  "commit_status": "pending",
-  "commit_updated_at": "2026-03-19T22:53:50.149474+00:00",
-  "commit_date": "2026-03-19",
+  "commit_status": "done",
+  "commit_updated_at": "2026-03-21T00:04:23.140240+00:00",
+  "commit_date": "2026-03-21",
   "analyst_updated_at": "2026-03-20T11:29:56.651328+00:00",
   "settler_updated_at": "2026-03-20T12:30:55.431755+00:00",
   "agent_models": {
@@ -27,64 +27,31 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "# Scout Report — 2026-03-20 NBA Slate\n**Injury Source:** NBA Official PDF (full 30-team coverage) — Normal confidence rules apply.\n**Advanced Stats:** Available for all tonight's teams. Pace = 0.0 for all teams — O/U Pace-based signals unavailable. No O/U odds listed for any game. Total bets not applicable tonight.\n**Bankroll:** €900.00 | **Total Staked:** €555 (61.7% — within 70% cap)\n\n---\n\n### Brooklyn Nets vs New York Knicks\n- **Edge assessment:** Strong spread edge on Knicks -17.5\n- **Key factors:** Nets confirmed tanking team (17-52, L10: 2-8) with 5 rotation players OUT. NetRtg gap 16.4 points (Knicks +6.7 vs Nets -9.7). Knicks (45-25, L10: 7-3) fully motivated for seeding. Tanking teams historically cannot cover massive spreads. No B2B concerns. Knicks role players (McBride, Hart) OUT but core intact. L15 data missing applied -5 confidence.\n- **Odds:** ML: 9.5 (Nets) / 1.06 (Knicks) — ML out of range. Spread: Knicks -17.5 @ 1.92 / Nets +17.5 @ 1.90. O/U: N/A\n- **Decision:** DRAFTED — Knicks -17.5 @ 1.92 | Confidence 70 | EV 0.344\n\n---\n\n### Detroit Pistons vs Golden State Warriors\n- **Edge assessment:** LINE ANOMALY — cannot evaluate\n- **Key factors:** Pistons (50-19) are home but priced as massive underdogs at 2.65 vs Warriors (33-36) at 1.49. Both franchise players confirmed OUT: Cade Cunningham (pneumothorax) for Detroit, Stephen Curry (pain syndrome) + Jimmy Butler (ACL surgery) for Golden State. Mass depletion on both sides explains some of the pricing but the inversion of a 50-19 home team vs 33-36 visitor is extreme. This meets the anomaly threshold (home team with materially better record priced ≥ 2.20 as underdog). Flagged for Commit to investigate for undisclosed news or additional absences.\n- **Odds:** ML: Warriors 1.49 / Pistons 2.65 | Spread: Warriors -5.0 @ 1.93 | O/U: N/A\n- **Decision:** ANOMALY — flagged for Commit investigation. Do not draft.\n\n---\n\n### Houston Rockets vs Atlanta Hawks\n- **Edge assessment:** No qualifying edge\n- **Key factors:** Hawks riding 11-game win streak (L10: 10-0) but overall W% = 55.1% — borderline for HOT STREAK FADE RULE. Rockets (41-27, L10: 4-6) are at home but in poor recent form. NetRtg gap only 2.5 pts (Rockets +4.0 vs Hawks +1.5) — below 4.0 threshold for meaningful signal. Rockets ML confidence reached only 39 after adjustments (L10 penalty, L15 missing). Hawks spread confidence 52 — below 60 floor. Kuminga listed under Atlanta in feed likely a data error (plays for GSW). No franchise player issues for either team in this game.\n- **Odds:** ML: Hawks 1.61 / Rockets 2.35 | Spread: Hawks -3.5 @ 1.89 / Rockets +3.5 @ 1.93 | O/U: N/A\n- **Decision:** REJECTED — No market meets confidence floor + EV threshold. HOT STREAK FADE insufficient without supporting stats edge.\n\n---\n\n### Memphis Grizzlies vs Boston Celtics\n- **Edge assessment:** Strong spread edge on Celtics -15.5\n- **Key factors:** Celtics NetRtg +7.9 vs Grizzlies -2.9 = 10.8 pt gap (significantly above 6.0 threshold). Memphis confirmed tanking team (24-44, L10: 2-8) with catastrophic depletion: Aldama, Caldwell-Pope, Clarke, Edey all OUT; Gibson and GG Jackson Doubtful. Boston missing only Vucevic (backup C) and Tonje (G League) — fully competitive. Celtics (46-23, L10: 7-3) are motivated for top-4 seeding. DefRtg gap: Celtics 112.5 vs Memphis 116.9. Tanking teams historically cannot cover spreads of this magnitude.\n- **Odds:** ML: Grizzlies 8.0 / Celtics 1.08 — ML out of range. Spread: Celtics -15.5 @ 1.91 | O/U: N/A\n- **Decision:** DRAFTED — Celtics -15.5 @ 1.91 | Confidence 80 | EV 0.528\n\n---\n\n### Minnesota Timberwolves vs Portland Trail Blazers\n- **Edge assessment:** Marginal ML edge on Timberwolves\n- **Key factors:** Anthony Edwards confirmed OUT (Patellofemoral Pain Syndrome) — franchise player rule applies, but Portland also missing Damian Lillard (Injury Management) + Shaedon Sharpe (reaction) — net depletion roughly balanced, possibly favoring Minnesota who retains Gobert + Randle. NetRtg gap: Minnesota +3.6 vs Portland -1.9 = 5.5 pts (above 4.0 threshold). Minnesota home court adds 2-3 pts. L10: Minnesota 6-4 vs Portland 5-5. Risk: Naz Reid Questionable (ankle) — game-time decision avoided spread bet per rules. Minnesota at 2.15 ML in target range.\n- **Odds:** ML: Portland 1.72 / Minnesota 2.15 | Spread: Portland -2.5 @ 1.90 / Minnesota +2.5 @ 1.92 | O/U: N/A\n- **Decision:** DRAFTED — Minnesota Timberwolves ML @ 2.15 | Confidence 55 | EV 0.1825 (proceed with caution, minimum stake)\n\n---\n\n### Denver Nuggets vs Toronto Raptors\n- **Edge assessment:** LINE ANOMALY — cannot evaluate\n- **Key factors:** Nuggets (42-28) are HOME with better record than Raptors (39-29) but priced at 3.25 underdog. Raptors AWAY at 1.35. Nikola Jokic does NOT appear on the official injury report — indicating he is available. Aaron Gordon and Peyton Watson are OUT for Denver, but this cannot explain a 3.25 price for a home team with a better record when their franchise player is available. This clearly exceeds the anomaly threshold (home team better record, priced ≥ 2.20 as underdog). Flagged for Commit — possible undisclosed Jokic injury, lineup change, or pricing error requiring investigation before tip-off.\n- **Odds:** ML: Raptors 1.35 / Nuggets 3.25 | Spread: Raptors -7.0 @ 1.91 | O/U: N/A\n- **Decision:** ANOMALY — flagged for Commit investigation. Do not draft.\n\n---\n\n### Los Angeles Lakers vs Orlando Magic (odds feed only — not on ESPN slate)\n- **Edge assessment:** Cannot assess — game not on tonight's official slate\n- **Key factors:** This game appeared in the Betano odds feed but is absent from tonight's ESPN authoritative slate. No advanced stats or injury data provided. Per rules, ESPN slate takes precedence. Additionally, no O/U available and spread not listed.\n- **Odds:** ML: Magic 1.73 / Lakers 2.10 | Spread: N/A | O/U: N/A\n- **Decision:** DEFERRED — Not on tonight's official slate. Commit should verify if this game is actually scheduled and obtain full data before considering.\n\n---\n\n## Slate Summary\n\nTonight's slate presents two clear spread opportunities backed by strong structural edges: the Knicks blowout of a depleted tanking Nets squad and Boston dismantling a skeleton Grizzlies roster. Both carry EV well above threshold (0.34 and 0.53 respectively). Two games — Detroit/Golden State and Denver/Toronto — were flagged as line anomalies requiring Commit-phase investigation, as the pricing cannot be reconciled with available public information and may indicate undisclosed absences or feed errors. The Hawks/Rockets matchup lacked sufficient edge despite the hot streak fade signal, as Rockets' recent L10: 4-6 form undermined the regression thesis. The Minnesota pick is a cautious speculative play contingent on the balanced depletion of both rosters with Gobert/Randle holding the fort at home. Total exposure of €555 (61.7% of bankroll) is within the 70% daily cap.",
-  "draft_picks": [
+  "last_report": "### CONFIRMED — Boston Celtics -14.0\n- Match: Memphis Grizzlies vs Boston Celtics | Tip: 2026-03-21T00:00:00Z\n- Pick: Boston Celtics -14.0 | Scout odds: 1.91 (spread -15.5) | Commit odds: 1.90 (spread -14.0) | Move: -0.01 odds, spread shifted 1.5pts\n- ML: 7.0/1.11 | ATS: -14.0 (1.92/1.90) | O/U: N/A\n- Stake: €225 | Pot: €427.50 | Conf: 80/100 | EV: 0.52\n- Decision: All three anchor players (Tatum, Brown, Holiday) confirmed active per NBA official injury report. Memphis depletion confirmed — Aldama OUT, Caldwell-Pope OUT, Clarke OUT, Edey OUT, Gibson DOUBTFUL. Spread compressed 1.5 points (likely GG Jackson no longer Doubtful, now active), which actually makes the bet easier to cover. Odds moved only -0.01 within drift allowance. EV of 0.52 remains excellent. Strong edge fully intact at commit time.\n\n---\n\n### CANCELLED — New York Knicks -17.5\n- Reason: Spread line moved massively from -17.5 to -11.5 — a 6-point shift against the pick with no available explanation. This far exceeds the 0.30 movement threshold requiring cancellation. The -17.5 line no longer exists in the market.\n- Odds at cancel: 1.87 (was 1.92 at scout time); spread -11.5 (was -17.5)\n\n---\n\n### CANCELLED — Minnesota Timberwolves ML\n- Reason: ML odds moved against from 2.15 to 1.98 (-0.17). Per movement-against rules, confidence reduced by 10 points (55 → 45). Confidence of 45 falls below the 50 minimum floor for any confirmed bet. EV recalculated at adjusted confidence: (0.45 × 1.98) - 1 = -0.109, well below the 0.05 floor. Portland is now priced as a slight spread favorite (-1.5), confirming the market fundamentally repriced this game since Scout.\n- Odds at cancel: 1.98 (was 2.15 at scout time)\n\n---\n\n### LATE SCOUT SUMMARY\nNo new picks added. All games within the valid time window (Clippers @ Dallas 00:30, 76ers @ Utah 01:30, Bucks @ Suns 02:00) either had no valid odds in the feed or all available ML odds fell outside the 1.65–2.50 valid range. The two Scout anomalies (Pistons/Warriors, Nuggets/Raptors) remain unexplained — Detroit's injury report was absent from the feed and Denver's roster situation is unclear, preventing action on either. The Quantity gate (max 1 new pick) was not reached as no pick met all criteria simultaneously.\n\n**Slate summary:** A cautious commit session — only 1 of 3 draft picks confirmed, with the Celtics -14.0 spread representing a genuinely strong edge (EV 0.52, confidence 80) against a depleted Memphis roster. The Knicks spread was cancelled due to an unexplained 6-point line shift, and the Timberwolves ML was cancelled after odds movement dropped adjusted confidence below the actionable threshold. Total committed stake of €225 (25% of bankroll) is well within the 70% exposure cap, preserving €675 for future sessions.",
+  "draft_picks": [],
+  "pending_bets": [
     {
-      "id": "nba_draft_20260320_001",
-      "match": "Brooklyn Nets vs New York Knicks",
-      "time": "2026-03-20T23:30:00Z",
-      "pick": "New York Knicks -17.5",
-      "odds": 1.92,
-      "stake": 195,
-      "potential_return": 374.4,
-      "confidence": 70,
-      "reasoning": "Massive NetRtg gap: Knicks +6.7 vs Nets -9.7 (16.4 pts). Nets are confirmed tanking team (17-52, L10: 2-8) with 5 key players OUT (Porter Jr., Mann, Clowney, Demin, Sharpe). Knicks (45-25, L10: 7-3) are fighting for top-5 seeding — high motivation. Tanking teams historically fail to cover large spreads. Knicks: role player absences only (McBride, Hart), core intact. Base confidence 75, L15 data missing -5 = 70. EV = (0.70 × 1.92) - 1 = 0.344. Strong edge confirmed.",
-      "anchor_players": [
-        "Jalen Brunson",
-        "Karl-Anthony Towns",
-        "OG Anunoby"
-      ],
-      "drafted_at": "2026-03-20T18:51:40Z",
-      "market_type": "spread"
-    },
-    {
-      "id": "nba_draft_20260320_002",
+      "id": "nba_bet_20260321_001",
       "match": "Memphis Grizzlies vs Boston Celtics",
       "time": "2026-03-21T00:00:00Z",
-      "pick": "Boston Celtics -15.5",
-      "odds": 1.91,
+      "pick": "Boston Celtics -14.0",
+      "odds": 1.9,
       "stake": 225,
-      "potential_return": 429.75,
+      "potential_return": 427.5,
       "confidence": 80,
-      "reasoning": "Celtics NetRtg +7.9 vs Grizzlies -2.9 = 10.8 pt gap (well above 6.0 threshold). Memphis is confirmed tanking team (24-44, L10: 2-8) with catastrophic roster depletion: Aldama OUT, Caldwell-Pope OUT, Clarke OUT, Edey OUT, Gibson Doubtful, GG Jackson Doubtful. Boston (46-23, L10: 7-3) missing only Vucevic (backup C) and Tonje (G League) — core fully intact. Celtics are seeding-motivated. DefRtg gap: Boston 112.5 vs Memphis 116.9 = 4.4 pts in Celtics' favor. Tankers don't cover large spreads. Base 75, tanking opponent +5, mass depletion +5, L15 missing -5 = 80. EV = (0.80 × 1.91) - 1 = 0.528. Strong edge.",
+      "reasoning": "Celtics NetRtg +7.9 vs Grizzlies -2.9 = 10.8 pt gap (well above 6.0 threshold). Memphis confirmed tanking team (24-44, L10: 2-8) with catastrophic roster depletion confirmed at commit time: Aldama OUT, Caldwell-Pope OUT, Clarke OUT, Edey OUT, Gibson DOUBTFUL. GG Jackson no longer listed as Doubtful (potentially active), which explains the 1.5-point spread compression from -15.5 to -14.0. Boston (46-23, L10: 7-3) anchor players Tatum, Brown, Holiday all confirmed active — not on injury report. Spread moved from -15.5 to -14.0 (easier to cover, effectively line movement in our favor). Odds moved marginally from 1.91 to 1.90 (-0.01, within 0.05 drift allowance). EV = (0.80 × 1.90) - 1 = 0.52. Confidence unchanged at 80 — Memphis depletion confirmed, Celtics core intact, strong motivation for seeding. Strong edge confirmed at commit time.",
       "anchor_players": [
         "Jayson Tatum",
         "Jaylen Brown",
         "Jrue Holiday"
       ],
-      "drafted_at": "2026-03-20T18:51:40Z",
-      "market_type": "spread"
-    },
-    {
-      "id": "nba_draft_20260320_003",
-      "match": "Minnesota Timberwolves vs Portland Trail Blazers",
-      "time": "2026-03-21T00:00:00Z",
-      "pick": "Minnesota Timberwolves ML",
-      "odds": 2.15,
-      "stake": 135,
-      "potential_return": 290.25,
-      "confidence": 55,
-      "reasoning": "Both teams missing franchise players: Edwards OUT (Minnesota) and Lillard OUT + Sharpe OUT (Portland). Net impact: roughly balanced absences, possibly favoring Minnesota since Portland loses two key contributors vs Minnesota's one. Minnesota retains Rudy Gobert and Julius Randle. NetRtg gap: Minnesota +3.6 vs Portland -1.9 = 5.5 pts in Minnesota's favor (above 4.0 threshold). Home court advantage (+2-3 pts). Minnesota L10: 6-4 vs Portland 5-5 — slight edge. Naz Reid Questionable is a risk. Base 62, home court +5, Edwards OUT -15, Lillard/Sharpe OUT offsetting +8, L15 missing -5 = 55. EV = (0.55 × 2.15) - 1 = 0.1825. Marginal-to-good edge. Proceed with caution at minimum stake tier.",
-      "anchor_players": [
-        "Rudy Gobert",
-        "Julius Randle",
-        "Mike Conley"
-      ],
-      "drafted_at": "2026-03-20T18:51:40Z",
-      "market_type": "ml"
+      "result": null,
+      "returned": null,
+      "pnl": null,
+      "settled_at": null,
+      "committed_at": "2026-03-21T00:04:32Z"
     }
   ],
-  "pending_bets": [],
   "settled_bets": [
     {
       "id": "nba_bet_20260319_001",
@@ -265,45 +232,51 @@
     "updated_at": "2026-03-20T18:51:30.299254+00:00"
   },
   "commit_report_data": {
-    "date": "2026-03-19",
+    "date": "2026-03-21",
+    "ts": "2026-03-21T00:04:23.140240+00:00",
     "bets": [
       {
-        "id": "nba_bet_20260319_001",
-        "match": "Miami Heat vs Los Angeles Lakers",
-        "time": "2026-03-20T00:00:00Z",
-        "pick": "Miami Heat ML",
-        "odds": 2.38,
-        "stake": 100,
-        "potential_return": 238.0,
-        "confidence": 53,
-        "reasoning": "Scout identified Miami Heat ML at 2.25 based on superior NetRtg (+3.1 vs Lakers +1.4), home court advantage, and Lakers' hot streak flagged as potentially luck-driven. At commit time, odds improved to 2.38 (+0.13 in our favour), consistent with news that Luka Doncic (Questionable, Right Hip) and LeBron James (Questionable, Left Foot Arthritis) are both uncertain for Lakers — two franchise-level players potentially unavailable. Austin Reaves also Questionable. Heat are missing Jaquez Jr. (confirmed OUT, was Questionable at Scout), Andrew Wiggins (OUT, new), and Terry Rozier (OUT, new), but their core rotation (Butler, Adebayo) remains intact. Net injury impact heavily favours Heat: Lakers potentially missing two franchise players outweighs Heat's role-player absences. Books have moved from 2.25 to 2.38, partially pricing in LAL risks, but 2.38 still offers strong value. EV at commit odds: (0.53 × 2.38) - 1 = 0.2614 = 26.1%, well above 0.05 threshold. Odds within ML valid range (1.65–2.50). Confidence maintained at 53 (Speculative): LAL injury upside offset by Heat's additional absences. Stake: 10% of €1000 = €100. Original stake unchanged per rules (do not increase even on improved odds). Total exposure: 10% of bankroll.",
+        "id": "nba_bet_20260321_001",
+        "match": "Memphis Grizzlies vs Boston Celtics",
+        "time": "2026-03-21T00:00:00Z",
+        "pick": "Boston Celtics -14.0",
+        "odds": 1.9,
+        "stake": 225,
+        "potential_return": 427.5,
+        "confidence": 80,
+        "reasoning": "Celtics NetRtg +7.9 vs Grizzlies -2.9 = 10.8 pt gap (well above 6.0 threshold). Memphis confirmed tanking team (24-44, L10: 2-8) with catastrophic roster depletion confirmed at commit time: Aldama OUT, Caldwell-Pope OUT, Clarke OUT, Edey OUT, Gibson DOUBTFUL. GG Jackson no longer listed as Doubtful (potentially active), which explains the 1.5-point spread compression from -15.5 to -14.0. Boston (46-23, L10: 7-3) anchor players Tatum, Brown, Holiday all confirmed active — not on injury report. Spread moved from -15.5 to -14.0 (easier to cover, effectively line movement in our favor). Odds moved marginally from 1.91 to 1.90 (-0.01, within 0.05 drift allowance). EV = (0.80 × 1.90) - 1 = 0.52. Confidence unchanged at 80 — Memphis depletion confirmed, Celtics core intact, strong motivation for seeding. Strong edge confirmed at commit time.",
         "anchor_players": [
-          "Luka Doncic (Questionable — Lakers, franchise player, Right Hip Soreness)",
-          "LeBron James (Questionable — Lakers, franchise player, Left Foot Arthritis)",
-          "Austin Reaves (Questionable — Lakers, Contusion)",
-          "Maxi Kleber (OUT — Lakers, Back Strain)",
-          "Jaime Jaquez Jr. (OUT — Heat, Left Hip Tightness, upgraded from Questionable)",
-          "Andrew Wiggins (OUT — Heat, Sesamoiditis, new at commit)",
-          "Terry Rozier (OUT — Heat, Not With Team, new at commit)"
+          "Jayson Tatum",
+          "Jaylen Brown",
+          "Jrue Holiday"
         ],
-        "committed_at": "2026-03-19T22:53:53Z",
         "result": null,
         "returned": null,
         "pnl": null,
-        "settled_at": null
+        "settled_at": null,
+        "committed_at": "2026-03-21T00:04:32Z"
       }
     ],
     "cancelled": [
       {
-        "id": "nba_draft_20260319_001",
-        "match": "Charlotte Hornets vs Orlando Magic",
-        "pick": "Charlotte Hornets +5.5",
-        "reason": "New information fundamentally changes the edge. Scout's entire thesis was anchored on Franz Wagner (Orlando franchise player) being OUT. At commit time, Wagner does NOT appear on the official NBA injury report — only Anthony Black (OUT) and Wendell Carter Jr. (OUT, new) are listed for Orlando. Jonathan Isaac is also absent from the official report. Without confirmed Wagner absence, the franchise player edge that justified the pick evaporates entirely. Additionally, Jonathan Isaac's status is unconfirmed. The core rationale — covering -5.5 on road without their best player — no longer applies if Wagner is active. Cancel per cancel_criteria: 'New information fundamentally changes the edge.'"
+        "id": "nba_draft_20260320_001",
+        "match": "Brooklyn Nets vs New York Knicks",
+        "pick": "New York Knicks -17.5",
+        "reason": "Spread line moved from -17.5 to -11.5 (6-point shift against the pick) — movement exceeds 0.30 threshold with no clear explanation available at commit time. Per rules: cancel if line moved > 0.30 for any reason without explicit justification."
+      },
+      {
+        "id": "nba_draft_20260320_003",
+        "match": "Minnesota Timberwolves vs Portland Trail Blazers",
+        "pick": "Minnesota Timberwolves ML",
+        "reason": "Odds moved against from 2.15 to 1.98 (-0.17). Per movement-against rules, confidence reduced by 10 (55 → 45). Confidence below 50 floor — do not confirm. EV recalculated at adjusted confidence: (0.45 × 1.98) - 1 = -0.109, well below the 0.05 requirement. Additionally, Portland now implied as slight favorite in spread market (-1.5), indicating market has fundamentally repriced this matchup since Scout."
       }
     ],
     "late_rejections": [],
-    "total_staked": 100.0,
-    "bankroll_before": 1000.0,
-    "report": ""
+    "total_staked": 225.0,
+    "bankroll_before": 900.0,
+    "report": "### CONFIRMED — Boston Celtics -14.0\n- Match: Memphis Grizzlies vs Boston Celtics | Tip: 2026-03-21T00:00:00Z\n- Pick: Boston Celtics -14.0 | Scout odds: 1.91 (spread -15.5) | Commit odds: 1.90 (spread -14.0) | Move: -0.01 odds, spread shifted 1.5pts\n- ML: 7.0/1.11 | ATS: -14.0 (1.92/1.90) | O/U: N/A\n- Stake: €225 | Pot: €427.50 | Conf: 80/100 | EV: 0.52\n- Decision: All three anchor players (Tatum, Brown, Holiday) confirmed active per NBA official injury report. Memphis depletion confirmed — Aldama OUT, Caldwell-Pope OUT, Clarke OUT, Edey OUT, Gibson DOUBTFUL. Spread compressed 1.5 points (likely GG Jackson no longer Doubtful, now active), which actually makes the bet easier to cover. Odds moved only -0.01 within drift allowance. EV of 0.52 remains excellent. Strong edge fully intact at commit time.\n\n---\n\n### CANCELLED — New York Knicks -17.5\n- Reason: Spread line moved massively from -17.5 to -11.5 — a 6-point shift against the pick with no available explanation. This far exceeds the 0.30 movement threshold requiring cancellation. The -17.5 line no longer exists in the market.\n- Odds at cancel: 1.87 (was 1.92 at scout time); spread -11.5 (was -17.5)\n\n---\n\n### CANCELLED — Minnesota Timberwolves ML\n- Reason: ML odds moved against from 2.15 to 1.98 (-0.17). Per movement-against rules, confidence reduced by 10 points (55 → 45). Confidence of 45 falls below the 50 minimum floor for any confirmed bet. EV recalculated at adjusted confidence: (0.45 × 1.98) - 1 = -0.109, well below the 0.05 floor. Portland is now priced as a slight spread favorite (-1.5), confirming the market fundamentally repriced this game since Scout.\n- Odds at cancel: 1.98 (was 2.15 at scout time)\n\n---\n\n### LATE SCOUT SUMMARY\nNo new picks added. All games within the valid time window (Clippers @ Dallas 00:30, 76ers @ Utah 01:30, Bucks @ Suns 02:00) either had no valid odds in the feed or all available ML odds fell outside the 1.65–2.50 valid range. The two Scout anomalies (Pistons/Warriors, Nuggets/Raptors) remain unexplained — Detroit's injury report was absent from the feed and Denver's roster situation is unclear, preventing action on either. The Quantity gate (max 1 new pick) was not reached as no pick met all criteria simultaneously.\n\n**Slate summary:** A cautious commit session — only 1 of 3 draft picks confirmed, with the Celtics -14.0 spread representing a genuinely strong edge (EV 0.52, confidence 80) against a depleted Memphis roster. The Knicks spread was cancelled due to an unexplained 6-point line shift, and the Timberwolves ML was cancelled after odds movement dropped adjusted confidence below the actionable threshold. Total committed stake of €225 (25% of bankroll) is well within the 70% exposure cap, preserving €675 for future sessions.",
+    "tokens_in": 9027,
+    "tokens_out": 6340,
+    "cost_usd": 0.122181
   }
 }
