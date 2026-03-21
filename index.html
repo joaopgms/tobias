@@ -1205,6 +1205,7 @@ function renderTable(){
   const bets=[...getFiltered()].sort((a,b)=>{let av=a[sortCol]??'',bv=b[sortCol]??'';return typeof av==='number'?(av-bv)*sortDir:String(av).localeCompare(String(bv))*sortDir;});
   document.getElementById('filterCount').textContent=`${bets.length} bet${bets.length!==1?'s':''}`;
   document.getElementById('emptyState').style.display=bets.length?'none':'block';
+  const oneLiner=r=>{if(!r)return'-';const s=r.match(/[^.!?]+[.!?]/);return s?s[0].trim().slice(0,140):r.slice(0,140);};
   document.getElementById('betTableBody').innerHTML=bets.map(b=>{
     const pts=(b.match||'').split(' vs ');const h=pts[0]||'',a=pts[1]||'';
     const rb=b.result?`<span class="badge badge-${b.result.toLowerCase()}">${b.result==='WON'?'✅':b.result==='LOST'?'❌':'?'} ${b.result}</span>`:`<span class="badge badge-pending">⏳ Placed</span>`;
@@ -1215,7 +1216,7 @@ function renderTable(){
       <td>${(b.odds||0).toFixed(2)}</td><td>€${(b.stake||0).toFixed(2)}</td><td>€${(b.potential_return||0).toFixed(2)}</td>
       <td>${rb}</td><td>${pnl}</td>
       <td><span class="conf-pill ${CC(b.confidence)}">${b.confidence}/100</span></td>
-
+      <td class="reasoning-cell">${oneLiner(b.reasoning)}</td>
     </tr>`;
   }).join('');
   document.getElementById('betCardsMobile').innerHTML=bets.map(b=>{
@@ -1230,7 +1231,7 @@ function renderTable(){
       </div>
       <div class="bet-card-pick">${b.pick}</div>
       <div class="bet-card-row"><span class="bet-card-chip"><span>Odds</span>${(b.odds||0).toFixed(2)}</span><span class="bet-card-chip"><span>Stake</span>€${(b.stake||0).toFixed(2)}</span><span class="bet-card-chip"><span>Pot.</span>€${(b.potential_return||0).toFixed(2)}</span>${pnl}<span class="conf-pill ${CC(b.confidence)}">${b.confidence}/100 ${CL(b.confidence)}</span></div>
-      ${b.reasoning?`<div class="bet-card-reasoning">💬 ${b.reasoning}</div>`:''}
+      ${b.reasoning?`<div class="bet-card-reasoning">${oneLiner(b.reasoning)}</div>`:''}
     </div>`;
   }).join('');
 }
