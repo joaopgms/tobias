@@ -110,7 +110,7 @@ Check what has changed since 14:00 Scout:
 - Significant line movement on any game?
 - Any game Scout rejected that now has value at current odds?
 Apply the same rules as Scout: only add picks with genuine edge (conf ≥ 60, EV ≥ 0.05, odds in range).
-Max 1 new pick. Only if first_game_time - now > 20 minutes.
+Max 3 new picks. Only add games where first_game_time - now > 20 minutes.
 
 ### Task 3 — Confirm final list and commit
 - Recalculate stakes based on current bankroll (€{bankroll:.2f})
@@ -245,14 +245,8 @@ def run(store, force: bool = False) -> None:
         log.info("Commit: already committed today — skipping")
         return
 
-    # ── 3. Guard: no draft picks? ─────────────────────────────────────────────
+    # ── 3. Load draft picks (commit always runs — late scout may find new edges) ─
     draft_picks = state.get("draft_picks", [])
-    if not draft_picks and not force:
-        log.info("Commit: no draft picks to commit — skipping")
-        state["commit_status"]    = "done"
-        state["commit_updated_at"] = now_iso
-        store.write_json("state", state, f"commit: no picks {today}")
-        return
 
     # ── 4. Load skills ────────────────────────────────────────────────────────
     skills = store.read_md("commit_skills")
