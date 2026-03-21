@@ -1779,7 +1779,9 @@ function renderScoutTab(){
 
   // Build today's report directly from STATE_DATA
   const scoutStatus = ST.scout_status||'pending';
-  const draftPicks  = ST.draft_picks||[];
+  // draft_picks is cleared by commit — fall back to scout_report_data.picks which persists
+  const srd         = ST.scout_report_data||{};
+  const draftPicks  = (ST.draft_picks&&ST.draft_picks.length) ? ST.draft_picks : (srd.picks||[]);
   const rejGames    = ST.rejected_games||[];
   const scoutUpdated = ST.scout_updated_at;
 
