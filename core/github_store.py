@@ -201,10 +201,15 @@ class GitHubStore:
         def js_str(s: str) -> str:
             return json.dumps(s)  # safe JS string with escaping
 
-        # Read analyst notes for export
+        # Read analyst notes + rules for export
         analyst_notes_text = ""
+        analyst_rules_text = ""
         try:
             analyst_notes_text = self._get_file(self.FILES["analyst_notes"])[0]
+        except Exception:
+            pass
+        try:
+            analyst_rules_text = self._get_file(self.FILES["analyst_rules"])[0]
         except Exception:
             pass
 
@@ -241,6 +246,7 @@ const LLM_PROVIDER = {js_str(state.get('llm_provider', 'claude'))};
 const CONFIG_DATA = {json.dumps(cfg, indent=2, ensure_ascii=False)};
 const SCOUT_SKILLS = {js_str(scout_skills_text)};
 const COMMIT_SKILLS = {js_str(commit_skills_text)};
+const ANALYST_RULES = {js_str(analyst_rules_text)};
 const AUDIT_LOG = {json.dumps(audit_log, ensure_ascii=False)};
 const ANALYST_NOTES = {js_str(analyst_notes_text)};
 """

@@ -734,6 +734,7 @@
         <div style="display:flex;gap:6px">
           <button class="skills-tab-btn active" id="sktab-scout" onclick="switchSkillsTab('scout')">🔍 Scout</button>
           <button class="skills-tab-btn" id="sktab-commit" onclick="switchSkillsTab('commit')">🎯 Commit</button>
+          <button class="skills-tab-btn" id="sktab-analyst" onclick="switchSkillsTab('analyst')">🧠 Analyst Rules</button>
         </div>
       </div>
       <div style="font-size:.68rem;color:var(--muted);margin-bottom:10px">
@@ -1328,8 +1329,10 @@ function renderAudit(){
         <span style="font-size:.70rem;color:var(--muted)">${summaryText}</span>
         <button onclick="openAnalystModal(JSON.parse(this.dataset.entry))" data-entry="${entryJson}" style="font-size:.62rem;font-weight:700;letter-spacing:.6px;text-transform:uppercase;background:var(--burg-soft);color:var(--burg);border:1px solid var(--burg);border-radius:var(--r-sm);padding:3px 9px;cursor:pointer;font-family:inherit;white-space:nowrap">📋 Full report →</button>
       </div>`;
-      // KPI row
-      body+=`<div class="audit-pnl-row" style="margin-top:4px"><span class="audit-kv">Bankroll: <strong>€${(e.bankroll||0).toFixed(2)}</strong></span><span class="audit-kv">P&L: <strong>€${(e.net_pnl||0).toFixed(2)}</strong></span>${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>`;
+      // KPI row — include all-time W/L from pre-computed perf_stats
+      const ps=e.perf_stats||{};
+      const wlStr=ps.total?`<span class="audit-kv">All-time: <strong class="pnl-pos">${ps.wins||0}W</strong> / <strong class="pnl-neg">${ps.losses||0}L</strong> <span style="color:var(--muted)">(${ps.win_rate||0}%)</span></span>`:'';
+      body+=`<div class="audit-pnl-row" style="margin-top:4px"><span class="audit-kv">Bankroll: <strong>€${(e.bankroll||0).toFixed(2)}</strong></span><span class="audit-kv">P&L: <strong>€${(e.net_pnl||0).toFixed(2)}</strong></span>${wlStr}${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>`;
         }else if(ag==='scout'){
       // Injuries source badge
       const injSrc = e.injuries_source||'';
@@ -1431,6 +1434,7 @@ function switchSkillsTab(tab) {
   activeSkillsTab = tab;
   document.getElementById('sktab-scout').classList.toggle('active', tab === 'scout');
   document.getElementById('sktab-commit').classList.toggle('active', tab === 'commit');
+  document.getElementById('sktab-analyst').classList.toggle('active', tab === 'analyst');
   renderSkillsViewer();
 }
 
@@ -1487,11 +1491,20 @@ function sectionTitle(name) {
 }
 
 function renderSkillsViewer() {
+  const el = document.getElementById('skills-content');
+  if (!el) return;
+
+  if (activeSkillsTab === 'analyst') {
+    const raw = typeof ANALYST_RULES !== 'undefined' ? ANALYST_RULES : '';
+    if (!raw) { el.innerHTML = '<span style="color:var(--muted);font-style:italic">Analyst rules not loaded yet.</span>'; return; }
+    // analyst_rules.md is plain markdown — render as preformatted text
+    el.innerHTML = `<div class="skills-section"><div class="skills-section-body">${raw.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}</div></div>`;
+    return;
+  }
+
   const raw = activeSkillsTab === 'scout'
     ? (typeof SCOUT_SKILLS  !== 'undefined' ? SCOUT_SKILLS  : '')
     : (typeof COMMIT_SKILLS !== 'undefined' ? COMMIT_SKILLS : '');
-  const el = document.getElementById('skills-content');
-  if (!el) return;
   if (!raw) { el.innerHTML = '<span style="color:var(--muted);font-style:italic">Skills not loaded yet - runs after first Analyst cycle.</span>'; return; }
   const parsed = parseSkillsSections(raw);
   const { sections, version, updated_at, llm } = parsed;

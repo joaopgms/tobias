@@ -168,11 +168,20 @@ def _compute_performance_stats(state: dict, history: dict) -> dict:
     Compute dimensional performance stats from all settled bets.
     Python does the math — LLM only interprets.
     """
-    settled = state.get("settled_bets", [])
-    # Deduplicate by bet ID, keep only fully settled bets
+    # Pull all-time settled bets from history.json entries (survives bust resets)
+    # history entries of type "bets_placed" have bets with results filled in by settler
     seen: set[str] = set()
     bets: list[dict] = []
-    for b in settled:
+    for entry in history.get("entries", []):
+        if entry.get("type") != "bets_placed":
+            continue
+        for b in entry.get("bets", []):
+            bid = b.get("id", "")
+            if bid and bid not in seen and b.get("result") in ("WON", "LOST"):
+                seen.add(bid)
+                bets.append(b)
+    # Also include state["settled_bets"] for anything not yet in history
+    for b in state.get("settled_bets", []):
         bid = b.get("id", "")
         if bid and bid not in seen and b.get("result") in ("WON", "LOST"):
             seen.add(bid)
