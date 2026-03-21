@@ -1402,7 +1402,8 @@ function renderAudit(){
         body+=`<div style="font-size:.68rem;color:var(--muted);margin-top:4px">Waiting: ${skippedList.join(', ')}</div>`;
         body+=`<div class="audit-pnl-row" style="margin-top:6px"><span class="audit-kv" style="color:var(--muted)">No LLM needed</span><span class="audit-kv">Tokens: <strong>0↑ 0↓</strong></span><span class="audit-kv">Cost: <strong>$0.0000</strong></span></div>`;
       } else {
-        body+=`<div class="audit-pnl-row"><span class="audit-kv">Settled: <strong>${e.settled_count||0}</strong></span><span class="audit-kv">${e.wins||0}W/${e.losses||0}L</span><span class="audit-kv">P&L: <strong class="${(e.pnl_today||0)>=0?'pnl-pos':'pnl-neg'}">${(e.pnl_today||0)>=0?'+':''}€${(e.pnl_today||0).toFixed(2)}</strong></span></div>`;
+        body+=`<div class="audit-pnl-row"><span class="audit-kv">Settled: <strong>${e.settled_count||0}</strong></span><span class="audit-kv">${e.wins||0}W/${e.losses||0}L</span><span class="audit-kv">P&L: <strong class="${(e.pnl_today||0)>=0?'pnl-pos':'pnl-neg'}">${(e.pnl_today||0)>=0?'+':''}€${(e.pnl_today||0).toFixed(2)}</strong></span>${e.bankroll_before!=null?`<span class="audit-kv">Bankroll: <strong>€${(e.bankroll_before||0).toFixed(2)} → €${(e.bankroll_after||0).toFixed(2)}</strong></span>`:''}</div>`;
+        body+=`<div class="audit-pnl-row" style="margin-top:4px"><span class="audit-kv" style="color:var(--muted)">No LLM needed</span><span class="audit-kv">Tokens: <strong>0↑ 0↓</strong></span><span class="audit-kv">Cost: <strong>$0.0000</strong></span></div>`;
         if(skippedList.length)body+=`<div style="font-size:.68rem;color:var(--muted);margin-top:4px">⏭️ Skipped: ${skippedList.join(', ')}</div>`;
       }
       if(e.bust)body+=`<div style="color:var(--burg);font-weight:700;margin-top:6px">💥 Bust triggered - bankroll reset</div>`;
@@ -1722,11 +1723,11 @@ function buildCommitCard(bet, idx, prefix, isCancelled=false) {
   }
 
   const anchors=!isCancelled&&(bet.anchor_players||[]).length?
-    `<div style="font-size:.68rem;color:var(--teal);margin-top:6px">⚓ ${(bet.anchor_players||[]).join(', ')}</div>`:'';
-  const cancelReason=isCancelled&&bet.reason?`<div class="report-cancelled-reason">${bet.reason}</div>`:'';
+    `<div style="font-size:.68rem;color:var(--teal);margin-top:8px;padding:0 16px 10px">⚓ ${(bet.anchor_players||[]).join(', ')}</div>`:'';
+  const cancelReason=isCancelled&&bet.reason?`<div class="report-cancelled-reason" style="padding:8px 16px 12px">${bet.reason}</div>`:'';
 
   return `<div class="game-card ${cardClass}">
-    <div class="game-card-header" onclick="toggleGameCard('${cardId}')">
+    <div class="game-card-header">
       <div class="game-card-teams">
         ${logoImg(hm,20)} ${getTeam(hm).short} <span style="font-size:.55rem;font-weight:700;color:var(--muted);background:var(--surface);border:1px solid var(--border2);border-radius:3px;padding:0 3px">H</span>
         <span style="color:var(--muted);font-size:.7rem;font-weight:400">vs</span>
@@ -1735,13 +1736,10 @@ function buildCommitCard(bet, idx, prefix, isCancelled=false) {
       </div>
       <div class="game-card-decision">
         <span class="game-card-badge ${badgeClass}">${badgeText}</span>
-        <span class="gc-toggle" style="font-size:.65rem;color:var(--muted);margin-left:4px">▼</span>
       </div>
     </div>
     ${chipsHtml?`<div class="game-card-chips">${chipsHtml}</div>`:''}
-    <div class="game-card-body" id="${cardId}">
-      ${anchors}${cancelReason}
-    </div>
+    ${anchors}${cancelReason}
   </div>`;
 }
 
@@ -1787,7 +1785,8 @@ function renderScoutTab(){
     rejected: rejGames,
     report:   (ST.scout_report_data&&ST.scout_report_data.report)||'',
     odds_source: ST.scout_odds_source||'',
-    cost_usd: 0,
+    cost_usd:   (ST.scout_report_data&&ST.scout_report_data.cost_usd)||0,
+    tokens_out: (ST.scout_report_data&&ST.scout_report_data.tokens_out)||0,
     injuries_source: ST.injuries_source||'',
     updated_at: scoutUpdated,
   } : null;
