@@ -24,7 +24,7 @@ import logging
 from datetime import datetime, date, timezone
 
 from core.llm import call_llm, call_llm_full, call_llm_full, extract_tag, agent_model_name
-from core.espn import fetch_standings, fetch_injuries, fetch_advanced_stats, fetch_franchise_player_statuses
+from core.espn import fetch_standings, fetch_injuries, fetch_advanced_stats, fetch_franchise_player_statuses, fetch_netrtg_l15
 
 log = logging.getLogger(__name__)
 
@@ -161,13 +161,172 @@ def _perf_summary(state: dict) -> str:
     return "\n".join(lines)
 
 
+# ── Performance stats (pre-computed — no LLM arithmetic) ──────────────────────
+
+def _compute_performance_stats(state: dict, history: dict) -> dict:
+    """
+    Compute dimensional performance stats from all settled bets.
+    Python does the math — LLM only interprets.
+    """
+    settled = state.get("settled_bets", [])
+    # Deduplicate by bet ID, keep only fully settled bets
+    seen: set[str] = set()
+    bets: list[dict] = []
+    for b in settled:
+        bid = b.get("id", "")
+        if bid and bid not in seen and b.get("result") in ("WON", "LOST"):
+            seen.add(bid)
+            bets.append(b)
+
+    total = len(bets)
+    if total == 0:
+        return {"total": 0}
+
+    wins   = sum(1 for b in bets if b["result"] == "WON")
+    losses = total - wins
+    total_pnl  = sum(b.get("pnl", 0) or 0 for b in bets)
+    avg_odds   = sum(float(b.get("odds", 0) or 0) for b in bets) / total
+    avg_conf   = sum(float(b.get("confidence", 0) or 0) for b in bets) / total
+
+    def _breakdown(key_fn: callable, cats: list[str]) -> dict:
+        out = {}
+        for cat in cats:
+            group = [b for b in bets if key_fn(b) == cat]
+            if not group:
+                continue
+            w   = sum(1 for b in group if b["result"] == "WON")
+            pnl = sum(b.get("pnl", 0) or 0 for b in group)
+            out[cat] = {
+                "n": len(group), "w": w, "l": len(group) - w,
+                "wr": round(w / len(group) * 100, 1),
+                "pnl": round(pnl, 2),
+            }
+        return out
+
+    def _market(b: dict) -> str:
+        mt = (b.get("market_type") or "").lower()
+        if mt in ("ml", "moneyline"):   return "ml"
+        if mt in ("spread", "ats"):     return "spread"
+        if mt in ("total", "ou"):       return "total"
+        # infer from pick string
+        pick = (b.get("pick") or "").lower()
+        if "over " in pick or "under " in pick: return "total"
+        import re
+        if re.search(r'[+-]\d+\.?\d*\s*$', pick): return "spread"
+        return "ml"
+
+    def _tier(b: dict) -> str:
+        c = float(b.get("confidence", 0) or 0)
+        if c >= 70: return "high"
+        if c >= 55: return "medium"
+        return "speculative"
+
+    def _odds_range(b: dict) -> str:
+        o = float(b.get("odds", 0) or 0)
+        if o < 1.90: return "1.70-1.89"
+        if o < 2.10: return "1.90-2.09"
+        return "2.10-2.50"
+
+    recent = sorted(bets, key=lambda b: b.get("settled_at") or "", reverse=True)[:20]
+    r_wins = sum(1 for b in recent if b["result"] == "WON")
+    r_pnl  = sum(b.get("pnl", 0) or 0 for b in recent)
+
+    return {
+        "total":          total,
+        "wins":           wins,
+        "losses":         losses,
+        "win_rate":       round(wins / total * 100, 1),
+        "total_pnl":      round(total_pnl, 2),
+        "avg_odds":       round(avg_odds, 2),
+        "avg_confidence": round(avg_conf, 1),
+        "by_market":      _breakdown(_market,     ["ml", "spread", "total"]),
+        "by_confidence":  _breakdown(_tier,       ["high", "medium", "speculative"]),
+        "by_odds_range":  _breakdown(_odds_range, ["1.70-1.89", "1.90-2.09", "2.10-2.50"]),
+        "recent": {
+            "n":       len(recent),
+            "wins":    r_wins,
+            "losses":  len(recent) - r_wins,
+            "win_rate": round(r_wins / len(recent) * 100, 1) if recent else 0,
+            "pnl":     round(r_pnl, 2),
+        },
+    }
+
+
+def _format_stats_block(stats: dict, milestone_type: str, total_settled: int) -> str:
+    """Format computed stats into a clean text block for the LLM prompt."""
+    if stats.get("total", 0) == 0:
+        return "No settled bets yet — statistical analysis not available."
+
+    lines = [f"ALL-TIME: {stats['wins']}W / {stats['losses']}L | "
+             f"Win rate: {stats['win_rate']}% | P&L: €{stats['total_pnl']:+.2f} | "
+             f"Avg odds: {stats['avg_odds']} | Avg conf: {stats['avg_confidence']}/100"]
+
+    r = stats["recent"]
+    if r["n"]:
+        lines.append(f"RECENT {r['n']}: {r['wins']}W / {r['losses']}L | "
+                     f"{r['win_rate']}% WR | P&L: €{r['pnl']:+.2f}")
+
+    bm = stats.get("by_market", {})
+    if bm:
+        lines.append("By market:      " + "  |  ".join(
+            f"{k.upper()} {v['n']}bets {v['w']}W/{v['l']}L {v['wr']}% €{v['pnl']:+.2f}"
+            for k, v in bm.items()
+        ))
+
+    bc = stats.get("by_confidence", {})
+    if bc:
+        lines.append("By confidence:  " + "  |  ".join(
+            f"{k.capitalize()} {v['n']}bets {v['w']}W/{v['l']}L {v['wr']}% €{v['pnl']:+.2f}"
+            for k, v in bc.items()
+        ))
+
+    bo = stats.get("by_odds_range", {})
+    if bo:
+        lines.append("By odds range:  " + "  |  ".join(
+            f"{k} {v['n']}bets {v['w']}W/{v['l']}L {v['wr']}% €{v['pnl']:+.2f}"
+            for k, v in bo.items()
+        ))
+
+    if milestone_type == "milestone":
+        lines.append(f"\n[MILESTONE — {total_settled} bets reached. "
+                     f"Systematic review required. Confidence gate 0.85 for any strategic changes "
+                     f"(ev_requirement, confidence_staking, b2b_rules, odds_targets). "
+                     f"Cite specific stat rows as evidence for every patch.]")
+    elif milestone_type == "checkpoint":
+        lines.append(f"\n[CHECKPOINT — {total_settled} bets (25-bet read zone). "
+                     f"Analysis only — no strategic patches unless win_rate < 25%.]")
+
+    return "\n".join(lines)
+
+
+def _detect_milestone(state: dict) -> tuple[str, int, int]:
+    """
+    Returns (milestone_type, milestone_n, total_settled).
+    milestone_type: "milestone" | "checkpoint" | ""
+    """
+    settled       = state.get("settled_bets", [])
+    total         = sum(1 for b in settled if b.get("result") in ("WON", "LOST"))
+    last_milestone = int(state.get("analyst_last_milestone", 0))
+
+    if total >= 50:
+        current = (total // 50) * 50
+        if current > last_milestone:
+            return "milestone", current, total
+
+    if 25 <= total < 50 and not state.get("analyst_checkpoint_done"):
+        return "checkpoint", 25, total
+
+    return "", 0, total
+
+
 # ── LLM prompt ────────────────────────────────────────────────────────────────
 
 ANALYST_SYSTEM = "You are the Analyst agent for Tobias. Follow your rules file exactly."
 # Full instructions loaded from skills/analyst_rules.md at runtime
 
 
-def _build_analyst_prompt(perf: str, standings_text: str,
+def _build_analyst_prompt(stats_block: str, milestone_instructions: str,
+                           standings_text: str,
                            injuries_text: str, advanced_stats: str,
                            franchise_status: str,
                            scout_content: str, commit_content: str,
@@ -177,8 +336,9 @@ def _build_analyst_prompt(perf: str, standings_text: str,
 
 ---
 
-## PERFORMANCE REVIEW
-{perf}
+## PERFORMANCE STATS (pre-computed — trust these numbers)
+{stats_block}
+{milestone_instructions}
 
 ## CURRENT NBA STANDINGS (top/bottom relevant teams)
 {standings_text}
@@ -230,6 +390,15 @@ If settled bets exist: for each losing pattern (3+ losses on same signal type), 
 governed those picks and propose a targeted tightening. Be specific — cite the losing picks.
 If no settled bets: focus only on factual data updates (tanking_teams, franchise_player_rules).
 Never patch strategic sections (ev_requirement, confidence_staking, b2b_rules) without performance evidence.
+
+## STATISTICAL EVIDENCE STANDARD
+Use the pre-computed PERFORMANCE STATS above when referencing numbers — do not estimate.
+- Daily light pass: patch only if a clear recent pattern (last 10-20 bets) supports it (confidence >= 0.70)
+- Milestone run (flagged above): full systematic review across all dimensions required.
+  confidence gate raises to 0.85 for any strategic section. Every patch must cite a specific stat row.
+  Add a milestone summary to analyst_notes: which signals are working, which aren't, what changed.
+- Checkpoint run (flagged above): read-only. Only patch tanking_teams and franchise_player_rules.
+  Note patterns in analyst_notes for future reference. Do NOT touch strategic sections.
 
 Output ONLY valid JSON in this exact structure:
 
@@ -385,7 +554,6 @@ def run(store) -> None:
     franchise_statuses = fetch_franchise_player_statuses(franchise_teams, injuries)
     franchise_str = _franchise_status_text(franchise_statuses)
 
-    perf           = _perf_summary(state)
     standings_str  = _standings_text(standings)
     injuries_str   = _injuries_text(injuries)
     adv_str        = _advanced_stats_text(adv_stats)
@@ -403,10 +571,26 @@ def run(store) -> None:
     scout_ver  = int(scout_meta.get("version", 1))
     commit_ver = int(commit_meta.get("version", 1))
 
+    # ── 4b. Milestone detection + performance stats ───────────────────────────
+    milestone_type, milestone_n, total_settled = _detect_milestone(state)
+    perf_stats  = _compute_performance_stats(state, history)
+    stats_block = _format_stats_block(perf_stats, milestone_type, total_settled)
+
+    if milestone_type == "milestone":
+        log.info(f"Analyst: MILESTONE run at {total_settled} settled bets (milestone={milestone_n})")
+        milestone_instructions = ""          # already embedded in stats_block flag line
+    elif milestone_type == "checkpoint":
+        log.info(f"Analyst: CHECKPOINT run at {total_settled} settled bets (25-bet zone)")
+        milestone_instructions = ""
+    else:
+        log.info(f"Analyst: daily run — {total_settled} settled bets")
+        milestone_instructions = ""
+
     # ── 5. Call LLM ───────────────────────────────────────────────────────────
     log.info("Analyst: calling LLM for skills review…")
     system = ANALYST_SYSTEM
-    user   = _build_analyst_prompt(perf, standings_str, injuries_str,
+    user   = _build_analyst_prompt(stats_block, milestone_instructions,
+                                    standings_str, injuries_str,
                                     adv_str, franchise_str, scout_content,
                                     commit_content, analyst_rules)
     state["agent_models"] = state.get("agent_models", {})
@@ -476,16 +660,28 @@ def run(store) -> None:
             commit_changed = True
 
     # ── 8. Write analyst_notes.md ─────────────────────────────────────────────
+    # Persist milestone so it doesn't retrigger tomorrow
+    if milestone_type == "milestone":
+        state["analyst_last_milestone"] = milestone_n
+        log.info(f"Analyst: milestone {milestone_n} recorded in state")
+    elif milestone_type == "checkpoint":
+        state["analyst_checkpoint_done"] = True
+        log.info("Analyst: 25-bet checkpoint recorded in state")
+
     notes_content = f"""---
 date: {today}
 llm: {llm}
 scout_patches: {len(scout_applied)}
 commit_patches: {len(commit_applied)}
+milestone: {milestone_type or "daily"} ({total_settled} bets)
 ---
 
 ## Today's Analysis — {today}
 
 {analyst_notes}
+
+## Performance Stats
+{stats_block}
 
 {"## No changes this run" + chr(10) + no_change if no_change and not scout_applied and not commit_applied else ""}
 
@@ -514,6 +710,9 @@ commit_patches: {len(commit_applied)}
                   intelligence_gaps=intelligence_gaps,
                   bankroll=state["bankroll"],
                   net_pnl=state.get("net_pnl", 0),
+                  milestone_type=milestone_type or "daily",
+                  total_settled=total_settled,
+                  perf_stats=perf_stats,
                   llm_meta=llm_result.to_audit_dict())
     store.write_data_js(state, history, config=store.read_config())
 
@@ -527,6 +726,8 @@ def _append_audit(store, ts: str, llm: str, error: str = "",
                   notes: str = "", no_change: str = "",
                   intelligence_gaps: list = None,
                   bankroll: float = 0, net_pnl: float = 0,
+                  milestone_type: str = "daily", total_settled: int = 0,
+                  perf_stats: dict = None,
                   llm_meta: dict = None):
     entry = {
         "ts":               ts,
@@ -535,6 +736,9 @@ def _append_audit(store, ts: str, llm: str, error: str = "",
         "error":            error,
         "bankroll":         round(bankroll, 2),
         "net_pnl":          round(net_pnl, 2),
+        "milestone_type":   milestone_type,
+        "total_settled":    total_settled,
+        "perf_stats":       perf_stats or {},
         "scout_patches":    scout_patches or [],
         "commit_patches":   commit_patches or [],
         "notes":            notes,
