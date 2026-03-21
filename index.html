@@ -433,33 +433,6 @@
     <div class="score-card sc-cyan"><div class="score-label">⏳ Placed</div><div class="score-value" id="statPending" style="color:var(--cyan)">-</div><div class="score-sub" id="statPendingSub">-</div></div>
     <div class="score-card"><div class="score-label">📊 Total Staked</div><div class="score-value" id="statStaked">-</div><div class="score-sub" id="statROI">ROI: -</div></div>
   </div>
-  <div class="agents-row">
-    <div class="agent-card">
-      <div class="agent-card-header"><span class="agent-name">🧠 Analyst</span><span class="agent-pill done" id="analystPill"><span class="agent-dot done" id="analystDot"></span><span id="analystStatus">offline</span></span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Model</span><span class="agent-meta-val" id="analystLlm">-</span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Last run</span><span class="agent-meta-val" id="analystLastRun">-</span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Next run</span><span class="agent-meta-val" id="analystNextRun">-</span></div>
-    </div>
-    <div class="agent-card">
-      <div class="agent-card-header"><span class="agent-name">🔍 Scout</span><span class="agent-pill pending" id="scoutPill"><span class="agent-dot pending" id="scoutDot"></span><span id="scoutStatus">offline</span></span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Model</span><span class="agent-meta-val" id="scoutLlm">-</span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Last run</span><span class="agent-meta-val" id="scoutTime">-</span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Next run</span><span class="agent-meta-val" id="scoutNextRun">-</span></div>
-    </div>
-    <div class="agent-card">
-      <div class="agent-card-header"><span class="agent-name">🎯 Commit</span><span class="agent-pill pending" id="commitPill"><span class="agent-dot pending" id="commitDot"></span><span id="commitStatus">offline</span></span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Model</span><span class="agent-meta-val" id="commitLlm">-</span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Last run</span><span class="agent-meta-val" id="commitTime">-</span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">First game</span><span class="agent-meta-val" id="firstGameTime">-</span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Commit at</span><span class="agent-meta-val" id="commitAtTime" style="color:var(--burg);font-weight:700">-</span></div>
-    </div>
-    <div class="agent-card">
-      <div class="agent-card-header"><span class="agent-name">✅ Setter</span><span class="agent-pill done" id="settlerPill"><span class="agent-dot done"></span><span>Daily</span></span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Model</span><span class="agent-meta-val" id="settlerLlm">-</span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Last run</span><span class="agent-meta-val" id="settlerLastRun">-</span></div>
-      <div class="agent-meta-row"><span class="agent-meta-label">Next run</span><span class="agent-meta-val" id="settlerNextRun">-</span></div>
-    </div>
-  </div>
   <div class="report-nav-bar" id="reportNavBar" style="display:none;margin:0 32px 4px;display:flex;gap:8px;flex-wrap:wrap"></div>
   <div class="chart-section">
     <div class="section-header"><div class="section-title">BANKROLL <span>OVER TIME</span></div><div style="font-size:.7rem;color:var(--muted)" id="chartLabel"></div></div>
@@ -564,48 +537,77 @@
       <div style="font-size:.72rem;color:var(--muted);margin-bottom:16px">Choose a model per agent. Save writes to <code>data/config.json</code> in the repo - agents read it on their next run. Requires your GitHub PAT.</div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:16px">
         <div class="agent-model-card">
-          <div class="amc-label">🧠 Analyst <span class="amc-sub">11:00 UTC daily</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+            <div class="amc-label" style="margin-bottom:0">🧠 Analyst <span class="amc-sub">11:00 UTC daily</span></div>
+            <span class="agent-pill done" id="analystPill"><span class="agent-dot done" id="analystDot"></span><span id="analystStatus">-</span></span>
+          </div>
           <select class="amc-select" id="sel-analyst">
             <option value="claude-opus-4-6">Opus 4.6 (best reasoning)</option>
             <option value="claude-sonnet-4-6" selected>Sonnet 4.6 (default)</option>
             <option value="claude-haiku-4-5-20251001">Haiku 4.5 (cheapest)</option>
             <option value="gemini-3.1-flash-lite-preview">Gemini Flash (free)</option>
           </select>
+          <div style="display:flex;gap:10px;font-size:.62rem;color:var(--muted);margin:5px 0 3px">
+            <span>Last: <strong id="analystLastRun">-</strong></span>
+            <span>Next: <strong id="analystNextRun">-</strong></span>
+          </div>
           <div class="amc-cost" id="cost-analyst">-</div>
-          <div class="amc-rec">💡 Opus recommended - runs once/day</div>
+          <div class="amc-rec">Opus recommended - runs once/day</div>
         </div>
         <div class="agent-model-card">
-          <div class="amc-label">🔍 Scout <span class="amc-sub">14:00 UTC daily</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+            <div class="amc-label" style="margin-bottom:0">🔍 Scout <span class="amc-sub">14:00 UTC daily</span></div>
+            <span class="agent-pill pending" id="scoutPill"><span class="agent-dot pending" id="scoutDot"></span><span id="scoutStatus">-</span></span>
+          </div>
           <select class="amc-select" id="sel-scout">
             <option value="claude-opus-4-6">Opus 4.6 (best reasoning)</option>
             <option value="claude-sonnet-4-6" selected>Sonnet 4.6 (default)</option>
             <option value="claude-haiku-4-5-20251001">Haiku 4.5 (cheapest)</option>
             <option value="gemini-3.1-flash-lite-preview">Gemini Flash (free)</option>
           </select>
+          <div style="display:flex;gap:10px;font-size:.62rem;color:var(--muted);margin:5px 0 3px">
+            <span>Last: <strong id="scoutTime">-</strong></span>
+            <span>Next: <strong id="scoutNextRun">-</strong></span>
+          </div>
           <div class="amc-cost" id="cost-scout">-</div>
-          <div class="amc-rec">💡 Sonnet recommended</div>
+          <div class="amc-rec">Sonnet recommended</div>
         </div>
         <div class="agent-model-card">
-          <div class="amc-label">🎯 Commit <span class="amc-sub">15min before tip-off</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+            <div class="amc-label" style="margin-bottom:0">🎯 Commit <span class="amc-sub">15min before tip-off</span></div>
+            <span class="agent-pill pending" id="commitPill"><span class="agent-dot pending" id="commitDot"></span><span id="commitStatus">-</span></span>
+          </div>
           <select class="amc-select" id="sel-commit">
             <option value="claude-opus-4-6">Opus 4.6 (best reasoning)</option>
             <option value="claude-sonnet-4-6" selected>Sonnet 4.6 (default)</option>
             <option value="claude-haiku-4-5-20251001">Haiku 4.5 (cheapest)</option>
             <option value="gemini-3.1-flash-lite-preview">Gemini Flash (free)</option>
           </select>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;font-size:.62rem;color:var(--muted);margin:5px 0 3px">
+            <span>Last: <strong id="commitTime">-</strong></span>
+            <span>First game: <strong id="firstGameTime">-</strong></span>
+            <span>Commit at: <strong id="commitAtTime" style="color:var(--burg)">-</strong></span>
+          </div>
           <div class="amc-cost" id="cost-commit">-</div>
-          <div class="amc-rec">💡 Sonnet recommended</div>
+          <div class="amc-rec">Sonnet recommended</div>
         </div>
         <div class="agent-model-card">
-          <div class="amc-label">✅ Setter <span class="amc-sub">10:00 UTC daily</span></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
+            <div class="amc-label" style="margin-bottom:0">✅ Settler <span class="amc-sub">10:00 UTC daily</span></div>
+            <span class="agent-pill done" id="settlerPill"><span class="agent-dot done" id="settlerDot"></span><span id="settlerStatus">-</span></span>
+          </div>
           <select class="amc-select" id="sel-settler">
             <option value="claude-opus-4-6">Opus 4.6 (best reasoning)</option>
             <option value="claude-sonnet-4-6" selected>Sonnet 4.6 (default)</option>
             <option value="claude-haiku-4-5-20251001">Haiku 4.5 (cheapest)</option>
             <option value="gemini-3.1-flash-lite-preview">Gemini Flash (free)</option>
           </select>
+          <div style="display:flex;gap:10px;font-size:.62rem;color:var(--muted);margin:5px 0 3px">
+            <span>Last: <strong id="settlerLastRun">-</strong></span>
+            <span>Next: <strong id="settlerNextRun">-</strong></span>
+          </div>
           <div class="amc-cost" id="cost-settler">-</div>
-          <div class="amc-rec">💡 Haiku fine - minimal LLM use</div>
+          <div class="amc-rec">Haiku fine - minimal LLM use</div>
         </div>
       </div>
       <div class="pat-save-box">
@@ -958,10 +960,10 @@ function renderAgents(){
   setPill('commitPill','commitDot', cmSt==='done'?'done':cmSt==='error'?'error':'pending', cmSt==='done'?'done':cmSt==='error'?'error':'offline');
 
   // Set model labels
-  document.getElementById('analystLlm').textContent  = modelLabel(analystM);
-  document.getElementById('scoutLlm').textContent    = modelLabel(scoutM);
-  document.getElementById('commitLlm').textContent   = modelLabel(commitM);
-  document.getElementById('settlerLlm').textContent  = modelLabel(settlerM);
+  const elAL=document.getElementById('analystLlm');  if(elAL) elAL.textContent=modelLabel(analystM);
+  const elSL=document.getElementById('scoutLlm');    if(elSL) elSL.textContent=modelLabel(scoutM);
+  const elCL=document.getElementById('commitLlm');   if(elCL) elCL.textContent=modelLabel(commitM);
+  const elSeLlm=document.getElementById('settlerLlm');if(elSeLlm) elSeLlm.textContent=modelLabel(settlerM);
 
   // Last run times
   const su = typeof SCOUT_UPDATED_AT!=='undefined'?SCOUT_UPDATED_AT:'';
@@ -1548,6 +1550,8 @@ function renderSettings(){
   if (bustEl) bustEl.textContent = (ST.bankroll_initial||1000).toLocaleString('pt-PT');
   // Render skills viewer
   renderSkillsViewer();
+  // Populate agent status pills and run times
+  try{renderAgents();}catch(e){}
 }
 
 async function saveConfig(){
