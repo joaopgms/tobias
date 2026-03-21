@@ -135,7 +135,7 @@
     .game-card-time{font-size:.65rem;color:var(--muted);font-weight:500}
 
     /* Report summary box */
-    .report-summary-box{background:#ffffff;border:1px solid var(--border);border-radius:var(--r-sm);padding:14px 16px;margin-bottom:16px;font-size:.76rem;line-height:1.65;color:var(--text)}
+    .report-summary-box{background:#ffffff;border:1px solid var(--border);border-radius:var(--r-sm);padding:14px 16px;margin-bottom:16px;font-size:.76rem;line-height:1.65;color:var(--text);overflow-wrap:break-word;word-break:break-word}
     .report-summary-box strong{color:var(--text)}
 
     /* Report history rows */
@@ -1695,7 +1695,6 @@ function buildCommitCard(bet, idx, prefix, isCancelled=false) {
 
   const anchors=!isCancelled&&(bet.anchor_players||[]).length?
     `<div style="font-size:.68rem;color:var(--teal);margin-top:6px">⚓ ${(bet.anchor_players||[]).join(', ')}</div>`:'';
-  const reasoning=bet.reasoning?`<div class="game-card-reasoning">${bet.reasoning}</div>`:'';
   const cancelReason=isCancelled&&bet.reason?`<div class="report-cancelled-reason">${bet.reason}</div>`:'';
 
   return `<div class="game-card ${cardClass}">
@@ -1713,7 +1712,7 @@ function buildCommitCard(bet, idx, prefix, isCancelled=false) {
     </div>
     ${chipsHtml?`<div class="game-card-chips">${chipsHtml}</div>`:''}
     <div class="game-card-body" id="${cardId}">
-      ${anchors}${reasoning}${cancelReason}
+      ${anchors}${cancelReason}
     </div>
   </div>`;
 }
@@ -1758,7 +1757,7 @@ function renderScoutTab(){
     date:     today,
     picks:    draftPicks,
     rejected: rejGames,
-    report:   ST.last_report||'',
+    report:   (ST.scout_report_data&&ST.scout_report_data.report)||'',
     odds_source: ST.scout_odds_source||'',
     cost_usd: 0,
     injuries_source: ST.injuries_source||'',

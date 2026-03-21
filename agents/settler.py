@@ -184,7 +184,7 @@ def run(store) -> None:
     for d_str in dates_needed:
         try:
             d_obj = date.fromisoformat(f"{d_str[:4]}-{d_str[4:6]}-{d_str[6:8]}")
-            if d_obj < today:             # only settle past games
+            if d_obj <= today:            # settle past AND same-day games (post-midnight commits)
                 scores_by_date[d_str] = fetch_final_scores(d_obj)
             else:
                 log.info(f"  Skipping {d_str} — today's games not final yet")

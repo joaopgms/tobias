@@ -321,9 +321,10 @@ def run(store, force: bool = False) -> None:
         return
 
     # ── 7. Extract tags ────────────────────────────────────────────────────────
-    bets_raw      = extract_tag(raw, "committed_bets")
-    cancelled_raw = extract_tag(raw, "cancelled_picks") or "[]"
-    report_raw    = extract_tag(raw, "commit_report") or ""
+    bets_raw            = extract_tag(raw, "committed_bets")
+    cancelled_raw       = extract_tag(raw, "cancelled_picks") or "[]"
+    late_rejections_raw = extract_tag(raw, "late_scout_rejections") or "[]"
+    report_raw          = extract_tag(raw, "commit_report") or ""
 
     if bets_raw is None:
         log.error("Commit: <committed_bets> tag missing")
