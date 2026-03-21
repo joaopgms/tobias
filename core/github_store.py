@@ -113,7 +113,7 @@ class GitHubStore:
                 "analyst_model": "claude-sonnet-4-6",
                 "scout_model":   "claude-sonnet-4-6",
                 "commit_model":  "claude-sonnet-4-6",
-                "settler_model": "claude-sonnet-4-6",
+                "settler_model": "claude-haiku-4-5-20251001",
                 "llm_provider":  "claude",
             }
 

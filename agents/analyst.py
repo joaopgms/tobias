@@ -484,7 +484,7 @@ def _advanced_stats_text(stats: dict) -> str:
         lines.append(
             f"{team}: {s['off_rtg']} / {s['def_rtg']} / {s['net_rtg']:+.1f} / {s['pace']}"
         )
-    return "\n".join(lines[:30])
+    return "\n".join(lines[:20])
 
 
 def _standings_text(standings: dict) -> str:
@@ -504,7 +504,7 @@ def _standings_text(standings: dict) -> str:
 
     rows.sort(key=lambda x: -x[0])
     lines = []
-    for w, l, name, s in rows[:30]:
+    for w, l, name, s in rows[:20]:
         streak = s.get("streak", "")
         l10    = s.get("l10", "")
         lines.append(f"{name}: {w}-{l}  L10:{l10}  streak:{streak}")

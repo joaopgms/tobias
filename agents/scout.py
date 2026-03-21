@@ -158,7 +158,7 @@ def _injuries_text(injuries: dict) -> str:
     return "\n".join(lines[:30]) if lines else "No notable injuries."
 
 
-def _standings_text(standings: dict) -> str:
+def _standings_text(standings: dict, tonight_teams: list | None = None) -> str:
     seen = set()
     rows = []
     for name, s in standings.items():
@@ -167,10 +167,14 @@ def _standings_text(standings: dict) -> str:
         seen.add(name)
         rows.append((int(s.get("wins", 0)), int(s.get("losses", 0)), name, s))
     rows.sort(key=lambda x: -x[0])
+    all_names = [r[2] for r in rows]
+    # Include: tonight's teams + top-5 + bottom-5 for conf context
+    include = set(tonight_teams or []) | set(all_names[:5]) | set(all_names[-5:])
     lines = []
-    for w, l, name, s in rows[:30]:
-        l10 = s.get("l10", "")
-        lines.append(f"{name}: {w}-{l}  L10:{l10}")
+    for w, l, name, s in rows:
+        if name in include:
+            l10 = s.get("l10", "")
+            lines.append(f"{name}: {w}-{l}  L10:{l10}")
     return "\n".join(lines)
 
 
@@ -248,7 +252,8 @@ def run(store) -> None:
         injuries_str = _fmt_official(injuries, tonight_teams=tonight_teams)
     else:
         injuries_str = _injuries_text(injuries)
-    standings_str = _standings_text(standings)
+    tonight_teams = [g["home"] for g in games] + [g["away"] for g in games]
+    standings_str = _standings_text(standings, tonight_teams=tonight_teams)
 
     adv_str       = format_advanced_stats_for_prompt(adv_stats, games)
     adv_available = bool(adv_stats)
@@ -391,6 +396,13 @@ def run(store) -> None:
 
     # ── 11. Update state ──────────────────────────────────────────────────────
     state["draft_picks"]      = draft_picks
+    # Cache pre-formatted context for Commit — avoids re-fetching static data 2-3h later
+    state["cached_context"] = {
+        "cached_at":    today,
+        "games_str":    games_str,
+        "standings_str": standings_str,
+        "adv_str":      adv_str,
+    }
     state["agent_models"] = state.get("agent_models", {})
     state["agent_models"]["scout"] = llm
     state["scout_odds_source"]= odds[0].get("odds_source", "none") if odds else "none"

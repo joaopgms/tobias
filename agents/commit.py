@@ -59,8 +59,8 @@ def _build_commit_prompt(skills: str, draft_picks: list, rejected_games: list,
     bankroll = state["bankroll"]
     now_iso  = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
-    picks_json     = json.dumps(draft_picks, indent=2)
-    rejected_json  = json.dumps(rejected_games, indent=2) if rejected_games else "[]"
+    picks_json     = json.dumps(draft_picks, separators=(',', ':'))
+    rejected_json  = json.dumps(rejected_games, separators=(',', ':')) if rejected_games else "[]"
 
     return f"""## YOUR SKILLS (follow these criteria exactly)
 {skills}
@@ -273,10 +273,22 @@ def run(store, force: bool = False) -> None:
     else:
         injuries_str = _injuries_text({t: p for t, p in injuries.items() if t in tonight_teams})
 
-    # ── 6. Call LLM ───────────────────────────────────────────────────────────
-    # Build full tonight slate text for LLM context
-    games_str = _games_text(scoreboard)
-    # NetRtg L15 — read from state (Analyst/Scout already fetched it today)
+    # ── 6. Build context — reuse Scout cache where possible ───────────────────
+    cached = state.get("cached_context", {})
+    cache_fresh = cached.get("cached_at") == today
+
+    if cache_fresh:
+        log.info("Commit: using Scout-cached games/standings/adv_stats (no re-fetch)")
+        games_str     = cached["games_str"]
+        standings_str = cached["standings_str"]
+        adv_str       = cached["adv_str"]
+    else:
+        log.info("Commit: no Scout cache for today — fetching games/standings/adv_stats fresh")
+        games_str     = _games_text(scoreboard)
+        standings_str = _format_standings(fetch_standings())
+        adv_str       = _format_adv_stats(fetch_advanced_stats(), scoreboard)
+
+    # NetRtg L15 — Commit always formats all 30 teams for late scout
     netrtg_l15 = state.get("netrtg_l15") or {}
     if not netrtg_l15:
         log.info("Commit: NetRtg L15 not in state — fetching fresh")
@@ -284,11 +296,6 @@ def run(store, force: bool = False) -> None:
     else:
         log.info(f"Commit: NetRtg L15 loaded from state ({len(netrtg_l15)} teams)")
     netrtg_l15_str = _format_netrtg_l15_commit(netrtg_l15, scoreboard)
-    # Standings and advanced stats — same as Scout for late scout evaluation
-    standings   = fetch_standings()
-    standings_str = _format_standings(standings)
-    adv_stats   = fetch_advanced_stats()
-    adv_str     = _format_adv_stats(adv_stats, scoreboard)
     rejected_games = state.get("rejected_games", [])
     log.info(f"Commit: {len(scoreboard)} games tonight | {len(draft_picks)} draft picks | {len(rejected_games)} rejected | injuries: {injuries_source}")
     log.info(f"Commit: injuries source: {injuries_source} — calling LLM for final decision…")
