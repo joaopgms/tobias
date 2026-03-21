@@ -50,5 +50,59 @@
     "tokens_in": 5054,
     "tokens_out": 4096,
     "cost_usd": 0.076602
+  },
+  {
+    "ts": "2026-03-21T00:04:23.140240+00:00",
+    "date": "2026-03-21",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 1,
+    "cancelled_count": 2,
+    "total_staked": 225.0,
+    "bankroll_before": 900.0,
+    "bankroll_after": 675.0,
+    "bets": [
+      {
+        "id": "nba_bet_20260321_001",
+        "match": "Memphis Grizzlies vs Boston Celtics",
+        "time": "2026-03-21T00:00:00Z",
+        "pick": "Boston Celtics -14.0",
+        "odds": 1.9,
+        "stake": 225,
+        "potential_return": 427.5,
+        "confidence": 80,
+        "reasoning": "Celtics NetRtg +7.9 vs Grizzlies -2.9 = 10.8 pt gap (well above 6.0 threshold). Memphis confirmed tanking team (24-44, L10: 2-8) with catastrophic roster depletion confirmed at commit time: Aldama OUT, Caldwell-Pope OUT, Clarke OUT, Edey OUT, Gibson DOUBTFUL. GG Jackson no longer listed as Doubtful (potentially active), which explains the 1.5-point spread compression from -15.5 to -14.0. Boston (46-23, L10: 7-3) anchor players Tatum, Brown, Holiday all confirmed active — not on injury report. Spread moved from -15.5 to -14.0 (easier to cover, effectively line movement in our favor). Odds moved marginally from 1.91 to 1.90 (-0.01, within 0.05 drift allowance). EV = (0.80 × 1.90) - 1 = 0.52. Confidence unchanged at 80 — Memphis depletion confirmed, Celtics core intact, strong motivation for seeding. Strong edge confirmed at commit time.",
+        "anchor_players": [
+          "Jayson Tatum",
+          "Jaylen Brown",
+          "Jrue Holiday"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null,
+        "committed_at": "2026-03-21T00:04:32Z"
+      }
+    ],
+    "cancelled": [
+      {
+        "id": "nba_draft_20260320_001",
+        "match": "Brooklyn Nets vs New York Knicks",
+        "pick": "New York Knicks -17.5",
+        "reason": "Spread line moved from -17.5 to -11.5 (6-point shift against the pick) — movement exceeds 0.30 threshold with no clear explanation available at commit time. Per rules: cancel if line moved > 0.30 for any reason without explicit justification."
+      },
+      {
+        "id": "nba_draft_20260320_003",
+        "match": "Minnesota Timberwolves vs Portland Trail Blazers",
+        "pick": "Minnesota Timberwolves ML",
+        "reason": "Odds moved against from 2.15 to 1.98 (-0.17). Per movement-against rules, confidence reduced by 10 (55 → 45). Confidence below 50 floor — do not confirm. EV recalculated at adjusted confidence: (0.45 × 1.98) - 1 = -0.109, well below the 0.05 requirement. Additionally, Portland now implied as slight favorite in spread market (-1.5), indicating market has fundamentally repriced this matchup since Scout."
+      }
+    ],
+    "late_rejections": [],
+    "report": "### CONFIRMED — Boston Celtics -14.0\n- Match: Memphis Grizzlies vs Boston Celtics | Tip: 2026-03-21T00:00:00Z\n- Pick: Boston Celtics -14.0 | Scout odds: 1.91 (spread -15.5) | Commit odds: 1.90 (spread -14.0) | Move: -0.01 odds, spread shifted 1.5pts\n- ML: 7.0/1.11 | ATS: -14.0 (1.92/1.90) | O/U: N/A\n- Stake: €225 | Pot: €427.50 | Conf: 80/100 | EV: 0.52\n- Decision: All three anchor players (Tatum, Brown, Holiday) confirmed active per NBA official injury report. Memphis depletion confirmed — Aldama OUT, Caldwell-Pope OUT, Clarke OUT, Edey OUT, Gibson DOUBTFUL. Spread compressed 1.5 points (likely GG Jackson no longer Doubtful, now active), which actually makes the bet easier to cover. Odds moved only -0.01 within drift allowance. EV of 0.52 remains excellent. Strong edge fully intact at commit time.\n\n---\n\n### CANCELLED — New York Knicks -17.5\n- Reason: Spread line moved massively from -17.5 to -11.5 — a 6-point shift against the pick with no available explanation. This far exceeds the 0.30 movement threshold requiring cancellation. The -17.5 line no longer exists in the market.\n- Odds at cancel: 1.87 (was 1.92 at scout time); spread -11.5 (was -17.5)\n\n---\n\n### CANCELLED — Minnesota Timberwolves ML\n- Reason: ML odds moved against from 2.15 to 1.98 (-0.17). Per movement-against rules, confidence reduced by 10 points (55 → 45). Confidence of 45 falls below the 50 minimum floor for any confirmed bet. EV recalculated at adjusted confidence: (0.45 × 1.98) - 1 = -0.109, well below the 0.05 floor. Portland is now priced as a slight spread favorite (-1.5), confirming the market fundamentally repriced this game since Scout.\n- Odds at cancel: 1.98 (was 2.15 at scout time)\n\n---\n\n### LATE SCOUT SUMMARY\nNo new picks added. All games within the valid time window (Clippers @ Dallas 00:30, 76ers @ Utah 01:30, Bucks @ Suns 02:00) either had no valid odds in the feed or all available ML odds fell outside the 1.65–2.50 valid range. The two Scout anomalies (Pistons/Warriors, Nuggets/Raptors) remain unexplained — Detroit's injury report was absent from the feed and Denver's roster situation is unclear, preventing action on either. The Quantity gate (max 1 new pick) was not reached as no pick met all criteria simultaneously.\n\n**Slate summary:** A cautious commit session — only 1 of 3 draft picks confirmed, with the Celtics -14.0 spread representing a genuinely strong edge (EV 0.52, confidence 80) against a depleted Memphis roster. The Knicks spread was cancelled due to an unexplained 6-point line shift, and the Timberwolves ML was cancelled after odds movement dropped adjusted confidence below the actionable threshold. Total committed stake of €225 (25% of bankroll) is well within the 70% exposure cap, preserving €675 for future sessions.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 9027,
+    "tokens_out": 6340,
+    "cost_usd": 0.122181
   }
 ]
