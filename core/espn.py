@@ -500,10 +500,13 @@ def fetch_netrtg_l15() -> dict[str, float]:
                     away_score = int(away.get("score", 0) or 0)
                     if home_score == 0 and away_score == 0:
                         continue
-                    # Determine our team's margin
-                    our_team_id = str(team_id)
-                    home_team_id = str(home.get("id", ""))
-                    if home_team_id == our_team_id:
+                    # Match our team by team_id — ESPN schedule uses numeric id
+                    # Try both direct id match and uid suffix match
+                    h_id  = str(home.get("id",""))
+                    h_uid = str(home.get("uid",""))
+                    our_id = str(team_id)
+                    is_home = (h_id == our_id or h_uid.endswith(f".t.{our_id}"))
+                    if is_home:
                         margin = home_score - away_score
                     else:
                         margin = away_score - home_score

@@ -481,15 +481,19 @@ def run(store, force: bool = False) -> None:
     )
 
 
-def _format_standings(standings: list) -> str:
+def _format_standings(standings) -> str:
+    """standings is a dict {team_name: {wins, losses, streak, last_10, ...}}"""
     if not standings:
         return "Standings unavailable."
     lines = []
-    for t in standings[:30]:
-        rec = f"{t.get('wins',0)}-{t.get('losses',0)}"
-        l10 = t.get("last_10", "")
-        strk = t.get("streak", "")
-        lines.append(f"  {t.get('team','?')}: {rec} | L10: {l10} | Streak: {strk}")
+    # standings is a dict keyed by team name
+    items = standings.items() if isinstance(standings, dict) else [(t.get("team","?"), t) for t in standings]
+    for team_name, t in sorted(items):
+        wins  = t.get("wins", t.get("w", 0))
+        losses= t.get("losses", t.get("l", 0))
+        l10   = t.get("last_10", t.get("l10", ""))
+        strk  = t.get("streak", "")
+        lines.append(f"  {team_name}: {wins}-{losses} | L10: {l10} | Streak: {strk}")
     return "STANDINGS:\n" + "\n".join(lines)
 
 
