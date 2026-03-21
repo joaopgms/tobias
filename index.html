@@ -1693,11 +1693,11 @@ function buildGameCard(game, idx, prefix) {
       </div>
       <div class="game-card-decision">
         <span class="game-card-badge ${badgeClass}">${badgeText}</span>
-        <span class="gc-toggle" style="font-size:.65rem;color:var(--muted);margin-left:4px">▼</span>
+        <span class="gc-toggle" style="font-size:.65rem;color:var(--muted);margin-left:4px">▲</span>
       </div>
     </div>
     ${chipsHtml?`<div class="game-card-chips">${chipsHtml}</div>`:''}
-    <div class="game-card-body" id="${cardId}">
+    <div class="game-card-body open" id="${cardId}">
       ${anchors}${reasoning}${reason}
     </div>
   </div>`;
