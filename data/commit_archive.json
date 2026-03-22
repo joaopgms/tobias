@@ -104,5 +104,64 @@
     "tokens_in": 9027,
     "tokens_out": 6340,
     "cost_usd": 0.122181
+  },
+  {
+    "ts": "2026-03-22T02:27:32.346548+00:00",
+    "date": "2026-03-22",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 0,
+    "cancelled_count": 3,
+    "total_staked": 0.0,
+    "bankroll_before": 675.0,
+    "bankroll_after": 675.0,
+    "bets": [],
+    "cancelled": [
+      {
+        "id": "nba_draft_20260321_001",
+        "match": "Orlando Magic vs Los Angeles Lakers",
+        "pick": "Los Angeles Lakers ML",
+        "reason": "Game tipped off at 23:00 UTC — it is now 02:27 UTC (3h27m past tip). Pre-game bet cannot be placed on a game already in progress. Additionally, this game does not appear in the live odds feed, confirming it is unavailable for betting."
+      },
+      {
+        "id": "nba_draft_20260321_002",
+        "match": "New Orleans Pelicans vs Cleveland Cavaliers",
+        "pick": "Cleveland Cavaliers ML",
+        "reason": "Game tipped off at 23:00 UTC — it is now 02:27 UTC (3h27m past tip). Pre-game bet cannot be placed on a game already in progress. Game not present in live odds feed."
+      },
+      {
+        "id": "nba_draft_20260321_003",
+        "match": "San Antonio Spurs vs Indiana Pacers",
+        "pick": "San Antonio Spurs -19.0",
+        "reason": "Game tipped off at 00:00 UTC — it is now 02:27 UTC (2h27m past tip). Pre-game bet cannot be placed on a game already in progress. Supporting evidence: live odds show the spread has shifted massively to -23.5 (from drafted -19.0), consistent with live in-game odds, not pre-game lines."
+      }
+    ],
+    "late_rejections": [
+      {
+        "match": "Portland Trail Blazers @ Denver Nuggets",
+        "reason": "Game tipped off at 21:00 UTC — 5h27m ago. Time gate fails. Cannot add pre-game pick."
+      },
+      {
+        "match": "Brooklyn Nets @ Sacramento Kings",
+        "reason": "Game tipped off at 22:00 UTC — 4h27m ago. Time gate fails. Cannot add pre-game pick."
+      },
+      {
+        "match": "Washington Wizards @ New York Knicks",
+        "reason": "Game tipped off at 23:30 UTC — 2h57m ago. Time gate fails. Cannot add pre-game pick."
+      },
+      {
+        "match": "Minnesota Timberwolves @ Boston Celtics",
+        "reason": "Game tipped off at 00:00 UTC — 2h27m ago. Time gate fails. Note: Anthony Edwards confirmed OUT (Patellofemoral Pain Syndrome) — would have been a significant signal at Scout time but game is past tip."
+      },
+      {
+        "match": "Toronto Raptors @ Phoenix Suns",
+        "reason": "Game tipped off at 01:00 UTC — 1h27m ago. Time gate fails. Cannot add pre-game pick."
+      }
+    ],
+    "report": "## Commit Report — 2026-03-22T02:27:45Z | Bankroll: €675.00\n\n---\n\n### CRITICAL ISSUE: All Draft Picks Tipped Before Commit Window\n\nThe Commit phase ran at 02:27 UTC. All three draft picks were for games scheduled at 23:00 UTC and 00:00 UTC on 2026-03-21/22 — meaning all games were **2.5 to 3.5 hours past tip-off** by the time this Commit was executed. Pre-game bets cannot be placed on games already in progress.\n\n---\n\n### CANCELLED — Los Angeles Lakers ML\n- **Reason:** Game tipped off at 23:00 UTC. Commit executed at 02:27 UTC — 3h27m past tip. Game unavailable in live odds feed, confirming no pre-game market exists.\n- **Odds at cancel:** N/A (market closed) | Was 2.28 at Scout time\n\n---\n\n### CANCELLED — Cleveland Cavaliers ML\n- **Reason:** Game tipped off at 23:00 UTC. Commit executed at 02:27 UTC — 3h27m past tip. Game unavailable in live odds feed.\n- **Odds at cancel:** N/A (market closed) | Was 2.45 at Scout time\n\n---\n\n### CANCELLED — San Antonio Spurs -19.0\n- **Reason:** Game tipped off at 00:00 UTC. Commit executed at 02:27 UTC — 2h27m past tip. Supporting evidence: live odds feed shows Spurs spread has moved to -23.5 (from Scout's -19.0), a 4.5-point shift consistent with in-game live odds rather than pre-game lines.\n- **Odds at cancel:** Live showing 1.96 at -23.5 (was 1.90 at -19.0 at Scout time — market fundamentally different)\n\n---\n\n### Late Scout Summary\n\nAll five games on tonight's slate (Portland/Denver, Brooklyn/Sacramento, Washington/New York, Minnesota/Boston, Toronto/Phoenix) had already tipped off before the Commit window opened at 02:27 UTC. No pre-game opportunities remain. Notably, Anthony Edwards (MIN franchise player) was confirmed OUT with Patellofemoral Pain Syndrome — this would have been a significant signal for a Celtics spread or ML pick, but the time gate (game started at 00:00 UTC) prevents action.\n\n---\n\n### Final Position\n- **Committed bets:** 0\n- **Total stake deployed:** €0.00\n- **Bankroll remaining:** €675.00 (unchanged)\n\n**Root cause note for Analyst review:** The Scout phase drafted picks at 14:32 UTC for games starting at 23:00–00:00 UTC. The Commit phase executed at 02:27 UTC — well after all games tipped. The simulation workflow needs to ensure the Commit phase runs *before* game tip-off (ideally 30–60 minutes prior). Tonight's entire draft was rendered invalid by the timing gap.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 7158,
+    "tokens_out": 2612,
+    "cost_usd": 0.060654
   }
 ]
