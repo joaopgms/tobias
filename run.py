@@ -69,13 +69,18 @@ def run_commit_if_ready():
     now   = datetime.now(timezone.utc)
     today = now.strftime("%Y-%m-%d")
 
-    # ── DATE-BASED IDEMPOTENCY GUARD (bulletproof) ─────────────────────────
-    # If we already successfully committed today, never re-run regardless of
-    # commit_status — this prevents double-staking if a GitHub write partially
-    # failed and status didn't update cleanly.
-    commit_date = state.get("commit_date", "")
-    if commit_date == today:
-        log.info(f"commit_if_ready: already committed on {today} — skipping")
+    # ── IDEMPOTENCY GUARD ──────────────────────────────────────────────────
+    # Skip only when BOTH conditions are true:
+    # 1. commit_date == today (we ran today)
+    # 2. commit_status == "done" (Scout hasn't reset it for a new slate)
+    # This handles the UTC midnight boundary: commit may run at 00:xx UTC for
+    # the previous night's US games, setting commit_date = today. When Scout
+    # then runs at 14:00 UTC with a fresh slate it resets commit_status to
+    # "pending" — that's the signal to allow commit to run again tonight.
+    commit_date   = state.get("commit_date", "")
+    commit_status = state.get("commit_status", "pending")
+    if commit_date == today and commit_status == "done":
+        log.info(f"commit_if_ready: already committed on {today} and status=done — skipping")
         return
 
     # ── WINDOW GATE ────────────────────────────────────────────────────────
@@ -96,12 +101,8 @@ def run_commit_if_ready():
         log.info(f"commit_if_ready: {remaining}min until window — skipping")
         return
 
-    # ── STATUS GATE (secondary — catches LLM errors that should retry) ─────
-    # Only skip on "done" — "error" or "pending" should retry
-    commit_status = state.get("commit_status", "pending")
+    # ── STATUS GATE ────────────────────────────────────────────────────────
     if commit_status == "done":
-        # Shouldn't reach here normally (commit_date guard above catches it)
-        # but kept as belt-and-suspenders
         log.info("commit_if_ready: status=done — skipping")
         return
 
