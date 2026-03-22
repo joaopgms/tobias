@@ -9,14 +9,14 @@
   "net_pnl": -325.0,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-03-22T10:29:38.757322+00:00",
-  "first_game_time": "2026-03-21T21:00:00Z",
+  "last_updated": "2026-03-22T14:33:47.860787+00:00",
+  "first_game_time": "unknown",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
-  "scout_updated_at": "2026-03-21T14:32:33.844027+00:00",
+  "scout_updated_at": "2026-03-22T14:33:47.860787+00:00",
   "scout_odds_source": "theodds_unibet",
-  "commit_status": "done",
+  "commit_status": "pending",
   "commit_updated_at": "2026-03-22T02:27:32.346548+00:00",
   "commit_date": "2026-03-22",
   "analyst_updated_at": "2026-03-22T14:14:46.407021+00:00",
@@ -27,7 +27,7 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "## Commit Report — 2026-03-22T02:27:45Z | Bankroll: €675.00\n\n---\n\n### CRITICAL ISSUE: All Draft Picks Tipped Before Commit Window\n\nThe Commit phase ran at 02:27 UTC. All three draft picks were for games scheduled at 23:00 UTC and 00:00 UTC on 2026-03-21/22 — meaning all games were **2.5 to 3.5 hours past tip-off** by the time this Commit was executed. Pre-game bets cannot be placed on games already in progress.\n\n---\n\n### CANCELLED — Los Angeles Lakers ML\n- **Reason:** Game tipped off at 23:00 UTC. Commit executed at 02:27 UTC — 3h27m past tip. Game unavailable in live odds feed, confirming no pre-game market exists.\n- **Odds at cancel:** N/A (market closed) | Was 2.28 at Scout time\n\n---\n\n### CANCELLED — Cleveland Cavaliers ML\n- **Reason:** Game tipped off at 23:00 UTC. Commit executed at 02:27 UTC — 3h27m past tip. Game unavailable in live odds feed.\n- **Odds at cancel:** N/A (market closed) | Was 2.45 at Scout time\n\n---\n\n### CANCELLED — San Antonio Spurs -19.0\n- **Reason:** Game tipped off at 00:00 UTC. Commit executed at 02:27 UTC — 2h27m past tip. Supporting evidence: live odds feed shows Spurs spread has moved to -23.5 (from Scout's -19.0), a 4.5-point shift consistent with in-game live odds rather than pre-game lines.\n- **Odds at cancel:** Live showing 1.96 at -23.5 (was 1.90 at -19.0 at Scout time — market fundamentally different)\n\n---\n\n### Late Scout Summary\n\nAll five games on tonight's slate (Portland/Denver, Brooklyn/Sacramento, Washington/New York, Minnesota/Boston, Toronto/Phoenix) had already tipped off before the Commit window opened at 02:27 UTC. No pre-game opportunities remain. Notably, Anthony Edwards (MIN franchise player) was confirmed OUT with Patellofemoral Pain Syndrome — this would have been a significant signal for a Celtics spread or ML pick, but the time gate (game started at 00:00 UTC) prevents action.\n\n---\n\n### Final Position\n- **Committed bets:** 0\n- **Total stake deployed:** €0.00\n- **Bankroll remaining:** €675.00 (unchanged)\n\n**Root cause note for Analyst review:** The Scout phase drafted picks at 14:32 UTC for games starting at 23:00–00:00 UTC. The Commit phase executed at 02:27 UTC — well after all games tipped. The simulation workflow needs to ensure the Commit phase runs *before* game tip-off (ideally 30–60 minutes prior). Tonight's entire draft was rendered invalid by the timing gap.",
+  "last_report": "Unable to retrieve live NBA schedule, odds, or injury data for 2026-03-22 — no external tools or real-time data sources are available in this session. Without verified lines, injury reports, and current form data, no picks can responsibly be drafted per the skills file's requirement to base decisions on concrete, verifiable information. Submitting an empty slate to avoid fabricating picks with fictional odds or outcomes.",
   "draft_picks": [],
   "pending_bets": [],
   "settled_bets": [
@@ -102,69 +102,16 @@
     }
   ],
   "scout_report_data": {
-    "date": "2026-03-21",
-    "updated_at": "2026-03-21T14:32:33.844027+00:00",
-    "picks": [
-      {
-        "id": "nba_draft_20260321_001",
-        "match": "Orlando Magic vs Los Angeles Lakers",
-        "time": "2026-03-21T23:00:00Z",
-        "pick": "Los Angeles Lakers ML",
-        "odds": 2.28,
-        "stake": 101,
-        "potential_return": 230.28,
-        "confidence": 55,
-        "reasoning": "Lakers (45-25, L10 9-1) are a hot team with strong credentials on the road. Key factor: Orlando's franchise player Franz Wagner is confirmed OUT (injury management). Without Wagner, Orlando's offense is significantly diminished. Orlando NetRtg +0.9 vs Lakers +1.4 — essentially equal on season stats, but Orlando without their best player tilts the edge to LA. Austin Reaves is Questionable (hip soreness) which caps confidence — applied -5 for GTD status. L15 unavailable for both teams — applied -5 where decisive. Road game for Lakers factored in. Confidence: 65 (base for Lakers quality/opponent missing franchise player) -5 (Reaves GTD) -5 (L15 missing) = 55. EV = (0.55 × 2.28) - 1 = 0.254 (25.4%). Strong edge. Lakers odds at 2.28 are in target range (1.70-2.50). Stake at 15% tier adjusted -10% for Reaves GTD.",
-        "anchor_players": [
-          "Franz Wagner (OUT — Orlando franchise player, injury management)",
-          "Austin Reaves (Questionable — Lakers, hip soreness)"
-        ],
-        "drafted_at": "2026-03-21T14:32:53Z",
-        "market_type": "ml"
-      },
-      {
-        "id": "nba_draft_20260321_002",
-        "match": "New Orleans Pelicans vs Cleveland Cavaliers",
-        "time": "2026-03-21T23:00:00Z",
-        "pick": "Cleveland Cavaliers ML",
-        "odds": 2.45,
-        "stake": 67,
-        "potential_return": 164.15,
-        "confidence": 53,
-        "reasoning": "Cleveland (43-27, L10 6-4) is a legitimately strong team priced as road underdog at 2.45 against New Orleans (25-46, L10 6-4). NetRtg gap: Cleveland +4.2 vs New Orleans -3.8 = 8.0 point gap — a significant signal. Cleveland's Donovan Mitchell is healthy (not on injury report). Jarrett Allen is OUT (knee) which is a meaningful loss at center but not the franchise player. New Orleans Pelicans are near tank-tier (25-46) with a volatile L10 6-4 that does not override their season trajectory. Pelicans have no major injury news that would boost them. Cleveland is a seeding-motivated team fighting for top-6 East position. Road game and Allen absence each apply -5 confidence. L15 missing but with 8.0 NetRtg gap, it is less decisive — applying reduced -3 penalty. Final: 65 (base) -5 (road) -5 (Allen OUT) -2 (L15 partial) = 53. EV = (0.53 × 2.45) - 1 = 0.299 (29.9%). Strong edge at speculative tier.",
-        "anchor_players": [
-          "Donovan Mitchell (active — Cleveland franchise player)",
-          "Jarrett Allen (OUT — Cleveland, knee tendonitis)"
-        ],
-        "drafted_at": "2026-03-21T14:32:53Z",
-        "market_type": "ml"
-      },
-      {
-        "id": "nba_draft_20260321_003",
-        "match": "San Antonio Spurs vs Indiana Pacers",
-        "time": "2026-03-22T00:00:00Z",
-        "pick": "San Antonio Spurs -19.0",
-        "odds": 1.9,
-        "stake": 101,
-        "potential_return": 191.9,
-        "confidence": 62,
-        "reasoning": "San Antonio Spurs (52-18, L10 9-1, NetRtg +7.2) host a severely depleted Indiana Pacers squad. Indiana's franchise player Tyrese Haliburton is confirmed OUT (ACL tear). Additionally, multiple Pacers starters are Questionable: Nembhard (calf contusion), McConnell (soreness), Nesmith (management), Jackson (calf). Indiana's season NetRtg is -8.9 — one of the worst in the league. NetRtg gap: Spurs +7.2 vs Pacers -8.9 = 16.1 points — an enormous gap that strongly supports the spread. Spurs DefRtg 111.5 is elite; Pacers OffRtg 110.1 is poor. Without Haliburton running the offense, Indiana's attack collapses further. Stephon Castle Questionable (hip tightness) is a minor concern (-3 confidence). Large spread caution (-5 for historical cover rate on 19+ point spreads) applied. Base 68 (elite team vs gutted opponent, massive NetRtg gap) -3 (Castle GTD) -3 (large spread caution) = 62. Spread odds 1.90 in target range (1.80-2.30). EV = (0.62 × 1.90) - 1 = 0.178 (17.8%). Strong edge.",
-        "anchor_players": [
-          "Tyrese Haliburton (OUT — Indiana franchise player, ACL tear)",
-          "Stephon Castle (Questionable — San Antonio, hip tightness)",
-          "Victor Wembanyama (active — Spurs franchise player, not on injury list)"
-        ],
-        "drafted_at": "2026-03-21T14:32:53Z",
-        "market_type": "spread"
-      }
-    ],
+    "date": "2026-03-22",
+    "updated_at": "2026-03-22T14:33:47.860787+00:00",
+    "picks": [],
     "rejected": [],
-    "report": "",
+    "report": "Unable to retrieve live NBA schedule, odds, or injury data for 2026-03-22 — no external tools or real-time data sources are available in this session. Without verified lines, injury reports, and current form data, no picks can responsibly be drafted per the skills file's requirement to base decisions on concrete, verifiable information. Submitting an empty slate to avoid fabricating picks with fictional odds or outcomes.",
     "odds_source": "theodds_unibet",
     "injuries_source": "nba_official",
-    "tokens_in": 8706,
-    "tokens_out": 12000,
-    "cost_usd": 0.206118
+    "tokens_in": 7444,
+    "tokens_out": 6144,
+    "cost_usd": 0.11449200000000001
   },
   "commit_report_data": {
     "date": "2026-03-22",
@@ -197,5 +144,12 @@
     "tokens_in": 7158,
     "tokens_out": 2612,
     "cost_usd": 0.060654
+  },
+  "netrtg_l15": {},
+  "cached_context": {
+    "cached_at": "2026-03-22",
+    "games_str": "Portland Trail Blazers @ Denver Nuggets  |  2026-03-22T21:00 UTC  |  Ball Arena\nBrooklyn Nets @ Sacramento Kings  |  2026-03-22T22:00 UTC  |  Golden 1 Center\nWashington Wizards @ New York Knicks  |  2026-03-22T23:30 UTC  |  Madison Square Garden\nMinnesota Timberwolves @ Boston Celtics  |  2026-03-23T00:00 UTC  |  TD Garden\nToronto Raptors @ Phoenix Suns  |  2026-03-23T01:00 UTC  |  Mortgage Matchup Center",
+    "standings_str": "Oklahoma City Thunder: 56-15  L10:10-0\nSan Antonio Spurs: 53-18  L10:9-1\nDetroit Pistons: 51-19  L10:6-4\nBoston Celtics: 47-23  L10:7-3\nNew York Knicks: 46-25  L10:7-3\nDenver Nuggets: 43-28  L10:6-4\nMinnesota Timberwolves: 43-28  L10:5-5\nToronto Raptors: 39-30  L10:5-5\nPhoenix Suns: 39-32  L10:4-6\nPortland Trail Blazers: 35-36  L10:6-4\nUTAH: 21-50  L10:3-7\nSacramento Kings: 18-53  L10:4-6\nBrooklyn Nets: 17-53  L10:2-8\nWashington Wizards: 16-54  L10:0-10\nIndiana Pacers: 15-56  L10:0-10",
+    "adv_str": "Source: NBA.com Advanced Stats (OffRtg / DefRtg / NetRtg / Pace)\nDenver Nuggets: OffRtg 121.6 | DefRtg 117.3 | NetRtg +4.3 | Pace 0.0\nPortland Trail Blazers: OffRtg 113.9 | DefRtg 115.7 | NetRtg -1.8 | Pace 0.0\nSacramento Kings: OffRtg 110.8 | DefRtg 121.0 | NetRtg -10.2 | Pace 0.0\nBrooklyn Nets: OffRtg 109.3 | DefRtg 118.8 | NetRtg -9.6 | Pace 0.0\nNew York Knicks: OffRtg 119.3 | DefRtg 112.7 | NetRtg +6.6 | Pace 0.0\nWashington Wizards: OffRtg 110.9 | DefRtg 122.1 | NetRtg -11.2 | Pace 0.0\nBoston Celtics: OffRtg 120.5 | DefRtg 112.6 | NetRtg +7.9 | Pace 0.0\nMinnesota Timberwolves: OffRtg 117.4 | DefRtg 113.9 | NetRtg +3.5 | Pace 0.0\nPhoenix Suns: OffRtg 115.2 | DefRtg 114.2 | NetRtg +1.0 | Pace 0.0\nToronto Raptors: OffRtg 115.2 | DefRtg 113.3 | NetRtg +1.9 | Pace 0.0"
   }
 }
