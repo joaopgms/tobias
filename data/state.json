@@ -9,7 +9,7 @@
   "net_pnl": -325.0,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-03-22T02:27:32.346548+00:00",
+  "last_updated": "2026-03-22T10:29:38.757322+00:00",
   "first_game_time": "2026-03-21T21:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
@@ -20,7 +20,7 @@
   "commit_updated_at": "2026-03-22T02:27:32.346548+00:00",
   "commit_date": "2026-03-22",
   "analyst_updated_at": "2026-03-20T11:29:56.651328+00:00",
-  "settler_updated_at": "2026-03-21T11:55:03.085342+00:00",
+  "settler_updated_at": "2026-03-22T10:29:38.757322+00:00",
   "agent_models": {
     "settler": "no-llm",
     "analyst": "claude-sonnet-4-6",
