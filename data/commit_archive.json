@@ -163,5 +163,77 @@
     "tokens_in": 7158,
     "tokens_out": 2612,
     "cost_usd": 0.060654
+  },
+  {
+    "ts": "2026-03-22T20:49:46.301278+00:00",
+    "date": "2026-03-22",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 1,
+    "cancelled_count": 1,
+    "total_staked": 101.25,
+    "bankroll_before": 675.0,
+    "bankroll_after": 573.75,
+    "bets": [
+      {
+        "id": "nba_bet_20260322_001",
+        "match": "Denver Nuggets vs Portland Trail Blazers",
+        "time": "2026-03-22T21:00:00Z",
+        "pick": "Denver Nuggets -9.0",
+        "odds": 1.94,
+        "stake": 101.25,
+        "potential_return": 196.43,
+        "reasoning": "Portland arrives at Ball Arena catastrophically depleted: Damian Lillard (OUT - injury management), Shaedon Sharpe (OUT), Jerami Grant (upgraded from Questionable to OUT per NBA official injury report), and Vit Krejci (upgraded from Questionable to OUT). This is an even stronger edge than Scout projected. Denver (43-28, L10: 6-4) holds NetRtg +4.3 vs Portland -1.8 (gap 6.1 pts, above 4.0 threshold). Jokic active and anchoring Denver's offense. Peyton Watson confirmed active (not on injury report). Portland's offensive identity collapses without Lillard; with Grant also now OUT their veteran leadership and secondary scoring is removed. EV = (0.63 × 1.94) - 1 = 0.222. Odds 1.94 within 1.80-2.30 target. Line moved slightly from -9.0 to -8.5 in current market (0.5pt tightening) but original pick at -9.0 at 1.94 remains valid and edge has strengthened. Confidence held at 63 (Scout's adjusted figure) given L15 unavailability.",
+        "confidence": 63,
+        "anchor_players": [
+          "Damian Lillard (POR – OUT confirmed)",
+          "Shaedon Sharpe (POR – OUT confirmed)",
+          "Jerami Grant (POR – OUT confirmed, upgraded from Questionable)",
+          "Vit Krejci (POR – OUT confirmed, upgraded from Questionable)",
+          "Nikola Jokic (DEN – active)",
+          "Peyton Watson (DEN – active, confirmed off injury report)"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null,
+        "committed_at": "2026-03-22T20:49:54Z"
+      }
+    ],
+    "cancelled": [
+      {
+        "id": "nba_draft_20260322_002",
+        "match": "Boston Celtics vs Minnesota Timberwolves",
+        "pick": "Boston Celtics -10.0",
+        "reason": "Odds moved against at commit time: Scout odds 1.94, current odds 1.88 (delta -0.06). Per line_movement_rules, adverse movement triggers confidence -10 adjustment (60 → 50). EV recalculated at adjusted confidence: (0.50 × 1.88) - 1 = -0.06, which is below the required EV ≥ 0.05 threshold. Cannot confirm."
+      }
+    ],
+    "late_rejections": [
+      {
+        "match": "Sacramento Kings vs Brooklyn Nets",
+        "reason": "Both tank-tier teams. SAC ML 1.37 below 1.65 floor. BKN ML 3.15 above 2.50 ceiling. NetRtg gap only 0.6 pts (below 4.0 threshold). Massive roster depletion on both sides but no reliable edge identified. SAC spread -6.5 at 1.90 is in range but confidence cannot reach 60 with such a minimal NetRtg gap and L15 data unavailable."
+      },
+      {
+        "match": "New York Knicks vs Washington Wizards",
+        "reason": "NYK ML 1.03 and WAS ML 13.0 both outside valid range. NYK spread -21.5 at 1.89 is in odds range but spread size is enormous and confidence cannot reach 60 without L15 data. WAS roster is a skeleton crew but 21.5 point spreads carry high variance and the Scout had already calculated confidence at 57 (below 60 floor). No change in assessment."
+      },
+      {
+        "match": "Phoenix Suns vs Toronto Raptors",
+        "reason": "TOR ML 2.55 exceeds 2.50 ML ceiling — cannot bet. PHX ML 1.53 below 1.65 floor. TOR spread +4.5 at 1.91 is in range, but NetRtg gap is only 0.9 pts (below 4.0 threshold). L15 data unavailable. PHX has significant injuries (Brooks, Allen, Williams, Highsmith OUT) but insufficient NetRtg advantage for TOR to justify ≥60 confidence on spread. Confidence assessed at 58, below 60 gate for new Commit-phase picks."
+      },
+      {
+        "match": "Indiana Pacers vs Orlando Magic",
+        "reason": "Not on tonight's official scheduled slate. No usable odds or data available."
+      },
+      {
+        "match": "Oklahoma City Thunder vs Philadelphia 76ers",
+        "reason": "Not on tonight's official scheduled slate. ML odds (7.0/1.1) appear anomalous and game context unavailable. Cannot evaluate."
+      }
+    ],
+    "report": "### CONFIRMED — Denver Nuggets -9.0\n\n- **Match:** Denver Nuggets vs Portland Trail Blazers | **Tip:** 2026-03-22T21:00Z\n- **Pick:** Denver Nuggets -9.0 spread | **Scout odds:** 1.94 | **Commit odds:** 1.94 | **Move:** 0.00 (spread tightened from -9.0 to -8.5 in current market, but pick at original -9.0 line maintained; odds unchanged)\n- **ML:** 1.30 (DEN) / 3.60 (POR) | **ATS:** -8.5 (1.93 / 1.89) | **O/U:** N/A\n- **Stake:** €101.25 | **Pot:** €196.43 | **Conf:** 63/100 | **EV:** 0.222\n- **Decision:** Confirmed and edge strengthened. Jerami Grant upgraded from Questionable → **OUT** (confirmed NBA official), and Vit Krejci also upgraded from Questionable → **OUT**. Portland is now missing Lillard, Sharpe, Grant, and Krejci. Jokic and Watson both active for Denver. NetRtg gap 6.1 pts above threshold. EV 0.222 is strong.\n\n---\n\n### CANCELLED — Boston Celtics -10.0\n\n- **Reason:** Odds moved adversely at commit time. Current spread odds for Boston -9.5 are 1.88 (vs Scout's 1.94 at -10.0). Delta of -0.06 triggers confidence -10 adjustment per line_movement_rules (above floor but worsened). Adjusted confidence 60 → 50. EV at new parameters: (0.50 × 1.88) - 1 = **-0.06**, below the required ≥ 0.05 threshold. Cannot confirm under current criteria.\n- **Odds at cancel:** 1.88 (was 1.94 at Scout time)\n\n---\n\n### LATE SCOUT SUMMARY\n\nNo new picks added. Five games were evaluated in late scout: SAC/BKN (no edge — tank matchup, minimal NetRtg gap), NYK/WAS (spread too large, confidence below 60 floor), PHX/TOR (TOR ML exceeds 2.50 ceiling; spread confidence assessed at 58, below 60 gate), and two games not on tonight's official slate (IND/ORL, OKC/PHI). The TOR +4.5 spread came closest to qualifying but PHX's NetRtg advantage is minimal (+0.9 pts gap) and L15 data remains unavailable, keeping confidence below the 60 threshold required for new Commit-phase picks.\n\n**Slate Summary:** One bet committed tonight — Denver -9.0 covering a severely depleted Portland team missing four rotation players including Lillard, Sharpe, Grant, and Krejci. Total exposure is €101.25 (15% of €675 bankroll), well within the 70% limit (€472.50). The Boston spread pick was cancelled due to adverse odds movement reducing EV below threshold. Bankroll at risk tonight: €101.25; maximum return: €196.43 (net gain €95.18 if successful).",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 6040,
+    "tokens_out": 6617,
+    "cost_usd": 0.117375
   }
 ]
