@@ -604,7 +604,7 @@ def run(store) -> None:
                                     commit_content, analyst_rules)
     state["agent_models"] = state.get("agent_models", {})
     state["agent_models"]["analyst"] = llm
-    llm_result = call_llm_full(system, user, max_tokens=4096, agent="analyst")
+    llm_result = call_llm_full(system, user, max_tokens=8000, agent="analyst")
     raw = llm_result.text
 
     # ── 6. Parse LLM response ─────────────────────────────────────────────────
