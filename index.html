@@ -2035,6 +2035,33 @@ try{buildSelector();}catch(e){console.warn('selector:',e);}
 refresh();
 ['filterResult','filterDate','filterSearch'].forEach(id=>{const el=document.getElementById(id);if(el)el.addEventListener('input',renderTable);});
 
+function lineDiff(before, after){
+  const a=before.split('\n'), b=after.split('\n');
+  const m=a.length, n=b.length;
+  // LCS — cap size to avoid perf issues on large sections
+  if(m*n>40000) return b.map(t=>({type:'add',text:t}));
+  const dp=Array.from({length:m+1},()=>new Int32Array(n+1));
+  for(let i=1;i<=m;i++) for(let j=1;j<=n;j++)
+    dp[i][j]=a[i-1]===b[j-1]?dp[i-1][j-1]+1:Math.max(dp[i-1][j],dp[i][j-1]);
+  const res=[];
+  let i=m,j=n;
+  while(i>0||j>0){
+    if(i>0&&j>0&&a[i-1]===b[j-1]){res.unshift({type:'same',text:a[i-1]});i--;j--;}
+    else if(j>0&&(i===0||dp[i][j-1]>=dp[i-1][j])){res.unshift({type:'add',text:b[j-1]});j--;}
+    else{res.unshift({type:'remove',text:a[i-1]});i--;}
+  }
+  return res;
+}
+function renderDiff(before, after){
+  const lines=lineDiff(before||'',after||'');
+  const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+  return lines.map(l=>{
+    if(l.type==='add')    return `<div style="background:#dcfce7;color:#166534;padding:0 4px;border-radius:2px"><span style="user-select:none;opacity:.6">+ </span>${esc(l.text)}</div>`;
+    if(l.type==='remove') return `<div style="background:#fee2e2;color:#991b1b;padding:0 4px;border-radius:2px;text-decoration:line-through;opacity:.7"><span style="user-select:none;opacity:.6">− </span>${esc(l.text)}</div>`;
+    return `<div style="color:var(--muted);padding:0 4px">${esc(l.text)||'&nbsp;'}</div>`;
+  }).join('');
+}
+
 function closeAnalystModal(e){
   if(e.target===document.getElementById('analystModal'))
     document.getElementById('analystModal').style.display='none';
@@ -2095,61 +2122,27 @@ function openAnalystModal(entry){
     html += `</div></div>`;
   }
 
-  // ── Scout patches ──────────────────────────────────────────────────────────
-  const sp = entry.scout_patches||[];
-  if(sp.length){
-    html += `<div>
-      <div style="font-size:.6rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:8px">📋 SCOUT PATCHES (${sp.length})</div>
+  // ── Patch renderer (shared for scout + commit) ─────────────────────────────
+  function renderPatchBlock(patches, label){
+    if(!patches||!patches.length) return '';
+    let h=`<div>
+      <div style="font-size:.6rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:8px">${label} (${patches.length})</div>
       <div style="display:flex;flex-direction:column;gap:8px">`;
-    sp.forEach(p=>{
-      html += `<div style="background:var(--surface);border-radius:var(--r-sm);padding:12px 14px">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+    patches.forEach(p=>{
+      h+=`<div style="background:var(--surface);border-radius:var(--r-sm);padding:12px 14px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
           <span style="font-size:.62rem;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:var(--burg)">${p.section}</span>
           <span style="font-size:.62rem;background:var(--burg-soft);color:var(--burg);border-radius:999px;padding:1px 8px">${p.action}</span>
         </div>
         <div style="font-size:.69rem;color:var(--muted);margin-bottom:8px;font-style:italic">${p.reason||''}</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
-          <div>
-            <div style="font-size:.58rem;font-weight:700;color:var(--muted);margin-bottom:3px;text-transform:uppercase">Before</div>
-            <pre style="font-size:.64rem;color:var(--muted);background:rgba(0,0,0,.2);border-radius:4px;padding:6px;overflow:auto;max-height:120px;white-space:pre-wrap;margin:0">${(p.before||'').replace(/</g,'&lt;')}</pre>
-          </div>
-          <div>
-            <div style="font-size:.58rem;font-weight:700;color:var(--green);margin-bottom:3px;text-transform:uppercase">After</div>
-            <pre style="font-size:.64rem;color:var(--green);background:rgba(0,0,0,.2);border-radius:4px;padding:6px;overflow:auto;max-height:120px;white-space:pre-wrap;margin:0">${(p.after||'').replace(/</g,'&lt;')}</pre>
-          </div>
-        </div>
+        <pre style="font-size:.63rem;line-height:1.55;background:#f8f8f8;border:1px solid var(--border2);border-radius:4px;padding:8px;overflow:auto;max-height:200px;white-space:pre-wrap;margin:0">${renderDiff(p.before,p.after)}</pre>
       </div>`;
     });
-    html += `</div></div>`;
+    h+=`</div></div>`;
+    return h;
   }
-
-  // ── Commit patches ─────────────────────────────────────────────────────────
-  const cp = entry.commit_patches||[];
-  if(cp.length){
-    html += `<div>
-      <div style="font-size:.6rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:8px">📋 COMMIT PATCHES (${cp.length})</div>
-      <div style="display:flex;flex-direction:column;gap:8px">`;
-    cp.forEach(p=>{
-      html += `<div style="background:var(--surface);border-radius:var(--r-sm);padding:12px 14px">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
-          <span style="font-size:.62rem;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:var(--burg)">${p.section}</span>
-          <span style="font-size:.62rem;background:var(--burg-soft);color:var(--burg);border-radius:999px;padding:1px 8px">${p.action}</span>
-        </div>
-        <div style="font-size:.69rem;color:var(--muted);margin-bottom:8px;font-style:italic">${p.reason||''}</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
-          <div>
-            <div style="font-size:.58rem;font-weight:700;color:var(--muted);margin-bottom:3px;text-transform:uppercase">Before</div>
-            <pre style="font-size:.64rem;color:var(--muted);background:rgba(0,0,0,.2);border-radius:4px;padding:6px;overflow:auto;max-height:120px;white-space:pre-wrap;margin:0">${(p.before||'').replace(/</g,'&lt;')}</pre>
-          </div>
-          <div>
-            <div style="font-size:.58rem;font-weight:700;color:var(--green);margin-bottom:3px;text-transform:uppercase">After</div>
-            <pre style="font-size:.64rem;color:var(--green);background:rgba(0,0,0,.2);border-radius:4px;padding:6px;overflow:auto;max-height:120px;white-space:pre-wrap;margin:0">${(p.after||'').replace(/</g,'&lt;')}</pre>
-          </div>
-        </div>
-      </div>`;
-    });
-    html += `</div></div>`;
-  }
+  html += renderPatchBlock(entry.scout_patches,  '📋 SCOUT PATCHES');
+  html += renderPatchBlock(entry.commit_patches, '📋 COMMIT PATCHES');
 
   if(!html) html = '<div style="color:var(--muted);font-size:.78rem;text-align:center;padding:20px">No detailed data available for this run.</div>';
 
