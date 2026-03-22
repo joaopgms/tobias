@@ -116,6 +116,38 @@
         }
       ],
       "summary": "Day 2026-03-21 commit — 1 bets totalling €225.00. 2 cancelled. Bankroll: €900.00 → €675.00."
+    },
+    {
+      "entry_id": "nba_entry_20260322",
+      "season": "2024-25",
+      "game": 1,
+      "timestamp": "2026-03-22T02:27:32.346548+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 675.0,
+      "total_staked": 0.0,
+      "bankroll_after": 675.0,
+      "cancelled_picks": [
+        {
+          "id": "nba_draft_20260321_001",
+          "match": "Orlando Magic vs Los Angeles Lakers",
+          "pick": "Los Angeles Lakers ML",
+          "reason": "Game tipped off at 23:00 UTC — it is now 02:27 UTC (3h27m past tip). Pre-game bet cannot be placed on a game already in progress. Additionally, this game does not appear in the live odds feed, confirming it is unavailable for betting."
+        },
+        {
+          "id": "nba_draft_20260321_002",
+          "match": "New Orleans Pelicans vs Cleveland Cavaliers",
+          "pick": "Cleveland Cavaliers ML",
+          "reason": "Game tipped off at 23:00 UTC — it is now 02:27 UTC (3h27m past tip). Pre-game bet cannot be placed on a game already in progress. Game not present in live odds feed."
+        },
+        {
+          "id": "nba_draft_20260321_003",
+          "match": "San Antonio Spurs vs Indiana Pacers",
+          "pick": "San Antonio Spurs -19.0",
+          "reason": "Game tipped off at 00:00 UTC — it is now 02:27 UTC (2h27m past tip). Pre-game bet cannot be placed on a game already in progress. Supporting evidence: live odds show the spread has shifted massively to -23.5 (from drafted -19.0), consistent with live in-game odds, not pre-game lines."
+        }
+      ],
+      "bets": [],
+      "summary": "Day 2026-03-22 commit — 0 bets totalling €0.00. 3 cancelled. Bankroll: €675.00 → €675.00."
     }
   ]
 }
