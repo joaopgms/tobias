@@ -1298,6 +1298,7 @@ function toggleDiff(id) {
 
 
 
+const _analystEntryMap={};
 function renderAudit(){
   const af=document.getElementById('auditAgent').value;
   const sf=(document.getElementById('auditSection').value||'').toLowerCase();
@@ -1325,11 +1326,12 @@ function renderAudit(){
       if(cpCount) summaryParts.push(`${cpCount} commit patch${cpCount>1?'es':''}`);
       if(igCount) summaryParts.push(`${igCount} gap${igCount>1?'s':''}`);
       const summaryText = summaryParts.length ? summaryParts.join(' · ') : 'No changes this run';
-      const entryJson = JSON.stringify(e).replace(/\\/g,'\\\\').replace(/"/g,'&quot;');
+      const entryKey = e.ts||Math.random().toString(36).slice(2);
+      _analystEntryMap[entryKey] = e;
       // Summary + Full report button first, then KPI row below
       body+=`<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
         <span style="font-size:.70rem;color:var(--muted)">${summaryText}</span>
-        <button onclick="openAnalystModal(JSON.parse(this.dataset.entry))" data-entry="${entryJson}" style="font-size:.62rem;font-weight:700;letter-spacing:.6px;text-transform:uppercase;background:var(--burg-soft);color:var(--burg);border:1px solid var(--burg);border-radius:var(--r-sm);padding:3px 9px;cursor:pointer;font-family:inherit;white-space:nowrap">📋 Full report →</button>
+        <button onclick="openAnalystModal(_analystEntryMap[this.dataset.key])" data-key="${entryKey}" style="font-size:.62rem;font-weight:700;letter-spacing:.6px;text-transform:uppercase;background:var(--burg-soft);color:var(--burg);border:1px solid var(--burg);border-radius:var(--r-sm);padding:3px 9px;cursor:pointer;font-family:inherit;white-space:nowrap">📋 Full report →</button>
       </div>`;
       // KPI row — include all-time W/L from pre-computed perf_stats
       const ps=e.perf_stats||{};
