@@ -261,7 +261,7 @@ def run(store) -> None:
             _build_scout_prompt(skills, games_str, odds_str, injuries_str,
                                  standings_str, adv_str,
                                  injuries_source, state, today),
-            max_tokens=6000,
+            max_tokens=8000,
             agent="scout",
         )
         raw = llm_result.text
