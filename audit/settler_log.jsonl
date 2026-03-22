@@ -3,3 +3,4 @@
 {"ts": "2026-03-21T10:29:04.842724+00:00", "agent": "settler", "settled_count": 0, "wins": 0, "losses": 0, "skipped": ["nba_bet_20260321_001"], "bust": false, "bankroll_before": 675.0, "bankroll_after": 675.0, "pnl_today": 0.0}
 {"ts": "2026-03-21T11:47:27.805324+00:00", "agent": "settler", "settled_count": 0, "wins": 0, "losses": 0, "skipped": ["nba_bet_20260321_001"], "bust": false, "bankroll_before": 675.0, "bankroll_after": 675.0, "pnl_today": 0.0}
 {"ts": "2026-03-21T11:55:03.085342+00:00", "agent": "settler", "settled_count": 1, "wins": 0, "losses": 1, "skipped": [], "bust": false, "bankroll_before": 675.0, "bankroll_after": 675.0, "pnl_today": 0.0}
+{"ts": "2026-03-22T10:29:38.757322+00:00", "agent": "settler", "settled_count": 0, "wins": 0, "losses": 0, "skipped": [], "bust": false, "bankroll_before": 675.0, "bankroll_after": 675.0, "pnl_today": 0.0}
