@@ -1,7 +1,7 @@
 ---
-version: 4
-updated_at: 2026-03-18T12:00:00.000000+00:00
-updated_by: manual_review
+version: 5
+updated_at: 2026-03-22T14:14:46.407021+00:00
+updated_by: analyst_2026-03-22
 llm: claude-sonnet-4-6
 ---
 
@@ -80,6 +80,11 @@ If a draft pick has confidence > 50 and injury source is ESPN → reduce to 50 b
 If a draft pick is a spread or total and injury source is ESPN → CANCEL: "ESPN fallback — spread/total too risky."
 Source: espn + < 5 teams → cancel ALL picks: "Critically incomplete injury data at commit time."
 Source: none → cancel ALL picks.
+
+PACE DATA QUALITY FLAG:
+→ If Pace = 0.0 universally in the advanced stats feed, treat Pace as unavailable at commit time.
+→ Cancel any totals pick whose thesis relied on pace signals if pace was flagged as unavailable at Scout.
+→ Log: "Pace data unavailable at Scout — totals pick thesis compromised, cancelling."
 
 ## SECTION:commit_staking
 Apply exact same confidence/staking tiers as scout_skills confidence_staking section.
