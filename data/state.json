@@ -9,14 +9,14 @@
   "net_pnl": -229.83,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-03-23T10:53:37.411951+00:00",
-  "first_game_time": "2026-03-22T21:00:00Z",
+  "last_updated": "2026-03-23T15:01:17.115415+00:00",
+  "first_game_time": "2026-03-23T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
-  "scout_updated_at": "2026-03-22T14:53:53.596850+00:00",
+  "scout_updated_at": "2026-03-23T15:01:17.115415+00:00",
   "scout_odds_source": "theodds_unibet",
-  "commit_status": "done",
+  "commit_status": "pending",
   "commit_updated_at": "2026-03-22T20:49:46.301278+00:00",
   "commit_date": "2026-03-22",
   "analyst_updated_at": "2026-03-23T11:41:48.049868+00:00",
@@ -27,7 +27,7 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "### CONFIRMED — Denver Nuggets -9.0\n\n- **Match:** Denver Nuggets vs Portland Trail Blazers | **Tip:** 2026-03-22T21:00Z\n- **Pick:** Denver Nuggets -9.0 spread | **Scout odds:** 1.94 | **Commit odds:** 1.94 | **Move:** 0.00 (spread tightened from -9.0 to -8.5 in current market, but pick at original -9.0 line maintained; odds unchanged)\n- **ML:** 1.30 (DEN) / 3.60 (POR) | **ATS:** -8.5 (1.93 / 1.89) | **O/U:** N/A\n- **Stake:** €101.25 | **Pot:** €196.43 | **Conf:** 63/100 | **EV:** 0.222\n- **Decision:** Confirmed and edge strengthened. Jerami Grant upgraded from Questionable → **OUT** (confirmed NBA official), and Vit Krejci also upgraded from Questionable → **OUT**. Portland is now missing Lillard, Sharpe, Grant, and Krejci. Jokic and Watson both active for Denver. NetRtg gap 6.1 pts above threshold. EV 0.222 is strong.\n\n---\n\n### CANCELLED — Boston Celtics -10.0\n\n- **Reason:** Odds moved adversely at commit time. Current spread odds for Boston -9.5 are 1.88 (vs Scout's 1.94 at -10.0). Delta of -0.06 triggers confidence -10 adjustment per line_movement_rules (above floor but worsened). Adjusted confidence 60 → 50. EV at new parameters: (0.50 × 1.88) - 1 = **-0.06**, below the required ≥ 0.05 threshold. Cannot confirm under current criteria.\n- **Odds at cancel:** 1.88 (was 1.94 at Scout time)\n\n---\n\n### LATE SCOUT SUMMARY\n\nNo new picks added. Five games were evaluated in late scout: SAC/BKN (no edge — tank matchup, minimal NetRtg gap), NYK/WAS (spread too large, confidence below 60 floor), PHX/TOR (TOR ML exceeds 2.50 ceiling; spread confidence assessed at 58, below 60 gate), and two games not on tonight's official slate (IND/ORL, OKC/PHI). The TOR +4.5 spread came closest to qualifying but PHX's NetRtg advantage is minimal (+0.9 pts gap) and L15 data remains unavailable, keeping confidence below the 60 threshold required for new Commit-phase picks.\n\n**Slate Summary:** One bet committed tonight — Denver -9.0 covering a severely depleted Portland team missing four rotation players including Lillard, Sharpe, Grant, and Krejci. Total exposure is €101.25 (15% of €675 bankroll), well within the 70% limit (€472.50). The Boston spread pick was cancelled due to adverse odds movement reducing EV below threshold. Bankroll at risk tonight: €101.25; maximum return: €196.43 (net gain €95.18 if successful).",
+  "last_report": "Unable to access real-time NBA schedules, odds, or injury reports for March 23, 2026. Without verified current data on tonight's slate, line movements, injury statuses, and matchup statistics, no picks can be responsibly drafted. Submitting empty draft picks to avoid committing to unverified information.",
   "draft_picks": [],
   "pending_bets": [],
   "settled_bets": [
@@ -102,29 +102,7 @@
       "committed_at": "2026-03-22T20:49:54Z"
     }
   ],
-  "rejected_games": [
-    {
-      "match": "New York Knicks vs Washington Wizards",
-      "reason": "NYK ML at 1.04 outside target range; NYK -20.5 spread confidence 57 falls below 60 floor after L15 penalty; WAS confirmed tank (16-54, L10: 0-10) with all franchise players OUT making WAS ML unbettable; line anomaly-adjacent but pricing reflects reality",
-      "ml_home": 1.04,
-      "ml_away": 12.0,
-      "decision": "no_edge"
-    },
-    {
-      "match": "Sacramento Kings vs Brooklyn Nets",
-      "reason": "Both confirmed tank teams; SAC has LaVine and Sabonis OUT (franchise players); BKN has Claxton OUT; SAC ML at 1.40 below 2.20 tanker threshold; NetRtg gap only 0.6 points; no reliable edge on either side",
-      "ml_home": 1.4,
-      "ml_away": 3.0,
-      "decision": "rejected"
-    },
-    {
-      "match": "Phoenix Suns vs Toronto Raptors",
-      "reason": "Toronto ML 2.18 in range but EV = -0.019 (negative) after adjustments: NetRtg gap only 0.9 pts (below 4.0 threshold), Phoenix home court cancels Toronto's marginal stats advantage, L15 missing penalty applied; Phoenix ML at 1.70 with inferior stats and L5 losing streak not bettable; no O/U available",
-      "ml_home": 1.7,
-      "ml_away": 2.18,
-      "decision": "no_edge"
-    }
-  ],
+  "rejected_games": [],
   "late_scout_rejections": [
     {
       "match": "Sacramento Kings vs Brooklyn Nets",
@@ -148,79 +126,16 @@
     }
   ],
   "scout_report_data": {
-    "date": "2026-03-22",
-    "updated_at": "2026-03-22T14:53:53.596850+00:00",
-    "picks": [
-      {
-        "id": "nba_draft_20260322_001",
-        "match": "Denver Nuggets vs Portland Trail Blazers",
-        "time": "2026-03-22T21:00:00Z",
-        "pick": "Denver Nuggets -9.0",
-        "odds": 1.94,
-        "stake": 101.25,
-        "potential_return": 196.43,
-        "confidence": 63,
-        "reasoning": "Portland arrives at Ball Arena without Damian Lillard (OUT – injury management), Shaedon Sharpe (OUT), and both Jerami Grant and Vit Krejci are Questionable. This is a severely depleted Trail Blazers squad. Denver (43-28, L10: 6-4) holds a meaningful NetRtg advantage of +4.3 vs Portland's -1.8 (gap 6.1 pts, above 4.0 threshold). Home court adds another 2-3 points. Peyton Watson is Questionable for Denver but is a secondary piece. Base confidence 68, adjusted -5 for L15 unavailability = 63. Spread odds 1.94 fall squarely in 1.80–2.30 target. EV = (0.63 × 1.94) – 1 = 0.222 (strong edge). Portland's offensive identity without Lillard collapses, and Denver's DefRtg of 117.3 still holds advantage over Portland's OffRtg 113.9. Spread cover rate for road teams missing their franchise player is historically below 40%.",
-        "anchor_players": [
-          "Damian Lillard (POR – OUT)",
-          "Shaedon Sharpe (POR – OUT)",
-          "Jerami Grant (POR – Questionable)",
-          "Nikola Jokic (DEN – active)",
-          "Peyton Watson (DEN – Questionable)"
-        ],
-        "drafted_at": "2026-03-22T14:54:06Z",
-        "market_type": "spread"
-      },
-      {
-        "id": "nba_draft_20260322_002",
-        "match": "Boston Celtics vs Minnesota Timberwolves",
-        "time": "2026-03-23T00:00:00Z",
-        "pick": "Boston Celtics -10.0",
-        "odds": 1.94,
-        "stake": 101.25,
-        "potential_return": 196.43,
-        "confidence": 60,
-        "reasoning": "Anthony Edwards is confirmed OUT (Patellofemoral Pain Syndrome – NBA official report), removing Minnesota's franchise player and primary offensive engine. Per franchise player rules, cannot bet Minnesota ML; instead evaluating Boston spread. Boston (47-23, L10: 7-3) holds NetRtg +7.9 vs Minnesota +3.5 (gap 4.4 pts, above 4.0 threshold). Boston is home at TD Garden with strong seeding motivation (top seed race vs Knicks/Detroit live). Naz Reid is also Questionable for Minnesota (ankle sprain), further weakening their frontcourt. Boston's only notable absence is Vucevic (minor impact). Base confidence 65, adjusted -5 for L15 unavailability = 60 (at confidence floor for spreads). EV = (0.60 × 1.94) – 1 = 0.164 (strong edge, above 0.05 threshold). Spread odds 1.94 in 1.80–2.30 target range. Minnesota without Edwards historically struggles to keep games within 10 points vs elite home defenses.",
-        "anchor_players": [
-          "Anthony Edwards (MIN – OUT)",
-          "Naz Reid (MIN – Questionable)",
-          "Jayson Tatum (BOS – active)",
-          "Jaylen Brown (BOS – active)",
-          "Nikola Vucevic (BOS – OUT, minor impact)"
-        ],
-        "drafted_at": "2026-03-22T14:54:06Z",
-        "market_type": "spread"
-      }
-    ],
-    "rejected": [
-      {
-        "match": "New York Knicks vs Washington Wizards",
-        "reason": "NYK ML at 1.04 outside target range; NYK -20.5 spread confidence 57 falls below 60 floor after L15 penalty; WAS confirmed tank (16-54, L10: 0-10) with all franchise players OUT making WAS ML unbettable; line anomaly-adjacent but pricing reflects reality",
-        "ml_home": 1.04,
-        "ml_away": 12.0,
-        "decision": "no_edge"
-      },
-      {
-        "match": "Sacramento Kings vs Brooklyn Nets",
-        "reason": "Both confirmed tank teams; SAC has LaVine and Sabonis OUT (franchise players); BKN has Claxton OUT; SAC ML at 1.40 below 2.20 tanker threshold; NetRtg gap only 0.6 points; no reliable edge on either side",
-        "ml_home": 1.4,
-        "ml_away": 3.0,
-        "decision": "rejected"
-      },
-      {
-        "match": "Phoenix Suns vs Toronto Raptors",
-        "reason": "Toronto ML 2.18 in range but EV = -0.019 (negative) after adjustments: NetRtg gap only 0.9 pts (below 4.0 threshold), Phoenix home court cancels Toronto's marginal stats advantage, L15 missing penalty applied; Phoenix ML at 1.70 with inferior stats and L5 losing streak not bettable; no O/U available",
-        "ml_home": 1.7,
-        "ml_away": 2.18,
-        "decision": "no_edge"
-      }
-    ],
-    "report": "**Denver Nuggets -9.0 vs Portland Trail Blazers (DRAFTED – Spread @ 1.94):** Portland arrives severely undermanned — Lillard (OUT), Sharpe (OUT), with Grant and Krejci both Questionable. The 6.1-point NetRtg gap, Denver's home advantage at Ball Arena, and the total collapse of Portland's offensive identity without Lillard combine for a strong spread edge. Confidence 63 after L15 penalty. EV 0.222 — well above the 0.05 minimum. Denver covers a 9-point spread even at moderate pace given Portland's depleted roster.\n\n**Boston Celtics -10.0 vs Minnesota Timberwolves (DRAFTED – Spread @ 1.94):** Anthony Edwards confirmed OUT via NBA official report, removing Minnesota's entire offensive core. Boston holds a 4.4-point NetRtg advantage at home with full seeding motivation intact. Reid also Questionable for Minnesota. Confidence lands exactly at the 60 floor after L15 adjustment. EV 0.164 — solidly in strong edge territory. A Minnesota squad without Edwards is a materially different team that historically struggles to cover double-digit spreads on the road against top-8 defenses.\n\n**New York Knicks vs Washington Wizards — REJECTED:** NYK ML at 1.04 is outside all target ranges; the NYK -20.5 spread confidence of 57 falls below the 60 floor even with a massive NetRtg gap of 17.8 points; Washington's complete roster depletion is already fully priced into an extreme line.\n\n**Sacramento Kings vs Brooklyn Nets — REJECTED:** Both confirmed tank teams with franchise players absent on both sides; NetRtg gap of only 0.6 points offers zero analytical edge; SAC ML at 1.40 is far below the 2.20 tanking-team threshold.\n\n**Phoenix Suns vs Toronto Raptors — REJECTED:** Toronto's ML at 2.18 was the only candidate in-range, but EV came out at -0.019 after factoring in Phoenix's home court advantage against a sub-4.0 NetRtg gap; the L5 Phoenix losing streak is intriguing but not enough to overcome the math.\n\nTonight's slate offers a narrow but legitimate two-pick session. Both picks are spread bets targeting depleted road teams against motivated home favourites with confirmed franchise player absences driving the edge. Total exposure is 30% of bankroll (€202.50), well within the 70% daily cap. Pace data was unavailable universally, so all totals were suppressed — correct protocol followed.",
+    "date": "2026-03-23",
+    "updated_at": "2026-03-23T15:01:17.115415+00:00",
+    "picks": [],
+    "rejected": [],
+    "report": "Unable to access real-time NBA schedules, odds, or injury reports for March 23, 2026. Without verified current data on tonight's slate, line movements, injury statuses, and matchup statistics, no picks can be responsibly drafted. Submitting empty draft picks to avoid committing to unverified information.",
     "odds_source": "theodds_unibet",
     "injuries_source": "nba_official",
-    "tokens_in": 7154,
-    "tokens_out": 6170,
-    "cost_usd": 0.114012
+    "tokens_in": 9145,
+    "tokens_out": 8136,
+    "cost_usd": 0.149475
   },
   "commit_report_data": {
     "date": "2026-03-22",
@@ -290,9 +205,9 @@
   },
   "netrtg_l15": {},
   "cached_context": {
-    "cached_at": "2026-03-22",
-    "games_str": "Portland Trail Blazers @ Denver Nuggets  |  2026-03-22T21:00 UTC  |  Ball Arena\nBrooklyn Nets @ Sacramento Kings  |  2026-03-22T22:00 UTC  |  Golden 1 Center\nWashington Wizards @ New York Knicks  |  2026-03-22T23:30 UTC  |  Madison Square Garden\nMinnesota Timberwolves @ Boston Celtics  |  2026-03-23T00:00 UTC  |  TD Garden\nToronto Raptors @ Phoenix Suns  |  2026-03-23T01:00 UTC  |  Mortgage Matchup Center",
-    "standings_str": "Oklahoma City Thunder: 56-15  L10:10-0\nSan Antonio Spurs: 53-18  L10:9-1\nDetroit Pistons: 51-19  L10:6-4\nBoston Celtics: 47-23  L10:7-3\nNew York Knicks: 46-25  L10:7-3\nDenver Nuggets: 43-28  L10:6-4\nMinnesota Timberwolves: 43-28  L10:5-5\nToronto Raptors: 39-30  L10:5-5\nPhoenix Suns: 39-32  L10:4-6\nPortland Trail Blazers: 35-36  L10:6-4\nUTAH: 21-50  L10:3-7\nSacramento Kings: 18-53  L10:4-6\nBrooklyn Nets: 17-53  L10:2-8\nWashington Wizards: 16-54  L10:0-10\nIndiana Pacers: 15-56  L10:0-10",
-    "adv_str": "Source: NBA.com Advanced Stats (OffRtg / DefRtg / NetRtg / Pace)\nDenver Nuggets: OffRtg 121.6 | DefRtg 117.3 | NetRtg +4.3 | Pace 0.0\nPortland Trail Blazers: OffRtg 113.9 | DefRtg 115.7 | NetRtg -1.8 | Pace 0.0\nSacramento Kings: OffRtg 110.8 | DefRtg 121.0 | NetRtg -10.2 | Pace 0.0\nBrooklyn Nets: OffRtg 109.3 | DefRtg 118.8 | NetRtg -9.6 | Pace 0.0\nNew York Knicks: OffRtg 119.3 | DefRtg 112.7 | NetRtg +6.6 | Pace 0.0\nWashington Wizards: OffRtg 110.9 | DefRtg 122.1 | NetRtg -11.2 | Pace 0.0\nBoston Celtics: OffRtg 120.5 | DefRtg 112.6 | NetRtg +7.9 | Pace 0.0\nMinnesota Timberwolves: OffRtg 117.4 | DefRtg 113.9 | NetRtg +3.5 | Pace 0.0\nPhoenix Suns: OffRtg 115.2 | DefRtg 114.2 | NetRtg +1.0 | Pace 0.0\nToronto Raptors: OffRtg 115.2 | DefRtg 113.3 | NetRtg +1.9 | Pace 0.0"
+    "cached_at": "2026-03-23",
+    "games_str": "Los Angeles Lakers @ Detroit Pistons  |  2026-03-23T23:00 UTC  |  Little Caesars Arena\nIndiana Pacers @ Orlando Magic  |  2026-03-23T23:00 UTC  |  Kia Center\nOklahoma City Thunder @ Philadelphia 76ers  |  2026-03-23T23:00 UTC  |  Xfinity Mobile Arena\nSan Antonio Spurs @ Miami Heat  |  2026-03-23T23:00 UTC  |  Kaseya Center\nMemphis Grizzlies @ Atlanta Hawks  |  2026-03-23T23:30 UTC  |  State Farm Arena\nHouston Rockets @ Chicago Bulls  |  2026-03-24T00:00 UTC  |  United Center\nToronto Raptors @ Utah Jazz  |  2026-03-24T01:00 UTC  |  Delta Center\nGolden State Warriors @ Dallas Mavericks  |  2026-03-24T01:30 UTC  |  American Airlines Center\nBrooklyn Nets @ Portland Trail Blazers  |  2026-03-24T02:00 UTC  |  Moda Center\nMilwaukee Bucks @ LA Clippers  |  2026-03-24T02:30 UTC  |  Intuit Dome",
+    "standings_str": "Oklahoma City Thunder: 56-15  L10:10-0\nSan Antonio Spurs: 53-18  L10:9-1\nDetroit Pistons: 51-19  L10:6-4\nNew York Knicks: 47-25  L10:7-3\nBoston Celtics: 47-24  L10:6-4\nLos Angeles Lakers: 46-25  L10:9-1\nHouston Rockets: 43-27  L10:5-5\nAtlanta Hawks: 39-32  L10:9-1\nPhiladelphia 76ers: 39-32  L10:6-4\nToronto Raptors: 39-31  L10:4-6\nMiami Heat: 38-33  L10:6-4\nOrlando Magic: 38-32  L10:6-4\nPortland Trail Blazers: 35-37  L10:6-4\nLA Clippers: 35-36  L10:5-5\nGolden State Warriors: 33-38  L10:2-8\nMilwaukee Bucks: 29-41  L10:3-7\nChicago Bulls: 28-42  L10:4-6\nMemphis Grizzlies: 24-46  L10:1-9\nDallas Mavericks: 23-48  L10:2-8\nUtah Jazz: 21-50  L10:3-7\nUTAH: 21-50  L10:3-7\nSacramento Kings: 19-53  L10:5-5\nBrooklyn Nets: 17-54  L10:2-8\nWashington Wizards: 16-55  L10:0-10\nIndiana Pacers: 15-56  L10:0-10",
+    "adv_str": "Source: NBA.com Advanced Stats (OffRtg / DefRtg / NetRtg / Pace)\nDetroit Pistons: OffRtg 117.6 | DefRtg 109.7 | NetRtg +7.8 | Pace 0.0\nLos Angeles Lakers: OffRtg 118.2 | DefRtg 116.8 | NetRtg +1.4 | Pace 0.0\nOrlando Magic: OffRtg 115.0 | DefRtg 114.1 | NetRtg +0.9 | Pace 0.0\nIndiana Pacers: OffRtg 110.2 | DefRtg 119.2 | NetRtg -8.9 | Pace 0.0\nPhiladelphia 76ers: OffRtg 115.4 | DefRtg 115.6 | NetRtg -0.3 | Pace 0.0\nOklahoma City Thunder: OffRtg 118.5 | DefRtg 107.5 | NetRtg +11.0 | Pace 0.0\nMiami Heat: OffRtg 116.0 | DefRtg 113.1 | NetRtg +2.9 | Pace 0.0\nSan Antonio Spurs: OffRtg 118.9 | DefRtg 111.7 | NetRtg +7.3 | Pace 0.0\nAtlanta Hawks: OffRtg 115.3 | DefRtg 114.0 | NetRtg +1.3 | Pace 0.0\nMemphis Grizzlies: OffRtg 113.9 | DefRtg 117.1 | NetRtg -3.2 | Pace 0.0\nChicago Bulls: OffRtg 113.3 | DefRtg 117.7 | NetRtg -4.4 | Pace 0.0\nHouston Rockets: OffRtg 117.7 | DefRtg 113.5 | NetRtg +4.2 | Pace 0.0\nUtah Jazz: OffRtg 114.7 | DefRtg 122.0 | NetRtg -7.3 | Pace 0.0\nToronto Raptors: OffRtg 115.0 | DefRtg 113.5 | NetRtg +1.5 | Pace 0.0\nDallas Mavericks: OffRtg 110.9 | DefRtg 116.1 | NetRtg -5.2 | Pace 0.0\nGolden State Warriors: OffRtg 115.0 | DefRtg 114.8 | NetRtg +0.2 | Pace 0.0\nPortland Trail Blazers: OffRtg 113.9 | DefRtg 115.9 | NetRtg -2.0 | Pace 0.0\nBrooklyn Nets: OffRtg 109.6 | DefRtg 119.0 | NetRtg -9.5 | Pace 0.0\nLA Clippers: stats unavailable\nMilwaukee Bucks: OffRtg 113.1 | DefRtg 118.5 | NetRtg -5.5 | Pace 0.0"
   }
 }
