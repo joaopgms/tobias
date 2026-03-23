@@ -195,91 +195,20 @@ def fetch_first_game_time_utc(target_date: date | None = None) -> str | None:
     return earliest.strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
-# ── Advanced stats (NBA.com) ───────────────────────────────────────────────────
-
-_NBA_STATS_HEADERS = {
-    "User-Agent":        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Referer":           "https://www.nba.com/stats/teams/advanced",
-    "Accept":            "application/json, text/plain, */*",
-    "Accept-Language":   "en-US,en;q=0.9",
-    "Accept-Encoding":   "gzip, deflate, br",
-    "Origin":            "https://www.nba.com",
-    "Connection":        "keep-alive",
-    "x-nba-stats-origin": "stats",
-    "x-nba-stats-token":  "true",
-    "Cache-Control":     "no-cache",
-    "Pragma":            "no-cache",
-}
-
+# ── Advanced stats ─────────────────────────────────────────────────────────────
 
 def fetch_advanced_stats() -> dict[str, dict]:
     """
-    Fetch team advanced stats.
-    Primary: ESPN team statistics endpoint (cloud-friendly, no IP blocking).
-    Fallback: Basketball-Reference HTML scrape.
+    Fetch team advanced stats from Basketball-Reference.
     Returns {team_name: {net_rtg, off_rtg, def_rtg, pace, ts_pct}}
     """
-    result = _fetch_advanced_stats_espn()
-    if result:
-        log.info(f"Advanced stats: ESPN — {len(result)} teams")
-        return result
-
-    log.warning("Advanced stats: ESPN failed — trying Basketball-Reference")
     result = _fetch_advanced_stats_bref()
     if result:
         log.info(f"Advanced stats: Basketball-Reference — {len(result)} teams")
         return result
 
-    log.warning("Advanced stats: all sources failed — ML only session")
+    log.warning("Advanced stats: Basketball-Reference failed — ML only session")
     return {}
-
-
-def _fetch_advanced_stats_espn() -> dict[str, dict]:
-    """
-    Fetch advanced stats from ESPN team statistics endpoint.
-    Uses the same ESPN API we already use for injuries/standings — no IP blocking.
-    """
-    result = {}
-    for team_name, team_id in ESPN_TEAM_IDS.items():
-        url = (f"https://site.api.espn.com/apis/site/v2/sports/basketball/nba"
-               f"/teams/{team_id}/statistics")
-        try:
-            data = _get(url, timeout=5)
-            splits = (data.get("splits") or {}).get("categories", [])
-            stats = {}
-            for cat in splits:
-                for s in cat.get("stats", []):
-                    stats[s.get("name","")] = s.get("value", s.get("displayValue"))
-
-            # ESPN stat name mapping — try multiple possible field names
-            def _get(*keys):
-                for k in keys:
-                    v = stats.get(k)
-                    if v is not None:
-                        try: return float(v)
-                        except: pass
-                return None
-
-            net_rtg = _get("netRating","netRtg","net_rtg","netrtg")
-            off_rtg = _get("offensiveRating","offRating","offRtg","off_rtg","oppg")
-            def_rtg = _get("defensiveRating","defRating","defRtg","def_rtg","dppg")
-            pace    = _get("pace","paceAdjust","possessions","poss")
-            ts_pct  = _get("trueShootingPercentage","tsPct","ts_pct","trueshooting")
-
-            if any(v is not None for v in [net_rtg, off_rtg, def_rtg, pace]):
-                result[team_name] = {
-                    "net_rtg": round(float(net_rtg), 1) if net_rtg is not None else 0.0,
-                    "off_rtg": round(float(off_rtg), 1) if off_rtg is not None else 0.0,
-                    "def_rtg": round(float(def_rtg), 1) if def_rtg is not None else 0.0,
-                    "pace":    round(float(pace),    1) if pace    is not None else 0.0,
-                    "ts_pct":  round(float(ts_pct),  3) if ts_pct  is not None else 0.0,
-                }
-        except Exception as e:
-            log.debug(f"ESPN stats {team_name}: {e}")
-            continue
-
-    # Need at least 20 teams to be useful
-    return result if len(result) >= 20 else {}
 
 
 def _fetch_advanced_stats_bref() -> dict[str, dict]:
@@ -428,15 +357,16 @@ def _bref_abbr_to_full(abbr: str) -> str | None:
 
 
 
-def format_advanced_stats_for_prompt(stats: dict, games: list[dict]) -> str:
+def format_advanced_stats_for_prompt(stats: dict, games: list[dict],
+                                      netrtg_l15: dict | None = None) -> str:
     """
     Format advanced stats for only the teams playing tonight.
-    Compact — only relevant matchups.
+    Includes L15 NetRtg inline when available.
     """
     if not stats or not games:
         return "Advanced stats unavailable."
 
-    lines = ["Source: NBA.com Advanced Stats (OffRtg / DefRtg / NetRtg / Pace)"]
+    lines = ["Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)"]
     seen = set()
     for g in games:
         for team in [g.get("home",""), g.get("away","")]:
@@ -445,9 +375,14 @@ def format_advanced_stats_for_prompt(stats: dict, games: list[dict]) -> str:
             seen.add(team)
             s = stats.get(team)
             if s:
+                l15_str = ""
+                if netrtg_l15:
+                    l15 = netrtg_l15.get(team)
+                    if l15 is not None:
+                        l15_str = f" | L15:{l15:+.1f}"
                 lines.append(
                     f"{team}: OffRtg {s['off_rtg']} | DefRtg {s['def_rtg']} "
-                    f"| NetRtg {s['net_rtg']:+.1f} | Pace {s['pace']}"
+                    f"| NetRtg {s['net_rtg']:+.1f} | Pace {s['pace']}{l15_str}"
                 )
             else:
                 lines.append(f"{team}: stats unavailable")
@@ -458,85 +393,6 @@ def format_advanced_stats_for_prompt(stats: dict, games: list[dict]) -> str:
 # ── Team rosters ───────────────────────────────────────────────────────────────
 
 # ESPN team ID map — all 30 NBA teams
-
-def fetch_netrtg_l15() -> dict[str, float]:
-    """
-    Compute approximate NetRtg over last 15 games for all 30 teams.
-    Uses ESPN team schedule endpoint — cloud-friendly, no IP blocking.
-
-    Method: fetch each team's last 15 completed regular season games,
-    compute average point differential, scale to per-100-possessions
-    approximation using factor ~2.85 (empirically calibrated to NBA averages).
-
-    Returns {team_name: net_rtg_l15} for all teams with sufficient data.
-    Falls back gracefully per team on any fetch error.
-    """
-    result = {}
-    failed = 0
-
-    for team_name, team_id in ESPN_TEAM_IDS.items():
-        url = (f"https://site.api.espn.com/apis/site/v2/sports/basketball/nba"
-               f"/teams/{team_id}/schedule?seasontype=2")
-        try:
-            data = _get(url, timeout=8)
-            events = data.get("events", [])
-
-            # Collect last 15 completed games with scores
-            completed = []
-            for evt in reversed(events):  # most recent first
-                comp = evt.get("competitions", [{}])[0]
-                status = comp.get("status", {}).get("type", {})
-                if not status.get("completed", False):
-                    continue
-                competitors = comp.get("competitors", [])
-                if len(competitors) < 2:
-                    continue
-                home = next((c for c in competitors if c.get("homeAway") == "home"), None)
-                away = next((c for c in competitors if c.get("homeAway") == "away"), None)
-                if not home or not away:
-                    continue
-                try:
-                    home_score = int(home.get("score", 0) or 0)
-                    away_score = int(away.get("score", 0) or 0)
-                    if home_score == 0 and away_score == 0:
-                        continue
-                    # Match our team by team_id — ESPN schedule uses numeric id
-                    # Try both direct id match and uid suffix match
-                    h_id  = str(home.get("id",""))
-                    h_uid = str(home.get("uid",""))
-                    our_id = str(team_id)
-                    is_home = (h_id == our_id or h_uid.endswith(f".t.{our_id}"))
-                    if is_home:
-                        margin = home_score - away_score
-                    else:
-                        margin = away_score - home_score
-                    completed.append(margin)
-                    if len(completed) >= 15:
-                        break
-                except Exception:
-                    continue
-
-            if len(completed) >= 5:
-                avg_margin = sum(completed) / len(completed)
-                # Scale point differential to approximate NetRtg per 100 possessions
-                # NBA average ~98 possessions/game; NetRtg = margin / poss * 100
-                # Empirical factor: 1pt margin ~ 2.85 NetRtg points
-                net_rtg_l15 = round(avg_margin * 2.85, 1)
-                result[team_name] = net_rtg_l15
-            else:
-                log.debug(f"NetRtg L15: {team_name} only {len(completed)} games")
-
-        except Exception as e:
-            log.debug(f"NetRtg L15 {team_name}: {e}")
-            failed += 1
-            continue
-
-    if result:
-        log.info(f"NetRtg L15: {len(result)}/30 teams computed ({failed} failed)")
-    else:
-        log.warning("NetRtg L15: all teams failed — no data")
-
-    return result
 
 
 ESPN_TEAM_IDS = {

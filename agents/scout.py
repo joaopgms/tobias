@@ -20,7 +20,7 @@ import logging
 from datetime import datetime, date, timezone
 
 from core.llm import call_llm, call_llm_full, extract_tag, agent_model_name
-from core.espn import fetch_scoreboard, fetch_injuries, fetch_standings, fetch_first_game_time_utc, fetch_advanced_stats, fetch_netrtg_l15, format_advanced_stats_for_prompt
+from core.espn import fetch_scoreboard, fetch_injuries, fetch_standings, fetch_first_game_time_utc, fetch_advanced_stats, format_advanced_stats_for_prompt
 from core.nba_injuries import fetch_official_nba_injuries
 from core.odds import fetch_betano_nba_odds, format_odds_for_prompt, odds_available, get_odds_failure_reasons
 from core.validators import validate_all_drafts, ValidationError
@@ -168,6 +168,22 @@ def _standings_text(standings: dict, tonight_teams: list | None = None) -> str:
     return "\n".join(lines)
 
 
+# ── L15 NetRtg from stored game log ────────────────────────────────────────────
+
+def _compute_netrtg_l15(team_game_log: dict) -> dict:
+    """
+    Compute approximate L15 NetRtg from Settler-maintained game log.
+    1pt avg margin ≈ 2.85 NetRtg points (empirical NBA calibration).
+    Requires ≥5 games to return a value.
+    """
+    result = {}
+    for team, margins in team_game_log.items():
+        last15 = margins[-15:]
+        if len(last15) >= 5:
+            result[team] = round(sum(last15) / len(last15) * 2.85, 1)
+    return result
+
+
 # ── Same-day guard ─────────────────────────────────────────────────────────────
 
 def _already_scouted_today(state: dict, today: str) -> bool:
@@ -203,14 +219,12 @@ def run(store) -> None:
     log.info("Scout: fetching NBA data…")
     games        = fetch_scoreboard()
     adv_stats    = fetch_advanced_stats()
-    # NetRtg L15 — use Analyst-cached value if available (saves 30 API calls)
-    # If Analyst hasn't run yet today, fetch fresh
-    netrtg_l15 = state.get("netrtg_l15") or {}
-    if not netrtg_l15:
-        log.info("Scout: NetRtg L15 not in state — fetching fresh")
-        netrtg_l15 = fetch_netrtg_l15()
+    # NetRtg L15 — computed from Settler-maintained game log (no API calls)
+    netrtg_l15 = _compute_netrtg_l15(state.get("team_game_log", {}))
+    if netrtg_l15:
+        log.info(f"Scout: NetRtg L15 computed from game log ({len(netrtg_l15)} teams)")
     else:
-        log.info(f"Scout: NetRtg L15 loaded from state ({len(netrtg_l15)} teams)")
+        log.info("Scout: NetRtg L15 not yet available (game log accumulating)")
     # Primary: NBA official injury report (PDFs updated every 15min, legally required)
     injuries = fetch_official_nba_injuries()
     if not injuries:
@@ -245,7 +259,7 @@ def run(store) -> None:
     tonight_teams = [g["home"] for g in games] + [g["away"] for g in games]
     standings_str = _standings_text(standings, tonight_teams=tonight_teams)
 
-    adv_str       = format_advanced_stats_for_prompt(adv_stats, games)
+    adv_str       = format_advanced_stats_for_prompt(adv_stats, games, netrtg_l15 or None)
     adv_available = bool(adv_stats)
     if not adv_available:
         log.warning("Scout: advanced stats unavailable — session limited to ML only (spreads/totals banned)")
@@ -363,6 +377,12 @@ def run(store) -> None:
         store.write_json("state", state, f"scout: JSON error {today}")
         store.write_data_js(state, history, config=store.read_config())
         return
+
+    # ── 8b. Enforce confidence threshold ─────────────────────────────────────
+    before_filter = len(draft_picks)
+    draft_picks = [p for p in draft_picks if p.get("confidence", 0) >= 40]
+    if len(draft_picks) < before_filter:
+        log.info(f"Scout: dropped {before_filter - len(draft_picks)} picks below confidence 40")
 
     # ── 9. Validate picks ─────────────────────────────────────────────────────
     try:

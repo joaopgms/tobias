@@ -203,6 +203,30 @@ def run(store) -> None:
         except Exception as e:
             log.warning(f"  Could not fetch scores for {d_str}: {e}")
 
+    # ── 2b. Update team game log (all games from fetched dates) ──────────────
+    game_log = state.get("team_game_log", {})
+    recorded = set(state.get("game_log_recorded", []))
+    seen_games: set = set()
+    for result in all_scores.values():
+        h, a = result.get("home", ""), result.get("away", "")
+        if not h or not a:
+            continue
+        game_key = f"{a}@{h}"
+        if game_key in seen_games or game_key in recorded:
+            continue
+        seen_games.add(game_key)
+        home_margin = result["home_score"] - result["away_score"]
+        for team, margin in [(h, home_margin), (a, -home_margin)]:
+            entries = game_log.setdefault(team, [])
+            entries.append(margin)
+            if len(entries) > 25:
+                game_log[team] = entries[-25:]
+        recorded.add(game_key)
+    state["team_game_log"] = game_log
+    state["game_log_recorded"] = list(recorded)[-200:]
+    if seen_games:
+        log.info(f"Settler: game log updated — {len(seen_games)} new games, {len(game_log)} teams tracked")
+
     # ── 3. Settle each bet ────────────────────────────────────────────────────
     settled_ids: list[str] = []
     still_pending: list[dict] = []
