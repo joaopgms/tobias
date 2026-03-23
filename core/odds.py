@@ -258,5 +258,5 @@ def format_odds_for_prompt(games: list[dict]) -> str:
         ov   = g.get("over_odds", "?");  un = g.get("under_odds", "?")
         spread_str = f"{sp} ({sp_h}/{sp_a})" if sp and sp != "N/A" else "N/A"
         ou_str     = f"{ou} (O:{ov}/U:{un})" if ou and ou != "N/A" else "N/A"
-        lines.append(f"{away} @ {home} | ML: {ml_h}/{ml_a} | Spread: {spread_str} | O/U: {ou_str}")
+        lines.append(f"{away} @ {home} | ML: H:{ml_h}/A:{ml_a} | Spread(H): {spread_str} | O/U: {ou_str}")
     return "\n".join(lines)
