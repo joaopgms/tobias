@@ -1045,5 +1045,117 @@
     "tokens_in": 9159,
     "tokens_out": 5720,
     "cost_usd": 0.113277
+  },
+  {
+    "ts": "2026-03-23T22:07:57.719678+00:00",
+    "date": "2026-03-23",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_unibet",
+    "draft_count": 1,
+    "picks": [
+      {
+        "id": "nba_draft_20260323_001",
+        "match": "Detroit Pistons vs Los Angeles Lakers",
+        "time": "2026-03-23T23:00:00Z",
+        "pick": "Detroit Pistons ML",
+        "odds": 2.0,
+        "stake": 115.53,
+        "potential_return": 231.06,
+        "confidence": 57,
+        "reasoning": "Detroit (51-19, L10: 6-4) hosts Lakers (46-25, L10: 9-1) at home. NetRtg gap: Detroit +7.8 vs Lakers +1.4 = 6.4 point gap, well above the 4.0 threshold. Detroit's defensive rating (109.7) is significantly superior to Lakers' (116.8 DefRtg indicates they defend poorly). Lakers on a W9 streak but NetRtg +1.4 is sharply below what a 46-25 record implies — hot streak fade candidate per skills section. Home court advantage worth ~2-3 points. Cade Cunningham confirmed OUT via NBA official report (Pneumothorax), but franchise player rule applies: 'do NOT bet Detroit ML without re-verification.' NBA official PDF CONFIRMS Cunningham OUT — this is the official source, so edge stands but adjusted for star absence. Detroit still has strong supporting cast (Jaden Ivey, Ausar Thompson etc.) and dominant home record. Lakers missing Hachimura (Out). Lakers regression risk is genuine: their true talent is roughly .500-.520 based on NetRtg, not the .648 implied by record. Books have this correctly priced at Detroit ML 2.00. Cade Cunningham OUT is negative for Detroit — apply franchise player OUT rule: 'do NOT bet that team to win unless opponent also missing a star or confirmed tanking.' Lakers are NOT confirmed tanking and NOT missing a franchise player (Davis/Russell are on Wizards now per skills). This means the Cunningham OUT rule triggers: I should NOT draft Detroit ML. REVISED: Rejecting Detroit ML per franchise player rules — Cunningham OUT means do not bet Detroit to win as opponent (Lakers) is not missing a franchise player and is not tanking. Pick REJECTED.",
+        "anchor_players": [
+          "Cade Cunningham (OUT - confirmed)",
+          "Jaden Ivey",
+          "Ausar Thompson"
+        ],
+        "drafted_at": "2026-03-23T22:07:59Z",
+        "market_type": "ml"
+      }
+    ],
+    "rejected": [
+      {
+        "match": "Detroit Pistons vs Los Angeles Lakers",
+        "reason": "Detroit ML blocked by Cunningham OUT (franchise player rule — opponent Lakers not tanking/missing star). Lakers ML rejected: Detroit NetRtg +7.8 vs Lakers +1.4 (6.4pt gap favors Detroit); Lakers hot streak fade candidate; EV at conf 45 = 0.45×1.83-1 = -0.175, negative EV. Spread: Cunningham OUT corrupts Detroit spread analysis, confidence insufficient.",
+        "ml_home": 2.0,
+        "ml_away": 1.83,
+        "decision": "rejected"
+      },
+      {
+        "match": "Orlando Magic vs Indiana Pacers",
+        "reason": "Indiana ML at 6.4 — above 2.50 ceiling; Haliburton OUT (franchise player). Orlando ML at 1.12 — below 1.70 floor. Spread Orlando -12.5: Orlando missing Franz Wagner (key player), confidence 55, below 60 spread floor. EV 0.55×1.89-1 = 0.0395 — below 0.05 minimum.",
+        "ml_home": 1.12,
+        "ml_away": 6.4,
+        "decision": "rejected"
+      },
+      {
+        "match": "Philadelphia 76ers vs Oklahoma City Thunder",
+        "reason": "OKC ML at 1.08 — far below 1.70 floor. Philly ML at 8.5 — above 2.50 ceiling. Spread PHI +17: Embiid/Maxey/PG all OUT, PHI decimated; low confidence PHI covers 17 against elite OKC (NetRtg +11.0).",
+        "ml_home": 8.5,
+        "ml_away": 1.08,
+        "decision": "rejected"
+      },
+      {
+        "match": "Miami Heat vs San Antonio Spurs",
+        "reason": "Spurs ML at 1.58 — below 1.70 floor. Heat ML at 2.43: Spurs NetRtg +7.3 vs Heat +2.9, gap favors Spurs; Heat win probability ~35-38%; EV = 0.37×2.43-1 = -0.101, negative EV. Spread Spurs -4 road: conf 58, EV 0.1194 positive but below 60 spread confidence floor.",
+        "ml_home": 2.43,
+        "ml_away": 1.58,
+        "decision": "rejected"
+      },
+      {
+        "match": "Atlanta Hawks vs Memphis Grizzlies",
+        "reason": "Atlanta ML at 1.15 — below floor. Memphis ML at 5.8 — above 2.50 ceiling. Spread Atlanta -12.5: NetRtg gap only 4.5pts (ATL +1.3 vs MEM -3.2), Jalen Johnson OUT for Atlanta, confidence 55 — below 60 spread floor. EV 0.55×1.92-1 = 0.056 marginally positive but confidence floor not met.",
+        "ml_home": 1.15,
+        "ml_away": 5.8,
+        "decision": "rejected"
+      },
+      {
+        "match": "Chicago Bulls vs Houston Rockets",
+        "reason": "Houston ML at 1.27 — below floor. Chicago ML at 3.8 — above 2.50 ceiling. Spread Rockets -8.5 road: NetRtg gap 8.6pts (HOU +4.2 vs CHI -4.4) but home court adjustment reduces effective gap to ~5.6-6.6pts; road -8.5 is a stretch; confidence 55, below 60 spread floor.",
+        "ml_home": 3.8,
+        "ml_away": 1.27,
+        "decision": "rejected"
+      },
+      {
+        "match": "Utah Jazz vs Toronto Raptors",
+        "reason": "Toronto ML at 1.2 — below floor. Utah ML at 4.7 — above 2.50 ceiling. Spread: Quickley OUT and Poeltl OUT for Toronto (key starters); Utah confirmed tank but Toronto giving 10 road with missing pieces; confidence 48, below 60 floor.",
+        "ml_home": 4.7,
+        "ml_away": 1.2,
+        "decision": "rejected"
+      },
+      {
+        "match": "Dallas Mavericks vs Golden State Warriors",
+        "reason": "Warriors ML at 1.78 (in range): Steph Curry OUT (franchise player) blocks Warriors ML bet. Dallas ML at 2.06: Kyrie OUT (franchise player) for Dallas too. Net evaluation: both FPs out, Warriors also missing Butler/Horford/Seth Curry — gutted; Dallas confidence ~45%, EV = 0.45×2.06-1 = -0.073, negative EV.",
+        "ml_home": 2.06,
+        "ml_away": 1.78,
+        "decision": "rejected"
+      },
+      {
+        "match": "Portland Trail Blazers vs Brooklyn Nets",
+        "reason": "Portland ML at 1.08 — below floor. Brooklyn ML at 8.0 — above 2.50 ceiling. Spread: Portland giving -16 with Lillard OUT (injury management) and Grant/Sharpe OUT; Brooklyn confirmed tank but Portland too depleted to cover -16 confidently.",
+        "ml_home": 1.08,
+        "ml_away": 8.0,
+        "decision": "rejected"
+      },
+      {
+        "match": "LA Clippers vs Milwaukee Bucks",
+        "reason": "Clippers ML at 1.12 — below floor. Bucks ML at 6.4 — above ceiling; Giannis OUT blocks Bucks pick. Spread Clippers -13: Giannis OUT makes Bucks very weak but Kawhi Leonard Questionable for Clippers (-10 confidence); net confidence 45, below 60 spread floor.",
+        "ml_home": 1.12,
+        "ml_away": 6.4,
+        "decision": "rejected"
+      },
+      {
+        "match": "New York Knicks vs New Orleans Pelicans",
+        "reason": "No ML odds available. No spread or O/U posted. Cannot evaluate.",
+        "ml_home": null,
+        "ml_away": null,
+        "decision": "rejected"
+      }
+    ],
+    "report": "**ZERO PICKS DRAFTED — Valid result. No game met all required thresholds tonight.**\n\nSlate quality assessment: Tonight's slate is severely compromised by widespread franchise-player absences. Steph Curry, Kyrie Irving, Giannis Antetokounmpo, Cade Cunningham, Tyrese Haliburton, Joel Embiid, Tyrese Maxey, Franz Wagner, Jalen Johnson, and Damian Lillard are all confirmed OUT — gutting line integrity across the board. Pace data is unavailable (all Pace = 0.0), suppressing totals analysis. No O/U odds were provided by the book anyway.\n\n**Detroit Pistons vs Los Angeles Lakers — REJECTED:** Cunningham OUT triggers franchise player block on Detroit ML. Lakers ML rejected on negative EV (NetRtg gap strongly favors Detroit at home; Lakers hot-streak fade candidate with NetRtg only +1.4).\n\n**Orlando Magic vs Indiana Pacers — REJECTED:** Both ML odds outside target range. Spread confidence and EV marginally below required thresholds; Wagner/Haliburton absences add uncertainty.\n\n**Philadelphia 76ers vs Oklahoma City Thunder — REJECTED:** OKC ML far below floor (1.08). 76ers are completely decimated (Embiid/Maxey/PG all OUT). No viable market.\n\n**Miami Heat vs San Antonio Spurs — REJECTED:** Spurs ML below 1.70 floor. Heat ML negative EV. Spread was closest to qualifying (Spurs -4 road: EV +11.9%) but confidence at 58 falls below the 60 spread floor — one point short.\n\n**Atlanta Hawks vs Memphis Grizzlies — REJECTED:** Both ML odds outside range. Spread (ATL -12.5) produced marginal EV but confidence 55 is below 60 spread floor; Johnson's absence for Atlanta reduces cover confidence.\n\n**Chicago Bulls vs Houston Rockets — REJECTED:** Both ML odds outside range. Rockets -8.5 road spread had solid NetRtg backing but home-court adjustment drops confidence below spread floor.\n\n**Utah Jazz vs Toronto Raptors — REJECTED:** Both ML odds outside range. Toronto's key absences (Quickley, Poeltl) make road spread untenable at -10.\n\n**Dallas Mavericks vs Golden State Warriors — REJECTED:** Steph Curry OUT blocks Warriors ML (franchise player rule). Dallas ML EV negative at -7.3% even with Kyrie OUT. Two gutted rosters make line analysis unreliable.\n\n**Portland Trail Blazers vs Brooklyn Nets — REJECTED:** Both ML outside range. Lillard OUT undermines Portland's ability to cover -16 at home vs tank Brooklyn.\n\n**LA Clippers vs Milwaukee Bucks — REJECTED:** Both ML outside range. Giannis OUT blocks Bucks; Kawhi Leonard Questionable undermines Clippers spread confidence below floor.\n\n**New York Knicks vs New Orleans Pelicans — REJECTED:** No odds posted. Cannot evaluate.\n\n**Slate verdict:** This is one of the weakest betting slates of the season. The combination of mass franchise-player absences, odds concentrated outside target ranges (many lopsided matchups at 1.08-1.15 for heavy favorites), absent Pace data, and no O/U markets leaves no viable picks. Zero picks is the correct disciplined result — bankroll preservation is the priority tonight.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 9142,
+    "tokens_out": 7636,
+    "cost_usd": 0.141966
   }
 ]
