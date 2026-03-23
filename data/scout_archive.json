@@ -380,5 +380,20 @@
     "tokens_in": 7154,
     "tokens_out": 6170,
     "cost_usd": 0.114012
+  },
+  {
+    "ts": "2026-03-23T15:01:17.115415+00:00",
+    "date": "2026-03-23",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_unibet",
+    "draft_count": 0,
+    "picks": [],
+    "rejected": [],
+    "report": "Unable to access real-time NBA schedules, odds, or injury reports for March 23, 2026. Without verified current data on tonight's slate, line movements, injury statuses, and matchup statistics, no picks can be responsibly drafted. Submitting empty draft picks to avoid committing to unverified information.",
+    "retries": 2,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 9145,
+    "tokens_out": 8136,
+    "cost_usd": 0.149475
   }
 ]
