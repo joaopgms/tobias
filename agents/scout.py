@@ -96,8 +96,8 @@ Drafted_at: {datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')}
 
 Draft pick IDs: nba_draft_{today.replace('-','')}_{'{001, 002...}'}
 
-IMPORTANT: You MUST end your response with ALL FOUR of these XML tags in this exact format.
-Do not add any text after the closing </scout_report> tag.
+OUTPUT RULE: Write the XML tags FIRST — no preamble, no analysis before the first tag.
+The scout_report is last and can be brief. Tags must appear in this exact order:
 
 <draft_picks>
 [JSON array of draft pick objects — use [] if no picks meet criteria]
@@ -114,9 +114,9 @@ Use [] only if ALL games were drafted. Every non-drafted game MUST appear here.]
 </rejected_games>
 
 <scout_report>
-For each DRAFTED pick write a short paragraph: edge, key factors, odds, reasoning.
-For all other games write a single line: "HOME vs AWAY — REJECTED/NO EDGE/DEFERRED: [one-line reason]"
-End with 2-3 sentences on tonight's overall slate quality.
+For each DRAFTED pick: one short paragraph (edge, factors, odds).
+For each rejected game: one line — "HOME vs AWAY — DECISION: reason"
+End with 1-2 sentences on slate quality.
 </scout_report>
 """
 
@@ -261,7 +261,7 @@ def run(store) -> None:
             _build_scout_prompt(skills, games_str, odds_str, injuries_str,
                                  standings_str, adv_str,
                                  injuries_source, state, today),
-            max_tokens=8000,
+            max_tokens=10000,
             agent="scout",
         )
         raw = llm_result.text
