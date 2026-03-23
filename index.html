@@ -1806,11 +1806,12 @@ function renderScoutTab(){
       const picks=(todayReport.picks||[]);
       const rejected=(todayReport.rejected||[]);
       // Deduplicate: if a game appears in picks, don't show it again in rejected
-      const _nm=m=>(m||'').toLowerCase().replace(/\s+/g,'');
-      const pickedMatches=new Set(picks.map(p=>_nm(p.match)));
+      // Use sorted team pair so "A vs B" and "B vs A" both match
+      const _teamKey=m=>(m||'').toLowerCase().split(' vs ').map(s=>s.trim()).sort().join('|');
+      const pickedMatches=new Set(picks.map(p=>_teamKey(p.match)));
       const allGames=[
         ...picks.map(p=>({...p,_type:'drafted'})),
-        ...rejected.filter(r=>!pickedMatches.has(_nm(r.match))).map(r=>({...r,_type:'rejected'}))
+        ...rejected.filter(r=>!pickedMatches.has(_teamKey(r.match))).map(r=>({...r,_type:'rejected'}))
       ];
       // Report date header
       const scoutReportDate = todayReport.updated_at ? fmt(todayReport.updated_at) : (todayReport.date||'-');
