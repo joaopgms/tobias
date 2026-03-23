@@ -1643,9 +1643,9 @@ function buildGameCard(game, idx, prefix) {
   const matchStr=game.match||(game.home&&game.away?`${game.home} vs ${game.away}`:'');
   const pts=matchStr.split(' vs ');
   const hm=pts[0]||'', aw=pts[1]||'';
-  const pick=game.pick||'';
+  const pick=game._type==='drafted'?(game.pick||''):'';
   const conf=game.confidence||0;
-  const decision=pick?'drafted':(game.reason?'rejected':'no-edge');
+  const decision=game._type==='drafted'?'drafted':(game.reason?'rejected':'no-edge');
   const badgeClass=decision==='drafted'?'badge-drafted':decision==='rejected'?'badge-rejected':'badge-no-edge';
   const badgeText=decision==='drafted'?'✅ Drafted':decision==='rejected'?'❌ Rejected':'— No Edge';
   const cardId=`${prefix}-gc-${idx}`;
@@ -1805,9 +1805,12 @@ function renderScoutTab(){
     } else {
       const picks=(todayReport.picks||[]);
       const rejected=(todayReport.rejected||[]);
+      // Deduplicate: if a game appears in picks, don't show it again in rejected
+      const _nm=m=>(m||'').toLowerCase().replace(/\s+/g,'');
+      const pickedMatches=new Set(picks.map(p=>_nm(p.match)));
       const allGames=[
         ...picks.map(p=>({...p,_type:'drafted'})),
-        ...rejected.map(r=>({...r,_type:'rejected'}))
+        ...rejected.filter(r=>!pickedMatches.has(_nm(r.match))).map(r=>({...r,_type:'rejected'}))
       ];
       // Report date header
       const scoutReportDate = todayReport.updated_at ? fmt(todayReport.updated_at) : (todayReport.date||'-');
@@ -1819,7 +1822,7 @@ function renderScoutTab(){
       </div>`;
       h+=`<div class="report-summary">
         <div class="report-kpi"><div class="report-kpi-label">Picks</div><div class="report-kpi-val">${picks.length}</div></div>
-        <div class="report-kpi"><div class="report-kpi-label">Games reviewed</div><div class="report-kpi-val">${picks.length + rejected.length}</div></div>
+        <div class="report-kpi"><div class="report-kpi-label">Games reviewed</div><div class="report-kpi-val">${allGames.length}</div></div>
         <div class="report-kpi"><div class="report-kpi-label">Odds source</div><div class="report-kpi-val" style="font-size:.72rem">${todayReport.odds_source||'-'}</div></div>
         <div class="report-kpi"><div class="report-kpi-label">Cost</div><div class="report-kpi-val" style="font-size:.72rem">${todayReport.cost_usd ? '$'+todayReport.cost_usd.toFixed(4) : todayReport.tokens_out ? todayReport.tokens_out+'↓ tokens' : '-'}</div></div>
       </div>`;
