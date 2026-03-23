@@ -15,7 +15,7 @@
           "final_bankroll": null,
           "net_pnl": null,
           "total_bets": 3,
-          "wins": 0,
+          "wins": 1,
           "losses": 2,
           "bust": false
         }
@@ -185,10 +185,10 @@
             "Nikola Jokic (DEN – active)",
             "Peyton Watson (DEN – active, confirmed off injury report)"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "WON",
+          "returned": 196.42,
+          "pnl": 95.17,
+          "settled_at": "2026-03-23T10:53:37.411951+00:00",
           "committed_at": "2026-03-22T20:49:54Z"
         }
       ],
