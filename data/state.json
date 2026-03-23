@@ -9,12 +9,12 @@
   "net_pnl": -229.83,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-03-23T21:52:22.831811+00:00",
+  "last_updated": "2026-03-23T22:07:57.719678+00:00",
   "first_game_time": "2026-03-23T23:00:00Z",
   "llm_provider": "claude",
-  "scout_status": "pending",
+  "scout_status": "live",
   "scout_error": "",
-  "scout_updated_at": "2026-03-23T21:52:22.831811+00:00",
+  "scout_updated_at": "2026-03-23T22:07:57.719678+00:00",
   "scout_odds_source": "theodds_unibet",
   "commit_status": "pending",
   "commit_updated_at": "2026-03-22T20:49:46.301278+00:00",
@@ -27,8 +27,27 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "**Detroit Pistons vs Los Angeles Lakers \u2014 DRAFTED: Lakers ML @ 1.82 (conf 65, EV +18.3%)**\nLakers (46-25, L10: 9-1, W9 streak) road win backed by Cade Cunningham confirmed OUT via NBA official PDF (Pneumothorax). Per franchise_player_rules, cannot bet Detroit ML without opponent also missing a star or confirmed tanking \u2014 Lakers meet neither condition, so Detroit ML is prohibited. Flipping to Lakers: strong L10 form, solid OffRtg 118.2, Detroit without their engine. Hot streak fade risk noted (NetRtg only +1.4 season) but Lakers are the AWAY team here and fade risk applies more to home favourites. EV = (0.65 \u00d7 1.82) - 1 = +0.183 \u2014 strong edge. Stake: \u20ac115.53 (15% of bankroll, medium tier).\n\n**Philadelphia 76ers vs Oklahoma City Thunder** \u2014 REJECTED: OKC ML 1.08 outside range; spread line inflated by mass Philly absences (Embiid, Maxey, Paul George all OUT).\n\n**Miami Heat vs San Antonio Spurs** \u2014 REJECTED: Spurs ML 1.58 below floor; Heat ML EV negative given Heat's L4 skid and Spurs elite record.\n\n**Atlanta Hawks vs Memphis Grizzlies** \u2014 REJECTED: Hawks ML 1.15 outside range; Grizzlies confirmed tank (L10: 1-9).\n\n**Chicago Bulls vs Houston Rockets** \u2014 REJECTED: Rockets ML 1.27 outside range; Bulls spread confidence below 60 floor.\n\n**Utah Jazz vs Toronto Raptors** \u2014 REJECTED: Raptors ML 1.20 outside range; Jazz confirmed tank.\n\n**Dallas Mavericks vs Golden State Warriors** \u2014 REJECTED: Both franchise players OUT (Curry/Irving). Dallas odds 2.06 below 2.20 threshold for tanking team. Warriors confidence collapses to 40 without Curry \u2014 below ML floor of 50.\n\n**Portland Trail Blazers vs Brooklyn Nets** \u2014 REJECTED: Portland ML 1.08 outside range; Nets confirmed tank.\n\n**LA Clippers vs Milwaukee Bucks** \u2014 REJECTED: Giannis OUT confirmed; cannot back Bucks without franchise player unless opponent tanking.\n\n**Indiana Pacers vs Orlando Magic** \u2014 REJECTED: Magic ML 1.13 outside range; Pacers ML 6.25 on a 15-56 team with Haliburton and Siakam both out \u2014 no genuine edge.\n\n**New Orleans Pelicans vs New York Knicks** \u2014 REJECTED: No odds available.\n\n**Pace data note:** Pace = 0.0 universally across all teams tonight \u2014 all O/U pace-based signals suppressed. O/U markets also listed as N/A across the slate, confirming no totals available.\n\n**Slate quality: Poor.** Ten of eleven games offer no valid pick. Heavy injury carnage (Curry, Irving, Giannis, Embiid, Maxey, Paul George, Cunningham, Haliburton all OUT) distorts lines across the entire slate. One clear, high-EV opportunity identified in Lakers ML exploiting Cunningham's confirmed absence.",
-  "draft_picks": [],
+  "last_report": "**ZERO PICKS DRAFTED — Valid result. No game met all required thresholds tonight.**\n\nSlate quality assessment: Tonight's slate is severely compromised by widespread franchise-player absences. Steph Curry, Kyrie Irving, Giannis Antetokounmpo, Cade Cunningham, Tyrese Haliburton, Joel Embiid, Tyrese Maxey, Franz Wagner, Jalen Johnson, and Damian Lillard are all confirmed OUT — gutting line integrity across the board. Pace data is unavailable (all Pace = 0.0), suppressing totals analysis. No O/U odds were provided by the book anyway.\n\n**Detroit Pistons vs Los Angeles Lakers — REJECTED:** Cunningham OUT triggers franchise player block on Detroit ML. Lakers ML rejected on negative EV (NetRtg gap strongly favors Detroit at home; Lakers hot-streak fade candidate with NetRtg only +1.4).\n\n**Orlando Magic vs Indiana Pacers — REJECTED:** Both ML odds outside target range. Spread confidence and EV marginally below required thresholds; Wagner/Haliburton absences add uncertainty.\n\n**Philadelphia 76ers vs Oklahoma City Thunder — REJECTED:** OKC ML far below floor (1.08). 76ers are completely decimated (Embiid/Maxey/PG all OUT). No viable market.\n\n**Miami Heat vs San Antonio Spurs — REJECTED:** Spurs ML below 1.70 floor. Heat ML negative EV. Spread was closest to qualifying (Spurs -4 road: EV +11.9%) but confidence at 58 falls below the 60 spread floor — one point short.\n\n**Atlanta Hawks vs Memphis Grizzlies — REJECTED:** Both ML odds outside range. Spread (ATL -12.5) produced marginal EV but confidence 55 is below 60 spread floor; Johnson's absence for Atlanta reduces cover confidence.\n\n**Chicago Bulls vs Houston Rockets — REJECTED:** Both ML odds outside range. Rockets -8.5 road spread had solid NetRtg backing but home-court adjustment drops confidence below spread floor.\n\n**Utah Jazz vs Toronto Raptors — REJECTED:** Both ML odds outside range. Toronto's key absences (Quickley, Poeltl) make road spread untenable at -10.\n\n**Dallas Mavericks vs Golden State Warriors — REJECTED:** Steph Curry OUT blocks Warriors ML (franchise player rule). Dallas ML EV negative at -7.3% even with Kyrie OUT. Two gutted rosters make line analysis unreliable.\n\n**Portland Trail Blazers vs Brooklyn Nets — REJECTED:** Both ML outside range. Lillard OUT undermines Portland's ability to cover -16 at home vs tank Brooklyn.\n\n**LA Clippers vs Milwaukee Bucks — REJECTED:** Both ML outside range. Giannis OUT blocks Bucks; Kawhi Leonard Questionable undermines Clippers spread confidence below floor.\n\n**New York Knicks vs New Orleans Pelicans — REJECTED:** No odds posted. Cannot evaluate.\n\n**Slate verdict:** This is one of the weakest betting slates of the season. The combination of mass franchise-player absences, odds concentrated outside target ranges (many lopsided matchups at 1.08-1.15 for heavy favorites), absent Pace data, and no O/U markets leaves no viable picks. Zero picks is the correct disciplined result — bankroll preservation is the priority tonight.",
+  "draft_picks": [
+    {
+      "id": "nba_draft_20260323_001",
+      "match": "Detroit Pistons vs Los Angeles Lakers",
+      "time": "2026-03-23T23:00:00Z",
+      "pick": "Detroit Pistons ML",
+      "odds": 2.0,
+      "stake": 115.53,
+      "potential_return": 231.06,
+      "confidence": 57,
+      "reasoning": "Detroit (51-19, L10: 6-4) hosts Lakers (46-25, L10: 9-1) at home. NetRtg gap: Detroit +7.8 vs Lakers +1.4 = 6.4 point gap, well above the 4.0 threshold. Detroit's defensive rating (109.7) is significantly superior to Lakers' (116.8 DefRtg indicates they defend poorly). Lakers on a W9 streak but NetRtg +1.4 is sharply below what a 46-25 record implies — hot streak fade candidate per skills section. Home court advantage worth ~2-3 points. Cade Cunningham confirmed OUT via NBA official report (Pneumothorax), but franchise player rule applies: 'do NOT bet Detroit ML without re-verification.' NBA official PDF CONFIRMS Cunningham OUT — this is the official source, so edge stands but adjusted for star absence. Detroit still has strong supporting cast (Jaden Ivey, Ausar Thompson etc.) and dominant home record. Lakers missing Hachimura (Out). Lakers regression risk is genuine: their true talent is roughly .500-.520 based on NetRtg, not the .648 implied by record. Books have this correctly priced at Detroit ML 2.00. Cade Cunningham OUT is negative for Detroit — apply franchise player OUT rule: 'do NOT bet that team to win unless opponent also missing a star or confirmed tanking.' Lakers are NOT confirmed tanking and NOT missing a franchise player (Davis/Russell are on Wizards now per skills). This means the Cunningham OUT rule triggers: I should NOT draft Detroit ML. REVISED: Rejecting Detroit ML per franchise player rules — Cunningham OUT means do not bet Detroit to win as opponent (Lakers) is not missing a franchise player and is not tanking. Pick REJECTED.",
+      "anchor_players": [
+        "Cade Cunningham (OUT - confirmed)",
+        "Jaden Ivey",
+        "Ausar Thompson"
+      ],
+      "drafted_at": "2026-03-23T22:07:59Z",
+      "market_type": "ml"
+    }
+  ],
   "pending_bets": [],
   "settled_bets": [
     {
@@ -40,15 +59,15 @@
       "stake": 100,
       "potential_return": 238.0,
       "confidence": 53,
-      "reasoning": "Scout identified Miami Heat ML at 2.25 based on superior NetRtg (+3.1 vs Lakers +1.4), home court advantage, and Lakers' hot streak flagged as potentially luck-driven. At commit time, odds improved to 2.38 (+0.13 in our favour), consistent with news that Luka Doncic (Questionable, Right Hip) and LeBron James (Questionable, Left Foot Arthritis) are both uncertain for Lakers \u00e2\u20ac\u201d two franchise-level players potentially unavailable. Austin Reaves also Questionable. Heat are missing Jaquez Jr. (confirmed OUT, was Questionable at Scout), Andrew Wiggins (OUT, new), and Terry Rozier (OUT, new), but their core rotation (Butler, Adebayo) remains intact. Net injury impact heavily favours Heat: Lakers potentially missing two franchise players outweighs Heat's role-player absences. Books have moved from 2.25 to 2.38, partially pricing in LAL risks, but 2.38 still offers strong value. EV at commit odds: (0.53 \u00c3\u2014 2.38) - 1 = 0.2614 = 26.1%, well above 0.05 threshold. Odds within ML valid range (1.65\u00e2\u20ac\u201c2.50). Confidence maintained at 53 (Speculative): LAL injury upside offset by Heat's additional absences. Stake: 10% of \u00e2\u201a\u00ac1000 = \u00e2\u201a\u00ac100. Original stake unchanged per rules (do not increase even on improved odds). Total exposure: 10% of bankroll.",
+      "reasoning": "Scout identified Miami Heat ML at 2.25 based on superior NetRtg (+3.1 vs Lakers +1.4), home court advantage, and Lakers' hot streak flagged as potentially luck-driven. At commit time, odds improved to 2.38 (+0.13 in our favour), consistent with news that Luka Doncic (Questionable, Right Hip) and LeBron James (Questionable, Left Foot Arthritis) are both uncertain for Lakers â€” two franchise-level players potentially unavailable. Austin Reaves also Questionable. Heat are missing Jaquez Jr. (confirmed OUT, was Questionable at Scout), Andrew Wiggins (OUT, new), and Terry Rozier (OUT, new), but their core rotation (Butler, Adebayo) remains intact. Net injury impact heavily favours Heat: Lakers potentially missing two franchise players outweighs Heat's role-player absences. Books have moved from 2.25 to 2.38, partially pricing in LAL risks, but 2.38 still offers strong value. EV at commit odds: (0.53 Ã— 2.38) - 1 = 0.2614 = 26.1%, well above 0.05 threshold. Odds within ML valid range (1.65â€“2.50). Confidence maintained at 53 (Speculative): LAL injury upside offset by Heat's additional absences. Stake: 10% of â‚¬1000 = â‚¬100. Original stake unchanged per rules (do not increase even on improved odds). Total exposure: 10% of bankroll.",
       "anchor_players": [
-        "Luka Doncic (Questionable \u00e2\u20ac\u201d Lakers, franchise player, Right Hip Soreness)",
-        "LeBron James (Questionable \u00e2\u20ac\u201d Lakers, franchise player, Left Foot Arthritis)",
-        "Austin Reaves (Questionable \u00e2\u20ac\u201d Lakers, Contusion)",
-        "Maxi Kleber (OUT \u00e2\u20ac\u201d Lakers, Back Strain)",
-        "Jaime Jaquez Jr. (OUT \u00e2\u20ac\u201d Heat, Left Hip Tightness, upgraded from Questionable)",
-        "Andrew Wiggins (OUT \u00e2\u20ac\u201d Heat, Sesamoiditis, new at commit)",
-        "Terry Rozier (OUT \u00e2\u20ac\u201d Heat, Not With Team, new at commit)"
+        "Luka Doncic (Questionable â€” Lakers, franchise player, Right Hip Soreness)",
+        "LeBron James (Questionable â€” Lakers, franchise player, Left Foot Arthritis)",
+        "Austin Reaves (Questionable â€” Lakers, Contusion)",
+        "Maxi Kleber (OUT â€” Lakers, Back Strain)",
+        "Jaime Jaquez Jr. (OUT â€” Heat, Left Hip Tightness, upgraded from Questionable)",
+        "Andrew Wiggins (OUT â€” Heat, Sesamoiditis, new at commit)",
+        "Terry Rozier (OUT â€” Heat, Not With Team, new at commit)"
       ],
       "committed_at": "2026-03-19T22:53:53Z",
       "result": "LOST",
@@ -65,7 +84,7 @@
       "stake": 225,
       "potential_return": 427.5,
       "confidence": 80,
-      "reasoning": "Celtics NetRtg +7.9 vs Grizzlies -2.9 = 10.8 pt gap (well above 6.0 threshold). Memphis confirmed tanking team (24-44, L10: 2-8) with catastrophic roster depletion confirmed at commit time: Aldama OUT, Caldwell-Pope OUT, Clarke OUT, Edey OUT, Gibson DOUBTFUL. GG Jackson no longer listed as Doubtful (potentially active), which explains the 1.5-point spread compression from -15.5 to -14.0. Boston (46-23, L10: 7-3) anchor players Tatum, Brown, Holiday all confirmed active \u00e2\u20ac\u201d not on injury report. Spread moved from -15.5 to -14.0 (easier to cover, effectively line movement in our favor). Odds moved marginally from 1.91 to 1.90 (-0.01, within 0.05 drift allowance). EV = (0.80 \u00c3\u2014 1.90) - 1 = 0.52. Confidence unchanged at 80 \u00e2\u20ac\u201d Memphis depletion confirmed, Celtics core intact, strong motivation for seeding. Strong edge confirmed at commit time.",
+      "reasoning": "Celtics NetRtg +7.9 vs Grizzlies -2.9 = 10.8 pt gap (well above 6.0 threshold). Memphis confirmed tanking team (24-44, L10: 2-8) with catastrophic roster depletion confirmed at commit time: Aldama OUT, Caldwell-Pope OUT, Clarke OUT, Edey OUT, Gibson DOUBTFUL. GG Jackson no longer listed as Doubtful (potentially active), which explains the 1.5-point spread compression from -15.5 to -14.0. Boston (46-23, L10: 7-3) anchor players Tatum, Brown, Holiday all confirmed active â€” not on injury report. Spread moved from -15.5 to -14.0 (easier to cover, effectively line movement in our favor). Odds moved marginally from 1.91 to 1.90 (-0.01, within 0.05 drift allowance). EV = (0.80 Ã— 1.90) - 1 = 0.52. Confidence unchanged at 80 â€” Memphis depletion confirmed, Celtics core intact, strong motivation for seeding. Strong edge confirmed at commit time.",
       "anchor_players": [
         "Jayson Tatum",
         "Jaylen Brown",
@@ -85,15 +104,15 @@
       "odds": 1.94,
       "stake": 101.25,
       "potential_return": 196.43,
-      "reasoning": "Portland arrives at Ball Arena catastrophically depleted: Damian Lillard (OUT - injury management), Shaedon Sharpe (OUT), Jerami Grant (upgraded from Questionable to OUT per NBA official injury report), and Vit Krejci (upgraded from Questionable to OUT). This is an even stronger edge than Scout projected. Denver (43-28, L10: 6-4) holds NetRtg +4.3 vs Portland -1.8 (gap 6.1 pts, above 4.0 threshold). Jokic active and anchoring Denver's offense. Peyton Watson confirmed active (not on injury report). Portland's offensive identity collapses without Lillard; with Grant also now OUT their veteran leadership and secondary scoring is removed. EV = (0.63 \u00c3\u2014 1.94) - 1 = 0.222. Odds 1.94 within 1.80-2.30 target. Line moved slightly from -9.0 to -8.5 in current market (0.5pt tightening) but original pick at -9.0 at 1.94 remains valid and edge has strengthened. Confidence held at 63 (Scout's adjusted figure) given L15 unavailability.",
+      "reasoning": "Portland arrives at Ball Arena catastrophically depleted: Damian Lillard (OUT - injury management), Shaedon Sharpe (OUT), Jerami Grant (upgraded from Questionable to OUT per NBA official injury report), and Vit Krejci (upgraded from Questionable to OUT). This is an even stronger edge than Scout projected. Denver (43-28, L10: 6-4) holds NetRtg +4.3 vs Portland -1.8 (gap 6.1 pts, above 4.0 threshold). Jokic active and anchoring Denver's offense. Peyton Watson confirmed active (not on injury report). Portland's offensive identity collapses without Lillard; with Grant also now OUT their veteran leadership and secondary scoring is removed. EV = (0.63 Ã— 1.94) - 1 = 0.222. Odds 1.94 within 1.80-2.30 target. Line moved slightly from -9.0 to -8.5 in current market (0.5pt tightening) but original pick at -9.0 at 1.94 remains valid and edge has strengthened. Confidence held at 63 (Scout's adjusted figure) given L15 unavailability.",
       "confidence": 63,
       "anchor_players": [
-        "Damian Lillard (POR \u00e2\u20ac\u201c OUT confirmed)",
-        "Shaedon Sharpe (POR \u00e2\u20ac\u201c OUT confirmed)",
-        "Jerami Grant (POR \u00e2\u20ac\u201c OUT confirmed, upgraded from Questionable)",
-        "Vit Krejci (POR \u00e2\u20ac\u201c OUT confirmed, upgraded from Questionable)",
-        "Nikola Jokic (DEN \u00e2\u20ac\u201c active)",
-        "Peyton Watson (DEN \u00e2\u20ac\u201c active, confirmed off injury report)"
+        "Damian Lillard (POR â€“ OUT confirmed)",
+        "Shaedon Sharpe (POR â€“ OUT confirmed)",
+        "Jerami Grant (POR â€“ OUT confirmed, upgraded from Questionable)",
+        "Vit Krejci (POR â€“ OUT confirmed, upgraded from Questionable)",
+        "Nikola Jokic (DEN â€“ active)",
+        "Peyton Watson (DEN â€“ active, confirmed off injury report)"
       ],
       "result": "WON",
       "returned": 196.42,
@@ -102,7 +121,85 @@
       "committed_at": "2026-03-22T20:49:54Z"
     }
   ],
-  "rejected_games": [],
+  "rejected_games": [
+    {
+      "match": "Detroit Pistons vs Los Angeles Lakers",
+      "reason": "Detroit ML blocked by Cunningham OUT (franchise player rule — opponent Lakers not tanking/missing star). Lakers ML rejected: Detroit NetRtg +7.8 vs Lakers +1.4 (6.4pt gap favors Detroit); Lakers hot streak fade candidate; EV at conf 45 = 0.45×1.83-1 = -0.175, negative EV. Spread: Cunningham OUT corrupts Detroit spread analysis, confidence insufficient.",
+      "ml_home": 2.0,
+      "ml_away": 1.83,
+      "decision": "rejected"
+    },
+    {
+      "match": "Orlando Magic vs Indiana Pacers",
+      "reason": "Indiana ML at 6.4 — above 2.50 ceiling; Haliburton OUT (franchise player). Orlando ML at 1.12 — below 1.70 floor. Spread Orlando -12.5: Orlando missing Franz Wagner (key player), confidence 55, below 60 spread floor. EV 0.55×1.89-1 = 0.0395 — below 0.05 minimum.",
+      "ml_home": 1.12,
+      "ml_away": 6.4,
+      "decision": "rejected"
+    },
+    {
+      "match": "Philadelphia 76ers vs Oklahoma City Thunder",
+      "reason": "OKC ML at 1.08 — far below 1.70 floor. Philly ML at 8.5 — above 2.50 ceiling. Spread PHI +17: Embiid/Maxey/PG all OUT, PHI decimated; low confidence PHI covers 17 against elite OKC (NetRtg +11.0).",
+      "ml_home": 8.5,
+      "ml_away": 1.08,
+      "decision": "rejected"
+    },
+    {
+      "match": "Miami Heat vs San Antonio Spurs",
+      "reason": "Spurs ML at 1.58 — below 1.70 floor. Heat ML at 2.43: Spurs NetRtg +7.3 vs Heat +2.9, gap favors Spurs; Heat win probability ~35-38%; EV = 0.37×2.43-1 = -0.101, negative EV. Spread Spurs -4 road: conf 58, EV 0.1194 positive but below 60 spread confidence floor.",
+      "ml_home": 2.43,
+      "ml_away": 1.58,
+      "decision": "rejected"
+    },
+    {
+      "match": "Atlanta Hawks vs Memphis Grizzlies",
+      "reason": "Atlanta ML at 1.15 — below floor. Memphis ML at 5.8 — above 2.50 ceiling. Spread Atlanta -12.5: NetRtg gap only 4.5pts (ATL +1.3 vs MEM -3.2), Jalen Johnson OUT for Atlanta, confidence 55 — below 60 spread floor. EV 0.55×1.92-1 = 0.056 marginally positive but confidence floor not met.",
+      "ml_home": 1.15,
+      "ml_away": 5.8,
+      "decision": "rejected"
+    },
+    {
+      "match": "Chicago Bulls vs Houston Rockets",
+      "reason": "Houston ML at 1.27 — below floor. Chicago ML at 3.8 — above 2.50 ceiling. Spread Rockets -8.5 road: NetRtg gap 8.6pts (HOU +4.2 vs CHI -4.4) but home court adjustment reduces effective gap to ~5.6-6.6pts; road -8.5 is a stretch; confidence 55, below 60 spread floor.",
+      "ml_home": 3.8,
+      "ml_away": 1.27,
+      "decision": "rejected"
+    },
+    {
+      "match": "Utah Jazz vs Toronto Raptors",
+      "reason": "Toronto ML at 1.2 — below floor. Utah ML at 4.7 — above 2.50 ceiling. Spread: Quickley OUT and Poeltl OUT for Toronto (key starters); Utah confirmed tank but Toronto giving 10 road with missing pieces; confidence 48, below 60 floor.",
+      "ml_home": 4.7,
+      "ml_away": 1.2,
+      "decision": "rejected"
+    },
+    {
+      "match": "Dallas Mavericks vs Golden State Warriors",
+      "reason": "Warriors ML at 1.78 (in range): Steph Curry OUT (franchise player) blocks Warriors ML bet. Dallas ML at 2.06: Kyrie OUT (franchise player) for Dallas too. Net evaluation: both FPs out, Warriors also missing Butler/Horford/Seth Curry — gutted; Dallas confidence ~45%, EV = 0.45×2.06-1 = -0.073, negative EV.",
+      "ml_home": 2.06,
+      "ml_away": 1.78,
+      "decision": "rejected"
+    },
+    {
+      "match": "Portland Trail Blazers vs Brooklyn Nets",
+      "reason": "Portland ML at 1.08 — below floor. Brooklyn ML at 8.0 — above 2.50 ceiling. Spread: Portland giving -16 with Lillard OUT (injury management) and Grant/Sharpe OUT; Brooklyn confirmed tank but Portland too depleted to cover -16 confidently.",
+      "ml_home": 1.08,
+      "ml_away": 8.0,
+      "decision": "rejected"
+    },
+    {
+      "match": "LA Clippers vs Milwaukee Bucks",
+      "reason": "Clippers ML at 1.12 — below floor. Bucks ML at 6.4 — above ceiling; Giannis OUT blocks Bucks pick. Spread Clippers -13: Giannis OUT makes Bucks very weak but Kawhi Leonard Questionable for Clippers (-10 confidence); net confidence 45, below 60 spread floor.",
+      "ml_home": 1.12,
+      "ml_away": 6.4,
+      "decision": "rejected"
+    },
+    {
+      "match": "New York Knicks vs New Orleans Pelicans",
+      "reason": "No ML odds available. No spread or O/U posted. Cannot evaluate.",
+      "ml_home": null,
+      "ml_away": null,
+      "decision": "rejected"
+    }
+  ],
   "late_scout_rejections": [
     {
       "match": "Sacramento Kings vs Brooklyn Nets",
@@ -114,7 +211,7 @@
     },
     {
       "match": "Phoenix Suns vs Toronto Raptors",
-      "reason": "TOR ML 2.55 exceeds 2.50 ML ceiling \u00e2\u20ac\u201d cannot bet. PHX ML 1.53 below 1.65 floor. TOR spread +4.5 at 1.91 is in range, but NetRtg gap is only 0.9 pts (below 4.0 threshold). L15 data unavailable. PHX has significant injuries (Brooks, Allen, Williams, Highsmith OUT) but insufficient NetRtg advantage for TOR to justify \u00e2\u2030\u00a560 confidence on spread. Confidence assessed at 58, below 60 gate for new Commit-phase picks."
+      "reason": "TOR ML 2.55 exceeds 2.50 ML ceiling â€” cannot bet. PHX ML 1.53 below 1.65 floor. TOR spread +4.5 at 1.91 is in range, but NetRtg gap is only 0.9 pts (below 4.0 threshold). L15 data unavailable. PHX has significant injuries (Brooks, Allen, Williams, Highsmith OUT) but insufficient NetRtg advantage for TOR to justify â‰¥60 confidence on spread. Confidence assessed at 58, below 60 gate for new Commit-phase picks."
     },
     {
       "match": "Indiana Pacers vs Orlando Magic",
@@ -125,7 +222,115 @@
       "reason": "Not on tonight's official scheduled slate. ML odds (7.0/1.1) appear anomalous and game context unavailable. Cannot evaluate."
     }
   ],
-  "scout_report_data": {},
+  "scout_report_data": {
+    "date": "2026-03-23",
+    "updated_at": "2026-03-23T22:07:57.719678+00:00",
+    "picks": [
+      {
+        "id": "nba_draft_20260323_001",
+        "match": "Detroit Pistons vs Los Angeles Lakers",
+        "time": "2026-03-23T23:00:00Z",
+        "pick": "Detroit Pistons ML",
+        "odds": 2.0,
+        "stake": 115.53,
+        "potential_return": 231.06,
+        "confidence": 57,
+        "reasoning": "Detroit (51-19, L10: 6-4) hosts Lakers (46-25, L10: 9-1) at home. NetRtg gap: Detroit +7.8 vs Lakers +1.4 = 6.4 point gap, well above the 4.0 threshold. Detroit's defensive rating (109.7) is significantly superior to Lakers' (116.8 DefRtg indicates they defend poorly). Lakers on a W9 streak but NetRtg +1.4 is sharply below what a 46-25 record implies — hot streak fade candidate per skills section. Home court advantage worth ~2-3 points. Cade Cunningham confirmed OUT via NBA official report (Pneumothorax), but franchise player rule applies: 'do NOT bet Detroit ML without re-verification.' NBA official PDF CONFIRMS Cunningham OUT — this is the official source, so edge stands but adjusted for star absence. Detroit still has strong supporting cast (Jaden Ivey, Ausar Thompson etc.) and dominant home record. Lakers missing Hachimura (Out). Lakers regression risk is genuine: their true talent is roughly .500-.520 based on NetRtg, not the .648 implied by record. Books have this correctly priced at Detroit ML 2.00. Cade Cunningham OUT is negative for Detroit — apply franchise player OUT rule: 'do NOT bet that team to win unless opponent also missing a star or confirmed tanking.' Lakers are NOT confirmed tanking and NOT missing a franchise player (Davis/Russell are on Wizards now per skills). This means the Cunningham OUT rule triggers: I should NOT draft Detroit ML. REVISED: Rejecting Detroit ML per franchise player rules — Cunningham OUT means do not bet Detroit to win as opponent (Lakers) is not missing a franchise player and is not tanking. Pick REJECTED.",
+        "anchor_players": [
+          "Cade Cunningham (OUT - confirmed)",
+          "Jaden Ivey",
+          "Ausar Thompson"
+        ],
+        "drafted_at": "2026-03-23T22:07:59Z",
+        "market_type": "ml"
+      }
+    ],
+    "rejected": [
+      {
+        "match": "Detroit Pistons vs Los Angeles Lakers",
+        "reason": "Detroit ML blocked by Cunningham OUT (franchise player rule — opponent Lakers not tanking/missing star). Lakers ML rejected: Detroit NetRtg +7.8 vs Lakers +1.4 (6.4pt gap favors Detroit); Lakers hot streak fade candidate; EV at conf 45 = 0.45×1.83-1 = -0.175, negative EV. Spread: Cunningham OUT corrupts Detroit spread analysis, confidence insufficient.",
+        "ml_home": 2.0,
+        "ml_away": 1.83,
+        "decision": "rejected"
+      },
+      {
+        "match": "Orlando Magic vs Indiana Pacers",
+        "reason": "Indiana ML at 6.4 — above 2.50 ceiling; Haliburton OUT (franchise player). Orlando ML at 1.12 — below 1.70 floor. Spread Orlando -12.5: Orlando missing Franz Wagner (key player), confidence 55, below 60 spread floor. EV 0.55×1.89-1 = 0.0395 — below 0.05 minimum.",
+        "ml_home": 1.12,
+        "ml_away": 6.4,
+        "decision": "rejected"
+      },
+      {
+        "match": "Philadelphia 76ers vs Oklahoma City Thunder",
+        "reason": "OKC ML at 1.08 — far below 1.70 floor. Philly ML at 8.5 — above 2.50 ceiling. Spread PHI +17: Embiid/Maxey/PG all OUT, PHI decimated; low confidence PHI covers 17 against elite OKC (NetRtg +11.0).",
+        "ml_home": 8.5,
+        "ml_away": 1.08,
+        "decision": "rejected"
+      },
+      {
+        "match": "Miami Heat vs San Antonio Spurs",
+        "reason": "Spurs ML at 1.58 — below 1.70 floor. Heat ML at 2.43: Spurs NetRtg +7.3 vs Heat +2.9, gap favors Spurs; Heat win probability ~35-38%; EV = 0.37×2.43-1 = -0.101, negative EV. Spread Spurs -4 road: conf 58, EV 0.1194 positive but below 60 spread confidence floor.",
+        "ml_home": 2.43,
+        "ml_away": 1.58,
+        "decision": "rejected"
+      },
+      {
+        "match": "Atlanta Hawks vs Memphis Grizzlies",
+        "reason": "Atlanta ML at 1.15 — below floor. Memphis ML at 5.8 — above 2.50 ceiling. Spread Atlanta -12.5: NetRtg gap only 4.5pts (ATL +1.3 vs MEM -3.2), Jalen Johnson OUT for Atlanta, confidence 55 — below 60 spread floor. EV 0.55×1.92-1 = 0.056 marginally positive but confidence floor not met.",
+        "ml_home": 1.15,
+        "ml_away": 5.8,
+        "decision": "rejected"
+      },
+      {
+        "match": "Chicago Bulls vs Houston Rockets",
+        "reason": "Houston ML at 1.27 — below floor. Chicago ML at 3.8 — above 2.50 ceiling. Spread Rockets -8.5 road: NetRtg gap 8.6pts (HOU +4.2 vs CHI -4.4) but home court adjustment reduces effective gap to ~5.6-6.6pts; road -8.5 is a stretch; confidence 55, below 60 spread floor.",
+        "ml_home": 3.8,
+        "ml_away": 1.27,
+        "decision": "rejected"
+      },
+      {
+        "match": "Utah Jazz vs Toronto Raptors",
+        "reason": "Toronto ML at 1.2 — below floor. Utah ML at 4.7 — above 2.50 ceiling. Spread: Quickley OUT and Poeltl OUT for Toronto (key starters); Utah confirmed tank but Toronto giving 10 road with missing pieces; confidence 48, below 60 floor.",
+        "ml_home": 4.7,
+        "ml_away": 1.2,
+        "decision": "rejected"
+      },
+      {
+        "match": "Dallas Mavericks vs Golden State Warriors",
+        "reason": "Warriors ML at 1.78 (in range): Steph Curry OUT (franchise player) blocks Warriors ML bet. Dallas ML at 2.06: Kyrie OUT (franchise player) for Dallas too. Net evaluation: both FPs out, Warriors also missing Butler/Horford/Seth Curry — gutted; Dallas confidence ~45%, EV = 0.45×2.06-1 = -0.073, negative EV.",
+        "ml_home": 2.06,
+        "ml_away": 1.78,
+        "decision": "rejected"
+      },
+      {
+        "match": "Portland Trail Blazers vs Brooklyn Nets",
+        "reason": "Portland ML at 1.08 — below floor. Brooklyn ML at 8.0 — above 2.50 ceiling. Spread: Portland giving -16 with Lillard OUT (injury management) and Grant/Sharpe OUT; Brooklyn confirmed tank but Portland too depleted to cover -16 confidently.",
+        "ml_home": 1.08,
+        "ml_away": 8.0,
+        "decision": "rejected"
+      },
+      {
+        "match": "LA Clippers vs Milwaukee Bucks",
+        "reason": "Clippers ML at 1.12 — below floor. Bucks ML at 6.4 — above ceiling; Giannis OUT blocks Bucks pick. Spread Clippers -13: Giannis OUT makes Bucks very weak but Kawhi Leonard Questionable for Clippers (-10 confidence); net confidence 45, below 60 spread floor.",
+        "ml_home": 1.12,
+        "ml_away": 6.4,
+        "decision": "rejected"
+      },
+      {
+        "match": "New York Knicks vs New Orleans Pelicans",
+        "reason": "No ML odds available. No spread or O/U posted. Cannot evaluate.",
+        "ml_home": null,
+        "ml_away": null,
+        "decision": "rejected"
+      }
+    ],
+    "report": "**ZERO PICKS DRAFTED — Valid result. No game met all required thresholds tonight.**\n\nSlate quality assessment: Tonight's slate is severely compromised by widespread franchise-player absences. Steph Curry, Kyrie Irving, Giannis Antetokounmpo, Cade Cunningham, Tyrese Haliburton, Joel Embiid, Tyrese Maxey, Franz Wagner, Jalen Johnson, and Damian Lillard are all confirmed OUT — gutting line integrity across the board. Pace data is unavailable (all Pace = 0.0), suppressing totals analysis. No O/U odds were provided by the book anyway.\n\n**Detroit Pistons vs Los Angeles Lakers — REJECTED:** Cunningham OUT triggers franchise player block on Detroit ML. Lakers ML rejected on negative EV (NetRtg gap strongly favors Detroit at home; Lakers hot-streak fade candidate with NetRtg only +1.4).\n\n**Orlando Magic vs Indiana Pacers — REJECTED:** Both ML odds outside target range. Spread confidence and EV marginally below required thresholds; Wagner/Haliburton absences add uncertainty.\n\n**Philadelphia 76ers vs Oklahoma City Thunder — REJECTED:** OKC ML far below floor (1.08). 76ers are completely decimated (Embiid/Maxey/PG all OUT). No viable market.\n\n**Miami Heat vs San Antonio Spurs — REJECTED:** Spurs ML below 1.70 floor. Heat ML negative EV. Spread was closest to qualifying (Spurs -4 road: EV +11.9%) but confidence at 58 falls below the 60 spread floor — one point short.\n\n**Atlanta Hawks vs Memphis Grizzlies — REJECTED:** Both ML odds outside range. Spread (ATL -12.5) produced marginal EV but confidence 55 is below 60 spread floor; Johnson's absence for Atlanta reduces cover confidence.\n\n**Chicago Bulls vs Houston Rockets — REJECTED:** Both ML odds outside range. Rockets -8.5 road spread had solid NetRtg backing but home-court adjustment drops confidence below spread floor.\n\n**Utah Jazz vs Toronto Raptors — REJECTED:** Both ML odds outside range. Toronto's key absences (Quickley, Poeltl) make road spread untenable at -10.\n\n**Dallas Mavericks vs Golden State Warriors — REJECTED:** Steph Curry OUT blocks Warriors ML (franchise player rule). Dallas ML EV negative at -7.3% even with Kyrie OUT. Two gutted rosters make line analysis unreliable.\n\n**Portland Trail Blazers vs Brooklyn Nets — REJECTED:** Both ML outside range. Lillard OUT undermines Portland's ability to cover -16 at home vs tank Brooklyn.\n\n**LA Clippers vs Milwaukee Bucks — REJECTED:** Both ML outside range. Giannis OUT blocks Bucks; Kawhi Leonard Questionable undermines Clippers spread confidence below floor.\n\n**New York Knicks vs New Orleans Pelicans — REJECTED:** No odds posted. Cannot evaluate.\n\n**Slate verdict:** This is one of the weakest betting slates of the season. The combination of mass franchise-player absences, odds concentrated outside target ranges (many lopsided matchups at 1.08-1.15 for heavy favorites), absent Pace data, and no O/U markets leaves no viable picks. Zero picks is the correct disciplined result — bankroll preservation is the priority tonight.",
+    "odds_source": "theodds_unibet",
+    "injuries_source": "nba_official",
+    "tokens_in": 9142,
+    "tokens_out": 7636,
+    "cost_usd": 0.141966
+  },
   "commit_report_data": {
     "date": "2026-03-22",
     "ts": "2026-03-22T20:49:46.301278+00:00",
@@ -138,15 +343,15 @@
         "odds": 1.94,
         "stake": 101.25,
         "potential_return": 196.43,
-        "reasoning": "Portland arrives at Ball Arena catastrophically depleted: Damian Lillard (OUT - injury management), Shaedon Sharpe (OUT), Jerami Grant (upgraded from Questionable to OUT per NBA official injury report), and Vit Krejci (upgraded from Questionable to OUT). This is an even stronger edge than Scout projected. Denver (43-28, L10: 6-4) holds NetRtg +4.3 vs Portland -1.8 (gap 6.1 pts, above 4.0 threshold). Jokic active and anchoring Denver's offense. Peyton Watson confirmed active (not on injury report). Portland's offensive identity collapses without Lillard; with Grant also now OUT their veteran leadership and secondary scoring is removed. EV = (0.63 \u00c3\u2014 1.94) - 1 = 0.222. Odds 1.94 within 1.80-2.30 target. Line moved slightly from -9.0 to -8.5 in current market (0.5pt tightening) but original pick at -9.0 at 1.94 remains valid and edge has strengthened. Confidence held at 63 (Scout's adjusted figure) given L15 unavailability.",
+        "reasoning": "Portland arrives at Ball Arena catastrophically depleted: Damian Lillard (OUT - injury management), Shaedon Sharpe (OUT), Jerami Grant (upgraded from Questionable to OUT per NBA official injury report), and Vit Krejci (upgraded from Questionable to OUT). This is an even stronger edge than Scout projected. Denver (43-28, L10: 6-4) holds NetRtg +4.3 vs Portland -1.8 (gap 6.1 pts, above 4.0 threshold). Jokic active and anchoring Denver's offense. Peyton Watson confirmed active (not on injury report). Portland's offensive identity collapses without Lillard; with Grant also now OUT their veteran leadership and secondary scoring is removed. EV = (0.63 Ã— 1.94) - 1 = 0.222. Odds 1.94 within 1.80-2.30 target. Line moved slightly from -9.0 to -8.5 in current market (0.5pt tightening) but original pick at -9.0 at 1.94 remains valid and edge has strengthened. Confidence held at 63 (Scout's adjusted figure) given L15 unavailability.",
         "confidence": 63,
         "anchor_players": [
-          "Damian Lillard (POR \u00e2\u20ac\u201c OUT confirmed)",
-          "Shaedon Sharpe (POR \u00e2\u20ac\u201c OUT confirmed)",
-          "Jerami Grant (POR \u00e2\u20ac\u201c OUT confirmed, upgraded from Questionable)",
-          "Vit Krejci (POR \u00e2\u20ac\u201c OUT confirmed, upgraded from Questionable)",
-          "Nikola Jokic (DEN \u00e2\u20ac\u201c active)",
-          "Peyton Watson (DEN \u00e2\u20ac\u201c active, confirmed off injury report)"
+          "Damian Lillard (POR â€“ OUT confirmed)",
+          "Shaedon Sharpe (POR â€“ OUT confirmed)",
+          "Jerami Grant (POR â€“ OUT confirmed, upgraded from Questionable)",
+          "Vit Krejci (POR â€“ OUT confirmed, upgraded from Questionable)",
+          "Nikola Jokic (DEN â€“ active)",
+          "Peyton Watson (DEN â€“ active, confirmed off injury report)"
         ],
         "result": null,
         "returned": null,
@@ -160,34 +365,34 @@
         "id": "nba_draft_20260322_002",
         "match": "Boston Celtics vs Minnesota Timberwolves",
         "pick": "Boston Celtics -10.0",
-        "reason": "Odds moved against at commit time: Scout odds 1.94, current odds 1.88 (delta -0.06). Per line_movement_rules, adverse movement triggers confidence -10 adjustment (60 \u00e2\u2020\u2019 50). EV recalculated at adjusted confidence: (0.50 \u00c3\u2014 1.88) - 1 = -0.06, which is below the required EV \u00e2\u2030\u00a5 0.05 threshold. Cannot confirm."
+        "reason": "Odds moved against at commit time: Scout odds 1.94, current odds 1.88 (delta -0.06). Per line_movement_rules, adverse movement triggers confidence -10 adjustment (60 â†’ 50). EV recalculated at adjusted confidence: (0.50 Ã— 1.88) - 1 = -0.06, which is below the required EV â‰¥ 0.05 threshold. Cannot confirm."
       }
     ],
     "late_rejections": [
       {
         "match": "Portland Trail Blazers @ Denver Nuggets",
-        "reason": "Game tipped off at 21:00 UTC \u00e2\u20ac\u201d 5h27m ago. Time gate fails. Cannot add pre-game pick."
+        "reason": "Game tipped off at 21:00 UTC â€” 5h27m ago. Time gate fails. Cannot add pre-game pick."
       },
       {
         "match": "Brooklyn Nets @ Sacramento Kings",
-        "reason": "Game tipped off at 22:00 UTC \u00e2\u20ac\u201d 4h27m ago. Time gate fails. Cannot add pre-game pick."
+        "reason": "Game tipped off at 22:00 UTC â€” 4h27m ago. Time gate fails. Cannot add pre-game pick."
       },
       {
         "match": "Washington Wizards @ New York Knicks",
-        "reason": "Game tipped off at 23:30 UTC \u00e2\u20ac\u201d 2h57m ago. Time gate fails. Cannot add pre-game pick."
+        "reason": "Game tipped off at 23:30 UTC â€” 2h57m ago. Time gate fails. Cannot add pre-game pick."
       },
       {
         "match": "Minnesota Timberwolves @ Boston Celtics",
-        "reason": "Game tipped off at 00:00 UTC \u00e2\u20ac\u201d 2h27m ago. Time gate fails. Note: Anthony Edwards confirmed OUT (Patellofemoral Pain Syndrome) \u00e2\u20ac\u201d would have been a significant signal at Scout time but game is past tip."
+        "reason": "Game tipped off at 00:00 UTC â€” 2h27m ago. Time gate fails. Note: Anthony Edwards confirmed OUT (Patellofemoral Pain Syndrome) â€” would have been a significant signal at Scout time but game is past tip."
       },
       {
         "match": "Toronto Raptors @ Phoenix Suns",
-        "reason": "Game tipped off at 01:00 UTC \u00e2\u20ac\u201d 1h27m ago. Time gate fails. Cannot add pre-game pick."
+        "reason": "Game tipped off at 01:00 UTC â€” 1h27m ago. Time gate fails. Cannot add pre-game pick."
       }
     ],
     "total_staked": 101.25,
     "bankroll_before": 675.0,
-    "report": "### CONFIRMED \u00e2\u20ac\u201d Denver Nuggets -9.0\n\n- **Match:** Denver Nuggets vs Portland Trail Blazers | **Tip:** 2026-03-22T21:00Z\n- **Pick:** Denver Nuggets -9.0 spread | **Scout odds:** 1.94 | **Commit odds:** 1.94 | **Move:** 0.00 (spread tightened from -9.0 to -8.5 in current market, but pick at original -9.0 line maintained; odds unchanged)\n- **ML:** 1.30 (DEN) / 3.60 (POR) | **ATS:** -8.5 (1.93 / 1.89) | **O/U:** N/A\n- **Stake:** \u00e2\u201a\u00ac101.25 | **Pot:** \u00e2\u201a\u00ac196.43 | **Conf:** 63/100 | **EV:** 0.222\n- **Decision:** Confirmed and edge strengthened. Jerami Grant upgraded from Questionable \u00e2\u2020\u2019 **OUT** (confirmed NBA official), and Vit Krejci also upgraded from Questionable \u00e2\u2020\u2019 **OUT**. Portland is now missing Lillard, Sharpe, Grant, and Krejci. Jokic and Watson both active for Denver. NetRtg gap 6.1 pts above threshold. EV 0.222 is strong.\n\n---\n\n### CANCELLED \u00e2\u20ac\u201d Boston Celtics -10.0\n\n- **Reason:** Odds moved adversely at commit time. Current spread odds for Boston -9.5 are 1.88 (vs Scout's 1.94 at -10.0). Delta of -0.06 triggers confidence -10 adjustment per line_movement_rules (above floor but worsened). Adjusted confidence 60 \u00e2\u2020\u2019 50. EV at new parameters: (0.50 \u00c3\u2014 1.88) - 1 = **-0.06**, below the required \u00e2\u2030\u00a5 0.05 threshold. Cannot confirm under current criteria.\n- **Odds at cancel:** 1.88 (was 1.94 at Scout time)\n\n---\n\n### LATE SCOUT SUMMARY\n\nNo new picks added. Five games were evaluated in late scout: SAC/BKN (no edge \u00e2\u20ac\u201d tank matchup, minimal NetRtg gap), NYK/WAS (spread too large, confidence below 60 floor), PHX/TOR (TOR ML exceeds 2.50 ceiling; spread confidence assessed at 58, below 60 gate), and two games not on tonight's official slate (IND/ORL, OKC/PHI). The TOR +4.5 spread came closest to qualifying but PHX's NetRtg advantage is minimal (+0.9 pts gap) and L15 data remains unavailable, keeping confidence below the 60 threshold required for new Commit-phase picks.\n\n**Slate Summary:** One bet committed tonight \u00e2\u20ac\u201d Denver -9.0 covering a severely depleted Portland team missing four rotation players including Lillard, Sharpe, Grant, and Krejci. Total exposure is \u00e2\u201a\u00ac101.25 (15% of \u00e2\u201a\u00ac675 bankroll), well within the 70% limit (\u00e2\u201a\u00ac472.50). The Boston spread pick was cancelled due to adverse odds movement reducing EV below threshold. Bankroll at risk tonight: \u00e2\u201a\u00ac101.25; maximum return: \u00e2\u201a\u00ac196.43 (net gain \u00e2\u201a\u00ac95.18 if successful).",
+    "report": "### CONFIRMED â€” Denver Nuggets -9.0\n\n- **Match:** Denver Nuggets vs Portland Trail Blazers | **Tip:** 2026-03-22T21:00Z\n- **Pick:** Denver Nuggets -9.0 spread | **Scout odds:** 1.94 | **Commit odds:** 1.94 | **Move:** 0.00 (spread tightened from -9.0 to -8.5 in current market, but pick at original -9.0 line maintained; odds unchanged)\n- **ML:** 1.30 (DEN) / 3.60 (POR) | **ATS:** -8.5 (1.93 / 1.89) | **O/U:** N/A\n- **Stake:** â‚¬101.25 | **Pot:** â‚¬196.43 | **Conf:** 63/100 | **EV:** 0.222\n- **Decision:** Confirmed and edge strengthened. Jerami Grant upgraded from Questionable â†’ **OUT** (confirmed NBA official), and Vit Krejci also upgraded from Questionable â†’ **OUT**. Portland is now missing Lillard, Sharpe, Grant, and Krejci. Jokic and Watson both active for Denver. NetRtg gap 6.1 pts above threshold. EV 0.222 is strong.\n\n---\n\n### CANCELLED â€” Boston Celtics -10.0\n\n- **Reason:** Odds moved adversely at commit time. Current spread odds for Boston -9.5 are 1.88 (vs Scout's 1.94 at -10.0). Delta of -0.06 triggers confidence -10 adjustment per line_movement_rules (above floor but worsened). Adjusted confidence 60 â†’ 50. EV at new parameters: (0.50 Ã— 1.88) - 1 = **-0.06**, below the required â‰¥ 0.05 threshold. Cannot confirm under current criteria.\n- **Odds at cancel:** 1.88 (was 1.94 at Scout time)\n\n---\n\n### LATE SCOUT SUMMARY\n\nNo new picks added. Five games were evaluated in late scout: SAC/BKN (no edge â€” tank matchup, minimal NetRtg gap), NYK/WAS (spread too large, confidence below 60 floor), PHX/TOR (TOR ML exceeds 2.50 ceiling; spread confidence assessed at 58, below 60 gate), and two games not on tonight's official slate (IND/ORL, OKC/PHI). The TOR +4.5 spread came closest to qualifying but PHX's NetRtg advantage is minimal (+0.9 pts gap) and L15 data remains unavailable, keeping confidence below the 60 threshold required for new Commit-phase picks.\n\n**Slate Summary:** One bet committed tonight â€” Denver -9.0 covering a severely depleted Portland team missing four rotation players including Lillard, Sharpe, Grant, and Krejci. Total exposure is â‚¬101.25 (15% of â‚¬675 bankroll), well within the 70% limit (â‚¬472.50). The Boston spread pick was cancelled due to adverse odds movement reducing EV below threshold. Bankroll at risk tonight: â‚¬101.25; maximum return: â‚¬196.43 (net gain â‚¬95.18 if successful).",
     "tokens_in": 6040,
     "tokens_out": 6617,
     "cost_usd": 0.117375
@@ -197,6 +402,6 @@
     "cached_at": "2026-03-23",
     "games_str": "Los Angeles Lakers @ Detroit Pistons  |  2026-03-23T23:00 UTC  |  Little Caesars Arena\nIndiana Pacers @ Orlando Magic  |  2026-03-23T23:00 UTC  |  Kia Center\nOklahoma City Thunder @ Philadelphia 76ers  |  2026-03-23T23:00 UTC  |  Xfinity Mobile Arena\nSan Antonio Spurs @ Miami Heat  |  2026-03-23T23:00 UTC  |  Kaseya Center\nMemphis Grizzlies @ Atlanta Hawks  |  2026-03-23T23:30 UTC  |  State Farm Arena\nHouston Rockets @ Chicago Bulls  |  2026-03-24T00:00 UTC  |  United Center\nToronto Raptors @ Utah Jazz  |  2026-03-24T01:00 UTC  |  Delta Center\nGolden State Warriors @ Dallas Mavericks  |  2026-03-24T01:30 UTC  |  American Airlines Center\nBrooklyn Nets @ Portland Trail Blazers  |  2026-03-24T02:00 UTC  |  Moda Center\nMilwaukee Bucks @ LA Clippers  |  2026-03-24T02:30 UTC  |  Intuit Dome",
     "standings_str": "Oklahoma City Thunder: 56-15  L10:10-0\nSan Antonio Spurs: 53-18  L10:9-1\nDetroit Pistons: 51-19  L10:6-4\nNew York Knicks: 47-25  L10:7-3\nBoston Celtics: 47-24  L10:6-4\nLos Angeles Lakers: 46-25  L10:9-1\nHouston Rockets: 43-27  L10:5-5\nAtlanta Hawks: 39-32  L10:9-1\nPhiladelphia 76ers: 39-32  L10:6-4\nToronto Raptors: 39-31  L10:4-6\nMiami Heat: 38-33  L10:6-4\nOrlando Magic: 38-32  L10:6-4\nPortland Trail Blazers: 35-37  L10:6-4\nLA Clippers: 35-36  L10:5-5\nGolden State Warriors: 33-38  L10:2-8\nMilwaukee Bucks: 29-41  L10:3-7\nChicago Bulls: 28-42  L10:4-6\nMemphis Grizzlies: 24-46  L10:1-9\nDallas Mavericks: 23-48  L10:2-8\nUtah Jazz: 21-50  L10:3-7\nUTAH: 21-50  L10:3-7\nSacramento Kings: 19-53  L10:5-5\nBrooklyn Nets: 17-54  L10:2-8\nWashington Wizards: 16-55  L10:0-10\nIndiana Pacers: 15-56  L10:0-10",
-    "adv_str": "Source: NBA.com Advanced Stats (OffRtg / DefRtg / NetRtg / Pace)\nDetroit Pistons: OffRtg 117.6 | DefRtg 109.7 | NetRtg +7.8 | Pace 0.0\nLos Angeles Lakers: OffRtg 118.2 | DefRtg 116.8 | NetRtg +1.4 | Pace 0.0\nOrlando Magic: OffRtg 115.0 | DefRtg 114.1 | NetRtg +0.9 | Pace 0.0\nIndiana Pacers: OffRtg 110.2 | DefRtg 119.2 | NetRtg -8.9 | Pace 0.0\nPhiladelphia 76ers: OffRtg 115.4 | DefRtg 115.6 | NetRtg -0.3 | Pace 0.0\nOklahoma City Thunder: OffRtg 118.5 | DefRtg 107.5 | NetRtg +11.0 | Pace 0.0\nMiami Heat: OffRtg 116.0 | DefRtg 113.1 | NetRtg +2.9 | Pace 0.0\nSan Antonio Spurs: OffRtg 118.9 | DefRtg 111.7 | NetRtg +7.3 | Pace 0.0\nAtlanta Hawks: OffRtg 115.3 | DefRtg 114.0 | NetRtg +1.3 | Pace 0.0\nMemphis Grizzlies: OffRtg 113.9 | DefRtg 117.1 | NetRtg -3.2 | Pace 0.0\nChicago Bulls: OffRtg 113.3 | DefRtg 117.7 | NetRtg -4.4 | Pace 0.0\nHouston Rockets: OffRtg 117.7 | DefRtg 113.5 | NetRtg +4.2 | Pace 0.0\nUtah Jazz: OffRtg 114.7 | DefRtg 122.0 | NetRtg -7.3 | Pace 0.0\nToronto Raptors: OffRtg 115.0 | DefRtg 113.5 | NetRtg +1.5 | Pace 0.0\nDallas Mavericks: OffRtg 110.9 | DefRtg 116.1 | NetRtg -5.2 | Pace 0.0\nGolden State Warriors: OffRtg 115.0 | DefRtg 114.8 | NetRtg +0.2 | Pace 0.0\nPortland Trail Blazers: OffRtg 113.9 | DefRtg 115.9 | NetRtg -2.0 | Pace 0.0\nBrooklyn Nets: OffRtg 109.6 | DefRtg 119.0 | NetRtg -9.5 | Pace 0.0\nLA Clippers: stats unavailable\nMilwaukee Bucks: OffRtg 113.1 | DefRtg 118.5 | NetRtg -5.5 | Pace 0.0"
+    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nDetroit Pistons: OffRtg 117.6 | DefRtg 109.7 | NetRtg +7.8 | Pace 0.0\nLos Angeles Lakers: OffRtg 118.2 | DefRtg 116.8 | NetRtg +1.4 | Pace 0.0\nOrlando Magic: OffRtg 115.0 | DefRtg 114.1 | NetRtg +0.9 | Pace 0.0\nIndiana Pacers: OffRtg 110.2 | DefRtg 119.2 | NetRtg -8.9 | Pace 0.0\nPhiladelphia 76ers: OffRtg 115.4 | DefRtg 115.6 | NetRtg -0.3 | Pace 0.0\nOklahoma City Thunder: OffRtg 118.5 | DefRtg 107.5 | NetRtg +11.0 | Pace 0.0\nMiami Heat: OffRtg 116.0 | DefRtg 113.1 | NetRtg +2.9 | Pace 0.0\nSan Antonio Spurs: OffRtg 118.9 | DefRtg 111.7 | NetRtg +7.3 | Pace 0.0\nAtlanta Hawks: OffRtg 115.3 | DefRtg 114.0 | NetRtg +1.3 | Pace 0.0\nMemphis Grizzlies: OffRtg 113.9 | DefRtg 117.1 | NetRtg -3.2 | Pace 0.0\nChicago Bulls: OffRtg 113.3 | DefRtg 117.7 | NetRtg -4.4 | Pace 0.0\nHouston Rockets: OffRtg 117.7 | DefRtg 113.5 | NetRtg +4.2 | Pace 0.0\nUtah Jazz: OffRtg 114.7 | DefRtg 122.0 | NetRtg -7.3 | Pace 0.0\nToronto Raptors: OffRtg 115.0 | DefRtg 113.5 | NetRtg +1.5 | Pace 0.0\nDallas Mavericks: OffRtg 110.9 | DefRtg 116.1 | NetRtg -5.2 | Pace 0.0\nGolden State Warriors: OffRtg 115.0 | DefRtg 114.8 | NetRtg +0.2 | Pace 0.0\nPortland Trail Blazers: OffRtg 113.9 | DefRtg 115.9 | NetRtg -2.0 | Pace 0.0\nBrooklyn Nets: OffRtg 109.6 | DefRtg 119.0 | NetRtg -9.5 | Pace 0.0\nLA Clippers: stats unavailable\nMilwaukee Bucks: OffRtg 113.1 | DefRtg 118.5 | NetRtg -5.5 | Pace 0.0"
   }
 }
