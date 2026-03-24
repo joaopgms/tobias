@@ -235,5 +235,84 @@
     "tokens_in": 6040,
     "tokens_out": 6617,
     "cost_usd": 0.117375
+  },
+  {
+    "ts": "2026-03-24T00:03:10.846616+00:00",
+    "date": "2026-03-24",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 0,
+    "cancelled_count": 1,
+    "total_staked": 0.0,
+    "bankroll_before": 770.17,
+    "bankroll_after": 770.17,
+    "bets": [],
+    "cancelled": [
+      {
+        "id": "nba_draft_20260323_001",
+        "match": "Detroit Pistons vs Los Angeles Lakers",
+        "pick": "Detroit Pistons ML",
+        "reason": "Franchise player rule triggered: Cade Cunningham confirmed OUT via NBA official source, opponent Lakers not tanking and not missing a franchise player. Additionally, line moved against by exactly -0.30 (Scout odds 2.00 → current 1.70), triggering the major movement cancellation threshold. Scout's own reasoning had already self-rejected this pick. Current odds 1.70 are at the absolute commit floor with no EV cushion after applying -10 confidence adjustment for line movement (conf 57 - 10 = 47, below 50 minimum staking tier). Pick cancelled."
+      }
+    ],
+    "late_rejections": [
+      {
+        "match": "Sacramento Kings @ Charlotte Hornets",
+        "reason": "Game already started at 23:00 UTC (now 00:03 UTC). Time gate violation — cannot add picks after tip-off."
+      },
+      {
+        "match": "New Orleans Pelicans @ New York Knicks",
+        "reason": "Game already started at 23:30 UTC (now 00:03 UTC). Time gate violation — cannot add picks after tip-off. Also NY H ML 1.27 below floor, NO A ML 3.85 above ceiling."
+      },
+      {
+        "match": "Orlando Magic @ Cleveland Cavaliers",
+        "reason": "Game tipped off at 00:00 UTC, only 3 minutes before commit time (00:03 UTC). Time gate requires >20 minutes before tip — violated. Cannot add picks."
+      },
+      {
+        "match": "Denver Nuggets @ Phoenix Suns",
+        "reason": "Only eligible game (tip 03:00 UTC, ~2h57m away). However: Denver ML 1.40 is below the ML floor of 1.65 — cannot bet. Phoenix ML 2.90 is above the ML ceiling of 2.50 — cannot bet. No spread or O/U odds available. No injury data available for either team in the NBA official feed (only 6 tonight's teams covered). No valid betting angle exists."
+      },
+      {
+        "match": "Golden State Warriors @ Dallas Mavericks",
+        "reason": "Game status unclear/likely started. Both franchise players OUT: Steph Curry OUT blocks GS ML per franchise player rules; Kyrie Irving OUT blocks Dallas ML per franchise player rules. Dallas spread H:-2.0 at 1.90 is in valid range but Kyrie OUT corrupts Dallas spread analysis with insufficient confidence. GS spread also blocked by Curry OUT. No valid pick."
+      },
+      {
+        "match": "Los Angeles Lakers @ Detroit Pistons",
+        "reason": "Cunningham OUT (franchise player rule) blocks Detroit ML. Lakers ML now 2.16 (away) — evaluating: Lakers ML 2.16 in valid range. But Lakers NetRtg +1.4 vs Detroit +7.8 (L15 unavailable, using season). NetRtg gap favors Detroit by 6.4 points even without Cunningham. Lakers on W9 streak but true talent ~.500. Home court advantage for Detroit. Confidence in Lakers ML ~45% at best, EV = 0.45×2.16-1 = -0.028, negative EV. Cannot confirm."
+      },
+      {
+        "match": "San Antonio Spurs @ Miami Heat",
+        "reason": "SA ML (away) at 1.15 is below the 1.65 floor. Miami ML (home) at 5.60 is above the 2.50 ceiling. SA spread H: Miami +10.5 at 1.85 — in valid range, but game tip time not confirmed in tonight's primary slate listing; also Spurs are 53-18 road favorite laying 10.5 which creates anomaly concern. Insufficient data to confirm. Game likely already started or too close to tip."
+      },
+      {
+        "match": "Atlanta Hawks vs Memphis Grizzlies",
+        "reason": "ATL ML 1.05 below floor. MEM ML 10.5 above ceiling. No valid ML odds. Game tip time not in tonight's slate — likely already in progress."
+      },
+      {
+        "match": "Houston Rockets @ Chicago Bulls",
+        "reason": "HOU ML 1.26 below floor. CHI ML 3.90 above ceiling. No valid ML odds. Chicago spread H:+8.5 at 1.94 in range but game tip time not confirmed and likely started. Insufficient data."
+      },
+      {
+        "match": "Utah Jazz vs Toronto Raptors",
+        "reason": "TOR ML 1.20 below floor. UTAH ML 4.75 above ceiling. No valid ML odds. Quickley OUT and Poeltl OUT for Toronto confirmed at Scout, insufficient confidence for spread."
+      },
+      {
+        "match": "Brooklyn Nets @ Portland Trail Blazers",
+        "reason": "POR ML 1.08 below floor. BKN ML 8.0 above ceiling. No valid odds in any market."
+      },
+      {
+        "match": "Milwaukee Bucks @ Los Angeles Clippers",
+        "reason": "LAC ML 1.12 below floor. MIL ML 6.50 above ceiling. Giannis OUT blocks Bucks pick. No valid odds."
+      },
+      {
+        "match": "Oklahoma City Thunder @ Philadelphia 76ers",
+        "reason": "No ML odds available. PHI spread H:26.0 is anomalous (appears inverted — OKC giving 26 to PHI at home doesn't make structural sense, likely a display artifact). PHI decimated with Embiid/Maxey/PG all OUT. No valid pick."
+      }
+    ],
+    "report": "## COMMIT REPORT — 2026-03-24T00:03:13Z\n### Bankroll: €770.17 | Total Staked: €0.00 | Remaining: €770.17\n\n---\n\n### CANCELLED — Detroit Pistons ML (nba_draft_20260323_001)\n\n- **Reason:** Triple cancellation triggers. (1) Franchise player rule: Cade Cunningham confirmed OUT via NBA official source, and the opponent Lakers are neither tanking nor missing a franchise player — skills mandate \"do NOT bet Detroit ML\" in this scenario. (2) Line moved -0.30 against (Scout: 2.00 → Commit: 1.70), triggering the major movement cancellation threshold (>0.20 against requires re-evaluation; exactly -0.30 is at the cancel threshold). (3) Scout's own reasoning had explicitly self-rejected this pick, and the draft entry was labelled \"REJECTED\" — it should never have entered the draft queue. At current odds 1.70 with confidence adjusted downward for line movement (57-10=47), the pick falls below the minimum staking tier (sub-50 = do not confirm).\n- **Odds at cancel:** 1.70 (was 2.00 at scout time)\n\n---\n\n### LATE SCOUT SUMMARY\n\nOnly one game on tonight's slate remained within the 20-minute time gate: **Denver Nuggets @ Phoenix Suns (03:00 UTC)**. However, both available ML odds (Denver 1.40, Phoenix 2.90) fall outside valid ranges — Denver below the 1.65 floor, Phoenix above the 2.50 ceiling — and no spread or O/U odds are posted. No injury data for either team is available in tonight's NBA official feed. No valid bet exists for this game.\n\nAll other scheduled games (SAC@CHA, NO@NY, ORL@CLE) had already tipped off or were within 3 minutes of tip-off at commit time, failing the 20-minute time gate. Previously rejected games were re-evaluated but all ML odds remain outside valid ranges or are blocked by franchise player rules (Cunningham, Curry, Kyrie all still OUT).\n\n---\n\n### SLATE SUMMARY\n\nTonight's slate yields zero committed bets. The single draft pick was cancelled due to a convergence of the franchise player OUT rule (Cunningham), a -0.30 line move against, and the Scout's own self-rejection. The late scout identified only one eligible game (DEN@PHX) but found no valid odds in any market. The bankroll of €770.17 is fully preserved and rolls forward to the next session.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 7919,
+    "tokens_out": 3932,
+    "cost_usd": 0.082737
   }
 ]
