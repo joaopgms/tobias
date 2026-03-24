@@ -314,5 +314,65 @@
     "tokens_in": 7919,
     "tokens_out": 3932,
     "cost_usd": 0.082737
+  },
+  {
+    "ts": "2026-03-24T22:56:29.531055+00:00",
+    "date": "2026-03-24",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 0,
+    "cancelled_count": 0,
+    "total_staked": 0.0,
+    "bankroll_before": 770.17,
+    "bankroll_after": 770.17,
+    "bets": [],
+    "cancelled": [],
+    "late_rejections": [
+      {
+        "match": "Charlotte Hornets vs Sacramento Kings",
+        "reason": "Time-gated (< 20 minutes to tip-off at commit time). Additionally, Charlotte ML 1.06 and Kings ML 9.5 both outside valid range. Spread -18.5 triggers tank-tier anomaly rule (Charlotte home at 1.06 ≤ 1.35). No valid entry point."
+      },
+      {
+        "match": "New York Knicks vs New Orleans Pelicans",
+        "reason": "Knicks ML 1.27 below 1.70 floor; Pelicans ML 3.85 above 2.50 ceiling. Spread moved from -8.5 to -9.0 (worsened 0.5pt for Knicks bettors). Pelicans L10 6-4 volatility flag from skills file persists. Knicks still missing McBride (OUT) and Shamet (OUT). Scout rejection reasoning unchanged — Pelicans volatile, spread widened, insufficient confidence margin."
+      },
+      {
+        "match": "Cleveland Cavaliers vs Orlando Magic",
+        "reason": "Cavs ML 1.21 below floor; Magic ML 4.6 above ceiling. Spread -10.5 at 1.91/1.91 in range but NetRtg gap only 3.3 points (below 6pt threshold). Magic's confirmed injuries (Wagner, Suggs, Black, Isaac all OUT) already priced into -10.5 line (no movement since Scout). Cavs missing Allen (OUT). No new information changes Scout's analysis."
+      },
+      {
+        "match": "Phoenix Suns vs Denver Nuggets",
+        "reason": "Suns ML 3.00 above 2.50 ceiling; Nuggets ML 1.40 below 1.70 floor. Evaluated Suns +6.0 spread (1.90): NetRtg gap only 3.1 points; adjusted for home court ~0.6pt Denver expected margin, giving +5.4pt buffer. However Grayson Allen Questionable requires -10 confidence per rules. Base confidence ~60 → adjusted to 50. EV at 50: 0.50 × 1.90 - 1 = -0.05. FAILS EV gate (< 0.05). Cannot confirm."
+      },
+      {
+        "match": "Oklahoma City Thunder @ Boston Celtics",
+        "reason": "OKC ML 1.67 below 1.70 floor. Celtics ML 2.20 at valid ceiling. No spread available. Confidence for Celtics ML estimated at 50 (speculative) — OKC is 57-15 with W11 streak and best NetRtg in league. Scout correctly rejected. No new injuries or information since 14:00."
+      },
+      {
+        "match": "Houston Rockets vs Minnesota Timberwolves",
+        "reason": "Anthony Edwards (Minnesota franchise player) not present in tonight's official NBA injury report — mandatory re-verification cannot be completed. Skills file states DO NOT bet Minnesota ML without re-verification. Fred VanVleet and Steven Adams OUT for Houston (not verified in tonight's report). Insufficient data to evaluate."
+      },
+      {
+        "match": "Atlanta Hawks vs Detroit Pistons",
+        "reason": "Not on declared tonight's slate. No injury data for either team in tonight's official NBA report (covers only 8 specific teams). No advanced stats in tonight's feed. Insufficient data to evaluate — cannot add without verified injury and lineup information."
+      },
+      {
+        "match": "Miami Heat vs Cleveland Cavaliers",
+        "reason": "Not on declared tonight's slate. No injury data for Miami Heat in tonight's official report. Cavs ML 1.53 below 1.70 floor; Heat ML 2.50 exactly at ceiling. No spread available. Insufficient data to evaluate Heat roster/injuries."
+      },
+      {
+        "match": "Dallas Mavericks vs Denver Nuggets",
+        "reason": "Not on declared tonight's slate. Denver ML 1.10 triggers anomaly check (home favourite ≤ 1.35 — do not add). Dallas ML 7.00 exceeds 2.50 ceiling. No valid entry point."
+      },
+      {
+        "match": "Toronto Raptors vs Los Angeles Clippers",
+        "reason": "Not on declared tonight's slate. No injury data or advanced stats for either team in tonight's feed. Clippers ML 1.67 below 1.70 floor. Raptors ML 2.20 at ceiling but without injury verification and anchor player status confirmation, cannot evaluate. Insufficient data."
+      }
+    ],
+    "report": "## COMMIT REPORT — 2026-03-24T22:56:31Z\n\n### Bankroll: €770.17 | Draft Picks: 0 | New Picks Added: 0 | Total Committed: €0.00\n\n---\n\n### TASK 1 — DRAFT PICK REVIEW\nNo draft picks were submitted by Scout for this session. Zero picks to review or cancel.\n\n---\n\n### TASK 2 — LATE SCOUT ANALYSIS\n\n**Data Quality Baseline:**\n- Injury source: nba_official ✅ — full confidence rules apply\n- Pace data: 0.0 universally → unavailable (no totals thesis affected since none were drafted)\n- NetRtg L15: unavailable → season NetRtg used as primary signal\n- Official report covers 8 teams: Kings, Hornets, Pelicans, Knicks, Magic, Cavaliers, Nuggets, Suns ✅\n\n**Games Reviewed (10 total):**\n\n**Charlotte Hornets vs Sacramento Kings** — Time-gated at commit (< 3.5 minutes to tip). Charlotte ML 1.06 anomaly persists. No valid entry point remains.\n\n**New York Knicks vs New Orleans Pelicans** — Knicks -9.0 spread evaluated. NetRtg gap of 10.8 points is strong but Pelicans L10 6-4 volatility flag persists per skills file. Spread widened 0.5pt since Scout (worse for Knicks), Knicks still missing McBride and Shamet. Scout's rejection stands.\n\n**Cleveland Cavaliers vs Orlando Magic** — Spread -10.5 evaluated. NetRtg gap 3.3 pts (below 6pt threshold). Magic injuries (Wagner, Suggs, Black, Isaac all OUT) confirmed but already priced into unchanged spread. No new edge emerged.\n\n**Phoenix Suns vs Denver Nuggets** — Most promising late evaluation. Suns +6.0 at 1.90 with core stars (Durant/Booker/Beal) apparently available. Expected margin ~0.6pt Denver win after home adjustment = 5.4pt buffer with the spread. HOWEVER: Grayson Allen listed Questionable (Management) → mandatory -10 confidence adjustment. Base 60 → adjusted 50. EV = 0.50 × 1.90 - 1 = **-0.05. FAILS EV gate.** Cancels out the buffer advantage.\n\n**OKC @ Boston, Houston @ Minnesota, and 5 extra-slate games** — All rejected due to odds out of range, missing injury data, failed EV calculations, or insufficient data quality. Houston/Minnesota notably cannot be evaluated due to Anthony Edwards' status being unverifiable (not in tonight's official report).\n\n---\n\n### TASK 3 — FINAL COMMIT\n\n**Total bets confirmed: 0**\n**Total stake: €0.00 (0% of bankroll)**\n**Bankroll remaining: €770.17**\n\n---\n\n### SLATE SUMMARY\nTonight's 4-game NBA slate (plus additional games visible in live odds) offered no confirmable edges at commit time. The Scout phase correctly identified the primary obstacles: mismatched ML odds, insufficient NetRtg gaps for spread plays, and volatility flags on the Pelicans. The closest call was Suns +6.0 — where a compelling point spread buffer existed — but Grayson Allen's Questionable designation forced a mandatory -10 confidence reduction that dropped EV below the 0.05 floor. Bankroll of €770.17 is preserved in full for tomorrow's slate.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 6578,
+    "tokens_out": 7637,
+    "cost_usd": 0.134289
   }
 ]
