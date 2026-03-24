@@ -265,7 +265,7 @@ def run(store, force: bool = False) -> None:
         injuries_source = "nba_official"
     odds_str = format_odds_for_prompt(odds)
     # Filter injuries to tonight's teams only, use official formatter if available
-    from core.espn import fetch_scoreboard, fetch_injuries, fetch_first_game_time_utc, fetch_netrtg_l15, fetch_standings, fetch_advanced_stats
+    from core.espn import fetch_scoreboard, fetch_injuries, fetch_first_game_time_utc, fetch_standings, fetch_advanced_stats
     scoreboard = fetch_scoreboard()
     tonight_teams = [g["home"] for g in scoreboard] + [g["away"] for g in scoreboard]
     if injuries_source == "nba_official":
@@ -288,13 +288,13 @@ def run(store, force: bool = False) -> None:
         standings_str = _format_standings(fetch_standings())
         adv_str       = _format_adv_stats(fetch_advanced_stats(), scoreboard)
 
-    # NetRtg L15 — Commit always formats all 30 teams for late scout
-    netrtg_l15 = state.get("netrtg_l15") or {}
-    if not netrtg_l15:
-        log.info("Commit: NetRtg L15 not in state — fetching fresh")
-        netrtg_l15 = fetch_netrtg_l15()
+    # NetRtg L15 — computed from Settler-maintained game log (no API calls)
+    from agents.scout import _compute_netrtg_l15
+    netrtg_l15 = _compute_netrtg_l15(state.get("team_game_log", {}))
+    if netrtg_l15:
+        log.info(f"Commit: NetRtg L15 from game log ({len(netrtg_l15)} teams)")
     else:
-        log.info(f"Commit: NetRtg L15 loaded from state ({len(netrtg_l15)} teams)")
+        log.info("Commit: NetRtg L15 not yet available (game log accumulating)")
     netrtg_l15_str = _format_netrtg_l15_commit(netrtg_l15, scoreboard)
     rejected_games = state.get("rejected_games", [])
     log.info(f"Commit: {len(scoreboard)} games tonight | {len(draft_picks)} draft picks | {len(rejected_games)} rejected | injuries: {injuries_source}")
