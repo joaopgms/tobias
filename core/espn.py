@@ -203,12 +203,23 @@ def fetch_advanced_stats() -> dict[str, dict]:
     Returns {team_name: {net_rtg, off_rtg, def_rtg, pace, ts_pct}}
     """
     result = _fetch_advanced_stats_bref()
-    if result:
-        log.info(f"Advanced stats: Basketball-Reference — {len(result)} teams")
-        return result
+    if not result:
+        log.warning("Advanced stats: Basketball-Reference failed — ML only session")
+        return {}
 
-    log.warning("Advanced stats: Basketball-Reference failed — ML only session")
-    return {}
+    # Merge Pace from advanced-team table (ratings page has no Pace column)
+    pace_data = _fetch_pace_bref()
+    if pace_data:
+        merged = 0
+        for team, pace in pace_data.items():
+            if team in result:
+                result[team]["pace"] = pace
+                merged += 1
+        log.info(f"Advanced stats: Basketball-Reference — {len(result)} teams | Pace merged for {merged}")
+    else:
+        log.warning("Advanced stats: Pace unavailable — not on ratings page, main page fetch failed")
+
+    return result
 
 
 def _fetch_advanced_stats_bref() -> dict[str, dict]:
@@ -335,6 +346,52 @@ def _fetch_advanced_stats_bref() -> dict[str, dict]:
 
     except Exception as e:
         log.warning(f"Basketball-Reference scrape failed: {e}")
+        return {}
+
+
+def _fetch_pace_bref() -> dict[str, float]:
+    """
+    Fetch Pace from the advanced-team table on Basketball-Reference main season page.
+    Returns {full_team_name: pace}
+    """
+    try:
+        import re as _re
+        from datetime import datetime as _dt
+        year = _dt.now().year if _dt.now().month >= 10 else _dt.now().year
+        url = f"https://www.basketball-reference.com/leagues/NBA_{year}.html"
+        req = urllib.request.Request(url, headers={
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+            "Accept": "text/html,application/xhtml+xml",
+            "Accept-Language": "en-US,en;q=0.9",
+        })
+        with urllib.request.urlopen(req, timeout=20, context=_SSL) as r:
+            html = r.read().decode("utf-8", errors="ignore")
+
+        # BRef puts many tables in HTML comments — uncomment first
+        html = _re.sub(r"<!--(.*?)-->", r"\1", html, flags=_re.DOTALL)
+
+        m = _re.search(r'<table[^>]*id="advanced-team"[^>]*>(.*?)</table>', html, _re.DOTALL)
+        if not m:
+            log.debug("Pace fetch: advanced-team table not found")
+            return {}
+
+        result = {}
+        rows = _re.findall(r"<tr[^>]*>(.*?)</tr>", m.group(1), _re.DOTALL)
+        for row in rows:
+            cells = {k: _re.sub(r"<[^>]+>", "", v).strip()
+                     for k, v in _re.findall(r'<td[^>]*data-stat="([^"]+)"[^>]*>(.*?)</td>', row, _re.DOTALL)}
+            team = cells.get("team", "")
+            pace_str = cells.get("pace", "")
+            if team and pace_str:
+                try:
+                    result[team] = round(float(pace_str), 1)
+                except ValueError:
+                    pass
+
+        log.debug(f"Pace fetch: {len(result)} teams")
+        return result
+    except Exception as e:
+        log.debug(f"Pace fetch failed: {e}")
         return {}
 
 
