@@ -374,5 +374,113 @@
     "tokens_in": 6578,
     "tokens_out": 7637,
     "cost_usd": 0.134289
+  },
+  {
+    "ts": "2026-03-25T23:02:37.140279+00:00",
+    "date": "2026-03-25",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 2,
+    "cancelled_count": 3,
+    "total_staked": 231.06,
+    "bankroll_before": 770.17,
+    "bankroll_after": 539.11,
+    "bets": [
+      {
+        "id": "nba_bet_20260325_001",
+        "match": "Cleveland Cavaliers vs Miami Heat",
+        "time": "2026-03-25T23:30:00Z",
+        "pick": "Cleveland Cavaliers -2.5",
+        "odds": 1.9,
+        "stake": 115.53,
+        "potential_return": 219.51,
+        "reasoning": "Cleveland (45-27, NetRtg +4.3) hosts Miami (38-34, L10 5-5, NetRtg +2.5). Terry Rozier confirmed OUT (Not With Team). Jarrett Allen OUT for Cleveland already priced in. Critically, Scout's other Cleveland absences (Craig Porter Jr., Tyrese Proctor) do NOT appear on tonight's official injury report, suggesting those players are available — a positive upgrade for Cleveland (+5 confidence). Miami on a 4-game losing skid. Spread moved from -3.0 to -2.5 in our favour (easier line to cover). Cleveland's home court, better record, NetRtg advantage, and Miami's depleted guard rotation support covering 2.5 points. No B2B concerns for either team. Confidence 65 (up from 60 due to Cleveland roster upgrade). EV = (0.65 × 1.90) - 1 = 0.235 (23.5%). Odds at 1.90 within 1.80–2.30 spread target range.",
+        "confidence": 65,
+        "anchor_players": [
+          "Terry Rozier (OUT — Miami)",
+          "Jarrett Allen (OUT — Cleveland, priced in)"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null,
+        "committed_at": "2026-03-25T23:02:39Z"
+      },
+      {
+        "id": "nba_bet_20260325_002",
+        "match": "Boston Celtics vs Oklahoma City Thunder",
+        "time": "2026-03-25T23:30:00Z",
+        "pick": "Oklahoma City Thunder ML",
+        "odds": 1.79,
+        "stake": 115.53,
+        "potential_return": 206.8,
+        "reasoning": "OKC (57-15, L10 10-0, NetRtg +11.2 — best in the league) at Boston (47-24, L10 6-4, NetRtg +7.6). OKC road favourites priced at 1.79 (improved from Scout's 1.71 — movement in our favour). Jalen Williams confirmed AVAILABLE (not on tonight's official injury report). Boston missing Nikola Vucevic (OUT, fracture) — already priced in. OKC's only absentees are G League assignments (Barnhizer, Sandfort, Topic, Sorber). NetRtg gap of +3.6 pts in OKC's favour, with home court reducing effective gap to ~0.6–1.6 pts, but OKC's dominance (11.2 NetRtg, 11-game win streak) justifies road favourite pricing. Star rest risk minimal — road game at top-5 team (playoff seeding implications). Odds improved +0.08 at commit; confirming at original stake per line movement rules. EV = (0.68 × 1.79) - 1 = 0.217 (21.7%). Odds 1.79 within 1.70–2.50 ML target range.",
+        "confidence": 68,
+        "anchor_players": [
+          "Jalen Williams (OKC — confirmed AVAILABLE)",
+          "Nikola Vucevic (Boston — OUT, Fracture, priced in)"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null,
+        "committed_at": "2026-03-25T23:02:39Z"
+      }
+    ],
+    "cancelled": [
+      {
+        "id": "nba_draft_20260325_001",
+        "match": "Detroit Pistons vs Atlanta Hawks",
+        "pick": "Detroit Pistons ML",
+        "reason": "Jalen Johnson (Atlanta anchor player, previously Questionable) does NOT appear on tonight's official NBA injury report, confirming he is AVAILABLE. His availability strengthens Atlanta materially, requiring confidence reduction of -5. Adjusted confidence: 57. At commit-time odds of 1.77, EV = (0.57 × 1.77) - 1 = 0.009 — fails EV ≥ 0.05 floor. Cancelled: EV below minimum threshold after injury status upgrade for opponent anchor player."
+      },
+      {
+        "id": "nba_draft_20260325_002",
+        "match": "Cleveland Cavaliers vs Miami Heat",
+        "pick": "Cleveland Cavaliers ML",
+        "reason": "Pre-cancelled by Scout at draft time. Odds of 1.68 were below the 1.70 ML floor and remain below target (current 1.74 is borderline but this pick was already superseded by spread pick 003). Confirming cancellation."
+      },
+      {
+        "id": "nba_draft_20260325_005",
+        "match": "Minnesota Timberwolves vs Houston Rockets",
+        "pick": "Houston Rockets ML",
+        "reason": "Line moved 0.25 against our pick (Scout: 2.02 → Commit: 1.77 for Houston away ML). Movement > 0.20 against triggers major signal review. Per line_movement_rules: apply confidence -10. Adjusted confidence: 55 - 10 = 45 — below the 50 minimum threshold. EV at adjusted confidence: (0.45 × 1.77) - 1 = -0.204, deeply negative. Cancelled: line moved > 0.20 against with confidence falling below minimum after mandatory adjustment."
+      }
+    ],
+    "late_rejections": [
+      {
+        "match": "Memphis Grizzlies vs San Antonio Spurs",
+        "reason": "De'Aaron Fox still OUT (low back tightness). Memphis ML 9.5 above 2.50 ceiling. Spurs ML 1.06 below all valid floors. Memphis spread +17.0 at 1.92 in range but Memphis is confirmed tank-tier (24-47, L10 1-9) — per skills, tank teams don't cover large spreads. No valid pick."
+      },
+      {
+        "match": "Utah Jazz vs Washington Wizards",
+        "reason": "Utah ML 1.58 below 1.65 commit floor. Washington ML 2.43 in range but Washington is 16-55 with L10 0-10, confirmed tank team with heavily depleted roster (Davis OUT, George OUT, Johnson OUT). Betting a 0-10 L10 team regardless of odds creates no genuine edge. Both teams confirmed tanking — spread also unreliable."
+      },
+      {
+        "match": "Dallas Mavericks vs Denver Nuggets",
+        "reason": "Dallas is confirmed tank-tier (23-49, L10 2-8) with Kyrie Irving OUT, Lively OUT, Martin OUT. Denver ML 1.15 far below floor. Dallas ML 5.6 above ceiling. Spread Denver -12.0 at 1.92: per skills, tankers don't cover spreads and Dallas is confirmed tank team. Gafford and Williams both Questionable for Dallas adds further uncertainty. No valid pick."
+      },
+      {
+        "match": "Golden State Warriors vs Brooklyn Nets",
+        "reason": "Warriors missing Stephen Curry (OUT), Jimmy Butler (ACL, OUT), Seth Curry (OUT), Moses Moody (OUT), Al Horford (OUT) — essentially fully depleted. Warriors ML 1.15 below floor. Nets ML 5.6 above ceiling. Brooklyn is 17-55, confirmed tank tier. No valid pick regardless of Warriors' star absences."
+      },
+      {
+        "match": "Milwaukee Bucks vs Portland Trail Blazers",
+        "reason": "Giannis OUT confirmed (Hyperextension/Bone Bruise). Portland ML 1.14 far below floor. Milwaukee ML 5.8 above ceiling. Spread Portland -12.5 at 1.92: Portland is 36-37 with Lillard OUT, Sharpe OUT, and multiple Questionable players (Grant, Krejci, R. Williams). Cannot confidently expect a depleted Portland team to cover 12.5 against even a Giannis-less Milwaukee. Confidence would be below 60 floor."
+      },
+      {
+        "match": "Toronto Raptors vs LA Clippers",
+        "reason": "Kawhi Leonard remains Questionable — cannot build thesis on his absence per injury_check_rules. Clippers advanced stats unavailable — unable to calculate NetRtg gap or validate edge. Multiple GTDs on both sides (Kawhi Q, Ingram Q for Toronto, Poeltl Q for Toronto). Per spread rules: avoid when game-time decisions unresolved for either team. No valid pick."
+      },
+      {
+        "match": "Houston Rockets vs Minnesota Timberwolves",
+        "reason": "Late scout re-evaluation after cancelling Pick 005. Minnesota ML is off the table (franchise player Anthony Edwards OUT). Houston ML now at 1.77 — major line movement from Scout's 2.02. At current odds, even with VanVleet potentially available, EV at base confidence 55 = (0.55 × 1.77) - 1 = -0.026, failing EV floor. After -10 for line movement: confidence 45, deeply negative EV. No valid pick at current odds."
+      }
+    ],
+    "report": "",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 12326,
+    "tokens_out": 8000,
+    "cost_usd": 0.156978
   }
 ]
