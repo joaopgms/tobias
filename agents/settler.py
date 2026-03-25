@@ -151,41 +151,28 @@ def run(store) -> None:
     state, history = store.read_state_and_history()
     pending = state.get("pending_bets", [])
 
-    if not pending:
-        log.info("Settler: no pending bets — nothing to settle")
-        state["agent_models"] = state.get("agent_models", {})
-        state["agent_models"]["settler"] = "no-llm"
-        state["settler_updated_at"] = now_iso
-        state["last_updated"]       = now_iso
-        store.write_json("state", state, f"settler: no pending bets {today}")
-        _append_audit(store, now_iso, state, history, settled=[], skipped=[], bust=False,
-                      bankroll_before=state["bankroll"],
-                      bankroll_after=state["bankroll"])
-        store.write_data_js(state, history, config=store.read_config())
-        return
-
-    log.info(f"Settler: {len(pending)} pending bets to check")
-
-    # ── 2. Fetch scores — flat dict across all relevant dates ─────────────────
-    # ID format: nba_bet_YYYYMMDD_NNN (YYYYMMDD is UTC date of commit run)
-    # ESPN uses Eastern Time dates — a post-midnight UTC commit (e.g. 00:04 UTC Mar 21)
-    # is still a Mar 20 ET game. So we fetch both the ID date AND the previous day.
     from datetime import timedelta
+
+    def _d_obj(d_str):
+        return date.fromisoformat(f"{d_str[:4]}-{d_str[4:6]}-{d_str[6:8]}")
+
+    # ── 2. Fetch scores — always fetch yesterday to keep game log current ──────
+    # Also fetch dates of any pending bets (may span multiple days).
+    # ESPN uses Eastern Time — post-midnight UTC commits are still the prior ET day,
+    # so we always include the day before each bet date as well.
+    yesterday = (today - timedelta(days=1)).strftime("%Y%m%d")
+    dates_to_fetch: set[str] = {yesterday}
 
     def _bet_date(bet):
         try:
             return bet["id"].split("_")[2]          # YYYYMMDD
         except Exception:
-            return (today - timedelta(days=1)).strftime("%Y%m%d")
+            return yesterday
 
-    def _d_obj(d_str):
-        return date.fromisoformat(f"{d_str[:4]}-{d_str[4:6]}-{d_str[6:8]}")
-
-    dates_to_fetch: set[str] = set()
     for b in pending:
         d_str = _bet_date(b)
         dates_to_fetch.add(d_str)
-        try:                                        # also try previous day (ET vs UTC gap)
+        try:
             dates_to_fetch.add((_d_obj(d_str) - timedelta(days=1)).strftime("%Y%m%d"))
         except Exception:
             pass
@@ -227,7 +214,23 @@ def run(store) -> None:
     if seen_games:
         log.info(f"Settler: game log updated — {len(seen_games)} new games, {len(game_log)} teams tracked")
 
-    # ── 3. Settle each bet ────────────────────────────────────────────────────
+    # ── 3. Early exit if no pending bets (game log still updated above) ───────
+    if not pending:
+        log.info("Settler: no pending bets — nothing to settle")
+        state["agent_models"] = state.get("agent_models", {})
+        state["agent_models"]["settler"] = "no-llm"
+        state["settler_updated_at"] = now_iso
+        state["last_updated"]       = now_iso
+        store.write_json("state", state, f"settler: no pending bets {today}")
+        _append_audit(store, now_iso, state, history, settled=[], skipped=[], bust=False,
+                      bankroll_before=state["bankroll"],
+                      bankroll_after=state["bankroll"])
+        store.write_data_js(state, history, config=store.read_config())
+        return
+
+    log.info(f"Settler: {len(pending)} pending bets to check")
+
+    # ── 4. Settle each bet ────────────────────────────────────────────────────
     settled_ids: list[str] = []
     still_pending: list[dict] = []
     newly_settled: list[dict] = []
@@ -277,14 +280,14 @@ def run(store) -> None:
 
         newly_settled.append(bet)
 
-    # ── 4. Update state bets lists ────────────────────────────────────────────
+    # ── 5. Update state bets lists ────────────────────────────────────────────
     state["pending_bets"]  = still_pending
     state["settled_bets"]  = state.get("settled_bets", []) + newly_settled
     state["last_updated"]      = now_iso
     state["settler_updated_at"] = now_iso
     state["bust"]               = False   # reset flag (rechecked below)
 
-    # ── 5. Update history entries with settlement results ─────────────────────
+    # ── 6. Update history entries with settlement results ─────────────────────
     settled_by_id = {b["id"]: b for b in newly_settled}
     for entry in history.get("entries", []):
         if entry.get("type") != "bets_placed":
@@ -310,10 +313,10 @@ def run(store) -> None:
                     g["losses"]        = g.get("losses", 0) + losses
                     g["peak_bankroll"] = max(g.get("peak_bankroll", 0), state["bankroll"])
 
-    # ── 6. Bust check ─────────────────────────────────────────────────────────
+    # ── 7. Bust check ─────────────────────────────────────────────────────────
     state, history, busted = _check_bust(state, history)
 
-    # ── 7. Validate & write ────────────────────────────────────────────────────
+    # ── 8. Validate & write ────────────────────────────────────────────────────
     try:
         validate_all_bets(state["pending_bets"],  "settler/pending")
         validate_all_bets(state["settled_bets"],  "settler/settled")
@@ -328,7 +331,7 @@ def run(store) -> None:
     store.write_json("state",   state,   commit_msg)
     store.write_json("history", history, commit_msg)
 
-    # ── 8. Audit log ──────────────────────────────────────────────────────────
+    # ── 9. Audit log ──────────────────────────────────────────────────────────
     _append_audit(store, now_iso, state, history,
                   settled=newly_settled,
                   skipped=[b["id"] for b in still_pending],
