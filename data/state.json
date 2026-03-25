@@ -9,7 +9,7 @@
   "net_pnl": -229.83,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-03-24T22:56:29.531055+00:00",
+  "last_updated": "2026-03-25T10:51:23.654632+00:00",
   "first_game_time": "2026-03-24T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
@@ -20,7 +20,7 @@
   "commit_updated_at": "2026-03-24T22:56:29.531055+00:00",
   "commit_date": "2026-03-24",
   "analyst_updated_at": "2026-03-23T11:41:48.049868+00:00",
-  "settler_updated_at": "2026-03-24T10:53:54.430293+00:00",
+  "settler_updated_at": "2026-03-25T10:51:23.654632+00:00",
   "agent_models": {
     "settler": "no-llm",
     "analyst": "claude-sonnet-4-6",
@@ -315,5 +315,37 @@
     "games_str": "Sacramento Kings @ Charlotte Hornets  |  2026-03-24T23:00 UTC  |  Spectrum Center\nNew Orleans Pelicans @ New York Knicks  |  2026-03-24T23:30 UTC  |  Madison Square Garden\nOrlando Magic @ Cleveland Cavaliers  |  2026-03-25T00:00 UTC  |  Rocket Arena\nDenver Nuggets @ Phoenix Suns  |  2026-03-25T03:00 UTC  |  Mortgage Matchup Center",
     "standings_str": "Oklahoma City Thunder: 57-15  L10:10-0\nSan Antonio Spurs: 54-18  L10:9-1\nDetroit Pistons: 52-19  L10:7-3\nNew York Knicks: 47-25  L10:7-3\nBoston Celtics: 47-24  L10:6-4\nCleveland Cavaliers: 44-27  L10:7-3\nDenver Nuggets: 44-28  L10:6-4\nPhoenix Suns: 40-32  L10:5-5\nOrlando Magic: 38-33  L10:5-5\nCharlotte Hornets: 37-34  L10:7-3\nNew Orleans Pelicans: 25-47  L10:6-4\nUTAH: 21-51  L10:3-7\nSacramento Kings: 19-53  L10:5-5\nBrooklyn Nets: 17-55  L10:2-8\nIndiana Pacers: 16-56  L10:1-9\nWashington Wizards: 16-55  L10:0-10",
     "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nCharlotte Hornets: OffRtg 119.0 | DefRtg 114.7 | NetRtg +4.2 | Pace 0.0\nSacramento Kings: OffRtg 111.1 | DefRtg 121.1 | NetRtg -10.0 | Pace 0.0\nNew York Knicks: OffRtg 119.7 | DefRtg 112.7 | NetRtg +7.0 | Pace 0.0\nNew Orleans Pelicans: OffRtg 114.6 | DefRtg 118.4 | NetRtg -3.8 | Pace 0.0\nCleveland Cavaliers: OffRtg 118.6 | DefRtg 114.4 | NetRtg +4.2 | Pace 0.0\nOrlando Magic: OffRtg 115.0 | DefRtg 114.1 | NetRtg +0.9 | Pace 0.0\nPhoenix Suns: OffRtg 115.3 | DefRtg 114.1 | NetRtg +1.3 | Pace 0.0\nDenver Nuggets: OffRtg 121.7 | DefRtg 117.2 | NetRtg +4.4 | Pace 0.0"
-  }
+  },
+  "team_game_log": {
+    "Charlotte Hornets": [
+      44
+    ],
+    "Sacramento Kings": [
+      -44
+    ],
+    "New York Knicks": [
+      5
+    ],
+    "New Orleans Pelicans": [
+      -5
+    ],
+    "Cleveland Cavaliers": [
+      5
+    ],
+    "Orlando Magic": [
+      -5
+    ],
+    "Phoenix Suns": [
+      -2
+    ],
+    "Denver Nuggets": [
+      2
+    ]
+  },
+  "game_log_recorded": [
+    "Denver Nuggets@Phoenix Suns",
+    "Sacramento Kings@Charlotte Hornets",
+    "New Orleans Pelicans@New York Knicks",
+    "Orlando Magic@Cleveland Cavaliers"
+  ]
 }
