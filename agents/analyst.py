@@ -24,7 +24,7 @@ import logging
 from datetime import datetime, date, timezone
 
 from core.llm import call_llm, call_llm_full, call_llm_full, extract_tag, agent_model_name
-from core.espn import fetch_standings, fetch_injuries, fetch_advanced_stats, fetch_franchise_player_statuses, fetch_netrtg_l15
+from core.espn import fetch_standings, fetch_injuries, fetch_advanced_stats, fetch_franchise_player_statuses
 
 log = logging.getLogger(__name__)
 
@@ -539,8 +539,8 @@ def run(store) -> None:
     standings  = fetch_standings()
     injuries   = fetch_injuries()
     adv_stats  = fetch_advanced_stats()
-    netrtg_l15 = fetch_netrtg_l15()
-    log.info(f"NetRtg L15: {len(netrtg_l15)}/30 teams available")
+    netrtg_l15 = state.get("netrtg_l15") or {}
+    log.info(f"NetRtg L15: {len(netrtg_l15)} teams from state")
 
     # ── Franchise player roster verification ──────────────────────────────────
     # Identify franchise-tier teams (top-10 by wins) + known injury-sensitive teams
