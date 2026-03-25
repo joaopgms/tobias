@@ -1854,7 +1854,9 @@ function renderCommitTab(){
   // Read from STATE_DATA.commit_report_data (written by commit agent)
   const commitStatus = ST.commit_status||'pending';
   const crd = ST.commit_report_data||null;
-  const todayReport = (commitStatus==='done' && crd && crd.date===today) ? crd : null;
+  // Show last commit report whenever status=done — scout resets to 'pending' each new day
+  const todayReport = (commitStatus==='done' && crd) ? crd : null;
+  const isStaleReport = todayReport && todayReport.date && todayReport.date !== today;
 
   if(todayEl){
     if(!todayReport){
@@ -1866,7 +1868,8 @@ function renderCommitTab(){
       const lateRejCount=(todayReport.late_rejections||[]).length;
       const commitReportDate = todayReport.ts ? fmt(todayReport.ts) : (todayReport.updated_at ? fmt(todayReport.updated_at) : '-');
       const commitMatchDate = todayReport.date||today;
-      let h=`<div style="font-size:.62rem;color:var(--muted);margin-bottom:6px;display:flex;gap:16px;flex-wrap:wrap">
+      let h=`<div style="font-size:.62rem;color:var(--muted);margin-bottom:6px;display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+        ${isStaleReport?`<span style="background:var(--yellow-soft);color:var(--yellow);border:1px solid var(--yellow-mid);border-radius:var(--r-pill);padding:2px 8px;font-weight:700">From ${todayReport.date}</span>`:''}
         <span>Report generated: <strong style="color:var(--text)">${commitReportDate}</strong></span>
         <span>Match date: <strong style="color:var(--text)">${commitMatchDate}</strong></span>
       </div>`;
