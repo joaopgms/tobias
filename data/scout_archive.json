@@ -1401,5 +1401,68 @@
     "tokens_in": 9738,
     "tokens_out": 6318,
     "cost_usd": 0.123984
+  },
+  {
+    "ts": "2026-03-26T15:11:14.268669+00:00",
+    "date": "2026-03-26",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_unibet",
+    "draft_count": 1,
+    "picks": [
+      {
+        "id": "nba_draft_20260326_001",
+        "match": "Charlotte Hornets vs New York Knicks",
+        "time": "2026-03-26T23:00:00Z",
+        "pick": "New York Knicks ML",
+        "odds": 2.02,
+        "stake": 80.87,
+        "potential_return": 163.36,
+        "confidence": 65,
+        "reasoning": "NetRtg gap: NYK +7.0 vs CHA +4.8 = 2.2pt gap (below L15 threshold of 4.0 for meaningful signal). However, season NetRtg favours Knicks. NYK standing: 48-25 (L10: 8-2), CHA: 38-34 (L10: 7-3). Knicks are in a genuine seeding race (East 2-3 seed battle with Boston and Detroit) — strong motivation-positive. Charlotte is play-in bubble too (38-34, L10: 7-3, W4 streak) so motivation exists on both sides. Injury check: NYK missing McBride (OUT) and Shamet (OUT) but these are non-franchise depth players. Charlotte: Pat Connaughton Questionable (illness) — depth player, minimal impact. No franchise player injuries on either side. Line check: Knicks away at 2.02 with 48-25 record against 38-34 Charlotte — reasonable pricing, no anomaly (home team 38-34 priced as favourite at 1.82, gap is 10 wins which justifies Charlotte slight home favourite). Charlotte NetRtg +4.8 and home court advantage worth ~2-3pts makes this close. Odds target: 2.02 falls in 1.70-2.50 ML range ✓. EV calculation: confidence 65% → EV = (0.65 × 2.02) - 1 = 1.313 - 1 = 0.313. Wait — that's too high. Re-check: EV = (conf/100 × odds) - 1 = (0.65 × 2.02) - 1 = 0.313. That is 31.3% EV which is strong. However, confidence is derived from marginal NetRtg edge + Knicks seeding motivation + L10 8-2 vs 7-3. Charlotte hot streak (W4, L10: 7-3) and home court are genuine factors working against Knicks. Confidence floor for ML is 50 — at 65 this clears the bar. EV 0.313 ≥ 0.15 (strong edge). Confidence 65 = Medium tier → stake 15-20% of bankroll. Using 15% = €80.87. No B2B situation. Injury feed source: nba_official ✓ — normal confidence rules apply. No line anomaly detected.",
+        "anchor_players": [
+          "Jalen Brunson",
+          "Karl-Anthony Towns",
+          "Mikal Bridges"
+        ],
+        "drafted_at": "2026-03-26T15:11:24Z",
+        "market_type": "ml"
+      }
+    ],
+    "rejected": [
+      {
+        "match": "Detroit Pistons vs New Orleans Pelicans",
+        "reason": "Detroit ML odds 1.54 below 1.70 floor. Spread evaluated: Detroit -4.5 at 1.91 — Cade Cunningham OUT [roster-only], franchise player absence requires mandatory verification before any Detroit pick. Cannot draft without official PDF confirmation. Also Pelicans have Trey Murphy III and Dejounte Murray both Questionable — two key players uncertain. Too much bilateral uncertainty for spread. Pelicans ML at 2.50 is at ceiling but NOP NetRtg -3.8 vs DET +7.7 = 11.5pt gap massively favours Detroit even without Cunningham. However cannot bet Pelicans ML when Detroit is missing potential franchise player — need to verify Cunningham status first. No_edge/deferred.",
+        "ml_home": 1.54,
+        "ml_away": 2.5,
+        "decision": "deferred"
+      },
+      {
+        "match": "Orlando Magic vs Sacramento Kings",
+        "reason": "LINE ANOMALY: Orlando ML 1.09 (implied prob ~91.7%) vs Sacramento ML 8.0. Sacramento Kings are confirmed tank-tier (19-54, NetRtg -10.5) and Orlando (38-34) is legitimate favourite, but 1.09 is extreme — no value. Spread -15.0 is massive; Kings have multiple Questionable players (Achiuwa, Hayes), Magic missing Franz Wagner (OUT, injury management), Anthony Black (OUT), Jalen Suggs Questionable. Sacramento Kings in tank mode but booking -15.0 at 1.90 is outside normal range and risky given volatile tank teams. No genuine EV edge on any market here.",
+        "ml_home": 1.09,
+        "ml_away": 8.0,
+        "decision": "rejected"
+      },
+      {
+        "match": "Boston Celtics vs Atlanta Hawks",
+        "reason": "Boston ML 1.33 well below 1.70 floor. Atlanta ML 3.30 above 2.50 ceiling. No spread odds provided. HOT STREAK FADE evaluation: Atlanta L10 9-1 but W% ~.562 exceeds .550 threshold so strict fade rule does NOT apply per skills. No market available in target range.",
+        "ml_home": 1.33,
+        "ml_away": 3.3,
+        "decision": "rejected"
+      },
+      {
+        "match": "Cleveland Cavaliers vs Miami Heat",
+        "reason": "Cleveland ML 1.50 below 1.70 floor. Miami ML 2.60 above 2.50 ceiling. No spread odds provided. Cleveland has 5 players OUT including Jarrett Allen — significant depth depletion flagged in skills. No spread market available to exploit. Cannot bet either ML profitably within target range.",
+        "ml_home": 1.5,
+        "ml_away": 2.6,
+        "decision": "rejected"
+      }
+    ],
+    "report": "**Charlotte Hornets vs New York Knicks — DRAFTED: NYK ML at 2.02**\nKnicks (48-25, L10: 8-2, NetRtg +7.0) have a meaningful record and rating advantage over Charlotte (38-34, L10: 7-3, NetRtg +4.8). The NetRtg gap of 2.2pts is below the 4.0 L15 threshold so this is directional only, but the 10-win record gap and Knicks' live seeding motivation (competing for East 2-3 seed) provide additional edge. No franchise player injuries on either team; all absences are depth players. Odds 2.02 are in range, EV = 0.313 (strong), confidence 65 (Medium tier). Stake €80.87 (15% of bankroll).\n\n**Detroit Pistons vs New Orleans Pelicans — DEFERRED:** Cade Cunningham [roster-only] OUT requires mandatory NBA official PDF verification before any Detroit pick. Detroit ML at 1.54 is below the 1.70 floor anyway. Pelicans ML at 2.50 (at ceiling) is theoretically interesting but NOP NetRtg -3.8 vs DET +7.7 makes Pelicans a very difficult bet even without Cunningham verified. Murray and Murphy III both Questionable adds uncertainty. Flagged for Commit phase investigation if Cunningham status is confirmed.\n\n**Orlando Magic vs Sacramento Kings — REJECTED:** Orlando ML at 1.09 has no value. The -15.0 spread is extreme and Sacramento is confirmed tank-tier but with high bilateral injury uncertainty (Wagner OUT for Orlando, LaVine/Eubanks/Hunter OUT for Kings). No target-range market available.\n\n**Boston Celtics vs Atlanta Hawks — REJECTED:** Boston ML 1.33 and Atlanta ML 3.30 both outside target range. No spread odds provided.\n\n**Cleveland Cavaliers vs Miami Heat — REJECTED:** Both ML odds outside target range (1.50 / 2.60). No spread available. CLE depth significantly depleted.\n\nSlate quality is moderate — one clear edge found in NYK away at 2.02. The Pistons game is worth revisiting at Commit if Cunningham status resolves. O/U odds unavailable across the entire slate; totals analysis suppressed.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 7223,
+    "tokens_out": 2695,
+    "cost_usd": 0.062094
   }
 ]
