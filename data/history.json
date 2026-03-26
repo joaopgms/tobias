@@ -16,7 +16,7 @@
           "net_pnl": null,
           "total_bets": 5,
           "wins": 1,
-          "losses": 2,
+          "losses": 4,
           "bust": false
         }
       ]
@@ -271,10 +271,10 @@
             "Terry Rozier (OUT — Miami)",
             "Jarrett Allen (OUT — Cleveland, priced in)"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -115.53,
+          "settled_at": "2026-03-26T10:53:23.098882+00:00",
           "committed_at": "2026-03-25T23:02:39Z"
         },
         {
@@ -291,10 +291,10 @@
             "Jalen Williams (OKC — confirmed AVAILABLE)",
             "Nikola Vucevic (Boston — OUT, Fracture, priced in)"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -115.53,
+          "settled_at": "2026-03-26T10:53:23.098882+00:00",
           "committed_at": "2026-03-25T23:02:39Z"
         }
       ],
