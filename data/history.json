@@ -14,7 +14,7 @@
           "peak_bankroll": 1000.0,
           "final_bankroll": null,
           "net_pnl": null,
-          "total_bets": 5,
+          "total_bets": 6,
           "wins": 1,
           "losses": 4,
           "bust": false
@@ -299,6 +299,41 @@
         }
       ],
       "summary": "Day 2026-03-25 commit — 2 bets totalling €231.06. 3 cancelled. Bankroll: €770.17 → €539.11."
+    },
+    {
+      "entry_id": "nba_entry_20260326",
+      "season": "2024-25",
+      "game": 1,
+      "timestamp": "2026-03-26T22:54:35.579250+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 539.11,
+      "total_staked": 80.87,
+      "bankroll_after": 458.24,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260326_001",
+          "match": "Charlotte Hornets vs New York Knicks",
+          "time": "2026-03-26T23:00:00Z",
+          "pick": "New York Knicks ML",
+          "odds": 2.08,
+          "stake": 80.87,
+          "potential_return": 168.21,
+          "confidence": 65,
+          "reasoning": "NYK ML confirmed at improved odds of 2.08 (Scout: 2.02, +0.06 in favour). All three anchor players (Brunson, KAT, Mikal Bridges) confirmed active per nba_official injury report. NYK record 48-25 (L10: 8-2) vs CHA 38-34 (L10: 7-3), season NetRtg +7.0 vs +4.8. Charlotte has new injuries vs Scout: Tidjane Salaun OUT (calf) and McNeeley OUT (illness), mildly reinforcing Knicks edge. Knicks in active East 2-3 seeding race — strong motivation positive. Injury source: nba_official (no confidence cap). EV at commit odds: (0.65 × 2.08) - 1 = 0.352. No anomaly detected. Stake held at original 15% of bankroll (€80.87). Odds in valid ML range [1.65–2.50]. Movement +0.06 in favour — stake not increased per line_movement_rules.",
+          "anchor_players": [
+            "Jalen Brunson",
+            "Karl-Anthony Towns",
+            "Mikal Bridges"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-03-26T22:54:37Z"
+        }
+      ],
+      "summary": "Day 2026-03-26 commit — 1 bets totalling €80.87. 0 cancelled. Bankroll: €539.11 → €458.24."
     }
   ]
 }
