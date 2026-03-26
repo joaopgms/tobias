@@ -6,10 +6,10 @@
   "bankroll_peak": 1000.0,
   "total_staked": 657.31,
   "total_returned": 196.42,
-  "net_pnl": -229.83,
+  "net_pnl": -460.89,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-03-25T23:02:37.140279+00:00",
+  "last_updated": "2026-03-26T10:53:23.098882+00:00",
   "first_game_time": "2026-03-25T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
@@ -20,7 +20,7 @@
   "commit_updated_at": "2026-03-25T23:02:37.140279+00:00",
   "commit_date": "2026-03-25",
   "analyst_updated_at": "2026-03-23T11:41:48.049868+00:00",
-  "settler_updated_at": "2026-03-25T10:51:23.654632+00:00",
+  "settler_updated_at": "2026-03-26T10:53:23.098882+00:00",
   "agent_models": {
     "settler": "no-llm",
     "analyst": "claude-sonnet-4-6",
@@ -29,48 +29,7 @@
   },
   "last_report": "",
   "draft_picks": [],
-  "pending_bets": [
-    {
-      "id": "nba_bet_20260325_001",
-      "match": "Cleveland Cavaliers vs Miami Heat",
-      "time": "2026-03-25T23:30:00Z",
-      "pick": "Cleveland Cavaliers -2.5",
-      "odds": 1.9,
-      "stake": 115.53,
-      "potential_return": 219.51,
-      "reasoning": "Cleveland (45-27, NetRtg +4.3) hosts Miami (38-34, L10 5-5, NetRtg +2.5). Terry Rozier confirmed OUT (Not With Team). Jarrett Allen OUT for Cleveland already priced in. Critically, Scout's other Cleveland absences (Craig Porter Jr., Tyrese Proctor) do NOT appear on tonight's official injury report, suggesting those players are available — a positive upgrade for Cleveland (+5 confidence). Miami on a 4-game losing skid. Spread moved from -3.0 to -2.5 in our favour (easier line to cover). Cleveland's home court, better record, NetRtg advantage, and Miami's depleted guard rotation support covering 2.5 points. No B2B concerns for either team. Confidence 65 (up from 60 due to Cleveland roster upgrade). EV = (0.65 × 1.90) - 1 = 0.235 (23.5%). Odds at 1.90 within 1.80–2.30 spread target range.",
-      "confidence": 65,
-      "anchor_players": [
-        "Terry Rozier (OUT — Miami)",
-        "Jarrett Allen (OUT — Cleveland, priced in)"
-      ],
-      "result": null,
-      "returned": null,
-      "pnl": null,
-      "settled_at": null,
-      "committed_at": "2026-03-25T23:02:39Z"
-    },
-    {
-      "id": "nba_bet_20260325_002",
-      "match": "Boston Celtics vs Oklahoma City Thunder",
-      "time": "2026-03-25T23:30:00Z",
-      "pick": "Oklahoma City Thunder ML",
-      "odds": 1.79,
-      "stake": 115.53,
-      "potential_return": 206.8,
-      "reasoning": "OKC (57-15, L10 10-0, NetRtg +11.2 — best in the league) at Boston (47-24, L10 6-4, NetRtg +7.6). OKC road favourites priced at 1.79 (improved from Scout's 1.71 — movement in our favour). Jalen Williams confirmed AVAILABLE (not on tonight's official injury report). Boston missing Nikola Vucevic (OUT, fracture) — already priced in. OKC's only absentees are G League assignments (Barnhizer, Sandfort, Topic, Sorber). NetRtg gap of +3.6 pts in OKC's favour, with home court reducing effective gap to ~0.6–1.6 pts, but OKC's dominance (11.2 NetRtg, 11-game win streak) justifies road favourite pricing. Star rest risk minimal — road game at top-5 team (playoff seeding implications). Odds improved +0.08 at commit; confirming at original stake per line movement rules. EV = (0.68 × 1.79) - 1 = 0.217 (21.7%). Odds 1.79 within 1.70–2.50 ML target range.",
-      "confidence": 68,
-      "anchor_players": [
-        "Jalen Williams (OKC — confirmed AVAILABLE)",
-        "Nikola Vucevic (Boston — OUT, Fracture, priced in)"
-      ],
-      "result": null,
-      "returned": null,
-      "pnl": null,
-      "settled_at": null,
-      "committed_at": "2026-03-25T23:02:39Z"
-    }
-  ],
+  "pending_bets": [],
   "settled_bets": [
     {
       "id": "nba_bet_20260319_001",
@@ -141,6 +100,46 @@
       "pnl": 95.17,
       "settled_at": "2026-03-23T10:53:37.411951+00:00",
       "committed_at": "2026-03-22T20:49:54Z"
+    },
+    {
+      "id": "nba_bet_20260325_001",
+      "match": "Cleveland Cavaliers vs Miami Heat",
+      "time": "2026-03-25T23:30:00Z",
+      "pick": "Cleveland Cavaliers -2.5",
+      "odds": 1.9,
+      "stake": 115.53,
+      "potential_return": 219.51,
+      "reasoning": "Cleveland (45-27, NetRtg +4.3) hosts Miami (38-34, L10 5-5, NetRtg +2.5). Terry Rozier confirmed OUT (Not With Team). Jarrett Allen OUT for Cleveland already priced in. Critically, Scout's other Cleveland absences (Craig Porter Jr., Tyrese Proctor) do NOT appear on tonight's official injury report, suggesting those players are available — a positive upgrade for Cleveland (+5 confidence). Miami on a 4-game losing skid. Spread moved from -3.0 to -2.5 in our favour (easier line to cover). Cleveland's home court, better record, NetRtg advantage, and Miami's depleted guard rotation support covering 2.5 points. No B2B concerns for either team. Confidence 65 (up from 60 due to Cleveland roster upgrade). EV = (0.65 × 1.90) - 1 = 0.235 (23.5%). Odds at 1.90 within 1.80–2.30 spread target range.",
+      "confidence": 65,
+      "anchor_players": [
+        "Terry Rozier (OUT — Miami)",
+        "Jarrett Allen (OUT — Cleveland, priced in)"
+      ],
+      "result": "LOST",
+      "returned": 0.0,
+      "pnl": -115.53,
+      "settled_at": "2026-03-26T10:53:23.098882+00:00",
+      "committed_at": "2026-03-25T23:02:39Z"
+    },
+    {
+      "id": "nba_bet_20260325_002",
+      "match": "Boston Celtics vs Oklahoma City Thunder",
+      "time": "2026-03-25T23:30:00Z",
+      "pick": "Oklahoma City Thunder ML",
+      "odds": 1.79,
+      "stake": 115.53,
+      "potential_return": 206.8,
+      "reasoning": "OKC (57-15, L10 10-0, NetRtg +11.2 — best in the league) at Boston (47-24, L10 6-4, NetRtg +7.6). OKC road favourites priced at 1.79 (improved from Scout's 1.71 — movement in our favour). Jalen Williams confirmed AVAILABLE (not on tonight's official injury report). Boston missing Nikola Vucevic (OUT, fracture) — already priced in. OKC's only absentees are G League assignments (Barnhizer, Sandfort, Topic, Sorber). NetRtg gap of +3.6 pts in OKC's favour, with home court reducing effective gap to ~0.6–1.6 pts, but OKC's dominance (11.2 NetRtg, 11-game win streak) justifies road favourite pricing. Star rest risk minimal — road game at top-5 team (playoff seeding implications). Odds improved +0.08 at commit; confirming at original stake per line movement rules. EV = (0.68 × 1.79) - 1 = 0.217 (21.7%). Odds 1.79 within 1.70–2.50 ML target range.",
+      "confidence": 68,
+      "anchor_players": [
+        "Jalen Williams (OKC — confirmed AVAILABLE)",
+        "Nikola Vucevic (Boston — OUT, Fracture, priced in)"
+      ],
+      "result": "LOST",
+      "returned": 0.0,
+      "pnl": -115.53,
+      "settled_at": "2026-03-26T10:53:23.098882+00:00",
+      "committed_at": "2026-03-25T23:02:39Z"
     }
   ],
   "rejected_games": [
@@ -577,7 +576,8 @@
       -5
     ],
     "Cleveland Cavaliers": [
-      5
+      5,
+      -17
     ],
     "Orlando Magic": [
       -5
@@ -586,13 +586,92 @@
       -2
     ],
     "Denver Nuggets": [
+      2,
+      7
+    ],
+    "Miami Heat": [
+      17
+    ],
+    "Dallas Mavericks": [
+      -7
+    ],
+    "Detroit Pistons": [
+      -1
+    ],
+    "Atlanta Hawks": [
+      1
+    ],
+    "Indiana Pacers": [
+      -7
+    ],
+    "Los Angeles Lakers": [
+      7
+    ],
+    "Philadelphia 76ers": [
+      20
+    ],
+    "Chicago Bulls": [
+      -20
+    ],
+    "Boston Celtics": [
+      10
+    ],
+    "Oklahoma City Thunder": [
+      -10
+    ],
+    "Memphis Grizzlies": [
+      -25
+    ],
+    "San Antonio Spurs": [
+      25
+    ],
+    "Utah Jazz": [
+      -23
+    ],
+    "Washington Wizards": [
+      23
+    ],
+    "Minnesota Timberwolves": [
       2
+    ],
+    "Houston Rockets": [
+      -2
+    ],
+    "Golden State Warriors": [
+      3
+    ],
+    "Brooklyn Nets": [
+      -3
+    ],
+    "Portland Trail Blazers": [
+      31
+    ],
+    "Milwaukee Bucks": [
+      -31
+    ],
+    "LA Clippers": [
+      25
+    ],
+    "Toronto Raptors": [
+      -25
     ]
   },
   "game_log_recorded": [
+    "Oklahoma City Thunder@Boston Celtics",
+    "Atlanta Hawks@Detroit Pistons",
+    "Chicago Bulls@Philadelphia 76ers",
+    "Washington Wizards@Utah Jazz",
+    "Los Angeles Lakers@Indiana Pacers",
+    "Miami Heat@Cleveland Cavaliers",
+    "Milwaukee Bucks@Portland Trail Blazers",
+    "Brooklyn Nets@Golden State Warriors",
     "Denver Nuggets@Phoenix Suns",
-    "Sacramento Kings@Charlotte Hornets",
     "New Orleans Pelicans@New York Knicks",
+    "Houston Rockets@Minnesota Timberwolves",
+    "San Antonio Spurs@Memphis Grizzlies",
+    "Sacramento Kings@Charlotte Hornets",
+    "Toronto Raptors@LA Clippers",
+    "Dallas Mavericks@Denver Nuggets",
     "Orlando Magic@Cleveland Cavaliers"
   ]
 }
