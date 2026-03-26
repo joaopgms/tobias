@@ -482,5 +482,75 @@
     "tokens_in": 12326,
     "tokens_out": 8000,
     "cost_usd": 0.156978
+  },
+  {
+    "ts": "2026-03-26T22:54:35.579250+00:00",
+    "date": "2026-03-26",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 1,
+    "cancelled_count": 0,
+    "total_staked": 80.87,
+    "bankroll_before": 539.11,
+    "bankroll_after": 458.24,
+    "bets": [
+      {
+        "id": "nba_bet_20260326_001",
+        "match": "Charlotte Hornets vs New York Knicks",
+        "time": "2026-03-26T23:00:00Z",
+        "pick": "New York Knicks ML",
+        "odds": 2.08,
+        "stake": 80.87,
+        "potential_return": 168.21,
+        "confidence": 65,
+        "reasoning": "NYK ML confirmed at improved odds of 2.08 (Scout: 2.02, +0.06 in favour). All three anchor players (Brunson, KAT, Mikal Bridges) confirmed active per nba_official injury report. NYK record 48-25 (L10: 8-2) vs CHA 38-34 (L10: 7-3), season NetRtg +7.0 vs +4.8. Charlotte has new injuries vs Scout: Tidjane Salaun OUT (calf) and McNeeley OUT (illness), mildly reinforcing Knicks edge. Knicks in active East 2-3 seeding race — strong motivation positive. Injury source: nba_official (no confidence cap). EV at commit odds: (0.65 × 2.08) - 1 = 0.352. No anomaly detected. Stake held at original 15% of bankroll (€80.87). Odds in valid ML range [1.65–2.50]. Movement +0.06 in favour — stake not increased per line_movement_rules.",
+        "anchor_players": [
+          "Jalen Brunson",
+          "Karl-Anthony Towns",
+          "Mikal Bridges"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null,
+        "committed_at": "2026-03-26T22:54:37Z"
+      }
+    ],
+    "cancelled": [],
+    "late_rejections": [
+      {
+        "match": "Detroit Pistons vs New Orleans Pelicans",
+        "reason": "Time gate violation — only 6 minutes to tip-off (minimum 20 minutes required). Additionally: DET ML 1.49 below 1.70 floor; NOP ML 2.65 above 2.50 ceiling. Spread DET -5.0 at 1.89 is in range but Cade Cunningham confirmed OUT (Pneumothorax) — franchise player absence makes Detroit spread higher risk. Trey Murphy III also confirmed OUT for NOP (upgraded from Questionable). No valid market within time gate."
+      },
+      {
+        "match": "Orlando Magic vs Sacramento Kings",
+        "reason": "Time gate violation — 6 minutes to tip. No value regardless: ORL ML 1.09 extreme favourite, SAC ML 8.0 above ceiling. Spread -15.0 involves tank-tier Sacramento. Franz Wagner and Anthony Black both confirmed OUT for Orlando. No EV market available."
+      },
+      {
+        "match": "Atlanta Hawks vs Boston Celtics",
+        "reason": "Time gate violation — 6 minutes to tip. BOS ML 1.43 below 1.70 floor; ATL ML 2.90 above 2.50 ceiling. Spread BOS -5.5 at 1.88 — just below 1.90 spread floor. No valid market even without time gate violation."
+      },
+      {
+        "match": "Miami Heat vs Cleveland Cavaliers",
+        "reason": "Time gate violation — 6 minutes to tip. CLE ML 1.49 below floor; MIA ML 2.65 above ceiling. Spread CLE -5.5 at 1.92 in range but Scout noted CLE has 5 players OUT including Jarrett Allen — franchise player concern. Insufficient time to validate."
+      },
+      {
+        "match": "Chicago Bulls vs Oklahoma City Thunder",
+        "reason": "Time gate violation — 6 minutes to tip. OKC ML 1.04 extreme favourite (implied ~96%). No value on any market. CHI ML 11.5 far above 2.50 ceiling."
+      },
+      {
+        "match": "Utah Jazz vs Denver Nuggets",
+        "reason": "Time gate violation — 6 minutes to tip. DEN ML 1.06 extreme favourite. UTA ML 9.0 far above 2.50 ceiling. Utah confirmed tank-tier (21-52). No value."
+      },
+      {
+        "match": "Dallas Mavericks vs Portland Trail Blazers",
+        "reason": "Time gate violation — 6 minutes to tip. Not on primary slate. POR ML 4.60 above 2.50 ceiling. DAL ML 1.21 below 1.70 floor. Spread DAL -10.0 at 1.90 — in range but Portland appears tank-adjacent (not in standings data provided). No edge with time gate violated."
+      }
+    ],
+    "report": "### CONFIRMED — New York Knicks ML\n\n- **Match:** Charlotte Hornets vs New York Knicks | **Tip:** 2026-03-26T23:00Z\n- **Pick:** New York Knicks ML | **Scout odds:** 2.02 | **Commit odds:** 2.08 | **Move:** +0.06 (improved)\n- **ML:** H:1.76 / A:2.08 | **ATS:** -2.0 (1.90/1.92) | **O/U:** N/A\n- **Stake:** €80.87 | **Pot:** €168.21 | **Conf:** 65/100 | **EV:** 0.352\n- **Decision:** All three anchor players (Brunson, KAT, Mikal Bridges) confirmed active on nba_official. Odds improved from 2.02 → 2.08 — stake held at Scout level per rules. Charlotte adds two new outs since Scout (Salaun left calf, McNeeley illness), marginally reinforcing Knicks edge. NYK 48-25 record, NetRtg +7.0, L10 8-2 in seeding race. EV 0.352 well above 0.05 threshold. Injury source nba_official — full confidence valid. No line anomaly. No B2B. Clean confirm.\n\n---\n\n### LATE SCOUT SUMMARY\n\n**Time gate blocked all new picks** — all tonight's games tip at 23:00 UTC, leaving only 6 minutes at commit time (22:54 UTC). The skills file requires >20 minutes before first game tip for any new Commit-phase pick. Seven games were evaluated and rejected on time gate grounds; most also had no valid market in target odds ranges regardless.\n\nMost notable late-breaking information: Cade Cunningham confirmed OUT (Pneumothorax) and Trey Murphy III upgraded from Questionable to OUT for the DET/NOP game. Detroit spread at -5.0 (1.89) was potentially interesting but unpickable given time gate + franchise player absence uncertainty.\n\n---\n\n### SLATE SUMMARY\n\nOne confirmed bet tonight: New York Knicks ML at 2.08 for €80.87 (15% of bankroll), with EV of 35.2% — a strong edge by any measure. The improvement from Scout odds (2.02 → 2.08) is a positive signal, potentially reflecting late Charlotte injury news (Salaun, McNeeley) being priced in. Total exposure is €80.87 against a €539.11 bankroll (15.0%), well within the 70% limit. No picks were cancelled from the draft, and no new picks could be added due to the time gate constraint with all games tipping in 6 minutes.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 5725,
+    "tokens_out": 3407,
+    "cost_usd": 0.06828
   }
 ]
