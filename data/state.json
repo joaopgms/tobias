@@ -1,24 +1,24 @@
 {
   "season": "2024-25",
   "game": 1,
-  "bankroll": 539.11,
+  "bankroll": 458.24,
   "bankroll_initial": 1000.0,
   "bankroll_peak": 1000.0,
-  "total_staked": 657.31,
+  "total_staked": 738.18,
   "total_returned": 196.42,
   "net_pnl": -460.89,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-03-26T15:11:14.268669+00:00",
+  "last_updated": "2026-03-26T22:54:35.579250+00:00",
   "first_game_time": "2026-03-26T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
   "scout_updated_at": "2026-03-26T15:11:14.268669+00:00",
   "scout_odds_source": "theodds_unibet",
-  "commit_status": "pending",
-  "commit_updated_at": "2026-03-25T23:02:37.140279+00:00",
-  "commit_date": "2026-03-25",
+  "commit_status": "done",
+  "commit_updated_at": "2026-03-26T22:54:35.579250+00:00",
+  "commit_date": "2026-03-26",
   "analyst_updated_at": "2026-03-26T11:48:33.284840+00:00",
   "settler_updated_at": "2026-03-26T10:53:23.098882+00:00",
   "agent_models": {
@@ -27,28 +27,31 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "**Charlotte Hornets vs New York Knicks — DRAFTED: NYK ML at 2.02**\nKnicks (48-25, L10: 8-2, NetRtg +7.0) have a meaningful record and rating advantage over Charlotte (38-34, L10: 7-3, NetRtg +4.8). The NetRtg gap of 2.2pts is below the 4.0 L15 threshold so this is directional only, but the 10-win record gap and Knicks' live seeding motivation (competing for East 2-3 seed) provide additional edge. No franchise player injuries on either team; all absences are depth players. Odds 2.02 are in range, EV = 0.313 (strong), confidence 65 (Medium tier). Stake €80.87 (15% of bankroll).\n\n**Detroit Pistons vs New Orleans Pelicans — DEFERRED:** Cade Cunningham [roster-only] OUT requires mandatory NBA official PDF verification before any Detroit pick. Detroit ML at 1.54 is below the 1.70 floor anyway. Pelicans ML at 2.50 (at ceiling) is theoretically interesting but NOP NetRtg -3.8 vs DET +7.7 makes Pelicans a very difficult bet even without Cunningham verified. Murray and Murphy III both Questionable adds uncertainty. Flagged for Commit phase investigation if Cunningham status is confirmed.\n\n**Orlando Magic vs Sacramento Kings — REJECTED:** Orlando ML at 1.09 has no value. The -15.0 spread is extreme and Sacramento is confirmed tank-tier but with high bilateral injury uncertainty (Wagner OUT for Orlando, LaVine/Eubanks/Hunter OUT for Kings). No target-range market available.\n\n**Boston Celtics vs Atlanta Hawks — REJECTED:** Boston ML 1.33 and Atlanta ML 3.30 both outside target range. No spread odds provided.\n\n**Cleveland Cavaliers vs Miami Heat — REJECTED:** Both ML odds outside target range (1.50 / 2.60). No spread available. CLE depth significantly depleted.\n\nSlate quality is moderate — one clear edge found in NYK away at 2.02. The Pistons game is worth revisiting at Commit if Cunningham status resolves. O/U odds unavailable across the entire slate; totals analysis suppressed.",
-  "draft_picks": [
+  "last_report": "### CONFIRMED — New York Knicks ML\n\n- **Match:** Charlotte Hornets vs New York Knicks | **Tip:** 2026-03-26T23:00Z\n- **Pick:** New York Knicks ML | **Scout odds:** 2.02 | **Commit odds:** 2.08 | **Move:** +0.06 (improved)\n- **ML:** H:1.76 / A:2.08 | **ATS:** -2.0 (1.90/1.92) | **O/U:** N/A\n- **Stake:** €80.87 | **Pot:** €168.21 | **Conf:** 65/100 | **EV:** 0.352\n- **Decision:** All three anchor players (Brunson, KAT, Mikal Bridges) confirmed active on nba_official. Odds improved from 2.02 → 2.08 — stake held at Scout level per rules. Charlotte adds two new outs since Scout (Salaun left calf, McNeeley illness), marginally reinforcing Knicks edge. NYK 48-25 record, NetRtg +7.0, L10 8-2 in seeding race. EV 0.352 well above 0.05 threshold. Injury source nba_official — full confidence valid. No line anomaly. No B2B. Clean confirm.\n\n---\n\n### LATE SCOUT SUMMARY\n\n**Time gate blocked all new picks** — all tonight's games tip at 23:00 UTC, leaving only 6 minutes at commit time (22:54 UTC). The skills file requires >20 minutes before first game tip for any new Commit-phase pick. Seven games were evaluated and rejected on time gate grounds; most also had no valid market in target odds ranges regardless.\n\nMost notable late-breaking information: Cade Cunningham confirmed OUT (Pneumothorax) and Trey Murphy III upgraded from Questionable to OUT for the DET/NOP game. Detroit spread at -5.0 (1.89) was potentially interesting but unpickable given time gate + franchise player absence uncertainty.\n\n---\n\n### SLATE SUMMARY\n\nOne confirmed bet tonight: New York Knicks ML at 2.08 for €80.87 (15% of bankroll), with EV of 35.2% — a strong edge by any measure. The improvement from Scout odds (2.02 → 2.08) is a positive signal, potentially reflecting late Charlotte injury news (Salaun, McNeeley) being priced in. Total exposure is €80.87 against a €539.11 bankroll (15.0%), well within the 70% limit. No picks were cancelled from the draft, and no new picks could be added due to the time gate constraint with all games tipping in 6 minutes.",
+  "draft_picks": [],
+  "pending_bets": [
     {
-      "id": "nba_draft_20260326_001",
+      "id": "nba_bet_20260326_001",
       "match": "Charlotte Hornets vs New York Knicks",
       "time": "2026-03-26T23:00:00Z",
       "pick": "New York Knicks ML",
-      "odds": 2.02,
+      "odds": 2.08,
       "stake": 80.87,
-      "potential_return": 163.36,
+      "potential_return": 168.21,
       "confidence": 65,
-      "reasoning": "NetRtg gap: NYK +7.0 vs CHA +4.8 = 2.2pt gap (below L15 threshold of 4.0 for meaningful signal). However, season NetRtg favours Knicks. NYK standing: 48-25 (L10: 8-2), CHA: 38-34 (L10: 7-3). Knicks are in a genuine seeding race (East 2-3 seed battle with Boston and Detroit) — strong motivation-positive. Charlotte is play-in bubble too (38-34, L10: 7-3, W4 streak) so motivation exists on both sides. Injury check: NYK missing McBride (OUT) and Shamet (OUT) but these are non-franchise depth players. Charlotte: Pat Connaughton Questionable (illness) — depth player, minimal impact. No franchise player injuries on either side. Line check: Knicks away at 2.02 with 48-25 record against 38-34 Charlotte — reasonable pricing, no anomaly (home team 38-34 priced as favourite at 1.82, gap is 10 wins which justifies Charlotte slight home favourite). Charlotte NetRtg +4.8 and home court advantage worth ~2-3pts makes this close. Odds target: 2.02 falls in 1.70-2.50 ML range ✓. EV calculation: confidence 65% → EV = (0.65 × 2.02) - 1 = 1.313 - 1 = 0.313. Wait — that's too high. Re-check: EV = (conf/100 × odds) - 1 = (0.65 × 2.02) - 1 = 0.313. That is 31.3% EV which is strong. However, confidence is derived from marginal NetRtg edge + Knicks seeding motivation + L10 8-2 vs 7-3. Charlotte hot streak (W4, L10: 7-3) and home court are genuine factors working against Knicks. Confidence floor for ML is 50 — at 65 this clears the bar. EV 0.313 ≥ 0.15 (strong edge). Confidence 65 = Medium tier → stake 15-20% of bankroll. Using 15% = €80.87. No B2B situation. Injury feed source: nba_official ✓ — normal confidence rules apply. No line anomaly detected.",
+      "reasoning": "NYK ML confirmed at improved odds of 2.08 (Scout: 2.02, +0.06 in favour). All three anchor players (Brunson, KAT, Mikal Bridges) confirmed active per nba_official injury report. NYK record 48-25 (L10: 8-2) vs CHA 38-34 (L10: 7-3), season NetRtg +7.0 vs +4.8. Charlotte has new injuries vs Scout: Tidjane Salaun OUT (calf) and McNeeley OUT (illness), mildly reinforcing Knicks edge. Knicks in active East 2-3 seeding race — strong motivation positive. Injury source: nba_official (no confidence cap). EV at commit odds: (0.65 × 2.08) - 1 = 0.352. No anomaly detected. Stake held at original 15% of bankroll (€80.87). Odds in valid ML range [1.65–2.50]. Movement +0.06 in favour — stake not increased per line_movement_rules.",
       "anchor_players": [
         "Jalen Brunson",
         "Karl-Anthony Towns",
         "Mikal Bridges"
       ],
-      "drafted_at": "2026-03-26T15:11:24Z",
-      "market_type": "ml"
+      "result": null,
+      "returned": null,
+      "pnl": null,
+      "settled_at": null,
+      "committed_at": "2026-03-26T22:54:37Z"
     }
   ],
-  "pending_bets": [],
   "settled_bets": [
     {
       "id": "nba_bet_20260319_001",
@@ -193,32 +196,32 @@
   ],
   "late_scout_rejections": [
     {
-      "match": "Memphis Grizzlies vs San Antonio Spurs",
-      "reason": "De'Aaron Fox still OUT (low back tightness). Memphis ML 9.5 above 2.50 ceiling. Spurs ML 1.06 below all valid floors. Memphis spread +17.0 at 1.92 in range but Memphis is confirmed tank-tier (24-47, L10 1-9) — per skills, tank teams don't cover large spreads. No valid pick."
+      "match": "Detroit Pistons vs New Orleans Pelicans",
+      "reason": "Time gate violation — only 6 minutes to tip-off (minimum 20 minutes required). Additionally: DET ML 1.49 below 1.70 floor; NOP ML 2.65 above 2.50 ceiling. Spread DET -5.0 at 1.89 is in range but Cade Cunningham confirmed OUT (Pneumothorax) — franchise player absence makes Detroit spread higher risk. Trey Murphy III also confirmed OUT for NOP (upgraded from Questionable). No valid market within time gate."
     },
     {
-      "match": "Utah Jazz vs Washington Wizards",
-      "reason": "Utah ML 1.58 below 1.65 commit floor. Washington ML 2.43 in range but Washington is 16-55 with L10 0-10, confirmed tank team with heavily depleted roster (Davis OUT, George OUT, Johnson OUT). Betting a 0-10 L10 team regardless of odds creates no genuine edge. Both teams confirmed tanking — spread also unreliable."
+      "match": "Orlando Magic vs Sacramento Kings",
+      "reason": "Time gate violation — 6 minutes to tip. No value regardless: ORL ML 1.09 extreme favourite, SAC ML 8.0 above ceiling. Spread -15.0 involves tank-tier Sacramento. Franz Wagner and Anthony Black both confirmed OUT for Orlando. No EV market available."
     },
     {
-      "match": "Dallas Mavericks vs Denver Nuggets",
-      "reason": "Dallas is confirmed tank-tier (23-49, L10 2-8) with Kyrie Irving OUT, Lively OUT, Martin OUT. Denver ML 1.15 far below floor. Dallas ML 5.6 above ceiling. Spread Denver -12.0 at 1.92: per skills, tankers don't cover spreads and Dallas is confirmed tank team. Gafford and Williams both Questionable for Dallas adds further uncertainty. No valid pick."
+      "match": "Atlanta Hawks vs Boston Celtics",
+      "reason": "Time gate violation — 6 minutes to tip. BOS ML 1.43 below 1.70 floor; ATL ML 2.90 above 2.50 ceiling. Spread BOS -5.5 at 1.88 — just below 1.90 spread floor. No valid market even without time gate violation."
     },
     {
-      "match": "Golden State Warriors vs Brooklyn Nets",
-      "reason": "Warriors missing Stephen Curry (OUT), Jimmy Butler (ACL, OUT), Seth Curry (OUT), Moses Moody (OUT), Al Horford (OUT) — essentially fully depleted. Warriors ML 1.15 below floor. Nets ML 5.6 above ceiling. Brooklyn is 17-55, confirmed tank tier. No valid pick regardless of Warriors' star absences."
+      "match": "Miami Heat vs Cleveland Cavaliers",
+      "reason": "Time gate violation — 6 minutes to tip. CLE ML 1.49 below floor; MIA ML 2.65 above ceiling. Spread CLE -5.5 at 1.92 in range but Scout noted CLE has 5 players OUT including Jarrett Allen — franchise player concern. Insufficient time to validate."
     },
     {
-      "match": "Milwaukee Bucks vs Portland Trail Blazers",
-      "reason": "Giannis OUT confirmed (Hyperextension/Bone Bruise). Portland ML 1.14 far below floor. Milwaukee ML 5.8 above ceiling. Spread Portland -12.5 at 1.92: Portland is 36-37 with Lillard OUT, Sharpe OUT, and multiple Questionable players (Grant, Krejci, R. Williams). Cannot confidently expect a depleted Portland team to cover 12.5 against even a Giannis-less Milwaukee. Confidence would be below 60 floor."
+      "match": "Chicago Bulls vs Oklahoma City Thunder",
+      "reason": "Time gate violation — 6 minutes to tip. OKC ML 1.04 extreme favourite (implied ~96%). No value on any market. CHI ML 11.5 far above 2.50 ceiling."
     },
     {
-      "match": "Toronto Raptors vs LA Clippers",
-      "reason": "Kawhi Leonard remains Questionable — cannot build thesis on his absence per injury_check_rules. Clippers advanced stats unavailable — unable to calculate NetRtg gap or validate edge. Multiple GTDs on both sides (Kawhi Q, Ingram Q for Toronto, Poeltl Q for Toronto). Per spread rules: avoid when game-time decisions unresolved for either team. No valid pick."
+      "match": "Utah Jazz vs Denver Nuggets",
+      "reason": "Time gate violation — 6 minutes to tip. DEN ML 1.06 extreme favourite. UTA ML 9.0 far above 2.50 ceiling. Utah confirmed tank-tier (21-52). No value."
     },
     {
-      "match": "Houston Rockets vs Minnesota Timberwolves",
-      "reason": "Late scout re-evaluation after cancelling Pick 005. Minnesota ML is off the table (franchise player Anthony Edwards OUT). Houston ML now at 1.77 — major line movement from Scout's 2.02. At current odds, even with VanVleet potentially available, EV at base confidence 55 = (0.55 × 1.77) - 1 = -0.026, failing EV floor. After -10 for line movement: confidence 45, deeply negative EV. No valid pick at current odds."
+      "match": "Dallas Mavericks vs Portland Trail Blazers",
+      "reason": "Time gate violation — 6 minutes to tip. Not on primary slate. POR ML 4.60 above 2.50 ceiling. DAL ML 1.21 below 1.70 floor. Spread DAL -10.0 at 1.90 — in range but Portland appears tank-adjacent (not in standings data provided). No edge with time gate violated."
     }
   ],
   "scout_report_data": {
@@ -282,118 +285,68 @@
     "cost_usd": 0.062094
   },
   "commit_report_data": {
-    "date": "2026-03-25",
-    "ts": "2026-03-25T23:02:37.140279+00:00",
+    "date": "2026-03-26",
+    "ts": "2026-03-26T22:54:35.579250+00:00",
     "bets": [
       {
-        "id": "nba_bet_20260325_001",
-        "match": "Cleveland Cavaliers vs Miami Heat",
-        "time": "2026-03-25T23:30:00Z",
-        "pick": "Cleveland Cavaliers -2.5",
-        "odds": 1.9,
-        "stake": 115.53,
-        "potential_return": 219.51,
-        "reasoning": "Cleveland (45-27, NetRtg +4.3) hosts Miami (38-34, L10 5-5, NetRtg +2.5). Terry Rozier confirmed OUT (Not With Team). Jarrett Allen OUT for Cleveland already priced in. Critically, Scout's other Cleveland absences (Craig Porter Jr., Tyrese Proctor) do NOT appear on tonight's official injury report, suggesting those players are available — a positive upgrade for Cleveland (+5 confidence). Miami on a 4-game losing skid. Spread moved from -3.0 to -2.5 in our favour (easier line to cover). Cleveland's home court, better record, NetRtg advantage, and Miami's depleted guard rotation support covering 2.5 points. No B2B concerns for either team. Confidence 65 (up from 60 due to Cleveland roster upgrade). EV = (0.65 × 1.90) - 1 = 0.235 (23.5%). Odds at 1.90 within 1.80–2.30 spread target range.",
+        "id": "nba_bet_20260326_001",
+        "match": "Charlotte Hornets vs New York Knicks",
+        "time": "2026-03-26T23:00:00Z",
+        "pick": "New York Knicks ML",
+        "odds": 2.08,
+        "stake": 80.87,
+        "potential_return": 168.21,
         "confidence": 65,
+        "reasoning": "NYK ML confirmed at improved odds of 2.08 (Scout: 2.02, +0.06 in favour). All three anchor players (Brunson, KAT, Mikal Bridges) confirmed active per nba_official injury report. NYK record 48-25 (L10: 8-2) vs CHA 38-34 (L10: 7-3), season NetRtg +7.0 vs +4.8. Charlotte has new injuries vs Scout: Tidjane Salaun OUT (calf) and McNeeley OUT (illness), mildly reinforcing Knicks edge. Knicks in active East 2-3 seeding race — strong motivation positive. Injury source: nba_official (no confidence cap). EV at commit odds: (0.65 × 2.08) - 1 = 0.352. No anomaly detected. Stake held at original 15% of bankroll (€80.87). Odds in valid ML range [1.65–2.50]. Movement +0.06 in favour — stake not increased per line_movement_rules.",
         "anchor_players": [
-          "Terry Rozier (OUT — Miami)",
-          "Jarrett Allen (OUT — Cleveland, priced in)"
+          "Jalen Brunson",
+          "Karl-Anthony Towns",
+          "Mikal Bridges"
         ],
         "result": null,
         "returned": null,
         "pnl": null,
         "settled_at": null,
-        "committed_at": "2026-03-25T23:02:39Z"
-      },
-      {
-        "id": "nba_bet_20260325_002",
-        "match": "Boston Celtics vs Oklahoma City Thunder",
-        "time": "2026-03-25T23:30:00Z",
-        "pick": "Oklahoma City Thunder ML",
-        "odds": 1.79,
-        "stake": 115.53,
-        "potential_return": 206.8,
-        "reasoning": "OKC (57-15, L10 10-0, NetRtg +11.2 — best in the league) at Boston (47-24, L10 6-4, NetRtg +7.6). OKC road favourites priced at 1.79 (improved from Scout's 1.71 — movement in our favour). Jalen Williams confirmed AVAILABLE (not on tonight's official injury report). Boston missing Nikola Vucevic (OUT, fracture) — already priced in. OKC's only absentees are G League assignments (Barnhizer, Sandfort, Topic, Sorber). NetRtg gap of +3.6 pts in OKC's favour, with home court reducing effective gap to ~0.6–1.6 pts, but OKC's dominance (11.2 NetRtg, 11-game win streak) justifies road favourite pricing. Star rest risk minimal — road game at top-5 team (playoff seeding implications). Odds improved +0.08 at commit; confirming at original stake per line movement rules. EV = (0.68 × 1.79) - 1 = 0.217 (21.7%). Odds 1.79 within 1.70–2.50 ML target range.",
-        "confidence": 68,
-        "anchor_players": [
-          "Jalen Williams (OKC — confirmed AVAILABLE)",
-          "Nikola Vucevic (Boston — OUT, Fracture, priced in)"
-        ],
-        "result": null,
-        "returned": null,
-        "pnl": null,
-        "settled_at": null,
-        "committed_at": "2026-03-25T23:02:39Z"
+        "committed_at": "2026-03-26T22:54:37Z"
       }
     ],
-    "cancelled": [
-      {
-        "id": "nba_draft_20260325_001",
-        "match": "Detroit Pistons vs Atlanta Hawks",
-        "pick": "Detroit Pistons ML",
-        "reason": "Jalen Johnson (Atlanta anchor player, previously Questionable) does NOT appear on tonight's official NBA injury report, confirming he is AVAILABLE. His availability strengthens Atlanta materially, requiring confidence reduction of -5. Adjusted confidence: 57. At commit-time odds of 1.77, EV = (0.57 × 1.77) - 1 = 0.009 — fails EV ≥ 0.05 floor. Cancelled: EV below minimum threshold after injury status upgrade for opponent anchor player."
-      },
-      {
-        "id": "nba_draft_20260325_002",
-        "match": "Cleveland Cavaliers vs Miami Heat",
-        "pick": "Cleveland Cavaliers ML",
-        "reason": "Pre-cancelled by Scout at draft time. Odds of 1.68 were below the 1.70 ML floor and remain below target (current 1.74 is borderline but this pick was already superseded by spread pick 003). Confirming cancellation."
-      },
-      {
-        "id": "nba_draft_20260325_005",
-        "match": "Minnesota Timberwolves vs Houston Rockets",
-        "pick": "Houston Rockets ML",
-        "reason": "Line moved 0.25 against our pick (Scout: 2.02 → Commit: 1.77 for Houston away ML). Movement > 0.20 against triggers major signal review. Per line_movement_rules: apply confidence -10. Adjusted confidence: 55 - 10 = 45 — below the 50 minimum threshold. EV at adjusted confidence: (0.45 × 1.77) - 1 = -0.204, deeply negative. Cancelled: line moved > 0.20 against with confidence falling below minimum after mandatory adjustment."
-      }
-    ],
+    "cancelled": [],
     "late_rejections": [
       {
-        "match": "Charlotte Hornets vs Sacramento Kings",
-        "reason": "Time-gated (< 20 minutes to tip-off at commit time). Additionally, Charlotte ML 1.06 and Kings ML 9.5 both outside valid range. Spread -18.5 triggers tank-tier anomaly rule (Charlotte home at 1.06 ≤ 1.35). No valid entry point."
+        "match": "Memphis Grizzlies vs San Antonio Spurs",
+        "reason": "De'Aaron Fox still OUT (low back tightness). Memphis ML 9.5 above 2.50 ceiling. Spurs ML 1.06 below all valid floors. Memphis spread +17.0 at 1.92 in range but Memphis is confirmed tank-tier (24-47, L10 1-9) — per skills, tank teams don't cover large spreads. No valid pick."
       },
       {
-        "match": "New York Knicks vs New Orleans Pelicans",
-        "reason": "Knicks ML 1.27 below 1.70 floor; Pelicans ML 3.85 above 2.50 ceiling. Spread moved from -8.5 to -9.0 (worsened 0.5pt for Knicks bettors). Pelicans L10 6-4 volatility flag from skills file persists. Knicks still missing McBride (OUT) and Shamet (OUT). Scout rejection reasoning unchanged — Pelicans volatile, spread widened, insufficient confidence margin."
-      },
-      {
-        "match": "Cleveland Cavaliers vs Orlando Magic",
-        "reason": "Cavs ML 1.21 below floor; Magic ML 4.6 above ceiling. Spread -10.5 at 1.91/1.91 in range but NetRtg gap only 3.3 points (below 6pt threshold). Magic's confirmed injuries (Wagner, Suggs, Black, Isaac all OUT) already priced into -10.5 line (no movement since Scout). Cavs missing Allen (OUT). No new information changes Scout's analysis."
-      },
-      {
-        "match": "Phoenix Suns vs Denver Nuggets",
-        "reason": "Suns ML 3.00 above 2.50 ceiling; Nuggets ML 1.40 below 1.70 floor. Evaluated Suns +6.0 spread (1.90): NetRtg gap only 3.1 points; adjusted for home court ~0.6pt Denver expected margin, giving +5.4pt buffer. However Grayson Allen Questionable requires -10 confidence per rules. Base confidence ~60 → adjusted to 50. EV at 50: 0.50 × 1.90 - 1 = -0.05. FAILS EV gate (< 0.05). Cannot confirm."
-      },
-      {
-        "match": "Oklahoma City Thunder @ Boston Celtics",
-        "reason": "OKC ML 1.67 below 1.70 floor. Celtics ML 2.20 at valid ceiling. No spread available. Confidence for Celtics ML estimated at 50 (speculative) — OKC is 57-15 with W11 streak and best NetRtg in league. Scout correctly rejected. No new injuries or information since 14:00."
-      },
-      {
-        "match": "Houston Rockets vs Minnesota Timberwolves",
-        "reason": "Anthony Edwards (Minnesota franchise player) not present in tonight's official NBA injury report — mandatory re-verification cannot be completed. Skills file states DO NOT bet Minnesota ML without re-verification. Fred VanVleet and Steven Adams OUT for Houston (not verified in tonight's report). Insufficient data to evaluate."
-      },
-      {
-        "match": "Atlanta Hawks vs Detroit Pistons",
-        "reason": "Not on declared tonight's slate. No injury data for either team in tonight's official NBA report (covers only 8 specific teams). No advanced stats in tonight's feed. Insufficient data to evaluate — cannot add without verified injury and lineup information."
-      },
-      {
-        "match": "Miami Heat vs Cleveland Cavaliers",
-        "reason": "Not on declared tonight's slate. No injury data for Miami Heat in tonight's official report. Cavs ML 1.53 below 1.70 floor; Heat ML 2.50 exactly at ceiling. No spread available. Insufficient data to evaluate Heat roster/injuries."
+        "match": "Utah Jazz vs Washington Wizards",
+        "reason": "Utah ML 1.58 below 1.65 commit floor. Washington ML 2.43 in range but Washington is 16-55 with L10 0-10, confirmed tank team with heavily depleted roster (Davis OUT, George OUT, Johnson OUT). Betting a 0-10 L10 team regardless of odds creates no genuine edge. Both teams confirmed tanking — spread also unreliable."
       },
       {
         "match": "Dallas Mavericks vs Denver Nuggets",
-        "reason": "Not on declared tonight's slate. Denver ML 1.10 triggers anomaly check (home favourite ≤ 1.35 — do not add). Dallas ML 7.00 exceeds 2.50 ceiling. No valid entry point."
+        "reason": "Dallas is confirmed tank-tier (23-49, L10 2-8) with Kyrie Irving OUT, Lively OUT, Martin OUT. Denver ML 1.15 far below floor. Dallas ML 5.6 above ceiling. Spread Denver -12.0 at 1.92: per skills, tankers don't cover spreads and Dallas is confirmed tank team. Gafford and Williams both Questionable for Dallas adds further uncertainty. No valid pick."
       },
       {
-        "match": "Toronto Raptors vs Los Angeles Clippers",
-        "reason": "Not on declared tonight's slate. No injury data or advanced stats for either team in tonight's feed. Clippers ML 1.67 below 1.70 floor. Raptors ML 2.20 at ceiling but without injury verification and anchor player status confirmation, cannot evaluate. Insufficient data."
+        "match": "Golden State Warriors vs Brooklyn Nets",
+        "reason": "Warriors missing Stephen Curry (OUT), Jimmy Butler (ACL, OUT), Seth Curry (OUT), Moses Moody (OUT), Al Horford (OUT) — essentially fully depleted. Warriors ML 1.15 below floor. Nets ML 5.6 above ceiling. Brooklyn is 17-55, confirmed tank tier. No valid pick regardless of Warriors' star absences."
+      },
+      {
+        "match": "Milwaukee Bucks vs Portland Trail Blazers",
+        "reason": "Giannis OUT confirmed (Hyperextension/Bone Bruise). Portland ML 1.14 far below floor. Milwaukee ML 5.8 above ceiling. Spread Portland -12.5 at 1.92: Portland is 36-37 with Lillard OUT, Sharpe OUT, and multiple Questionable players (Grant, Krejci, R. Williams). Cannot confidently expect a depleted Portland team to cover 12.5 against even a Giannis-less Milwaukee. Confidence would be below 60 floor."
+      },
+      {
+        "match": "Toronto Raptors vs LA Clippers",
+        "reason": "Kawhi Leonard remains Questionable — cannot build thesis on his absence per injury_check_rules. Clippers advanced stats unavailable — unable to calculate NetRtg gap or validate edge. Multiple GTDs on both sides (Kawhi Q, Ingram Q for Toronto, Poeltl Q for Toronto). Per spread rules: avoid when game-time decisions unresolved for either team. No valid pick."
+      },
+      {
+        "match": "Houston Rockets vs Minnesota Timberwolves",
+        "reason": "Late scout re-evaluation after cancelling Pick 005. Minnesota ML is off the table (franchise player Anthony Edwards OUT). Houston ML now at 1.77 — major line movement from Scout's 2.02. At current odds, even with VanVleet potentially available, EV at base confidence 55 = (0.55 × 1.77) - 1 = -0.026, failing EV floor. After -10 for line movement: confidence 45, deeply negative EV. No valid pick at current odds."
       }
     ],
-    "total_staked": 231.06,
-    "bankroll_before": 770.17,
-    "report": "",
-    "tokens_in": 12326,
-    "tokens_out": 8000,
-    "cost_usd": 0.156978
+    "total_staked": 80.87,
+    "bankroll_before": 539.11,
+    "report": "### CONFIRMED — New York Knicks ML\n\n- **Match:** Charlotte Hornets vs New York Knicks | **Tip:** 2026-03-26T23:00Z\n- **Pick:** New York Knicks ML | **Scout odds:** 2.02 | **Commit odds:** 2.08 | **Move:** +0.06 (improved)\n- **ML:** H:1.76 / A:2.08 | **ATS:** -2.0 (1.90/1.92) | **O/U:** N/A\n- **Stake:** €80.87 | **Pot:** €168.21 | **Conf:** 65/100 | **EV:** 0.352\n- **Decision:** All three anchor players (Brunson, KAT, Mikal Bridges) confirmed active on nba_official. Odds improved from 2.02 → 2.08 — stake held at Scout level per rules. Charlotte adds two new outs since Scout (Salaun left calf, McNeeley illness), marginally reinforcing Knicks edge. NYK 48-25 record, NetRtg +7.0, L10 8-2 in seeding race. EV 0.352 well above 0.05 threshold. Injury source nba_official — full confidence valid. No line anomaly. No B2B. Clean confirm.\n\n---\n\n### LATE SCOUT SUMMARY\n\n**Time gate blocked all new picks** — all tonight's games tip at 23:00 UTC, leaving only 6 minutes at commit time (22:54 UTC). The skills file requires >20 minutes before first game tip for any new Commit-phase pick. Seven games were evaluated and rejected on time gate grounds; most also had no valid market in target odds ranges regardless.\n\nMost notable late-breaking information: Cade Cunningham confirmed OUT (Pneumothorax) and Trey Murphy III upgraded from Questionable to OUT for the DET/NOP game. Detroit spread at -5.0 (1.89) was potentially interesting but unpickable given time gate + franchise player absence uncertainty.\n\n---\n\n### SLATE SUMMARY\n\nOne confirmed bet tonight: New York Knicks ML at 2.08 for €80.87 (15% of bankroll), with EV of 35.2% — a strong edge by any measure. The improvement from Scout odds (2.02 → 2.08) is a positive signal, potentially reflecting late Charlotte injury news (Salaun, McNeeley) being priced in. Total exposure is €80.87 against a €539.11 bankroll (15.0%), well within the 70% limit. No picks were cancelled from the draft, and no new picks could be added due to the time gate constraint with all games tipping in 6 minutes.",
+    "tokens_in": 5725,
+    "tokens_out": 3407,
+    "cost_usd": 0.06828
   },
   "netrtg_l15": {},
   "cached_context": {
