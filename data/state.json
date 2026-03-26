@@ -19,7 +19,7 @@
   "commit_status": "done",
   "commit_updated_at": "2026-03-25T23:02:37.140279+00:00",
   "commit_date": "2026-03-25",
-  "analyst_updated_at": "2026-03-23T11:41:48.049868+00:00",
+  "analyst_updated_at": "2026-03-26T11:48:33.284840+00:00",
   "settler_updated_at": "2026-03-26T10:53:23.098882+00:00",
   "agent_models": {
     "settler": "no-llm",
