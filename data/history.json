@@ -16,7 +16,7 @@
           "net_pnl": null,
           "total_bets": 6,
           "wins": 1,
-          "losses": 4,
+          "losses": 5,
           "bust": false
         }
       ]
@@ -326,10 +326,10 @@
             "Karl-Anthony Towns",
             "Mikal Bridges"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -80.87,
+          "settled_at": "2026-03-27T10:51:56.768515+00:00",
           "committed_at": "2026-03-26T22:54:37Z"
         }
       ],
