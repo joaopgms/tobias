@@ -14,7 +14,7 @@
           "peak_bankroll": 1000.0,
           "final_bankroll": null,
           "net_pnl": null,
-          "total_bets": 6,
+          "total_bets": 7,
           "wins": 1,
           "losses": 5,
           "bust": false
@@ -334,6 +334,40 @@
         }
       ],
       "summary": "Day 2026-03-26 commit — 1 bets totalling €80.87. 0 cancelled. Bankroll: €539.11 → €458.24."
+    },
+    {
+      "entry_id": "nba_entry_20260327",
+      "season": "2024-25",
+      "game": 1,
+      "timestamp": "2026-03-27T22:58:52.444930+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 458.24,
+      "total_staked": 68.74,
+      "bankroll_after": 389.5,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260327_001",
+          "match": "Oklahoma City Thunder vs Chicago Bulls",
+          "time": "2026-03-28T00:00:00Z",
+          "pick": "Oklahoma City Thunder -20.0",
+          "odds": 1.93,
+          "stake": 68.74,
+          "potential_return": 132.67,
+          "confidence": 67,
+          "reasoning": "OKC #1 seed (57-16, L10: 9-1) with elite NetRtg +10.9 vs Chicago's -4.4 — gap of 15.3 pts, well above 6pt spread threshold. SGA and Dort both confirmed active per NBA official injury report. Chet Holmgren listed OUT (hip) — not an anchor player; adjusted confidence from 72 to 67 (non-anchor significant player out). Chicago equally decimated: Collins OUT, Essengue OUT, Jaden Ivey OUT (new since Scout), Nick Richards Questionable — frontcourt gutted. OKC DefRtg 107.7 vs Chicago OffRtg 113.5; Chicago DefRtg 118.0 (porous). Odds improved marginally from 1.92 to 1.93 (in our favor). EV at confidence 67, odds 1.93: (0.67 × 1.93) - 1 = 0.293. Well above 0.05 threshold. Spread within valid range (1.75–2.30 floor at commit). Injury source: nba_official — no data quality restrictions apply. Stake: 15% of bankroll (medium confidence tier) = €458.24 × 0.15 = €68.74.",
+          "anchor_players": [
+            "Shai Gilgeous-Alexander",
+            "Luguentz Dort"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-03-27T22:58:54Z"
+        }
+      ],
+      "summary": "Day 2026-03-27 commit — 1 bets totalling €68.74. 0 cancelled. Bankroll: €458.24 → €389.50."
     }
   ]
 }
