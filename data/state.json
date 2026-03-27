@@ -6,10 +6,10 @@
   "bankroll_peak": 1000.0,
   "total_staked": 738.18,
   "total_returned": 196.42,
-  "net_pnl": -460.89,
+  "net_pnl": -541.76,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-03-26T22:54:35.579250+00:00",
+  "last_updated": "2026-03-27T10:51:56.768515+00:00",
   "first_game_time": "2026-03-26T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
@@ -20,7 +20,7 @@
   "commit_updated_at": "2026-03-26T22:54:35.579250+00:00",
   "commit_date": "2026-03-26",
   "analyst_updated_at": "2026-03-26T11:48:33.284840+00:00",
-  "settler_updated_at": "2026-03-26T10:53:23.098882+00:00",
+  "settler_updated_at": "2026-03-27T10:51:56.768515+00:00",
   "agent_models": {
     "settler": "no-llm",
     "analyst": "claude-sonnet-4-6",
@@ -29,29 +29,7 @@
   },
   "last_report": "### CONFIRMED — New York Knicks ML\n\n- **Match:** Charlotte Hornets vs New York Knicks | **Tip:** 2026-03-26T23:00Z\n- **Pick:** New York Knicks ML | **Scout odds:** 2.02 | **Commit odds:** 2.08 | **Move:** +0.06 (improved)\n- **ML:** H:1.76 / A:2.08 | **ATS:** -2.0 (1.90/1.92) | **O/U:** N/A\n- **Stake:** €80.87 | **Pot:** €168.21 | **Conf:** 65/100 | **EV:** 0.352\n- **Decision:** All three anchor players (Brunson, KAT, Mikal Bridges) confirmed active on nba_official. Odds improved from 2.02 → 2.08 — stake held at Scout level per rules. Charlotte adds two new outs since Scout (Salaun left calf, McNeeley illness), marginally reinforcing Knicks edge. NYK 48-25 record, NetRtg +7.0, L10 8-2 in seeding race. EV 0.352 well above 0.05 threshold. Injury source nba_official — full confidence valid. No line anomaly. No B2B. Clean confirm.\n\n---\n\n### LATE SCOUT SUMMARY\n\n**Time gate blocked all new picks** — all tonight's games tip at 23:00 UTC, leaving only 6 minutes at commit time (22:54 UTC). The skills file requires >20 minutes before first game tip for any new Commit-phase pick. Seven games were evaluated and rejected on time gate grounds; most also had no valid market in target odds ranges regardless.\n\nMost notable late-breaking information: Cade Cunningham confirmed OUT (Pneumothorax) and Trey Murphy III upgraded from Questionable to OUT for the DET/NOP game. Detroit spread at -5.0 (1.89) was potentially interesting but unpickable given time gate + franchise player absence uncertainty.\n\n---\n\n### SLATE SUMMARY\n\nOne confirmed bet tonight: New York Knicks ML at 2.08 for €80.87 (15% of bankroll), with EV of 35.2% — a strong edge by any measure. The improvement from Scout odds (2.02 → 2.08) is a positive signal, potentially reflecting late Charlotte injury news (Salaun, McNeeley) being priced in. Total exposure is €80.87 against a €539.11 bankroll (15.0%), well within the 70% limit. No picks were cancelled from the draft, and no new picks could be added due to the time gate constraint with all games tipping in 6 minutes.",
   "draft_picks": [],
-  "pending_bets": [
-    {
-      "id": "nba_bet_20260326_001",
-      "match": "Charlotte Hornets vs New York Knicks",
-      "time": "2026-03-26T23:00:00Z",
-      "pick": "New York Knicks ML",
-      "odds": 2.08,
-      "stake": 80.87,
-      "potential_return": 168.21,
-      "confidence": 65,
-      "reasoning": "NYK ML confirmed at improved odds of 2.08 (Scout: 2.02, +0.06 in favour). All three anchor players (Brunson, KAT, Mikal Bridges) confirmed active per nba_official injury report. NYK record 48-25 (L10: 8-2) vs CHA 38-34 (L10: 7-3), season NetRtg +7.0 vs +4.8. Charlotte has new injuries vs Scout: Tidjane Salaun OUT (calf) and McNeeley OUT (illness), mildly reinforcing Knicks edge. Knicks in active East 2-3 seeding race — strong motivation positive. Injury source: nba_official (no confidence cap). EV at commit odds: (0.65 × 2.08) - 1 = 0.352. No anomaly detected. Stake held at original 15% of bankroll (€80.87). Odds in valid ML range [1.65–2.50]. Movement +0.06 in favour — stake not increased per line_movement_rules.",
-      "anchor_players": [
-        "Jalen Brunson",
-        "Karl-Anthony Towns",
-        "Mikal Bridges"
-      ],
-      "result": null,
-      "returned": null,
-      "pnl": null,
-      "settled_at": null,
-      "committed_at": "2026-03-26T22:54:37Z"
-    }
-  ],
+  "pending_bets": [],
   "settled_bets": [
     {
       "id": "nba_bet_20260319_001",
@@ -162,6 +140,27 @@
       "pnl": -115.53,
       "settled_at": "2026-03-26T10:53:23.098882+00:00",
       "committed_at": "2026-03-25T23:02:39Z"
+    },
+    {
+      "id": "nba_bet_20260326_001",
+      "match": "Charlotte Hornets vs New York Knicks",
+      "time": "2026-03-26T23:00:00Z",
+      "pick": "New York Knicks ML",
+      "odds": 2.08,
+      "stake": 80.87,
+      "potential_return": 168.21,
+      "confidence": 65,
+      "reasoning": "NYK ML confirmed at improved odds of 2.08 (Scout: 2.02, +0.06 in favour). All three anchor players (Brunson, KAT, Mikal Bridges) confirmed active per nba_official injury report. NYK record 48-25 (L10: 8-2) vs CHA 38-34 (L10: 7-3), season NetRtg +7.0 vs +4.8. Charlotte has new injuries vs Scout: Tidjane Salaun OUT (calf) and McNeeley OUT (illness), mildly reinforcing Knicks edge. Knicks in active East 2-3 seeding race — strong motivation positive. Injury source: nba_official (no confidence cap). EV at commit odds: (0.65 × 2.08) - 1 = 0.352. No anomaly detected. Stake held at original 15% of bankroll (€80.87). Odds in valid ML range [1.65–2.50]. Movement +0.06 in favour — stake not increased per line_movement_rules.",
+      "anchor_players": [
+        "Jalen Brunson",
+        "Karl-Anthony Towns",
+        "Mikal Bridges"
+      ],
+      "result": "LOST",
+      "returned": 0.0,
+      "pnl": -80.87,
+      "settled_at": "2026-03-27T10:51:56.768515+00:00",
+      "committed_at": "2026-03-26T22:54:37Z"
     }
   ],
   "rejected_games": [
@@ -357,23 +356,28 @@
   },
   "team_game_log": {
     "Charlotte Hornets": [
-      44
+      44,
+      11
     ],
     "Sacramento Kings": [
-      -44
+      -44,
+      -4
     ],
     "New York Knicks": [
-      5
+      5,
+      -11
     ],
     "New Orleans Pelicans": [
-      -5
+      -5,
+      -21
     ],
     "Cleveland Cavaliers": [
       5,
       -17
     ],
     "Orlando Magic": [
-      -5
+      -5,
+      4
     ],
     "Phoenix Suns": [
       -2
@@ -389,7 +393,8 @@
       -7
     ],
     "Detroit Pistons": [
-      -1
+      -1,
+      21
     ],
     "Atlanta Hawks": [
       1
@@ -450,21 +455,24 @@
     ]
   },
   "game_log_recorded": [
-    "Oklahoma City Thunder@Boston Celtics",
-    "Atlanta Hawks@Detroit Pistons",
-    "Chicago Bulls@Philadelphia 76ers",
-    "Washington Wizards@Utah Jazz",
-    "Los Angeles Lakers@Indiana Pacers",
-    "Miami Heat@Cleveland Cavaliers",
-    "Milwaukee Bucks@Portland Trail Blazers",
-    "Brooklyn Nets@Golden State Warriors",
-    "Denver Nuggets@Phoenix Suns",
-    "New Orleans Pelicans@New York Knicks",
-    "Houston Rockets@Minnesota Timberwolves",
-    "San Antonio Spurs@Memphis Grizzlies",
     "Sacramento Kings@Charlotte Hornets",
+    "Atlanta Hawks@Detroit Pistons",
+    "Miami Heat@Cleveland Cavaliers",
+    "Denver Nuggets@Phoenix Suns",
+    "San Antonio Spurs@Memphis Grizzlies",
+    "Brooklyn Nets@Golden State Warriors",
+    "Washington Wizards@Utah Jazz",
+    "New York Knicks@Charlotte Hornets",
+    "Orlando Magic@Cleveland Cavaliers",
     "Toronto Raptors@LA Clippers",
+    "Oklahoma City Thunder@Boston Celtics",
+    "New Orleans Pelicans@Detroit Pistons",
+    "Los Angeles Lakers@Indiana Pacers",
+    "Houston Rockets@Minnesota Timberwolves",
     "Dallas Mavericks@Denver Nuggets",
-    "Orlando Magic@Cleveland Cavaliers"
+    "Sacramento Kings@Orlando Magic",
+    "New Orleans Pelicans@New York Knicks",
+    "Milwaukee Bucks@Portland Trail Blazers",
+    "Chicago Bulls@Philadelphia 76ers"
   ]
 }
