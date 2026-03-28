@@ -14,7 +14,7 @@
           "peak_bankroll": 1000.0,
           "final_bankroll": null,
           "net_pnl": null,
-          "total_bets": 7,
+          "total_bets": 8,
           "wins": 1,
           "losses": 6,
           "bust": false
@@ -368,6 +368,39 @@
         }
       ],
       "summary": "Day 2026-03-27 commit — 1 bets totalling €68.74. 0 cancelled. Bankroll: €458.24 → €389.50."
+    },
+    {
+      "entry_id": "nba_entry_20260328",
+      "season": "2024-25",
+      "game": 1,
+      "timestamp": "2026-03-28T19:07:03.090502+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 389.5,
+      "total_staked": 46.75,
+      "bankroll_after": 342.75,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260328_001",
+          "match": "Minnesota Timberwolves vs Detroit Pistons",
+          "time": "2026-03-28T21:30:00Z",
+          "pick": "Detroit Pistons ML",
+          "odds": 1.98,
+          "stake": 46.75,
+          "potential_return": 92.57,
+          "reasoning": "Detroit (53-20, L10: 8-2, NetRtg +7.8) is the materially superior team by record and efficiency vs Minnesota (45-28, L10: 5-5, NetRtg +3.6). Anthony Edwards (Minnesota franchise player) is confirmed OUT with patellofemoral pain, joined by Jaden McDaniels and Ayo Dosunmu. Cade Cunningham is also OUT for Detroit (pneumothorax), applying -10 confidence and -20% stake reduction per franchise_player_rules. Despite both teams missing key players, Detroit's underlying quality advantage (8-game record gap, +4.2 NetRtg differential, far superior L10 form) combined with Minnesota's triple-injury blow justifies confidence in Detroit at near-even odds. Detroit ML at 1.98 clears the odds floor (1.65) comfortably. EV = (0.65 × 1.98) - 1 = 0.287. Stake reduced 20% for Cunningham OUT.",
+          "confidence": 65,
+          "anchor_players": [
+            "Anthony Edwards (MIN - OUT)",
+            "Cade Cunningham (DET - OUT)"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null
+        }
+      ],
+      "summary": "Day 2026-03-28 commit — 1 bets totalling €46.75. 0 cancelled. Bankroll: €389.50 → €342.75."
     }
   ]
 }
