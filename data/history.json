@@ -16,7 +16,7 @@
           "net_pnl": null,
           "total_bets": 7,
           "wins": 1,
-          "losses": 5,
+          "losses": 6,
           "bust": false
         }
       ]
@@ -360,10 +360,10 @@
             "Shai Gilgeous-Alexander",
             "Luguentz Dort"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -68.74,
+          "settled_at": "2026-03-28T10:35:01.331380+00:00",
           "committed_at": "2026-03-27T22:58:54Z"
         }
       ],
