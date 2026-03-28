@@ -1561,5 +1561,49 @@
     "tokens_in": 9192,
     "tokens_out": 4719,
     "cost_usd": 0.098361
+  },
+  {
+    "ts": "2026-03-28T14:37:18.022503+00:00",
+    "date": "2026-03-28",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_unibet",
+    "draft_count": 0,
+    "picks": [],
+    "rejected": [
+      {
+        "match": "Milwaukee Bucks vs San Antonio Spurs",
+        "reason": "Extreme line anomaly: Spurs priced at 1.05 ML (implied 95%+ probability). Spread H +18.0 at 1.90/1.92 — Bucks as 18-point home underdog at 11.0 ML. Both ML markets outside 1.70-2.50 target range entirely. Giannis Antetokounmpo confirmed OUT (hyperextension/bone bruise) — Milwaukee has no path to cover at home. Spread at 1.90/1.92 is within range but Spurs -18 spread: Spurs are 55-18 elite team, Milwaukee confirmed tank-tier with Giannis OUT. However, -18.0 spread is extreme even for elite vs tank matchup. Spurs Pace = 0.0 (unavailable), confidence penalty applies. No O/U available. Decision: anomaly flagged on ML odds; spread rejected due to extreme line size and Pace data missing.",
+        "ml_home": 11.0,
+        "ml_away": 1.05,
+        "decision": "anomaly"
+      },
+      {
+        "match": "Charlotte Hornets vs Philadelphia 76ers",
+        "reason": "Charlotte ML at 1.43 — below 1.70 floor. Philadelphia ML at 2.85 — above 2.50 ceiling. Both ML markets outside target range. Spread: Charlotte -6.5 at 1.93/1.89 is in range. Charlotte (39-34, L10: 7-3, NetRtg +4.9) vs Philadelphia (40-33, L10: 6-4, NetRtg -0.3). Tyrese Maxey Questionable (franchise player GTD) — per franchise player rules, confidence -10, stake -20%. NetRtg gap: +4.9 vs -0.3 = 5.2 pts (below 6.0 threshold for strong spread signal). Maxey GTD makes 76ers unpredictable. Charlotte at home with play-in motivation. Spread confidence would be ~62 before Maxey GTD → 52 after → below spread floor of 60. Rejected.",
+        "ml_home": 1.43,
+        "ml_away": 2.85,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Phoenix Suns vs Utah Jazz",
+        "reason": "Phoenix ML at 1.08 — extreme favourite, outside 1.70-2.50 range. Utah ML at 8.0 — far above ceiling. Spread: Phoenix -16.5 at 1.92/1.90 in range. Utah is confirmed tanking tier (21-53, L10: 2-8). Phoenix (40-33, L10: 4-6, NetRtg +1.2) — mediocre form. NetRtg gap: +1.2 vs -7.6 = 8.8 pts, above threshold. However Phoenix L10 4-6 shows inconsistency. Multiple Phoenix players OUT (Dillon Brooks, Coffey, Highsmith, Mark Williams). Spread of -16.5 is large. Pace data: Phoenix 97.0, Utah 101.8 — mismatch 4.8 (below 5.0 threshold). Given Phoenix's own depleted roster and inconsistent L10, covering -16.5 is uncertain despite Utah being tank-tier. Rejected — Phoenix injury load too high for large spread.",
+        "ml_home": 1.08,
+        "ml_away": 8.0,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Oklahoma City Thunder vs New York Knicks",
+        "reason": "OKC ML at 1.25 — below 1.70 floor. Knicks ML at 4.0 — above 2.50 ceiling. No spread or O/U odds provided. No valid markets available. Note: OKC-Knicks game appears in odds but NOT in tonight's slate header — may be a different date or error. Rejected — no markets within target range.",
+        "ml_home": 1.25,
+        "ml_away": 4.0,
+        "decision": "no_edge"
+      }
+    ],
+    "report": "**DRAFTED PICKS:**\n\n**Minnesota Timberwolves vs Detroit Pistons — Detroit Pistons ML @ 2.20 (€38.95)**\nBoth franchise players confirmed OUT via NBA official PDF (Edwards: Patellofemoral Pain Syndrome; Cunningham: Pneumothorax). With both stars absent, Detroit's depth advantage (53-20, NetRtg +7.8) over Minnesota (45-28, NetRtg +3.6) becomes decisive. McDaniels also OUT for Minnesota. NetRtg gap of 4.2pts clears the 4.0 threshold. Duren and Harris GTD for Detroit cost -10 confidence. Final confidence 57, EV = 0.254 (strong). Road game at 2.20 offers genuine value.\n\n**Atlanta Hawks vs Sacramento Kings — Atlanta Hawks -15.0 Spread @ 1.93 (€58.43)**\nSacramento is a confirmed tank team (19-55) with four key players OUT (LaVine, Murray, Hunter, Eubanks). NetRtg gap is 12.1 pts — among the largest on tonight's slate. Atlanta is home, motivated (play-in race), and showing L10 8-2 form. Tanking teams historically do not cover spreads. Confidence 72, EV = 0.390 (exceptional). Best edge on the slate.\n\n**Memphis Grizzlies vs Chicago Bulls — Memphis Grizzlies ML @ 2.38 (€38.95)**\nMarginal pick — both teams are struggling tank-tier clubs. Home court is the primary edge for Memphis. NetRtg essentially equal (-4.1 vs -4.6). Skills permit betting ON tanking teams at odds ≥ 2.20 with situational reason (home court). Confidence 55, EV = 0.309 clears the bar. Treated as speculative 10% stake.\n\n**REJECTED GAMES:**\n- Milwaukee Bucks vs San Antonio Spurs — ANOMALY: ML odds 11.0/1.05 entirely outside target range; extreme line driven by Giannis OUT.\n- Charlotte Hornets vs Philadelphia 76ers — NO EDGE: Both ML odds outside range; spread confidence drops below 60 floor due to Maxey GTD.\n- Phoenix Suns vs Utah Jazz — NO EDGE: Suns ML 1.08 too short; spread -16.5 too large given Phoenix's own depleted roster and L10 4-6.\n- OKC Thunder vs New York Knicks — NO EDGE: No markets within target range; only ML odds available, both outside bounds.\n\n**Slate Quality:** Moderate slate with one genuine strong edge (Hawks spread vs Sacramento tanks). The Detroit pick carries real value with the Edwards absence confirmed. Memphis pick is speculative and should be treated as low-conviction. Pace data partially unavailable (SAS, DET = 0.0) suppresses O/U signals, though no O/U markets were available tonight regardless. Total committed: €136.33 (~35% of bankroll, within 70% daily cap).",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 7901,
+    "tokens_out": 5091,
+    "cost_usd": 0.100068
   }
 ]
