@@ -1157,7 +1157,7 @@ let apexChart=null,wlInst=null;
 function renderChart(){
   const b=allBets.filter(x=>x.season===activeSeason&&(activeGame==='all'||x.game==activeGame)&&x.result).sort((a,b)=>a.date>b.date?1:-1);
   let br=ST.bankroll_initial||1000;const pts=[{x:'Start',y:br}];
-  b.forEach((x,i)=>{if(x.result==='WON')br+=(x.pnl||0);pts.push({x:x.date||`Bet ${i+1}`,y:Math.round(br*100)/100});});
+  b.forEach((x,i)=>{if(x.result==='WON'||x.result==='LOST')br+=x.pnl||0;pts.push({x:x.date||`Bet ${i+1}`,y:Math.round(br*100)/100});});
   pts.push({x:'Now',y:ST.bankroll||br});
   // Guard: ApexCharts crashes on empty/null data
   if(!pts.length || pts.every(p=>!p.y)) { document.getElementById('bankrollChart').innerHTML='<div style="padding:40px;text-align:center;color:var(--muted);font-size:.8rem">No bet data yet</div>'; return; }
