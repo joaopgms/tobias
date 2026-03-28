@@ -629,5 +629,77 @@
     "tokens_in": 8702,
     "tokens_out": 6713,
     "cost_usd": 0.126801
+  },
+  {
+    "ts": "2026-03-28T19:07:03.090502+00:00",
+    "date": "2026-03-28",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 1,
+    "cancelled_count": 0,
+    "total_staked": 46.75,
+    "bankroll_before": 389.5,
+    "bankroll_after": 342.75,
+    "bets": [
+      {
+        "id": "nba_bet_20260328_001",
+        "match": "Minnesota Timberwolves vs Detroit Pistons",
+        "time": "2026-03-28T21:30:00Z",
+        "pick": "Detroit Pistons ML",
+        "odds": 1.98,
+        "stake": 46.75,
+        "potential_return": 92.57,
+        "reasoning": "Detroit (53-20, L10: 8-2, NetRtg +7.8) is the materially superior team by record and efficiency vs Minnesota (45-28, L10: 5-5, NetRtg +3.6). Anthony Edwards (Minnesota franchise player) is confirmed OUT with patellofemoral pain, joined by Jaden McDaniels and Ayo Dosunmu. Cade Cunningham is also OUT for Detroit (pneumothorax), applying -10 confidence and -20% stake reduction per franchise_player_rules. Despite both teams missing key players, Detroit's underlying quality advantage (8-game record gap, +4.2 NetRtg differential, far superior L10 form) combined with Minnesota's triple-injury blow justifies confidence in Detroit at near-even odds. Detroit ML at 1.98 clears the odds floor (1.65) comfortably. EV = (0.65 × 1.98) - 1 = 0.287. Stake reduced 20% for Cunningham OUT.",
+        "confidence": 65,
+        "anchor_players": [
+          "Anthony Edwards (MIN - OUT)",
+          "Cade Cunningham (DET - OUT)"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null
+      }
+    ],
+    "cancelled": [],
+    "late_rejections": [
+      {
+        "match": "Milwaukee Bucks vs San Antonio Spurs",
+        "reason": "Game already tipped off at 19:00 UTC, 7 minutes before commit time (19:07 UTC). Ineligible — time gate failed."
+      },
+      {
+        "match": "Charlotte Hornets vs Philadelphia 76ers",
+        "reason": "Both ML markets remain outside valid range (Charlotte 1.41 below 1.65 floor; Philly 2.95 above 2.50 ceiling). Charlotte -6.5 spread: Tyrese Maxey still Questionable/GTD — if thesis depends on his absence cannot confirm per GTD rules; if evaluated without injury dependency, confidence after GTD adjustment is ~52, below the 60 minimum required for late scout additions."
+      },
+      {
+        "match": "Atlanta Hawks vs Sacramento Kings",
+        "reason": "Atlanta -14.5 spread at 1.90 has genuine value (Sacramento devastated: LaVine/Sabonis/Murray/Hunter/Eubanks all OUT, NetRtg gap 12.1, Atlanta L10: 8-2). Confidence 65, EV 0.235. However, the max 1 new pick per Commit phase limit is already used by the Detroit ML pick, which has superior EV (0.287 vs 0.235) and cleaner thesis. Both ML markets outside valid range."
+      },
+      {
+        "match": "Chicago Bulls vs Memphis Grizzlies",
+        "reason": "Memphis ML at 1.56 below 1.65 floor. Chicago ML at 2.48 within ceiling but confidence on Chicago cannot reach 60 threshold required for late scout — both teams are bottom-tier (Chicago 29-44, 3-7 L10; Memphis 24-49, 1-9 L10), Chicago missing Collins/Essengue/Ivey/Richards, near coin-flip matchup. Confidence ~50 — speculative tier fails the ≥60 gate for new Commit picks."
+      },
+      {
+        "match": "Utah Jazz vs Phoenix Suns",
+        "reason": "Phoenix ML at 1.08 and Utah ML at 8.5 both far outside valid ML range. Spread now Phoenix -17.0 (moved from -16.5 against Utah), Phoenix still carrying 4 key players OUT (Brooks, Coffey, Highsmith, Williams). Same rejection basis as Scout — Phoenix injury load too high to trust covering -17.0."
+      },
+      {
+        "match": "Miami Heat vs Indiana Pacers",
+        "reason": "Indiana ML at 1.25 below 1.65 floor. Miami ML at 4.00 above 2.50 ceiling. No spread or O/U available. No valid markets."
+      },
+      {
+        "match": "Orlando Magic vs Toronto Raptors",
+        "reason": "Game not on tonight's confirmed slate — may be different date. Only ML odds available (no spread/O/U). Orlando ML 1.67 barely clears floor but no spread/totals to evaluate edge. Insufficient data and unconfirmed game date."
+      },
+      {
+        "match": "New York Knicks vs Oklahoma City Thunder",
+        "reason": "Game not in tonight's confirmed slate (Scout flagged same issue). OKC ML 1.25 below 1.65 floor; Knicks ML 4.00 above 2.50 ceiling. No spread or O/U available. No valid markets."
+      }
+    ],
+    "report": "## Commit Report — 2026-03-28T19:07:05Z\n\n---\n\n### CONFIRMED — Detroit Pistons ML (Late Scout Pick)\n\n- **Match:** Minnesota Timberwolves vs Detroit Pistons | Tip: 21:30 UTC\n- **Pick:** Detroit Pistons ML | Scout odds: N/A (new pick) | Commit odds: 1.98 | Move: N/A\n- **ML:** H:1.84 / A:1.98 | ATS: Minnesota -1.0 (1.93/1.89) | O/U: N/A\n- **Stake:** €46.75 | Pot: €92.57 | Conf: 65/100 | EV: 0.287\n\n**Decision:** This edge emerged post-Scout from injury confirmations. Detroit (53-20, L10: 8-2, NetRtg +7.8) is substantially the better team vs Minnesota (45-28, L10: 5-5, NetRtg +3.6). Anthony Edwards confirmed OUT for Minnesota (patellofemoral pain), alongside Jaden McDaniels (right knee) and Ayo Dosunmu (right calf) — Minnesota is missing their superstar and two key rotation players. Cade Cunningham is OUT for Detroit (pneumothorax — serious but confirmed, not GTD), triggering franchise_player_rules: confidence -10 to 65, stake -20% applied. Net assessment: Detroit's 8-game record advantage, superior NetRtg by 4.2 points, and elite recent form (8-2 L10) outweigh Minnesota's home-court edge when Minnesota is this shorthanded. Detroit ML at 1.98 clears all validation gates. EV = (0.65 × 1.98) - 1 = 0.287. Total exposure: 12.0% of bankroll (well within 70% cap).\n\n---\n\n### No Draft Picks to Review\nScout submitted no draft picks for this session (empty array). Commit proceeded directly to late scout evaluation.\n\n---\n\n### Slate Summary\n\nA challenging slate for finding confirmed edges tonight, with multiple games featuring extreme ML odds outside valid ranges and widespread injury absences across most matchups. The single committed pick targets the Detroit/Minnesota game where a genuine quality gap (53-20 vs 45-28, NetRtg +7.8 vs +3.6, L10: 8-2 vs 5-5) is temporarily masked by both teams' injury situations — Detroit's underlying strength supports the near-even odds despite Cade Cunningham's absence. Total committed: €46.75 (12.0% of €389.50 bankroll), leaving €342.75 in reserve.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 6174,
+    "tokens_out": 6339,
+    "cost_usd": 0.113607
   }
 ]
