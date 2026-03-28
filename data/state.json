@@ -6,10 +6,10 @@
   "bankroll_peak": 1000.0,
   "total_staked": 806.92,
   "total_returned": 196.42,
-  "net_pnl": -541.76,
+  "net_pnl": -610.5,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-03-27T22:58:52.444930+00:00",
+  "last_updated": "2026-03-28T10:35:01.331380+00:00",
   "first_game_time": "2026-03-27T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
@@ -20,7 +20,7 @@
   "commit_updated_at": "2026-03-27T22:58:52.444930+00:00",
   "commit_date": "2026-03-27",
   "analyst_updated_at": "2026-03-27T11:40:09.610296+00:00",
-  "settler_updated_at": "2026-03-27T10:51:56.768515+00:00",
+  "settler_updated_at": "2026-03-28T10:35:01.331380+00:00",
   "agent_models": {
     "settler": "no-llm",
     "analyst": "claude-sonnet-4-6",
@@ -29,28 +29,7 @@
   },
   "last_report": "### CONFIRMED — Oklahoma City Thunder -20.0 (Spread)\n- Match: Oklahoma City Thunder vs Chicago Bulls | Tip: 2026-03-28T00:00 UTC\n- Pick: OKC -20.0 | Scout odds: 1.92 | Commit odds: 1.93 | Move: +0.01 (marginal improvement)\n- ML: 11.5 (OKC) / 1.04 (Bulls) | ATS: -20.0 (1.93 / 1.89) | O/U: N/A\n- Stake: €68.74 | Pot: €132.67 | Conf: 67/100 | EV: 0.293\n- Decision: Confirmed with confidence adjusted from 72 → 67 due to Chet Holmgren (OUT, hip) — non-anchor but meaningful player. SGA and Dort confirmed active. Chicago further depleted since Scout: Jaden Ivey now OUT (Pain Syndrome), Nick Richards Questionable, adding to Collins/Essengue absences. Net effect: both teams weakened on interior, but OKC's talent/depth advantage remains overwhelming. NetRtg gap 15.3 pts, OKC elite defense (107.7 DefRtg) vs Chicago's leaky offense. EV 0.293 remains well above threshold. Odds improved marginally (+0.01). All validity checks passed. Injury source: nba_official (no data quality restrictions).\n\n---\n\n### LATE SCOUT SUMMARY\nAll 9 eligible games reviewed. No new picks added. Key findings:\n- **Celtics vs Hawks**: Jaylen Brown confirmed OUT (was Questionable) — weakens Boston -5.0 spread thesis significantly against red-hot Atlanta (L10 9-1). No valid edge.\n- **Lakers vs Nets**: Luka Doncic now apparently active (not on injury report), but market already priced it in — line moved from -16.0 to -18.0. EV at realistic confidence falls short of 0.05 threshold.\n- **All others**: Either MLB/MLs out of range, NetRtg gaps insufficient for the spread lines offered, key home team stars absent (Lillard, Curry, Butler), or extreme line sizes with high variance risk (Utah/Denver at -19.0).\n\n---\n\n### SLATE SUMMARY\nOne bet confirmed tonight — OKC -20.0 vs Chicago at 1.93 odds, staking €68.74 (15% of bankroll), with EV of 0.293 representing excellent value. The OKC-Chicago matchup remains the cleanest edge on the board despite Holmgren's absence, as Chicago's roster is simultaneously gutted and their defensive metrics are among the league's worst. Total exposure is 15.0% of bankroll (€68.74 of €458.24), comfortably within the 70% cap, leaving significant reserves intact. No late edges emerged that cleared all quality gates simultaneously.",
   "draft_picks": [],
-  "pending_bets": [
-    {
-      "id": "nba_bet_20260327_001",
-      "match": "Oklahoma City Thunder vs Chicago Bulls",
-      "time": "2026-03-28T00:00:00Z",
-      "pick": "Oklahoma City Thunder -20.0",
-      "odds": 1.93,
-      "stake": 68.74,
-      "potential_return": 132.67,
-      "confidence": 67,
-      "reasoning": "OKC #1 seed (57-16, L10: 9-1) with elite NetRtg +10.9 vs Chicago's -4.4 — gap of 15.3 pts, well above 6pt spread threshold. SGA and Dort both confirmed active per NBA official injury report. Chet Holmgren listed OUT (hip) — not an anchor player; adjusted confidence from 72 to 67 (non-anchor significant player out). Chicago equally decimated: Collins OUT, Essengue OUT, Jaden Ivey OUT (new since Scout), Nick Richards Questionable — frontcourt gutted. OKC DefRtg 107.7 vs Chicago OffRtg 113.5; Chicago DefRtg 118.0 (porous). Odds improved marginally from 1.92 to 1.93 (in our favor). EV at confidence 67, odds 1.93: (0.67 × 1.93) - 1 = 0.293. Well above 0.05 threshold. Spread within valid range (1.75–2.30 floor at commit). Injury source: nba_official — no data quality restrictions apply. Stake: 15% of bankroll (medium confidence tier) = €458.24 × 0.15 = €68.74.",
-      "anchor_players": [
-        "Shai Gilgeous-Alexander",
-        "Luguentz Dort"
-      ],
-      "result": null,
-      "returned": null,
-      "pnl": null,
-      "settled_at": null,
-      "committed_at": "2026-03-27T22:58:54Z"
-    }
-  ],
+  "pending_bets": [],
   "settled_bets": [
     {
       "id": "nba_bet_20260319_001",
@@ -182,6 +161,26 @@
       "pnl": -80.87,
       "settled_at": "2026-03-27T10:51:56.768515+00:00",
       "committed_at": "2026-03-26T22:54:37Z"
+    },
+    {
+      "id": "nba_bet_20260327_001",
+      "match": "Oklahoma City Thunder vs Chicago Bulls",
+      "time": "2026-03-28T00:00:00Z",
+      "pick": "Oklahoma City Thunder -20.0",
+      "odds": 1.93,
+      "stake": 68.74,
+      "potential_return": 132.67,
+      "confidence": 67,
+      "reasoning": "OKC #1 seed (57-16, L10: 9-1) with elite NetRtg +10.9 vs Chicago's -4.4 — gap of 15.3 pts, well above 6pt spread threshold. SGA and Dort both confirmed active per NBA official injury report. Chet Holmgren listed OUT (hip) — not an anchor player; adjusted confidence from 72 to 67 (non-anchor significant player out). Chicago equally decimated: Collins OUT, Essengue OUT, Jaden Ivey OUT (new since Scout), Nick Richards Questionable — frontcourt gutted. OKC DefRtg 107.7 vs Chicago OffRtg 113.5; Chicago DefRtg 118.0 (porous). Odds improved marginally from 1.92 to 1.93 (in our favor). EV at confidence 67, odds 1.93: (0.67 × 1.93) - 1 = 0.293. Well above 0.05 threshold. Spread within valid range (1.75–2.30 floor at commit). Injury source: nba_official — no data quality restrictions apply. Stake: 15% of bankroll (medium confidence tier) = €458.24 × 0.15 = €68.74.",
+      "anchor_players": [
+        "Shai Gilgeous-Alexander",
+        "Luguentz Dort"
+      ],
+      "result": "LOST",
+      "returned": 0.0,
+      "pnl": -68.74,
+      "settled_at": "2026-03-28T10:35:01.331380+00:00",
+      "committed_at": "2026-03-27T22:58:54Z"
     }
   ],
   "rejected_games": [
@@ -466,7 +465,8 @@
     ],
     "New Orleans Pelicans": [
       -5,
-      -21
+      -21,
+      -13
     ],
     "Cleveland Cavaliers": [
       5,
@@ -481,95 +481,121 @@
     ],
     "Denver Nuggets": [
       2,
-      7
+      7,
+      6
     ],
     "Miami Heat": [
       17
     ],
     "Dallas Mavericks": [
-      -7
+      -7,
+      7
     ],
     "Detroit Pistons": [
       -1,
       21
     ],
     "Atlanta Hawks": [
-      1
-    ],
-    "Indiana Pacers": [
+      1,
       -7
     ],
+    "Indiana Pacers": [
+      -7,
+      -1
+    ],
     "Los Angeles Lakers": [
-      7
+      7,
+      17
     ],
     "Philadelphia 76ers": [
       20
     ],
     "Chicago Bulls": [
-      -20
+      -20,
+      -18
     ],
     "Boston Celtics": [
-      10
+      10,
+      7
     ],
     "Oklahoma City Thunder": [
-      -10
+      -10,
+      18
     ],
     "Memphis Grizzlies": [
-      -25
+      -25,
+      -10
     ],
     "San Antonio Spurs": [
       25
     ],
     "Utah Jazz": [
-      -23
+      -23,
+      -6
     ],
     "Washington Wizards": [
-      23
+      23,
+      -5
     ],
     "Minnesota Timberwolves": [
       2
     ],
     "Houston Rockets": [
-      -2
+      -2,
+      10
     ],
     "Golden State Warriors": [
-      3
+      3,
+      5
     ],
     "Brooklyn Nets": [
-      -3
+      -3,
+      -17
     ],
     "Portland Trail Blazers": [
-      31
+      31,
+      -7
     ],
     "Milwaukee Bucks": [
       -31
     ],
     "LA Clippers": [
-      25
+      25,
+      1
     ],
     "Toronto Raptors": [
-      -25
+      -25,
+      13
     ]
   },
   "game_log_recorded": [
-    "Sacramento Kings@Charlotte Hornets",
     "Atlanta Hawks@Detroit Pistons",
-    "Miami Heat@Cleveland Cavaliers",
-    "Denver Nuggets@Phoenix Suns",
-    "San Antonio Spurs@Memphis Grizzlies",
-    "Brooklyn Nets@Golden State Warriors",
-    "Washington Wizards@Utah Jazz",
-    "New York Knicks@Charlotte Hornets",
-    "Orlando Magic@Cleveland Cavaliers",
     "Toronto Raptors@LA Clippers",
-    "Oklahoma City Thunder@Boston Celtics",
-    "New Orleans Pelicans@Detroit Pistons",
     "Los Angeles Lakers@Indiana Pacers",
-    "Houston Rockets@Minnesota Timberwolves",
+    "Brooklyn Nets@Golden State Warriors",
+    "LA Clippers@Indiana Pacers",
+    "Brooklyn Nets@Los Angeles Lakers",
+    "New York Knicks@Charlotte Hornets",
+    "Sacramento Kings@Charlotte Hornets",
+    "Utah Jazz@Denver Nuggets",
     "Dallas Mavericks@Denver Nuggets",
+    "San Antonio Spurs@Memphis Grizzlies",
+    "New Orleans Pelicans@Detroit Pistons",
+    "Miami Heat@Cleveland Cavaliers",
+    "Houston Rockets@Memphis Grizzlies",
+    "Milwaukee Bucks@Portland Trail Blazers",
+    "New Orleans Pelicans@Toronto Raptors",
+    "Washington Wizards@Golden State Warriors",
+    "Dallas Mavericks@Portland Trail Blazers",
     "Sacramento Kings@Orlando Magic",
     "New Orleans Pelicans@New York Knicks",
-    "Milwaukee Bucks@Portland Trail Blazers",
-    "Chicago Bulls@Philadelphia 76ers"
+    "Orlando Magic@Cleveland Cavaliers",
+    "Washington Wizards@Utah Jazz",
+    "Atlanta Hawks@Boston Celtics",
+    "Houston Rockets@Minnesota Timberwolves",
+    "Chicago Bulls@Oklahoma City Thunder",
+    "Chicago Bulls@Philadelphia 76ers",
+    "Oklahoma City Thunder@Boston Celtics",
+    "Denver Nuggets@Phoenix Suns"
   ]
 }
