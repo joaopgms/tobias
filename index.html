@@ -1680,8 +1680,13 @@ function buildGameCard(game, idx, prefix) {
 
   const anchors=(game.anchor_players||[]).length?
     `<div style="font-size:.68rem;color:var(--teal);margin-top:6px">⚓ ${(game.anchor_players||[]).join(', ')}</div>`:'';
-  const reasoning=game.reasoning?
-    `<div class="game-card-reasoning">${game.reasoning}</div>`:'';
+  let rawReasoning = game.reasoning||'';
+  // For drafted picks: if LLM self-corrected mid-reasoning, only show the final part
+  if(game._type==='drafted' && rawReasoning){
+    const corrIdx = rawReasoning.search(/CORRECTING:|CORRECTION:|FINAL:|REVISED:/i);
+    if(corrIdx !== -1) rawReasoning = rawReasoning.slice(corrIdx).replace(/^(CORRECTING:|CORRECTION:|FINAL:|REVISED:)\s*/i,'').trim();
+  }
+  const reasoning=rawReasoning?`<div class="game-card-reasoning">${rawReasoning}</div>`:'';
   const reason=game.reason?
     `<div class="game-card-factors">Reason: ${game.reason}</div>`:'';
 
