@@ -95,7 +95,7 @@ def run_commit_if_ready():
         log.warning(f"commit_if_ready: invalid first_game_time '{first_game_time}' — skipping")
         return
 
-    window_open = fgt - timedelta(minutes=15)
+    window_open = fgt - timedelta(minutes=45)
     if now < window_open:
         remaining = int((window_open - now).total_seconds() / 60)
         log.info(f"commit_if_ready: {remaining}min until window — skipping")
