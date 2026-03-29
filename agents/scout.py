@@ -406,6 +406,22 @@ def run(store) -> None:
             p["potential_return"] = round(stake * odds, 2)
             log.info(f"Scout: fixed stake for {p['id']}: conf={conf} → €{stake}")
 
+    # ── 8d. Enforce odds range ────────────────────────────────────────────────
+    # ML: 1.65–2.50 | Spread: 1.75–2.35 | Total: 1.75–2.10
+    ODDS_RANGE = {"ml": (1.65, 2.50), "spread": (1.75, 2.35), "total": (1.75, 2.10)}
+    valid_picks = []
+    for p in draft_picks:
+        odds = float(p.get("odds") or 0)
+        mtype = p.get("market_type", "ml")
+        lo, hi = ODDS_RANGE.get(mtype, (1.65, 2.50))
+        if odds < lo or odds > hi:
+            log.info(f"Scout: dropped {p['id']} — {mtype} odds {odds} outside [{lo}–{hi}]")
+        else:
+            valid_picks.append(p)
+    if len(valid_picks) < len(draft_picks):
+        log.info(f"Scout: odds-range filter removed {len(draft_picks)-len(valid_picks)} pick(s)")
+    draft_picks = valid_picks
+
     # ── 9. Validate picks ─────────────────────────────────────────────────────
     try:
         validate_all_drafts(draft_picks, "scout")

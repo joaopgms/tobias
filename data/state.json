@@ -46,24 +46,6 @@
       ],
       "drafted_at": "2026-03-29T14:38:27Z",
       "market_type": "ml"
-    },
-    {
-      "id": "nba_draft_20260329_002",
-      "match": "Oklahoma City Thunder vs New York Knicks",
-      "time": "2026-03-29T23:30:00Z",
-      "pick": "Oklahoma City Thunder ML",
-      "odds": 1.28,
-      "stake": 65.3,
-      "potential_return": 83.58,
-      "confidence": 78,
-      "reasoning": "REJECTED FROM DRAFT — odds outside ML target range. OKC ML at 1.28 is below the 1.70 minimum ML target range. Spread(H): -8.5 at 1.92 is in the spread target range. SPREAD EVALUATION: OKC (58-16, L10: 9-1, NetRtg +10.9) vs NYK (48-26, L10: 7-3, NetRtg +6.7). NetRtg gap = +4.2 in OKC's favor — meets the ≥4.0 threshold for meaningful edge. OKC is the home team, rested. NYK: Miles McBride Questionable (Injury), Landry Shamet Out, no other major absences listed for NYK. OKC: Thomas Sorber Out (confirmed via official report and roster-only flag). Spread is OKC -8.5 at 1.92. Confidence for spread (floor 60): Base 75 (elite home team, top NetRtg, opponent missing depth). NYK road game, no B2B issues. McBride Questionable → -5. LATE SEASON: OKC locked into top-1 seed (58-16), star REST RISK. This is a primary concern — Shai Gilgeous-Alexander may be rested. Applying confidence -10 for star rest risk on locked-in seed. Final confidence = 75 - 5 (McBride Q) - 10 (star rest risk) = 60. EV = (0.60 × 1.92) - 1 = 1.152 - 1 = 0.152. EV = +15.2% — strong edge. BUT: rest risk for SGA is a significant flag. If SGA rests, the -8.5 spread is unjustifiable. This pick is CONDITIONAL on SGA confirmed playing. Drafting as CONDITIONAL — Commit must verify OKC starters before committing. Stake: Medium/High (60 confidence) = 15% of €435.31 = €65.30. CORRECTING: This is a valid draft pick at confidence 60 with EV 15.2%. Adding properly.",
-      "anchor_players": [
-        "Shai Gilgeous-Alexander",
-        "Jalen Williams",
-        "Thomas Sorber"
-      ],
-      "drafted_at": "2026-03-29T14:38:27Z",
-      "market_type": "ml"
     }
   ],
   "pending_bets": [],
@@ -342,24 +324,6 @@
           "Jayson Tatum",
           "Jaylen Brown",
           "Derrick White"
-        ],
-        "drafted_at": "2026-03-29T14:38:27Z",
-        "market_type": "ml"
-      },
-      {
-        "id": "nba_draft_20260329_002",
-        "match": "Oklahoma City Thunder vs New York Knicks",
-        "time": "2026-03-29T23:30:00Z",
-        "pick": "Oklahoma City Thunder ML",
-        "odds": 1.28,
-        "stake": 65.3,
-        "potential_return": 83.58,
-        "confidence": 78,
-        "reasoning": "REJECTED FROM DRAFT — odds outside ML target range. OKC ML at 1.28 is below the 1.70 minimum ML target range. Spread(H): -8.5 at 1.92 is in the spread target range. SPREAD EVALUATION: OKC (58-16, L10: 9-1, NetRtg +10.9) vs NYK (48-26, L10: 7-3, NetRtg +6.7). NetRtg gap = +4.2 in OKC's favor — meets the ≥4.0 threshold for meaningful edge. OKC is the home team, rested. NYK: Miles McBride Questionable (Injury), Landry Shamet Out, no other major absences listed for NYK. OKC: Thomas Sorber Out (confirmed via official report and roster-only flag). Spread is OKC -8.5 at 1.92. Confidence for spread (floor 60): Base 75 (elite home team, top NetRtg, opponent missing depth). NYK road game, no B2B issues. McBride Questionable → -5. LATE SEASON: OKC locked into top-1 seed (58-16), star REST RISK. This is a primary concern — Shai Gilgeous-Alexander may be rested. Applying confidence -10 for star rest risk on locked-in seed. Final confidence = 75 - 5 (McBride Q) - 10 (star rest risk) = 60. EV = (0.60 × 1.92) - 1 = 1.152 - 1 = 0.152. EV = +15.2% — strong edge. BUT: rest risk for SGA is a significant flag. If SGA rests, the -8.5 spread is unjustifiable. This pick is CONDITIONAL on SGA confirmed playing. Drafting as CONDITIONAL — Commit must verify OKC starters before committing. Stake: Medium/High (60 confidence) = 15% of €435.31 = €65.30. CORRECTING: This is a valid draft pick at confidence 60 with EV 15.2%. Adding properly.",
-        "anchor_players": [
-          "Shai Gilgeous-Alexander",
-          "Jalen Williams",
-          "Thomas Sorber"
         ],
         "drafted_at": "2026-03-29T14:38:27Z",
         "market_type": "ml"
