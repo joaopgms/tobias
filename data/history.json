@@ -14,7 +14,7 @@
           "peak_bankroll": 1000.0,
           "final_bankroll": null,
           "net_pnl": null,
-          "total_bets": 8,
+          "total_bets": 9,
           "wins": 2,
           "losses": 6,
           "bust": false
@@ -401,6 +401,48 @@
         }
       ],
       "summary": "Day 2026-03-28 commit — 1 bets totalling €46.75. 0 cancelled. Bankroll: €389.50 → €342.75."
+    },
+    {
+      "entry_id": "nba_entry_20260329",
+      "season": "2024-25",
+      "game": 1,
+      "timestamp": "2026-03-29T19:52:49.500324+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 435.31,
+      "total_staked": 65.3,
+      "bankroll_after": 370.01,
+      "cancelled_picks": [
+        {
+          "id": "nba_draft_20260329_001",
+          "match": "Charlotte Hornets vs Boston Celtics",
+          "pick": "Boston Celtics ML",
+          "reason": "Anchor Jaylen Brown OUT confirmed at commit time. NBA official injury report lists Brown as Out (Tendinitis). Per skills: anchor player confirmed OUT → cancel immediately. Additionally, Derrick White remains Questionable. Tatum is no longer on the injury report (positive) but Brown's confirmed absence materially weakens the Celtics' edge at these odds."
+        }
+      ],
+      "bets": [
+        {
+          "id": "nba_bet_20260329_001",
+          "match": "Toronto Raptors vs Orlando Magic",
+          "time": "2026-03-29T22:00:00Z",
+          "pick": "Orlando Magic ML",
+          "odds": 2.04,
+          "stake": 65.3,
+          "potential_return": 133.21,
+          "confidence": 60,
+          "reasoning": "LATE PICK — Franz Wagner status change since 14:00 Scout. Scout rejected Orlando ML because Wagner was listed OUT (key franchise-adjacent player). Current NBA official injury report does NOT list Wagner — he appears cleared and active. This is a material upgrade for Orlando. Meanwhile Toronto has THREE key players questionable: Brandon Ingram (Q-Inflammation), RJ Barrett (Q-Stiffness), Trayce Jackson-Davis (Q-Knee Tendinitis). Toronto (41-32, NetRtg +1.5) vs Orlando (39-34, NetRtg +0.8) — nearly identical records and ratings. With Toronto's depth at risk and Wagner likely active, Orlando at 2.04 offers genuine value. Line moved from 2.14 → 2.04 (-0.10) which is consistent with books partially adjusting for Wagner's availability, but hasn't fully priced in Toronto's multi-player questionable situation. Confidence build: Base 50 (even teams), Toronto home advantage offset (-5 for Orlando), Toronto 3 key players Q (+10), Wagner active upgrade (+10), Orlando's Isaac/Black OUT holes (-5) = 60. EV = (0.60 × 2.04) - 1 = +22.4%. Odds 2.04 in valid ML range (1.65-2.50). Injury source: nba_official (no cap restrictions). Time gate: 22:00 UTC tip, now 19:52 = 128 min > 20 min. Stake: Medium tier (55-69 confidence) = 15% × €435.31 = €65.30.",
+          "anchor_players": [
+            "Franz Wagner",
+            "Brandon Ingram",
+            "RJ Barrett"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-03-29T19:52:53Z"
+        }
+      ],
+      "summary": "Day 2026-03-29 commit — 1 bets totalling €65.30. 1 cancelled. Bankroll: €435.31 → €370.01."
     }
   ]
 }
