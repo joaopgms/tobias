@@ -1,6 +1,6 @@
 ---
-version: 13
-updated_at: 2026-03-29T11:27:11.513172+00:00
+version: 14
+updated_at: 2026-03-29T13:11:20.476784+00:00
 updated_by: analyst_2026-03-29
 llm: claude-sonnet-4-6
 ---
@@ -189,16 +189,16 @@ Hot streaks (may create line inefficiencies):
 HOT STREAK FADE CANDIDATES:
 - Los Angeles Lakers (L10: 9-1, streak: W2): NetRtg +1.7 sharply below what 48-26 record implies — regression candidate. Any opponent at ≥ 1.80 warrants explicit fade evaluation.
 - Atlanta Hawks (L10: 8-2, streak: L1): W% ~.560 triggers fade threshold; NetRtg +1.8 divergence from record is real; streak broken — opponents at ≥ 1.80 warrant fade evaluation.
+- Philadelphia 76ers (41-33, L10: 7-3, streak: W2): NetRtg -0.2 is deeply concerning for 41-33 record — significant regression risk; hot streak with negative NetRtg is an extreme fade signal. Any opponent at ≥ 1.75 warrants fade evaluation.
 
 Schedule seeding context (late March/early April):
 - OKC (58-16), Spurs (56-18), Pistons (54-20) locked into top-3 seeds — star rest risk increasing significantly
-- Play-in bubble (seeds 7-10 East/West): Charlotte (39-35), Portland (37-38), Golden State (36-38), Clippers (38-36), Philadelphia (41-33) — motivation-positive for these teams
+- Play-in bubble (seeds 7-10 East/West): Charlotte (39-35), Portland (37-38), Golden State (36-38), Clippers (38-36), Philadelphia (41-33) — motivation-positive for these teams (except 76ers — regression risk overrides motivation signal)
 - Cleveland Cavaliers (46-28, L10: 7-3, streak: W1): 2 confirmed OUT [roster-only]; depth slightly depleted; treat with moderate caution.
 - Minnesota Timberwolves (45-29, L10: 5-5, streak: L1): Anthony Edwards OUT [roster-only] — do not bet Minnesota ML without verification.
 - Houston Rockets (44-29, L10: 5-5, streak: W1): Fred VanVleet OUT [roster-only]; momentum stabilising.
 - Miami Heat (39-35, L10: 4-6, streak: L1) — fading; NetRtg +2.4 mildly positive but L10 soft.
 - Orlando Magic (39-34, L10: 4-6, streak: W1) — NetRtg +0.8 near breakeven; cautious.
-- Philadelphia 76ers (41-33, L10: 7-3, streak: W2): NetRtg -0.2 is deeply concerning for 41-33 record — significant regression risk; hot streak with negative NetRtg is an extreme fade signal.
 
 ## SECTION:b2b_rules
 B2B and rest day rules — apply numeric confidence adjustments:
