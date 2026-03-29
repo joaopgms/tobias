@@ -1,24 +1,24 @@
 {
   "season": "2024-25",
   "game": 1,
-  "bankroll": 435.31,
+  "bankroll": 370.01,
   "bankroll_initial": 1000.0,
   "bankroll_peak": 1000.0,
-  "total_staked": 853.67,
+  "total_staked": 918.97,
   "total_returned": 288.98,
   "net_pnl": -564.69,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-03-29T14:38:18.366346+00:00",
+  "last_updated": "2026-03-29T19:52:49.500324+00:00",
   "first_game_time": "2026-03-29T19:30:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
   "scout_updated_at": "2026-03-29T14:38:18.366346+00:00",
   "scout_odds_source": "theodds_unibet",
-  "commit_status": "pending",
-  "commit_updated_at": "2026-03-28T19:07:03.090502+00:00",
-  "commit_date": "2026-03-28",
+  "commit_status": "done",
+  "commit_updated_at": "2026-03-29T19:52:49.500324+00:00",
+  "commit_date": "2026-03-29",
   "analyst_updated_at": "2026-03-29T13:11:20.476784+00:00",
   "settler_updated_at": "2026-03-29T10:36:04.520563+00:00",
   "agent_models": {
@@ -27,28 +27,31 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "**Charlotte Hornets vs Boston Celtics — DRAFTED: Boston Celtics ML @ 1.89 (Conf 62, EV +17.2%)**\nBoston's elite NetRtg +7.7 and DefRtg 112.5 give a clear edge over Charlotte despite the Hornets' genuine +4.8 NetRtg and play-in motivation. The primary risk is the triple-Questionable injury cluster (Tatum/Brown/White) — Commit phase MUST verify starting lineups before staking. If Tatum and Brown both play, confidence upgrades to ~77 and this becomes a High-tier pick. If both sit, this pick should be withdrawn.\n\n**Oklahoma City Thunder vs New York Knicks — DRAFTED: OKC -8.5 @ 1.92 (Conf 60, EV +15.2%)**\nOKC's league-best NetRtg +10.9 and home-court advantage support a spread cover, with NYK missing guard depth (Shamet OUT, McBride Q). The critical caveat: OKC is locked into the #1 seed with 58-16 record, making SGA rest a real possibility. Commit phase MUST verify OKC starters — if SGA sits, do NOT commit.\n\n**Milwaukee Bucks vs LA Clippers** — REJECTED: Clippers ML 1.09 outside all target ranges; Clippers stats unavailable for spread eval; Giannis confirmed OUT justifies line but no bettable market.\n**Indiana Pacers vs Miami Heat** — REJECTED: Heat ML 1.26 outside range; Pacers confirmed tanking (16-58) with Haliburton OUT, Siakam Q — no bet on Pacers; no valid spread edge.\n**Brooklyn Nets vs Sacramento Kings** — NO EDGE: Both confirmed tanking teams; neither at ≥2.20 required for tanking-team bets; coin-flip matchup.\n**Toronto Raptors vs Orlando Magic** — NO EDGE: NetRtg gap too small (+0.7); Franz Wagner OUT depletes Orlando; Ingram Q for Toronto pulls confidence below ML floor.\n**Portland Trail Blazers vs Washington Wizards** — REJECTED: Portland ML 1.08 not bettable; spread -16 EV only +3.95% (below 5% floor); Portland itself heavily depleted.\n**New Orleans Pelicans vs Houston Rockets** — NO EDGE: Houston ML 1.43 outside range; Pelicans at 2.88 requires Murray/Murphy to play AND Rockets to underperform — cannot build thesis on opponent absence.\n**Denver Nuggets vs Golden State Warriors** — REJECTED: Denver ML 1.15 outside range; Stephen Curry OUT = franchise player rule blocks Warriors ML; Warriors roster too depleted to bet.\n\n**Slate quality: Moderate.** Two genuine edges identified but both are heavily injury-dependent and require Commit-phase verification. The slate is dominated by mismatches (Wizards/Pacers/Nets/Kings games) and extreme odds that fall outside target ranges. Pace data universally unavailable (0.0 in feed) — all O/U signals suppressed this session.",
-  "draft_picks": [
+  "last_report": "### CANCELLED — Boston Celtics ML (Draft Pick nba_draft_20260329_001)\n- Reason: **Anchor Jaylen Brown OUT confirmed at commit time.** NBA official injury report (nba_official source) lists Brown as \"Out — Tendinitis.\" At Scout time, Brown was Questionable. Skills rule is unambiguous: \"Anchor player confirmed OUT → cancel immediately.\" Brown is listed as an anchor player and is an All-Star level player whose absence fundamentally changes the Celtics' offensive ceiling. Additionally, Derrick White remains Questionable (Right Knee Contusion). Tatum does appear to be active (not on injury report), which is a positive, but Brown's confirmed OUT status alone triggers immediate cancellation. Even if we attempted to re-evaluate: confidence would drop from 62 to ~47 (Brown OUT -10, White Q -5), and EV at those odds would be subthreshold.\n- Odds at cancel: 2.00 Charlotte ML / 1.82 Boston ML (Boston was 1.89 at Scout — moved slightly unfavorably: -0.07 delta, minor)\n\n---\n\n### CONFIRMED (LATE PICK) — Orlando Magic ML\n- Match: Toronto Raptors vs Orlando Magic | Tip: 2026-03-29T22:00 UTC\n- Pick: Orlando Magic ML | Scout odds: N/A (new late pick) | Commit odds: 2.04 | Scout line was 2.14 (moved -0.10 since Scout rejection evaluation)\n- ML: H:1.80 (Toronto) / A:2.04 (Orlando) | ATS: Toronto -1.5 (1.89/1.93) | O/U: N/A\n- Stake: €65.30 | Pot: €133.21 | Conf: 60/100 | EV: +22.4%\n- Decision: Material late-breaking change. Franz Wagner was listed OUT at Scout time, triggering Orlando's rejection. Current NBA official injury report does **not** list Wagner — he is available to play. This is a significant upgrade. Simultaneously, Toronto carries three questionable starters: Ingram (Inflammation), Barrett (Stiffness), Jackson-Davis (Knee Tendinitis). The teams are essentially evenly matched by record (41-32 Toronto vs 39-34 Orlando) and NetRtg (+1.5 vs +0.8). With Wagner active and Toronto potentially missing key pieces, Orlando at 2.04 away represents genuine value. Line moved from 2.14 → 2.04, suggesting books are partially pricing Wagner in, but the move is only -0.10 (within allowable drift). EV = +22.4% well above 5% floor. All gates satisfied.\n\n---\n\n**Slate Summary:** A single-bet commit day driven primarily by late injury news. The Celtics ML draft pick collapsed at commit time when Jaylen Brown was confirmed OUT — a case where the Scout's own warning (\"re-evaluate at Commit if Tatum AND Brown OUT\") proved prescient. The sole confirmed bet leverages Franz Wagner's clearance from the injury report combined with Toronto's multi-player questionable situation, creating genuine underdog value in what is fundamentally an even matchup. Total exposure: €65.30 (15.0% of bankroll), well within limits. Bankroll remaining after commitment: €369.91.",
+  "draft_picks": [],
+  "pending_bets": [
     {
-      "id": "nba_draft_20260329_001",
-      "match": "Charlotte Hornets vs Boston Celtics",
+      "id": "nba_bet_20260329_001",
+      "match": "Toronto Raptors vs Orlando Magic",
       "time": "2026-03-29T22:00:00Z",
-      "pick": "Boston Celtics ML",
-      "odds": 1.89,
+      "pick": "Orlando Magic ML",
+      "odds": 2.04,
       "stake": 65.3,
-      "potential_return": 123.42,
-      "confidence": 62,
-      "reasoning": "Boston (49-24, L10: 7-3, NetRtg +7.7) vs Charlotte (39-35, L10: 7-3, NetRtg +4.8). NetRtg gap: +2.9 points in Boston's favor — modest but real. Charlotte's NetRtg +4.8 is genuine, and they have play-in motivation. However, Boston's elite defensive rating (112.5 DefRtg vs Charlotte's 114.6) gives a meaningful edge. CRITICAL INJURY NOTE: Jaylen Brown (Questionable-Tendinitis), Jayson Tatum (Questionable-Management), Derrick White (Questionable-Knee) — THREE key Celtics are questionable. This is a severe concern. Applying franchise-player-adjacent rule: Tatum = franchise player level → confidence -10. Brown = All-Star → confidence -5 additional. Derrick White → -3. Base confidence starts at ~75 (Boston road favourite vs play-in team, NetRtg advantage, elite roster depth). Adjustments: Tatum Questionable -10, Brown Questionable -5, White Questionable -3 = adjusted confidence 57. No B2B for either team. Charlotte has play-in motivation (+5 partial offset) → final confidence 62. Odds 1.89 are in ML target range (1.70-2.50). EV = (0.62 × 1.89) - 1 = 1.1718 - 1 = 0.1718. EV = +17.2% — strong edge above 5% floor. Stake: Medium tier (55-69 confidence) = 15% of €435.31 = €65.30. NOTE: If Tatum AND Brown are both confirmed OUT at tip-off, this pick should be re-evaluated at Commit phase — edge may deteriorate significantly.",
+      "potential_return": 133.21,
+      "confidence": 60,
+      "reasoning": "LATE PICK — Franz Wagner status change since 14:00 Scout. Scout rejected Orlando ML because Wagner was listed OUT (key franchise-adjacent player). Current NBA official injury report does NOT list Wagner — he appears cleared and active. This is a material upgrade for Orlando. Meanwhile Toronto has THREE key players questionable: Brandon Ingram (Q-Inflammation), RJ Barrett (Q-Stiffness), Trayce Jackson-Davis (Q-Knee Tendinitis). Toronto (41-32, NetRtg +1.5) vs Orlando (39-34, NetRtg +0.8) — nearly identical records and ratings. With Toronto's depth at risk and Wagner likely active, Orlando at 2.04 offers genuine value. Line moved from 2.14 → 2.04 (-0.10) which is consistent with books partially adjusting for Wagner's availability, but hasn't fully priced in Toronto's multi-player questionable situation. Confidence build: Base 50 (even teams), Toronto home advantage offset (-5 for Orlando), Toronto 3 key players Q (+10), Wagner active upgrade (+10), Orlando's Isaac/Black OUT holes (-5) = 60. EV = (0.60 × 2.04) - 1 = +22.4%. Odds 2.04 in valid ML range (1.65-2.50). Injury source: nba_official (no cap restrictions). Time gate: 22:00 UTC tip, now 19:52 = 128 min > 20 min. Stake: Medium tier (55-69 confidence) = 15% × €435.31 = €65.30.",
       "anchor_players": [
-        "Jayson Tatum",
-        "Jaylen Brown",
-        "Derrick White"
+        "Franz Wagner",
+        "Brandon Ingram",
+        "RJ Barrett"
       ],
-      "drafted_at": "2026-03-29T14:38:27Z",
-      "market_type": "ml"
+      "result": null,
+      "returned": null,
+      "pnl": null,
+      "settled_at": null,
+      "committed_at": "2026-03-29T19:52:53Z"
     }
   ],
-  "pending_bets": [],
   "settled_bets": [
     {
       "id": "nba_bet_20260319_001",
@@ -274,36 +277,36 @@
   ],
   "late_scout_rejections": [
     {
-      "match": "Milwaukee Bucks vs San Antonio Spurs",
-      "reason": "Game already tipped off at 19:00 UTC, 7 minutes before commit time (19:07 UTC). Ineligible — time gate failed."
+      "match": "Indiana Pacers vs Miami Heat",
+      "reason": "Heat ML 1.29 outside floor (1.65). Pacers ML 3.65 — Pacers confirmed tank-tier (16-58), cannot bet tank-tier teams. No valid bet."
     },
     {
-      "match": "Charlotte Hornets vs Philadelphia 76ers",
-      "reason": "Both ML markets remain outside valid range (Charlotte 1.41 below 1.65 floor; Philly 2.95 above 2.50 ceiling). Charlotte -6.5 spread: Tyrese Maxey still Questionable/GTD — if thesis depends on his absence cannot confirm per GTD rules; if evaluated without injury dependency, confidence after GTD adjustment is ~52, below the 60 minimum required for late scout additions."
+      "match": "Brooklyn Nets vs Sacramento Kings",
+      "reason": "Both tank-tier teams. Brooklyn ML 2.05 is in range but below the 2.20 threshold required for tank-tier teams per skills. Kings ML 1.79 outside ML range direction (away team). No edge."
     },
     {
-      "match": "Atlanta Hawks vs Sacramento Kings",
-      "reason": "Atlanta -14.5 spread at 1.90 has genuine value (Sacramento devastated: LaVine/Sabonis/Murray/Hunter/Eubanks all OUT, NetRtg gap 12.1, Atlanta L10: 8-2). Confidence 65, EV 0.235. However, the max 1 new pick per Commit phase limit is already used by the Detroit ML pick, which has superior EV (0.287 vs 0.235) and cleaner thesis. Both ML markets outside valid range."
+      "match": "Charlotte Hornets vs Boston Celtics",
+      "reason": "Celtics ML 2.00 with Brown OUT: confidence ~52, EV = (0.52 × 2.00) - 1 = +4.0% — below 5% EV floor. Hornets ML 1.82: confidence ~50, EV = (0.50 × 1.82) - 1 = -9.0% — negative EV. No valid bet on either side."
     },
     {
-      "match": "Chicago Bulls vs Memphis Grizzlies",
-      "reason": "Memphis ML at 1.56 below 1.65 floor. Chicago ML at 2.48 within ceiling but confidence on Chicago cannot reach 60 threshold required for late scout — both teams are bottom-tier (Chicago 29-44, 3-7 L10; Memphis 24-49, 1-9 L10), Chicago missing Collins/Essengue/Ivey/Richards, near coin-flip matchup. Confidence ~50 — speculative tier fails the ≥60 gate for new Commit picks."
+      "match": "Portland Trail Blazers vs Washington Wizards",
+      "reason": "Portland ML 1.07 outside all ranges. Spread -16.5 at 1.90: EV was already below 5% floor at -16.0 at Scout, now worse at -16.5. Wizards ML 8.5 outside range. No valid bet."
     },
     {
-      "match": "Utah Jazz vs Phoenix Suns",
-      "reason": "Phoenix ML at 1.08 and Utah ML at 8.5 both far outside valid ML range. Spread now Phoenix -17.0 (moved from -16.5 against Utah), Phoenix still carrying 4 key players OUT (Brooks, Coffey, Highsmith, Williams). Same rejection basis as Scout — Phoenix injury load too high to trust covering -17.0."
+      "match": "New Orleans Pelicans vs Houston Rockets",
+      "reason": "Rockets ML 1.42 outside floor. Pelicans ML 2.90 in range but confidence in Pelicans winning < 50 — Murray and Murphy both Questionable, Houston is superior team (NetRtg +4.1 vs -4.2). Cannot build thesis. No valid bet."
     },
     {
-      "match": "Miami Heat vs Indiana Pacers",
-      "reason": "Indiana ML at 1.25 below 1.65 floor. Miami ML at 4.00 above 2.50 ceiling. No spread or O/U available. No valid markets."
+      "match": "Oklahoma City Thunder vs New York Knicks",
+      "reason": "OKC ML 1.30 outside range. Knicks ML 3.65 in range but confidence in Knicks winning against 58-16 OKC (NetRtg +10.9) is ~35-40 — below 50 minimum. No valid bet."
     },
     {
-      "match": "Orlando Magic vs Toronto Raptors",
-      "reason": "Game not on tonight's confirmed slate — may be different date. Only ML odds available (no spread/O/U). Orlando ML 1.67 barely clears floor but no spread/totals to evaluate edge. Insufficient data and unconfirmed game date."
+      "match": "Denver Nuggets vs Golden State Warriors",
+      "reason": "Denver ML 1.15 outside range. Warriors ML 5.75 — Stephen Curry confirmed OUT (Pain Syndrome). Franchise player rule: DO NOT bet Warriors ML without franchise player. No valid bet."
     },
     {
-      "match": "New York Knicks vs Oklahoma City Thunder",
-      "reason": "Game not in tonight's confirmed slate (Scout flagged same issue). OKC ML 1.25 below 1.65 floor; Knicks ML 4.00 above 2.50 ceiling. No spread or O/U available. No valid markets."
+      "match": "Milwaukee Bucks vs LA Clippers",
+      "reason": "Game already in progress (tipped 19:30 UTC, now 19:52 UTC). Ineligible for late picks. Additionally Clippers ML 1.05 outside all ranges regardless."
     }
   ],
   "scout_report_data": {
@@ -388,74 +391,79 @@
     "cost_usd": 0.110127
   },
   "commit_report_data": {
-    "date": "2026-03-28",
-    "ts": "2026-03-28T19:07:03.090502+00:00",
+    "date": "2026-03-29",
+    "ts": "2026-03-29T19:52:49.500324+00:00",
     "bets": [
       {
-        "id": "nba_bet_20260328_001",
-        "match": "Minnesota Timberwolves vs Detroit Pistons",
-        "time": "2026-03-28T21:30:00Z",
-        "pick": "Detroit Pistons ML",
-        "odds": 1.98,
-        "stake": 46.75,
-        "potential_return": 92.57,
-        "reasoning": "Detroit (53-20, L10: 8-2, NetRtg +7.8) is the materially superior team by record and efficiency vs Minnesota (45-28, L10: 5-5, NetRtg +3.6). Anthony Edwards (Minnesota franchise player) is confirmed OUT with patellofemoral pain, joined by Jaden McDaniels and Ayo Dosunmu. Cade Cunningham is also OUT for Detroit (pneumothorax), applying -10 confidence and -20% stake reduction per franchise_player_rules. Despite both teams missing key players, Detroit's underlying quality advantage (8-game record gap, +4.2 NetRtg differential, far superior L10 form) combined with Minnesota's triple-injury blow justifies confidence in Detroit at near-even odds. Detroit ML at 1.98 clears the odds floor (1.65) comfortably. EV = (0.65 × 1.98) - 1 = 0.287. Stake reduced 20% for Cunningham OUT.",
-        "confidence": 65,
+        "id": "nba_bet_20260329_001",
+        "match": "Toronto Raptors vs Orlando Magic",
+        "time": "2026-03-29T22:00:00Z",
+        "pick": "Orlando Magic ML",
+        "odds": 2.04,
+        "stake": 65.3,
+        "potential_return": 133.21,
+        "confidence": 60,
+        "reasoning": "LATE PICK — Franz Wagner status change since 14:00 Scout. Scout rejected Orlando ML because Wagner was listed OUT (key franchise-adjacent player). Current NBA official injury report does NOT list Wagner — he appears cleared and active. This is a material upgrade for Orlando. Meanwhile Toronto has THREE key players questionable: Brandon Ingram (Q-Inflammation), RJ Barrett (Q-Stiffness), Trayce Jackson-Davis (Q-Knee Tendinitis). Toronto (41-32, NetRtg +1.5) vs Orlando (39-34, NetRtg +0.8) — nearly identical records and ratings. With Toronto's depth at risk and Wagner likely active, Orlando at 2.04 offers genuine value. Line moved from 2.14 → 2.04 (-0.10) which is consistent with books partially adjusting for Wagner's availability, but hasn't fully priced in Toronto's multi-player questionable situation. Confidence build: Base 50 (even teams), Toronto home advantage offset (-5 for Orlando), Toronto 3 key players Q (+10), Wagner active upgrade (+10), Orlando's Isaac/Black OUT holes (-5) = 60. EV = (0.60 × 2.04) - 1 = +22.4%. Odds 2.04 in valid ML range (1.65-2.50). Injury source: nba_official (no cap restrictions). Time gate: 22:00 UTC tip, now 19:52 = 128 min > 20 min. Stake: Medium tier (55-69 confidence) = 15% × €435.31 = €65.30.",
         "anchor_players": [
-          "Anthony Edwards (MIN - OUT)",
-          "Cade Cunningham (DET - OUT)"
+          "Franz Wagner",
+          "Brandon Ingram",
+          "RJ Barrett"
         ],
         "result": null,
         "returned": null,
         "pnl": null,
-        "settled_at": null
+        "settled_at": null,
+        "committed_at": "2026-03-29T19:52:53Z"
       }
     ],
-    "cancelled": [],
+    "cancelled": [
+      {
+        "id": "nba_draft_20260329_001",
+        "match": "Charlotte Hornets vs Boston Celtics",
+        "pick": "Boston Celtics ML",
+        "reason": "Anchor Jaylen Brown OUT confirmed at commit time. NBA official injury report lists Brown as Out (Tendinitis). Per skills: anchor player confirmed OUT → cancel immediately. Additionally, Derrick White remains Questionable. Tatum is no longer on the injury report (positive) but Brown's confirmed absence materially weakens the Celtics' edge at these odds."
+      }
+    ],
     "late_rejections": [
       {
-        "match": "Indiana Pacers vs LA Clippers",
-        "reason": "Time gate: game tips at 23:00 UTC, only 2 minutes from commit time — less than 20-minute minimum required. Excluded."
+        "match": "Milwaukee Bucks vs San Antonio Spurs",
+        "reason": "Game already tipped off at 19:00 UTC, 7 minutes before commit time (19:07 UTC). Ineligible — time gate failed."
       },
       {
-        "match": "Boston Celtics vs Atlanta Hawks",
-        "reason": "Jaylen Brown confirmed OUT (Achilles) per NBA official report — was Questionable at Scout. Brown is franchise-adjacent All-Star; his absence significantly weakens Boston's -5.0 spread thesis. Atlanta L10 9-1. Celtics ML 1.48 below floor; Hawks ML 2.70 above ceiling. Boston spread at 1.88 (valid range) but confidence cannot reach 60 with Brown OUT vs elite-form Atlanta. Insufficient edge."
+        "match": "Charlotte Hornets vs Philadelphia 76ers",
+        "reason": "Both ML markets remain outside valid range (Charlotte 1.41 below 1.65 floor; Philly 2.95 above 2.50 ceiling). Charlotte -6.5 spread: Tyrese Maxey still Questionable/GTD — if thesis depends on his absence cannot confirm per GTD rules; if evaluated without injury dependency, confidence after GTD adjustment is ~52, below the 60 minimum required for late scout additions."
       },
       {
-        "match": "Cleveland Cavaliers vs Miami Heat",
-        "reason": "NetRtg gap only 1.3 pts (CLE +4.0 vs MIA +2.7) — below 4pt threshold for spread conviction. Both MLs out of valid range. No injury changes create new edge. Insufficient edge."
+        "match": "Atlanta Hawks vs Sacramento Kings",
+        "reason": "Atlanta -14.5 spread at 1.90 has genuine value (Sacramento devastated: LaVine/Sabonis/Murray/Hunter/Eubanks all OUT, NetRtg gap 12.1, Atlanta L10: 8-2). Confidence 65, EV 0.235. However, the max 1 new pick per Commit phase limit is already used by the Detroit ML pick, which has superior EV (0.287 vs 0.235) and cleaner thesis. Both ML markets outside valid range."
       },
       {
-        "match": "Memphis Grizzlies vs Houston Rockets",
-        "reason": "Memphis L10 1-9, tank-tier team. No valid thesis for backing Memphis +13.5. Houston NetRtg gap favors Rockets, not Grizzlies. Both MLs out of range. No edge on any market."
+        "match": "Chicago Bulls vs Memphis Grizzlies",
+        "reason": "Memphis ML at 1.56 below 1.65 floor. Chicago ML at 2.48 within ceiling but confidence on Chicago cannot reach 60 threshold required for late scout — both teams are bottom-tier (Chicago 29-44, 3-7 L10; Memphis 24-49, 1-9 L10), Chicago missing Collins/Essengue/Ivey/Richards, near coin-flip matchup. Confidence ~50 — speculative tier fails the ≥60 gate for new Commit picks."
       },
       {
-        "match": "Toronto Raptors vs New Orleans Pelicans",
-        "reason": "Immanuel Quickley confirmed OUT (Fasciitis) — same as Scout. Toronto NetRtg gap vs Pelicans (5.4 pts) insufficient to support -8.5 spread with franchise player absent. Pelicans L10 5-5. Both MLs out of range. No valid edge."
+        "match": "Utah Jazz vs Phoenix Suns",
+        "reason": "Phoenix ML at 1.08 and Utah ML at 8.5 both far outside valid ML range. Spread now Phoenix -17.0 (moved from -16.5 against Utah), Phoenix still carrying 4 key players OUT (Brooks, Coffey, Highsmith, Williams). Same rejection basis as Scout — Phoenix injury load too high to trust covering -17.0."
       },
       {
-        "match": "Utah Jazz vs Denver Nuggets",
-        "reason": "Spread moved to -19.0 (worsened from Scout's -18.5). Even with 12.0 NetRtg gap, -19.0 is an extreme line with high variance. Utah roster gutted (Collier, George, JJJ, Kessler, Markkanen all OUT) but extreme lines historically unreliable for spread coverage even vs skeleton crews. Both MLs far out of range. Scout's reasoning still valid, line now worse."
+        "match": "Miami Heat vs Indiana Pacers",
+        "reason": "Indiana ML at 1.25 below 1.65 floor. Miami ML at 4.00 above 2.50 ceiling. No spread or O/U available. No valid markets."
       },
       {
-        "match": "Washington Wizards vs Golden State Warriors",
-        "reason": "Stephen Curry OUT, Jimmy Butler OUT — both franchise-caliber players missing for GSW. GSW NetRtg +0.3 without stars likely turns negative. True NetRtg gap vs Wizards -11.1 insufficient to support -12.0 spread with skeleton GSW roster. GSW L10: 3-7. No valid ML. Insufficient conviction."
+        "match": "Orlando Magic vs Toronto Raptors",
+        "reason": "Game not on tonight's confirmed slate — may be different date. Only ML odds available (no spread/O/U). Orlando ML 1.67 barely clears floor but no spread/totals to evaluate edge. Insufficient data and unconfirmed game date."
       },
       {
-        "match": "Dallas Mavericks vs Portland Trail Blazers",
-        "reason": "Portland -10.0 at 1.90 has marginal appeal (Dallas severely depleted: Kyrie/Lively/Gafford/Martin all OUT) but Damian Lillard OUT and Shaedon Sharpe OUT significantly weakens Portland. Adjusted NetRtg gap (Lillard absent) insufficient to confidently support -10.0 line. Confidence cannot reach 60 with Portland's two best players absent. Rejected."
-      },
-      {
-        "match": "Los Angeles Lakers vs Brooklyn Nets",
-        "reason": "Luka Doncic now confirmed active (not on NBA official injury report — was GTD at Scout). However spread moved from -16.0 to -18.0 (2pt move against Lakers, market priced in Luka). Lakers NetRtg +1.4 vs Nets -9.7 = 11.1pt gap. Covering -18.0 on 11.1 NetRtg gap insufficient. EV at confidence 55 and odds 1.89: 0.0395 — below 0.05 threshold. Rejected."
+        "match": "New York Knicks vs Oklahoma City Thunder",
+        "reason": "Game not in tonight's confirmed slate (Scout flagged same issue). OKC ML 1.25 below 1.65 floor; Knicks ML 4.00 above 2.50 ceiling. No spread or O/U available. No valid markets."
       }
     ],
-    "total_staked": 46.75,
-    "bankroll_before": 389.5,
-    "report": "## Commit Report — 2026-03-28T19:07:05Z\n\n---\n\n### CONFIRMED — Detroit Pistons ML (Late Scout Pick)\n\n- **Match:** Minnesota Timberwolves vs Detroit Pistons | Tip: 21:30 UTC\n- **Pick:** Detroit Pistons ML | Scout odds: N/A (new pick) | Commit odds: 1.98 | Move: N/A\n- **ML:** H:1.84 / A:1.98 | ATS: Minnesota -1.0 (1.93/1.89) | O/U: N/A\n- **Stake:** €46.75 | Pot: €92.57 | Conf: 65/100 | EV: 0.287\n\n**Decision:** This edge emerged post-Scout from injury confirmations. Detroit (53-20, L10: 8-2, NetRtg +7.8) is substantially the better team vs Minnesota (45-28, L10: 5-5, NetRtg +3.6). Anthony Edwards confirmed OUT for Minnesota (patellofemoral pain), alongside Jaden McDaniels (right knee) and Ayo Dosunmu (right calf) — Minnesota is missing their superstar and two key rotation players. Cade Cunningham is OUT for Detroit (pneumothorax — serious but confirmed, not GTD), triggering franchise_player_rules: confidence -10 to 65, stake -20% applied. Net assessment: Detroit's 8-game record advantage, superior NetRtg by 4.2 points, and elite recent form (8-2 L10) outweigh Minnesota's home-court edge when Minnesota is this shorthanded. Detroit ML at 1.98 clears all validation gates. EV = (0.65 × 1.98) - 1 = 0.287. Total exposure: 12.0% of bankroll (well within 70% cap).\n\n---\n\n### No Draft Picks to Review\nScout submitted no draft picks for this session (empty array). Commit proceeded directly to late scout evaluation.\n\n---\n\n### Slate Summary\n\nA challenging slate for finding confirmed edges tonight, with multiple games featuring extreme ML odds outside valid ranges and widespread injury absences across most matchups. The single committed pick targets the Detroit/Minnesota game where a genuine quality gap (53-20 vs 45-28, NetRtg +7.8 vs +3.6, L10: 8-2 vs 5-5) is temporarily masked by both teams' injury situations — Detroit's underlying strength supports the near-even odds despite Cade Cunningham's absence. Total committed: €46.75 (12.0% of €389.50 bankroll), leaving €342.75 in reserve.",
-    "tokens_in": 6174,
-    "tokens_out": 6339,
-    "cost_usd": 0.113607
+    "total_staked": 65.3,
+    "bankroll_before": 435.31,
+    "report": "### CANCELLED — Boston Celtics ML (Draft Pick nba_draft_20260329_001)\n- Reason: **Anchor Jaylen Brown OUT confirmed at commit time.** NBA official injury report (nba_official source) lists Brown as \"Out — Tendinitis.\" At Scout time, Brown was Questionable. Skills rule is unambiguous: \"Anchor player confirmed OUT → cancel immediately.\" Brown is listed as an anchor player and is an All-Star level player whose absence fundamentally changes the Celtics' offensive ceiling. Additionally, Derrick White remains Questionable (Right Knee Contusion). Tatum does appear to be active (not on injury report), which is a positive, but Brown's confirmed OUT status alone triggers immediate cancellation. Even if we attempted to re-evaluate: confidence would drop from 62 to ~47 (Brown OUT -10, White Q -5), and EV at those odds would be subthreshold.\n- Odds at cancel: 2.00 Charlotte ML / 1.82 Boston ML (Boston was 1.89 at Scout — moved slightly unfavorably: -0.07 delta, minor)\n\n---\n\n### CONFIRMED (LATE PICK) — Orlando Magic ML\n- Match: Toronto Raptors vs Orlando Magic | Tip: 2026-03-29T22:00 UTC\n- Pick: Orlando Magic ML | Scout odds: N/A (new late pick) | Commit odds: 2.04 | Scout line was 2.14 (moved -0.10 since Scout rejection evaluation)\n- ML: H:1.80 (Toronto) / A:2.04 (Orlando) | ATS: Toronto -1.5 (1.89/1.93) | O/U: N/A\n- Stake: €65.30 | Pot: €133.21 | Conf: 60/100 | EV: +22.4%\n- Decision: Material late-breaking change. Franz Wagner was listed OUT at Scout time, triggering Orlando's rejection. Current NBA official injury report does **not** list Wagner — he is available to play. This is a significant upgrade. Simultaneously, Toronto carries three questionable starters: Ingram (Inflammation), Barrett (Stiffness), Jackson-Davis (Knee Tendinitis). The teams are essentially evenly matched by record (41-32 Toronto vs 39-34 Orlando) and NetRtg (+1.5 vs +0.8). With Wagner active and Toronto potentially missing key pieces, Orlando at 2.04 away represents genuine value. Line moved from 2.14 → 2.04, suggesting books are partially pricing Wagner in, but the move is only -0.10 (within allowable drift). EV = +22.4% well above 5% floor. All gates satisfied.\n\n---\n\n**Slate Summary:** A single-bet commit day driven primarily by late injury news. The Celtics ML draft pick collapsed at commit time when Jaylen Brown was confirmed OUT — a case where the Scout's own warning (\"re-evaluate at Commit if Tatum AND Brown OUT\") proved prescient. The sole confirmed bet leverages Franz Wagner's clearance from the injury report combined with Toronto's multi-player questionable situation, creating genuine underdog value in what is fundamentally an even matchup. Total exposure: €65.30 (15.0% of bankroll), well within limits. Bankroll remaining after commitment: €369.91.",
+    "tokens_in": 8105,
+    "tokens_out": 5207,
+    "cost_usd": 0.10242
   },
   "netrtg_l15": {},
   "cached_context": {
