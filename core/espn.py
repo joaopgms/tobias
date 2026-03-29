@@ -380,7 +380,7 @@ def _fetch_pace_bref() -> dict[str, float]:
         for row in rows:
             cells = {k: _re.sub(r"<[^>]+>", "", v).strip()
                      for k, v in _re.findall(r'<td[^>]*data-stat="([^"]+)"[^>]*>(.*?)</td>', row, _re.DOTALL)}
-            team = cells.get("team", "")
+            team = cells.get("team", "").rstrip("*").strip()
             pace_str = cells.get("pace", "")
             if team and pace_str:
                 try:
