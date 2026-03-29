@@ -434,7 +434,8 @@ Output ONLY valid JSON in this exact structure:
     {{
       "gap": "one sentence describing missing data, stat, or rule",
       "why": "why it matters — what decision it would have changed or improved",
-      "suggestion": "proposed action (e.g. add pace to scout context, add section X, fetch stat Y)"
+      "suggestion": "proposed action (e.g. add pace to scout context, add section X, fetch stat Y)",
+      "not_patched_reason": "one sentence — why no patch was produced (e.g. 'infrastructure fix needed', 'confidence 0.65 below 0.70 threshold', 'insufficient data — only 3 bets on this market')"
     }}
   ]
 }}

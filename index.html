@@ -2152,6 +2152,9 @@ function openAnalystModal(entry){
       const patchedBadge = g.patched
         ? `<span style="font-size:.6rem;font-weight:700;background:var(--burg-soft);color:var(--burg);border-radius:999px;padding:1px 7px;margin-left:4px">PATCHED</span>`
         : `<span style="font-size:.6rem;font-weight:700;background:var(--surface);color:var(--muted);border-radius:999px;padding:1px 7px;margin-left:4px;border:1px solid var(--border2)">not patched</span>`;
+      const notPatchedRow = !g.patched && g.not_patched_reason
+        ? `<div style="font-size:.68rem;color:var(--muted);margin-top:5px;padding:5px 8px;background:#f5f0eb;border-radius:var(--r-sm)">⚠ ${g.not_patched_reason}</div>`
+        : '';
       html += `<div style="background:var(--surface);border-radius:var(--r-sm);padding:12px 14px;border-left:3px solid var(--teal)">
         <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-bottom:6px">
           <span style="font-size:.74rem;font-weight:700;color:var(--text)">${i+1}. ${g.gap||''}</span>
@@ -2159,6 +2162,7 @@ function openAnalystModal(entry){
         </div>
         <div style="font-size:.69rem;color:var(--muted);margin-bottom:3px"><strong>Why:</strong> ${g.why||''}</div>
         <div style="font-size:.69rem;color:var(--teal)"><strong>→</strong> ${g.suggestion||''}</div>
+        ${notPatchedRow}
       </div>`;
     });
     html += `</div></div>`;
