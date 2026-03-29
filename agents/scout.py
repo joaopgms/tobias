@@ -384,6 +384,28 @@ def run(store) -> None:
     if len(draft_picks) < before_filter:
         log.info(f"Scout: dropped {before_filter - len(draft_picks)} picks below confidence 40")
 
+    # ── 8c. Fix LLM inconsistencies ───────────────────────────────────────────
+    bankroll = state["bankroll"]
+    for p in draft_picks:
+        # Correct market_type from pick text if LLM contradicted itself
+        pick_lower = (p.get("pick") or "").lower()
+        if " ml" in pick_lower or pick_lower.endswith(" ml"):
+            p["market_type"] = "ml"
+        elif any(x in pick_lower for x in ["-", "+", "spread", "ats"]):
+            p["market_type"] = "spread"
+        elif any(x in pick_lower for x in ["over", "under", "o/u"]):
+            p["market_type"] = "total"
+        # Recalculate stake if LLM left it at 0
+        conf = p.get("confidence", 0)
+        if not p.get("stake") and conf >= 40:
+            if conf >= 70:   stake = round(bankroll * 0.15, 2)
+            elif conf >= 55: stake = round(bankroll * 0.10, 2)
+            else:            stake = round(bankroll * 0.08, 2)
+            odds = float(p.get("odds") or 1.0)
+            p["stake"] = stake
+            p["potential_return"] = round(stake * odds, 2)
+            log.info(f"Scout: fixed stake for {p['id']}: conf={conf} → €{stake}")
+
     # ── 9. Validate picks ─────────────────────────────────────────────────────
     try:
         validate_all_drafts(draft_picks, "scout")
