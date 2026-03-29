@@ -1,15 +1,15 @@
 {
   "season": "2024-25",
   "game": 1,
-  "bankroll": 342.75,
+  "bankroll": 435.31,
   "bankroll_initial": 1000.0,
   "bankroll_peak": 1000.0,
   "total_staked": 853.67,
-  "total_returned": 196.42,
-  "net_pnl": -610.5,
+  "total_returned": 288.98,
+  "net_pnl": -564.69,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-03-28T19:07:03.090502+00:00",
+  "last_updated": "2026-03-29T10:36:04.520563+00:00",
   "first_game_time": "2026-03-28T19:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
@@ -20,7 +20,7 @@
   "commit_updated_at": "2026-03-28T19:07:03.090502+00:00",
   "commit_date": "2026-03-28",
   "analyst_updated_at": "2026-03-28T11:26:41.553824+00:00",
-  "settler_updated_at": "2026-03-28T10:35:01.331380+00:00",
+  "settler_updated_at": "2026-03-29T10:36:04.520563+00:00",
   "agent_models": {
     "settler": "no-llm",
     "analyst": "claude-sonnet-4-6",
@@ -29,27 +29,7 @@
   },
   "last_report": "## Commit Report — 2026-03-28T19:07:05Z\n\n---\n\n### CONFIRMED — Detroit Pistons ML (Late Scout Pick)\n\n- **Match:** Minnesota Timberwolves vs Detroit Pistons | Tip: 21:30 UTC\n- **Pick:** Detroit Pistons ML | Scout odds: N/A (new pick) | Commit odds: 1.98 | Move: N/A\n- **ML:** H:1.84 / A:1.98 | ATS: Minnesota -1.0 (1.93/1.89) | O/U: N/A\n- **Stake:** €46.75 | Pot: €92.57 | Conf: 65/100 | EV: 0.287\n\n**Decision:** This edge emerged post-Scout from injury confirmations. Detroit (53-20, L10: 8-2, NetRtg +7.8) is substantially the better team vs Minnesota (45-28, L10: 5-5, NetRtg +3.6). Anthony Edwards confirmed OUT for Minnesota (patellofemoral pain), alongside Jaden McDaniels (right knee) and Ayo Dosunmu (right calf) — Minnesota is missing their superstar and two key rotation players. Cade Cunningham is OUT for Detroit (pneumothorax — serious but confirmed, not GTD), triggering franchise_player_rules: confidence -10 to 65, stake -20% applied. Net assessment: Detroit's 8-game record advantage, superior NetRtg by 4.2 points, and elite recent form (8-2 L10) outweigh Minnesota's home-court edge when Minnesota is this shorthanded. Detroit ML at 1.98 clears all validation gates. EV = (0.65 × 1.98) - 1 = 0.287. Total exposure: 12.0% of bankroll (well within 70% cap).\n\n---\n\n### No Draft Picks to Review\nScout submitted no draft picks for this session (empty array). Commit proceeded directly to late scout evaluation.\n\n---\n\n### Slate Summary\n\nA challenging slate for finding confirmed edges tonight, with multiple games featuring extreme ML odds outside valid ranges and widespread injury absences across most matchups. The single committed pick targets the Detroit/Minnesota game where a genuine quality gap (53-20 vs 45-28, NetRtg +7.8 vs +3.6, L10: 8-2 vs 5-5) is temporarily masked by both teams' injury situations — Detroit's underlying strength supports the near-even odds despite Cade Cunningham's absence. Total committed: €46.75 (12.0% of €389.50 bankroll), leaving €342.75 in reserve.",
   "draft_picks": [],
-  "pending_bets": [
-    {
-      "id": "nba_bet_20260328_001",
-      "match": "Minnesota Timberwolves vs Detroit Pistons",
-      "time": "2026-03-28T21:30:00Z",
-      "pick": "Detroit Pistons ML",
-      "odds": 1.98,
-      "stake": 46.75,
-      "potential_return": 92.57,
-      "reasoning": "Detroit (53-20, L10: 8-2, NetRtg +7.8) is the materially superior team by record and efficiency vs Minnesota (45-28, L10: 5-5, NetRtg +3.6). Anthony Edwards (Minnesota franchise player) is confirmed OUT with patellofemoral pain, joined by Jaden McDaniels and Ayo Dosunmu. Cade Cunningham is also OUT for Detroit (pneumothorax), applying -10 confidence and -20% stake reduction per franchise_player_rules. Despite both teams missing key players, Detroit's underlying quality advantage (8-game record gap, +4.2 NetRtg differential, far superior L10 form) combined with Minnesota's triple-injury blow justifies confidence in Detroit at near-even odds. Detroit ML at 1.98 clears the odds floor (1.65) comfortably. EV = (0.65 × 1.98) - 1 = 0.287. Stake reduced 20% for Cunningham OUT.",
-      "confidence": 65,
-      "anchor_players": [
-        "Anthony Edwards (MIN - OUT)",
-        "Cade Cunningham (DET - OUT)"
-      ],
-      "result": null,
-      "returned": null,
-      "pnl": null,
-      "settled_at": null
-    }
-  ],
+  "pending_bets": [],
   "settled_bets": [
     {
       "id": "nba_bet_20260319_001",
@@ -201,6 +181,25 @@
       "pnl": -68.74,
       "settled_at": "2026-03-28T10:35:01.331380+00:00",
       "committed_at": "2026-03-27T22:58:54Z"
+    },
+    {
+      "id": "nba_bet_20260328_001",
+      "match": "Minnesota Timberwolves vs Detroit Pistons",
+      "time": "2026-03-28T21:30:00Z",
+      "pick": "Detroit Pistons ML",
+      "odds": 1.98,
+      "stake": 46.75,
+      "potential_return": 92.57,
+      "reasoning": "Detroit (53-20, L10: 8-2, NetRtg +7.8) is the materially superior team by record and efficiency vs Minnesota (45-28, L10: 5-5, NetRtg +3.6). Anthony Edwards (Minnesota franchise player) is confirmed OUT with patellofemoral pain, joined by Jaden McDaniels and Ayo Dosunmu. Cade Cunningham is also OUT for Detroit (pneumothorax), applying -10 confidence and -20% stake reduction per franchise_player_rules. Despite both teams missing key players, Detroit's underlying quality advantage (8-game record gap, +4.2 NetRtg differential, far superior L10 form) combined with Minnesota's triple-injury blow justifies confidence in Detroit at near-even odds. Detroit ML at 1.98 clears the odds floor (1.65) comfortably. EV = (0.65 × 1.98) - 1 = 0.287. Stake reduced 20% for Cunningham OUT.",
+      "confidence": 65,
+      "anchor_players": [
+        "Anthony Edwards (MIN - OUT)",
+        "Cade Cunningham (DET - OUT)"
+      ],
+      "result": "WON",
+      "returned": 92.56,
+      "pnl": 45.81,
+      "settled_at": "2026-03-29T10:36:04.520563+00:00"
     }
   ],
   "rejected_games": [
@@ -388,11 +387,13 @@
   "team_game_log": {
     "Charlotte Hornets": [
       44,
-      11
+      11,
+      -4
     ],
     "Sacramento Kings": [
       -44,
-      -4
+      -4,
+      -10
     ],
     "New York Knicks": [
       5,
@@ -412,7 +413,8 @@
       4
     ],
     "Phoenix Suns": [
-      -2
+      -2,
+      25
     ],
     "Denver Nuggets": [
       2,
@@ -428,11 +430,13 @@
     ],
     "Detroit Pistons": [
       -1,
-      21
+      21,
+      22
     ],
     "Atlanta Hawks": [
       1,
-      -7
+      -7,
+      10
     ],
     "Indiana Pacers": [
       -7,
@@ -443,11 +447,13 @@
       17
     ],
     "Philadelphia 76ers": [
-      20
+      20,
+      4
     ],
     "Chicago Bulls": [
       -20,
-      -18
+      -18,
+      -1
     ],
     "Boston Celtics": [
       10,
@@ -459,21 +465,25 @@
     ],
     "Memphis Grizzlies": [
       -25,
-      -10
+      -10,
+      1
     ],
     "San Antonio Spurs": [
-      25
+      25,
+      32
     ],
     "Utah Jazz": [
       -23,
-      -6
+      -6,
+      -25
     ],
     "Washington Wizards": [
       23,
       -5
     ],
     "Minnesota Timberwolves": [
-      2
+      2,
+      -22
     ],
     "Houston Rockets": [
       -2,
@@ -492,7 +502,8 @@
       -7
     ],
     "Milwaukee Bucks": [
-      -31
+      -31,
+      -32
     ],
     "LA Clippers": [
       25,
@@ -504,33 +515,39 @@
     ]
   },
   "game_log_recorded": [
-    "Atlanta Hawks@Detroit Pistons",
-    "Toronto Raptors@LA Clippers",
-    "Los Angeles Lakers@Indiana Pacers",
-    "Brooklyn Nets@Golden State Warriors",
-    "LA Clippers@Indiana Pacers",
-    "Brooklyn Nets@Los Angeles Lakers",
-    "New York Knicks@Charlotte Hornets",
-    "Sacramento Kings@Charlotte Hornets",
-    "Utah Jazz@Denver Nuggets",
-    "Dallas Mavericks@Denver Nuggets",
-    "San Antonio Spurs@Memphis Grizzlies",
-    "New Orleans Pelicans@Detroit Pistons",
-    "Miami Heat@Cleveland Cavaliers",
-    "Houston Rockets@Memphis Grizzlies",
-    "Milwaukee Bucks@Portland Trail Blazers",
-    "New Orleans Pelicans@Toronto Raptors",
-    "Washington Wizards@Golden State Warriors",
-    "Dallas Mavericks@Portland Trail Blazers",
     "Sacramento Kings@Orlando Magic",
-    "New Orleans Pelicans@New York Knicks",
-    "Orlando Magic@Cleveland Cavaliers",
-    "Washington Wizards@Utah Jazz",
+    "Denver Nuggets@Phoenix Suns",
     "Atlanta Hawks@Boston Celtics",
+    "New York Knicks@Charlotte Hornets",
+    "Brooklyn Nets@Los Angeles Lakers",
+    "Chicago Bulls@Memphis Grizzlies",
+    "New Orleans Pelicans@Toronto Raptors",
+    "Utah Jazz@Denver Nuggets",
+    "Houston Rockets@Memphis Grizzlies",
+    "San Antonio Spurs@Milwaukee Bucks",
     "Houston Rockets@Minnesota Timberwolves",
-    "Chicago Bulls@Oklahoma City Thunder",
-    "Chicago Bulls@Philadelphia 76ers",
+    "Los Angeles Lakers@Indiana Pacers",
+    "Orlando Magic@Cleveland Cavaliers",
+    "Washington Wizards@Golden State Warriors",
     "Oklahoma City Thunder@Boston Celtics",
-    "Denver Nuggets@Phoenix Suns"
+    "Dallas Mavericks@Denver Nuggets",
+    "Sacramento Kings@Charlotte Hornets",
+    "New Orleans Pelicans@Detroit Pistons",
+    "Toronto Raptors@LA Clippers",
+    "Brooklyn Nets@Golden State Warriors",
+    "San Antonio Spurs@Memphis Grizzlies",
+    "Milwaukee Bucks@Portland Trail Blazers",
+    "Sacramento Kings@Atlanta Hawks",
+    "Detroit Pistons@Minnesota Timberwolves",
+    "LA Clippers@Indiana Pacers",
+    "New Orleans Pelicans@New York Knicks",
+    "Atlanta Hawks@Detroit Pistons",
+    "Chicago Bulls@Philadelphia 76ers",
+    "Dallas Mavericks@Portland Trail Blazers",
+    "Utah Jazz@Phoenix Suns",
+    "Philadelphia 76ers@Charlotte Hornets",
+    "Miami Heat@Cleveland Cavaliers",
+    "Washington Wizards@Utah Jazz",
+    "Chicago Bulls@Oklahoma City Thunder"
   ]
 }
