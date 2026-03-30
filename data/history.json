@@ -14,7 +14,7 @@
           "peak_bankroll": 1000.0,
           "final_bankroll": null,
           "net_pnl": null,
-          "total_bets": 9,
+          "total_bets": 11,
           "wins": 2,
           "losses": 7,
           "bust": false
@@ -443,6 +443,67 @@
         }
       ],
       "summary": "Day 2026-03-29 commit — 1 bets totalling €65.30. 1 cancelled. Bankroll: €435.31 → €370.01."
+    },
+    {
+      "entry_id": "nba_entry_20260330",
+      "season": "2024-25",
+      "game": 1,
+      "timestamp": "2026-03-30T22:27:02.028730+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 370.01,
+      "total_staked": 111.0,
+      "bankroll_after": 259.01,
+      "cancelled_picks": [
+        {
+          "id": "nba_draft_20260330_002",
+          "match": "Atlanta Hawks vs Boston Celtics",
+          "pick": "Boston Celtics ML",
+          "reason": "Franchise player Jayson Tatum confirmed OUT per NBA official at commit time. Scout's own reasoning already concluded rejection: confidence drops from 65 to 40 after -25 franchise player penalty, below the minimum ML confidence floor of 50. Additionally, Nikola Vucevic, Ron Harper Jr., and Neemias Queta are all confirmed OUT at commit time, further depleting Boston. EV at confidence 40 and odds 2.17 = (0.40 × 2.17) - 1 = -0.132, deeply negative."
+        }
+      ],
+      "bets": [
+        {
+          "id": "nba_bet_20260330_001",
+          "match": "Miami Heat vs Philadelphia 76ers",
+          "time": "2026-03-30T23:00:00Z",
+          "pick": "Miami Heat ML",
+          "odds": 2.06,
+          "stake": 55.5,
+          "potential_return": 114.33,
+          "confidence": 62,
+          "reasoning": "PHI NetRtg -0.2 with 41-33 record and L10 7-3 — classic hot streak with negative NetRtg fade candidate per skills. Hot streak fade rule: PHI W% ~.554 > .550 threshold with NetRtg -0.2 triggers explicit fade evaluation with confidence +10. Miami home (2-3pt advantage), NetRtg +2.2 positive. PHI injuries: Johni Broome Out (unchanged). MIA injuries: Norman Powell Out, Terry Rozier Out (unchanged). Anchor players verified: Joel Embiid active (not on injury report), Jimmy Butler active (not on injury report). Line moved only 0.02 against (2.08→2.06), within 0.10 threshold — no investigation needed. Odds 2.06 within ML target range 1.65-2.50. EV = (0.62 × 2.06) - 1 = 0.2772. Base confidence 52 + 10 hot streak fade = 62, Medium tier stake 15% of €370.01 = €55.50.",
+          "anchor_players": [
+            "Joel Embiid",
+            "Jimmy Butler"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-03-30T22:27:04Z"
+        },
+        {
+          "id": "nba_bet_20260330_002",
+          "match": "Atlanta Hawks vs Boston Celtics",
+          "time": "2026-03-30T23:30:00Z",
+          "pick": "Atlanta Hawks -2.5",
+          "odds": 1.88,
+          "stake": 55.5,
+          "potential_return": 104.34,
+          "confidence": 60,
+          "reasoning": "LATE PICK — new edge emerged since Scout. Boston severely depleted: Jayson Tatum OUT (Management, NBA official confirmed), Nikola Vucevic OUT (new — not in Scout data), Ron Harper Jr. OUT, Neemias Queta OUT — 4 players unavailable including franchise player. Atlanta has near-full strength (only G-League absences and Jock Landale illness). Atlanta home court advantage. ATL NetRtg +1.8 vs BOS NetRtg +7.8 — but BOS NetRtg calculated with healthy roster; with Tatum/Vucevic/Harper/Queta out, effective BOS quality is materially reduced. Jaylen Brown still leads Boston but lacks depth. Injury-dependent pick rule: Tatum confirmed OUT (not Questionable/GTD) — confirmation rule satisfied. EV = (0.60 × 1.88) - 1 = 0.128. Confidence 60 exactly at minimum gate. Medium tier stake 15% of €370.01 = €55.50. Time gate: tip 23:30 UTC, commit 22:27 UTC = 63 min > 20 min. Quantity gate: this is the 1 allowed late pick. Spread 1.88 within target range 1.80-2.30.",
+          "anchor_players": [
+            "Jayson Tatum",
+            "Jaylen Brown"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-03-30T22:27:04Z"
+        }
+      ],
+      "summary": "Day 2026-03-30 commit — 2 bets totalling €111.00. 1 cancelled. Bankroll: €370.01 → €259.01."
     }
   ]
 }
