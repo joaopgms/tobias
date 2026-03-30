@@ -411,11 +411,11 @@ def run(store) -> None:
     ODDS_RANGE = {"ml": (1.65, 2.50), "spread": (1.75, 2.35), "total": (1.75, 2.10)}
     valid_picks = []
     for p in draft_picks:
-        odds = float(p.get("odds") or 0)
+        pick_odds = float(p.get("odds") or 0)
         mtype = p.get("market_type", "ml")
         lo, hi = ODDS_RANGE.get(mtype, (1.65, 2.50))
-        if odds < lo or odds > hi:
-            log.info(f"Scout: dropped {p['id']} — {mtype} odds {odds} outside [{lo}–{hi}]")
+        if pick_odds < lo or pick_odds > hi:
+            log.info(f"Scout: dropped {p['id']} — {mtype} odds {pick_odds} outside [{lo}–{hi}]")
         else:
             valid_picks.append(p)
     if len(valid_picks) < len(draft_picks):
