@@ -6,10 +6,10 @@
   "bankroll_peak": 1000.0,
   "total_staked": 918.97,
   "total_returned": 288.98,
-  "net_pnl": -564.69,
+  "net_pnl": -629.99,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-03-29T19:52:49.500324+00:00",
+  "last_updated": "2026-03-30T11:03:30.618049+00:00",
   "first_game_time": "2026-03-29T19:30:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
@@ -20,7 +20,7 @@
   "commit_updated_at": "2026-03-29T19:52:49.500324+00:00",
   "commit_date": "2026-03-29",
   "analyst_updated_at": "2026-03-29T13:11:20.476784+00:00",
-  "settler_updated_at": "2026-03-29T10:36:04.520563+00:00",
+  "settler_updated_at": "2026-03-30T11:03:30.618049+00:00",
   "agent_models": {
     "settler": "no-llm",
     "analyst": "claude-sonnet-4-6",
@@ -29,29 +29,7 @@
   },
   "last_report": "### CANCELLED — Boston Celtics ML (Draft Pick nba_draft_20260329_001)\n- Reason: **Anchor Jaylen Brown OUT confirmed at commit time.** NBA official injury report (nba_official source) lists Brown as \"Out — Tendinitis.\" At Scout time, Brown was Questionable. Skills rule is unambiguous: \"Anchor player confirmed OUT → cancel immediately.\" Brown is listed as an anchor player and is an All-Star level player whose absence fundamentally changes the Celtics' offensive ceiling. Additionally, Derrick White remains Questionable (Right Knee Contusion). Tatum does appear to be active (not on injury report), which is a positive, but Brown's confirmed OUT status alone triggers immediate cancellation. Even if we attempted to re-evaluate: confidence would drop from 62 to ~47 (Brown OUT -10, White Q -5), and EV at those odds would be subthreshold.\n- Odds at cancel: 2.00 Charlotte ML / 1.82 Boston ML (Boston was 1.89 at Scout — moved slightly unfavorably: -0.07 delta, minor)\n\n---\n\n### CONFIRMED (LATE PICK) — Orlando Magic ML\n- Match: Toronto Raptors vs Orlando Magic | Tip: 2026-03-29T22:00 UTC\n- Pick: Orlando Magic ML | Scout odds: N/A (new late pick) | Commit odds: 2.04 | Scout line was 2.14 (moved -0.10 since Scout rejection evaluation)\n- ML: H:1.80 (Toronto) / A:2.04 (Orlando) | ATS: Toronto -1.5 (1.89/1.93) | O/U: N/A\n- Stake: €65.30 | Pot: €133.21 | Conf: 60/100 | EV: +22.4%\n- Decision: Material late-breaking change. Franz Wagner was listed OUT at Scout time, triggering Orlando's rejection. Current NBA official injury report does **not** list Wagner — he is available to play. This is a significant upgrade. Simultaneously, Toronto carries three questionable starters: Ingram (Inflammation), Barrett (Stiffness), Jackson-Davis (Knee Tendinitis). The teams are essentially evenly matched by record (41-32 Toronto vs 39-34 Orlando) and NetRtg (+1.5 vs +0.8). With Wagner active and Toronto potentially missing key pieces, Orlando at 2.04 away represents genuine value. Line moved from 2.14 → 2.04, suggesting books are partially pricing Wagner in, but the move is only -0.10 (within allowable drift). EV = +22.4% well above 5% floor. All gates satisfied.\n\n---\n\n**Slate Summary:** A single-bet commit day driven primarily by late injury news. The Celtics ML draft pick collapsed at commit time when Jaylen Brown was confirmed OUT — a case where the Scout's own warning (\"re-evaluate at Commit if Tatum AND Brown OUT\") proved prescient. The sole confirmed bet leverages Franz Wagner's clearance from the injury report combined with Toronto's multi-player questionable situation, creating genuine underdog value in what is fundamentally an even matchup. Total exposure: €65.30 (15.0% of bankroll), well within limits. Bankroll remaining after commitment: €369.91.",
   "draft_picks": [],
-  "pending_bets": [
-    {
-      "id": "nba_bet_20260329_001",
-      "match": "Toronto Raptors vs Orlando Magic",
-      "time": "2026-03-29T22:00:00Z",
-      "pick": "Orlando Magic ML",
-      "odds": 2.04,
-      "stake": 65.3,
-      "potential_return": 133.21,
-      "confidence": 60,
-      "reasoning": "LATE PICK — Franz Wagner status change since 14:00 Scout. Scout rejected Orlando ML because Wagner was listed OUT (key franchise-adjacent player). Current NBA official injury report does NOT list Wagner — he appears cleared and active. This is a material upgrade for Orlando. Meanwhile Toronto has THREE key players questionable: Brandon Ingram (Q-Inflammation), RJ Barrett (Q-Stiffness), Trayce Jackson-Davis (Q-Knee Tendinitis). Toronto (41-32, NetRtg +1.5) vs Orlando (39-34, NetRtg +0.8) — nearly identical records and ratings. With Toronto's depth at risk and Wagner likely active, Orlando at 2.04 offers genuine value. Line moved from 2.14 → 2.04 (-0.10) which is consistent with books partially adjusting for Wagner's availability, but hasn't fully priced in Toronto's multi-player questionable situation. Confidence build: Base 50 (even teams), Toronto home advantage offset (-5 for Orlando), Toronto 3 key players Q (+10), Wagner active upgrade (+10), Orlando's Isaac/Black OUT holes (-5) = 60. EV = (0.60 × 2.04) - 1 = +22.4%. Odds 2.04 in valid ML range (1.65-2.50). Injury source: nba_official (no cap restrictions). Time gate: 22:00 UTC tip, now 19:52 = 128 min > 20 min. Stake: Medium tier (55-69 confidence) = 15% × €435.31 = €65.30.",
-      "anchor_players": [
-        "Franz Wagner",
-        "Brandon Ingram",
-        "RJ Barrett"
-      ],
-      "result": null,
-      "returned": null,
-      "pnl": null,
-      "settled_at": null,
-      "committed_at": "2026-03-29T19:52:53Z"
-    }
-  ],
+  "pending_bets": [],
   "settled_bets": [
     {
       "id": "nba_bet_20260319_001",
@@ -222,6 +200,27 @@
       "returned": 92.56,
       "pnl": 45.81,
       "settled_at": "2026-03-29T10:36:04.520563+00:00"
+    },
+    {
+      "id": "nba_bet_20260329_001",
+      "match": "Toronto Raptors vs Orlando Magic",
+      "time": "2026-03-29T22:00:00Z",
+      "pick": "Orlando Magic ML",
+      "odds": 2.04,
+      "stake": 65.3,
+      "potential_return": 133.21,
+      "confidence": 60,
+      "reasoning": "LATE PICK — Franz Wagner status change since 14:00 Scout. Scout rejected Orlando ML because Wagner was listed OUT (key franchise-adjacent player). Current NBA official injury report does NOT list Wagner — he appears cleared and active. This is a material upgrade for Orlando. Meanwhile Toronto has THREE key players questionable: Brandon Ingram (Q-Inflammation), RJ Barrett (Q-Stiffness), Trayce Jackson-Davis (Q-Knee Tendinitis). Toronto (41-32, NetRtg +1.5) vs Orlando (39-34, NetRtg +0.8) — nearly identical records and ratings. With Toronto's depth at risk and Wagner likely active, Orlando at 2.04 offers genuine value. Line moved from 2.14 → 2.04 (-0.10) which is consistent with books partially adjusting for Wagner's availability, but hasn't fully priced in Toronto's multi-player questionable situation. Confidence build: Base 50 (even teams), Toronto home advantage offset (-5 for Orlando), Toronto 3 key players Q (+10), Wagner active upgrade (+10), Orlando's Isaac/Black OUT holes (-5) = 60. EV = (0.60 × 2.04) - 1 = +22.4%. Odds 2.04 in valid ML range (1.65-2.50). Injury source: nba_official (no cap restrictions). Time gate: 22:00 UTC tip, now 19:52 = 128 min > 20 min. Stake: Medium tier (55-69 confidence) = 15% × €435.31 = €65.30.",
+      "anchor_players": [
+        "Franz Wagner",
+        "Brandon Ingram",
+        "RJ Barrett"
+      ],
+      "result": "LOST",
+      "returned": 0.0,
+      "pnl": -65.3,
+      "settled_at": "2026-03-30T11:03:30.618049+00:00",
+      "committed_at": "2026-03-29T19:52:53Z"
     }
   ],
   "rejected_games": [
@@ -476,21 +475,25 @@
     "Charlotte Hornets": [
       44,
       11,
-      -4
+      -4,
+      -15
     ],
     "Sacramento Kings": [
       -44,
       -4,
-      -10
+      -10,
+      -17
     ],
     "New York Knicks": [
       5,
+      -11,
       -11
     ],
     "New Orleans Pelicans": [
       -5,
       -21,
-      -13
+      -13,
+      -32
     ],
     "Cleveland Cavaliers": [
       5,
@@ -498,7 +501,8 @@
     ],
     "Orlando Magic": [
       -5,
-      4
+      4,
+      -52
     ],
     "Phoenix Suns": [
       -2,
@@ -507,10 +511,12 @@
     "Denver Nuggets": [
       2,
       7,
-      6
+      6,
+      23
     ],
     "Miami Heat": [
-      17
+      17,
+      -17
     ],
     "Dallas Mavericks": [
       -7,
@@ -528,7 +534,8 @@
     ],
     "Indiana Pacers": [
       -7,
-      -1
+      -1,
+      17
     ],
     "Los Angeles Lakers": [
       7,
@@ -545,11 +552,13 @@
     ],
     "Boston Celtics": [
       10,
-      7
+      7,
+      15
     ],
     "Oklahoma City Thunder": [
       -10,
-      18
+      18,
+      11
     ],
     "Memphis Grizzlies": [
       -25,
@@ -567,7 +576,8 @@
     ],
     "Washington Wizards": [
       23,
-      -5
+      -5,
+      -35
     ],
     "Minnesota Timberwolves": [
       2,
@@ -575,67 +585,83 @@
     ],
     "Houston Rockets": [
       -2,
-      10
+      10,
+      32
     ],
     "Golden State Warriors": [
       3,
-      5
+      5,
+      -23
     ],
     "Brooklyn Nets": [
       -3,
-      -17
+      -17,
+      17
     ],
     "Portland Trail Blazers": [
       31,
-      -7
+      -7,
+      35
     ],
     "Milwaukee Bucks": [
       -31,
-      -32
+      -32,
+      -14
     ],
     "LA Clippers": [
       25,
-      1
+      1,
+      14
     ],
     "Toronto Raptors": [
       -25,
-      13
+      13,
+      52
     ]
   },
   "game_log_recorded": [
-    "Sacramento Kings@Orlando Magic",
-    "Denver Nuggets@Phoenix Suns",
-    "Atlanta Hawks@Boston Celtics",
-    "New York Knicks@Charlotte Hornets",
-    "Brooklyn Nets@Los Angeles Lakers",
-    "Chicago Bulls@Memphis Grizzlies",
-    "New Orleans Pelicans@Toronto Raptors",
     "Utah Jazz@Denver Nuggets",
-    "Houston Rockets@Memphis Grizzlies",
     "San Antonio Spurs@Milwaukee Bucks",
-    "Houston Rockets@Minnesota Timberwolves",
-    "Los Angeles Lakers@Indiana Pacers",
-    "Orlando Magic@Cleveland Cavaliers",
-    "Washington Wizards@Golden State Warriors",
-    "Oklahoma City Thunder@Boston Celtics",
-    "Dallas Mavericks@Denver Nuggets",
-    "Sacramento Kings@Charlotte Hornets",
-    "New Orleans Pelicans@Detroit Pistons",
-    "Toronto Raptors@LA Clippers",
-    "Brooklyn Nets@Golden State Warriors",
-    "San Antonio Spurs@Memphis Grizzlies",
-    "Milwaukee Bucks@Portland Trail Blazers",
-    "Sacramento Kings@Atlanta Hawks",
-    "Detroit Pistons@Minnesota Timberwolves",
-    "LA Clippers@Indiana Pacers",
-    "New Orleans Pelicans@New York Knicks",
-    "Atlanta Hawks@Detroit Pistons",
-    "Chicago Bulls@Philadelphia 76ers",
-    "Dallas Mavericks@Portland Trail Blazers",
     "Utah Jazz@Phoenix Suns",
-    "Philadelphia 76ers@Charlotte Hornets",
-    "Miami Heat@Cleveland Cavaliers",
+    "Houston Rockets@New Orleans Pelicans",
+    "Orlando Magic@Cleveland Cavaliers",
+    "Toronto Raptors@LA Clippers",
+    "Los Angeles Lakers@Indiana Pacers",
+    "Oklahoma City Thunder@Boston Celtics",
+    "Washington Wizards@Golden State Warriors",
+    "New York Knicks@Charlotte Hornets",
+    "Sacramento Kings@Charlotte Hornets",
+    "Dallas Mavericks@Denver Nuggets",
+    "Chicago Bulls@Oklahoma City Thunder",
+    "New York Knicks@Oklahoma City Thunder",
+    "Denver Nuggets@Phoenix Suns",
+    "Chicago Bulls@Philadelphia 76ers",
+    "Orlando Magic@Toronto Raptors",
+    "Miami Heat@Indiana Pacers",
+    "New Orleans Pelicans@Detroit Pistons",
+    "Sacramento Kings@Atlanta Hawks",
+    "Atlanta Hawks@Detroit Pistons",
+    "Sacramento Kings@Orlando Magic",
+    "Chicago Bulls@Memphis Grizzlies",
+    "Dallas Mavericks@Portland Trail Blazers",
+    "San Antonio Spurs@Memphis Grizzlies",
+    "Brooklyn Nets@Los Angeles Lakers",
+    "LA Clippers@Milwaukee Bucks",
+    "Atlanta Hawks@Boston Celtics",
     "Washington Wizards@Utah Jazz",
-    "Chicago Bulls@Oklahoma City Thunder"
+    "LA Clippers@Indiana Pacers",
+    "Washington Wizards@Portland Trail Blazers",
+    "Detroit Pistons@Minnesota Timberwolves",
+    "New Orleans Pelicans@New York Knicks",
+    "New Orleans Pelicans@Toronto Raptors",
+    "Houston Rockets@Memphis Grizzlies",
+    "Miami Heat@Cleveland Cavaliers",
+    "Milwaukee Bucks@Portland Trail Blazers",
+    "Sacramento Kings@Brooklyn Nets",
+    "Houston Rockets@Minnesota Timberwolves",
+    "Philadelphia 76ers@Charlotte Hornets",
+    "Boston Celtics@Charlotte Hornets",
+    "Golden State Warriors@Denver Nuggets",
+    "Brooklyn Nets@Golden State Warriors"
   ]
 }
