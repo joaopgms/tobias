@@ -16,7 +16,7 @@
           "net_pnl": null,
           "total_bets": 9,
           "wins": 2,
-          "losses": 6,
+          "losses": 7,
           "bust": false
         }
       ]
@@ -435,10 +435,10 @@
             "Brandon Ingram",
             "RJ Barrett"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -65.3,
+          "settled_at": "2026-03-30T11:03:30.618049+00:00",
           "committed_at": "2026-03-29T19:52:53Z"
         }
       ],
