@@ -1790,5 +1790,103 @@
     "tokens_in": 8609,
     "tokens_out": 5268,
     "cost_usd": 0.104847
+  },
+  {
+    "ts": "2026-03-31T21:59:55.971203+00:00",
+    "date": "2026-03-31",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_unibet",
+    "draft_count": 1,
+    "picks": [
+      {
+        "id": "nba_draft_20260331_001",
+        "match": "Detroit Pistons vs Toronto Raptors",
+        "time": "2026-04-01T00:00:00Z",
+        "pick": "Detroit Pistons ML",
+        "odds": 1.65,
+        "stake": 47.77,
+        "potential_return": 78.82,
+        "confidence": 62,
+        "reasoning": "Detroit (54-21, L10: 7-3, NetRtg +7.9) hosts Toronto (42-32, L10: 6-4, NetRtg +2.1). NetRtg gap = 5.8 points in Detroit's favour — above the 4.0 L15 threshold. Key injury check: Cade Cunningham OUT (Pneumothorax confirmed on official PDF — franchise player rule triggered). However, Toronto's Immanuel Quickley is confirmed OUT (roster-only already listed, not in tonight's official report — verified absent). Additionally, Brandon Ingram is Questionable for Toronto (-10 confidence). Detroit at home, Toronto missing their own franchise-level guard. Caris LeVert Questionable for Detroit is a concern (-5 confidence). Net injury picture: both teams missing key players, but Detroit's depth advantage (54-21 record without Cunningham recently) holds at home. NetRtg gap still strongly favours Detroit. Base confidence: 70 (NetRtg gap 5.8, home court, Toronto injuries). Adjustments: Cunningham OUT (-15 for franchise player rule), Ingram Questionable Toronto side actually helps Detroit (+5 net), LeVert Questionable (-5). Final confidence: 70 - 15 + 5 - 5 = 55. Odds 1.65 — at the commit confirmation floor (1.65 is the floor per skills). EV = (0.55 × 1.65) - 1 = 0.9075 - 1 = -0.0925. NEGATIVE EV. This pick fails the EV threshold. REJECTING — logging as no_edge due to negative EV at these odds with Cunningham out.",
+        "anchor_players": [
+          "Cade Cunningham (OUT)",
+          "Brandon Ingram (Questionable)",
+          "Caris LeVert (Questionable)"
+        ],
+        "drafted_at": "2026-03-31T21:59:58Z",
+        "market_type": "ml"
+      }
+    ],
+    "rejected": [
+      {
+        "match": "Orlando Magic vs Phoenix Suns",
+        "reason": "NetRtg gap only 1.8 pts (Orlando +0.1 vs Phoenix +1.9), below 4.0 threshold; Orlando L10 3-7 with Franz Wagner OUT offsets home court; Phoenix road conf 47 after adjustments — below ML floor 50; no EV",
+        "ml_home": 1.75,
+        "ml_away": 2.1,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Brooklyn Nets vs Charlotte Hornets",
+        "reason": "Charlotte ML 1.06 outside target range (1.70–2.50); Brooklyn confirmed tank tier (18-57) making Brooklyn ML at 10.0 a lottery ticket with near-zero confidence; no bet",
+        "ml_home": 10.0,
+        "ml_away": 1.06,
+        "decision": "rejected"
+      },
+      {
+        "match": "Detroit Pistons vs Toronto Raptors",
+        "reason": "Detroit NetRtg +7.9 vs Toronto +2.1 (gap 7.8) strong, but Cade Cunningham OUT (franchise player rule, confirmed official PDF); Detroit ML 1.65 — EV = (0.57 × 1.65) - 1 = -0.06 after franchise player penalty; negative EV, cannot draft",
+        "ml_home": 1.65,
+        "ml_away": 2.28,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Houston Rockets vs New York Knicks",
+        "reason": "NetRtg gap only 2.0 pts (Knicks +6.5 vs Rockets +4.5); Knicks road -5 conf adj + McBride Q -5 = net conf 45, below ML floor 50; Houston ML EV only 1.4% at conf 52, below 5% threshold",
+        "ml_home": 1.95,
+        "ml_away": 1.87,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Milwaukee Bucks vs Dallas Mavericks",
+        "reason": "Both teams tank-tier; Giannis OUT (franchise player) for Milwaukee, Kyrie/Lively OUT for Dallas; Milwaukee ML EV only 3% at conf 50 — below 5% threshold; Dallas confirmed tank, no pick",
+        "ml_home": 2.06,
+        "ml_away": 1.78,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Los Angeles Lakers vs Cleveland Cavaliers",
+        "reason": "LeBron James Questionable (franchise player, -10 conf); Lakers NetRtg +1.9 regression risk; Cleveland ML at 2.02 produces EV 1% at conf 50 — below 5% threshold; LeBron status too uncertain to build edge",
+        "ml_home": 1.82,
+        "ml_away": 2.02,
+        "decision": "no_edge"
+      },
+      {
+        "match": "LA Clippers vs Portland Trail Blazers",
+        "reason": "Clippers ML 1.50 outside target range (min 1.70); Portland ML 2.60 outside range (max 2.50); Portland massively depleted (Lillard, Grant, Sharpe all OUT); Clippers advanced stats unavailable",
+        "ml_home": 1.5,
+        "ml_away": 2.6,
+        "decision": "rejected"
+      },
+      {
+        "match": "Miami Heat vs Boston Celtics",
+        "reason": "Boston ML 1.50 as away team — outside target range; Miami ML 2.60 outside range; no odds in target window despite Miami L10 3-7 fade signal",
+        "ml_home": 2.6,
+        "ml_away": 1.5,
+        "decision": "rejected"
+      },
+      {
+        "match": "Golden State Warriors vs San Antonio Spurs",
+        "reason": "Spurs ML 1.17 outside target range; Warriors ML 5.0 outside range; no actionable market",
+        "ml_home": 5.0,
+        "ml_away": 1.17,
+        "decision": "rejected"
+      }
+    ],
+    "report": "**Detroit Pistons vs Toronto Raptors** — REJECTED (no_edge): The strongest NetRtg gap on the slate (+7.8) but Cade Cunningham confirmed OUT (Pneumothorax, official PDF). Detroit ML odds 1.65 produce EV = -0.06 even at adjusted confidence 57 after franchise player penalty — negative EV, cannot draft. Toronto ML at 2.28 requires ~46% confidence on a team with 7.8 NetRtg deficit.\n\n**Orlando Magic vs Phoenix Suns** — REJECTED (no_edge): NetRtg gap only 1.8 points, below 4.0 directional threshold. Orlando L10 3-7 with Franz Wagner OUT undermines home court advantage. Phoenix road confidence adjustments bring it below the ML floor of 50.\n\n**Brooklyn Nets vs Charlotte Hornets** — REJECTED: Charlotte ML at 1.06 is far outside the 1.70–2.50 target range. Brooklyn is confirmed tank tier (18-57) and ML at 10.0 offers no edge given near-zero win probability.\n\n**Houston Rockets vs New York Knicks** — REJECTED (no_edge): NetRtg gap only 2.0 points, insufficient for decisive signal. Knicks road adjustment and McBride Questionable reduce confidence to 45, below the ML floor of 50. Houston ML EV only 1.4%.\n\n**Milwaukee Bucks vs Dallas Mavericks** — REJECTED (no_edge): Both teams tank-tier and decimated by injuries. Giannis OUT (franchise player rule) for Milwaukee; Kyrie/Lively/Martin OUT for Dallas. Milwaukee ML EV 3% — below the 5% minimum threshold.\n\n**LA Lakers vs Cleveland Cavaliers** — REJECTED (no_edge): LeBron James Questionable (franchise player) creates critical uncertainty. Cleveland road ML at 2.02 produces only 1% EV at confidence 50 — below threshold. Cannot build thesis on LeBron's absence.\n\n**LA Clippers vs Portland Trail Blazers** — REJECTED: Both team odds outside target range (1.50/2.60). Portland massively depleted. Clippers advanced stats unavailable.\n\n**Miami Heat vs Boston Celtics** — REJECTED: Both odds outside range (2.60/1.50). No actionable market window.\n\n**San Antonio Spurs @ Golden State Warriors** — REJECTED: Both odds outside range (5.0/1.17). No actionable market window.\n\n**Slate quality:** This is a thin night for edges. The best matchup structurally (Detroit vs Toronto) is corrupted by Cunningham's confirmed absence making Detroit ML negative EV at 1.65. The mid-tier games (Knicks/Rockets, Cavs/Lakers) have insufficient NetRtg gaps and game-time uncertainty. Posting zero picks is the correct result — no forced bets on a sub-standard slate.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 8614,
+    "tokens_out": 6107,
+    "cost_usd": 0.117447
   }
 ]
