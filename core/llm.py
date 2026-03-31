@@ -115,7 +115,7 @@ def _call_claude(system: str, user: str, max_tokens: int, model: str) -> LLMResu
     if not api_key:
         raise ValueError("ANTHROPIC_API_KEY not set")
 
-    client = anthropic.Anthropic(api_key=api_key)
+    client = anthropic.Anthropic(api_key=api_key, max_retries=4)
     log.info(f"Claude ({model}): {len(user)} char prompt")
 
     msg = client.messages.create(
