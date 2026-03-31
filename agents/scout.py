@@ -422,6 +422,21 @@ def run(store) -> None:
         log.info(f"Scout: odds-range filter removed {len(draft_picks)-len(valid_picks)} pick(s)")
     draft_picks = valid_picks
 
+    # ── 8e. Enforce minimum EV ────────────────────────────────────────────────
+    # EV = (confidence/100 × odds) - 1 must be ≥ 0.05 (5% floor)
+    ev_picks = []
+    for p in draft_picks:
+        conf_pct = p.get("confidence", 0) / 100
+        pick_odds = float(p.get("odds") or 0)
+        ev = round(conf_pct * pick_odds - 1, 4)
+        if ev >= 0.05:
+            ev_picks.append(p)
+        else:
+            log.info(f"Scout: dropped {p['id']} — EV {ev:.2%} below 5% floor (conf={p.get('confidence')} odds={pick_odds})")
+    if len(ev_picks) < len(draft_picks):
+        log.info(f"Scout: EV filter removed {len(draft_picks)-len(ev_picks)} pick(s)")
+    draft_picks = ev_picks
+
     # ── 9. Validate picks ─────────────────────────────────────────────────────
     try:
         validate_all_drafts(draft_picks, "scout")
