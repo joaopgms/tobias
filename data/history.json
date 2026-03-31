@@ -15,7 +15,7 @@
           "final_bankroll": null,
           "net_pnl": null,
           "total_bets": 11,
-          "wins": 2,
+          "wins": 4,
           "losses": 7,
           "bust": false
         }
@@ -476,10 +476,10 @@
             "Joel Embiid",
             "Jimmy Butler"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "WON",
+          "returned": 114.33,
+          "pnl": 58.83,
+          "settled_at": "2026-03-31T10:53:52.104851+00:00",
           "committed_at": "2026-03-30T22:27:04Z"
         },
         {
@@ -496,10 +496,10 @@
             "Jayson Tatum",
             "Jaylen Brown"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "WON",
+          "returned": 104.34,
+          "pnl": 48.84,
+          "settled_at": "2026-03-31T10:53:52.104851+00:00",
           "committed_at": "2026-03-30T22:27:04Z"
         }
       ],
