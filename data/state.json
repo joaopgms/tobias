@@ -9,16 +9,16 @@
   "net_pnl": -522.32,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-03-31T21:59:55.971203+00:00",
+  "last_updated": "2026-03-31T22:26:40.472618+00:00",
   "first_game_time": "2026-03-31T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
   "scout_updated_at": "2026-03-31T21:59:55.971203+00:00",
   "scout_odds_source": "theodds_unibet",
-  "commit_status": "pending",
-  "commit_updated_at": "2026-03-30T22:27:02.028730+00:00",
-  "commit_date": "2026-03-30",
+  "commit_status": "done",
+  "commit_updated_at": "2026-03-31T22:26:40.472618+00:00",
+  "commit_date": "2026-03-31",
   "analyst_updated_at": "2026-03-31T21:49:19.671681+00:00",
   "settler_updated_at": "2026-03-31T21:48:22.432815+00:00",
   "agent_models": {
@@ -27,27 +27,8 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "**Detroit Pistons vs Toronto Raptors** — REJECTED (no_edge): The strongest NetRtg gap on the slate (+7.8) but Cade Cunningham confirmed OUT (Pneumothorax, official PDF). Detroit ML odds 1.65 produce EV = -0.06 even at adjusted confidence 57 after franchise player penalty — negative EV, cannot draft. Toronto ML at 2.28 requires ~46% confidence on a team with 7.8 NetRtg deficit.\n\n**Orlando Magic vs Phoenix Suns** — REJECTED (no_edge): NetRtg gap only 1.8 points, below 4.0 directional threshold. Orlando L10 3-7 with Franz Wagner OUT undermines home court advantage. Phoenix road confidence adjustments bring it below the ML floor of 50.\n\n**Brooklyn Nets vs Charlotte Hornets** — REJECTED: Charlotte ML at 1.06 is far outside the 1.70–2.50 target range. Brooklyn is confirmed tank tier (18-57) and ML at 10.0 offers no edge given near-zero win probability.\n\n**Houston Rockets vs New York Knicks** — REJECTED (no_edge): NetRtg gap only 2.0 points, insufficient for decisive signal. Knicks road adjustment and McBride Questionable reduce confidence to 45, below the ML floor of 50. Houston ML EV only 1.4%.\n\n**Milwaukee Bucks vs Dallas Mavericks** — REJECTED (no_edge): Both teams tank-tier and decimated by injuries. Giannis OUT (franchise player rule) for Milwaukee; Kyrie/Lively/Martin OUT for Dallas. Milwaukee ML EV 3% — below the 5% minimum threshold.\n\n**LA Lakers vs Cleveland Cavaliers** — REJECTED (no_edge): LeBron James Questionable (franchise player) creates critical uncertainty. Cleveland road ML at 2.02 produces only 1% EV at confidence 50 — below threshold. Cannot build thesis on LeBron's absence.\n\n**LA Clippers vs Portland Trail Blazers** — REJECTED: Both team odds outside target range (1.50/2.60). Portland massively depleted. Clippers advanced stats unavailable.\n\n**Miami Heat vs Boston Celtics** — REJECTED: Both odds outside range (2.60/1.50). No actionable market window.\n\n**San Antonio Spurs @ Golden State Warriors** — REJECTED: Both odds outside range (5.0/1.17). No actionable market window.\n\n**Slate quality:** This is a thin night for edges. The best matchup structurally (Detroit vs Toronto) is corrupted by Cunningham's confirmed absence making Detroit ML negative EV at 1.65. The mid-tier games (Knicks/Rockets, Cavs/Lakers) have insufficient NetRtg gaps and game-time uncertainty. Posting zero picks is the correct result — no forced bets on a sub-standard slate.",
-  "draft_picks": [
-    {
-      "id": "nba_draft_20260331_001",
-      "match": "Detroit Pistons vs Toronto Raptors",
-      "time": "2026-04-01T00:00:00Z",
-      "pick": "Detroit Pistons ML",
-      "odds": 1.65,
-      "stake": 47.77,
-      "potential_return": 78.82,
-      "confidence": 62,
-      "reasoning": "Detroit (54-21, L10: 7-3, NetRtg +7.9) hosts Toronto (42-32, L10: 6-4, NetRtg +2.1). NetRtg gap = 5.8 points in Detroit's favour — above the 4.0 L15 threshold. Key injury check: Cade Cunningham OUT (Pneumothorax confirmed on official PDF — franchise player rule triggered). However, Toronto's Immanuel Quickley is confirmed OUT (roster-only already listed, not in tonight's official report — verified absent). Additionally, Brandon Ingram is Questionable for Toronto (-10 confidence). Detroit at home, Toronto missing their own franchise-level guard. Caris LeVert Questionable for Detroit is a concern (-5 confidence). Net injury picture: both teams missing key players, but Detroit's depth advantage (54-21 record without Cunningham recently) holds at home. NetRtg gap still strongly favours Detroit. Base confidence: 70 (NetRtg gap 5.8, home court, Toronto injuries). Adjustments: Cunningham OUT (-15 for franchise player rule), Ingram Questionable Toronto side actually helps Detroit (+5 net), LeVert Questionable (-5). Final confidence: 70 - 15 + 5 - 5 = 55. Odds 1.65 — at the commit confirmation floor (1.65 is the floor per skills). EV = (0.55 × 1.65) - 1 = 0.9075 - 1 = -0.0925. NEGATIVE EV. This pick fails the EV threshold. REJECTING — logging as no_edge due to negative EV at these odds with Cunningham out.",
-      "anchor_players": [
-        "Cade Cunningham (OUT)",
-        "Brandon Ingram (Questionable)",
-        "Caris LeVert (Questionable)"
-      ],
-      "drafted_at": "2026-03-31T21:59:58Z",
-      "market_type": "ml"
-    }
-  ],
+  "last_report": "## Commit Report — 2026-03-31 | 22:26 UTC\n\n### CANCELLED — Detroit Pistons ML (nba_draft_20260331_001)\n\n- **Reason:** Three independent cancellation triggers all fire simultaneously:\n  1. **Odds below commit floor:** Current market shows 1.64 (Detroit ML dropped from Scout's 1.65 to 1.64). The commit-time ML floor is 1.65. This alone mandates cancellation per odds_validation rules.\n  2. **Anchor player OUT confirmed:** Cade Cunningham listed OUT (Pneumothorax) on the NBA Official Injury Report. Franchise player rule: cancel immediately.\n  3. **Negative EV:** Even before applying the Cunningham penalty, EV at adjusted confidence 55 = (0.55 × 1.64) - 1 = **-0.098**. Well below the 0.05 threshold.\n- **Odds at cancel:** 1.64 (was 1.65 at Scout — moved 0.01 against)\n- Note: Scout's own reasoning had already identified this as a no_edge pick with negative EV. The draft pick was effectively a logged rejection, not an actionable bet.\n\n---\n\n### LATE SCOUT — No New Picks Added\n\nReviewed all 8 games on tonight's slate. Key findings:\n\n- **Suns/Magic, Rockets/Knicks, Lakers/Cavs, Bucks/Mavs:** All rejected due to NetRtg gaps below the 4.0-point threshold required for confidence ≥ 60. No material injury changes shifted the landscape enough.\n- **Clippers/Blazers, Celtics/Heat, Warriors/Spurs:** All rejected due to odds outside valid range on both sides of every market.\n- **Nets/Hornets:** Tank-tier Brooklyn with Charlotte ML at 1.06 — no market to exploit.\n\nThe only game with any minor late movement was Cleveland/Lakers (Cavs ML drifted to 2.05 from 2.02), but LeBron remaining Questionable on Management designation and the 2.3-pt NetRtg gap kept confidence below the 60-gate after adjustment.\n\n---\n\n### Slate Summary\n\nA barren night for confirmed action: the sole draft pick fails three independent cancellation criteria (odds floor, anchor OUT, negative EV), and no late-breaking edges emerged across the eight-game slate. Every rejected game retains its Scout-time disqualifiers — odds outside range, insufficient NetRtg gaps, or key player uncertainty. Bankroll of €477.68 carries forward intact to tomorrow's slate.",
+  "draft_picks": [],
   "pending_bets": [],
   "settled_bets": [
     {
@@ -349,32 +330,36 @@
   ],
   "late_scout_rejections": [
     {
-      "match": "Atlanta Hawks vs Boston Celtics",
-      "reason": "Atlanta ML 1.71 evaluated — EV = (0.58 × 1.71) - 1 = -0.0082, negative EV. Atlanta -2.5 at 1.88 ADDED as late pick instead (positive EV 0.128)."
+      "match": "Orlando Magic vs Phoenix Suns",
+      "reason": "NetRtg gap only 1.8 pts (Phoenix +1.9 vs Orlando +0.1), below 4.0 threshold. Franz Wagner OUT was already priced in at Scout. Phoenix L10 4-6 on road. Base confidence ~48, below 60 gate. No new edge materialised."
     },
     {
-      "match": "Phoenix Suns @ Memphis Grizzlies",
-      "reason": "PHX ML 1.14 below floor. MEM ML 5.8 above ceiling. PHX spread -12.5 at 1.88: NetRtg gap PHX +1.5 vs MEM -4.0 = 5.5pt, below 6pt threshold for spread confidence. PHX L10 4-6 further undercuts confidence. No valid pick."
+      "match": "Charlotte Hornets @ Brooklyn Nets",
+      "reason": "Charlotte ML 1.06 far outside valid range (floor 1.65). Brooklyn ML 10.0 far outside ceiling (2.50). Brooklyn 18-57 tank tier. No bettable market available."
     },
     {
-      "match": "Chicago Bulls @ San Antonio Spurs",
-      "reason": "SA ML 1.05 far below floor (1.65). CHI ML 10.5 above ceiling (2.50). SA spread -18.5 at 1.90 evaluated: SA NetRtg +8.1 vs CHI -4.5, gap 12.6pt. CHI not a tank team, has competed all season. Confidence 55 for SA -18.5 yields EV = (0.55 × 1.90) - 1 = 0.045, below minimum EV gate of 0.05. No valid pick."
+      "match": "New York Knicks @ Houston Rockets",
+      "reason": "NetRtg gap only 2.0 pts (Knicks +6.5 vs Rockets +4.5), below 4.0 threshold. Miles McBride still Questionable — no material change since Scout. Adjusted confidence remains below 60 gate. No new edge."
     },
     {
-      "match": "Minnesota Timberwolves @ Dallas Mavericks",
-      "reason": "Anthony Edwards still Questionable (unchanged). DAL ML 3.50 exceeds ML ceiling of 2.50. MIN ML 1.32 below floor. DAL confirmed tank (24-50) with Kyrie Irving OUT, Lively OUT, Caleb Martin Doubtful. No valid market in range."
+      "match": "Dallas Mavericks @ Milwaukee Bucks",
+      "reason": "Both teams depleted — Giannis OUT, Kyrie OUT, Lively OUT all confirmed. NetRtg gap only 1.4 pts in Dallas favour (Dallas -5.3 vs Milwaukee -6.7), below 4.0 threshold. Dallas L10 3-7, road team. Confidence ~45, below 60 gate."
     },
     {
-      "match": "Cleveland Cavaliers @ Utah Jazz",
-      "reason": "Utah confirmed tank (21-54), L10 1-9, multiple franchise players OUT. CLE ML 1.08 far below floor. Jazz ML 8.5 above ceiling. CLE spread -17.0 at 1.91: CLE also missing Jarrett Allen, Max Strus, Tyson — covering 17 against skeleton Jazz crew uncertain. Insufficient confidence given CLV's own absences. No valid pick."
+      "match": "Cleveland Cavaliers @ Los Angeles Lakers",
+      "reason": "LeBron James remains Questionable (Management) — no status change from Scout. NetRtg gap 2.3 pts (Cavs +4.2 vs Lakers +1.9), below 4.0 threshold. After LeBron Q adjustment (-10), confidence drops to ~42. Below minimum 50, let alone 60 gate. Odds moved marginally (2.02→2.05 for Cavs ML) but insufficient to overcome confidence deficit."
     },
     {
-      "match": "Detroit Pistons @ Oklahoma City Thunder",
-      "reason": "OKC ML 1.17 below floor. DET ML 5.25 above ceiling. OKC spread -11.5 at 1.89 evaluated: OKC missing Williams/Hartenstein/Sorber; DET missing Cunningham/Duren/Stewart/Harris/Robinson — both teams severely depleted. OKC home advantage but mutual depletion makes -11.5 uncertain. Confidence 57, EV 0.077 (positive), but late pick slot already allocated to ATL -2.5 (higher EV 0.128). Quantity gate: max 1 late pick per day."
+      "match": "Portland Trail Blazers @ LA Clippers",
+      "reason": "Clippers ML 1.49 below floor 1.65. Blazers ML 2.65 above ceiling 2.50. Both odds outside valid range. Portland further depleted with Lillard, Grant, Sharpe all confirmed OUT."
     },
     {
-      "match": "Washington Wizards @ Los Angeles Lakers",
-      "reason": "LAL ML 1.08 far below floor. WAS ML 8.5 above ceiling. LAL spread -16.0 at 1.90: Luka Doncic OUT (suspension), Marcus Smart OUT, Thiero OUT — significant LAL absences undercut confidence in covering -16 vs skeleton WAS squad. WAS confirmed tank (17-57). NetRtg gap LAL +1.7 vs WAS -11.3 but with Doncic absent LAL quality is compromised. No valid pick."
+      "match": "Boston Celtics @ Miami Heat",
+      "reason": "Miami ML 2.65 above ceiling 2.50. Boston ML 1.50 below floor 1.65. Both odds outside valid range. No bettable market."
+    },
+    {
+      "match": "San Antonio Spurs @ Golden State Warriors",
+      "reason": "Golden State ML 5.0 far above ceiling 2.50. Spurs ML 1.17 far below floor 1.65. No bettable market available on either side."
     }
   ],
   "scout_report_data": {
@@ -473,98 +458,53 @@
     "cost_usd": 0.117447
   },
   "commit_report_data": {
-    "date": "2026-03-30",
-    "ts": "2026-03-30T22:27:02.028730+00:00",
-    "bets": [
-      {
-        "id": "nba_bet_20260330_001",
-        "match": "Miami Heat vs Philadelphia 76ers",
-        "time": "2026-03-30T23:00:00Z",
-        "pick": "Miami Heat ML",
-        "odds": 2.06,
-        "stake": 55.5,
-        "potential_return": 114.33,
-        "confidence": 62,
-        "reasoning": "PHI NetRtg -0.2 with 41-33 record and L10 7-3 — classic hot streak with negative NetRtg fade candidate per skills. Hot streak fade rule: PHI W% ~.554 > .550 threshold with NetRtg -0.2 triggers explicit fade evaluation with confidence +10. Miami home (2-3pt advantage), NetRtg +2.2 positive. PHI injuries: Johni Broome Out (unchanged). MIA injuries: Norman Powell Out, Terry Rozier Out (unchanged). Anchor players verified: Joel Embiid active (not on injury report), Jimmy Butler active (not on injury report). Line moved only 0.02 against (2.08→2.06), within 0.10 threshold — no investigation needed. Odds 2.06 within ML target range 1.65-2.50. EV = (0.62 × 2.06) - 1 = 0.2772. Base confidence 52 + 10 hot streak fade = 62, Medium tier stake 15% of €370.01 = €55.50.",
-        "anchor_players": [
-          "Joel Embiid",
-          "Jimmy Butler"
-        ],
-        "result": null,
-        "returned": null,
-        "pnl": null,
-        "settled_at": null,
-        "committed_at": "2026-03-30T22:27:04Z"
-      },
-      {
-        "id": "nba_bet_20260330_002",
-        "match": "Atlanta Hawks vs Boston Celtics",
-        "time": "2026-03-30T23:30:00Z",
-        "pick": "Atlanta Hawks -2.5",
-        "odds": 1.88,
-        "stake": 55.5,
-        "potential_return": 104.34,
-        "confidence": 60,
-        "reasoning": "LATE PICK — new edge emerged since Scout. Boston severely depleted: Jayson Tatum OUT (Management, NBA official confirmed), Nikola Vucevic OUT (new — not in Scout data), Ron Harper Jr. OUT, Neemias Queta OUT — 4 players unavailable including franchise player. Atlanta has near-full strength (only G-League absences and Jock Landale illness). Atlanta home court advantage. ATL NetRtg +1.8 vs BOS NetRtg +7.8 — but BOS NetRtg calculated with healthy roster; with Tatum/Vucevic/Harper/Queta out, effective BOS quality is materially reduced. Jaylen Brown still leads Boston but lacks depth. Injury-dependent pick rule: Tatum confirmed OUT (not Questionable/GTD) — confirmation rule satisfied. EV = (0.60 × 1.88) - 1 = 0.128. Confidence 60 exactly at minimum gate. Medium tier stake 15% of €370.01 = €55.50. Time gate: tip 23:30 UTC, commit 22:27 UTC = 63 min > 20 min. Quantity gate: this is the 1 allowed late pick. Spread 1.88 within target range 1.80-2.30.",
-        "anchor_players": [
-          "Jayson Tatum",
-          "Jaylen Brown"
-        ],
-        "result": null,
-        "returned": null,
-        "pnl": null,
-        "settled_at": null,
-        "committed_at": "2026-03-30T22:27:04Z"
-      }
-    ],
+    "date": "2026-03-31",
+    "ts": "2026-03-31T22:26:40.472618+00:00",
+    "bets": [],
     "cancelled": [
       {
-        "id": "nba_draft_20260330_002",
-        "match": "Atlanta Hawks vs Boston Celtics",
-        "pick": "Boston Celtics ML",
-        "reason": "Franchise player Jayson Tatum confirmed OUT per NBA official at commit time. Scout's own reasoning already concluded rejection: confidence drops from 65 to 40 after -25 franchise player penalty, below the minimum ML confidence floor of 50. Additionally, Nikola Vucevic, Ron Harper Jr., and Neemias Queta are all confirmed OUT at commit time, further depleting Boston. EV at confidence 40 and odds 2.17 = (0.40 × 2.17) - 1 = -0.132, deeply negative."
+        "id": "nba_draft_20260331_001",
+        "match": "Detroit Pistons vs Toronto Raptors",
+        "pick": "Detroit Pistons ML",
+        "reason": "Triple cancellation: (1) Odds fell below commit floor — current 1.64 vs floor 1.65; (2) Anchor player Cade Cunningham confirmed OUT per NBA official injury report; (3) EV negative at commit odds — EV = (0.55 × 1.64) - 1 = -0.098. Pick was already flagged as no_edge by Scout's own calculation."
       }
     ],
     "late_rejections": [
       {
-        "match": "Indiana Pacers vs Miami Heat",
-        "reason": "Heat ML 1.29 outside floor (1.65). Pacers ML 3.65 — Pacers confirmed tank-tier (16-58), cannot bet tank-tier teams. No valid bet."
+        "match": "Atlanta Hawks vs Boston Celtics",
+        "reason": "Atlanta ML 1.71 evaluated — EV = (0.58 × 1.71) - 1 = -0.0082, negative EV. Atlanta -2.5 at 1.88 ADDED as late pick instead (positive EV 0.128)."
       },
       {
-        "match": "Brooklyn Nets vs Sacramento Kings",
-        "reason": "Both tank-tier teams. Brooklyn ML 2.05 is in range but below the 2.20 threshold required for tank-tier teams per skills. Kings ML 1.79 outside ML range direction (away team). No edge."
+        "match": "Phoenix Suns @ Memphis Grizzlies",
+        "reason": "PHX ML 1.14 below floor. MEM ML 5.8 above ceiling. PHX spread -12.5 at 1.88: NetRtg gap PHX +1.5 vs MEM -4.0 = 5.5pt, below 6pt threshold for spread confidence. PHX L10 4-6 further undercuts confidence. No valid pick."
       },
       {
-        "match": "Charlotte Hornets vs Boston Celtics",
-        "reason": "Celtics ML 2.00 with Brown OUT: confidence ~52, EV = (0.52 × 2.00) - 1 = +4.0% — below 5% EV floor. Hornets ML 1.82: confidence ~50, EV = (0.50 × 1.82) - 1 = -9.0% — negative EV. No valid bet on either side."
+        "match": "Chicago Bulls @ San Antonio Spurs",
+        "reason": "SA ML 1.05 far below floor (1.65). CHI ML 10.5 above ceiling (2.50). SA spread -18.5 at 1.90 evaluated: SA NetRtg +8.1 vs CHI -4.5, gap 12.6pt. CHI not a tank team, has competed all season. Confidence 55 for SA -18.5 yields EV = (0.55 × 1.90) - 1 = 0.045, below minimum EV gate of 0.05. No valid pick."
       },
       {
-        "match": "Portland Trail Blazers vs Washington Wizards",
-        "reason": "Portland ML 1.07 outside all ranges. Spread -16.5 at 1.90: EV was already below 5% floor at -16.0 at Scout, now worse at -16.5. Wizards ML 8.5 outside range. No valid bet."
+        "match": "Minnesota Timberwolves @ Dallas Mavericks",
+        "reason": "Anthony Edwards still Questionable (unchanged). DAL ML 3.50 exceeds ML ceiling of 2.50. MIN ML 1.32 below floor. DAL confirmed tank (24-50) with Kyrie Irving OUT, Lively OUT, Caleb Martin Doubtful. No valid market in range."
       },
       {
-        "match": "New Orleans Pelicans vs Houston Rockets",
-        "reason": "Rockets ML 1.42 outside floor. Pelicans ML 2.90 in range but confidence in Pelicans winning < 50 — Murray and Murphy both Questionable, Houston is superior team (NetRtg +4.1 vs -4.2). Cannot build thesis. No valid bet."
+        "match": "Cleveland Cavaliers @ Utah Jazz",
+        "reason": "Utah confirmed tank (21-54), L10 1-9, multiple franchise players OUT. CLE ML 1.08 far below floor. Jazz ML 8.5 above ceiling. CLE spread -17.0 at 1.91: CLE also missing Jarrett Allen, Max Strus, Tyson — covering 17 against skeleton Jazz crew uncertain. Insufficient confidence given CLV's own absences. No valid pick."
       },
       {
-        "match": "Oklahoma City Thunder vs New York Knicks",
-        "reason": "OKC ML 1.30 outside range. Knicks ML 3.65 in range but confidence in Knicks winning against 58-16 OKC (NetRtg +10.9) is ~35-40 — below 50 minimum. No valid bet."
+        "match": "Detroit Pistons @ Oklahoma City Thunder",
+        "reason": "OKC ML 1.17 below floor. DET ML 5.25 above ceiling. OKC spread -11.5 at 1.89 evaluated: OKC missing Williams/Hartenstein/Sorber; DET missing Cunningham/Duren/Stewart/Harris/Robinson — both teams severely depleted. OKC home advantage but mutual depletion makes -11.5 uncertain. Confidence 57, EV 0.077 (positive), but late pick slot already allocated to ATL -2.5 (higher EV 0.128). Quantity gate: max 1 late pick per day."
       },
       {
-        "match": "Denver Nuggets vs Golden State Warriors",
-        "reason": "Denver ML 1.15 outside range. Warriors ML 5.75 — Stephen Curry confirmed OUT (Pain Syndrome). Franchise player rule: DO NOT bet Warriors ML without franchise player. No valid bet."
-      },
-      {
-        "match": "Milwaukee Bucks vs LA Clippers",
-        "reason": "Game already in progress (tipped 19:30 UTC, now 19:52 UTC). Ineligible for late picks. Additionally Clippers ML 1.05 outside all ranges regardless."
+        "match": "Washington Wizards @ Los Angeles Lakers",
+        "reason": "LAL ML 1.08 far below floor. WAS ML 8.5 above ceiling. LAL spread -16.0 at 1.90: Luka Doncic OUT (suspension), Marcus Smart OUT, Thiero OUT — significant LAL absences undercut confidence in covering -16 vs skeleton WAS squad. WAS confirmed tank (17-57). NetRtg gap LAL +1.7 vs WAS -11.3 but with Doncic absent LAL quality is compromised. No valid pick."
       }
     ],
-    "total_staked": 111.0,
-    "bankroll_before": 370.01,
-    "report": "### CONFIRMED — Miami Heat ML\n- Match: Miami Heat vs Philadelphia 76ers | Tip: 2026-03-30T23:00 UTC\n- Pick: Miami Heat ML | Scout odds: 2.08 | Commit odds: 2.06 | Move: -0.02\n- ML: H:2.06 / A:1.78 | ATS: -2.0 pts (1.91/1.91) | O/U: N/A\n- Stake: €55.50 | Pot: €114.33 | Conf: 62/100 | EV: 0.2772\n- Decision: Minor 0.02 line move against (within 0.10 threshold, no investigation required). Both anchor players (Embiid, Butler) confirmed active on NBA official injury report — no new absences for either team since Scout. PHI NetRtg -0.2 with hot streak (L10 7-3, W% .554 > .550) remains the primary edge signal. Hot streak fade rule explicitly triggers: +10 confidence applied. Miami home advantage and positive NetRtg +2.2 supports the pick. EV 0.277 is strong. Confirmed at Medium tier (62 confidence), 15% bankroll stake.\n\n---\n\n### CANCELLED — Boston Celtics ML (Draft Pick 002)\n- Reason: Franchise player Jayson Tatum confirmed OUT per NBA official injury report. Scout's own reasoning already identified rejection — confidence falls to 40 (65 base - 25 franchise player penalty), below minimum ML confidence floor of 50. Negative EV at -0.132. Additionally, Nikola Vucevic (new injury, not in Scout data), Ron Harper Jr., and Neemias Queta are all confirmed OUT at commit time, further deepening Boston's depletion. No path to confidence ≥ 50 on Boston ML.\n- Odds at cancel: 2.17 (was 2.10 at Scout time — odds improved but irrelevant given rejection criteria)\n\n---\n\n### LATE PICK CONFIRMED — Atlanta Hawks -2.5\n- Match: Atlanta Hawks vs Boston Celtics | Tip: 2026-03-30T23:30 UTC\n- Pick: Atlanta Hawks -2.5 | Scout odds: N/A (late pick) | Commit odds: 1.88 | Move: N/A\n- ML: H:1.71 / A:2.17 | ATS: -2.5 pts (1.88/1.94) | O/U: N/A\n- Stake: €55.50 | Pot: €104.34 | Conf: 60/100 | EV: 0.128\n- Decision: New late-breaking edge. Boston confirmed WITHOUT Tatum (OUT), Vucevic (OUT), Harper Jr. (OUT), Queta (OUT) — four players unavailable, including franchise player. Atlanta at full strength (only minor G-League and illness absences). Tatum's OUT is confirmed per NBA official (not Questionable/GTD), satisfying the injury-dependent pick rule — pick confirmed only because OUT is official. Atlanta home court advantage. Spread 1.88 within target range (1.80-2.30). All gates satisfied: confidence 60 ≥ 60 minimum, EV 0.128 > 0.05, time gate 63 min > 20 min, quantity gate (1st and only late pick). Atlanta ML at 1.71 showed negative EV (-0.008), but the spread at 1.88 generates sufficient EV given Atlanta covering just 2.5 points at home vs depleted road opponent.\n\n---\n\n### SLATE SUMMARY\nTwo picks committed totaling €111.00 (30.0% of €370.01 bankroll) — well within the 70% exposure cap. The core thesis centers on PHI's negative NetRtg regression risk in Miami (confirmed, both anchor players active) and Atlanta exploiting Boston's historic injury crisis at home on the spread. Draft pick 002 (BOS ML) was correctly self-cancelled by Scout and formally cancelled here; a superior alternative on the same game (ATL -2.5) was identified through the late scout process with stronger EV (0.128) and a confirmed injury catalyst.",
-    "tokens_in": 8166,
-    "tokens_out": 7292,
-    "cost_usd": 0.133878
+    "total_staked": 0.0,
+    "bankroll_before": 477.68,
+    "report": "## Commit Report — 2026-03-31 | 22:26 UTC\n\n### CANCELLED — Detroit Pistons ML (nba_draft_20260331_001)\n\n- **Reason:** Three independent cancellation triggers all fire simultaneously:\n  1. **Odds below commit floor:** Current market shows 1.64 (Detroit ML dropped from Scout's 1.65 to 1.64). The commit-time ML floor is 1.65. This alone mandates cancellation per odds_validation rules.\n  2. **Anchor player OUT confirmed:** Cade Cunningham listed OUT (Pneumothorax) on the NBA Official Injury Report. Franchise player rule: cancel immediately.\n  3. **Negative EV:** Even before applying the Cunningham penalty, EV at adjusted confidence 55 = (0.55 × 1.64) - 1 = **-0.098**. Well below the 0.05 threshold.\n- **Odds at cancel:** 1.64 (was 1.65 at Scout — moved 0.01 against)\n- Note: Scout's own reasoning had already identified this as a no_edge pick with negative EV. The draft pick was effectively a logged rejection, not an actionable bet.\n\n---\n\n### LATE SCOUT — No New Picks Added\n\nReviewed all 8 games on tonight's slate. Key findings:\n\n- **Suns/Magic, Rockets/Knicks, Lakers/Cavs, Bucks/Mavs:** All rejected due to NetRtg gaps below the 4.0-point threshold required for confidence ≥ 60. No material injury changes shifted the landscape enough.\n- **Clippers/Blazers, Celtics/Heat, Warriors/Spurs:** All rejected due to odds outside valid range on both sides of every market.\n- **Nets/Hornets:** Tank-tier Brooklyn with Charlotte ML at 1.06 — no market to exploit.\n\nThe only game with any minor late movement was Cleveland/Lakers (Cavs ML drifted to 2.05 from 2.02), but LeBron remaining Questionable on Management designation and the 2.3-pt NetRtg gap kept confidence below the 60-gate after adjustment.\n\n---\n\n### Slate Summary\n\nA barren night for confirmed action: the sole draft pick fails three independent cancellation criteria (odds floor, anchor OUT, negative EV), and no late-breaking edges emerged across the eight-game slate. Every rejected game retains its Scout-time disqualifiers — odds outside range, insufficient NetRtg gaps, or key player uncertainty. Bankroll of €477.68 carries forward intact to tomorrow's slate.",
+    "tokens_in": 6903,
+    "tokens_out": 3474,
+    "cost_usd": 0.072819
   },
   "netrtg_l15": {},
   "cached_context": {
