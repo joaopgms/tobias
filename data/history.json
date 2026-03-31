@@ -504,6 +504,26 @@
         }
       ],
       "summary": "Day 2026-03-30 commit — 2 bets totalling €111.00. 1 cancelled. Bankroll: €370.01 → €259.01."
+    },
+    {
+      "entry_id": "nba_entry_20260331",
+      "season": "2024-25",
+      "game": 1,
+      "timestamp": "2026-03-31T22:26:40.472618+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 477.68,
+      "total_staked": 0.0,
+      "bankroll_after": 477.68,
+      "cancelled_picks": [
+        {
+          "id": "nba_draft_20260331_001",
+          "match": "Detroit Pistons vs Toronto Raptors",
+          "pick": "Detroit Pistons ML",
+          "reason": "Triple cancellation: (1) Odds fell below commit floor — current 1.64 vs floor 1.65; (2) Anchor player Cade Cunningham confirmed OUT per NBA official injury report; (3) EV negative at commit odds — EV = (0.55 × 1.64) - 1 = -0.098. Pick was already flagged as no_edge by Scout's own calculation."
+        }
+      ],
+      "bets": [],
+      "summary": "Day 2026-03-31 commit — 0 bets totalling €0.00. 1 cancelled. Bankroll: €477.68 → €477.68."
     }
   ]
 }
