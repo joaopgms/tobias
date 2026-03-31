@@ -1,15 +1,15 @@
 {
   "season": "2024-25",
   "game": 1,
-  "bankroll": 259.01,
+  "bankroll": 477.68,
   "bankroll_initial": 1000.0,
   "bankroll_peak": 1000.0,
   "total_staked": 1029.97,
-  "total_returned": 288.98,
-  "net_pnl": -629.99,
+  "total_returned": 507.65,
+  "net_pnl": -522.32,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-03-30T22:27:02.028730+00:00",
+  "last_updated": "2026-03-31T10:53:52.104851+00:00",
   "first_game_time": "2026-03-30T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
@@ -20,7 +20,7 @@
   "commit_updated_at": "2026-03-30T22:27:02.028730+00:00",
   "commit_date": "2026-03-30",
   "analyst_updated_at": "2026-03-30T11:53:39.148629+00:00",
-  "settler_updated_at": "2026-03-30T11:03:30.618049+00:00",
+  "settler_updated_at": "2026-03-31T10:53:52.104851+00:00",
   "agent_models": {
     "settler": "no-llm",
     "analyst": "claude-sonnet-4-6",
@@ -29,48 +29,7 @@
   },
   "last_report": "### CONFIRMED — Miami Heat ML\n- Match: Miami Heat vs Philadelphia 76ers | Tip: 2026-03-30T23:00 UTC\n- Pick: Miami Heat ML | Scout odds: 2.08 | Commit odds: 2.06 | Move: -0.02\n- ML: H:2.06 / A:1.78 | ATS: -2.0 pts (1.91/1.91) | O/U: N/A\n- Stake: €55.50 | Pot: €114.33 | Conf: 62/100 | EV: 0.2772\n- Decision: Minor 0.02 line move against (within 0.10 threshold, no investigation required). Both anchor players (Embiid, Butler) confirmed active on NBA official injury report — no new absences for either team since Scout. PHI NetRtg -0.2 with hot streak (L10 7-3, W% .554 > .550) remains the primary edge signal. Hot streak fade rule explicitly triggers: +10 confidence applied. Miami home advantage and positive NetRtg +2.2 supports the pick. EV 0.277 is strong. Confirmed at Medium tier (62 confidence), 15% bankroll stake.\n\n---\n\n### CANCELLED — Boston Celtics ML (Draft Pick 002)\n- Reason: Franchise player Jayson Tatum confirmed OUT per NBA official injury report. Scout's own reasoning already identified rejection — confidence falls to 40 (65 base - 25 franchise player penalty), below minimum ML confidence floor of 50. Negative EV at -0.132. Additionally, Nikola Vucevic (new injury, not in Scout data), Ron Harper Jr., and Neemias Queta are all confirmed OUT at commit time, further deepening Boston's depletion. No path to confidence ≥ 50 on Boston ML.\n- Odds at cancel: 2.17 (was 2.10 at Scout time — odds improved but irrelevant given rejection criteria)\n\n---\n\n### LATE PICK CONFIRMED — Atlanta Hawks -2.5\n- Match: Atlanta Hawks vs Boston Celtics | Tip: 2026-03-30T23:30 UTC\n- Pick: Atlanta Hawks -2.5 | Scout odds: N/A (late pick) | Commit odds: 1.88 | Move: N/A\n- ML: H:1.71 / A:2.17 | ATS: -2.5 pts (1.88/1.94) | O/U: N/A\n- Stake: €55.50 | Pot: €104.34 | Conf: 60/100 | EV: 0.128\n- Decision: New late-breaking edge. Boston confirmed WITHOUT Tatum (OUT), Vucevic (OUT), Harper Jr. (OUT), Queta (OUT) — four players unavailable, including franchise player. Atlanta at full strength (only minor G-League and illness absences). Tatum's OUT is confirmed per NBA official (not Questionable/GTD), satisfying the injury-dependent pick rule — pick confirmed only because OUT is official. Atlanta home court advantage. Spread 1.88 within target range (1.80-2.30). All gates satisfied: confidence 60 ≥ 60 minimum, EV 0.128 > 0.05, time gate 63 min > 20 min, quantity gate (1st and only late pick). Atlanta ML at 1.71 showed negative EV (-0.008), but the spread at 1.88 generates sufficient EV given Atlanta covering just 2.5 points at home vs depleted road opponent.\n\n---\n\n### SLATE SUMMARY\nTwo picks committed totaling €111.00 (30.0% of €370.01 bankroll) — well within the 70% exposure cap. The core thesis centers on PHI's negative NetRtg regression risk in Miami (confirmed, both anchor players active) and Atlanta exploiting Boston's historic injury crisis at home on the spread. Draft pick 002 (BOS ML) was correctly self-cancelled by Scout and formally cancelled here; a superior alternative on the same game (ATL -2.5) was identified through the late scout process with stronger EV (0.128) and a confirmed injury catalyst.",
   "draft_picks": [],
-  "pending_bets": [
-    {
-      "id": "nba_bet_20260330_001",
-      "match": "Miami Heat vs Philadelphia 76ers",
-      "time": "2026-03-30T23:00:00Z",
-      "pick": "Miami Heat ML",
-      "odds": 2.06,
-      "stake": 55.5,
-      "potential_return": 114.33,
-      "confidence": 62,
-      "reasoning": "PHI NetRtg -0.2 with 41-33 record and L10 7-3 — classic hot streak with negative NetRtg fade candidate per skills. Hot streak fade rule: PHI W% ~.554 > .550 threshold with NetRtg -0.2 triggers explicit fade evaluation with confidence +10. Miami home (2-3pt advantage), NetRtg +2.2 positive. PHI injuries: Johni Broome Out (unchanged). MIA injuries: Norman Powell Out, Terry Rozier Out (unchanged). Anchor players verified: Joel Embiid active (not on injury report), Jimmy Butler active (not on injury report). Line moved only 0.02 against (2.08→2.06), within 0.10 threshold — no investigation needed. Odds 2.06 within ML target range 1.65-2.50. EV = (0.62 × 2.06) - 1 = 0.2772. Base confidence 52 + 10 hot streak fade = 62, Medium tier stake 15% of €370.01 = €55.50.",
-      "anchor_players": [
-        "Joel Embiid",
-        "Jimmy Butler"
-      ],
-      "result": null,
-      "returned": null,
-      "pnl": null,
-      "settled_at": null,
-      "committed_at": "2026-03-30T22:27:04Z"
-    },
-    {
-      "id": "nba_bet_20260330_002",
-      "match": "Atlanta Hawks vs Boston Celtics",
-      "time": "2026-03-30T23:30:00Z",
-      "pick": "Atlanta Hawks -2.5",
-      "odds": 1.88,
-      "stake": 55.5,
-      "potential_return": 104.34,
-      "confidence": 60,
-      "reasoning": "LATE PICK — new edge emerged since Scout. Boston severely depleted: Jayson Tatum OUT (Management, NBA official confirmed), Nikola Vucevic OUT (new — not in Scout data), Ron Harper Jr. OUT, Neemias Queta OUT — 4 players unavailable including franchise player. Atlanta has near-full strength (only G-League absences and Jock Landale illness). Atlanta home court advantage. ATL NetRtg +1.8 vs BOS NetRtg +7.8 — but BOS NetRtg calculated with healthy roster; with Tatum/Vucevic/Harper/Queta out, effective BOS quality is materially reduced. Jaylen Brown still leads Boston but lacks depth. Injury-dependent pick rule: Tatum confirmed OUT (not Questionable/GTD) — confirmation rule satisfied. EV = (0.60 × 1.88) - 1 = 0.128. Confidence 60 exactly at minimum gate. Medium tier stake 15% of €370.01 = €55.50. Time gate: tip 23:30 UTC, commit 22:27 UTC = 63 min > 20 min. Quantity gate: this is the 1 allowed late pick. Spread 1.88 within target range 1.80-2.30.",
-      "anchor_players": [
-        "Jayson Tatum",
-        "Jaylen Brown"
-      ],
-      "result": null,
-      "returned": null,
-      "pnl": null,
-      "settled_at": null,
-      "committed_at": "2026-03-30T22:27:04Z"
-    }
-  ],
+  "pending_bets": [],
   "settled_bets": [
     {
       "id": "nba_bet_20260319_001",
@@ -262,6 +221,46 @@
       "pnl": -65.3,
       "settled_at": "2026-03-30T11:03:30.618049+00:00",
       "committed_at": "2026-03-29T19:52:53Z"
+    },
+    {
+      "id": "nba_bet_20260330_001",
+      "match": "Miami Heat vs Philadelphia 76ers",
+      "time": "2026-03-30T23:00:00Z",
+      "pick": "Miami Heat ML",
+      "odds": 2.06,
+      "stake": 55.5,
+      "potential_return": 114.33,
+      "confidence": 62,
+      "reasoning": "PHI NetRtg -0.2 with 41-33 record and L10 7-3 — classic hot streak with negative NetRtg fade candidate per skills. Hot streak fade rule: PHI W% ~.554 > .550 threshold with NetRtg -0.2 triggers explicit fade evaluation with confidence +10. Miami home (2-3pt advantage), NetRtg +2.2 positive. PHI injuries: Johni Broome Out (unchanged). MIA injuries: Norman Powell Out, Terry Rozier Out (unchanged). Anchor players verified: Joel Embiid active (not on injury report), Jimmy Butler active (not on injury report). Line moved only 0.02 against (2.08→2.06), within 0.10 threshold — no investigation needed. Odds 2.06 within ML target range 1.65-2.50. EV = (0.62 × 2.06) - 1 = 0.2772. Base confidence 52 + 10 hot streak fade = 62, Medium tier stake 15% of €370.01 = €55.50.",
+      "anchor_players": [
+        "Joel Embiid",
+        "Jimmy Butler"
+      ],
+      "result": "WON",
+      "returned": 114.33,
+      "pnl": 58.83,
+      "settled_at": "2026-03-31T10:53:52.104851+00:00",
+      "committed_at": "2026-03-30T22:27:04Z"
+    },
+    {
+      "id": "nba_bet_20260330_002",
+      "match": "Atlanta Hawks vs Boston Celtics",
+      "time": "2026-03-30T23:30:00Z",
+      "pick": "Atlanta Hawks -2.5",
+      "odds": 1.88,
+      "stake": 55.5,
+      "potential_return": 104.34,
+      "confidence": 60,
+      "reasoning": "LATE PICK — new edge emerged since Scout. Boston severely depleted: Jayson Tatum OUT (Management, NBA official confirmed), Nikola Vucevic OUT (new — not in Scout data), Ron Harper Jr. OUT, Neemias Queta OUT — 4 players unavailable including franchise player. Atlanta has near-full strength (only G-League absences and Jock Landale illness). Atlanta home court advantage. ATL NetRtg +1.8 vs BOS NetRtg +7.8 — but BOS NetRtg calculated with healthy roster; with Tatum/Vucevic/Harper/Queta out, effective BOS quality is materially reduced. Jaylen Brown still leads Boston but lacks depth. Injury-dependent pick rule: Tatum confirmed OUT (not Questionable/GTD) — confirmation rule satisfied. EV = (0.60 × 1.88) - 1 = 0.128. Confidence 60 exactly at minimum gate. Medium tier stake 15% of €370.01 = €55.50. Time gate: tip 23:30 UTC, commit 22:27 UTC = 63 min > 20 min. Quantity gate: this is the 1 allowed late pick. Spread 1.88 within target range 1.80-2.30.",
+      "anchor_players": [
+        "Jayson Tatum",
+        "Jaylen Brown"
+      ],
+      "result": "WON",
+      "returned": 104.34,
+      "pnl": 48.84,
+      "settled_at": "2026-03-31T10:53:52.104851+00:00",
+      "committed_at": "2026-03-30T22:27:04Z"
     }
   ],
   "rejected_games": [
@@ -538,7 +537,8 @@
     ],
     "Cleveland Cavaliers": [
       5,
-      -17
+      -17,
+      9
     ],
     "Orlando Magic": [
       -5,
@@ -547,7 +547,8 @@
     ],
     "Phoenix Suns": [
       -2,
-      25
+      25,
+      26
     ],
     "Denver Nuggets": [
       2,
@@ -557,20 +558,24 @@
     ],
     "Miami Heat": [
       17,
-      -17
+      -17,
+      10
     ],
     "Dallas Mavericks": [
       -7,
-      7
+      7,
+      -30
     ],
     "Detroit Pistons": [
       -1,
       21,
-      22
+      22,
+      -4
     ],
     "Atlanta Hawks": [
       1,
       -7,
+      10,
       10
     ],
     "Indiana Pacers": [
@@ -580,49 +585,59 @@
     ],
     "Los Angeles Lakers": [
       7,
-      17
+      17,
+      19
     ],
     "Philadelphia 76ers": [
       20,
-      4
+      4,
+      -10
     ],
     "Chicago Bulls": [
       -20,
       -18,
-      -1
+      -1,
+      -15
     ],
     "Boston Celtics": [
       10,
       7,
-      15
+      15,
+      -10
     ],
     "Oklahoma City Thunder": [
       -10,
       18,
-      11
+      11,
+      4
     ],
     "Memphis Grizzlies": [
       -25,
       -10,
-      1
+      1,
+      -26
     ],
     "San Antonio Spurs": [
       25,
-      32
+      32,
+      15
     ],
     "Utah Jazz": [
       -23,
       -6,
-      -25
+      -25,
+      -9
     ],
     "Washington Wizards": [
       23,
       -5,
-      -35
+      -35,
+      -19
     ],
     "Minnesota Timberwolves": [
       2,
-      -22
+      -22,
+      30
     ],
     "Houston Rockets": [
       -2,
@@ -661,48 +676,56 @@
     ]
   },
   "game_log_recorded": [
-    "Utah Jazz@Denver Nuggets",
-    "San Antonio Spurs@Milwaukee Bucks",
-    "Utah Jazz@Phoenix Suns",
-    "Houston Rockets@New Orleans Pelicans",
-    "Orlando Magic@Cleveland Cavaliers",
-    "Toronto Raptors@LA Clippers",
-    "Los Angeles Lakers@Indiana Pacers",
-    "Oklahoma City Thunder@Boston Celtics",
-    "Washington Wizards@Golden State Warriors",
-    "New York Knicks@Charlotte Hornets",
+    "New Orleans Pelicans@New York Knicks",
+    "Washington Wizards@Los Angeles Lakers",
+    "Chicago Bulls@Memphis Grizzlies",
+    "Chicago Bulls@San Antonio Spurs",
     "Sacramento Kings@Charlotte Hornets",
-    "Dallas Mavericks@Denver Nuggets",
-    "Chicago Bulls@Oklahoma City Thunder",
-    "New York Knicks@Oklahoma City Thunder",
-    "Denver Nuggets@Phoenix Suns",
+    "Oklahoma City Thunder@Boston Celtics",
     "Chicago Bulls@Philadelphia 76ers",
+    "Utah Jazz@Denver Nuggets",
+    "Cleveland Cavaliers@Utah Jazz",
+    "Atlanta Hawks@Boston Celtics",
+    "Houston Rockets@New Orleans Pelicans",
+    "New Orleans Pelicans@Toronto Raptors",
+    "Philadelphia 76ers@Miami Heat",
+    "Sacramento Kings@Brooklyn Nets",
+    "Utah Jazz@Phoenix Suns",
+    "Denver Nuggets@Phoenix Suns",
     "Orlando Magic@Toronto Raptors",
     "Miami Heat@Indiana Pacers",
-    "New Orleans Pelicans@Detroit Pistons",
-    "Sacramento Kings@Atlanta Hawks",
-    "Atlanta Hawks@Detroit Pistons",
-    "Sacramento Kings@Orlando Magic",
-    "Chicago Bulls@Memphis Grizzlies",
-    "Dallas Mavericks@Portland Trail Blazers",
-    "San Antonio Spurs@Memphis Grizzlies",
-    "Brooklyn Nets@Los Angeles Lakers",
-    "LA Clippers@Milwaukee Bucks",
-    "Atlanta Hawks@Boston Celtics",
-    "Washington Wizards@Utah Jazz",
-    "LA Clippers@Indiana Pacers",
-    "Washington Wizards@Portland Trail Blazers",
-    "Detroit Pistons@Minnesota Timberwolves",
-    "New Orleans Pelicans@New York Knicks",
-    "New Orleans Pelicans@Toronto Raptors",
-    "Houston Rockets@Memphis Grizzlies",
-    "Miami Heat@Cleveland Cavaliers",
+    "New York Knicks@Oklahoma City Thunder",
     "Milwaukee Bucks@Portland Trail Blazers",
-    "Sacramento Kings@Brooklyn Nets",
-    "Houston Rockets@Minnesota Timberwolves",
+    "New York Knicks@Charlotte Hornets",
+    "Sacramento Kings@Atlanta Hawks",
+    "Minnesota Timberwolves@Dallas Mavericks",
     "Philadelphia 76ers@Charlotte Hornets",
-    "Boston Celtics@Charlotte Hornets",
+    "Detroit Pistons@Oklahoma City Thunder",
+    "Washington Wizards@Portland Trail Blazers",
+    "LA Clippers@Milwaukee Bucks",
+    "Washington Wizards@Golden State Warriors",
+    "Chicago Bulls@Oklahoma City Thunder",
+    "Brooklyn Nets@Los Angeles Lakers",
+    "Boston Celtics@Atlanta Hawks",
+    "New Orleans Pelicans@Detroit Pistons",
+    "Brooklyn Nets@Golden State Warriors",
+    "Houston Rockets@Memphis Grizzlies",
+    "Dallas Mavericks@Portland Trail Blazers",
+    "Detroit Pistons@Minnesota Timberwolves",
+    "Phoenix Suns@Memphis Grizzlies",
+    "Orlando Magic@Cleveland Cavaliers",
+    "Los Angeles Lakers@Indiana Pacers",
+    "Sacramento Kings@Orlando Magic",
+    "Washington Wizards@Utah Jazz",
+    "San Antonio Spurs@Milwaukee Bucks",
+    "LA Clippers@Indiana Pacers",
     "Golden State Warriors@Denver Nuggets",
-    "Brooklyn Nets@Golden State Warriors"
+    "Boston Celtics@Charlotte Hornets",
+    "Miami Heat@Cleveland Cavaliers",
+    "Houston Rockets@Minnesota Timberwolves",
+    "Dallas Mavericks@Denver Nuggets",
+    "Toronto Raptors@LA Clippers",
+    "Atlanta Hawks@Detroit Pistons",
+    "San Antonio Spurs@Memphis Grizzlies"
   ]
 }
