@@ -9,7 +9,7 @@
   "net_pnl": -522.32,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-03-31T22:26:40.472618+00:00",
+  "last_updated": "2026-04-01T10:58:22.625351+00:00",
   "first_game_time": "2026-03-31T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
@@ -20,7 +20,7 @@
   "commit_updated_at": "2026-03-31T22:26:40.472618+00:00",
   "commit_date": "2026-03-31",
   "analyst_updated_at": "2026-03-31T21:49:19.671681+00:00",
-  "settler_updated_at": "2026-03-31T21:48:22.432815+00:00",
+  "settler_updated_at": "2026-04-01T10:58:22.625351+00:00",
   "agent_models": {
     "settler": "no-llm",
     "analyst": "claude-sonnet-4-6",
@@ -518,7 +518,8 @@
       44,
       11,
       -4,
-      -15
+      -15,
+      31
     ],
     "Sacramento Kings": [
       -44,
@@ -529,7 +530,8 @@
     "New York Knicks": [
       5,
       -11,
-      -11
+      -11,
+      -17
     ],
     "New Orleans Pelicans": [
       -5,
@@ -540,17 +542,20 @@
     "Cleveland Cavaliers": [
       5,
       -17,
-      9
+      9,
+      -14
     ],
     "Orlando Magic": [
       -5,
       4,
-      -52
+      -52,
+      4
     ],
     "Phoenix Suns": [
       -2,
       25,
-      26
+      26,
+      -4
     ],
     "Denver Nuggets": [
       2,
@@ -566,13 +571,15 @@
     "Dallas Mavericks": [
       -7,
       7,
-      -30
+      -30,
+      -24
     ],
     "Detroit Pistons": [
       -1,
       21,
       22,
-      -4
+      -4,
+      11
     ],
     "Atlanta Hawks": [
       1,
@@ -588,7 +595,8 @@
     "Los Angeles Lakers": [
       7,
       17,
-      19
+      19,
+      14
     ],
     "Philadelphia 76ers": [
       20,
@@ -644,7 +652,8 @@
     "Houston Rockets": [
       -2,
       10,
-      32
+      32,
+      17
     ],
     "Golden State Warriors": [
       3,
@@ -654,80 +663,92 @@
     "Brooklyn Nets": [
       -3,
       -17,
-      17
+      17,
+      -31
     ],
     "Portland Trail Blazers": [
       31,
       -7,
-      35
+      35,
+      10
     ],
     "Milwaukee Bucks": [
       -31,
       -32,
-      -14
+      -14,
+      24
     ],
     "LA Clippers": [
       25,
       1,
-      14
+      14,
+      -10
     ],
     "Toronto Raptors": [
       -25,
       13,
-      52
+      52,
+      -11
     ]
   },
   "game_log_recorded": [
-    "Cleveland Cavaliers@Utah Jazz",
-    "Washington Wizards@Portland Trail Blazers",
-    "Washington Wizards@Utah Jazz",
-    "Los Angeles Lakers@Indiana Pacers",
     "Orlando Magic@Toronto Raptors",
-    "Chicago Bulls@Memphis Grizzlies",
+    "Denver Nuggets@Phoenix Suns",
+    "New Orleans Pelicans@Toronto Raptors",
+    "Phoenix Suns@Orlando Magic",
     "Houston Rockets@Minnesota Timberwolves",
+    "Cleveland Cavaliers@Los Angeles Lakers",
     "Dallas Mavericks@Portland Trail Blazers",
-    "Miami Heat@Indiana Pacers",
+    "Brooklyn Nets@Los Angeles Lakers",
+    "LA Clippers@Indiana Pacers",
+    "Boston Celtics@Atlanta Hawks",
+    "Houston Rockets@Memphis Grizzlies",
+    "Portland Trail Blazers@LA Clippers",
+    "Golden State Warriors@Denver Nuggets",
+    "Miami Heat@Cleveland Cavaliers",
+    "Boston Celtics@Charlotte Hornets",
+    "Chicago Bulls@Philadelphia 76ers",
+    "Brooklyn Nets@Golden State Warriors",
+    "Washington Wizards@Utah Jazz",
+    "Minnesota Timberwolves@Dallas Mavericks",
+    "New York Knicks@Houston Rockets",
+    "Dallas Mavericks@Milwaukee Bucks",
+    "Detroit Pistons@Oklahoma City Thunder",
+    "New York Knicks@Charlotte Hornets",
+    "Utah Jazz@Denver Nuggets",
+    "Toronto Raptors@Detroit Pistons",
+    "New Orleans Pelicans@New York Knicks",
+    "Milwaukee Bucks@Portland Trail Blazers",
+    "Cleveland Cavaliers@Utah Jazz",
+    "Washington Wizards@Golden State Warriors",
+    "Orlando Magic@Cleveland Cavaliers",
+    "Washington Wizards@Los Angeles Lakers",
+    "New Orleans Pelicans@Detroit Pistons",
+    "New York Knicks@Oklahoma City Thunder",
+    "Phoenix Suns@Memphis Grizzlies",
+    "Detroit Pistons@Minnesota Timberwolves",
+    "Philadelphia 76ers@Charlotte Hornets",
+    "Chicago Bulls@Memphis Grizzlies",
+    "San Antonio Spurs@Milwaukee Bucks",
+    "Charlotte Hornets@Brooklyn Nets",
+    "Los Angeles Lakers@Indiana Pacers",
     "Atlanta Hawks@Detroit Pistons",
+    "Sacramento Kings@Charlotte Hornets",
+    "Chicago Bulls@Oklahoma City Thunder",
+    "Washington Wizards@Portland Trail Blazers",
+    "Miami Heat@Indiana Pacers",
     "Sacramento Kings@Brooklyn Nets",
     "Toronto Raptors@LA Clippers",
-    "Denver Nuggets@Phoenix Suns",
-    "Boston Celtics@Atlanta Hawks",
-    "Houston Rockets@New Orleans Pelicans",
-    "Utah Jazz@Phoenix Suns",
-    "Orlando Magic@Cleveland Cavaliers",
-    "New York Knicks@Charlotte Hornets",
-    "New Orleans Pelicans@Detroit Pistons",
-    "San Antonio Spurs@Milwaukee Bucks",
-    "Boston Celtics@Charlotte Hornets",
-    "Washington Wizards@Los Angeles Lakers",
-    "New York Knicks@Oklahoma City Thunder",
-    "Chicago Bulls@Philadelphia 76ers",
     "LA Clippers@Milwaukee Bucks",
     "Sacramento Kings@Orlando Magic",
-    "New Orleans Pelicans@Toronto Raptors",
-    "Miami Heat@Cleveland Cavaliers",
-    "Philadelphia 76ers@Charlotte Hornets",
-    "Dallas Mavericks@Denver Nuggets",
-    "New Orleans Pelicans@New York Knicks",
-    "Sacramento Kings@Charlotte Hornets",
-    "Golden State Warriors@Denver Nuggets",
-    "Oklahoma City Thunder@Boston Celtics",
+    "Houston Rockets@New Orleans Pelicans",
     "Sacramento Kings@Atlanta Hawks",
-    "Minnesota Timberwolves@Dallas Mavericks",
-    "Detroit Pistons@Oklahoma City Thunder",
-    "Utah Jazz@Denver Nuggets",
-    "Houston Rockets@Memphis Grizzlies",
-    "Atlanta Hawks@Boston Celtics",
-    "San Antonio Spurs@Memphis Grizzlies",
-    "Brooklyn Nets@Los Angeles Lakers",
-    "Brooklyn Nets@Golden State Warriors",
-    "Chicago Bulls@Oklahoma City Thunder",
-    "Detroit Pistons@Minnesota Timberwolves",
-    "Philadelphia 76ers@Miami Heat",
-    "LA Clippers@Indiana Pacers",
-    "Milwaukee Bucks@Portland Trail Blazers",
-    "Phoenix Suns@Memphis Grizzlies",
     "Chicago Bulls@San Antonio Spurs",
-    "Washington Wizards@Golden State Warriors"
+    "Utah Jazz@Phoenix Suns",
+    "Dallas Mavericks@Denver Nuggets",
+    "San Antonio Spurs@Memphis Grizzlies",
+    "Philadelphia 76ers@Miami Heat",
+    "Oklahoma City Thunder@Boston Celtics",
+    "Atlanta Hawks@Boston Celtics"
   ]
 }
