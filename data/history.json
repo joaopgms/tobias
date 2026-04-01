@@ -14,7 +14,7 @@
           "peak_bankroll": 1000.0,
           "final_bankroll": null,
           "net_pnl": null,
-          "total_bets": 11,
+          "total_bets": 12,
           "wins": 4,
           "losses": 7,
           "bust": false
@@ -524,6 +524,47 @@
       ],
       "bets": [],
       "summary": "Day 2026-03-31 commit — 0 bets totalling €0.00. 1 cancelled. Bankroll: €477.68 → €477.68."
+    },
+    {
+      "entry_id": "nba_entry_20260401",
+      "season": "2024-25",
+      "game": 1,
+      "timestamp": "2026-04-01T22:29:08.700261+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 477.68,
+      "total_staked": 95.54,
+      "bankroll_after": 382.14,
+      "cancelled_picks": [
+        {
+          "id": "nba_draft_20260401_002",
+          "match": "Washington Wizards vs Philadelphia 76ers",
+          "pick": "Philadelphia 76ers -15.5",
+          "reason": "Anchor Joel Embiid OUT confirmed at commit time (NBA official injury report: Injury/Illness - N/a; Illness). PHI's best player and defensive anchor absent fundamentally changes the -15.5 cover thesis. Immediate cancel per skills rule: anchor player confirmed OUT → cancel immediately."
+        }
+      ],
+      "bets": [
+        {
+          "id": "nba_bet_20260401_001",
+          "match": "Houston Rockets vs Milwaukee Bucks",
+          "time": "2026-04-02T00:00Z",
+          "pick": "Houston Rockets -18.5",
+          "odds": 1.93,
+          "stake": 95.54,
+          "potential_return": 184.39,
+          "reasoning": "Late scout pick. Giannis Antetokounmpo confirmed OUT (hyperextension/bone bruise) via NBA official report — Milwaukee's franchise anchor absent. MIL also missing Thanasis Antetokounmpo, Gary Harris, Kyle Kuzma, Kevin Porter Jr., Bobby Portis — essentially their entire rotation. MIL record 30-45 (L10: 3-7), NetRtg -6.3 vs HOU NetRtg +4.7 (gap 11.0 points). HOU: 46-29, L10: 6-4, playing at home. HOU OffRtg 117.9 vs MIL DefRtg 118.9 — HOU should score at will. MIL OffRtg 112.6 with depleted roster means HOU defense (DefRtg 113.2) should limit them. Confidence: 65 base +10 Giannis OUT +5 mass MIL absences -10 extreme spread -18.5 +2 HOU form = 72. EV = (0.72 × 1.93) - 1 = 0.390. Line moved from -17.0 to -18.5 (1.5 pts against, consistent with Giannis OUT confirmation — books adjusting). Odds 1.93 within spread target range 1.80-2.30. Stake: 20% of €477.68 = €95.54 (High confidence tier).",
+          "confidence": 72,
+          "anchor_players": [
+            "Giannis Antetokounmpo",
+            "Jalen Green",
+            "Alperen Sengun"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null
+        }
+      ],
+      "summary": "Day 2026-04-01 commit — 1 bets totalling €95.54. 1 cancelled. Bankroll: €477.68 → €382.14."
     }
   ]
 }
