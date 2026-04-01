@@ -1888,5 +1888,103 @@
     "tokens_in": 8614,
     "tokens_out": 6107,
     "cost_usd": 0.117447
+  },
+  {
+    "ts": "2026-04-01T15:11:09.981311+00:00",
+    "date": "2026-04-01",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_unibet",
+    "draft_count": 1,
+    "picks": [
+      {
+        "id": "nba_draft_20260401_002",
+        "match": "Washington Wizards vs Philadelphia 76ers",
+        "time": "2026-04-01T23:00Z",
+        "pick": "Philadelphia 76ers -15.5",
+        "odds": 1.9,
+        "stake": 95.54,
+        "potential_return": 181.53,
+        "confidence": 85,
+        "reasoning": "Washington Wizards confirmed tank: 17-58 record (L10: 1-9), Anthony Davis OUT, D'Angelo Russell OUT, Trae Young OUT (all confirmed official report), Kyshawn George OUT, Julian Reese OUT. Three franchise players confirmed absent. WAS NetRtg -11.4 (worst in league). PHI NetRtg -0.3 season — mediocre but competent. PHI has play-in motivation (41-34). DefRtg gap: WAS DefRtg 122.2 is worst in league; PHI OffRtg 115.6 should score freely. PHI DefRtg 115.9 vs WAS OffRtg 110.8 — WAS can barely score even at full strength, now decimated. Spread -15.5 at 1.90 is within target range. Tank teams do NOT cover spreads per skills rules — fade WAS is edge-positive. PHI only missing Johni Broome (non-franchise). EV = (0.85 × 1.90) - 1 = 0.615. STRONG edge. Elite confidence tier → up to 30% bankroll = €143.30. Using 20% given PHI's own volatility (NetRtg -0.3 suggests fragile) = €95.54.",
+        "anchor_players": [
+          "Joel Embiid",
+          "Paul George",
+          "Tyrese Maxey"
+        ],
+        "drafted_at": "2026-04-01T15:11:14Z",
+        "market_type": "spread"
+      }
+    ],
+    "rejected": [
+      {
+        "match": "Washington Wizards vs Philadelphia 76ers",
+        "reason": "Drafted as spread pick (PHI -15.5). ML odds 1.08 outside target range. Spread drafted.",
+        "ml_home": 8.5,
+        "ml_away": 1.08,
+        "decision": "drafted"
+      },
+      {
+        "match": "Orlando Magic vs Atlanta Hawks",
+        "reason": "ORL ML 2.48 in range. ATL ML 1.56 outside. ATL hot-streak fade evaluation: ATL L10 8-2, season W% .565 above .550 threshold triggers fade rule. ORL NetRtg +0.2 vs ATL +1.9 — gap only 1.7 points, below 4.0 threshold. ORL L10: 3-7 confirms cold team. No genuine edge on ORL despite fade signal — ORL own form is poor. ATL at 1.56 outside odds range. Spread H+4.5 at 1.89: would require ORL +4.5 confidence but ORL L10 3-7 undermines. No clear edge meets spread confidence floor 60 with EV>0.05. Rejected.",
+        "ml_home": 2.48,
+        "ml_away": 1.56,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Miami Heat vs Boston Celtics",
+        "reason": "BOS ML 1.49 outside 1.70-2.50 range. MIA ML 2.70 in range but MIA L10 3-7, NetRtg +2.3 vs BOS NetRtg +7.6 — gap 5.3 points favours BOS. MIA missing Norman Powell OUT, Terry Rozier OUT (Not With Team — franchise-level impact), Andrew Wiggins Questionable. BOS spread -5.5 at 1.89: BOS strong (50-25) but MIA home court. MIA fade candidate (L10 3-7). BOS NetRtg +7.6 vs MIA +2.3 gap meaningful. However BOS ML at 1.49 outside range and spread -5.5 requires confidence 60+. BOS confidence: 72 base, MIA depleted (Rozier OUT) +5, BOS NetRtg edge +3 = 80. EV spread = (0.80 × 1.89) - 1 = 0.512. Valid edge exists but BOS has Pace 94.7 (very slow) and MIA Pace 103.6 creating style clash that could keep scores tight. Actually this is a valid pick — but max picks target is 2-4 and already have 3. Deprioritizing as lower confidence than existing picks. No draft.",
+        "ml_home": 2.7,
+        "ml_away": 1.49,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Memphis Grizzlies vs New York Knicks",
+        "reason": "NYK ML 1.11 outside range. MEM ML 6.75 outside range. MEM confirmed tank-tier (25-50, L10: 2-8). NYK -14.5 spread at 1.90: NYK NetRtg +6.1 vs MEM -4.3, gap = 10.4 points. Tank signal for MEM. However NYK L10 7-3 with streak L3 (fade risk). Knicks own volatility reduces confidence. Spread confidence: base 68, MEM tank +5, NYK streak fade -8 = 65. EV = (0.65 × 1.90) - 1 = 0.235. Valid EV. However already have 3 picks. NYK three-game losing streak is real fade risk. Deprioritizing. Borderline — could be deferred.",
+        "ml_home": 6.75,
+        "ml_away": 1.11,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Toronto Raptors vs Sacramento Kings",
+        "reason": "TOR ML 1.11 outside range. SAC ML 6.75 outside range. TOR spread -13.5 at 1.90: TOR NetRtg +1.9 vs SAC -10.5, gap = 12.4 points. SAC confirmed tank (19-57, L10: 3-7). TOR missing Immanuel Quickley (FRANCHISE PLAYER — roster-only, requires NBA official PDF verification; NOT confirmed in tonight's official report which does not mention Quickley explicitly). Official report shows: Jamison Battle OUT, Chucky Hepburn OUT. Quickley status unclear from tonight's report — skills mandate verification before any TOR pick. Cannot confirm Quickley status. Confidence adjustment: -10 for franchise player uncertainty. Spread confidence: 68 base, SAC tank +5, Quickley uncertainty -10 = 63. EV = (0.63 × 1.90) - 1 = 0.197. Valid but franchise player uncertainty is a real risk. Already have 3 picks. Rejected on verification concern.",
+        "ml_home": 1.11,
+        "ml_away": 6.75,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Chicago Bulls vs Indiana Pacers",
+        "reason": "IND ML 2.65 in range. CHI ML 1.50 outside range. IND spread +5.0 at 1.94: IND NetRtg -8.3 vs CHI -4.7. CHI actually better NetRtg despite worse record (CHI 29-46 vs IND 17-58). IND L10: 2-8, CHI L10: 2-8 — both cold. IND missing Tyrese Haliburton OUT (FRANCHISE PLAYER confirmed official), T.J. McConnell OUT, Johnny Furphy OUT. Haliburton OUT is devastating for IND. IND as massive underdog (+5) with franchise player missing. Cannot bet IND ML per franchise player rules. CHI ML at 1.50 outside range. CHI spread -5.0 at 1.88: CHI NetRtg -4.7 is negative — CHI is not a trustworthy favourite. CHI L10: 2-8, tank-watch themselves. Multiple key absences (Zach Collins, Anfernee Simons, Jalen Smith OUT). No clear edge. Rejected.",
+        "ml_home": 1.5,
+        "ml_away": 2.65,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Houston Rockets vs Milwaukee Bucks",
+        "reason": "Drafted as spread pick (HOU -17.0). ML odds outside range.",
+        "ml_home": 1.05,
+        "ml_away": 10.5,
+        "decision": "drafted"
+      },
+      {
+        "match": "Utah Jazz vs Denver Nuggets",
+        "reason": "DEN ML 1.06 outside range. UTA ML 10.0 outside range. UTA confirmed tank (21-55, L10: 1-9). DEN spread -17.0 at 1.89: DEN NetRtg +4.7 vs UTA -7.8, gap = 12.5 points. DEN L10: 8-2, W6 streak. UTA missing Isaiah Collier OUT, Keyonte George OUT, Jaren Jackson Jr. OUT. Very similar profile to HOU-MIL. However -17 is again extreme. Already have HOU -17 in the slate — two extreme spread bets on same night creates concentration risk. DEN confidence: 68, UTA decimated +5, extreme spread -5 = 68. EV = (0.68 × 1.89) - 1 = 0.285. Valid edge. But: already at 3 picks targeting extreme spreads. Skills says 2-4 picks optimal. Deprioritizing to avoid over-concentration on large spread bets. Rejected for concentration risk.",
+        "ml_home": 10.0,
+        "ml_away": 1.06,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Golden State Warriors vs San Antonio Spurs",
+        "reason": "Drafted as spread pick (SAS -13.5). ML odds outside range.",
+        "ml_home": 6.5,
+        "ml_away": 1.12,
+        "decision": "drafted"
+      }
+    ],
+    "report": "**DRAFTED PICKS:**\n\n**Washington Wizards vs Philadelphia 76ers — PHI -15.5 @ 1.90 (€95.54):** Clearest edge on the slate. Washington fields arguably the most depleted roster in NBA history for a single game tonight: Anthony Davis, D'Angelo Russell, and Trae Young all confirmed OUT via nba_official PDF — three franchise players absent simultaneously. WAS NetRtg -11.4 (worst in league), L10: 1-9, DefRtg 122.2 (worst). PHI OffRtg 115.6 should score freely. Tank teams historically fail to cover spreads. Confidence 85, EV 0.615 — strong edge.\n\n**Houston Rockets vs Milwaukee Bucks — HOU -17.0 @ 1.89 (€47.77):** HOU NetRtg +4.7 vs MIL -6.3 (gap 11.0 pts). Milwaukee tank-watch (30-45, L10: 3-7). HOU home, motivated for seeding. Risk: -17 is an extreme spread and Milwaukee can still score. Reduced stake to 10% reflecting this uncertainty. Confidence 63, EV 0.134 — marginal but above threshold.\n\n**Golden State Warriors vs San Antonio Spurs — SAS -13.5 @ 1.90 (€95.54):** Stephen Curry OUT (confirmed official, Pain Syndrome), Jimmy Butler OUT (ACL), Al Horford OUT, Moses Moody OUT, De'Anthony Melton OUT — GSW missing their entire rotation. SAS elite (57-18, L10: 9-1, W9 streak, NetRtg +8.2). SAS stars fully healthy. Confidence 83, EV 0.577 — strong edge. Home court for GSW is relevant but insufficient to offset this level of depletion.\n\n**REJECTED GAMES:**\n- Orlando Magic vs Atlanta Hawks — No edge: ORL L10 3-7 (cold), ATL-ORL NetRtg gap only 1.7pts below threshold; ATL ML outside range.\n- Miami Heat vs Boston Celtics — No draft: BOS ML 1.49 outside range; spread edge exists but deprioritized (4th pick, MIA home, Pace mismatch risk).\n- Memphis Grizzlies vs New York Knicks — No draft: NYK on 3-game losing streak creates fade risk; borderline deferred.\n- Toronto Raptors vs Sacramento Kings — No draft: Immanuel Quickley franchise player status unverified in tonight's official report; cannot confirm availability.\n- Chicago Bulls vs Indiana Pacers — No edge: Haliburton OUT (franchise player), both teams cold (L10: 2-8), CHI ML outside range.\n- Utah Jazz vs Denver Nuggets — No draft: Valid edge exists but concentration risk with similar HOU-MIL extreme spread already drafted.\n\n**Slate quality: Above average.** Three high-confidence edges with two strong EV picks (PHI, SAS) anchored by confirmed franchise player absences on opponent sides. Total stake €238.85 (50% of bankroll — within 70% maximum).",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 8904,
+    "tokens_out": 6855,
+    "cost_usd": 0.129537
   }
 ]
