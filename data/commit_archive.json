@@ -937,5 +937,52 @@
     "tokens_in": 6903,
     "tokens_out": 3474,
     "cost_usd": 0.072819
+  },
+  {
+    "ts": "2026-04-01T22:29:08.700261+00:00",
+    "date": "2026-04-01",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 1,
+    "cancelled_count": 1,
+    "total_staked": 95.54,
+    "bankroll_before": 477.68,
+    "bankroll_after": 382.14,
+    "bets": [
+      {
+        "id": "nba_bet_20260401_001",
+        "match": "Houston Rockets vs Milwaukee Bucks",
+        "time": "2026-04-02T00:00Z",
+        "pick": "Houston Rockets -18.5",
+        "odds": 1.93,
+        "stake": 95.54,
+        "potential_return": 184.39,
+        "reasoning": "Late scout pick. Giannis Antetokounmpo confirmed OUT (hyperextension/bone bruise) via NBA official report — Milwaukee's franchise anchor absent. MIL also missing Thanasis Antetokounmpo, Gary Harris, Kyle Kuzma, Kevin Porter Jr., Bobby Portis — essentially their entire rotation. MIL record 30-45 (L10: 3-7), NetRtg -6.3 vs HOU NetRtg +4.7 (gap 11.0 points). HOU: 46-29, L10: 6-4, playing at home. HOU OffRtg 117.9 vs MIL DefRtg 118.9 — HOU should score at will. MIL OffRtg 112.6 with depleted roster means HOU defense (DefRtg 113.2) should limit them. Confidence: 65 base +10 Giannis OUT +5 mass MIL absences -10 extreme spread -18.5 +2 HOU form = 72. EV = (0.72 × 1.93) - 1 = 0.390. Line moved from -17.0 to -18.5 (1.5 pts against, consistent with Giannis OUT confirmation — books adjusting). Odds 1.93 within spread target range 1.80-2.30. Stake: 20% of €477.68 = €95.54 (High confidence tier).",
+        "confidence": 72,
+        "anchor_players": [
+          "Giannis Antetokounmpo",
+          "Jalen Green",
+          "Alperen Sengun"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null
+      }
+    ],
+    "cancelled": [
+      {
+        "id": "nba_draft_20260401_002",
+        "match": "Washington Wizards vs Philadelphia 76ers",
+        "pick": "Philadelphia 76ers -15.5",
+        "reason": "Anchor Joel Embiid OUT confirmed at commit time (NBA official injury report: Injury/Illness - N/a; Illness). PHI's best player and defensive anchor absent fundamentally changes the -15.5 cover thesis. Immediate cancel per skills rule: anchor player confirmed OUT → cancel immediately."
+      }
+    ],
+    "late_rejections": [],
+    "report": "",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 8369,
+    "tokens_out": 8000,
+    "cost_usd": 0.145107
   }
 ]
