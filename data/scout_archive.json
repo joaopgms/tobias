@@ -1986,5 +1986,63 @@
     "tokens_in": 8904,
     "tokens_out": 6855,
     "cost_usd": 0.129537
+  },
+  {
+    "ts": "2026-04-02T15:02:02.855907+00:00",
+    "date": "2026-04-02",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_unibet",
+    "draft_count": 0,
+    "picks": [],
+    "rejected": [
+      {
+        "match": "Charlotte Hornets vs Phoenix Suns",
+        "reason": "Charlotte ML 1.47 outside target range (floor 1.70). Phoenix ML 2.70 — evaluation: Charlotte L15 NetRtg +38.2 (exceptional recent form), L10 7-3, play-in motivation. Phoenix L10 3-7 cold stretch confirmed. However Phoenix odds 2.70 exceeds ML range cap of 2.50. Charlotte at 1.47 offers no value. Spread: Charlotte -5.5 at 1.93 — NetRtg gap Charlotte +4.9 vs Phoenix +1.8 = 3.1pt gap, below 4.0 threshold for meaningful edge. Charlotte L15 signal is strong (+38.2) but Phoenix L15 data unavailable (no L15 figure in feed). Confidence ~62 on spread, EV = (0.62 × 1.93) - 1 = 0.1966 - 1 = -0.197 at 62% — wait, recalculating: EV = (0.62 × 1.93) - 1 = 1.1966 - 1 = 0.197. That's strong EV. But spread confidence floor is 60, confidence is ~62. However Phoenix L15 data missing → confidence -5 per rules → effective confidence 57, below 60 floor. Additionally, spread rule says avoid when game-time decisions unresolved (Mark Williams Questionable for Phoenix). Rejecting spread. No valid pick.",
+        "ml_home": 1.47,
+        "ml_away": 2.7,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Detroit Pistons vs Minnesota Timberwolves",
+        "reason": "Detroit ML 1.63 — Cade Cunningham confirmed OUT (franchise player). Cannot bet Detroit ML per franchise_player_rules without franchise player present. Minnesota ML 2.30 — Anthony Edwards Questionable; cannot build thesis on his absence (50% chance playing). If Edwards plays, Minnesota at 2.30 has poor value (Detroit home, 55-21 record). Detroit spread -3.5 at 1.94 — same franchise player issue: Cade OUT makes Detroit's edge unreliable. No valid pick in this game.",
+        "ml_home": 1.63,
+        "ml_away": 2.3,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Oklahoma City Thunder vs Los Angeles Lakers",
+        "reason": "OKC ML 1.28 — well outside target range (floor 1.70). Lakers ML 3.75 — exceeds range cap (2.50). Spread: OKC -9.0 at 1.93 — OKC NetRtg +10.9 vs Lakers +2.1, gap of 8.8pts, above 6pt threshold. Lakers L10 9-1 hot streak but NetRtg +2.1 divergence is significant regression signal. OKC 60-16, L10 9-1, home court. However: HOT STREAK FADE RULE applies to Lakers — their L10 9-1 with NetRtg +2.1 suggests regression. But we're evaluating OKC -9.0, so we'd be FADING the Lakers by backing OKC spread. Alex Caruso Questionable for OKC (illness) — minor confidence reduction. Marcus Smart confirmed OUT for Lakers. OKC star rest risk noted in skills (seeding locked, postseason clinch near). Confidence on OKC -9 spread: base 70 (NetRtg gap 8.8, home, strong record), minus Caruso Questionable (-5), minus star rest risk for OKC (-5) = 60. EV = (0.60 × 1.93) - 1 = 1.158 - 1 = 0.158. EV ≥ 0.15 strong edge. BUT: Lakers regression edge analysis — if Lakers are overvalued (3.75), does that mean OKC -9 is good value? YES, but 9 points is a large spread. Also, Lakers L10 9-1 means they ARE playing well — the NetRtg divergence suggests lucky record, but they could still keep games closer than -9. OKC star rest risk is real with top seed locked. Confidence at 60 is right at spread floor. Borderline — leaning reject due to OKC rest risk and Lakers' actual recent form (L10 9-1). Rejecting.",
+        "ml_home": 1.28,
+        "ml_away": 3.75,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Golden State Warriors vs Cleveland Cavaliers",
+        "reason": "ANOMALY CHECK: Cleveland ML 1.20 — outside range entirely. Golden State ML 4.70 — far exceeds 2.50 cap. LINE ANOMALY: Home team (Golden State, 36-40) priced at 4.70 while away team Cleveland (47-29) is at 1.20. Home team is materially worse — this is not an anomaly by definition (home team IS worse here). Spread: GSW +10.5 at 1.89 — Cleveland NetRtg +4.0 vs GSW -0.2, gap of 4.2pts. GSW is confirmed tank-watch, L10 4-6. Cleveland L10 7-3. 10.5 points is a massive spread. GSW may keep it close at home, but Cleveland is clearly superior. Confidence on Cleveland -10.5: too large a spread for a 4pt NetRtg gap. Rejecting all options.",
+        "ml_home": 4.7,
+        "ml_away": 1.2,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Portland Trail Blazers vs New Orleans Pelicans",
+        "reason": "New Orleans ML 1.40 — outside target range (floor 1.70). Portland ML 3.00 — exceeds 2.50 cap. Spread: Portland +6.5 at 1.90 — Portland NetRtg -0.6 vs New Orleans -4.6. Portland is actually BETTER than New Orleans by NetRtg (gap 4.0pts favoring Portland). Portland is home underdog at +6.5. This is interesting: Portland L10 7-3 (play-in motivation), NetRtg -0.6 better than NO's -4.6. New Orleans NetRtg -4.6 is very poor. Damian Lillard confirmed OUT (injury management) for Portland — franchise player out. Jerami Grant also OUT for Portland. Key Portland absences significantly weaken the case. New Orleans -4.6 NetRtg is also terrible. Confidence on Portland +6.5: base 60 (NetRtg slightly favors Portland, home, play-in motivation), minus Lillard OUT (franchise player) = do NOT bet Portland ML. But Portland +6.5 (fading New Orleans) could work given NO's terrible NetRtg and Portland home. However Lillard OUT is massive — Portland's best player absent. Rejecting.",
+        "ml_home": 1.4,
+        "ml_away": 3.0,
+        "decision": "no_edge"
+      },
+      {
+        "match": "LA Clippers vs San Antonio Spurs",
+        "reason": "San Antonio ML 1.63 — below floor of 1.70. Clippers ML 2.30 — within range. SAS evaluation: 58-18, L10 10-0, streak W10, NetRtg +8.2. Clippers 39-37, L10 5-5, stats unavailable. Bradley Beal OUT for Clippers (Hip fracture). SAS spread: Clippers +3.5 at 1.90 — SAS is road favorite. NetRtg gap: SAS +8.2 vs Clippers (unavailable). Skills: do not bet spreads when advanced stats unavailable for a team. Clippers stats unavailable → spread BANNED per data_quality_rules. Clippers ML 2.30: SAS is elite (10-game streak, +8.2 NetRtg, road), Clippers missing Beal (franchise-level player). EV check on Clippers ML 2.30: would need ~43% confidence minimum (EV floor 0.05: (conf/100 × 2.30) - 1 ≥ 0.05 → conf ≥ 45.7%). Realistically SAS wins this ~70-75% probability → Clippers win probability ~25-30%. At 2.30 odds, EV = (0.28 × 2.30) - 1 = 0.644 - 1 = -0.356. Negative EV. Cannot draft Clippers ML. SAS ML 1.63: below 1.70 floor. No valid pick.",
+        "ml_home": 2.3,
+        "ml_away": 1.63,
+        "decision": "no_edge"
+      }
+    ],
+    "report": "**ZERO PICKS DRAFTED — Difficult slate with systemic constraints**\n\n**Detroit Pistons vs Minnesota Timberwolves** — REJECTED: Cade Cunningham confirmed OUT via NBA official report (Pneumothorax) → franchise player rule prohibits Detroit ML bet. Anthony Edwards Questionable for Minnesota prevents building thesis on his absence. Neither side offers a valid entry point.\n\n**Charlotte Hornets vs Phoenix Suns** — REJECTED: Charlotte ML 1.47 below floor; Phoenix 2.70 above cap. Spread evaluated (Charlotte L15 +38.2, strong recent form) but Phoenix L15 data missing → confidence drops below 60 spread floor. Mark Williams GTD adds additional uncertainty. No pick.\n\n**Oklahoma City Thunder vs Los Angeles Lakers** — REJECTED: ML odds both outside range (1.28/3.75). OKC -9.0 spread had EV potential (NetRtg gap 8.8) but OKC star rest risk with top seed locked, plus Lakers' genuine L10 9-1 form, kept confidence at borderline 60. Too many risk factors for a 9-point spread.\n\n**Golden State Warriors vs Cleveland Cavaliers** — REJECTED: Extreme spread (10.5 points) doesn't align with 4.2pt NetRtg gap. ML odds both outside range. GSW tank-watch but home — insufficient edge on spread.\n\n**Portland Trail Blazers vs New Orleans Pelicans** — REJECTED: Damian Lillard confirmed OUT (franchise player) eliminates Portland ML consideration. Portland +6.5 spread had surface appeal (NetRtg gap favors Portland) but Lillard absence is disqualifying. New Orleans stats don't justify backing them at these odds.\n\n**LA Clippers vs San Antonio Spurs** — REJECTED: SAS ML 1.63 below floor. Clippers ML 2.30 fails EV test (~-0.36 EV). Clippers advanced stats unavailable → spread banned per data quality rules. Bradley Beal OUT compounds Clippers' weakness.\n\n**Slate Assessment:** Tonight's slate is exceptionally difficult — franchise player absences, extreme ML odds outside target ranges, and missing advanced stats collectively eliminate all six games. Zero picks is the correct outcome; forcing any pick here would violate multiple core rules simultaneously.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 8232,
+    "tokens_out": 3264,
+    "cost_usd": 0.073656
   }
 ]
