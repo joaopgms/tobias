@@ -14,7 +14,7 @@
           "peak_bankroll": 1000.0,
           "final_bankroll": null,
           "net_pnl": null,
-          "total_bets": 12,
+          "total_bets": 13,
           "wins": 4,
           "losses": 8,
           "bust": false
@@ -565,6 +565,40 @@
         }
       ],
       "summary": "Day 2026-04-01 commit — 1 bets totalling €95.54. 1 cancelled. Bankroll: €477.68 → €382.14."
+    },
+    {
+      "entry_id": "nba_entry_20260402",
+      "season": "2024-25",
+      "game": 1,
+      "timestamp": "2026-04-02T22:30:58.499568+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 382.14,
+      "total_staked": 57.32,
+      "bankroll_after": 324.82,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260402_001",
+          "match": "LA Clippers vs San Antonio Spurs",
+          "time": "2026-04-03T02:30:00Z",
+          "pick": "San Antonio Spurs ML",
+          "odds": 2.05,
+          "stake": 57.32,
+          "potential_return": 117.51,
+          "reasoning": "LATE PICK — Victor Wembanyama confirmed OUT (Management) for SAS after Scout phase. Books adjusted from 1.63 to 2.05, a 0.42 move explained entirely by Wembanyama's absence. At 2.05, SAS implied win probability is 48.8%. Assessment: SAS (58-18, L10 10-0, NetRtg +8.2) is a significantly superior team overall vs Clippers (39-37, L10 5-5, stats unavailable). Both teams missing anchor players (Wembanyama OUT for SAS, Beal OUT for Clippers). SAS's systemic depth, elite record, and winning culture offset the road disadvantage and absence of their franchise player. Confidence 60% that SAS wins outright — EV = (0.60 × 2.05) - 1 = 0.23. Staked at 15% of bankroll (medium-confidence tier floor) given confidence at the late-scout threshold.",
+          "confidence": 60,
+          "anchor_players": [
+            "Victor Wembanyama (SAS — OUT, Management)",
+            "Bradley Beal (LAC — OUT, Hip Fracture)"
+          ],
+          "committed_at": "2026-04-02T22:31:00Z",
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null
+        }
+      ],
+      "summary": "Day 2026-04-02 commit — 1 bets totalling €57.32. 0 cancelled. Bankroll: €382.14 → €324.82."
     }
   ]
 }
