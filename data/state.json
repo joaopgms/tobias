@@ -6,10 +6,10 @@
   "bankroll_peak": 1000.0,
   "total_staked": 1125.51,
   "total_returned": 507.65,
-  "net_pnl": -522.32,
+  "net_pnl": -617.86,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-04-01T22:29:08.700261+00:00",
+  "last_updated": "2026-04-02T10:52:19.188826+00:00",
   "first_game_time": "2026-04-01T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
@@ -20,7 +20,7 @@
   "commit_updated_at": "2026-04-01T22:29:08.700261+00:00",
   "commit_date": "2026-04-01",
   "analyst_updated_at": "2026-04-01T11:52:04.779190+00:00",
-  "settler_updated_at": "2026-04-01T10:58:22.625351+00:00",
+  "settler_updated_at": "2026-04-02T10:52:19.188826+00:00",
   "agent_models": {
     "settler": "no-llm",
     "analyst": "claude-sonnet-4-6",
@@ -29,28 +29,7 @@
   },
   "last_report": "",
   "draft_picks": [],
-  "pending_bets": [
-    {
-      "id": "nba_bet_20260401_001",
-      "match": "Houston Rockets vs Milwaukee Bucks",
-      "time": "2026-04-02T00:00Z",
-      "pick": "Houston Rockets -18.5",
-      "odds": 1.93,
-      "stake": 95.54,
-      "potential_return": 184.39,
-      "reasoning": "Late scout pick. Giannis Antetokounmpo confirmed OUT (hyperextension/bone bruise) via NBA official report — Milwaukee's franchise anchor absent. MIL also missing Thanasis Antetokounmpo, Gary Harris, Kyle Kuzma, Kevin Porter Jr., Bobby Portis — essentially their entire rotation. MIL record 30-45 (L10: 3-7), NetRtg -6.3 vs HOU NetRtg +4.7 (gap 11.0 points). HOU: 46-29, L10: 6-4, playing at home. HOU OffRtg 117.9 vs MIL DefRtg 118.9 — HOU should score at will. MIL OffRtg 112.6 with depleted roster means HOU defense (DefRtg 113.2) should limit them. Confidence: 65 base +10 Giannis OUT +5 mass MIL absences -10 extreme spread -18.5 +2 HOU form = 72. EV = (0.72 × 1.93) - 1 = 0.390. Line moved from -17.0 to -18.5 (1.5 pts against, consistent with Giannis OUT confirmation — books adjusting). Odds 1.93 within spread target range 1.80-2.30. Stake: 20% of €477.68 = €95.54 (High confidence tier).",
-      "confidence": 72,
-      "anchor_players": [
-        "Giannis Antetokounmpo",
-        "Jalen Green",
-        "Alperen Sengun"
-      ],
-      "result": null,
-      "returned": null,
-      "pnl": null,
-      "settled_at": null
-    }
-  ],
+  "pending_bets": [],
   "settled_bets": [
     {
       "id": "nba_bet_20260319_001",
@@ -282,6 +261,26 @@
       "pnl": 48.84,
       "settled_at": "2026-03-31T10:53:52.104851+00:00",
       "committed_at": "2026-03-30T22:27:04Z"
+    },
+    {
+      "id": "nba_bet_20260401_001",
+      "match": "Houston Rockets vs Milwaukee Bucks",
+      "time": "2026-04-02T00:00Z",
+      "pick": "Houston Rockets -18.5",
+      "odds": 1.93,
+      "stake": 95.54,
+      "potential_return": 184.39,
+      "reasoning": "Late scout pick. Giannis Antetokounmpo confirmed OUT (hyperextension/bone bruise) via NBA official report — Milwaukee's franchise anchor absent. MIL also missing Thanasis Antetokounmpo, Gary Harris, Kyle Kuzma, Kevin Porter Jr., Bobby Portis — essentially their entire rotation. MIL record 30-45 (L10: 3-7), NetRtg -6.3 vs HOU NetRtg +4.7 (gap 11.0 points). HOU: 46-29, L10: 6-4, playing at home. HOU OffRtg 117.9 vs MIL DefRtg 118.9 — HOU should score at will. MIL OffRtg 112.6 with depleted roster means HOU defense (DefRtg 113.2) should limit them. Confidence: 65 base +10 Giannis OUT +5 mass MIL absences -10 extreme spread -18.5 +2 HOU form = 72. EV = (0.72 × 1.93) - 1 = 0.390. Line moved from -17.0 to -18.5 (1.5 pts against, consistent with Giannis OUT confirmation — books adjusting). Odds 1.93 within spread target range 1.80-2.30. Stake: 20% of €477.68 = €95.54 (High confidence tier).",
+      "confidence": 72,
+      "anchor_players": [
+        "Giannis Antetokounmpo",
+        "Jalen Green",
+        "Alperen Sengun"
+      ],
+      "result": "LOST",
+      "returned": 0.0,
+      "pnl": -95.54,
+      "settled_at": "2026-04-02T10:52:19.188826+00:00"
     }
   ],
   "rejected_games": [
@@ -541,13 +540,15 @@
       -44,
       -4,
       -10,
-      -17
+      -17,
+      8
     ],
     "New York Knicks": [
       5,
       -11,
       -11,
-      -17
+      -17,
+      11
     ],
     "New Orleans Pelicans": [
       -5,
@@ -565,7 +566,8 @@
       -5,
       4,
       -52,
-      4
+      4,
+      -29
     ],
     "Phoenix Suns": [
       -2,
@@ -577,12 +579,14 @@
       2,
       7,
       6,
-      23
+      23,
+      13
     ],
     "Miami Heat": [
       17,
       -17,
-      10
+      10,
+      -18
     ],
     "Dallas Mavericks": [
       -7,
@@ -601,12 +605,14 @@
       1,
       -7,
       10,
-      10
+      10,
+      29
     ],
     "Indiana Pacers": [
       -7,
       -1,
-      17
+      17,
+      19
     ],
     "Los Angeles Lakers": [
       7,
@@ -617,19 +623,22 @@
     "Philadelphia 76ers": [
       20,
       4,
-      -10
+      -10,
+      22
     ],
     "Chicago Bulls": [
       -20,
       -18,
       -1,
-      -15
+      -15,
+      -19
     ],
     "Boston Celtics": [
       10,
       7,
       15,
-      -10
+      -10,
+      18
     ],
     "Oklahoma City Thunder": [
       -10,
@@ -641,24 +650,28 @@
       -25,
       -10,
       1,
-      -26
+      -26,
+      -11
     ],
     "San Antonio Spurs": [
       25,
       32,
-      15
+      15,
+      14
     ],
     "Utah Jazz": [
       -23,
       -6,
       -25,
-      -9
+      -9,
+      -13
     ],
     "Washington Wizards": [
       23,
       -5,
       -35,
-      -19
+      -19,
+      -22
     ],
     "Minnesota Timberwolves": [
       2,
@@ -669,12 +682,14 @@
       -2,
       10,
       32,
-      17
+      17,
+      6
     ],
     "Golden State Warriors": [
       3,
       5,
-      -23
+      -23,
+      -14
     ],
     "Brooklyn Nets": [
       -3,
@@ -692,7 +707,8 @@
       -31,
       -32,
       -14,
-      24
+      24,
+      -6
     ],
     "LA Clippers": [
       25,
@@ -704,67 +720,77 @@
       -25,
       13,
       52,
-      -11
+      -11,
+      -8
     ]
   },
   "game_log_recorded": [
-    "Orlando Magic@Toronto Raptors",
-    "Denver Nuggets@Phoenix Suns",
-    "New Orleans Pelicans@Toronto Raptors",
-    "Phoenix Suns@Orlando Magic",
-    "Houston Rockets@Minnesota Timberwolves",
-    "Cleveland Cavaliers@Los Angeles Lakers",
-    "Dallas Mavericks@Portland Trail Blazers",
-    "Brooklyn Nets@Los Angeles Lakers",
-    "LA Clippers@Indiana Pacers",
-    "Boston Celtics@Atlanta Hawks",
-    "Houston Rockets@Memphis Grizzlies",
-    "Portland Trail Blazers@LA Clippers",
-    "Golden State Warriors@Denver Nuggets",
-    "Miami Heat@Cleveland Cavaliers",
-    "Boston Celtics@Charlotte Hornets",
-    "Chicago Bulls@Philadelphia 76ers",
-    "Brooklyn Nets@Golden State Warriors",
-    "Washington Wizards@Utah Jazz",
-    "Minnesota Timberwolves@Dallas Mavericks",
-    "New York Knicks@Houston Rockets",
-    "Dallas Mavericks@Milwaukee Bucks",
-    "Detroit Pistons@Oklahoma City Thunder",
-    "New York Knicks@Charlotte Hornets",
-    "Utah Jazz@Denver Nuggets",
-    "Toronto Raptors@Detroit Pistons",
-    "New Orleans Pelicans@New York Knicks",
-    "Milwaukee Bucks@Portland Trail Blazers",
-    "Cleveland Cavaliers@Utah Jazz",
-    "Washington Wizards@Golden State Warriors",
-    "Orlando Magic@Cleveland Cavaliers",
+    "Sacramento Kings@Atlanta Hawks",
     "Washington Wizards@Los Angeles Lakers",
-    "New Orleans Pelicans@Detroit Pistons",
+    "Phoenix Suns@Orlando Magic",
+    "Miami Heat@Cleveland Cavaliers",
+    "Brooklyn Nets@Golden State Warriors",
+    "San Antonio Spurs@Golden State Warriors",
+    "Milwaukee Bucks@Houston Rockets",
+    "Boston Celtics@Charlotte Hornets",
+    "Sacramento Kings@Toronto Raptors",
+    "Denver Nuggets@Utah Jazz",
+    "San Antonio Spurs@Memphis Grizzlies",
     "New York Knicks@Oklahoma City Thunder",
-    "Phoenix Suns@Memphis Grizzlies",
-    "Detroit Pistons@Minnesota Timberwolves",
-    "Philadelphia 76ers@Charlotte Hornets",
+    "Boston Celtics@Miami Heat",
+    "New York Knicks@Charlotte Hornets",
+    "Dallas Mavericks@Milwaukee Bucks",
+    "Atlanta Hawks@Boston Celtics",
+    "Dallas Mavericks@Denver Nuggets",
+    "Detroit Pistons@Oklahoma City Thunder",
     "Chicago Bulls@Memphis Grizzlies",
-    "San Antonio Spurs@Milwaukee Bucks",
-    "Charlotte Hornets@Brooklyn Nets",
-    "Los Angeles Lakers@Indiana Pacers",
-    "Atlanta Hawks@Detroit Pistons",
+    "Houston Rockets@New Orleans Pelicans",
     "Sacramento Kings@Charlotte Hornets",
-    "Chicago Bulls@Oklahoma City Thunder",
+    "Philadelphia 76ers@Charlotte Hornets",
+    "Charlotte Hornets@Brooklyn Nets",
+    "Philadelphia 76ers@Washington Wizards",
+    "Utah Jazz@Phoenix Suns",
+    "New Orleans Pelicans@New York Knicks",
+    "Houston Rockets@Memphis Grizzlies",
+    "Denver Nuggets@Phoenix Suns",
+    "Brooklyn Nets@Los Angeles Lakers",
+    "Oklahoma City Thunder@Boston Celtics",
+    "Los Angeles Lakers@Indiana Pacers",
+    "Cleveland Cavaliers@Los Angeles Lakers",
+    "Detroit Pistons@Minnesota Timberwolves",
+    "Golden State Warriors@Denver Nuggets",
+    "Portland Trail Blazers@LA Clippers",
+    "Minnesota Timberwolves@Dallas Mavericks",
+    "Utah Jazz@Denver Nuggets",
+    "Philadelphia 76ers@Miami Heat",
+    "Boston Celtics@Atlanta Hawks",
+    "Orlando Magic@Toronto Raptors",
+    "New Orleans Pelicans@Toronto Raptors",
+    "Washington Wizards@Utah Jazz",
+    "Houston Rockets@Minnesota Timberwolves",
+    "Cleveland Cavaliers@Utah Jazz",
+    "Toronto Raptors@LA Clippers",
+    "San Antonio Spurs@Milwaukee Bucks",
+    "Atlanta Hawks@Detroit Pistons",
+    "New York Knicks@Memphis Grizzlies",
+    "Chicago Bulls@Philadelphia 76ers",
+    "New Orleans Pelicans@Detroit Pistons",
+    "Washington Wizards@Golden State Warriors",
+    "LA Clippers@Indiana Pacers",
     "Washington Wizards@Portland Trail Blazers",
     "Miami Heat@Indiana Pacers",
-    "Sacramento Kings@Brooklyn Nets",
-    "Toronto Raptors@LA Clippers",
-    "LA Clippers@Milwaukee Bucks",
+    "Atlanta Hawks@Orlando Magic",
+    "Orlando Magic@Cleveland Cavaliers",
+    "Dallas Mavericks@Portland Trail Blazers",
+    "Chicago Bulls@Oklahoma City Thunder",
     "Sacramento Kings@Orlando Magic",
-    "Houston Rockets@New Orleans Pelicans",
-    "Sacramento Kings@Atlanta Hawks",
+    "LA Clippers@Milwaukee Bucks",
+    "Indiana Pacers@Chicago Bulls",
     "Chicago Bulls@San Antonio Spurs",
-    "Utah Jazz@Phoenix Suns",
-    "Dallas Mavericks@Denver Nuggets",
-    "San Antonio Spurs@Memphis Grizzlies",
-    "Philadelphia 76ers@Miami Heat",
-    "Oklahoma City Thunder@Boston Celtics",
-    "Atlanta Hawks@Boston Celtics"
+    "Milwaukee Bucks@Portland Trail Blazers",
+    "Toronto Raptors@Detroit Pistons",
+    "New York Knicks@Houston Rockets",
+    "Phoenix Suns@Memphis Grizzlies",
+    "Sacramento Kings@Brooklyn Nets"
   ]
 }
