@@ -1736,9 +1736,10 @@ function buildCommitCard(bet, idx, prefix, isCancelled=false) {
   const anchors=!isCancelled&&(bet.anchor_players||[]).length?
     `<div style="font-size:.68rem;color:var(--teal);margin-top:8px;padding:0 16px 10px">⚓ ${(bet.anchor_players||[]).join(', ')}</div>`:'';
   const cancelReason=isCancelled&&bet.reason?`<div class="report-cancelled-reason" style="padding:8px 16px 12px">${bet.reason}</div>`:'';
+  const reasoning=!isCancelled&&bet.reasoning?`<div class="game-card-body" id="${cardId}"><div style="font-size:.72rem;line-height:1.6;color:var(--text);white-space:pre-wrap;word-break:break-word">${bet.reasoning}</div></div>`:'';
 
   return `<div class="game-card ${cardClass}">
-    <div class="game-card-header">
+    <div class="game-card-header" ${!isCancelled&&bet.reasoning?"onclick="toggleGameCard('" + cardId + "')"":""} ${!isCancelled&&bet.reasoning?"style="cursor:pointer"":""}>
       <div class="game-card-teams">
         ${logoImg(hm,20)} ${getTeam(hm).short} <span style="font-size:.55rem;font-weight:700;color:var(--muted);background:var(--surface);border:1px solid var(--border2);border-radius:3px;padding:0 3px">H</span>
         <span style="color:var(--muted);font-size:.7rem;font-weight:400">vs</span>
@@ -1750,7 +1751,7 @@ function buildCommitCard(bet, idx, prefix, isCancelled=false) {
       </div>
     </div>
     ${chipsHtml?`<div class="game-card-chips">${chipsHtml}</div>`:''}
-    ${anchors}${cancelReason}
+    ${anchors}${cancelReason}${reasoning}
   </div>`;
 }
 
