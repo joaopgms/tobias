@@ -468,8 +468,14 @@ def run(store) -> None:
             extracted_raw = extract_tag(extraction_result.text, "draft_picks")
             if extracted_raw:
                 extracted_picks = json.loads(extracted_raw)
-                # Apply same filters
-                extracted_picks = [p for p in extracted_picks if p.get("confidence", 0) >= 40]
+                log.info(f"Scout: extraction retry raw picks: {len(extracted_picks)}")
+                for p in extracted_picks:
+                    log.info(f"  extracted: {p.get('pick')} @ {p.get('odds')} conf={p.get('confidence')} mtype={p.get('market_type')}")
+                # Apply same filters with logging
+                after_conf = [p for p in extracted_picks if p.get("confidence", 0) >= 40]
+                if len(after_conf) < len(extracted_picks):
+                    log.info(f"Scout: extraction — {len(extracted_picks)-len(after_conf)} dropped conf<40")
+                extracted_picks = after_conf
                 for p in extracted_picks:
                     pick_lower = (p.get("pick") or "").lower()
                     if " ml" in pick_lower or pick_lower.endswith(" ml"):
@@ -480,13 +486,19 @@ def run(store) -> None:
                         p["market_type"] = "total"
                 # Odds range filter
                 ODDS_RANGE = {"ml": (1.65, 2.50), "spread": (1.75, 2.35), "total": (1.75, 2.10)}
-                extracted_picks = [p for p in extracted_picks
-                                   if ODDS_RANGE.get(p.get("market_type","ml"), (1.65, 2.50))[0]
-                                   <= float(p.get("odds") or 0)
-                                   <= ODDS_RANGE.get(p.get("market_type","ml"), (1.65, 2.50))[1]]
+                after_odds = [p for p in extracted_picks
+                              if ODDS_RANGE.get(p.get("market_type","ml"), (1.65, 2.50))[0]
+                              <= float(p.get("odds") or 0)
+                              <= ODDS_RANGE.get(p.get("market_type","ml"), (1.65, 2.50))[1]]
+                if len(after_odds) < len(extracted_picks):
+                    log.info(f"Scout: extraction — {len(extracted_picks)-len(after_odds)} dropped odds-range")
+                extracted_picks = after_odds
                 # EV filter
-                extracted_picks = [p for p in extracted_picks
-                                   if p.get("confidence",0)/100 * float(p.get("odds") or 0) - 1 >= 0.05]
+                after_ev = [p for p in extracted_picks
+                            if p.get("confidence",0)/100 * float(p.get("odds") or 0) - 1 >= 0.05]
+                if len(after_ev) < len(extracted_picks):
+                    log.info(f"Scout: extraction — {len(extracted_picks)-len(after_ev)} dropped EV<5%")
+                extracted_picks = after_ev
                 if extracted_picks:
                     draft_picks = extracted_picks
                     log.info(f"Scout: extraction retry recovered {len(draft_picks)} pick(s)")
@@ -495,7 +507,7 @@ def run(store) -> None:
                         llm_result.tokens_out += extraction_result.tokens_out
                         llm_result.cost_usd   += extraction_result.cost_usd
                 else:
-                    log.info("Scout: extraction retry ran but picks didn't pass filters")
+                    log.info("Scout: extraction retry ran but all picks filtered out")
             else:
                 log.warning("Scout: extraction retry returned no <draft_picks> tag")
         except Exception as e:
