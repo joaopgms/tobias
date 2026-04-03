@@ -1,15 +1,15 @@
 {
   "season": "2024-25",
   "game": 1,
-  "bankroll": 324.82,
+  "bankroll": 442.33,
   "bankroll_initial": 1000.0,
   "bankroll_peak": 1000.0,
   "total_staked": 1182.83,
-  "total_returned": 507.65,
-  "net_pnl": -617.86,
+  "total_returned": 625.16,
+  "net_pnl": -557.67,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-04-02T22:30:58.499568+00:00",
+  "last_updated": "2026-04-03T10:45:23.073155+00:00",
   "first_game_time": "2026-04-02T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
@@ -20,7 +20,7 @@
   "commit_updated_at": "2026-04-02T22:30:58.499568+00:00",
   "commit_date": "2026-04-02",
   "analyst_updated_at": "2026-04-02T11:43:30.572422+00:00",
-  "settler_updated_at": "2026-04-02T10:52:19.188826+00:00",
+  "settler_updated_at": "2026-04-03T10:45:23.073155+00:00",
   "agent_models": {
     "settler": "no-llm",
     "analyst": "claude-sonnet-4-6",
@@ -29,28 +29,7 @@
   },
   "last_report": "## Commit Report — 2026-04-02T22:31:00Z\n**Bankroll: €382.14 | Draft picks reviewed: 0 | Late picks added: 1**\n\n---\n\n### CONFIRMED — San Antonio Spurs ML (Late Pick)\n\n- **Match:** LA Clippers vs San Antonio Spurs | Tip: 2026-04-03T02:30 UTC\n- **Pick:** San Antonio Spurs ML | Scout odds: N/A (not drafted at Scout) | Commit odds: 2.05 | Move: N/A (new pick; SAS was 1.63 at Scout — below floor — now 2.05)\n- **ML:** H:1.79 / A:2.05 | **ATS:** Clippers -2.0 (1.92/1.90) | **O/U:** N/A\n- **Stake:** €57.32 (15% bankroll) | **Pot return:** €117.51 | **Conf:** 60/100 | **EV:** 0.23\n- **Decision:** Victor Wembanyama confirmed OUT (Management) after Scout phase — classic late-scout trigger. Books adjusted SAS odds from 1.63 (below floor) to 2.05 (in range), a 0.42-point move fully explained by Wembanyama's absence. At 2.05, implied win probability for SAS is 48.8%. Counter-thesis: SAS (58-18, L10 10-0, NetRtg +8.2) has demonstrably superior team quality vs Clippers (39-37, L10 5-5). Both teams missing their anchor players (Wembanyama + Beal), partially neutralising the impact. SAS's depth, winning culture, and record gap support 60%+ win probability even road. EV = 0.23 is strong. All gates cleared: time (4h to tip), quantity (1 new pick), confidence (60 = floor), EV (0.23 ≥ 0.05), odds (2.05 within 1.65–2.50 range).\n\n---\n\n### CANCELLED DRAFT PICKS\n*No draft picks were submitted by Scout — nothing to cancel.*\n\n---\n\n### LATE SCOUT REJECTIONS SUMMARY\nAll six scheduled games were re-examined. Five were rejected for the same fundamental issues Scout identified (ML odds outside range, franchise players absent, spread confidence below 60). The SA/LAC game presented a new edge when Wembanyama's absence moved SAS ML from 1.63 into range at 2.05. The spread in that game was rejected due to unavailable Clippers advanced stats.\n\n---\n\n### Slate Summary\nWith no Scout draft picks to review, tonight's commit phase focused exclusively on late-breaking information. The critical development was Victor Wembanyama confirmed OUT (Management) for San Antonio, shifting their ML from an unusable 1.63 to a playable 2.05. Anthony Edwards confirmed OUT for Minnesota was the other major late injury, but with Cade Cunningham also absent for Detroit, franchise_player_rules prevent action in that game. One late pick committed: **SAS ML at 2.05, €57.32 staked, 15% bankroll exposure**, targeting €117.51 return with EV of 0.23.",
   "draft_picks": [],
-  "pending_bets": [
-    {
-      "id": "nba_bet_20260402_001",
-      "match": "LA Clippers vs San Antonio Spurs",
-      "time": "2026-04-03T02:30:00Z",
-      "pick": "San Antonio Spurs ML",
-      "odds": 2.05,
-      "stake": 57.32,
-      "potential_return": 117.51,
-      "reasoning": "LATE PICK — Victor Wembanyama confirmed OUT (Management) for SAS after Scout phase. Books adjusted from 1.63 to 2.05, a 0.42 move explained entirely by Wembanyama's absence. At 2.05, SAS implied win probability is 48.8%. Assessment: SAS (58-18, L10 10-0, NetRtg +8.2) is a significantly superior team overall vs Clippers (39-37, L10 5-5, stats unavailable). Both teams missing anchor players (Wembanyama OUT for SAS, Beal OUT for Clippers). SAS's systemic depth, elite record, and winning culture offset the road disadvantage and absence of their franchise player. Confidence 60% that SAS wins outright — EV = (0.60 × 2.05) - 1 = 0.23. Staked at 15% of bankroll (medium-confidence tier floor) given confidence at the late-scout threshold.",
-      "confidence": 60,
-      "anchor_players": [
-        "Victor Wembanyama (SAS — OUT, Management)",
-        "Bradley Beal (LAC — OUT, Hip Fracture)"
-      ],
-      "committed_at": "2026-04-02T22:31:00Z",
-      "result": null,
-      "returned": null,
-      "pnl": null,
-      "settled_at": null
-    }
-  ],
+  "pending_bets": [],
   "settled_bets": [
     {
       "id": "nba_bet_20260319_001",
@@ -302,6 +281,26 @@
       "returned": 0.0,
       "pnl": -95.54,
       "settled_at": "2026-04-02T10:52:19.188826+00:00"
+    },
+    {
+      "id": "nba_bet_20260402_001",
+      "match": "LA Clippers vs San Antonio Spurs",
+      "time": "2026-04-03T02:30:00Z",
+      "pick": "San Antonio Spurs ML",
+      "odds": 2.05,
+      "stake": 57.32,
+      "potential_return": 117.51,
+      "reasoning": "LATE PICK — Victor Wembanyama confirmed OUT (Management) for SAS after Scout phase. Books adjusted from 1.63 to 2.05, a 0.42 move explained entirely by Wembanyama's absence. At 2.05, SAS implied win probability is 48.8%. Assessment: SAS (58-18, L10 10-0, NetRtg +8.2) is a significantly superior team overall vs Clippers (39-37, L10 5-5, stats unavailable). Both teams missing anchor players (Wembanyama OUT for SAS, Beal OUT for Clippers). SAS's systemic depth, elite record, and winning culture offset the road disadvantage and absence of their franchise player. Confidence 60% that SAS wins outright — EV = (0.60 × 2.05) - 1 = 0.23. Staked at 15% of bankroll (medium-confidence tier floor) given confidence at the late-scout threshold.",
+      "confidence": 60,
+      "anchor_players": [
+        "Victor Wembanyama (SAS — OUT, Management)",
+        "Bradley Beal (LAC — OUT, Hip Fracture)"
+      ],
+      "committed_at": "2026-04-02T22:31:00Z",
+      "result": "WON",
+      "returned": 117.51,
+      "pnl": 60.19,
+      "settled_at": "2026-04-03T10:45:23.073155+00:00"
     }
   ],
   "rejected_games": [
@@ -492,7 +491,8 @@
       11,
       -4,
       -15,
-      31
+      31,
+      20
     ],
     "Sacramento Kings": [
       -44,
@@ -512,13 +512,15 @@
       -5,
       -21,
       -13,
-      -32
+      -32,
+      -12
     ],
     "Cleveland Cavaliers": [
       5,
       -17,
       9,
-      -14
+      -14,
+      7
     ],
     "Orlando Magic": [
       -5,
@@ -531,7 +533,8 @@
       -2,
       25,
       26,
-      -4
+      -4,
+      -20
     ],
     "Denver Nuggets": [
       2,
@@ -557,7 +560,8 @@
       21,
       22,
       -4,
-      11
+      11,
+      5
     ],
     "Atlanta Hawks": [
       1,
@@ -576,7 +580,8 @@
       7,
       17,
       19,
-      14
+      14,
+      -43
     ],
     "Philadelphia 76ers": [
       20,
@@ -602,7 +607,8 @@
       -10,
       18,
       11,
-      4
+      4,
+      43
     ],
     "Memphis Grizzlies": [
       -25,
@@ -615,7 +621,8 @@
       25,
       32,
       15,
-      14
+      14,
+      19
     ],
     "Utah Jazz": [
       -23,
@@ -634,7 +641,8 @@
     "Minnesota Timberwolves": [
       2,
       -22,
-      30
+      30,
+      -5
     ],
     "Houston Rockets": [
       -2,
@@ -647,7 +655,8 @@
       3,
       5,
       -23,
-      -14
+      -14,
+      -7
     ],
     "Brooklyn Nets": [
       -3,
@@ -659,7 +668,8 @@
       31,
       -7,
       35,
-      10
+      10,
+      12
     ],
     "Milwaukee Bucks": [
       -31,
@@ -672,7 +682,8 @@
       25,
       1,
       14,
-      -10
+      -10,
+      -19
     ],
     "Toronto Raptors": [
       -25,
@@ -683,72 +694,78 @@
     ]
   },
   "game_log_recorded": [
-    "Sacramento Kings@Atlanta Hawks",
-    "Washington Wizards@Los Angeles Lakers",
-    "Phoenix Suns@Orlando Magic",
-    "Miami Heat@Cleveland Cavaliers",
-    "Brooklyn Nets@Golden State Warriors",
-    "San Antonio Spurs@Golden State Warriors",
-    "Milwaukee Bucks@Houston Rockets",
-    "Boston Celtics@Charlotte Hornets",
-    "Sacramento Kings@Toronto Raptors",
-    "Denver Nuggets@Utah Jazz",
-    "San Antonio Spurs@Memphis Grizzlies",
-    "New York Knicks@Oklahoma City Thunder",
-    "Boston Celtics@Miami Heat",
-    "New York Knicks@Charlotte Hornets",
-    "Dallas Mavericks@Milwaukee Bucks",
-    "Atlanta Hawks@Boston Celtics",
-    "Dallas Mavericks@Denver Nuggets",
-    "Detroit Pistons@Oklahoma City Thunder",
-    "Chicago Bulls@Memphis Grizzlies",
-    "Houston Rockets@New Orleans Pelicans",
-    "Sacramento Kings@Charlotte Hornets",
-    "Philadelphia 76ers@Charlotte Hornets",
-    "Charlotte Hornets@Brooklyn Nets",
-    "Philadelphia 76ers@Washington Wizards",
-    "Utah Jazz@Phoenix Suns",
-    "New Orleans Pelicans@New York Knicks",
-    "Houston Rockets@Memphis Grizzlies",
-    "Denver Nuggets@Phoenix Suns",
-    "Brooklyn Nets@Los Angeles Lakers",
-    "Oklahoma City Thunder@Boston Celtics",
-    "Los Angeles Lakers@Indiana Pacers",
-    "Cleveland Cavaliers@Los Angeles Lakers",
-    "Detroit Pistons@Minnesota Timberwolves",
-    "Golden State Warriors@Denver Nuggets",
-    "Portland Trail Blazers@LA Clippers",
-    "Minnesota Timberwolves@Dallas Mavericks",
-    "Utah Jazz@Denver Nuggets",
-    "Philadelphia 76ers@Miami Heat",
-    "Boston Celtics@Atlanta Hawks",
-    "Orlando Magic@Toronto Raptors",
-    "New Orleans Pelicans@Toronto Raptors",
-    "Washington Wizards@Utah Jazz",
-    "Houston Rockets@Minnesota Timberwolves",
-    "Cleveland Cavaliers@Utah Jazz",
     "Toronto Raptors@LA Clippers",
-    "San Antonio Spurs@Milwaukee Bucks",
-    "Atlanta Hawks@Detroit Pistons",
-    "New York Knicks@Memphis Grizzlies",
+    "Atlanta Hawks@Boston Celtics",
+    "Houston Rockets@Memphis Grizzlies",
+    "Dallas Mavericks@Denver Nuggets",
+    "Miami Heat@Indiana Pacers",
+    "Dallas Mavericks@Milwaukee Bucks",
+    "LA Clippers@Milwaukee Bucks",
+    "Phoenix Suns@Charlotte Hornets",
+    "Charlotte Hornets@Brooklyn Nets",
+    "Orlando Magic@Cleveland Cavaliers",
+    "Sacramento Kings@Atlanta Hawks",
+    "Boston Celtics@Atlanta Hawks",
+    "Houston Rockets@Minnesota Timberwolves",
     "Chicago Bulls@Philadelphia 76ers",
-    "New Orleans Pelicans@Detroit Pistons",
+    "San Antonio Spurs@Milwaukee Bucks",
+    "Boston Celtics@Miami Heat",
+    "New Orleans Pelicans@New York Knicks",
+    "Oklahoma City Thunder@Boston Celtics",
+    "Cleveland Cavaliers@Golden State Warriors",
+    "Los Angeles Lakers@Oklahoma City Thunder",
+    "Dallas Mavericks@Portland Trail Blazers",
+    "Phoenix Suns@Orlando Magic",
+    "Philadelphia 76ers@Washington Wizards",
+    "Philadelphia 76ers@Miami Heat",
+    "Chicago Bulls@Memphis Grizzlies",
+    "Brooklyn Nets@Los Angeles Lakers",
+    "Washington Wizards@Utah Jazz",
     "Washington Wizards@Golden State Warriors",
     "LA Clippers@Indiana Pacers",
-    "Washington Wizards@Portland Trail Blazers",
-    "Miami Heat@Indiana Pacers",
-    "Atlanta Hawks@Orlando Magic",
-    "Orlando Magic@Cleveland Cavaliers",
-    "Dallas Mavericks@Portland Trail Blazers",
-    "Chicago Bulls@Oklahoma City Thunder",
+    "San Antonio Spurs@Golden State Warriors",
+    "Milwaukee Bucks@Houston Rockets",
+    "Washington Wizards@Los Angeles Lakers",
+    "New Orleans Pelicans@Toronto Raptors",
+    "Sacramento Kings@Toronto Raptors",
+    "New York Knicks@Oklahoma City Thunder",
+    "Boston Celtics@Charlotte Hornets",
+    "Atlanta Hawks@Detroit Pistons",
+    "New Orleans Pelicans@Portland Trail Blazers",
+    "Brooklyn Nets@Golden State Warriors",
+    "San Antonio Spurs@LA Clippers",
+    "New York Knicks@Memphis Grizzlies",
+    "Denver Nuggets@Phoenix Suns",
+    "Cleveland Cavaliers@Los Angeles Lakers",
+    "Sacramento Kings@Charlotte Hornets",
+    "Denver Nuggets@Utah Jazz",
+    "Los Angeles Lakers@Indiana Pacers",
+    "Golden State Warriors@Denver Nuggets",
     "Sacramento Kings@Orlando Magic",
-    "LA Clippers@Milwaukee Bucks",
-    "Indiana Pacers@Chicago Bulls",
+    "New York Knicks@Charlotte Hornets",
+    "Houston Rockets@New Orleans Pelicans",
+    "Philadelphia 76ers@Charlotte Hornets",
+    "Portland Trail Blazers@LA Clippers",
+    "Miami Heat@Cleveland Cavaliers",
+    "Orlando Magic@Toronto Raptors",
     "Chicago Bulls@San Antonio Spurs",
+    "New Orleans Pelicans@Detroit Pistons",
+    "Cleveland Cavaliers@Utah Jazz",
+    "Detroit Pistons@Minnesota Timberwolves",
+    "Sacramento Kings@Brooklyn Nets",
+    "San Antonio Spurs@Memphis Grizzlies",
+    "Detroit Pistons@Oklahoma City Thunder",
+    "Utah Jazz@Phoenix Suns",
+    "Utah Jazz@Denver Nuggets",
+    "Atlanta Hawks@Orlando Magic",
+    "New York Knicks@Houston Rockets",
+    "Indiana Pacers@Chicago Bulls",
     "Milwaukee Bucks@Portland Trail Blazers",
     "Toronto Raptors@Detroit Pistons",
-    "New York Knicks@Houston Rockets",
+    "Washington Wizards@Portland Trail Blazers",
     "Phoenix Suns@Memphis Grizzlies",
-    "Sacramento Kings@Brooklyn Nets"
+    "Chicago Bulls@Oklahoma City Thunder",
+    "Minnesota Timberwolves@Dallas Mavericks",
+    "Minnesota Timberwolves@Detroit Pistons"
   ]
 }
