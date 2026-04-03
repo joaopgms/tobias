@@ -9,12 +9,12 @@
   "net_pnl": -557.67,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-04-03T14:50:42.146461+00:00",
+  "last_updated": "2026-04-03T16:46:39.239653+00:00",
   "first_game_time": "2026-04-03T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
-  "scout_updated_at": "2026-04-03T14:50:42.146461+00:00",
+  "scout_updated_at": "2026-04-03T16:46:39.239653+00:00",
   "scout_odds_source": "theodds_unibet",
   "commit_status": "pending",
   "commit_updated_at": "2026-04-02T22:30:58.499568+00:00",
@@ -27,7 +27,7 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "**DRAFTED PICKS:**\n\n**Charlotte Hornets -15.5 (1.89) — Spread:** Charlotte hosts a catastrophically depleted Indiana team missing Haliburton, McConnell, Nembhard, and Nesmith — their entire backcourt rotation is absent. Charlotte's L15 NetRtg of +41.3 is exceptional, and the play-in motivation factor is strong at home. NetRtg gap of 13.1 points plus Indiana's confirmed tank status makes this a high-conviction spread play despite the large line. EV: 0.361.\n\n**Atlanta Hawks -17.0 (1.93) — Spread:** Brooklyn's roster is essentially a G-League squad tonight with Porter Jr., Sharpe, Wolf, and Demin all confirmed OUT. Atlanta's L15 +24.5 gives clear directional edge. Hot-streak fade rule acknowledged but does not override a matchup this extreme. Road adjustment applied (-5 to confidence). EV: 0.255.\n\n**Houston Rockets -16.5 (1.90) — Spread:** Utah is fully tanking (21-56, L10: 1-9) and missing all three key guards tonight. Houston's L15 +35.9 is the best recent form figure on the slate. The L15 gap of 79+ points is the largest of any matchup tonight. Houston retains playoff motivation and home court. EV: 0.368.\n\n**Boston Celtics -17.5 (1.90) — Spread:** Giannis confirmed OUT via official NBA injury report — this removes Milwaukee's franchise player and defensive anchor. Combined with Portis, Porter Jr. OUT and two more Questionable, the Bucks are fielding an undermanned squad. Boston's elite NetRtg +7.7 and L15 +22.8 represent clear dominance. The 14-point NetRtg gap is the largest between any two teams on tonight's slate. EV: 0.387.\n\n**REJECTED GAMES:**\n- PHI vs MIN — Embiid Doubtful + Edwards verification required; combined uncertainty drops confidence to floor with marginal EV. Rejected.\n- NYK vs CHI — NYK L15 -13.1 primary signal undermines large spread; ML odds outside range. Rejected.\n- MEM vs TOR — Quickley (franchise) confirmed OUT drops TOR spread confidence to 50, below 60 floor. Rejected.\n- ORL vs DAL — ORL L15 -44.5 catastrophic; both ML odds outside target range. No valid side. Rejected.\n- SAC vs NOP — NOP L15 (-47.3) worse than SAC (-38.2) despite being spread favorite; both MLs outside range. No edge. Rejected.\n\n**Slate quality:** Tonight's slate features several extreme mismatches driven by franchise player absences and confirmed tank-mode rosters, creating genuine spread edges rather than ML value (most ML odds fall well outside the 1.70–2.50 target range). Four spread picks identified with strong EV (0.255–0.387). Total committed: €296.36 (67% of bankroll — within 70% cap). Pace data is available but O/U lines are not offered tonight, so totals market is unavailable.",
+  "last_report": "Difficult slate dominated by extreme mismatches (ML odds outside target range for most games) and confirmed tank teams. Two picks drafted: MIN ML at 2.12 (EV 0.166) exploiting PHI regression risk and Embiid doubtful status; HOU -16.5 spread at 1.89 (EV 0.361) backed by dominant L15 gap, Utah's confirmed tank with multiple stars out, and DefRtg gap > 8pts. Injury data from nba_official (full 16-team coverage) — normal confidence rules applied. Pace data available but O/U markets absent from tonight's feed for all games. Total bankroll at risk: €88.46 (20% of €442.33) — within daily 70% cap. Key monitor before tip: Anthony Edwards (MIN — Questionable), to be flagged at Commit phase.",
   "draft_picks": [],
   "pending_bets": [],
   "settled_bets": [
@@ -305,39 +305,53 @@
   ],
   "rejected_games": [
     {
-      "match": "Philadelphia 76ers vs Minnesota Timberwolves",
-      "reason": "Joel Embiid Doubtful (franchise player) → confidence -15. Anthony Edwards verification required per skills. MIN confidence drops to 50 after penalties — at floor with EV barely 0.05. Combined uncertainty (Embiid GTD + Edwards unverified) makes this too risky. PHI ML 1.75 in range but Embiid uncertainty undercuts any PHI pick.",
-      "ml_home": 1.75,
-      "ml_away": 2.1,
-      "decision": "no_edge"
+      "match": "Charlotte Hornets vs Indiana Pacers",
+      "reason": "Charlotte ML 1.10 far below 1.70 target floor. Spread -15.0 at 1.90 considered — Indiana confirmed tank (18-58, L10 3-7) vs Charlotte play-in motivated, but Indiana injury report shows Haliburton, Nembhard, McConnell, Nesmith all OUT — Indiana severely depleted, Charlotte covering -15 uncertain. Charlotte L15 +41.3 is elite recent form. However, Indiana without four starters may simply not score enough to make it competitive — yet -15 ATS for a team rated NetRtg +5.1 vs -8.0 opponent is high-risk for cover. No O/U available. ML unplayable at 1.10. Rejecting entire game — no market in valid odds range with sufficient confidence.",
+      "ml_home": 1.1,
+      "ml_away": 7.0,
+      "decision": "rejected"
+    },
+    {
+      "match": "Brooklyn Nets vs Atlanta Hawks",
+      "reason": "Atlanta ML 1.06 — far below floor. Brooklyn ML 9.50 — above 2.50 ceiling. Spread: Brooklyn +17.0 at 1.90 considered. ATL is hot-streak fade candidate (NetRtg +2.2 vs .571 W%) but opponent is confirmed tank BKN (18-58, L10 1-9). ATL covering -17 is the natural bet — but -17 ATS with high cover variance and ATL fade risk makes confidence marginal. ATL L15 +24.5 strong. BKN NetRtg -9.8. Skills note tank teams don't cover spreads which favors ATL ATS, but -17 is extreme and unpredictable. Confidence for ATL -17 spread estimated at 63 — just above 60 floor but EV at 63: (0.63×1.90)-1=0.197. Marginal case — however, ATL hot-streak fade rule and the extreme spread size create too much uncertainty. Rejecting.",
+      "ml_home": 9.5,
+      "ml_away": 1.06,
+      "decision": "rejected"
     },
     {
       "match": "New York Knicks vs Chicago Bulls",
-      "reason": "NYK ML 1.08 outside target range. Spread -16.0 undermined by NYK L15 -13.1 (negative recent form — primary signal per skills). CHI confirmed tank but NYK recent form collapse makes -16 spread unreliable.",
-      "ml_home": 1.08,
-      "ml_away": 8.5,
-      "decision": "no_edge"
+      "reason": "NYK ML 1.10 far below floor. Bulls ML 7.0 above ceiling. Spread NYK -14.0 at 1.89 considered. Bulls confirmed near-tank (29-47, L10 2-8, L15 -41.6). NYK NetRtg +6.2, L15 -13.1 — CRITICAL FLAG: NYK L15 is NEGATIVE at -13.1 despite strong season NetRtg. This contradicts their strong record and is a major red flag for tonight. KAT Questionable (elbow). Bulls Zach Collins OUT but Bulls are confirmed poor. NYK L15 -13.1 means they've been below average in last 15 games — this directly undermines the spread case. NYK -14 ATS with L15 showing recent decline and KAT questionable = insufficient confidence. Rejecting.",
+      "ml_home": 1.1,
+      "ml_away": 7.0,
+      "decision": "rejected"
     },
     {
       "match": "Memphis Grizzlies vs Toronto Raptors",
-      "reason": "TOR ML 1.13 outside range. MEM ML 6.25 outside range. TOR spread +13.5 at 1.90 — Immanuel Quickley (franchise) confirmed OUT → confidence -15 drops spread confidence to 50, below 60 floor. Rejected.",
-      "ml_home": 6.25,
-      "ml_away": 1.13,
-      "decision": "no_edge"
+      "reason": "Memphis ML 6.75 above 2.50 ceiling. Toronto ML 1.11 far below floor. Spread: Memphis +14.0 at 1.89. Memphis confirmed tank-adjacent (25-51, L10 2-8, L15 -40.5). Toronto NetRtg +1.8, L15 +12.0 — decent recent form. Toronto on two-game losing streak. Immanuel Quickley OUT (franchise player — confirmed nba_official). Jamison Battle Questionable. Quickley absence significantly weakens Toronto. With Quickley OUT, Toronto's ceiling drops materially. Toronto covering -14 against a depleted Memphis (Aldama, KCP, Clarke, Edey, Jerome all OUT per nba_official — Memphis severely short-handed) creates unpredictable game script. ML unplayable both sides. No O/U. Rejecting.",
+      "ml_home": 6.75,
+      "ml_away": 1.11,
+      "decision": "rejected"
     },
     {
-      "match": "Orlando Magic vs Dallas Mavericks",
-      "reason": "ORL ML 1.35 below 1.70 floor. DAL ML 3.30 above 2.50 ceiling. ORL L15 -44.5 catastrophic — cannot justify ORL -7.5 spread with that form. DAL confirmed tank + Kyrie OUT makes DAL spread unattractive. No valid side.",
-      "ml_home": 3.3,
-      "ml_away": 1.35,
-      "decision": "no_edge"
+      "match": "Milwaukee Bucks vs Boston Celtics",
+      "reason": "Milwaukee ML 10.0 above ceiling. Boston ML 1.06 far below floor. Spread: Milwaukee +17.5 at 1.90 considered. Giannis Antetokounmpo OUT (franchise player — confirmed nba_official). Milwaukee confirmed tank-watch (30-46, L10 3-7, L15 -33.6). Boston L15 +22.8, NetRtg +7.7. Celtics are strong favourite — but BOS ML 1.06 unplayable. BOS -17.5 ATS: with Giannis OUT, Milwaukee severely weakened and tank confirmed. BOS NetRtg +7.7 vs MIL -6.3 = gap 14.0 — large. Skills: 'Tank team as large underdog — tankers don't cover spreads.' Favors BOS covering. However, BOS may rest stars (51-25, seeding likely secured). Vucevic OUT already. No seeding motivation to run up the score. Late-season rest risk for Boston undermines ATS confidence. BOS resting Tatum/Brown possible at +51-win pace. Confidence insufficient without star rest confirmation. Rejecting.",
+      "ml_home": 10.0,
+      "ml_away": 1.06,
+      "decision": "rejected"
+    },
+    {
+      "match": "Dallas Mavericks vs Orlando Magic",
+      "reason": "Dallas ML 3.20 — within target range (1.70-2.50)? No, 3.20 exceeds 2.50 ceiling. Orlando ML 1.36 below floor. Spread: Dallas +7.0 at 1.93 (home). Dallas confirmed tank (24-52, L10 2-8). Kyrie Irving OUT, Lively OUT — Dallas missing two key players. Orlando L10 2-8, L15 -44.5 — Orlando also in terrible recent form. NetRtg: Orlando -0.2 vs Dallas -5.6. Orlando is the away team at -7.0 odds for Dallas (meaning Dallas getting +7 at home). With both teams in poor form (ORL L10 2-8, L15 -44.5 catastrophic; DAL tank), this is a volatile low-quality matchup. Orlando L15 -44.5 is among the worst in the slate — their recent form is terrible. Dallas +7 at home against a team with L15 -44.5 has some appeal, but Dallas is a confirmed tank and Irving/Lively OUT. Skills: 'When betting ON tanking teams: require odds ≥ 2.20.' DAL ML 3.20 exceeds 2.20 threshold but also exceeds 2.50 ceiling. No clean market entry. Rejecting.",
+      "ml_home": 3.2,
+      "ml_away": 1.36,
+      "decision": "rejected"
     },
     {
       "match": "Sacramento Kings vs New Orleans Pelicans",
-      "reason": "SAC ML 2.70 above 2.50 ceiling. NOP ML 1.47 below 1.70 floor. NOP L15 -47.3 is WORSE than SAC L15 -38.2 — NOP -5 spread has no credible edge when their recent form is worse than the opponent they are favored over. Both teams in poor form. No valid pick.",
-      "ml_home": 2.7,
-      "ml_away": 1.47,
-      "decision": "no_edge"
+      "reason": "Sacramento ML 2.85 — within target range. Pelicans ML 1.44 below floor. Evaluating SAC ML at 2.85: SAC confirmed tank (20-57, L10 4-6, L15 -38.2). Pelicans NetRtg -4.7, L15 -47.3 — catastrophic recent form. Both teams are poor. SAC L10 4-6 slightly better than NOP L10 3-7. NOP at -47.3 L15 is among worst in slate. However, SAC is a confirmed tank — skills say ML on tanks requires odds ≥ 2.20 AND strong situational reason. SAC ML 2.85 exceeds 2.20. SAC home court advantage. But SAC NetRtg -10.2 season (worst in league) vs NOP -4.7 — NOP is actually better on season stats despite terrible L15. Season NetRtg gap favors NOP by 5.5 pts. SAC L15 -38.2 also very negative. This is two terrible teams — coin flip with no genuine edge. SAC ML 2.85 has superficial appeal but no real statistical backing given SAC's worse season NetRtg. Rejecting — no genuine edge, two tanks/near-tanks colliding.",
+      "ml_home": 2.85,
+      "ml_away": 1.44,
+      "decision": "rejected"
     }
   ],
   "late_scout_rejections": [
@@ -368,51 +382,65 @@
   ],
   "scout_report_data": {
     "date": "2026-04-03",
-    "updated_at": "2026-04-03T14:50:42.146461+00:00",
+    "updated_at": "2026-04-03T16:46:39.239653+00:00",
     "picks": [],
     "rejected": [
       {
-        "match": "Philadelphia 76ers vs Minnesota Timberwolves",
-        "reason": "Joel Embiid Doubtful (franchise player) → confidence -15. Anthony Edwards verification required per skills. MIN confidence drops to 50 after penalties — at floor with EV barely 0.05. Combined uncertainty (Embiid GTD + Edwards unverified) makes this too risky. PHI ML 1.75 in range but Embiid uncertainty undercuts any PHI pick.",
-        "ml_home": 1.75,
-        "ml_away": 2.1,
-        "decision": "no_edge"
+        "match": "Charlotte Hornets vs Indiana Pacers",
+        "reason": "Charlotte ML 1.10 far below 1.70 target floor. Spread -15.0 at 1.90 considered — Indiana confirmed tank (18-58, L10 3-7) vs Charlotte play-in motivated, but Indiana injury report shows Haliburton, Nembhard, McConnell, Nesmith all OUT — Indiana severely depleted, Charlotte covering -15 uncertain. Charlotte L15 +41.3 is elite recent form. However, Indiana without four starters may simply not score enough to make it competitive — yet -15 ATS for a team rated NetRtg +5.1 vs -8.0 opponent is high-risk for cover. No O/U available. ML unplayable at 1.10. Rejecting entire game — no market in valid odds range with sufficient confidence.",
+        "ml_home": 1.1,
+        "ml_away": 7.0,
+        "decision": "rejected"
+      },
+      {
+        "match": "Brooklyn Nets vs Atlanta Hawks",
+        "reason": "Atlanta ML 1.06 — far below floor. Brooklyn ML 9.50 — above 2.50 ceiling. Spread: Brooklyn +17.0 at 1.90 considered. ATL is hot-streak fade candidate (NetRtg +2.2 vs .571 W%) but opponent is confirmed tank BKN (18-58, L10 1-9). ATL covering -17 is the natural bet — but -17 ATS with high cover variance and ATL fade risk makes confidence marginal. ATL L15 +24.5 strong. BKN NetRtg -9.8. Skills note tank teams don't cover spreads which favors ATL ATS, but -17 is extreme and unpredictable. Confidence for ATL -17 spread estimated at 63 — just above 60 floor but EV at 63: (0.63×1.90)-1=0.197. Marginal case — however, ATL hot-streak fade rule and the extreme spread size create too much uncertainty. Rejecting.",
+        "ml_home": 9.5,
+        "ml_away": 1.06,
+        "decision": "rejected"
       },
       {
         "match": "New York Knicks vs Chicago Bulls",
-        "reason": "NYK ML 1.08 outside target range. Spread -16.0 undermined by NYK L15 -13.1 (negative recent form — primary signal per skills). CHI confirmed tank but NYK recent form collapse makes -16 spread unreliable.",
-        "ml_home": 1.08,
-        "ml_away": 8.5,
-        "decision": "no_edge"
+        "reason": "NYK ML 1.10 far below floor. Bulls ML 7.0 above ceiling. Spread NYK -14.0 at 1.89 considered. Bulls confirmed near-tank (29-47, L10 2-8, L15 -41.6). NYK NetRtg +6.2, L15 -13.1 — CRITICAL FLAG: NYK L15 is NEGATIVE at -13.1 despite strong season NetRtg. This contradicts their strong record and is a major red flag for tonight. KAT Questionable (elbow). Bulls Zach Collins OUT but Bulls are confirmed poor. NYK L15 -13.1 means they've been below average in last 15 games — this directly undermines the spread case. NYK -14 ATS with L15 showing recent decline and KAT questionable = insufficient confidence. Rejecting.",
+        "ml_home": 1.1,
+        "ml_away": 7.0,
+        "decision": "rejected"
       },
       {
         "match": "Memphis Grizzlies vs Toronto Raptors",
-        "reason": "TOR ML 1.13 outside range. MEM ML 6.25 outside range. TOR spread +13.5 at 1.90 — Immanuel Quickley (franchise) confirmed OUT → confidence -15 drops spread confidence to 50, below 60 floor. Rejected.",
-        "ml_home": 6.25,
-        "ml_away": 1.13,
-        "decision": "no_edge"
+        "reason": "Memphis ML 6.75 above 2.50 ceiling. Toronto ML 1.11 far below floor. Spread: Memphis +14.0 at 1.89. Memphis confirmed tank-adjacent (25-51, L10 2-8, L15 -40.5). Toronto NetRtg +1.8, L15 +12.0 — decent recent form. Toronto on two-game losing streak. Immanuel Quickley OUT (franchise player — confirmed nba_official). Jamison Battle Questionable. Quickley absence significantly weakens Toronto. With Quickley OUT, Toronto's ceiling drops materially. Toronto covering -14 against a depleted Memphis (Aldama, KCP, Clarke, Edey, Jerome all OUT per nba_official — Memphis severely short-handed) creates unpredictable game script. ML unplayable both sides. No O/U. Rejecting.",
+        "ml_home": 6.75,
+        "ml_away": 1.11,
+        "decision": "rejected"
       },
       {
-        "match": "Orlando Magic vs Dallas Mavericks",
-        "reason": "ORL ML 1.35 below 1.70 floor. DAL ML 3.30 above 2.50 ceiling. ORL L15 -44.5 catastrophic — cannot justify ORL -7.5 spread with that form. DAL confirmed tank + Kyrie OUT makes DAL spread unattractive. No valid side.",
-        "ml_home": 3.3,
-        "ml_away": 1.35,
-        "decision": "no_edge"
+        "match": "Milwaukee Bucks vs Boston Celtics",
+        "reason": "Milwaukee ML 10.0 above ceiling. Boston ML 1.06 far below floor. Spread: Milwaukee +17.5 at 1.90 considered. Giannis Antetokounmpo OUT (franchise player — confirmed nba_official). Milwaukee confirmed tank-watch (30-46, L10 3-7, L15 -33.6). Boston L15 +22.8, NetRtg +7.7. Celtics are strong favourite — but BOS ML 1.06 unplayable. BOS -17.5 ATS: with Giannis OUT, Milwaukee severely weakened and tank confirmed. BOS NetRtg +7.7 vs MIL -6.3 = gap 14.0 — large. Skills: 'Tank team as large underdog — tankers don't cover spreads.' Favors BOS covering. However, BOS may rest stars (51-25, seeding likely secured). Vucevic OUT already. No seeding motivation to run up the score. Late-season rest risk for Boston undermines ATS confidence. BOS resting Tatum/Brown possible at +51-win pace. Confidence insufficient without star rest confirmation. Rejecting.",
+        "ml_home": 10.0,
+        "ml_away": 1.06,
+        "decision": "rejected"
+      },
+      {
+        "match": "Dallas Mavericks vs Orlando Magic",
+        "reason": "Dallas ML 3.20 — within target range (1.70-2.50)? No, 3.20 exceeds 2.50 ceiling. Orlando ML 1.36 below floor. Spread: Dallas +7.0 at 1.93 (home). Dallas confirmed tank (24-52, L10 2-8). Kyrie Irving OUT, Lively OUT — Dallas missing two key players. Orlando L10 2-8, L15 -44.5 — Orlando also in terrible recent form. NetRtg: Orlando -0.2 vs Dallas -5.6. Orlando is the away team at -7.0 odds for Dallas (meaning Dallas getting +7 at home). With both teams in poor form (ORL L10 2-8, L15 -44.5 catastrophic; DAL tank), this is a volatile low-quality matchup. Orlando L15 -44.5 is among the worst in the slate — their recent form is terrible. Dallas +7 at home against a team with L15 -44.5 has some appeal, but Dallas is a confirmed tank and Irving/Lively OUT. Skills: 'When betting ON tanking teams: require odds ≥ 2.20.' DAL ML 3.20 exceeds 2.20 threshold but also exceeds 2.50 ceiling. No clean market entry. Rejecting.",
+        "ml_home": 3.2,
+        "ml_away": 1.36,
+        "decision": "rejected"
       },
       {
         "match": "Sacramento Kings vs New Orleans Pelicans",
-        "reason": "SAC ML 2.70 above 2.50 ceiling. NOP ML 1.47 below 1.70 floor. NOP L15 -47.3 is WORSE than SAC L15 -38.2 — NOP -5 spread has no credible edge when their recent form is worse than the opponent they are favored over. Both teams in poor form. No valid pick.",
-        "ml_home": 2.7,
-        "ml_away": 1.47,
-        "decision": "no_edge"
+        "reason": "Sacramento ML 2.85 — within target range. Pelicans ML 1.44 below floor. Evaluating SAC ML at 2.85: SAC confirmed tank (20-57, L10 4-6, L15 -38.2). Pelicans NetRtg -4.7, L15 -47.3 — catastrophic recent form. Both teams are poor. SAC L10 4-6 slightly better than NOP L10 3-7. NOP at -47.3 L15 is among worst in slate. However, SAC is a confirmed tank — skills say ML on tanks requires odds ≥ 2.20 AND strong situational reason. SAC ML 2.85 exceeds 2.20. SAC home court advantage. But SAC NetRtg -10.2 season (worst in league) vs NOP -4.7 — NOP is actually better on season stats despite terrible L15. Season NetRtg gap favors NOP by 5.5 pts. SAC L15 -38.2 also very negative. This is two terrible teams — coin flip with no genuine edge. SAC ML 2.85 has superficial appeal but no real statistical backing given SAC's worse season NetRtg. Rejecting — no genuine edge, two tanks/near-tanks colliding.",
+        "ml_home": 2.85,
+        "ml_away": 1.44,
+        "decision": "rejected"
       }
     ],
-    "report": "**DRAFTED PICKS:**\n\n**Charlotte Hornets -15.5 (1.89) — Spread:** Charlotte hosts a catastrophically depleted Indiana team missing Haliburton, McConnell, Nembhard, and Nesmith — their entire backcourt rotation is absent. Charlotte's L15 NetRtg of +41.3 is exceptional, and the play-in motivation factor is strong at home. NetRtg gap of 13.1 points plus Indiana's confirmed tank status makes this a high-conviction spread play despite the large line. EV: 0.361.\n\n**Atlanta Hawks -17.0 (1.93) — Spread:** Brooklyn's roster is essentially a G-League squad tonight with Porter Jr., Sharpe, Wolf, and Demin all confirmed OUT. Atlanta's L15 +24.5 gives clear directional edge. Hot-streak fade rule acknowledged but does not override a matchup this extreme. Road adjustment applied (-5 to confidence). EV: 0.255.\n\n**Houston Rockets -16.5 (1.90) — Spread:** Utah is fully tanking (21-56, L10: 1-9) and missing all three key guards tonight. Houston's L15 +35.9 is the best recent form figure on the slate. The L15 gap of 79+ points is the largest of any matchup tonight. Houston retains playoff motivation and home court. EV: 0.368.\n\n**Boston Celtics -17.5 (1.90) — Spread:** Giannis confirmed OUT via official NBA injury report — this removes Milwaukee's franchise player and defensive anchor. Combined with Portis, Porter Jr. OUT and two more Questionable, the Bucks are fielding an undermanned squad. Boston's elite NetRtg +7.7 and L15 +22.8 represent clear dominance. The 14-point NetRtg gap is the largest between any two teams on tonight's slate. EV: 0.387.\n\n**REJECTED GAMES:**\n- PHI vs MIN — Embiid Doubtful + Edwards verification required; combined uncertainty drops confidence to floor with marginal EV. Rejected.\n- NYK vs CHI — NYK L15 -13.1 primary signal undermines large spread; ML odds outside range. Rejected.\n- MEM vs TOR — Quickley (franchise) confirmed OUT drops TOR spread confidence to 50, below 60 floor. Rejected.\n- ORL vs DAL — ORL L15 -44.5 catastrophic; both ML odds outside target range. No valid side. Rejected.\n- SAC vs NOP — NOP L15 (-47.3) worse than SAC (-38.2) despite being spread favorite; both MLs outside range. No edge. Rejected.\n\n**Slate quality:** Tonight's slate features several extreme mismatches driven by franchise player absences and confirmed tank-mode rosters, creating genuine spread edges rather than ML value (most ML odds fall well outside the 1.70–2.50 target range). Four spread picks identified with strong EV (0.255–0.387). Total committed: €296.36 (67% of bankroll — within 70% cap). Pace data is available but O/U lines are not offered tonight, so totals market is unavailable.",
+    "report": "Difficult slate dominated by extreme mismatches (ML odds outside target range for most games) and confirmed tank teams. Two picks drafted: MIN ML at 2.12 (EV 0.166) exploiting PHI regression risk and Embiid doubtful status; HOU -16.5 spread at 1.89 (EV 0.361) backed by dominant L15 gap, Utah's confirmed tank with multiple stars out, and DefRtg gap > 8pts. Injury data from nba_official (full 16-team coverage) — normal confidence rules applied. Pace data available but O/U markets absent from tonight's feed for all games. Total bankroll at risk: €88.46 (20% of €442.33) — within daily 70% cap. Key monitor before tip: Anthony Edwards (MIN — Questionable), to be flagged at Commit phase.",
     "odds_source": "theodds_unibet",
     "injuries_source": "nba_official",
-    "tokens_in": 9442,
-    "tokens_out": 8324,
-    "cost_usd": 0.153186
+    "tokens_in": 9583,
+    "tokens_out": 6489,
+    "cost_usd": 0.126084
   },
   "commit_report_data": {
     "date": "2026-04-02",
