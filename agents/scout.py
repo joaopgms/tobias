@@ -97,7 +97,7 @@ Drafted_at: {datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')}
 Draft pick IDs: nba_draft_{today.replace('-','')}_{'{001, 002...}'}
 
 OUTPUT RULE: Write the XML tags FIRST — no preamble, no analysis before the first tag.
-The scout_report is last and can be brief. Tags must appear in this exact order:
+Tags must appear in this exact order:
 
 <draft_picks>
 [JSON array of draft pick objects — use [] if no picks meet criteria]
@@ -114,10 +114,14 @@ Use [] only if ALL games were drafted. Every non-drafted game MUST appear here.]
 </rejected_games>
 
 <scout_report>
-For each DRAFTED pick: one short paragraph (edge, factors, odds).
-For each rejected game: one line — "HOME vs AWAY — DECISION: reason"
-End with 1-2 sentences on slate quality.
+Brief summary only — slate quality, total picks drafted, key themes. 3-5 lines max.
+DO NOT describe individual picks here — they are in draft_picks JSON above.
+DO NOT list rejected games here — they are in rejected_games JSON above.
 </scout_report>
+
+CONSISTENCY CHECK (CRITICAL): Every pick you decide to draft MUST be in <draft_picks> JSON.
+Picks written only in <scout_report> are silently lost — they will never be committed.
+Before closing <draft_picks>, verify it contains every pick you intend to place.
 """
 
 
