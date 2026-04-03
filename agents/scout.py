@@ -442,10 +442,13 @@ def run(store) -> None:
     draft_picks = ev_picks
 
     # ── 8f. Smart retry — extract picks the LLM wrote in text but not JSON ──────
-    # If draft_picks is empty but scout_report mentions drafted picks, fire a
-    # focused follow-up to pull them into structured JSON.
-    DRAFT_SIGNALS = ["drafted pick", "picks drafted", "DRAFTED PICKS", "two picks", "three picks", "four picks", "five picks"]
-    report_mentions_picks = any(sig.lower() in (report_raw or "").lower() for sig in DRAFT_SIGNALS)
+    # Fire whenever draft_picks is empty but report is non-empty (cheap call).
+    # Catches all variants: "3-pick slate", "two picks", "picks drafted", etc.
+    import re as _re
+    report_has_content = bool(report_raw and len(report_raw.strip()) > 50)
+    report_mentions_picks = report_has_content and bool(
+        _re.search(r'\d+-pick|\bpick(s)?\b.*draft|\bdraft.*pick|\bpicked\b', report_raw or "", _re.IGNORECASE)
+    )
     if not draft_picks and report_mentions_picks:
         log.warning("Scout: draft_picks empty but report mentions picks — firing extraction retry")
         extraction_prompt = (
