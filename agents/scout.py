@@ -502,22 +502,26 @@ def run(store) -> None:
                 if len(after_ev) < len(extracted_picks):
                     log.info(f"Scout: extraction — {len(extracted_picks)-len(after_ev)} dropped EV<5%")
                 extracted_picks = after_ev
-                # Fix game times: cross-reference match string against fetched games
-                game_time_map = {}
+                # ESPN is authoritative — overwrite match string AND time from fetched games.
+                # LLM guesses on home/away and time are never trusted.
+                espn_game_map = {}  # any team-pair key -> {"match": "HOME vs AWAY", "time": iso}
                 for g in games:
                     home = g.get("home_team", "")
                     away = g.get("away_team", "")
                     t    = g.get("time", "")
-                    if home and away and t:
-                        game_time_map[f"{home} vs {away}".lower()] = t
-                        game_time_map[f"{away} vs {home}".lower()] = t
+                    if home and away:
+                        canonical = {"match": f"{home} vs {away}", "time": t or fgt_raw or ""}
+                        espn_game_map[f"{home} vs {away}".lower()] = canonical
+                        espn_game_map[f"{away} vs {home}".lower()] = canonical
                 for p in extracted_picks:
                     match_key = (p.get("match") or "").lower()
-                    real_time = game_time_map.get(match_key)
-                    if real_time:
-                        p["time"] = real_time
-                    elif not p.get("time") or p.get("time") in ("TBD", "tbd", "", None):
-                        p["time"] = fgt_raw or ""
+                    espn = espn_game_map.get(match_key)
+                    if espn:
+                        p["match"] = espn["match"]
+                        p["time"]  = espn["time"]
+                        log.info(f"Scout: ESPN override — match='{p['match']}' time='{p['time']}'")
+                    else:
+                        log.warning(f"Scout: no ESPN match found for '{p.get('match')}' — keeping LLM value")
                 if extracted_picks:
                     draft_picks = extracted_picks
                     log.info(f"Scout: extraction retry recovered {len(draft_picks)} pick(s)")
