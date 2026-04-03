@@ -441,6 +441,66 @@ def run(store) -> None:
         log.info(f"Scout: EV filter removed {len(draft_picks)-len(ev_picks)} pick(s)")
     draft_picks = ev_picks
 
+    # ── 8f. Smart retry — extract picks the LLM wrote in text but not JSON ──────
+    # If draft_picks is empty but scout_report mentions drafted picks, fire a
+    # focused follow-up to pull them into structured JSON.
+    DRAFT_SIGNALS = ["drafted pick", "picks drafted", "DRAFTED PICKS", "two picks", "three picks", "four picks", "five picks"]
+    report_mentions_picks = any(sig.lower() in (report_raw or "").lower() for sig in DRAFT_SIGNALS)
+    if not draft_picks and report_mentions_picks:
+        log.warning("Scout: draft_picks empty but report mentions picks — firing extraction retry")
+        extraction_prompt = (
+            f"You are the Scout agent. Today: {today} | Bankroll: €{state['bankroll']:.2f}\n\n"
+            f"Your previous analysis identified draft picks but they were NOT included in the "
+            f"<draft_picks> JSON tag. Here is your analysis:\n\n{report_raw}\n\n"
+            f"Extract EVERY pick you decided to draft from the analysis above and output ONLY:\n\n"
+            f"<draft_picks>\n"
+            f"[JSON array — one object per pick with: id, match, time, pick, odds, stake, "
+            f"potential_return, confidence, reasoning, anchor_players, drafted_at, market_type]\n"
+            f"</draft_picks>\n\n"
+            f"Draft pick IDs: nba_draft_{today.replace('-', '')}_{{001, 002...}}\n"
+            f"drafted_at: {datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')}\n"
+            f"If no picks should be drafted, output <draft_picks>[]</draft_picks>.\n"
+            f"Output ONLY the tag — nothing else."
+        )
+        try:
+            extraction_result = call_llm_full(SCOUT_SYSTEM, extraction_prompt,
+                                              max_tokens=3000, agent="scout")
+            extracted_raw = extract_tag(extraction_result.text, "draft_picks")
+            if extracted_raw:
+                extracted_picks = json.loads(extracted_raw)
+                # Apply same filters
+                extracted_picks = [p for p in extracted_picks if p.get("confidence", 0) >= 40]
+                for p in extracted_picks:
+                    pick_lower = (p.get("pick") or "").lower()
+                    if " ml" in pick_lower or pick_lower.endswith(" ml"):
+                        p["market_type"] = "ml"
+                    elif any(x in pick_lower for x in ["-", "+", "spread", "ats"]):
+                        p["market_type"] = "spread"
+                    elif any(x in pick_lower for x in ["over", "under", "o/u"]):
+                        p["market_type"] = "total"
+                # Odds range filter
+                ODDS_RANGE = {"ml": (1.65, 2.50), "spread": (1.75, 2.35), "total": (1.75, 2.10)}
+                extracted_picks = [p for p in extracted_picks
+                                   if ODDS_RANGE.get(p.get("market_type","ml"), (1.65, 2.50))[0]
+                                   <= float(p.get("odds") or 0)
+                                   <= ODDS_RANGE.get(p.get("market_type","ml"), (1.65, 2.50))[1]]
+                # EV filter
+                extracted_picks = [p for p in extracted_picks
+                                   if p.get("confidence",0)/100 * float(p.get("odds") or 0) - 1 >= 0.05]
+                if extracted_picks:
+                    draft_picks = extracted_picks
+                    log.info(f"Scout: extraction retry recovered {len(draft_picks)} pick(s)")
+                    if llm_result:
+                        llm_result.tokens_in  += extraction_result.tokens_in
+                        llm_result.tokens_out += extraction_result.tokens_out
+                        llm_result.cost_usd   += extraction_result.cost_usd
+                else:
+                    log.info("Scout: extraction retry ran but picks didn't pass filters")
+            else:
+                log.warning("Scout: extraction retry returned no <draft_picks> tag")
+        except Exception as e:
+            log.warning(f"Scout: extraction retry failed: {e}")
+
     # ── 9. Validate picks ─────────────────────────────────────────────────────
     try:
         validate_all_drafts(draft_picks, "scout")
