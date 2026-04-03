@@ -2044,5 +2044,56 @@
     "tokens_in": 8232,
     "tokens_out": 3264,
     "cost_usd": 0.073656
+  },
+  {
+    "ts": "2026-04-03T14:50:42.146461+00:00",
+    "date": "2026-04-03",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_unibet",
+    "draft_count": 0,
+    "picks": [],
+    "rejected": [
+      {
+        "match": "Philadelphia 76ers vs Minnesota Timberwolves",
+        "reason": "Joel Embiid Doubtful (franchise player) → confidence -15. Anthony Edwards verification required per skills. MIN confidence drops to 50 after penalties — at floor with EV barely 0.05. Combined uncertainty (Embiid GTD + Edwards unverified) makes this too risky. PHI ML 1.75 in range but Embiid uncertainty undercuts any PHI pick.",
+        "ml_home": 1.75,
+        "ml_away": 2.1,
+        "decision": "no_edge"
+      },
+      {
+        "match": "New York Knicks vs Chicago Bulls",
+        "reason": "NYK ML 1.08 outside target range. Spread -16.0 undermined by NYK L15 -13.1 (negative recent form — primary signal per skills). CHI confirmed tank but NYK recent form collapse makes -16 spread unreliable.",
+        "ml_home": 1.08,
+        "ml_away": 8.5,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Memphis Grizzlies vs Toronto Raptors",
+        "reason": "TOR ML 1.13 outside range. MEM ML 6.25 outside range. TOR spread +13.5 at 1.90 — Immanuel Quickley (franchise) confirmed OUT → confidence -15 drops spread confidence to 50, below 60 floor. Rejected.",
+        "ml_home": 6.25,
+        "ml_away": 1.13,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Orlando Magic vs Dallas Mavericks",
+        "reason": "ORL ML 1.35 below 1.70 floor. DAL ML 3.30 above 2.50 ceiling. ORL L15 -44.5 catastrophic — cannot justify ORL -7.5 spread with that form. DAL confirmed tank + Kyrie OUT makes DAL spread unattractive. No valid side.",
+        "ml_home": 3.3,
+        "ml_away": 1.35,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Sacramento Kings vs New Orleans Pelicans",
+        "reason": "SAC ML 2.70 above 2.50 ceiling. NOP ML 1.47 below 1.70 floor. NOP L15 -47.3 is WORSE than SAC L15 -38.2 — NOP -5 spread has no credible edge when their recent form is worse than the opponent they are favored over. Both teams in poor form. No valid pick.",
+        "ml_home": 2.7,
+        "ml_away": 1.47,
+        "decision": "no_edge"
+      }
+    ],
+    "report": "**DRAFTED PICKS:**\n\n**Charlotte Hornets -15.5 (1.89) — Spread:** Charlotte hosts a catastrophically depleted Indiana team missing Haliburton, McConnell, Nembhard, and Nesmith — their entire backcourt rotation is absent. Charlotte's L15 NetRtg of +41.3 is exceptional, and the play-in motivation factor is strong at home. NetRtg gap of 13.1 points plus Indiana's confirmed tank status makes this a high-conviction spread play despite the large line. EV: 0.361.\n\n**Atlanta Hawks -17.0 (1.93) — Spread:** Brooklyn's roster is essentially a G-League squad tonight with Porter Jr., Sharpe, Wolf, and Demin all confirmed OUT. Atlanta's L15 +24.5 gives clear directional edge. Hot-streak fade rule acknowledged but does not override a matchup this extreme. Road adjustment applied (-5 to confidence). EV: 0.255.\n\n**Houston Rockets -16.5 (1.90) — Spread:** Utah is fully tanking (21-56, L10: 1-9) and missing all three key guards tonight. Houston's L15 +35.9 is the best recent form figure on the slate. The L15 gap of 79+ points is the largest of any matchup tonight. Houston retains playoff motivation and home court. EV: 0.368.\n\n**Boston Celtics -17.5 (1.90) — Spread:** Giannis confirmed OUT via official NBA injury report — this removes Milwaukee's franchise player and defensive anchor. Combined with Portis, Porter Jr. OUT and two more Questionable, the Bucks are fielding an undermanned squad. Boston's elite NetRtg +7.7 and L15 +22.8 represent clear dominance. The 14-point NetRtg gap is the largest between any two teams on tonight's slate. EV: 0.387.\n\n**REJECTED GAMES:**\n- PHI vs MIN — Embiid Doubtful + Edwards verification required; combined uncertainty drops confidence to floor with marginal EV. Rejected.\n- NYK vs CHI — NYK L15 -13.1 primary signal undermines large spread; ML odds outside range. Rejected.\n- MEM vs TOR — Quickley (franchise) confirmed OUT drops TOR spread confidence to 50, below 60 floor. Rejected.\n- ORL vs DAL — ORL L15 -44.5 catastrophic; both ML odds outside target range. No valid side. Rejected.\n- SAC vs NOP — NOP L15 (-47.3) worse than SAC (-38.2) despite being spread favorite; both MLs outside range. No edge. Rejected.\n\n**Slate quality:** Tonight's slate features several extreme mismatches driven by franchise player absences and confirmed tank-mode rosters, creating genuine spread edges rather than ML value (most ML odds fall well outside the 1.70–2.50 target range). Four spread picks identified with strong EV (0.255–0.387). Total committed: €296.36 (67% of bankroll — within 70% cap). Pace data is available but O/U lines are not offered tonight, so totals market is unavailable.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 9442,
+    "tokens_out": 8324,
+    "cost_usd": 0.153186
   }
 ]
