@@ -9,12 +9,12 @@
   "net_pnl": -557.67,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-04-03T16:56:45.490893+00:00",
+  "last_updated": "2026-04-03T17:03:31.245680+00:00",
   "first_game_time": "2026-04-03T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
-  "scout_updated_at": "2026-04-03T16:56:45.490893+00:00",
+  "scout_updated_at": "2026-04-03T17:03:31.245680+00:00",
   "scout_odds_source": "theodds_unibet",
   "commit_status": "pending",
   "commit_updated_at": "2026-04-02T22:30:58.499568+00:00",
@@ -27,8 +27,25 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "Solid 3-pick slate driven by confirmed franchise player absences and extreme L15 divergences. Embiid Doubtful creates genuine MIN ML value at 2.12. Two spread picks (HOU -16.5, BOS -17.5) backed by elite L15 gaps (79 and 56 pts respectively) against depleted tank-tier opponents with multiple key absences confirmed via NBA official PDF. Total exposure €185 = 41.8% of bankroll, within the 70% cap. O/U picks unavailable (no odds offered on slate). Injury feed quality: NBA official PDF — full confidence rules apply. Pace data available but O/U odds absent from Betano for all games this session.",
-  "draft_picks": [],
+  "last_report": "Difficult slate with extreme mismatches dominating — most ML lines are well outside the 1.70–2.50 target range (multiple games at 1.06–1.11 vs 6.75–9.5). Only one pick meets all quality thresholds: Minnesota ML vs Philadelphia, leveraging PHI's deeply negative NetRtg (-0.1) as a fade candidate against a credible MIN team at 2.14 odds. Anthony Edwards Questionable flag noted and stake adjusted accordingly. Injury feed is NBA Official (full coverage), so data quality is high. Pace data is present in the feed. No line anomalies detected. 1 pick drafted; 8 games rejected due to odds outside target range, confirmed tanking teams, or insufficient edge.",
+  "draft_picks": [
+    {
+      "id": "nba_draft_20260403_001",
+      "match": "Minnesota Timberwolves vs Philadelphia 76ers",
+      "time": "TBD",
+      "pick": "Minnesota Timberwolves ML",
+      "odds": 2.14,
+      "stake": 15,
+      "potential_return": 32.1,
+      "confidence": 62,
+      "reasoning": "Philadelphia has a deeply negative NetRtg (-0.1) making them a strong fade candidate. Minnesota is a credible playoff-caliber team with a significant edge in team quality. Odds of 2.14 fall within the target range of 1.70–2.50. Anthony Edwards listed as Questionable, so stake reduced accordingly. Injury feed from NBA Official source (full coverage) confirms data reliability.",
+      "anchor_players": [
+        "Anthony Edwards"
+      ],
+      "drafted_at": "2026-04-03T17:05:11Z",
+      "market_type": "ml"
+    }
+  ],
   "pending_bets": [],
   "settled_bets": [
     {
@@ -306,45 +323,59 @@
   "rejected_games": [
     {
       "match": "Charlotte Hornets vs Indiana Pacers",
-      "reason": "Charlotte ML 1.09 outside target range 1.70-2.50. Spread H:-15.5 at 1.91 — Indiana is 18-58 L10 3-7, extreme mismatch. Charlotte L15 +41.3 is elite but spread size 15.5 at 1.91 requires confidence 60+. Indiana missing Haliburton (OUT), McConnell (OUT), Nembhard (OUT), Nesmith (OUT) — essentially depleted. This spread has edge but Charlotte is 1.09 favourite already fully priced; spread 1.91 is marginal at 15.5 with garbage time risk. No clear EV edge on spread with this roster status — Indiana could keep it within 15 with 4 key starters out. Rejected on insufficient spread confidence after injury adjustments.",
+      "reason": "CHA ML 1.09 far outside target range 1.70-2.50. Spread -15.5 at 1.91/1.91 possible but IND is a heavy underdog at 7.5 ML implying extreme mismatch; spread confidence undermined by IND missing Haliburton, McConnell, Nembhard, Nesmith (4 key players OUT) — roster decimated, spread unreliable with such heavy absences. No valid pick.",
       "ml_home": 1.09,
       "ml_away": 7.5,
-      "decision": "no_edge"
+      "decision": "rejected"
     },
     {
       "match": "Brooklyn Nets vs Atlanta Hawks",
-      "reason": "Atlanta ML 1.06 outside target range. Brooklyn home 9.5 — line anomaly check: BKN home priced at 9.5 (implied ~9.5% win probability) vs ATL away. BKN 18-58 L10 1-9 confirmed tank. ATL 44-33 L10 8-2. Spread H:+17.0 at 1.92 — this is betting BKN +17 or ATL -17. ATL L15 +24.5 vs BKN season NetRtg -9.8. ATL -17 away: ATL is hot (W3 streak) but hot-streak-fade rule applies (NetRtg +2.2 vs .571 W% = regression risk). Confidence in ATL covering -17 on the road against a tank team: base 65, but hot-streak-fade -5, away road risk -3 = 57. EV = (0.57 × 1.92) - 1 = 1.0944 - 1 = 0.09. Marginal EV 0.09 at confidence 57 — meets minimum floors but hot-streak-fade risk against a tank team where scorelines can be unpredictable. No franchise player injury concern for ATL. Rejected due to hot-streak-fade rule and marginal EV on road spread.",
+      "reason": "BKN ML 9.5 and ATL ML 1.06 — both outside 1.70-2.50 ML range. Spread: BKN +17.0 at 1.92 technically in range but ATL is hot-streak-fade candidate (NetRtg +2.2 vs L10 8-2, actual true talent ~.500); BKN L15 and season both awful (-9.8 NetRtg, 18-58). ATL spread -17.0 requires confidence >=60 but fade rule + BKN tanking creates unpredictable blowout-or-cover scenario. BKN multiple key injuries (Demin, Porter Jr., Sharpe, Wolf OUT). No clean edge.",
       "ml_home": 9.5,
       "ml_away": 1.06,
-      "decision": "no_edge"
+      "decision": "rejected"
     },
     {
       "match": "New York Knicks vs Chicago Bulls",
-      "reason": "NYK ML 1.10 outside target range 1.70-2.50. Spread H:-14.0 at 1.89 — NYK vs CHI. CHI confirmed tank (29-47 L10 2-8). NYK L15 -13.1 (negative despite 49-28 record — concerning divergence). Karl-Anthony Towns Questionable (elbow impingement) — franchise player -10 confidence. CHI L15 -41.6 (terrible). Base confidence for NYK -14 spread: 65. Adjustments: -10 (Towns Questionable), -3 (L15 negative for NYK despite good season). = 52. Below spread floor of 60. Rejected — Towns Questionable drops confidence below spread threshold.",
+      "reason": "NYK ML 1.10 outside target range. CHI ML 7.0 — CHI is 29-47 tank-tier (L10 2-8), NetRtg -4.8, L15 -41.6. Spread NYK -14.0 at 1.93: NYK NetRtg +6.2 L15 -13.1 (negative recent form despite strong season). CHI L15 -41.6 suggests extreme weakness but NYK L15 negative raises cover uncertainty. Zach Collins OUT for CHI. KAT Questionable for NYK. Insufficient confidence for spread given NYK's negative L15.",
       "ml_home": 1.1,
       "ml_away": 7.0,
-      "decision": "no_edge"
+      "decision": "rejected"
+    },
+    {
+      "match": "Houston Rockets vs Utah Jazz",
+      "reason": "HOU ML 1.08 far outside 1.70-2.50. UTA ML 8.0 — UTA is confirmed tank (21-56, L10 1-9, NetRtg -7.9, L15 -43.3) with massive absences (Collier, George, JJJ, Kessler all OUT). Spread HOU -16.5 at 1.89: within spread range but HOU L15 +35.9 is very strong. However, odds 1.89 slightly below spread target floor of 1.80 (it is within 1.80-2.30). Confidence check: HOU NetRtg +4.7, L15 strong; UTA near-empty roster (tank confirmed). Spread confidence ~65 on paper, but UTA depleted roster means blowout is plausible, cover is less certain with dead-rubber games. EV marginal. Decided no strong enough independent edge on spread given extreme mismatch uncertainty.",
+      "ml_home": 1.08,
+      "ml_away": 8.0,
+      "decision": "rejected"
     },
     {
       "match": "Memphis Grizzlies vs Toronto Raptors",
-      "reason": "MEM home 6.75 — implies ~13% win probability. TOR away 1.11 outside ML target range. TOR ML 1.11 not in 1.70-2.50. Spread H:+14.0 at 1.89 — betting MEM +14 or TOR -14. TOR: Immanuel Quickley OUT confirmed (franchise player — DO NOT BET TOR ML without verification; betting TOR -14 spread with franchise player absent). Quickley OUT materially weakens TOR offence. TOR L15 +12.0 is positive but Quickley absence is significant. MEM L15 -40.5 (terrible) but MEM is home. TOR without Quickley covering -14 on road: Base 55, -15 for Quickley OUT (franchise player) = 40. Below spread floor of 60. Also Jamison Battle Questionable. Rejected — TOR franchise player OUT drops confidence below threshold.",
+      "reason": "MEM ML 6.75 — outside 1.70-2.50. TOR ML 1.11 — outside range. Spread MEM +13.5 at 1.91: MEM is 25-51 near-tank with L10 2-8 and L15 -40.5. TOR has franchise player Quickley confirmed OUT, Hepburn OUT, Immanuel Quickley OUT — depleted roster. TOR also on L2 losing streak. With both teams weakened and TOR missing key players, spread edge for MEM +13.5 is uncertain. TOR at 1.11 not bettable. No valid pick.",
       "ml_home": 6.75,
       "ml_away": 1.11,
-      "decision": "no_edge"
+      "decision": "rejected"
+    },
+    {
+      "match": "Milwaukee Bucks vs Boston Celtics",
+      "reason": "MIL ML 9.5 outside range. BOS ML 1.06 — outside range. Giannis OUT confirmed for MIL (franchise player absence). BOS NetRtg +7.7, L10 8-2, L15 +22.8 — elite form. Spread MIL +17.5 at 1.89: MIL is effectively a tank team now (30-46, L10 3-7, NetRtg -6.3, L15 -33.6, Giannis OUT, Porter Jr. OUT, Portis OUT). BOS away but road elite team. Spread MIL +17.5 is large — BOS is elite but 17.5-point road cover requires dominance. Confidence insufficient for spread given road factor and score uncertainty in garbage time. No clean bet.",
+      "ml_home": 9.5,
+      "ml_away": 1.06,
+      "decision": "rejected"
     },
     {
       "match": "Dallas Mavericks vs Orlando Magic",
-      "reason": "DAL home 3.20 — in ML target range! ORL away 1.36 — outside range. EVAL: DAL 24-52 L10 2-8 confirmed tank. DAL missing: Kyrie Irving OUT (franchise player — DO NOT BET DAL ML without verification), Dereck Lively II OUT, Caleb Martin Doubtful, P.J. Washington Doubtful, Marvin Bagley III Doubtful. ORL 40-36 L10 2-8 — also in poor form. ORL L15 -44.5 (extreme negative — ORL is in terrible form). DAL at 3.20 with Kyrie OUT and confirmed tank status: franchise player rules say DO NOT BET DAL ML. ORL at 1.36 outside target range. DAL +7.0 spread at 1.89: betting DAL +7 with Kyrie OUT and tank team — tankers don't cover spreads. Rejected — Kyrie OUT disqualifies DAL ML per franchise_player_rules; ORL outside ML range and in terrible L15 form.",
+      "reason": "DAL ML 3.2 is within target range 1.70-2.50? No — 3.2 is above 2.50. ORL ML 1.36 — outside range. DAL is confirmed tank (24-52, L10 2-8) with Kyrie Irving OUT, Lively OUT, Bagley Doubtful, Martin Doubtful, PJ Washington Doubtful. ORL ML 1.36 not actionable. DAL ML 3.2 above 2.50 ceiling. Spread DAL +7.0 at 1.93: DAL roster depleted (multiple absences). ORL L10 2-8, NetRtg -0.2, L15 -44.5 — ORL in freefall. Both teams in poor form. No clean spread edge.",
       "ml_home": 3.2,
       "ml_away": 1.36,
-      "decision": "no_edge"
+      "decision": "rejected"
     },
     {
-      "match": "Sacramento Kings vs New Orleans Pelicans",
-      "reason": "SAC home 2.85 — in ML target range. NOP away 1.44 — outside range. EVAL: SAC 20-57 confirmed tank, L10 4-6 (slight improvement per skills but worst record in West). SAC L15 -38.2 (terrible). NOP 25-52 L10 3-7. NOP L15 -47.3 (even worse). Both teams are tank-tier. SAC home at 2.85: to bet SAC ML requires odds ≥ 2.20 and strong situational reason per tanking rules. Odds meet bar (2.85 ≥ 2.20). But NOP L15 -47.3 vs SAC L15 -38.2 — SAC actually better L15 by 9 pts, home court advantage applies. SAC missing Drew Eubanks OUT, De'Andre Hunter OUT. NOP 25-52 with L10 3-7 is also tank-tier. Base confidence for SAC home: 52. EV = (0.52 × 2.85) - 1 = 1.482 - 1 = 0.482. Strong EV but confidence 52 is speculative (ML floor 50, just above). Both teams tank-tier makes this a coin-flip with unpredictable motivation. Rejected — both teams confirmed tank-tier, pick lacks directional conviction beyond coin-flip; speculative tier 52 insufficient for reliable edge when opponent is also tanking.",
+      "match": "New Orleans Pelicans vs Sacramento Kings",
+      "reason": "SAC ML 2.85 above 2.50 ceiling. NOP ML 1.44 outside 1.70-2.50. NOP L15 -47.3 (catastrophic recent form), 25-52 near-tank. SAC confirmed tank (20-57) but L10 4-6 slightly less bad. No side within odds target range with a genuine edge. SAC ML 2.85 above ceiling and SAC is confirmed tank. No valid pick.",
       "ml_home": 2.85,
       "ml_away": 1.44,
-      "decision": "no_edge"
+      "decision": "rejected"
     }
   ],
   "late_scout_rejections": [
@@ -375,58 +406,89 @@
   ],
   "scout_report_data": {
     "date": "2026-04-03",
-    "updated_at": "2026-04-03T16:56:45.490893+00:00",
-    "picks": [],
+    "updated_at": "2026-04-03T17:03:31.245680+00:00",
+    "picks": [
+      {
+        "id": "nba_draft_20260403_001",
+        "match": "Minnesota Timberwolves vs Philadelphia 76ers",
+        "time": "TBD",
+        "pick": "Minnesota Timberwolves ML",
+        "odds": 2.14,
+        "stake": 15,
+        "potential_return": 32.1,
+        "confidence": 62,
+        "reasoning": "Philadelphia has a deeply negative NetRtg (-0.1) making them a strong fade candidate. Minnesota is a credible playoff-caliber team with a significant edge in team quality. Odds of 2.14 fall within the target range of 1.70–2.50. Anthony Edwards listed as Questionable, so stake reduced accordingly. Injury feed from NBA Official source (full coverage) confirms data reliability.",
+        "anchor_players": [
+          "Anthony Edwards"
+        ],
+        "drafted_at": "2026-04-03T17:05:11Z",
+        "market_type": "ml"
+      }
+    ],
     "rejected": [
       {
         "match": "Charlotte Hornets vs Indiana Pacers",
-        "reason": "Charlotte ML 1.09 outside target range 1.70-2.50. Spread H:-15.5 at 1.91 — Indiana is 18-58 L10 3-7, extreme mismatch. Charlotte L15 +41.3 is elite but spread size 15.5 at 1.91 requires confidence 60+. Indiana missing Haliburton (OUT), McConnell (OUT), Nembhard (OUT), Nesmith (OUT) — essentially depleted. This spread has edge but Charlotte is 1.09 favourite already fully priced; spread 1.91 is marginal at 15.5 with garbage time risk. No clear EV edge on spread with this roster status — Indiana could keep it within 15 with 4 key starters out. Rejected on insufficient spread confidence after injury adjustments.",
+        "reason": "CHA ML 1.09 far outside target range 1.70-2.50. Spread -15.5 at 1.91/1.91 possible but IND is a heavy underdog at 7.5 ML implying extreme mismatch; spread confidence undermined by IND missing Haliburton, McConnell, Nembhard, Nesmith (4 key players OUT) — roster decimated, spread unreliable with such heavy absences. No valid pick.",
         "ml_home": 1.09,
         "ml_away": 7.5,
-        "decision": "no_edge"
+        "decision": "rejected"
       },
       {
         "match": "Brooklyn Nets vs Atlanta Hawks",
-        "reason": "Atlanta ML 1.06 outside target range. Brooklyn home 9.5 — line anomaly check: BKN home priced at 9.5 (implied ~9.5% win probability) vs ATL away. BKN 18-58 L10 1-9 confirmed tank. ATL 44-33 L10 8-2. Spread H:+17.0 at 1.92 — this is betting BKN +17 or ATL -17. ATL L15 +24.5 vs BKN season NetRtg -9.8. ATL -17 away: ATL is hot (W3 streak) but hot-streak-fade rule applies (NetRtg +2.2 vs .571 W% = regression risk). Confidence in ATL covering -17 on the road against a tank team: base 65, but hot-streak-fade -5, away road risk -3 = 57. EV = (0.57 × 1.92) - 1 = 1.0944 - 1 = 0.09. Marginal EV 0.09 at confidence 57 — meets minimum floors but hot-streak-fade risk against a tank team where scorelines can be unpredictable. No franchise player injury concern for ATL. Rejected due to hot-streak-fade rule and marginal EV on road spread.",
+        "reason": "BKN ML 9.5 and ATL ML 1.06 — both outside 1.70-2.50 ML range. Spread: BKN +17.0 at 1.92 technically in range but ATL is hot-streak-fade candidate (NetRtg +2.2 vs L10 8-2, actual true talent ~.500); BKN L15 and season both awful (-9.8 NetRtg, 18-58). ATL spread -17.0 requires confidence >=60 but fade rule + BKN tanking creates unpredictable blowout-or-cover scenario. BKN multiple key injuries (Demin, Porter Jr., Sharpe, Wolf OUT). No clean edge.",
         "ml_home": 9.5,
         "ml_away": 1.06,
-        "decision": "no_edge"
+        "decision": "rejected"
       },
       {
         "match": "New York Knicks vs Chicago Bulls",
-        "reason": "NYK ML 1.10 outside target range 1.70-2.50. Spread H:-14.0 at 1.89 — NYK vs CHI. CHI confirmed tank (29-47 L10 2-8). NYK L15 -13.1 (negative despite 49-28 record — concerning divergence). Karl-Anthony Towns Questionable (elbow impingement) — franchise player -10 confidence. CHI L15 -41.6 (terrible). Base confidence for NYK -14 spread: 65. Adjustments: -10 (Towns Questionable), -3 (L15 negative for NYK despite good season). = 52. Below spread floor of 60. Rejected — Towns Questionable drops confidence below spread threshold.",
+        "reason": "NYK ML 1.10 outside target range. CHI ML 7.0 — CHI is 29-47 tank-tier (L10 2-8), NetRtg -4.8, L15 -41.6. Spread NYK -14.0 at 1.93: NYK NetRtg +6.2 L15 -13.1 (negative recent form despite strong season). CHI L15 -41.6 suggests extreme weakness but NYK L15 negative raises cover uncertainty. Zach Collins OUT for CHI. KAT Questionable for NYK. Insufficient confidence for spread given NYK's negative L15.",
         "ml_home": 1.1,
         "ml_away": 7.0,
-        "decision": "no_edge"
+        "decision": "rejected"
+      },
+      {
+        "match": "Houston Rockets vs Utah Jazz",
+        "reason": "HOU ML 1.08 far outside 1.70-2.50. UTA ML 8.0 — UTA is confirmed tank (21-56, L10 1-9, NetRtg -7.9, L15 -43.3) with massive absences (Collier, George, JJJ, Kessler all OUT). Spread HOU -16.5 at 1.89: within spread range but HOU L15 +35.9 is very strong. However, odds 1.89 slightly below spread target floor of 1.80 (it is within 1.80-2.30). Confidence check: HOU NetRtg +4.7, L15 strong; UTA near-empty roster (tank confirmed). Spread confidence ~65 on paper, but UTA depleted roster means blowout is plausible, cover is less certain with dead-rubber games. EV marginal. Decided no strong enough independent edge on spread given extreme mismatch uncertainty.",
+        "ml_home": 1.08,
+        "ml_away": 8.0,
+        "decision": "rejected"
       },
       {
         "match": "Memphis Grizzlies vs Toronto Raptors",
-        "reason": "MEM home 6.75 — implies ~13% win probability. TOR away 1.11 outside ML target range. TOR ML 1.11 not in 1.70-2.50. Spread H:+14.0 at 1.89 — betting MEM +14 or TOR -14. TOR: Immanuel Quickley OUT confirmed (franchise player — DO NOT BET TOR ML without verification; betting TOR -14 spread with franchise player absent). Quickley OUT materially weakens TOR offence. TOR L15 +12.0 is positive but Quickley absence is significant. MEM L15 -40.5 (terrible) but MEM is home. TOR without Quickley covering -14 on road: Base 55, -15 for Quickley OUT (franchise player) = 40. Below spread floor of 60. Also Jamison Battle Questionable. Rejected — TOR franchise player OUT drops confidence below threshold.",
+        "reason": "MEM ML 6.75 — outside 1.70-2.50. TOR ML 1.11 — outside range. Spread MEM +13.5 at 1.91: MEM is 25-51 near-tank with L10 2-8 and L15 -40.5. TOR has franchise player Quickley confirmed OUT, Hepburn OUT, Immanuel Quickley OUT — depleted roster. TOR also on L2 losing streak. With both teams weakened and TOR missing key players, spread edge for MEM +13.5 is uncertain. TOR at 1.11 not bettable. No valid pick.",
         "ml_home": 6.75,
         "ml_away": 1.11,
-        "decision": "no_edge"
+        "decision": "rejected"
+      },
+      {
+        "match": "Milwaukee Bucks vs Boston Celtics",
+        "reason": "MIL ML 9.5 outside range. BOS ML 1.06 — outside range. Giannis OUT confirmed for MIL (franchise player absence). BOS NetRtg +7.7, L10 8-2, L15 +22.8 — elite form. Spread MIL +17.5 at 1.89: MIL is effectively a tank team now (30-46, L10 3-7, NetRtg -6.3, L15 -33.6, Giannis OUT, Porter Jr. OUT, Portis OUT). BOS away but road elite team. Spread MIL +17.5 is large — BOS is elite but 17.5-point road cover requires dominance. Confidence insufficient for spread given road factor and score uncertainty in garbage time. No clean bet.",
+        "ml_home": 9.5,
+        "ml_away": 1.06,
+        "decision": "rejected"
       },
       {
         "match": "Dallas Mavericks vs Orlando Magic",
-        "reason": "DAL home 3.20 — in ML target range! ORL away 1.36 — outside range. EVAL: DAL 24-52 L10 2-8 confirmed tank. DAL missing: Kyrie Irving OUT (franchise player — DO NOT BET DAL ML without verification), Dereck Lively II OUT, Caleb Martin Doubtful, P.J. Washington Doubtful, Marvin Bagley III Doubtful. ORL 40-36 L10 2-8 — also in poor form. ORL L15 -44.5 (extreme negative — ORL is in terrible form). DAL at 3.20 with Kyrie OUT and confirmed tank status: franchise player rules say DO NOT BET DAL ML. ORL at 1.36 outside target range. DAL +7.0 spread at 1.89: betting DAL +7 with Kyrie OUT and tank team — tankers don't cover spreads. Rejected — Kyrie OUT disqualifies DAL ML per franchise_player_rules; ORL outside ML range and in terrible L15 form.",
+        "reason": "DAL ML 3.2 is within target range 1.70-2.50? No — 3.2 is above 2.50. ORL ML 1.36 — outside range. DAL is confirmed tank (24-52, L10 2-8) with Kyrie Irving OUT, Lively OUT, Bagley Doubtful, Martin Doubtful, PJ Washington Doubtful. ORL ML 1.36 not actionable. DAL ML 3.2 above 2.50 ceiling. Spread DAL +7.0 at 1.93: DAL roster depleted (multiple absences). ORL L10 2-8, NetRtg -0.2, L15 -44.5 — ORL in freefall. Both teams in poor form. No clean spread edge.",
         "ml_home": 3.2,
         "ml_away": 1.36,
-        "decision": "no_edge"
+        "decision": "rejected"
       },
       {
-        "match": "Sacramento Kings vs New Orleans Pelicans",
-        "reason": "SAC home 2.85 — in ML target range. NOP away 1.44 — outside range. EVAL: SAC 20-57 confirmed tank, L10 4-6 (slight improvement per skills but worst record in West). SAC L15 -38.2 (terrible). NOP 25-52 L10 3-7. NOP L15 -47.3 (even worse). Both teams are tank-tier. SAC home at 2.85: to bet SAC ML requires odds ≥ 2.20 and strong situational reason per tanking rules. Odds meet bar (2.85 ≥ 2.20). But NOP L15 -47.3 vs SAC L15 -38.2 — SAC actually better L15 by 9 pts, home court advantage applies. SAC missing Drew Eubanks OUT, De'Andre Hunter OUT. NOP 25-52 with L10 3-7 is also tank-tier. Base confidence for SAC home: 52. EV = (0.52 × 2.85) - 1 = 1.482 - 1 = 0.482. Strong EV but confidence 52 is speculative (ML floor 50, just above). Both teams tank-tier makes this a coin-flip with unpredictable motivation. Rejected — both teams confirmed tank-tier, pick lacks directional conviction beyond coin-flip; speculative tier 52 insufficient for reliable edge when opponent is also tanking.",
+        "match": "New Orleans Pelicans vs Sacramento Kings",
+        "reason": "SAC ML 2.85 above 2.50 ceiling. NOP ML 1.44 outside 1.70-2.50. NOP L15 -47.3 (catastrophic recent form), 25-52 near-tank. SAC confirmed tank (20-57) but L10 4-6 slightly less bad. No side within odds target range with a genuine edge. SAC ML 2.85 above ceiling and SAC is confirmed tank. No valid pick.",
         "ml_home": 2.85,
         "ml_away": 1.44,
-        "decision": "no_edge"
+        "decision": "rejected"
       }
     ],
-    "report": "Solid 3-pick slate driven by confirmed franchise player absences and extreme L15 divergences. Embiid Doubtful creates genuine MIN ML value at 2.12. Two spread picks (HOU -16.5, BOS -17.5) backed by elite L15 gaps (79 and 56 pts respectively) against depleted tank-tier opponents with multiple key absences confirmed via NBA official PDF. Total exposure €185 = 41.8% of bankroll, within the 70% cap. O/U picks unavailable (no odds offered on slate). Injury feed quality: NBA official PDF — full confidence rules apply. Pace data available but O/U odds absent from Betano for all games this session.",
+    "report": "Difficult slate with extreme mismatches dominating — most ML lines are well outside the 1.70–2.50 target range (multiple games at 1.06–1.11 vs 6.75–9.5). Only one pick meets all quality thresholds: Minnesota ML vs Philadelphia, leveraging PHI's deeply negative NetRtg (-0.1) as a fade candidate against a credible MIN team at 2.14 odds. Anthony Edwards Questionable flag noted and stake adjusted accordingly. Injury feed is NBA Official (full coverage), so data quality is high. Pace data is present in the feed. No line anomalies detected. 1 pick drafted; 8 games rejected due to odds outside target range, confirmed tanking teams, or insufficient edge.",
     "odds_source": "theodds_unibet",
     "injuries_source": "nba_official",
-    "tokens_in": 9583,
-    "tokens_out": 7014,
-    "cost_usd": 0.133959
+    "tokens_in": 10091,
+    "tokens_out": 5933,
+    "cost_usd": 0.119268
   },
   "commit_report_data": {
     "date": "2026-04-02",
