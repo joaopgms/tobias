@@ -14,7 +14,7 @@
           "peak_bankroll": 1000.0,
           "final_bankroll": null,
           "net_pnl": null,
-          "total_bets": 13,
+          "total_bets": 15,
           "wins": 5,
           "losses": 8,
           "bust": false
@@ -599,6 +599,64 @@
         }
       ],
       "summary": "Day 2026-04-02 commit — 1 bets totalling €57.32. 0 cancelled. Bankroll: €382.14 → €324.82."
+    },
+    {
+      "entry_id": "nba_entry_20260403",
+      "season": "2024-25",
+      "game": 1,
+      "timestamp": "2026-04-03T22:24:36.539849+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 442.33,
+      "total_staked": 154.0,
+      "bankroll_after": 288.33,
+      "cancelled_picks": [
+        {
+          "id": "nba_draft_20260403_001",
+          "match": "Philadelphia 76ers vs Minnesota Timberwolves",
+          "pick": "Minnesota Timberwolves ML (original draft at €15 stake, confidence 62)",
+          "reason": "NOT cancelled — UPGRADED and CONFIRMED. Draft pick superseded by commit-time re-evaluation: Anthony Edwards confirmed ACTIVE (not on injury report), upgrading confidence from 62 to 72. Odds improved from 2.14 to 2.30. Stake recalculated at new confidence tier. Bet committed as nba_bet_20260403_001 with updated parameters."
+        }
+      ],
+      "bets": [
+        {
+          "id": "nba_bet_20260403_001",
+          "match": "Philadelphia 76ers vs Minnesota Timberwolves",
+          "time": "2026-04-03T23:00:00Z",
+          "pick": "Minnesota Timberwolves ML",
+          "odds": 2.3,
+          "stake": 88.0,
+          "potential_return": 202.4,
+          "confidence": 72,
+          "reasoning": "Anthony Edwards was listed Questionable at Scout time (causing stake reduction to €15 and confidence 62), but the commit-time NBA Official injury report does NOT list Edwards — he is confirmed ACTIVE. Per injury_check_rules, anchor player upgraded from Questionable to Active → confidence +10 = 72. Stake recalculated at High tier (20% of €442.33 = €88.00). Odds improved from 2.14 (Scout) to 2.30 (+0.16 in our favor) — confirmed at original confidence level, not inflated. PHI season NetRtg -0.1 makes them a strong fade candidate despite 42-34 record. MIN is a credible playoff team (46-30, NetRtg +3.5) with Edwards now active. PHI injury report shows only Johni Broome OUT (non-anchor). EV = (0.72 × 2.30) - 1 = 0.656. Data source: nba_official (full coverage). No anomaly: MIN as away underdog at 2.30 is reasonable given PHI's mediocre underlying metrics. Total exposure remains well within 70% bankroll cap.",
+          "anchor_players": [
+            "Anthony Edwards"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null
+        },
+        {
+          "id": "nba_bet_20260403_002",
+          "match": "Houston Rockets vs Utah Jazz",
+          "time": "2026-04-04T00:00:00Z",
+          "pick": "Houston Rockets -18.0 (Spread)",
+          "odds": 1.89,
+          "stake": 66.0,
+          "potential_return": 124.74,
+          "confidence": 62,
+          "reasoning": "Late scout pick identified at commit phase. HOU is a legitimate playoff contender (47-29, L10: 6-4, L15 NetRtg: +35.9 — elite recent form, OffRtg 118.1, DefRtg 113.4) playing at home. UTA is confirmed tank tier (21-56, L10: 1-9, L15 NetRtg: -43.3) with a decimated roster: Collier OUT (hamstring), George OUT (strain), Jaren Jackson Jr. OUT (recovery), Walker Kessler OUT (recovery), Harkless OUT, Hinson OUT (G League) — essentially 6 contributors unavailable. This is one of the most extreme roster mismatches on tonight's slate. HOU still motivated for playoff seeding. UTA has almost no functional rotation. -18.0 spread is large but the L15 differential (+35.9 vs -43.3 = +79.2) is extraordinary. Odds 1.89 within valid spread range (1.75–2.30). EV = (0.62 × 1.89) - 1 = 0.172. Data source: nba_official. Late scout gates satisfied: first_game_time - now > 20 min, confidence ≥ 60, EV ≥ 0.05, within quantity limit (1 new pick). No pace data needed for spread pick. Total exposure €154.00 vs €309.63 cap.",
+          "anchor_players": [
+            "Jaren Jackson Jr.",
+            "Walker Kessler"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null
+        }
+      ],
+      "summary": "Day 2026-04-03 commit — 2 bets totalling €154.00. 1 cancelled. Bankroll: €442.33 → €288.33."
     }
   ]
 }
