@@ -502,6 +502,22 @@ def run(store) -> None:
                 if len(after_ev) < len(extracted_picks):
                     log.info(f"Scout: extraction — {len(extracted_picks)-len(after_ev)} dropped EV<5%")
                 extracted_picks = after_ev
+                # Fix game times: cross-reference match string against fetched games
+                game_time_map = {}
+                for g in games:
+                    home = g.get("home_team", "")
+                    away = g.get("away_team", "")
+                    t    = g.get("time", "")
+                    if home and away and t:
+                        game_time_map[f"{home} vs {away}".lower()] = t
+                        game_time_map[f"{away} vs {home}".lower()] = t
+                for p in extracted_picks:
+                    match_key = (p.get("match") or "").lower()
+                    real_time = game_time_map.get(match_key)
+                    if real_time:
+                        p["time"] = real_time
+                    elif not p.get("time") or p.get("time") in ("TBD", "tbd", "", None):
+                        p["time"] = fgt_raw or ""
                 if extracted_picks:
                     draft_picks = extracted_picks
                     log.info(f"Scout: extraction retry recovered {len(draft_picks)} pick(s)")
