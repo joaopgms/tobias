@@ -684,33 +684,7 @@ const STATE_DATA = {
     ],
     "total_staked": 154.0,
     "bankroll_before": 442.33,
-    "report": "### CONFIRMED — Minnesota Timberwolves ML
-- Match: Philadelphia 76ers vs Minnesota Timberwolves | Tip: 2026-04-03T23:00 UTC
-- Pick: Minnesota Timberwolves ML | Scout odds: 2.14 | Commit odds: 2.30 | Move: **+0.16 (improved)**
-- ML: H:1.63/A:2.30 | ATS: PHI -3.5 (1.90/1.92) | O/U: N/A
-- Stake: €88.00 | Pot: €202.40 | Conf: 72/100 | EV: 0.656
-- Decision: **UPGRADED AND CONFIRMED.** Scout flagged Anthony Edwards as Questionable, reducing confidence to 62 and stake to €15. Commit-time NBA Official injury report does NOT list Edwards — he is confirmed ACTIVE for tonight. Per injury upgrade rules, confidence increases by +10 to 72 (High tier). Stake recalculated at 20% of current bankroll (€442.33) = €88.00. Odds drifted favorably from 2.14 → 2.30 (+0.16), likely reflecting Edwards' confirmed availability being priced in differently elsewhere, but our edge at MIN ML is strengthened. PHI season NetRtg -0.1 remains a strong fade signal. PHI injury report shows only Johni Broome OUT (non-critical). EV = (0.72 × 2.30) - 1 = 0.656. Data source nba_official. This is a clean, high-confidence bet.
-
----
-
-### CONFIRMED (LATE PICK) — Houston Rockets -18.0 Spread
-- Match: Houston Rockets vs Utah Jazz | Tip: 2026-04-04T00:00 UTC
-- Pick: Houston Rockets -18.0 Spread | Scout odds: N/A (new pick) | Commit odds: 1.89 | Move: N/A
-- ML: H:1.06/A:10.0 | ATS: HOU -18.0 (1.89/1.93) | O/U: N/A
-- Stake: €66.00 | Pot: €124.74 | Conf: 62/100 | EV: 0.172
-- Decision: **ADDED AS LATE PICK.** Scout rejected HOU/UTA due to marginal EV and uncertainty. At commit time, UTA's depleted roster is now confirmed (6 players OUT including JJJ, Kessler, Collier, George) and the spread has moved to -18.0 with odds 1.89 (within valid range). HOU L15 NetRtg +35.9 is elite, they're home, motivated for playoff seeding at 47-29. L15 differential of +79.2 is the largest discrepancy on tonight's entire slate. UTA has almost no functional rotation. Confidence 62 (at gate minimum), EV 0.172 (well above 0.05). All late scout gates satisfied. This represents the strongest remaining edge on the slate after MIN ML.
-
----
-
-### EXPOSURE CHECK
-- Pick 1 (MIN ML): €88.00
-- Pick 2 (HOU Spread): €66.00
-- **Total committed: €154.00 / €442.33 bankroll = 34.8%** ✅ (well below 70% cap)
-
----
-
-### SLATE SUMMARY
-Tonight's primary edge is Minnesota Timberwolves ML at 2.30 — a clean play on PHI's poor underlying metrics (NetRtg -0.1) with Anthony Edwards now confirmed active, providing a significant upgrade from the Scout's cautious draft. The late-scouted Houston -18.0 spread is a secondary play capitalizing on Utah's historically depleted roster and Houston's elite recent form, representing one of the most extreme talent mismatches on the entire slate. Total exposure of €154.00 (34.8% of bankroll) is conservative and well within risk parameters. All other games on the slate lack either a viable odds range or sufficient confidence to warrant a bet, particularly given the prevalence of extreme favorites (1.05–1.12) and tanking teams creating unpredictable spread outcomes.",
+    "report": "### CONFIRMED — Minnesota Timberwolves ML\n- Match: Philadelphia 76ers vs Minnesota Timberwolves | Tip: 2026-04-03T23:00 UTC\n- Pick: Minnesota Timberwolves ML | Scout odds: 2.14 | Commit odds: 2.30 | Move: **+0.16 (improved)**\n- ML: H:1.63/A:2.30 | ATS: PHI -3.5 (1.90/1.92) | O/U: N/A\n- Stake: €88.00 | Pot: €202.40 | Conf: 72/100 | EV: 0.656\n- Decision: **UPGRADED AND CONFIRMED.** Scout flagged Anthony Edwards as Questionable, reducing confidence to 62 and stake to €15. Commit-time NBA Official injury report does NOT list Edwards — he is confirmed ACTIVE for tonight. Per injury upgrade rules, confidence increases by +10 to 72 (High tier). Stake recalculated at 20% of current bankroll (€442.33) = €88.00. Odds drifted favorably from 2.14 → 2.30 (+0.16), likely reflecting Edwards' confirmed availability being priced in differently elsewhere, but our edge at MIN ML is strengthened. PHI season NetRtg -0.1 remains a strong fade signal. PHI injury report shows only Johni Broome OUT (non-critical). EV = (0.72 × 2.30) - 1 = 0.656. Data source nba_official. This is a clean, high-confidence bet.\n\n---\n\n### CONFIRMED (LATE PICK) — Houston Rockets -18.0 Spread\n- Match: Houston Rockets vs Utah Jazz | Tip: 2026-04-04T00:00 UTC\n- Pick: Houston Rockets -18.0 Spread | Scout odds: N/A (new pick) | Commit odds: 1.89 | Move: N/A\n- ML: H:1.06/A:10.0 | ATS: HOU -18.0 (1.89/1.93) | O/U: N/A\n- Stake: €66.00 | Pot: €124.74 | Conf: 62/100 | EV: 0.172\n- Decision: **ADDED AS LATE PICK.** Scout rejected HOU/UTA due to marginal EV and uncertainty. At commit time, UTA's depleted roster is now confirmed (6 players OUT including JJJ, Kessler, Collier, George) and the spread has moved to -18.0 with odds 1.89 (within valid range). HOU L15 NetRtg +35.9 is elite, they're home, motivated for playoff seeding at 47-29. L15 differential of +79.2 is the largest discrepancy on tonight's entire slate. UTA has almost no functional rotation. Confidence 62 (at gate minimum), EV 0.172 (well above 0.05). All late scout gates satisfied. This represents the strongest remaining edge on the slate after MIN ML.\n\n---\n\n### EXPOSURE CHECK\n- Pick 1 (MIN ML): €88.00\n- Pick 2 (HOU Spread): €66.00\n- **Total committed: €154.00 / €442.33 bankroll = 34.8%** ✅ (well below 70% cap)\n\n---\n\n### SLATE SUMMARY\nTonight's primary edge is Minnesota Timberwolves ML at 2.30 — a clean play on PHI's poor underlying metrics (NetRtg -0.1) with Anthony Edwards now confirmed active, providing a significant upgrade from the Scout's cautious draft. The late-scouted Houston -18.0 spread is a secondary play capitalizing on Utah's historically depleted roster and Houston's elite recent form, representing one of the most extreme talent mismatches on the entire slate. Total exposure of €154.00 (34.8% of bankroll) is conservative and well within risk parameters. All other games on the slate lack either a viable odds range or sufficient confidence to warrant a bet, particularly given the prevalence of extreme favorites (1.05–1.12) and tanking teams creating unpredictable spread outcomes.",
     "tokens_in": 8366,
     "tokens_out": 7102,
     "cost_usd": 0.131628
@@ -748,29 +722,9 @@ Tonight's primary edge is Minnesota Timberwolves ML at 2.30 — a clean play on 
   },
   "cached_context": {
     "cached_at": "2026-04-04",
-    "games_str": "Washington Wizards @ Miami Heat  |  2026-04-04T19:00 UTC  |  Kaseya Center
-San Antonio Spurs @ Denver Nuggets  |  2026-04-04T19:00 UTC  |  Ball Arena
-Detroit Pistons @ Philadelphia 76ers  |  2026-04-04T23:00 UTC  |  Xfinity Mobile Arena",
-    "standings_str": "Oklahoma City Thunder: 61-16  L10:9-1
-San Antonio Spurs: 59-18  L10:10-0
-Detroit Pistons: 56-21  L10:8-2
-Boston Celtics: 52-25  L10:8-2
-New York Knicks: 50-28  L10:7-3
-Denver Nuggets: 49-28  L10:8-2
-Philadelphia 76ers: 43-34  L10:7-3
-Miami Heat: 40-37  L10:2-8
-Utah Jazz: 21-57  L10:1-9
-UTAH: 21-57  L10:1-9
-Indiana Pacers: 18-59  L10:3-7
-Brooklyn Nets: 18-59  L10:1-9
-Washington Wizards: 17-59  L10:1-9",
-    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)
-Miami Heat: OffRtg 116.1 | DefRtg 114.1 | NetRtg +2.0 | Pace 103.5
-Washington Wizards: OffRtg 111.0 | DefRtg 122.5 | NetRtg -11.5 | Pace 101.2 | L15:-33.1
-Denver Nuggets: OffRtg 122.2 | DefRtg 117.3 | NetRtg +4.8 | Pace 98.4 | L15:+29.1
-San Antonio Spurs: OffRtg 119.4 | DefRtg 111.0 | NetRtg +8.4 | Pace 100.1 | L15:+59.9
-Philadelphia 76ers: OffRtg 115.9 | DefRtg 115.8 | NetRtg +0.1 | Pace 99.5 | L15:+27.4
-Detroit Pistons: OffRtg 117.5 | DefRtg 109.7 | NetRtg +7.9 | Pace 99.4 | L15:+25.7"
+    "games_str": "Washington Wizards @ Miami Heat  |  2026-04-04T19:00 UTC  |  Kaseya Center\nSan Antonio Spurs @ Denver Nuggets  |  2026-04-04T19:00 UTC  |  Ball Arena\nDetroit Pistons @ Philadelphia 76ers  |  2026-04-04T23:00 UTC  |  Xfinity Mobile Arena",
+    "standings_str": "Oklahoma City Thunder: 61-16  L10:9-1\nSan Antonio Spurs: 59-18  L10:10-0\nDetroit Pistons: 56-21  L10:8-2\nBoston Celtics: 52-25  L10:8-2\nNew York Knicks: 50-28  L10:7-3\nDenver Nuggets: 49-28  L10:8-2\nPhiladelphia 76ers: 43-34  L10:7-3\nMiami Heat: 40-37  L10:2-8\nUtah Jazz: 21-57  L10:1-9\nUTAH: 21-57  L10:1-9\nIndiana Pacers: 18-59  L10:3-7\nBrooklyn Nets: 18-59  L10:1-9\nWashington Wizards: 17-59  L10:1-9",
+    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nMiami Heat: OffRtg 116.1 | DefRtg 114.1 | NetRtg +2.0 | Pace 103.5\nWashington Wizards: OffRtg 111.0 | DefRtg 122.5 | NetRtg -11.5 | Pace 101.2 | L15:-33.1\nDenver Nuggets: OffRtg 122.2 | DefRtg 117.3 | NetRtg +4.8 | Pace 98.4 | L15:+29.1\nSan Antonio Spurs: OffRtg 119.4 | DefRtg 111.0 | NetRtg +8.4 | Pace 100.1 | L15:+59.9\nPhiladelphia 76ers: OffRtg 115.9 | DefRtg 115.8 | NetRtg +0.1 | Pace 99.5 | L15:+27.4\nDetroit Pistons: OffRtg 117.5 | DefRtg 109.7 | NetRtg +7.9 | Pace 99.4 | L15:+25.7"
   },
   "team_game_log": {
     "Charlotte Hornets": [
@@ -1781,6 +1735,7 @@ const DRAFT_PICKS = [
     "market_type": "spread"
   }
 ];
+
 const SCOUT_STATUS = "live";
 const SCOUT_ERROR = "";
 const SCOUT_UPDATED_AT = "2026-04-04T14:38:26.900922+00:00";
