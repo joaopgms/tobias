@@ -14,7 +14,7 @@
           "peak_bankroll": 1000.0,
           "final_bankroll": null,
           "net_pnl": null,
-          "total_bets": 15,
+          "total_bets": 18,
           "wins": 6,
           "losses": 9,
           "bust": false
@@ -657,6 +657,77 @@
         }
       ],
       "summary": "Day 2026-04-03 commit — 2 bets totalling €154.00. 1 cancelled. Bankroll: €442.33 → €288.33."
+    },
+    {
+      "entry_id": "nba_entry_20260404",
+      "season": "2024-25",
+      "game": 1,
+      "timestamp": "2026-04-04T18:29:53.774205+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 413.07,
+      "total_staked": 151.31,
+      "bankroll_after": 261.76,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260404_001",
+          "match": "Denver Nuggets vs San Antonio Spurs",
+          "time": "2026-04-04T19:00:00Z",
+          "pick": "San Antonio Spurs -spread (-2.0)",
+          "odds": 1.91,
+          "stake": 55.0,
+          "potential_return": 105.05,
+          "reasoning": "SAS dominant L15 NetRtg (+59.9) and perfect L10 (10-0) vs DEN's solid but inferior form (+29.1). Wembanyama confirmed active. Scout drafted at 1.90, current odds improved to 1.91 — minor improvement noted. SAS as away favourite covering -2.0 points supported by massive form differential. No new adverse injuries for SAS (David Jones Garcia and Emanuel Miller OUT are non-anchors). EV = 0.375 at 1.91 with confidence 72.",
+          "confidence": 72,
+          "anchor_players": [
+            "Victor Wembanyama"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-04-04T18:29:57Z"
+        },
+        {
+          "id": "nba_bet_20260404_002",
+          "match": "Denver Nuggets vs San Antonio Spurs",
+          "time": "2026-04-04T19:00:00Z",
+          "pick": "San Antonio Spurs ML",
+          "odds": 1.78,
+          "stake": 55.0,
+          "potential_return": 97.9,
+          "reasoning": "SAS W11 streak and superior L15 NetRtg (+59.9 vs +29.1). Wembanyama confirmed active on NBA official report. Odds improved significantly from Scout's 1.65 to current 1.78 — checked for adverse news, none found. Correlated ML play with spread pick capitalising on SAS dominant recent form. EV = 0.246 at 1.78 with confidence 70. Stake held at original Scout level per rules (no increase on improved odds).",
+          "confidence": 70,
+          "anchor_players": [
+            "Victor Wembanyama"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-04-04T18:29:57Z"
+        },
+        {
+          "id": "nba_bet_20260404_003",
+          "match": "Philadelphia 76ers vs Detroit Pistons",
+          "time": "2026-04-04T23:00:00Z",
+          "pick": "Philadelphia 76ers ML",
+          "odds": 2.2,
+          "stake": 41.31,
+          "potential_return": 90.88,
+          "reasoning": "Cade Cunningham confirmed OUT (Pneumothorax) — primary edge intact. PHI at home as underdog at 2.20. Joel Embiid also listed OUT (Management/Illness) — confidence reduced by 10 to 52, stake reduced to speculative tier (10% of bankroll = €41.31). PHI L15 NetRtg +27.4 achieved in context of depleted roster, suggesting team has adapted. Detroit also faces Jalen Duren (Q) and Tobias Harris (Q) questions beyond Cunningham absence. Odds improved slightly from Scout's 2.18 to 2.20. EV = 0.144 at 2.20 with adjusted confidence 52 — above 0.05 threshold.",
+          "confidence": 52,
+          "anchor_players": [
+            "Cade Cunningham (OUT - Pistons)"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-04-04T18:29:57Z"
+        }
+      ],
+      "summary": "Day 2026-04-04 commit — 3 bets totalling €151.31. 0 cancelled. Bankroll: €413.07 → €261.76."
     }
   ]
 }
