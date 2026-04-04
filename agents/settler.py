@@ -35,9 +35,12 @@ BUST_RESET      = None   # resolved at runtime from state["bankroll_initial"]
 
 # ── Bet evaluation ─────────────────────────────────────────────────────────────
 
-def _evaluate(bet: dict, result: dict) -> bool:
-    """Return True if bet WON given final scores."""
-    pick  = bet.get("pick", "").lower()
+def _evaluate(bet: dict, result: dict):
+    """Return True (won), False (lost), or None (cannot evaluate — leave pending)."""
+    import re as _re
+    pick  = bet.get("pick", "").lower().strip()
+    # Strip trailing market-type labels like "(Spread)", "(ML)", "(Total)" added by LLM
+    pick  = _re.sub(r'\s*\([^)]*\)\s*$', '', pick).strip()
     h     = result["home_score"]
     a     = result["away_score"]
     home  = result["home"].lower()
@@ -49,18 +52,16 @@ def _evaluate(bet: dict, result: dict) -> bool:
         return any(w in pick for w in winner.split())
 
     # Spread — format: "Team Name -X.X" or "Team Name +X.X"
-    import re
-    spread_m = re.search(r'([+-]?\d+\.?\d*)\s*$', pick)
+    spread_m = _re.search(r'([+-]\d+\.?\d*)\s*$', pick)
     if spread_m:
         spread = float(spread_m.group(1))
-        # Determine which team this pick is on
         if any(w in pick for w in home.split()):
             return (h + spread) > a
         elif any(w in pick for w in away.split()):
             return (a + spread) > h
 
     # Over / Under
-    ou_m = re.search(r'(over|under)\s+(\d+\.?\d*)', pick)
+    ou_m = _re.search(r'(over|under)\s+(\d+\.?\d*)', pick)
     if ou_m:
         direction = ou_m.group(1)
         total_line = float(ou_m.group(2))
@@ -68,7 +69,7 @@ def _evaluate(bet: dict, result: dict) -> bool:
         return total > total_line if direction == "over" else total < total_line
 
     log.warning(f"  Could not evaluate pick '{bet['pick']}' — leaving pending")
-    return False
+    return None
 
 
 # ── Main bust logic ────────────────────────────────────────────────────────────
@@ -253,8 +254,11 @@ def run(store) -> None:
             still_pending.append(bet)
             continue
 
-        # Evaluate
-        won     = _evaluate(bet, result)
+        # Evaluate — None means unparseable pick, leave pending
+        won = _evaluate(bet, result)
+        if won is None:
+            still_pending.append(bet)
+            continue
         stake   = float(bet["stake"])
         odds    = float(bet["odds"])
         returned = round(stake * odds, 2) if won else 0.0
