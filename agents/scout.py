@@ -253,7 +253,14 @@ def run(store) -> None:
 
     # ── 5. Build prompt ───────────────────────────────────────────────────────
     games_str    = _games_text(games)
-    odds_str     = format_odds_for_prompt(odds)
+    # Filter odds to tonight's ESPN slate only — The-Odds-API returns all upcoming
+    # games (no date filter), so without this LLM would analyse tomorrow's games too.
+    tonight_teams_set = {g["home"].lower() for g in games} | {g["away"].lower() for g in games}
+    odds_tonight = [o for o in odds if o.get("home","").lower() in tonight_teams_set
+                    or o.get("away","").lower() in tonight_teams_set]
+    if len(odds_tonight) < len(odds):
+        log.info(f"Scout: odds filtered {len(odds)} -> {len(odds_tonight)} games (tonight's ESPN slate only)")
+    odds_str     = format_odds_for_prompt(odds_tonight)
     if injuries_source == "nba_official":
         from core.nba_injuries import format_injuries_for_prompt as _fmt_official
         tonight_teams = [g["home"] for g in games] + [g["away"] for g in games]
