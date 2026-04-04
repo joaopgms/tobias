@@ -16,7 +16,7 @@
           "net_pnl": null,
           "total_bets": 15,
           "wins": 5,
-          "losses": 8,
+          "losses": 10,
           "bust": false
         }
       ]
@@ -631,10 +631,10 @@
           "anchor_players": [
             "Anthony Edwards"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -88.0,
+          "settled_at": "2026-04-04T10:35:22.097597+00:00"
         },
         {
           "id": "nba_bet_20260403_002",
@@ -650,10 +650,10 @@
             "Jaren Jackson Jr.",
             "Walker Kessler"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -66.0,
+          "settled_at": "2026-04-04T10:35:22.097597+00:00"
         }
       ],
       "summary": "Day 2026-04-03 commit — 2 bets totalling €154.00. 1 cancelled. Bankroll: €442.33 → €288.33."
