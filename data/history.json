@@ -15,8 +15,8 @@
           "final_bankroll": null,
           "net_pnl": null,
           "total_bets": 15,
-          "wins": 5,
-          "losses": 10,
+          "wins": 6,
+          "losses": 9,
           "bust": false
         }
       ]
@@ -650,9 +650,9 @@
             "Jaren Jackson Jr.",
             "Walker Kessler"
           ],
-          "result": "LOST",
-          "returned": 0.0,
-          "pnl": -66.0,
+          "result": "WON",
+          "returned": 124.74,
+          "pnl": 58.74,
           "settled_at": "2026-04-04T10:35:22.097597+00:00"
         }
       ],
