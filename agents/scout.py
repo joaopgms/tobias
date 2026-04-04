@@ -513,8 +513,8 @@ def run(store) -> None:
                 # LLM guesses on home/away and time are never trusted.
                 espn_game_map = {}  # any team-pair key -> {"match": "HOME vs AWAY", "time": iso}
                 for g in games:
-                    home = g.get("home_team", "")
-                    away = g.get("away_team", "")
+                    home = g.get("home", "")
+                    away = g.get("away", "")
                     t    = g.get("time", "")
                     if home and away:
                         canonical = {"match": f"{home} vs {away}", "time": t or fgt_raw or ""}
