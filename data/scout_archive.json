@@ -2507,5 +2507,77 @@
     "tokens_in": 7866,
     "tokens_out": 5407,
     "cost_usd": 0.104703
+  },
+  {
+    "ts": "2026-04-04T15:21:48.291069+00:00",
+    "date": "2026-04-04",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_unibet",
+    "draft_count": 3,
+    "picks": [
+      {
+        "id": "nba_draft_20260404_001",
+        "match": "San Antonio Spurs vs Denver Nuggets",
+        "time": "2026-04-04",
+        "pick": "San Antonio Spurs -spread",
+        "odds": 1.9,
+        "stake": 55.0,
+        "potential_return": 104.5,
+        "confidence": 72,
+        "reasoning": "SAS dominant L15 NetRtg (+59.9) and W11 streak vs DEN's inferior form. Wembanyama confirmed available. Home court advantage. Strong recent form supports covering the spread.",
+        "anchor_players": [
+          "Victor Wembanyama"
+        ],
+        "drafted_at": "2026-04-04T15:23:34Z",
+        "market_type": "spread"
+      },
+      {
+        "id": "nba_draft_20260404_002",
+        "match": "San Antonio Spurs vs Denver Nuggets",
+        "time": "2026-04-04",
+        "pick": "San Antonio Spurs ML",
+        "odds": 1.65,
+        "stake": 55.0,
+        "potential_return": 90.75,
+        "confidence": 70,
+        "reasoning": "SAS W11 streak and superior NetRtg vs DEN. Wembanyama confirmed available. Backing moneyline as a correlated play with the spread pick to capitalize on SAS's dominant recent form.",
+        "anchor_players": [
+          "Victor Wembanyama"
+        ],
+        "drafted_at": "2026-04-04T15:23:34Z",
+        "market_type": "ml"
+      },
+      {
+        "id": "nba_draft_20260404_003",
+        "match": "Detroit Pistons vs Philadelphia 76ers",
+        "time": "2026-04-04",
+        "pick": "Philadelphia 76ers ML",
+        "odds": 2.18,
+        "stake": 55.0,
+        "potential_return": 119.9,
+        "confidence": 62,
+        "reasoning": "Cade Cunningham confirmed OUT (Pneumothorax) for Detroit, significantly weakening Pistons' offensive core. PHI, despite weak NetRtg, benefits greatly from Cunningham absence shifting matchup dynamics. Value at 2.18.",
+        "anchor_players": [
+          "Cade Cunningham (OUT - Pistons)"
+        ],
+        "drafted_at": "2026-04-04T15:23:34Z",
+        "market_type": "ml"
+      }
+    ],
+    "rejected": [
+      {
+        "match": "Miami Heat vs Washington Wizards",
+        "reason": "Miami ML at 1.05 — far below 1.70 minimum odds floor, no playable market. Washington confirmed tank (17-59, L10:1-9, multiple franchise players OUT). Spread -17.5 for Miami: Miami L10 2-8 (confirmed fade candidate) — insufficient confidence to back a 17.5-point spread for a cold team. Washington +17.5: tanker non-cover rule applies. O/U unavailable. No viable pick.",
+        "ml_home": 1.05,
+        "ml_away": 10.0,
+        "decision": "rejected"
+      }
+    ],
+    "report": "Three-game Saturday slate. NBA official injury PDF available for all 5 playing teams — full confidence rules apply. Pace data shows values but O/U markets are N/A for all games tonight, so no totals evaluated. SAS vs DEN is the headline matchup: SAS's dominant L15 NetRtg (+59.9) and W11 streak vs DEN's solid but inferior form supports two picks (spread + ML) on the Spurs, with Wembanyama confirmed available. PHI ML drafted at 2.18 on the strength of Cunningham's confirmed absence (Pneumothorax) shifting the Pistons-76ers dynamic, despite PHI's generally weak NetRtg. Washington vs Miami entirely unplayable — extreme odds, confirmed tank visitor, cold home team. Three picks drafted totaling ~40% bankroll exposure (within 70% cap).",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 8090,
+    "tokens_out": 5780,
+    "cost_usd": 0.11097
   }
 ]
