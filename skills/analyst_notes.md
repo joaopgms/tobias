@@ -1,33 +1,33 @@
 ---
-date: 2026-04-03
+date: 2026-04-04
 llm: claude-sonnet-4-6
 scout_patches: 2
 commit_patches: 0
-milestone: daily (13 bets)
+milestone: daily (15 bets)
 ---
 
-## Today's Analysis — 2026-04-03
+## Today's Analysis — 2026-04-04
 
-The most significant development this session is Victor Wembanyama appearing in the verified OUT list for San Antonio — this is a franchise-level absence that directly contradicts the Spurs' 11-game winning streak narrative and could create major line mispricing if books haven't fully adjusted. San Antonio picks must be treated with extreme caution until NBA official PDF confirms status. Performance data shows totals (0W/2L, -€184.27) and high-confidence picks (0W/2L, -€320.54) are the worst-performing segments — the data reinforces the existing high confidence floor and totals confidence floor rules, though sample sizes (2 bets each) remain too small for strategic patches. Spread underperformance (2W/3L, -€292.06) at the -€292 level versus ML's near-breakeven (-€81) continues to suggest spreads carry higher variance risk, worth monitoring as volume grows.
+The most significant factual update this session is Luka Doncic confirmed OUT for the Lakers via the verified roster feed — this is a franchise-altering absence for a 50-27 team whose NetRtg (+1.5) already suggests regression risk, and any upcoming LAL line must be treated with extreme caution. The Wembanyama absence from prior session is now UNCONFIRMED in today's verified feed, meaning San Antonio's 11-game streak cannot be assumed to be compromised — re-verification via NBA official PDF is mandatory before any SAS pick. Performance remains deeply negative (33.3% WR, -€711.67) with High-confidence bets performing worst (0W/3L, -€408.54), reinforcing the need for conservative selectivity and strict EV discipline at the top confidence tier — no strategic section changes are warranted without more settled data, but the High-confidence tier failure pattern is approaching the threshold that will require a structural review.
 
 ## Performance Stats
-ALL-TIME: 5W / 8L | Win rate: 38.5% | P&L: €-557.67 | Avg odds: 1.99 | Avg conf: 64.6/100
-RECENT 13: 5W / 8L | 38.5% WR | P&L: €-557.67
-By market:      ML 6bets 3W/3L 50.0% €-81.34  |  SPREAD 5bets 2W/3L 40.0% €-292.06  |  TOTAL 2bets 0W/2L 0.0% €-184.27
-By confidence:  High 2bets 0W/2L 0.0% €-320.54  |  Medium 10bets 5W/5L 50.0% €-137.13  |  Speculative 1bets 0W/1L 0.0% €-100.00
-By odds range:  1.70-1.89 2bets 1W/1L 50.0% €-66.69  |  1.90-2.09 10bets 4W/6L 40.0% €-390.98  |  2.10-2.50 1bets 0W/1L 0.0% €-100.00
+ALL-TIME: 5W / 10L | Win rate: 33.3% | P&L: €-711.67 | Avg odds: 2.0 | Avg conf: 64.9/100
+RECENT 15: 5W / 10L | 33.3% WR | P&L: €-711.67
+By market:      ML 8bets 3W/5L 37.5% €-235.34  |  SPREAD 5bets 2W/3L 40.0% €-292.06  |  TOTAL 2bets 0W/2L 0.0% €-184.27
+By confidence:  High 3bets 0W/3L 0.0% €-408.54  |  Medium 11bets 5W/6L 45.5% €-203.13  |  Speculative 1bets 0W/1L 0.0% €-100.00
+By odds range:  1.70-1.89 3bets 1W/2L 33.3% €-132.69  |  1.90-2.09 10bets 4W/6L 40.0% €-390.98  |  2.10-2.50 2bets 0W/2L 0.0% €-188.00
 
 
 
 ## Scout patches applied
-- [franchise_player_rules] Verified feed adds Alex Caruso (OKC), Emanuel Miller (SAS), Victor Wembanyama (SAS) and Jock Landale (ATL) as OUT — Wembanyama is a franchise player absence requiring mandatory alert; injury landscape confirms Kyshawn George, Anthony Davis, Alex Sarr for Washington.
-- [tanking_teams] Updated all standings to current session data, added Victor Wembanyama OUT alert for SAS (franchise player newly confirmed in verified feed), updated Warriors to streak L3 and NetRtg -0.3, updated all streak/record data from current standings input.
+- [franchise_player_rules] Verified feed this session removes Alex Caruso (OKC), Victor Wembanyama (SAS), and Jamison Battle (TOR) from confirmed absences, adds Luka Doncic (LAL) as verified OUT, and confirms Trae Young/Alex Sarr/Kyshawn George via injury landscape; all player names strictly sourced from verified list.
+- [tanking_teams] Updated standings reflect current session data including corrected records, Luka Doncic added as verified LAL franchise player absence, Wembanyama status corrected to unconfirmed-absent, and Charlotte/Houston/Boston hot streaks updated per current L10 data.
 
 ## Commit patches applied
 None
 
 ## Intelligence gaps identified
-- **Victor Wembanyama's absence from San Antonio creates a scenario where the Spurs' 11-game streak odds are priced on full-strength roster — no rule currently flags franchise player absences on historically hot-streak teams as a special verification priority** — Books may still be pricing SAS as full-strength, creating false favourite situations; betting against SAS at wrong odds or betting on them without Wembanyama would both be errors → The franchise_player_rules patch already adds the mandatory alert; Scout should also check SAS line movement specifically when Wembanyama status is unconfirmed — any SAS line that hasn't moved despite his roster-only OUT flag is a potential anomaly worth flagging
-- **Portland Trail Blazers (40-38, L10: 8-2, streak: W3) appear in standings but have no NetRtg/OffRtg/DefRtg entry in the advanced stats feed** — Without NetRtg, Scout cannot apply the primary directional signal (step 1 of priority_stats) for any Portland game, forcing a -5 confidence penalty and degrading pick quality on a play-in bubble team with genuine motivation edge → Flag Portland as a 'NetRtg-unavailable team' in data_quality_rules or priority_stats so Scout explicitly applies the missing-L15 penalty and avoids spread bets involving Portland until advanced stats are available
-- **Totals market has 0W/2L record (-€184.27, 0% WR) but sample size of only 2 bets is insufficient to determine whether the confidence floor (65, raised to 70 when Pace unavailable) needs further tightening** — At 0% win rate the totals market is the single worst-performing segment, but 2 bets could easily be explained by variance — premature tightening risks eliminating a valid market entirely → Continue tracking totals separately; if totals reach 5+ bets with WR < 35% revisit raising confidence floor to 70 permanently or adding a stronger pace/DefRtg gate
-- **High-confidence picks (85–100 tier) are 0W/2L (-€320.54) — the highest-staked picks are performing worst, suggesting the confidence calibration for elite picks may be inflated** — If picks rated 85+ are losing at 0%, the staking model amplifies losses precisely when the model is most wrong — a calibration issue that compounds financial damage → When high-confidence pick sample reaches 5+, audit which specific signals (NetRtg gap, streak length, injury combination) produced those 2 losses and check if a systematic bias exists in confidence inflation
+- **High-confidence bets (conf 70-84+) are 0W/3L (-€408.54) — the top staking tier is the worst performing segment by a significant margin.** — If the highest-confidence picks are losing at 0%, the staking structure is amplifying losses rather than edge; a tightening of the High-confidence threshold or reduction in stake % may be warranted. → After 5 more settled High-confidence bets, review whether the confidence_staking High tier (70-84) stake should be reduced from 20-25% to 15-20%, and whether the confidence floor for that tier should raise to 75.
+- **Totals market is 0W/2L (0.0%, -€184.27) with only 2 bets — the O/U confidence floor of 65 may be too low given the limited pace/style data quality.** — Both total bets lost; with only 2 bets we cannot distinguish bad luck from a structural rule issue, but the O/U market has the highest uncertainty and the current floor may be insufficiently selective. → After 5+ more total bets settled, evaluate raising the O/U confidence floor from 65 to 70 permanently (not just when Pace is unavailable).
+- **No NetRtg L15 data is available in the current prompt — the priority_stats section lists it as the primary signal but it is absent from the advanced stats feed.** — Scout is instructed to use L15 as the PRIMARY directional signal and apply confidence -5 when absent; if L15 is systematically missing, Scout is consistently operating on degraded signal quality without explicit tracking of this pattern. → Add a session-level flag to data_quality_rules: if NetRtg L15 is absent for more than 20 teams, cap spread confidence at 60 and note in scout_report as 'L15 data absent — operating on season NetRtg baseline only.'
+- **Charlotte Hornets (42-36, L10: 8-2, NetRtg +5.3) are showing elite recent form in the play-in bubble but no hot-streak-fade or momentum-positive rule explicitly governs mid-tier teams surging into playoff contention.** — Charlotte's L10 8-2 with NetRtg +5.3 suggests genuine improvement rather than a paper hot streak — this is the opposite of the fade scenario (Hawks, 76ers) and could represent value on Charlotte in play-in games if books haven't adjusted. → Add a play-in momentum-positive qualifier to selectivity: teams with L10 ≥ 8-2 AND NetRtg ≥ +5.0 in play-in position receive confidence +5 as motivation multiplier when facing non-playoff-locked opponents.
