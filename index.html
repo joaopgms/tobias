@@ -432,6 +432,8 @@
     <div class="score-card sc-teal"><div class="score-label">📈 Net P&L</div><div class="score-value" id="statPnl">-</div><div class="score-sub" id="statPnlSub">-</div></div>
     <div class="score-card sc-cyan"><div class="score-label">⏳ Placed</div><div class="score-value" id="statPending" style="color:var(--cyan)">-</div><div class="score-sub" id="statPendingSub">-</div></div>
     <div class="score-card"><div class="score-label">📊 Total Staked</div><div class="score-value" id="statStaked">-</div><div class="score-sub" id="statROI">ROI: -</div></div>
+    <div class="score-card"><div class="score-label">🏀 First Game</div><div class="score-value" id="boardFirstGame" style="font-size:1.1rem">-</div><div class="score-sub" id="boardFirstGameSub">Tip-off time</div></div>
+    <div class="score-card"><div class="score-label">🎯 Commit By</div><div class="score-value" id="boardCommitBy" style="font-size:1.1rem">-</div><div class="score-sub" id="boardCommitBySub">45 min before tip</div></div>
   </div>
   <div class="report-nav-bar" id="reportNavBar" style="display:none;margin:0 32px 4px;display:flex;gap:8px;flex-wrap:wrap"></div>
   <div class="chart-section">
@@ -998,6 +1000,28 @@ function renderStats(){
   document.getElementById('statPendingSub').textContent=s.pend.length?`€${s.pend.reduce((a,b)=>a+b.stake,0).toFixed(2)} at risk`:'No pending bets';
   document.getElementById('statStaked').textContent=`€${s.tStk.toFixed(2)}`;
   document.getElementById('statROI').textContent=`ROI: ${s.roi!==null?s.roi+'%':'-'}`;
+  // First game + commit deadline on Board
+  const fgt=ST.first_game_time;
+  const fgtEl=document.getElementById('boardFirstGame');
+  const commitEl=document.getElementById('boardCommitBy');
+  const commitSubEl=document.getElementById('boardCommitBySub');
+  if(fgt){
+    fgtEl.textContent=fmt(fgt);
+    const commitDt=new Date(new Date(fgt).getTime()-45*60*1000);
+    const now=new Date();
+    commitEl.textContent=fmt(commitDt.toISOString());
+    const diffMs=commitDt-now;
+    if(diffMs>0){
+      const diffMin=Math.round(diffMs/60000);
+      commitSubEl.textContent=diffMin>60?`in ${Math.floor(diffMin/60)}h ${diffMin%60}m`:`in ${diffMin} min`;
+    } else {
+      commitSubEl.textContent='Window closed';
+    }
+  } else {
+    fgtEl.textContent='-';
+    commitEl.textContent='-';
+    commitSubEl.textContent='Waiting for Scout';
+  }
   const bust=ST.bust&&!s.pend.length;
   document.getElementById('bustBanner').style.display=bust?'flex':'none';
   if(bust)document.getElementById('bustMessage').textContent=`💥 Bust at game ${ST.game}. New game started with €${(ST.bankroll_initial||1000).toLocaleString('pt-PT')}.`;
