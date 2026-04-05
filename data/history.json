@@ -18,6 +18,14 @@
           "wins": 6,
           "losses": 12,
           "bust": false
+        },
+        {
+          "game": 2,
+          "started_at": "2026-04-05T10:44:07.102344+00:00",
+          "bankroll_start": 1000.0,
+          "wins": 0,
+          "losses": 0,
+          "peak_bankroll": 1000.0
         }
       ]
     }
@@ -728,6 +736,13 @@
         }
       ],
       "summary": "Day 2026-04-04 commit — 3 bets totalling €151.31. 0 cancelled. Bankroll: €413.07 → €261.76."
+    },
+    {
+      "entry_id": "nba_entry_game2",
+      "game": 2,
+      "season": "2024-25",
+      "started_at": "2026-04-05T10:44:07.102344+00:00",
+      "bets": []
     }
   ]
 }
