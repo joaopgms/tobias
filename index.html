@@ -829,7 +829,7 @@ try {
 
 const seasons=Array.isArray(HIST.seasons)?(HIST.seasons||[]).map(s=>s.season):['2024-25'];
 let activeSeason=ST.season||seasons[seasons.length-1]||'2024-25';
-let activeGame='all';
+let activeGame=ST.game||1;
 let sortCol='date',sortDir=-1;
 
 // -- SELECTOR ---------------------------------------------------------------
