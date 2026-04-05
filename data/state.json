@@ -9,16 +9,16 @@
   "net_pnl": 0.0,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-04-05T17:22:07.889809+00:00",
+  "last_updated": "2026-04-05T19:28:06.379772+00:00",
   "first_game_time": "2026-04-05T19:30:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
   "scout_updated_at": "2026-04-05T17:22:07.889809+00:00",
   "scout_odds_source": "theodds_unibet",
-  "commit_status": "pending",
-  "commit_updated_at": null,
-  "commit_date": null,
+  "commit_status": "done",
+  "commit_updated_at": "2026-04-05T19:28:06.379772+00:00",
+  "commit_date": "2026-04-05",
   "analyst_updated_at": "2026-04-05T11:28:11.807384+00:00",
   "settler_updated_at": null,
   "agent_models": {
@@ -27,26 +27,8 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "Injury feed: NBA Official PDF confirmed (nba_official source), 22 teams reporting — full confidence rules apply. Pace data available but Pace values suggest unreliability in some matchups; O/U unavailable on all games anyway. Two picks drafted from a difficult slate dominated by severe injury absences and tank-tier matchups. Key theme: Anthony Edwards OUT for Minnesota creates genuine Charlotte ML value at 1.70 (L15 gap 48pts in CHA favor, play-in motivation). Houston Rockets at 1.61 against tank-watch Golden State offers marginal EV (5.5%) with Curry Questionable risk factored in. Cleveland-Indiana and OKC-Utah games rejected due to anomaly/star-rest risk. Multiple games unplayable due to both teams being decimated or odds outside target range.",
-  "draft_picks": [
-    {
-      "id": "nba_draft_20260405_001",
-      "match": "Minnesota Timberwolves vs Charlotte Hornets",
-      "time": "2026-04-05T23:00Z",
-      "pick": "Charlotte Hornets ML",
-      "odds": 1.7,
-      "stake": null,
-      "potential_return": null,
-      "confidence": 62,
-      "reasoning": "Anthony Edwards confirmed OUT for Minnesota. Charlotte holds a 48-point L15 performance gap in their favor per injury-adjusted analysis. Play-in motivation for Charlotte adds urgency. Without Edwards, Minnesota loses their primary offensive engine, making Charlotte ML at 1.70 a genuine value opportunity with estimated EV positive.",
-      "anchor_players": [
-        "Anthony Edwards (OUT - Minnesota)",
-        "Charlotte Hornets play-in push"
-      ],
-      "drafted_at": "2026-04-05T17:24:10Z",
-      "market_type": "ml"
-    }
-  ],
+  "last_report": "### CANCELLED — Charlotte Hornets ML (Draft Pick 001)\n- **Match:** Minnesota Timberwolves vs Charlotte Hornets | Tip: 2026-04-05T23:00Z\n- **Odds at cancel:** 1.65 (was 1.70 at Scout time)\n- **Reason:** Adverse line movement of -0.05 triggered confidence penalty (-10). Critically, even at the original Scout confidence of 62 (without penalty), EV at commit-time odds = (0.62 × 1.65) - 1 = **+0.023**, which falls below the required EV ≥ 0.05 threshold. After applying the mandatory -10 confidence adjustment for adverse movement, adjusted confidence = 52, and EV = (0.52 × 1.65) - 1 = **-0.142**. The pick fails EV requirements at both unadjusted and adjusted confidence levels. The edge existed at 1.70 (Scout EV = 0.054) but was erased by the 5-cent line drift. Anthony Edwards OUT was confirmed as expected, but the market has already priced this in further.\n\n---\n\n### LATE SCOUT SUMMARY\n\nAll 11 games from tonight's slate were re-examined. No new picks were added.\n\n**Key findings:**\n- **CLE vs IND (22:00):** Indiana +16.0 spread showed genuine interest given Indiana's superior L15 form vs depleted Cleveland, but confidence estimate of 58 falls below the 60 minimum required for late-scout additions.\n- **GSW vs HOU (02:00):** Game not evaluated by Scout — reviewed now. HOU ML below floor at 1.60. GSW ML at 2.38 undercut by massive form gap (L15: GSW -20.5 vs HOU +46.1), Stephen Curry Questionable, and negative estimated EV (~-0.24). No valid pick.\n- **DAL vs LAL (23:30):** Luka Doncic OUT for LAL triggers franchise_player_rules — cannot back LAL ML. DAL confirmed tank team with Kyrie also OUT — insufficient confidence for DAL ML.\n- All 19:30 UTC games ineligible due to < 20 minutes to tipoff.\n- All other games maintain Scout's rejection rationale with no material changes.\n\n---\n\n### SLATE SUMMARY\n\nTonight's slate presented extremely challenging conditions for systematic betting: multiple games feature deeply depleted rosters on both sides, several games have already tipped off (ineligible for late additions), and the one drafted pick (Charlotte Hornets ML) saw its edge erased by a 5-cent adverse line movement that pushed EV below the required threshold. The simulation commits **zero bets** today, preserving the full €1,000 bankroll. Discipline in applying EV and confidence floors — especially at commit time when odds have drifted — is the correct approach when no genuine edge clears all validation gates simultaneously.",
+  "draft_picks": [],
   "pending_bets": [],
   "settled_bets": [],
   "rejected_games": [
@@ -114,8 +96,72 @@
       "decision": "no_edge"
     }
   ],
-  "late_scout_rejections": [],
-  "commit_report_data": {},
+  "late_scout_rejections": [
+    {
+      "match": "Cleveland Cavaliers vs Indiana Pacers",
+      "reason": "Indiana Spread +16.0 at 1.92 had estimated confidence 58 — below the 60 confidence floor required for late scout picks. Indiana L15 +4.0 vs CLE L15 -5.7 is interesting but both rosters deeply depleted. Insufficient confidence for late addition."
+    },
+    {
+      "match": "Minnesota Timberwolves vs Charlotte Hornets",
+      "reason": "Charlotte ML is the cancelled draft pick — odds drifted to 1.65, failing EV threshold. No alternative angle (Minnesota ML 2.28 in range but without Edwards, confidence in Minnesota winning is too low). No valid pick."
+    },
+    {
+      "match": "New Orleans Pelicans vs Orlando Magic",
+      "reason": "NOP ML 2.95 in range but NOP L15 -41.3, depleted roster (Murray, Murphy, Matkovic OUT), L10 3-7. Estimated win prob ~30%, EV = (0.30 × 2.95) - 1 = -0.115. Negative EV. No valid pick."
+    },
+    {
+      "match": "Oklahoma City Thunder vs Utah Jazz",
+      "reason": "OKC ML 1.02 outside range. OKC spread -24.5 at 1.91 — star rest risk unresolved (OKC 61-16, seeding locked). Scout confidence was capped at 55, below 60 floor for late picks. No change in situation. No valid pick."
+    },
+    {
+      "match": "Dallas Mavericks vs Los Angeles Lakers",
+      "reason": "LAL franchise player Luka Doncic confirmed OUT — per franchise_player_rules, do not bet LAL to win. DAL ML 2.05 in range but DAL is confirmed tank team (24-53) and also missing Kyrie Irving. Dual depletion with tank status and no motivation. Confidence insufficient in either direction."
+    },
+    {
+      "match": "Golden State Warriors vs Houston Rockets",
+      "reason": "HOU ML 1.60 below floor (1.65). GSW ML 2.38 in range but GSW L15 -20.5 vs HOU L15 +46.1 — massive form gap. Stephen Curry Questionable adds further uncertainty. Estimated GSW win prob ~30-35%, EV = (0.32 × 2.38) - 1 = approx -0.24. Deeply negative EV. No valid pick."
+    },
+    {
+      "match": "Los Angeles Clippers vs Sacramento Kings",
+      "reason": "Clippers ML 1.11 outside range. SAC ML 6.75 — confirmed tank team (21-57), do not bet to win. No spread evaluated (LA Clippers advanced stats unavailable per skills rules). No valid pick."
+    },
+    {
+      "match": "Brooklyn Nets vs Washington Wizards",
+      "reason": "Brooklyn ML 1.63 below commit floor of 1.65. Washington ML 2.32 in range but Washington is confirmed full-tank team with decimated roster (Davis, Coulibaly, Russell all OUT). No meaningful confidence in Washington winning. No valid pick."
+    },
+    {
+      "match": "Boston Celtics vs Toronto Raptors",
+      "reason": "19:30 UTC tipoff — game ineligible (< 20 minutes from now). Boston ML 1.24 outside range regardless."
+    },
+    {
+      "match": "Phoenix Suns vs Chicago Bulls",
+      "reason": "19:30 UTC tipoff — game ineligible (< 20 minutes from now). Phoenix ML 1.18 outside range regardless."
+    },
+    {
+      "match": "Milwaukee Bucks vs Memphis Grizzlies",
+      "reason": "19:30 UTC tipoff — game ineligible (< 20 minutes from now). Giannis OUT confirmed, Milwaukee ML invalid per franchise player rules."
+    }
+  ],
+  "commit_report_data": {
+    "date": "2026-04-05",
+    "ts": "2026-04-05T19:28:06.379772+00:00",
+    "bets": [],
+    "cancelled": [
+      {
+        "id": "nba_draft_20260405_001",
+        "match": "Minnesota Timberwolves vs Charlotte Hornets",
+        "pick": "Charlotte Hornets ML",
+        "reason": "EV falls below 0.05 at commit-time odds. Odds moved from 1.70 (Scout) to 1.65 (current) — adverse movement of 0.05, triggering confidence -10 adjustment (62 → 52). Even at original confidence of 62, EV = (0.62 × 1.65) - 1 = 0.023, below the required 0.05 threshold. After confidence penalty: EV = (0.52 × 1.65) - 1 = -0.142. Cannot confirm."
+      }
+    ],
+    "late_rejections": [],
+    "total_staked": 0.0,
+    "bankroll_before": 1000.0,
+    "report": "### CANCELLED — Charlotte Hornets ML (Draft Pick 001)\n- **Match:** Minnesota Timberwolves vs Charlotte Hornets | Tip: 2026-04-05T23:00Z\n- **Odds at cancel:** 1.65 (was 1.70 at Scout time)\n- **Reason:** Adverse line movement of -0.05 triggered confidence penalty (-10). Critically, even at the original Scout confidence of 62 (without penalty), EV at commit-time odds = (0.62 × 1.65) - 1 = **+0.023**, which falls below the required EV ≥ 0.05 threshold. After applying the mandatory -10 confidence adjustment for adverse movement, adjusted confidence = 52, and EV = (0.52 × 1.65) - 1 = **-0.142**. The pick fails EV requirements at both unadjusted and adjusted confidence levels. The edge existed at 1.70 (Scout EV = 0.054) but was erased by the 5-cent line drift. Anthony Edwards OUT was confirmed as expected, but the market has already priced this in further.\n\n---\n\n### LATE SCOUT SUMMARY\n\nAll 11 games from tonight's slate were re-examined. No new picks were added.\n\n**Key findings:**\n- **CLE vs IND (22:00):** Indiana +16.0 spread showed genuine interest given Indiana's superior L15 form vs depleted Cleveland, but confidence estimate of 58 falls below the 60 minimum required for late-scout additions.\n- **GSW vs HOU (02:00):** Game not evaluated by Scout — reviewed now. HOU ML below floor at 1.60. GSW ML at 2.38 undercut by massive form gap (L15: GSW -20.5 vs HOU +46.1), Stephen Curry Questionable, and negative estimated EV (~-0.24). No valid pick.\n- **DAL vs LAL (23:30):** Luka Doncic OUT for LAL triggers franchise_player_rules — cannot back LAL ML. DAL confirmed tank team with Kyrie also OUT — insufficient confidence for DAL ML.\n- All 19:30 UTC games ineligible due to < 20 minutes to tipoff.\n- All other games maintain Scout's rejection rationale with no material changes.\n\n---\n\n### SLATE SUMMARY\n\nTonight's slate presented extremely challenging conditions for systematic betting: multiple games feature deeply depleted rosters on both sides, several games have already tipped off (ineligible for late additions), and the one drafted pick (Charlotte Hornets ML) saw its edge erased by a 5-cent adverse line movement that pushed EV below the required threshold. The simulation commits **zero bets** today, preserving the full €1,000 bankroll. Discipline in applying EV and confidence floors — especially at commit time when odds have drifted — is the correct approach when no genuine edge clears all validation gates simultaneously.",
+    "tokens_in": 9463,
+    "tokens_out": 5889,
+    "cost_usd": 0.116724
+  },
   "netrtg_l15": {
     "Charlotte Hornets": 44.0,
     "Sacramento Kings": -29.9,
