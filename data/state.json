@@ -29,27 +29,7 @@
   },
   "last_report": "### CONFIRMED — San Antonio Spurs -spread (-2.0)\n- Match: Denver Nuggets vs San Antonio Spurs | Tip: 2026-04-04T19:00 UTC\n- Pick: SAS -2.0 spread | Scout odds: 1.90 | Commit odds: 1.91 | Move: +0.01 (improved)\n- ML: H(DEN):2.06 / A(SAS):1.78 | ATS: H+2.0 (1.91/1.91) | O/U: N/A\n- Stake: €55.00 | Pot: €105.05 | Conf: 72/100 | EV: 0.375\n- Decision: Odds improved slightly (+0.01). Wembanyama confirmed active — no SAS anchor concerns. SAS L15 NetRtg +59.9 vs DEN +29.1, massive form gap supports SAS covering a narrow -2.0 spread as away favourite. Non-anchor injuries (Jones Garcia, Miller) are inconsequential. EV comfortably above threshold.\n\n### CONFIRMED — San Antonio Spurs ML\n- Match: Denver Nuggets vs San Antonio Spurs | Tip: 2026-04-04T19:00 UTC\n- Pick: SAS ML | Scout odds: 1.65 | Commit odds: 1.78 | Move: +0.13 (significant improvement)\n- ML: H(DEN):2.06 / A(SAS):1.78 | ATS: H+2.0 (1.91/1.91) | O/U: N/A\n- Stake: €55.00 | Pot: €97.90 | Conf: 70/100 | EV: 0.246\n- Decision: Odds improved materially (+0.13). Checked for adverse news explaining the drift — none found; SAS remains healthy with Wembanyama active. Market may have moved due to volume on DEN home side. Stake held at original €55 per rules (no increase on improved odds). EV improved from 0.155 at 1.65 to 0.246 at 1.78 — strong value now. Correlated play with spread pick amplifies SAS dominant form thesis.\n\n### CONFIRMED — Philadelphia 76ers ML (REDUCED STAKE)\n- Match: Philadelphia 76ers vs Detroit Pistons | Tip: 2026-04-04T23:00 UTC\n- Pick: PHI ML | Scout odds: 2.18 | Commit odds: 2.20 | Move: +0.02 (improved)\n- ML: H(PHI):2.20 / A(DET):1.68 | ATS: H-3.0 (1.90/1.92) | O/U: N/A\n- Stake: €41.31 (reduced from €55 — Embiid OUT, confidence adjusted to 52, speculative tier 10%) | Pot: €90.88 | Conf: 52/100 | EV: 0.144\n- Decision: Primary edge (Cunningham OUT) confirmed ✅. New finding: Embiid OUT (Management/Illness) for PHI — confidence reduced by 10 (franchise player injury rules). However, PHI's strong L15 form (+27.4 NetRtg) was achieved in Embiid's depleted context, suggesting roster has adapted. Detroit also faces Duren (Q) and Harris (Q) beyond the Cunningham absence. EV 0.144 remains well above 0.05 threshold at adjusted confidence 52. Stake reduced to speculative tier (10% = €41.31).\n\n---\n\n**TOTAL COMMITTED**: €151.31 / €289.15 cap (36.6% of bankroll)\n\n**Slate Summary**: Tonight's primary value centres on San Antonio's elite recent form (L15 NetRtg +59.9, L10 10-0) against a Denver team that is solid but clearly inferior in current form — both the ML and spread picks on SAS are confirmed with strong EV at improved odds. The PHI pick survives at reduced stake as Cunningham's confirmed absence still creates a matchup advantage for the home side, despite Embiid's absence dampening PHI's ceiling. Late scout found no new picks worthy of adding — Charlotte's form signal was tantalising but the absence of injury data for non-slate teams precluded a confident entry.",
   "draft_picks": [],
-  "pending_bets": [
-    {
-      "id": "nba_bet_20260404_001",
-      "match": "Denver Nuggets vs San Antonio Spurs",
-      "time": "2026-04-04T19:00:00Z",
-      "pick": "San Antonio Spurs -spread (-2.0)",
-      "odds": 1.91,
-      "stake": 55.0,
-      "potential_return": 105.05,
-      "reasoning": "SAS dominant L15 NetRtg (+59.9) and perfect L10 (10-0) vs DEN's solid but inferior form (+29.1). Wembanyama confirmed active. Scout drafted at 1.90, current odds improved to 1.91 — minor improvement noted. SAS as away favourite covering -2.0 points supported by massive form differential. No new adverse injuries for SAS (David Jones Garcia and Emanuel Miller OUT are non-anchors). EV = 0.375 at 1.91 with confidence 72.",
-      "confidence": 72,
-      "anchor_players": [
-        "Victor Wembanyama"
-      ],
-      "result": null,
-      "returned": null,
-      "pnl": null,
-      "settled_at": null,
-      "committed_at": "2026-04-04T18:29:57Z"
-    }
-  ],
+  "pending_bets": [],
   "settled_bets": [
     {
       "id": "nba_bet_20260319_001",
@@ -395,6 +375,25 @@
       "returned": 0.0,
       "pnl": -41.31,
       "settled_at": "2026-04-05T10:32:51.516218+00:00",
+      "committed_at": "2026-04-04T18:29:57Z"
+    },
+    {
+      "id": "nba_bet_20260404_001",
+      "match": "Denver Nuggets vs San Antonio Spurs",
+      "time": "2026-04-04T19:00:00Z",
+      "pick": "San Antonio Spurs +2.0",
+      "odds": 1.91,
+      "stake": 55.0,
+      "potential_return": 105.05,
+      "reasoning": "SAS dominant L15 NetRtg (+59.9) and perfect L10 (10-0) vs DEN's solid but inferior form (+29.1). Wembanyama confirmed active. Scout drafted at 1.90, current odds improved to 1.91 — minor improvement noted. SAS as away favourite covering -2.0 points supported by massive form differential. No new adverse injuries for SAS (David Jones Garcia and Emanuel Miller OUT are non-anchors). EV = 0.375 at 1.91 with confidence 72.",
+      "confidence": 72,
+      "anchor_players": [
+        "Victor Wembanyama"
+      ],
+      "result": "PUSH",
+      "returned": 55.0,
+      "pnl": 0.0,
+      "settled_at": "2026-04-05T10:34:28.783316+00:00",
       "committed_at": "2026-04-04T18:29:57Z"
     }
   ],
