@@ -260,7 +260,25 @@ def run(store) -> None:
                     or o.get("away","").lower() in tonight_teams_set]
     if len(odds_tonight) < len(odds):
         log.info(f"Scout: odds filtered {len(odds)} -> {len(odds_tonight)} games (tonight's ESPN slate only)")
-    odds_str     = format_odds_for_prompt(odds_tonight)
+    # Re-align home/away in odds to match ESPN — The-Odds-API sometimes swaps them.
+    # ESPN is authoritative for venue/home assignment.
+    espn_home_map = {g["home"].lower(): g["home"] for g in games}
+    espn_away_map = {g["away"].lower(): g["away"] for g in games}
+    aligned_odds = []
+    for o in odds_tonight:
+        oh, oa = o.get("home",""), o.get("away","")
+        # Check if The-Odds-API has home/away swapped vs ESPN
+        if oh.lower() in espn_away_map and oa.lower() in espn_home_map:
+            # Swap: flip home/away and their respective ML/spread odds
+            log.info(f"Scout: odds home/away swapped for '{oh} vs {oa}' — re-aligning to ESPN")
+            o = {**o,
+                 "home": oa, "away": oh,
+                 "ml_home_dec": o.get("ml_away_dec"), "ml_away_dec": o.get("ml_home_dec"),
+                 "spread": o.get("spread") and -o["spread"],
+                 "spread_odds_home": o.get("spread_odds_away"), "spread_odds_away": o.get("spread_odds_home"),
+            }
+        aligned_odds.append(o)
+    odds_str     = format_odds_for_prompt(aligned_odds)
     if injuries_source == "nba_official":
         from core.nba_injuries import format_injuries_for_prompt as _fmt_official
         tonight_teams = [g["home"] for g in games] + [g["away"] for g in games]
