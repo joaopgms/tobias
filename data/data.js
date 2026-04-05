@@ -4,7 +4,7 @@
 const STATE_DATA = {
   "season": "2024-25",
   "game": 1,
-  "bankroll": 261.76,
+  "bankroll": 206.76,
   "bankroll_initial": 1000.0,
   "bankroll_peak": 1000.0,
   "total_staked": 1488.14,
@@ -384,7 +384,7 @@ const STATE_DATA = {
       "id": "nba_bet_20260404_001",
       "match": "Denver Nuggets vs San Antonio Spurs",
       "time": "2026-04-04T19:00:00Z",
-      "pick": "San Antonio Spurs +2.0",
+      "pick": "San Antonio Spurs -2.0",
       "odds": 1.91,
       "stake": 55.0,
       "potential_return": 105.05,
@@ -393,9 +393,9 @@ const STATE_DATA = {
       "anchor_players": [
         "Victor Wembanyama"
       ],
-      "result": "PUSH",
-      "returned": 55.0,
-      "pnl": 0.0,
+      "result": "LOST",
+      "returned": 0.0,
+      "pnl": -55.0,
       "settled_at": "2026-04-05T10:34:28.783316+00:00",
       "committed_at": "2026-04-04T18:29:57Z"
     }
@@ -999,7 +999,7 @@ const HISTORY_DATA = {
           "net_pnl": null,
           "total_bets": 18,
           "wins": 6,
-          "losses": 11,
+          "losses": 12,
           "bust": false
         }
       ]
@@ -1656,7 +1656,7 @@ const HISTORY_DATA = {
           "id": "nba_bet_20260404_001",
           "match": "Denver Nuggets vs San Antonio Spurs",
           "time": "2026-04-04T19:00:00Z",
-          "pick": "San Antonio Spurs +2.0",
+          "pick": "San Antonio Spurs -2.0",
           "odds": 1.91,
           "stake": 55.0,
           "potential_return": 105.05,
@@ -1665,9 +1665,9 @@ const HISTORY_DATA = {
           "anchor_players": [
             "Victor Wembanyama"
           ],
-          "result": "PUSH",
-          "returned": 55.0,
-          "pnl": 0.0,
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -55.0,
           "settled_at": "2026-04-05T10:34:41.601276+00:00",
           "committed_at": "2026-04-04T18:29:57Z"
         },
@@ -1715,6 +1715,7 @@ const HISTORY_DATA = {
   ]
 };
 const DRAFT_PICKS = [];
+
 const SCOUT_STATUS = "live";
 const SCOUT_ERROR = "";
 const SCOUT_UPDATED_AT = "2026-04-04T15:21:48.291069+00:00";

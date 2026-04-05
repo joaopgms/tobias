@@ -16,7 +16,7 @@
           "net_pnl": null,
           "total_bets": 18,
           "wins": 6,
-          "losses": 11,
+          "losses": 12,
           "bust": false
         }
       ]
@@ -673,7 +673,7 @@
           "id": "nba_bet_20260404_001",
           "match": "Denver Nuggets vs San Antonio Spurs",
           "time": "2026-04-04T19:00:00Z",
-          "pick": "San Antonio Spurs +2.0",
+          "pick": "San Antonio Spurs -2.0",
           "odds": 1.91,
           "stake": 55.0,
           "potential_return": 105.05,
@@ -682,9 +682,9 @@
           "anchor_players": [
             "Victor Wembanyama"
           ],
-          "result": "PUSH",
-          "returned": 55.0,
-          "pnl": 0.0,
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -55.0,
           "settled_at": "2026-04-05T10:34:41.601276+00:00",
           "committed_at": "2026-04-04T18:29:57Z"
         },
