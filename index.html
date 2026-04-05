@@ -873,7 +873,10 @@ function stats(){
   const s=b.filter(x=>x.result),won=s.filter(x=>x.result==='WON'),lost=s.filter(x=>x.result==='LOST'),pend=b.filter(x=>!x.result);
   const tStk=s.reduce((a,x)=>a+x.stake,0),tRet=won.reduce((a,x)=>a+(x.returned||0),0),pnl=tRet-tStk;
   const wr=s.length?Math.round(won.length/s.length*100):null,roi=tStk?((pnl/tStk)*100).toFixed(1):null;
-  const br=ST.bankroll||1000,peak=ST.bankroll_peak||1000;
+  const gameRecord=(HIST.seasons||[]).flatMap(s=>s.games||[]).find(g=>g.game==activeGame);
+  const isCurrentGame=activeGame==='all'||activeGame==ST.game;
+  const br=isCurrentGame?(ST.bankroll||1000):(gameRecord?.final_bankroll??1000);
+  const peak=isCurrentGame?(ST.bankroll_peak||1000):(gameRecord?.peak_bankroll??1000);
   const lastN=[...s].slice(-5).reverse();let streak=0,sType='';
   for(const x of lastN){if(!sType)sType=x.result;if(x.result===sType)streak++;else break;}
   return{b,s,won,lost,pend,tStk,tRet,pnl,wr,roi,br,peak,streak,sType};
