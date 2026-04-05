@@ -6,7 +6,7 @@ llm: claude-sonnet-4-6
 ---
 
 ## SECTION:odds_targets
-ML target range: 1.70–2.50 (decimal). Minimum one side must fall in range.
+ML target range: 1.60–2.50 (decimal). Minimum one side must fall in range.
 Spread odds target: 1.80–2.30.
 O/U odds target: 1.80–2.05.
 Commit confirmation floor: 1.65 ML (Scout already validated edge).
@@ -53,7 +53,7 @@ EV < 0.05 → do NOT draft regardless of confidence tier.
 ## SECTION:market_rules
 MONEYLINE (ML):
 Confidence floor: 50 (raised from 40 — conf 40 at 1.70 odds = negative EV -0.32, no genuine edge).
-EV ≥ 0.05. Odds 1.70–2.50.
+EV ≥ 0.05. Odds 1.60–2.50.
 
 SPREAD (ATS):
 Confidence floor: 60 (higher bar — half-point margins matter).

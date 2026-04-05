@@ -32,31 +32,48 @@ def american_to_decimal(ml) -> float | None:
 
 
 # ── TIER 1: The-Odds-API (best available EU bookmaker) ────────────────────────
+US_BOOKMAKERS = ["draftkings", "fanduel", "betmgm", "caesars"]
+
 def _theodds_nba_odds(api_key: str) -> list[dict]:
     """
-    Fetch NBA odds from The-Odds-API using best available EU bookmaker.
+    Fetch NBA odds from The-Odds-API.
+    Primary: EU bookmakers. Fallback: US bookmakers for games EU skips.
     Free tier: 500 requests/month. Each call uses ~1 request.
     """
     url = f"{THEODDS_BASE}/sports/{NBA_SPORT_KEY}/odds"
-    params = {
-        "apiKey":     api_key,
-        "regions":    "eu",
-        "markets":    "h2h,spreads,totals",
-        "oddsFormat": "decimal",
-        "bookmakers": ",".join(EU_BOOKMAKERS),
-    }
-    try:
-        resp = requests.get(url, params=params, timeout=15)
-        resp.raise_for_status()
-        games = resp.json()
-        remaining = resp.headers.get("x-requests-remaining", "?")
-        log.info(f"The-Odds-API: {len(games)} NBA games | requests remaining: {remaining}")
-        if not games:
+
+    def _fetch(regions: str, bookmakers: list) -> list[dict]:
+        params = {
+            "apiKey":     api_key,
+            "regions":    regions,
+            "markets":    "h2h,spreads,totals",
+            "oddsFormat": "decimal",
+            "bookmakers": ",".join(bookmakers),
+        }
+        try:
+            resp = requests.get(url, params=params, timeout=15)
+            resp.raise_for_status()
+            games = resp.json()
+            remaining = resp.headers.get("x-requests-remaining", "?")
+            log.info(f"The-Odds-API ({regions}): {len(games)} NBA games | requests remaining: {remaining}")
+            return [_normalise_theodds(g) for g in games if g]
+        except Exception as e:
+            log.warning(f"The-Odds-API ({regions}) error: {e}")
             return []
-        return [_normalise_theodds(g) for g in games if g]
-    except Exception as e:
-        log.warning(f"The-Odds-API error: {e}")
-        return []
+
+    eu_games = _fetch("eu", EU_BOOKMAKERS)
+
+    # Fallback: fetch US bookmakers for any games EU didn't cover
+    eu_pairs = {frozenset([g["home"].lower(), g["away"].lower()]) for g in eu_games}
+    us_games = _fetch("us", US_BOOKMAKERS)
+    for g in us_games:
+        pair = frozenset([g["home"].lower(), g["away"].lower()])
+        if pair not in eu_pairs:
+            log.info(f"The-Odds-API: EU missing '{g['home']} vs {g['away']}' — using US fallback")
+            eu_games.append(g)
+            eu_pairs.add(pair)
+
+    return eu_games
 
 
 def _normalise_theodds(g: dict) -> dict:

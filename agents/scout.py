@@ -436,8 +436,8 @@ def run(store) -> None:
             log.info(f"Scout: fixed stake for {p['id']}: conf={conf} → €{stake}")
 
     # ── 8d. Enforce odds range ────────────────────────────────────────────────
-    # ML: 1.65–2.50 | Spread: 1.75–2.35 | Total: 1.75–2.10
-    ODDS_RANGE = {"ml": (1.65, 2.50), "spread": (1.75, 2.35), "total": (1.75, 2.10)}
+    # ML: 1.60–2.50 | Spread: 1.75–2.35 | Total: 1.75–2.10
+    ODDS_RANGE = {"ml": (1.60, 2.50), "spread": (1.75, 2.35), "total": (1.75, 2.10)}
     valid_picks = []
     for p in draft_picks:
         pick_odds = float(p.get("odds") or 0)
