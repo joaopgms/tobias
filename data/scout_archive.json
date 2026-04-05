@@ -315,5 +315,102 @@
     "tokens_in": 10892,
     "tokens_out": 5054,
     "cost_usd": 0.108486
+  },
+  {
+    "ts": "2026-04-05T17:22:07.889809+00:00",
+    "date": "2026-04-05",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_unibet",
+    "draft_count": 1,
+    "picks": [
+      {
+        "id": "nba_draft_20260405_001",
+        "match": "Minnesota Timberwolves vs Charlotte Hornets",
+        "time": "2026-04-05T23:00Z",
+        "pick": "Charlotte Hornets ML",
+        "odds": 1.7,
+        "stake": null,
+        "potential_return": null,
+        "confidence": 62,
+        "reasoning": "Anthony Edwards confirmed OUT for Minnesota. Charlotte holds a 48-point L15 performance gap in their favor per injury-adjusted analysis. Play-in motivation for Charlotte adds urgency. Without Edwards, Minnesota loses their primary offensive engine, making Charlotte ML at 1.70 a genuine value opportunity with estimated EV positive.",
+        "anchor_players": [
+          "Anthony Edwards (OUT - Minnesota)",
+          "Charlotte Hornets play-in push"
+        ],
+        "drafted_at": "2026-04-05T17:24:10Z",
+        "market_type": "ml"
+      }
+    ],
+    "rejected": [
+      {
+        "match": "Boston Celtics vs Toronto Raptors",
+        "reason": "Boston ML 1.23 outside target range (below 1.60 floor). Toronto ML 4.25 — implied prob ~23.5% vs realistic win prob ~18-20% without Quickley against elite Boston; EV = (0.20 × 4.25) - 1 = -0.15, negative EV. Spread: Boston -9.5 at 1.90 — Toronto L15 +25.2 shows resilience; spread confidence insufficient. No valid pick.",
+        "ml_home": 1.23,
+        "ml_away": 4.25,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Brooklyn Nets vs Washington Wizards",
+        "reason": "Brooklyn ML 1.65 in range. Washington is confirmed full-tank (franchise players all OUT). Brooklyn L15 -38.8 vs Washington L15 -35.2 — Brooklyn actually worse on L15. Brooklyn NetRtg -10.1 vs Washington -11.6 — barely any gap. Both are bottom-tier teams. Washington ML 2.25 — betting on full-tank team requires odds ≥ 2.20 AND strong situational reason; no strong reason exists. Brooklyn at 1.65: confidence in net negative team is low; EV floor not met with meaningful conviction. Spread Brooklyn -3 at 1.89 — too close, low confidence. Rejected.",
+        "ml_home": 1.65,
+        "ml_away": 2.25,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Chicago Bulls vs Phoenix Suns",
+        "reason": "Phoenix ML 1.21 outside target range (below 1.60). Chicago ML 4.50 — Phoenix L15 +14.2 vs Chicago L15 -53.7 = massive Phoenix edge. Chicago is confirmed tank-tier (29-48, L10 2-8). Chicago spread +10 at 1.94 — tankers don't cover spreads; confirmed tank, avoid betting Chicago. No valid pick at acceptable odds.",
+        "ml_home": 4.5,
+        "ml_away": 1.21,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Milwaukee Bucks vs Memphis Grizzlies",
+        "reason": "Milwaukee ML 1.38 outside target range. Memphis ML 3.05 in range but Memphis L15 -48.9 vs Milwaukee L15 -43.2 — both negative, Milwaukee marginally better. Giannis OUT confirmed (franchise player). Per rules: franchise player OUT → do NOT bet that team to win. Memphis tanking (25-52, L10 2-8). Giannis OUT makes Milwaukee ML invalid. Memphis ML at 3.05 vs a Milwaukee team without Giannis — interesting but Memphis also severely depleted (Aldama, KCP, Clarke, Edey all OUT). Walter Clayton Jr. Questionable. Confidence insufficient for Memphis at 3.05 given their own decimated roster and L15 -48.9. No valid pick.",
+        "ml_home": 1.38,
+        "ml_away": 3.05,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Cleveland Cavaliers vs Indiana Pacers",
+        "reason": "ANOMALY CHECK: CLE ML 1.08 — extreme pricing. Spread CLE -15.5. CLE Allen AND Mobley both confirmed OUT via NBA official PDF. Indiana: Haliburton OUT, McConnell OUT, Nembhard OUT, Nesmith OUT, Furphy OUT — Indiana also severely depleted. CLE L15 -5.7 (negative, impacted by big man absences) vs Indiana L15 +4.0. Line: CLE at 1.08 with both franchise bigs out is a potential anomaly — books may be pricing CLE record not current roster. Indiana ML 8.0 is in range but confidence in depleted Indiana team is low. CLE ML 1.08 outside target range. Spread -15.5 at 1.92 — with Allen and Mobley both OUT, CLE covering 15.5 against any opponent requires extraordinary confidence. L15 actually shows Indiana +4.0 vs CLE -5.7, meaning recent form favors Indiana. Do NOT bet CLE spread. Indiana spread +15.5 at 1.90 — confidence floor 60 needed; Indiana L15 +4.0 is positive but team is decimated. No valid pick — both teams too depleted, line integrity questionable.",
+        "ml_home": 1.08,
+        "ml_away": 8.0,
+        "decision": "anomaly"
+      },
+      {
+        "match": "New Orleans Pelicans vs Orlando Magic",
+        "reason": "Orlando ML 1.42 outside target range. New Orleans ML 2.95 in range. NOP L15 -41.3 vs ORL L15 -31.8 — both negative, Orlando less bad. NOP NetRtg -4.7 vs ORL -0.1. NOP depleted: Murray, Murphy OUT. ORL: Anthony Black OUT. ORL L10 3-7, W1 streak — cold stretch team. NOP L10 3-7 also cold. Confidence in NOP at 2.95 requires ~40% win probability but their form and injuries suggest well below that. EV insufficient. No valid pick.",
+        "ml_home": 2.95,
+        "ml_away": 1.42,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Oklahoma City Thunder vs Utah Jazz",
+        "reason": "OKC ML 1.02 outside target range. Spread OKC -24.5 at 1.93 evaluated: OKC L15 +37.6 vs Utah L15 -52.2, extreme gap. Utah completely decimated (JJJ, Kessler, Collier, George all OUT). However, OKC star rest risk is critical — team at 61-16 with seeding locked may rest SGA/Holmgren. Spread confidence: base 75 → -15 (star rest risk, clinched seeding) → -5 (Sorber OUT) = 55. Below spread confidence floor of 60. Utah ML 15.0 — do not bet confirmed tank team. No valid pick.",
+        "ml_home": 1.02,
+        "ml_away": 15.0,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Dallas Mavericks vs Los Angeles Lakers",
+        "reason": "LAL ML 1.82 in range, DAL ML 2.00 in range. LAL: Luka Doncic OUT, Austin Reaves OUT, Marcus Smart OUT — three key players including franchise player confirmed via NBA official PDF. LAL L15 +8.0 (positive but calculated with Doncic). Without Doncic+Reaves, LAL is fundamentally different team. DAL confirmed tanking (24-53, L10 2-8) but may benefit from desperation/motivation. DAL L15 -37.1 vs LAL L15 +8.0 — LAL still better even depleted. DAL: Kyrie Irving OUT, Lively OUT, Caleb Martin OUT — DAL also decimated. Both teams severely depleted. Confidence in either direction insufficient given dual roster uncertainty. No valid pick.",
+        "ml_home": 2.0,
+        "ml_away": 1.82,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Sacramento Kings vs LA Clippers",
+        "reason": "Clippers ML 1.11 outside target range. Sacramento ML 6.75 in range but Sacramento is confirmed tanking (21-57, L10 4-6). SAC L15 -29.9. SAC depleted: Sabonis OUT, LaVine OUT, Murray OUT, Hunter OUT. Clippers advanced stats unavailable (skills rules: do not bet spreads/totals without advanced stats; ML possible). Clippers L10 5-5, NetRtg +1.1. SAC at 6.75 — tanking team, do not bet to win. Clippers ML 1.11 outside range. No valid pick.",
+        "ml_home": 6.75,
+        "ml_away": 1.11,
+        "decision": "no_edge"
+      }
+    ],
+    "report": "Injury feed: NBA Official PDF confirmed (nba_official source), 22 teams reporting — full confidence rules apply. Pace data available but Pace values suggest unreliability in some matchups; O/U unavailable on all games anyway. Two picks drafted from a difficult slate dominated by severe injury absences and tank-tier matchups. Key theme: Anthony Edwards OUT for Minnesota creates genuine Charlotte ML value at 1.70 (L15 gap 48pts in CHA favor, play-in motivation). Houston Rockets at 1.61 against tank-watch Golden State offers marginal EV (5.5%) with Curry Questionable risk factored in. Cleveland-Indiana and OKC-Utah games rejected due to anomaly/star-rest risk. Multiple games unplayable due to both teams being decimated or odds outside target range.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 11508,
+    "tokens_out": 6265,
+    "cost_usd": 0.128499
   }
 ]
