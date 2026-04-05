@@ -12,9 +12,9 @@
   "last_updated": "2026-04-05T16:37:17.464753+00:00",
   "first_game_time": "2026-04-05T19:30:00Z",
   "llm_provider": "claude",
-  "scout_status": "live",
+  "scout_status": "pending",
   "scout_error": "",
-  "scout_updated_at": "2026-04-05T16:37:17.464753+00:00",
+  "scout_updated_at": null,
   "scout_odds_source": "theodds_unibet",
   "commit_status": "pending",
   "commit_updated_at": null,
@@ -28,42 +28,7 @@
     "commit": "claude-sonnet-4-6"
   },
   "last_report": "Difficult slate tonight — 2 confirmed line anomalies (OKC/UTA at 1.02, CLE/IND at 1.08 with dual franchise absences), multiple tank matchups, and widespread injury degradation. Injury feed source is NBA official PDF (22 teams) — full confidence rules apply. Pace data available for all teams. Two clean picks drafted: Boston -9.5 (strong L15 gap + Toronto without Quickley) and Houston ML at 2.35 (elite L15 form +46.1, GSW tank-watch, Steph Curry Questionable). Charlotte/MIN deferred to Commit pending Edwards (Questionable) status — if Edwards OUT, Charlotte ML becomes a strong play. OKC/UTA and CLE/IND flagged as anomalies for Commit investigation (star rest and dual absence pricing respectively). Total drafted: 2 confirmed picks, 1 deferred.",
-  "draft_picks": [
-    {
-      "id": "nba_draft_20260405_001",
-      "match": "Boston Celtics vs Toronto Raptors",
-      "time": "2026-04-05T19:30:00Z",
-      "pick": "Boston Celtics -9.5",
-      "odds": 1.9,
-      "stake": 150,
-      "potential_return": 285.0,
-      "confidence": 72,
-      "reasoning": "Boston L15 NetRtg: +34.2 vs Toronto L15: +25.2 — gap of +9.0 favoring Boston, well above the 4.0 threshold. Season NetRtg gap: +8.1 vs +2.2 = 5.9 points. Boston 52-25 (L10: 8-2), Toronto 43-34 (L10: 5-5). Boston home court, Toronto missing Quickley (confirmed OUT via NBA official PDF — franchise player absence confirmed). Vucevic listed Questionable for Boston — not a franchise player, minor impact. No B2B issues. DefRtg: Boston 112.7 vs Toronto OffRtg 115.6 — respectable but Boston's elite recent form (L15 +34.2) strongly suggests comfortable home win. Spread odds 1.90 within target range 1.80–2.30. NetRtg L15 gap > 6 pts = strong spread signal. Toronto without Quickley loses primary offensive initiator. EV = (0.72 × 1.90) - 1 = 1.368 - 1 = 0.368 — STRONG edge well above 0.05 minimum. Confidence 72 meets spread floor of 60. Stake: High tier (70-84) = 20-25% of €1000 = €150.",
-      "anchor_players": [
-        "Jayson Tatum",
-        "Jaylen Brown"
-      ],
-      "drafted_at": "2026-04-05T16:37:22Z",
-      "market_type": "spread"
-    },
-    {
-      "id": "nba_draft_20260405_004",
-      "match": "Houston Rockets vs Golden State Warriors",
-      "time": "2026-04-06T02:00:00Z",
-      "pick": "Houston Rockets ML",
-      "odds": 2.35,
-      "stake": 150,
-      "potential_return": 352.5,
-      "confidence": 68,
-      "reasoning": "Houston L15 NetRtg: +46.1 (elite recent form) vs Golden State L15: -20.5 — massive gap of +66.6 in L15 differential. Season NetRtg: Houston +5.1 vs GSW -0.3 — 5.4 point gap. Houston 48-29 (L10: 7-3, streak: W5) vs GSW 36-41 (L10: 4-6, streak: L3). GSW confirmed tank-watch per skills. Stephen Curry Questionable (Pain Syndrome) and Seth Curry Questionable — if Steph sits, GSW are severely depleted. Jimmy Butler III OUT. Houston missing VanVleet and Adams (confirmed via NBA official) but core remains strong. Houston road game (away), so apply -5 confidence for away factor but no B2B. Base confidence: 68. Away adjustment: -5 → adjusted to 63. Still above ML floor of 50. EV = (0.63 × 2.35) - 1 = 1.4805 - 1 = 0.4805 — STRONG edge. Odds 2.35 within ML target range 1.70–2.50. Steph Curry questionable status is a risk — if he plays, reduce edge. GSW tank-watch + L3 losing streak + Houston W5 streak + massive L15 gap all align. Confidence 63 post-adjustment, stake: Medium tier (55-69) = 15-20% = €150.",
-      "anchor_players": [
-        "Alperen Sengun",
-        "Jalen Green"
-      ],
-      "drafted_at": "2026-04-05T16:37:22Z",
-      "market_type": "ml"
-    }
-  ],
+  "draft_picks": [],
   "pending_bets": [],
   "settled_bets": [],
   "rejected_games": [
@@ -397,122 +362,5 @@
       32
     ]
   },
-  "game_log_recorded": [],
-  "cached_context": {
-    "cached_at": "2026-04-05",
-    "games_str": "Toronto Raptors @ Boston Celtics  |  2026-04-05T19:30 UTC  |  TD Garden\nWashington Wizards @ Brooklyn Nets  |  2026-04-05T19:30 UTC  |  Barclays Center\nPhoenix Suns @ Chicago Bulls  |  2026-04-05T19:30 UTC  |  United Center\nMemphis Grizzlies @ Milwaukee Bucks  |  2026-04-05T19:30 UTC  |  Fiserv Forum\nIndiana Pacers @ Cleveland Cavaliers  |  2026-04-05T22:00 UTC  |  Rocket Arena\nCharlotte Hornets @ Minnesota Timberwolves  |  2026-04-05T23:00 UTC  |  Target Center\nOrlando Magic @ New Orleans Pelicans  |  2026-04-05T23:00 UTC  |  Smoothie King Center\nUtah Jazz @ Oklahoma City Thunder  |  2026-04-05T23:00 UTC  |  Paycom Center\nLos Angeles Lakers @ Dallas Mavericks  |  2026-04-05T23:30 UTC  |  American Airlines Center\nLA Clippers @ Sacramento Kings  |  2026-04-06T01:00 UTC  |  Golden 1 Center\nHouston Rockets @ Golden State Warriors  |  2026-04-06T02:00 UTC  |  Chase Center",
-    "standings_str": "Oklahoma City Thunder: 61-16  L10:9-1\nSan Antonio Spurs: 59-19  L10:9-1\nDetroit Pistons: 57-21  L10:8-2\nBoston Celtics: 52-25  L10:8-2\nNew York Knicks: 50-28  L10:7-3\nLos Angeles Lakers: 50-27  L10:8-2\nCleveland Cavaliers: 48-29  L10:7-3\nHouston Rockets: 48-29  L10:7-3\nMinnesota Timberwolves: 46-31  L10:5-5\nToronto Raptors: 43-34  L10:5-5\nCharlotte Hornets: 42-36  L10:8-2\nPhoenix Suns: 42-35  L10:3-7\nOrlando Magic: 41-36  L10:3-7\nLA Clippers: 39-38  L10:5-5\nGolden State Warriors: 36-41  L10:4-6\nMilwaukee Bucks: 30-47  L10:2-8\nChicago Bulls: 29-48  L10:2-8\nNew Orleans Pelicans: 25-53  L10:3-7\nMemphis Grizzlies: 25-52  L10:2-8\nDallas Mavericks: 24-53  L10:2-8\nSacramento Kings: 21-57  L10:4-6\nUtah Jazz: 21-57  L10:1-9\nUTAH: 21-57  L10:1-9\nIndiana Pacers: 18-59  L10:3-7\nBrooklyn Nets: 18-59  L10:1-9\nWashington Wizards: 17-60  L10:1-9",
-    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nBoston Celtics: OffRtg 120.7 | DefRtg 112.7 | NetRtg +8.1 | Pace 94.7 | L15:+34.2\nToronto Raptors: OffRtg 115.6 | DefRtg 113.4 | NetRtg +2.2 | Pace 98.5 | L15:+25.2\nBrooklyn Nets: OffRtg 109.0 | DefRtg 119.1 | NetRtg -10.1 | Pace 97.0 | L15:-38.8\nWashington Wizards: OffRtg 111.2 | DefRtg 122.7 | NetRtg -11.6 | Pace 101.3 | L15:-35.2\nChicago Bulls: OffRtg 113.2 | DefRtg 118.5 | NetRtg -5.3 | Pace 102.3 | L15:-53.7\nPhoenix Suns: OffRtg 115.7 | DefRtg 114.2 | NetRtg +1.5 | Pace 97.2 | L15:+14.2\nMilwaukee Bucks: OffRtg 112.7 | DefRtg 119.3 | NetRtg -6.7 | Pace 97.6 | L15:-43.2\nMemphis Grizzlies: OffRtg 113.4 | DefRtg 118.1 | NetRtg -4.8 | Pace 101.1 | L15:-48.9\nCleveland Cavaliers: OffRtg 119.1 | DefRtg 115.0 | NetRtg +4.0 | Pace 99.9 | L15:-5.7\nIndiana Pacers: OffRtg 111.2 | DefRtg 119.4 | NetRtg -8.2 | Pace 100.9 | L15:+4.0\nMinnesota Timberwolves: OffRtg 116.3 | DefRtg 113.1 | NetRtg +3.2 | Pace 100.5 | L15:-4.0\nCharlotte Hornets: OffRtg 119.7 | DefRtg 114.4 | NetRtg +5.3 | Pace 97.0 | L15:+44.0\nNew Orleans Pelicans: OffRtg 114.3 | DefRtg 119.0 | NetRtg -4.7 | Pace 99.9 | L15:-41.3\nOrlando Magic: OffRtg 115.0 | DefRtg 115.1 | NetRtg -0.1 | Pace 99.7 | L15:-31.8\nOklahoma City Thunder: OffRtg 118.8 | DefRtg 107.5 | NetRtg +11.3 | Pace 99.2 | L15:+37.6\nUtah Jazz: OffRtg 114.3 | DefRtg 122.5 | NetRtg -8.2 | Pace 101.8 | L15:-52.2\nDallas Mavericks: OffRtg 110.7 | DefRtg 116.3 | NetRtg -5.6 | Pace 101.7 | L15:-37.1\nLos Angeles Lakers: OffRtg 118.2 | DefRtg 116.8 | NetRtg +1.5 | Pace 98.5 | L15:+8.0\nSacramento Kings: OffRtg 111.4 | DefRtg 121.5 | NetRtg -10.1 | Pace 99.3 | L15:-29.9\nLA Clippers: stats unavailable\nGolden State Warriors: OffRtg 114.8 | DefRtg 115.1 | NetRtg -0.3 | Pace 99.3 | L15:-20.5\nHouston Rockets: OffRtg 118.3 | DefRtg 113.3 | NetRtg +5.1 | Pace 95.9 | L15:+46.1"
-  },
-  "scout_report_data": {
-    "date": "2026-04-05",
-    "updated_at": "2026-04-05T16:37:17.464753+00:00",
-    "picks": [
-      {
-        "id": "nba_draft_20260405_001",
-        "match": "Boston Celtics vs Toronto Raptors",
-        "time": "2026-04-05T19:30:00Z",
-        "pick": "Boston Celtics -9.5",
-        "odds": 1.9,
-        "stake": 150,
-        "potential_return": 285.0,
-        "confidence": 72,
-        "reasoning": "Boston L15 NetRtg: +34.2 vs Toronto L15: +25.2 — gap of +9.0 favoring Boston, well above the 4.0 threshold. Season NetRtg gap: +8.1 vs +2.2 = 5.9 points. Boston 52-25 (L10: 8-2), Toronto 43-34 (L10: 5-5). Boston home court, Toronto missing Quickley (confirmed OUT via NBA official PDF — franchise player absence confirmed). Vucevic listed Questionable for Boston — not a franchise player, minor impact. No B2B issues. DefRtg: Boston 112.7 vs Toronto OffRtg 115.6 — respectable but Boston's elite recent form (L15 +34.2) strongly suggests comfortable home win. Spread odds 1.90 within target range 1.80–2.30. NetRtg L15 gap > 6 pts = strong spread signal. Toronto without Quickley loses primary offensive initiator. EV = (0.72 × 1.90) - 1 = 1.368 - 1 = 0.368 — STRONG edge well above 0.05 minimum. Confidence 72 meets spread floor of 60. Stake: High tier (70-84) = 20-25% of €1000 = €150.",
-        "anchor_players": [
-          "Jayson Tatum",
-          "Jaylen Brown"
-        ],
-        "drafted_at": "2026-04-05T16:37:22Z",
-        "market_type": "spread"
-      },
-      {
-        "id": "nba_draft_20260405_004",
-        "match": "Houston Rockets vs Golden State Warriors",
-        "time": "2026-04-06T02:00:00Z",
-        "pick": "Houston Rockets ML",
-        "odds": 2.35,
-        "stake": 150,
-        "potential_return": 352.5,
-        "confidence": 68,
-        "reasoning": "Houston L15 NetRtg: +46.1 (elite recent form) vs Golden State L15: -20.5 — massive gap of +66.6 in L15 differential. Season NetRtg: Houston +5.1 vs GSW -0.3 — 5.4 point gap. Houston 48-29 (L10: 7-3, streak: W5) vs GSW 36-41 (L10: 4-6, streak: L3). GSW confirmed tank-watch per skills. Stephen Curry Questionable (Pain Syndrome) and Seth Curry Questionable — if Steph sits, GSW are severely depleted. Jimmy Butler III OUT. Houston missing VanVleet and Adams (confirmed via NBA official) but core remains strong. Houston road game (away), so apply -5 confidence for away factor but no B2B. Base confidence: 68. Away adjustment: -5 → adjusted to 63. Still above ML floor of 50. EV = (0.63 × 2.35) - 1 = 1.4805 - 1 = 0.4805 — STRONG edge. Odds 2.35 within ML target range 1.70–2.50. Steph Curry questionable status is a risk — if he plays, reduce edge. GSW tank-watch + L3 losing streak + Houston W5 streak + massive L15 gap all align. Confidence 63 post-adjustment, stake: Medium tier (55-69) = 15-20% = €150.",
-        "anchor_players": [
-          "Alperen Sengun",
-          "Jalen Green"
-        ],
-        "drafted_at": "2026-04-05T16:37:22Z",
-        "market_type": "ml"
-      }
-    ],
-    "rejected": [
-      {
-        "match": "Washington Wizards vs Brooklyn Nets",
-        "reason": "Both teams confirmed tank-tier (WAS 17-60, BKN 18-59). Brooklyn ML 1.63 below target floor 1.70; WAS ML 2.32 in range but Washington is confirmed full-tank with Davis, Russell, Sarr, Young all OUT — do not bet WAS to win. Brooklyn odds 1.63 below ML floor. Spread odds in range but injury coverage uncertainty on both sides with multiple GTD players (Champagnie, Coulibaly, Tre Johnson on WAS). NetRtg L15: BKN -38.8 vs WAS -35.2 — both deeply negative. No reliable edge direction; tank vs tank game with corrupted lines.",
-        "ml_home": 1.63,
-        "ml_away": 2.32,
-        "decision": "rejected"
-      },
-      {
-        "match": "Chicago Bulls vs Phoenix Suns",
-        "reason": "Phoenix ML 1.22 far below target floor 1.70 — no bet on PHX. Chicago ML 4.35 above target ceiling 2.50 and Chicago is confirmed tank-tier (29-48, L10: 2-8, L15: -53.7 extremely negative). Phoenix road, L10: 3-7 — cold fade candidate but odds too short to bet. No valid market entry.",
-        "ml_home": 4.35,
-        "ml_away": 1.22,
-        "decision": "rejected"
-      },
-      {
-        "match": "Milwaukee Bucks vs Memphis Grizzlies",
-        "reason": "Milwaukee ML 1.40 below target floor 1.70. Milwaukee missing Giannis (OUT — hyperextension), Bobby Portis OUT, Gary Trent Jr. OUT. Memphis ML 3.00 in range but Memphis tank-tier (25-52, L10: 2-8, L15: -48.9). Betting Memphis at 3.00 against depleted Bucks without Giannis is tempting but Memphis is confirmed tank with terrible L15. Bucks despite injuries still have home court. No clear edge with both teams degraded.",
-        "ml_home": 1.4,
-        "ml_away": 3.0,
-        "decision": "rejected"
-      },
-      {
-        "match": "Cleveland Cavaliers vs Indiana Pacers",
-        "reason": "ANOMALY: CLE ML 1.08 implies 93% probability — but CLE missing Allen AND Mobley (both confirmed OUT via NBA official PDF). Pacers also heavily depleted (Haliburton OUT, McConnell OUT, Nembhard OUT, Nesmith OUT, Furphy OUT). Indiana ML 8.00 well above target ceiling. CLE at 1.08 is extreme line possibly not fully pricing dual big man absence. Spread -15.5 is extreme. Line anomaly flagged — CLE priced as massive favourite despite franchise player absences. Indiana also extremely depleted. Tank vs depleted game with anomalous pricing. No bet — flag for Commit.",
-        "ml_home": 1.08,
-        "ml_away": 8.0,
-        "decision": "anomaly"
-      },
-      {
-        "match": "Oklahoma City Thunder vs Utah Jazz",
-        "reason": "LINE ANOMALY: OKC priced at 1.02 ML (≤ 1.35 threshold met), spread -24.0. Both markets outside target ranges. ML 1.02 far below 1.70 floor. Utah confirmed tank (21-57, L10: 1-9). OKC elite (61-16) but star rest risk is HIGH with postseason clinch near — Thomas Sorber OUT. No valid bet market. Flagged as anomaly for Commit to investigate potential star rest.",
-        "ml_home": 1.02,
-        "ml_away": 15.0,
-        "decision": "anomaly"
-      },
-      {
-        "match": "Los Angeles Lakers vs Dallas Mavericks",
-        "reason": "Interesting matchup but LAL severely depleted (Doncic OUT, Reaves OUT, Smart OUT, Vanderbilt Questionable — confirmed via NBA official). LAL ML 2.04 in range but franchise player absences disqualify without re-verification — skills explicitly state 'do NOT bet LAL ML without re-verification'. Dallas also tank-tier (24-53, L10: 2-8) with Kyrie Irving OUT, Lively OUT, Martin OUT. LAL L15: +8.0 vs DAL L15: -37.1 — LAL still better L15 but depleted roster. Dallas at 1.80 in range but tank team. Both teams too compromised for confident pick. LAL at 2.04 could have value but injury uncertainty too high for reliable EV calculation. Rejected — too many unknowns.",
-        "ml_home": 2.04,
-        "ml_away": 1.8,
-        "decision": "rejected"
-      },
-      {
-        "match": "New Orleans Pelicans vs Orlando Magic",
-        "reason": "Both teams negative NetRtg. NOP L15: -41.3, ORL L15: -31.8. NOP 25-53, ORL 41-36. NOP ML 1.50 below target floor 1.70. ORL ML 2.65 above target ceiling 2.50. NOP Dejounte Murray Questionable, Trey Murphy Questionable — injury uncertainty. Orlando L10: 3-7, cold stretch. Neither team has clear edge signal at available odds.",
-        "ml_home": 1.5,
-        "ml_away": 2.65,
-        "decision": "rejected"
-      },
-      {
-        "match": "Charlotte Hornets vs Minnesota Timberwolves",
-        "reason": "Charlotte ML 1.79 marginally below 1.80 floor (borderline). EV calculated at 0.038 — fails 5% minimum EV requirement. Anthony Edwards Questionable for MIN; if confirmed OUT at Commit phase, EV rises to strong territory. DEFERRED to Commit — pending Edwards injury status. Charlotte L15 +44.0 vs MIN L15 -4.0 is massive gap favoring Charlotte.",
-        "ml_home": 2.05,
-        "ml_away": 1.79,
-        "decision": "deferred"
-      },
-      {
-        "match": "LA Clippers vs Sacramento Kings",
-        "reason": "Sacramento ML 6.40 far above target ceiling 2.50. Clippers ML 1.12 far below target floor 1.70. Sacramento worst record in West (21-57), confirmed tank. Clippers advanced stats unavailable — cannot evaluate spread. Extreme odds with no valid market entry.",
-        "ml_home": 6.4,
-        "ml_away": 1.12,
-        "decision": "rejected"
-      }
-    ],
-    "report": "Difficult slate tonight — 2 confirmed line anomalies (OKC/UTA at 1.02, CLE/IND at 1.08 with dual franchise absences), multiple tank matchups, and widespread injury degradation. Injury feed source is NBA official PDF (22 teams) — full confidence rules apply. Pace data available for all teams. Two clean picks drafted: Boston -9.5 (strong L15 gap + Toronto without Quickley) and Houston ML at 2.35 (elite L15 form +46.1, GSW tank-watch, Steph Curry Questionable). Charlotte/MIN deferred to Commit pending Edwards (Questionable) status — if Edwards OUT, Charlotte ML becomes a strong play. OKC/UTA and CLE/IND flagged as anomalies for Commit investigation (star rest and dual absence pricing respectively). Total drafted: 2 confirmed picks, 1 deferred.",
-    "odds_source": "theodds_unibet",
-    "injuries_source": "nba_official",
-    "tokens_in": 10786,
-    "tokens_out": 3930,
-    "cost_usd": 0.091308
-  }
+  "game_log_recorded": []
 }
