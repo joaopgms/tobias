@@ -1054,11 +1054,11 @@ const HISTORY_DATA = {
 };
 const DRAFT_PICKS = [];
 
-const SCOUT_STATUS = "live";
+const SCOUT_STATUS = "pending";
 const SCOUT_ERROR = "";
-const SCOUT_UPDATED_AT = "2026-04-04T15:21:48.291069+00:00";
-const COMMIT_STATUS = "done";
-const COMMIT_UPDATED_AT = "2026-04-04T18:29:53.774205+00:00";
+const SCOUT_UPDATED_AT = "";
+const COMMIT_STATUS = "pending";
+const COMMIT_UPDATED_AT = "";
 const LLM_PROVIDER = "claude";
 const CONFIG_DATA = {
   "analyst_model": "claude-sonnet-4-6",
