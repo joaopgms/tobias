@@ -439,12 +439,15 @@ def run(store) -> None:
     # ML: 1.60–2.50 | Spread: 1.75–2.35 | Total: 1.75–2.10
     ODDS_RANGE = {"ml": (1.60, 2.50), "spread": (1.75, 2.35), "total": (1.75, 2.10)}
     valid_picks = []
+    post_filter_rejected = []  # picks dropped by 8d/8e — added to rejected_games later
     for p in draft_picks:
         pick_odds = float(p.get("odds") or 0)
         mtype = p.get("market_type", "ml")
         lo, hi = ODDS_RANGE.get(mtype, (1.65, 2.50))
         if pick_odds < lo or pick_odds > hi:
-            log.info(f"Scout: dropped {p['id']} — {mtype} odds {pick_odds} outside [{lo}–{hi}]")
+            reason = f"Post-filter: {mtype} odds {pick_odds} outside [{lo}–{hi}] target range"
+            log.info(f"Scout: dropped {p['id']} — {reason}")
+            post_filter_rejected.append({"match": p.get("match",""), "reason": reason})
         else:
             valid_picks.append(p)
     if len(valid_picks) < len(draft_picks):
@@ -461,7 +464,9 @@ def run(store) -> None:
         if ev >= 0.05:
             ev_picks.append(p)
         else:
-            log.info(f"Scout: dropped {p['id']} — EV {ev:.2%} below 5% floor (conf={p.get('confidence')} odds={pick_odds})")
+            reason = f"Post-filter: EV {ev:.2%} below 5% floor (conf={p.get('confidence')} odds={pick_odds})"
+            log.info(f"Scout: dropped {p['id']} — {reason}")
+            post_filter_rejected.append({"match": p.get("match",""), "reason": reason})
     if len(ev_picks) < len(draft_picks):
         log.info(f"Scout: EV filter removed {len(draft_picks)-len(ev_picks)} pick(s)")
     draft_picks = ev_picks
@@ -614,6 +619,13 @@ def run(store) -> None:
         state["rejected_games"] = json.loads(rejected_raw) if rejected_raw else []
     except Exception:
         state["rejected_games"] = []
+    # Append picks dropped by post-parse filters (8d/8e) — not in LLM rejected_games
+    if post_filter_rejected:
+        seen_matches = {r.get("match","") for r in state["rejected_games"]}
+        for r in post_filter_rejected:
+            if r["match"] not in seen_matches:
+                state["rejected_games"].append(r)
+                seen_matches.add(r["match"])
     state["scout_error"]      = ""
     state["scout_updated_at"] = now_iso
     state["commit_status"]    = "pending"   # reset for today's commit
