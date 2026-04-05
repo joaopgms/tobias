@@ -430,9 +430,9 @@ def run(store) -> None:
             if conf >= 70:   stake = round(bankroll * 0.15, 2)
             elif conf >= 55: stake = round(bankroll * 0.10, 2)
             else:            stake = round(bankroll * 0.08, 2)
-            odds = float(p.get("odds") or 1.0)
+            pick_odds = float(p.get("odds") or 1.0)
             p["stake"] = stake
-            p["potential_return"] = round(stake * odds, 2)
+            p["potential_return"] = round(stake * pick_odds, 2)
             log.info(f"Scout: fixed stake for {p['id']}: conf={conf} → €{stake}")
 
     # ── 8d. Enforce odds range ────────────────────────────────────────────────
