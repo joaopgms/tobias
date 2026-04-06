@@ -26,7 +26,7 @@
           "wins": 0,
           "losses": 0,
           "peak_bankroll": 1000.0,
-          "total_bets": 0
+          "total_bets": 3
         }
       ]
     }
@@ -764,6 +764,83 @@
       ],
       "bets": [],
       "summary": "Day 2026-04-05 commit — 0 bets totalling €0.00. 1 cancelled. Bankroll: €1000.00 → €1000.00."
+    },
+    {
+      "entry_id": "nba_entry_20260406",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-04-06T22:27:33.598986+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1000.0,
+      "total_staked": 500.0,
+      "bankroll_after": 500.0,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260406_001",
+          "match": "Atlanta Hawks vs New York Knicks",
+          "time": "2026-04-06T23:00:00Z",
+          "pick": "New York Knicks ML",
+          "odds": 2.0,
+          "stake": 150,
+          "potential_return": 300.0,
+          "confidence": 72,
+          "anchor_players": [
+            "Jalen Brunson",
+            "Karl-Anthony Towns",
+            "Mikal Bridges"
+          ],
+          "reasoning": "COMMIT REVIEW — CONFIRMED. Scout odds 2.02, commit odds 2.00 (movement -0.02, minimal, within 0.10 threshold). Anchor players Brunson, KAT, Bridges all active (not listed on injury report). ATL injury update: only RayJ Dennis Questionable (G League Two-Way — irrelevant to thesis). Core thesis intact: NYK season NetRtg +6.6 vs ATL +2.6 (4.0-pt gap in NYK's favour). ATL L10 hot streak fade signal valid (8-2 L10 but 45-33 season record vs NYK 50-28). NYK better season record, better NetRtg, healthy franchise players. ATL's surge (L15 +36.6) flagged but regression-fade at 2.00 still strong value. EV recalculated at commit odds: EV = (0.72 × 2.00) - 1 = 0.44. Well above 0.05 threshold. Odds 2.00 within ML range (1.65-2.50). Confidence 72 (High tier) unchanged. Stake maintained at €150 (15% — conservative within High tier due to ATL home court and L15 surge counter-signal).",
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-04-06T22:27:36Z"
+        },
+        {
+          "id": "nba_bet_20260406_002",
+          "match": "Denver Nuggets vs Portland Trail Blazers",
+          "time": "2026-04-07T01:00:00Z",
+          "pick": "Denver Nuggets -8.0",
+          "odds": 1.95,
+          "stake": 150,
+          "potential_return": 292.5,
+          "confidence": 68,
+          "anchor_players": [
+            "Nikola Jokic",
+            "Jamal Murray",
+            "Michael Porter Jr."
+          ],
+          "reasoning": "COMMIT REVIEW — CONFIRMED at current line. Scout drafted DEN -8.5 at 1.94. Current market: DEN -8.0 at 1.95. Spread compressed 0.5 pts (slight adjustment against DEN spread), but odds improved +0.01 to 1.95. Anchor check: Jokic, Murray, MPJ all active (none listed on injury report). POR injury update confirms thesis: Damian Lillard OUT (injury management confirmed by NBA official), Jerami Grant OUT (right calf), Shaedon Sharpe OUT (reaction), Vit Krejci OUT. POR missing four key contributors including franchise player Lillard. DEN core intact with Jokic (presumed available), home court advantage at Ball Arena, W8 streak, 9-1 L10. Season NetRtg gap: DEN +4.8 vs POR -0.4 = 5.2 pts in DEN's favour. Counter-signal noted: POR L15 +46.2 is anomalously high but roster tonight is severely depleted — L15 figure does not reflect tonight's deployment. At -8.0 (easier cover than -8.5), the pick retains strong value. EV = (0.68 × 1.95) - 1 = 0.326. Spread odds 1.95 within target (1.80-2.30). Confidence 68 (Medium tier) unchanged. Stake €150 maintained.",
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-04-06T22:27:36Z"
+        },
+        {
+          "id": "nba_bet_20260406_003",
+          "match": "San Antonio Spurs vs Philadelphia 76ers",
+          "time": "2026-04-07T00:00:00Z",
+          "pick": "San Antonio Spurs -8.5",
+          "odds": 1.89,
+          "stake": 200,
+          "potential_return": 378.0,
+          "confidence": 70,
+          "anchor_players": [
+            "Victor Wembanyama",
+            "Stephon Castle",
+            "Devin Vassell"
+          ],
+          "reasoning": "LATE PICK — ADDED AT COMMIT. Scout noted this game and drafted SAS -8.5 at 1.90 but it was not included in final draft picks for commit review. Re-evaluated at commit time. TIME GATE: Game at 00:00 UTC, commit at 22:27 UTC = 93 min > 20 min ✅. ODDS GATE: SAS -8.5 at 1.89. Within spread target 1.80-2.30 ✅. QUANTITY GATE: First and only new pick at commit phase ✅. LINE MOVEMENT: Scout had 1.90, now 1.89 — movement of -0.01, negligible. INJURY CHECK (NBA Official): SAS injury report shows only Harrison Ingram Out (G League), David Jones Garcia Out (ankle surgery), Emanuel Miller Out (G League) — no franchise-level absences. PHI: Johni Broome Out (recovery), Cameron Payne Out (strain) — no franchise-level absences. SAS anchor players (Wembanyama, Castle, Vassell) not listed = active. THESIS: SAS L15 +48.9 (elite, top of entire league). Season NetRtg +8.2 vs PHI -0.2 = 8.4-pt gap. SAS record 59-19 vs PHI 43-35. SAS L10 9-1 vs PHI 6-4. SAS home at Frost Bank Center. PHI L15 +11.9 is decent but SAS form is genuinely elite — record validates this is not a misleading hot streak on a mediocre team (59-19 is a top-tier record). CONFIDENCE: Base 65 (SAS clearly superior team, home, elite form) + 5 (PHI depleted: Broome, Payne out) = 70. EV = (0.70 × 1.89) - 1 = 1.323 - 1 = 0.323 ≥ 0.05 ✅. STAKE: Confidence 70 = High tier (70-84) = 20-25% of €1,000. Use 20% = €200. Total committed stake after all picks: €150 + €150 + €200 = €500 = 50% of bankroll ≤ 70% ✅.",
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-04-06T22:27:36Z"
+        }
+      ],
+      "summary": "Day 2026-04-06 commit — 3 bets totalling €500.00. 0 cancelled. Bankroll: €1000.00 → €500.00."
     }
   ]
 }
