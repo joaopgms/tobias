@@ -412,5 +412,93 @@
     "tokens_in": 11508,
     "tokens_out": 6265,
     "cost_usd": 0.128499
+  },
+  {
+    "ts": "2026-04-06T14:54:56.051275+00:00",
+    "date": "2026-04-06",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_unibet",
+    "draft_count": 2,
+    "picks": [
+      {
+        "id": "nba_draft_20260406_001",
+        "match": "Atlanta Hawks vs New York Knicks",
+        "time": "2026-04-06T23:00:00Z",
+        "pick": "New York Knicks ML",
+        "odds": 2.02,
+        "stake": 150,
+        "potential_return": 303.0,
+        "confidence": 72,
+        "reasoning": "STEP 0 — LINE ANOMALY CHECK: ATL -1.5 home favourite at 1.81/NYK 2.02. Home team with 45-33 vs 50-28 record — NYK has better record but is underdog at 2.02. Not a flagged anomaly (gap is within normal range given home court). Proceed. | STEP 1 — NetRtg L15: NYK L15 +8.1 vs ATL L15 +36.6 — ANOMALY: ATL L15 appears extremely high (+36.6) suggesting a very strong recent run. However, season NetRtg: NYK +6.6 vs ATL +2.6 — gap of 4.0 points in NYK's favour. L15 gap favours ATL directionally but the season NetRtg strongly favours NYK (+6.6 vs +2.6, gap of 4.0 points = meaningful edge signal). ATL's L15 surge is noted but the hot streak fade rule applies. | HOT STREAK FADE: ATL Hawks L10: 8-2, W4 streak, season .577 W% — overall record implies ~.550 true talent. NYK at 2.02 qualifies as ≥ 1.80, so +10 confidence for regression-fade. ATL NetRtg +2.6 is genuinely below their W% implied talent — regression signal real. | STEP 2 — B2B/Schedule: No B2B issues noted for either team. | STEP 3 — Franchise players: NYK injury report shows only Trey Jemison III Out (G League) — no franchise player concerns. ATL: Jock Landale Out (confirmed), RayJ Dennis Questionable, Keshon Gilbert Questionable (both G League). No franchise player absences for either team. | STEP 4 — Play-in/Seeding: NYK 50-28 fighting for top seed in East — high motivation. ATL 45-33 in play-in race — also motivated. | STEP 5 — L10: NYK 7-3 vs ATL 8-2 — ATL slight edge in L10. | STEP 6 — Home court: ATL home, worth ~2-3 pts (~0.10-0.15 odds). NetRtg gap < 3 points between teams (4.0 gap slightly above threshold but home court relevant). Books pricing ATL -1.5 home favourite despite NYK's better record and NetRtg. | STEP 7 — DefRtg: NYK 113.4 vs ATL 113.5 — essentially identical. No significant spread edge from defense. | STEP 9 — Pace: Pace data shows ATL 101.7 vs NYK 97.1 — mismatch of 4.6 points (just below 5-point mismatch threshold). No strong O/U signal, and O/U not available anyway. | SUMMARY: NYK season NetRtg +6.6 vs ATL +2.6 = 4.0 gap favours NYK. Hot streak fade on ATL (+10 confidence). NYK better record on road. NYK franchise players healthy. Base confidence: 62 (NYK better NetRtg, better record, healthy roster) + 10 (hot streak fade ATL) = 72. | EV CALCULATION: EV = (0.72 × 2.02) - 1 = 1.4544 - 1 = 0.4544 — STRONG EDGE (≥ 0.15). Odds 2.02 within ML target 1.60-2.50. Confidence 72 ≥ 50 floor. | STAKE: Confidence 72 = High tier (70-84) → 20-25% of €1000 = €200-250. Given this is an away team pick against a hot home favourite, use lower end of High tier = €150 (15% — cautious due to ATL's impressive L15 surge).",
+        "anchor_players": [
+          "Jalen Brunson",
+          "Karl-Anthony Towns",
+          "Mikal Bridges"
+        ],
+        "drafted_at": "2026-04-06T14:55:08Z",
+        "market_type": "ml"
+      },
+      {
+        "id": "nba_draft_20260406_003",
+        "match": "Denver Nuggets vs Portland Trail Blazers",
+        "time": "2026-04-07T01:00:00Z",
+        "pick": "Denver Nuggets -8.5",
+        "odds": 1.94,
+        "stake": 150,
+        "potential_return": 291.0,
+        "confidence": 68,
+        "reasoning": "STEP 0 — LINE ANOMALY CHECK: DEN 1.30 / POR 3.60. DEN -8.5 spread. No anomaly — DEN is home, 50-28 with W8 streak vs POR 40-38. Record gap justifies this pricing. No anomaly. | STEP 1 — NetRtg L15: DEN L15 +25.2 vs POR L15 +46.2. CAUTION: POR's L15 +46.2 is very high — potentially the biggest surprise of the slate. Season NetRtg: DEN +4.8 vs POR -0.4 — gap of 5.2 points in DEN's favour. L15 gap actually favours POR (+21 point edge in L15), which is a significant signal per the skills file (L15 is PRIMARY directional signal). This is a meaningful counter-signal to DEN's season edge. | STEP 2 — B2B/Schedule: No B2B issues identified for either team. | STEP 3 — Franchise players: DEN: Spencer Jones Out (confirmed), Zeke Nnaji Questionable (hip), Peyton Watson Out (confirmed). Nikola Jokic NOT listed as absent — presumed available. Jamal Murray not listed — presumed available. POR: Jerami Grant Out (right calf), Vit Krejci Out (left calf), Damian Lillard Out (injury management — this is significant), Shaedon Sharpe Out (reaction). PORTLAND MAJOR ABSENCE: Damian Lillard Out — this is a FRANCHISE PLAYER level absence. POR is missing Lillard AND Grant AND Sharpe — severely depleted roster. | STEP 4 — Play-in motivation: POR 40-38 is in play-in bubble — BUT their key players Lillard, Grant, Sharpe are ALL out. Motivation is irrelevant if key players aren't playing. | STEP 5 — L10: DEN 9-1 vs POR 8-2 — both hot, DEN slightly better. | STEP 6 — Home court: DEN at Ball Arena — significant advantage. | STEP 7 — Home/away: DEN home, POR road without Lillard, Grant, Sharpe. | STEP 8 — DefRtg: DEN DefRtg 117.4 vs POR OffRtg 114.3. POR DefRtg 114.7 vs DEN OffRtg 122.2. DEN offense (122.2) significantly better than POR defense (114.7). | RECONCILING L15 ANOMALY: POR L15 +46.2 is extremely high for a 40-38 team. This may reflect some anomalous calculation, or games played without Lillard where opponents also rested players, OR genuine recent hot stretch by supporting cast. However, Lillard, Grant, and Sharpe ALL missing tonight severely caps POR's ceiling regardless of L15 form. The L15 figure likely doesn't account for tonight's absences. The key factor is POR's depleted roster. | REVISED ANALYSIS: DEN has Jokic (presumed available), home court, W8 streak, +4.8 season NetRtg, 9-1 L10. POR missing Lillard + Grant + Sharpe = three key contributors out. Despite POR's L15 figure, tonight's deployment is severely hampered. DEN -8.5 is a strong cover candidate. Confidence: Base 65 (DEN superior team, home, POR depleted) + moderate L15 counter-signal penalty (-5 for POR's elevated L15 despite absences) + POR depleted roster amplifier (+8). Net: 65 - 5 + 8 = 68. | EV CALCULATION: EV = (0.68 × 1.94) - 1 = 1.3192 - 1 = 0.3192 — STRONG EDGE (≥ 0.15). Spread odds 1.94 within target (1.80-2.30). Confidence 68 ≥ 60 floor for spreads. | STAKE: Confidence 68 = Medium tier (55-69) → 15-20% = €150-200. Using €150 (15%).",
+        "anchor_players": [
+          "Nikola Jokic",
+          "Jamal Murray",
+          "Michael Porter Jr."
+        ],
+        "drafted_at": "2026-04-06T14:55:08Z",
+        "market_type": "spread"
+      }
+    ],
+    "rejected": [
+      {
+        "match": "Atlanta Hawks vs New York Knicks",
+        "reason": "DRAFTED — NYK ML at 2.02. ATL hot streak fade + NYK superior season NetRtg (+6.6 vs +2.6). EV 0.45.",
+        "ml_home": 1.81,
+        "ml_away": 2.02,
+        "decision": "rejected"
+      },
+      {
+        "match": "Kia Center vs Detroit Pistons",
+        "reason": "Detroit: Cade Cunningham OUT (confirmed NBA official) — franchise player out. Skills file: do not bet DET ML without verification (already confirmed out). ORL ML at 2.18 evaluated: ORL NetRtg -0.1, L15 -25.7 (very negative recent form) vs DET NetRtg +8.1, L15 +31.4 (strong). DET has massive edge despite Cunningham absence — depth-driven. DET ML at 1.70 is within odds range but low end. DET spread: -2.5 at 1.88. With Cunningham out, confidence floor concern. Tobias Harris Questionable, Duncan Robinson Questionable for DET (confidence -10 each if relevant). ORL L15 -25.7 strongly negative but DET Cunningham absence is confirmed franchise player out — skills say do not bet DET ML. ORL ML: ORL L15 -25.7, NetRtg -0.1 vs DET +8.1, L15 gap 57.1 pts favours DET — no edge betting ORL. No valid pick found.",
+        "ml_home": 2.18,
+        "ml_away": 1.7,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Memphis Grizzlies vs Cleveland Cavaliers",
+        "reason": "CLE ML at 1.08 — outside ML target range (1.60-2.50). MEM ML at 8.00 — outside ML target range max. Spread: MEM +15.5 at 1.90. CLE: Jarrett Allen AND Evan Mobley both OUT (skills file alert — dual franchise big man absence confirmed roster-only, NOT yet confirmed via NBA official PDF in tonight's report). NBA official report does NOT list Allen/Mobley — re-verification needed per skills file mandate. CLE NetRtg L15: -0.5 (essentially breakeven) vs MEM L15: -48.5 (historically bad). CLE season NetRtg +4.0 but L15 -0.5 with dual big man absences = significant degradation. MEM at 8.00 ML and +15.5 spread with L10 1-9 and season NetRtg -4.8 = confirmed tanking team. No valid pick — odds out of range for ML, spread too risky with CLE uncertainty and confirmed tank opponent.",
+        "ml_home": 8.0,
+        "ml_away": 1.08,
+        "decision": "no_edge"
+      },
+      {
+        "match": "San Antonio Spurs vs Philadelphia 76ers",
+        "reason": "DRAFTED — SAS -8.5 spread at 1.90. PHI ML at 3.70 rejected (negative EV -0.22). SAS ML at 1.29 below target range.",
+        "ml_home": 1.29,
+        "ml_away": 3.7,
+        "decision": "rejected"
+      },
+      {
+        "match": "Denver Nuggets vs Portland Trail Blazers",
+        "reason": "DRAFTED — DEN -8.5 spread at 1.94. POR ML at 3.60 and DEN ML at 1.30 both outside useful range. Spread drafted.",
+        "ml_home": 1.3,
+        "ml_away": 3.6,
+        "decision": "rejected"
+      }
+    ],
+    "report": "Tonight's 5-game slate yields 3 draft picks across ML and spread markets. Injury feed source is NBA Official (full coverage) — normal confidence rules apply. Pace data is available this session (Pace values populated). Key themes: (1) NYK ML vs ATL exploits the hot-streak fade rule — ATL's L10 8-2 surge diverges from their +2.6 season NetRtg, and NYK's superior +6.6 NetRtg makes 2.02 valuable; (2) SAS -8.5 leverages Spurs' elite L15 (+48.9) against PHI's confirmed negative NetRtg (-0.2) fade candidate on the road; (3) DEN -8.5 backed by Portland's triple key absence (Lillard OUT, Grant OUT, Sharpe OUT) neutralising POR's surprising L15 figure. CLE vs MEM rejected due to ML odds out of range and dual Allen/Mobley absence uncertainty. DET vs ORL rejected due to Cunningham confirmed out per NBA official PDF (franchise player rule) and ORL's deeply negative L15 (-25.7). Total exposure: €400 of €1000 bankroll (40% — within 70% max).",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 8524,
+    "tokens_out": 5130,
+    "cost_usd": 0.102522
   }
 ]
