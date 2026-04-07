@@ -500,5 +500,63 @@
     "tokens_in": 8524,
     "tokens_out": 5130,
     "cost_usd": 0.102522
+  },
+  {
+    "ts": "2026-04-07T15:15:17.370409+00:00",
+    "date": "2026-04-07",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_unibet",
+    "draft_count": 0,
+    "picks": [],
+    "rejected": [
+      {
+        "match": "Washington Wizards vs Chicago Bulls",
+        "reason": "Both teams confirmed tanks with terrible L10 records (WAS 1-9, CHI 1-9). Both rosters severely depleted. Chicago ML at 1.43 outside odds target range. Washington +6 spread: both teams too depleted and unreliable to confidently assess cover. No qualifying edge in any market.",
+        "ml_home": 2.85,
+        "ml_away": 1.43,
+        "decision": "rejected"
+      },
+      {
+        "match": "New Orleans Pelicans vs Utah Jazz",
+        "reason": "Utah confirmed tank (21-58, L10: 1-9, L15: -59.0). New Orleans ML at 1.16 — well below 1.60 minimum odds target. Utah ML at 5.50 requires betting on confirmed tank team; skills say require ≥2.20 and strong situational reason but tanking criteria fully met for Jazz. Utah +11.5 spread: tanking teams historically don't cover, no edge here. Pelicans also tank-tier (25-54). Dejounte Murray Questionable adds uncertainty for NOP side. No qualifying market.",
+        "ml_home": 1.16,
+        "ml_away": 5.5,
+        "decision": "rejected"
+      },
+      {
+        "match": "Golden State Warriors vs Sacramento Kings",
+        "reason": "GS Warriors ML at 1.11 — far below 1.60 minimum. Sacramento Kings ML at 6.75 — requires betting confirmed worst-record team in West. GS confirmed tank-watch (L10: 3-7, L4 losing streak). Sacramento also confirmed tank (21-58, L10: 3-7). GS -14.5 spread: tanking team as massive favourite against another tanking team — unreliable. No qualifying edge.",
+        "ml_home": 1.11,
+        "ml_away": 6.75,
+        "decision": "anomaly"
+      },
+      {
+        "match": "Los Angeles Lakers vs Oklahoma City Thunder",
+        "reason": "LINE ANOMALY: OKC ML at 1.06 — extreme price. LAL ML at 9.50 — extreme underdog price. Both teams have critical absences: OKC: Jalen Williams OUT (confirmed NBA official), Thomas Sorber OUT. LAL: Luka Doncic OUT (confirmed), LeBron James QUESTIONABLE. LAL spread +16.5 at 1.92 — even with Doncic out, 16.5 points is a massive line. OKC L15: +48.0, LAL L15: +3.8. The extreme pricing and LeBron GTD make this highly uncertain. Anomaly flag: OKC at 1.06 with Jalen Williams absent and LeBron status unresolved. Deferred to Commit for LeBron James resolution.",
+        "ml_home": 9.5,
+        "ml_away": 1.06,
+        "decision": "anomaly"
+      },
+      {
+        "match": "LA Clippers vs Dallas Mavericks",
+        "reason": "Clippers ML at 1.18 — below 1.60 minimum. Dallas ML at 5.00 — confirmed tank team (25-53, L10: 2-8). Clippers stats unavailable per advanced stats feed. Clippers -11.5 spread: Kyrie Irving OUT, Gafford Doubtful for Dallas but Clippers stats unavailable makes spread analysis unreliable per data quality rules. No qualifying edge.",
+        "ml_home": 1.18,
+        "ml_away": 5.0,
+        "decision": "rejected"
+      },
+      {
+        "match": "Phoenix Suns vs Houston Rockets",
+        "reason": "Houston Rockets ML at 1.97 — within target range. Rockets L15: +39.9 vs Suns L15: +16.6 — gap of +23.3 in Houston's favour, well above 4.0 threshold. Houston streak: W6. However: Fred VanVleet OUT, Steven Adams OUT confirmed. Suns ML at 1.85 — Phoenix home, L10: 4-6. Rockets confidence base: 65 (strong L15 edge, hot streak). Suns are cold (L10: 4-6, prior skid). Houston road with key absences (VanVleet, Adams) but these are role-supporting players, not franchise. No B2B. EV for Houston ML at 1.97: (0.65 × 1.97) - 1 = 1.2805 - 1 = 0.2805. Strong EV. BUT: Phoenix home court (+0.10-0.15 odds factor), and Phoenix +1.6 NetRtg is positive. Houston -5.0 NetRtg advantage season-long. Close evaluation — this game nearly qualified. Ultimately the VanVleet absence (key playmaker) and Phoenix home court keep confidence near the border. Marginal rejection — would have drafted but the 4 picks already drafted per selectivity target of 2-4. Noting Houston as near-miss with EV 0.28 if confidence at 65 holds.",
+        "ml_home": 1.85,
+        "ml_away": 1.97,
+        "decision": "no_edge"
+      }
+    ],
+    "report": "Slate of 10 games with 4 picks drafted. NBA official injury PDF available for all 19 teams — full confidence rules apply. Key themes: franchise player absences dominate (Giannis, Edwards, Doncic, Williams all confirmed OUT); tanking teams create noise across multiple games. OKC vs LAL flagged as anomaly (LeBron GTD, extreme pricing) — deferred to Commit. Picks focus on: Indiana covering the large spread vs depleted MIN at home; Brooklyn ML as home team with Giannis absent from Milwaukee; Toronto ML with superior L15 over cold Miami (Quickley Questionable reduces confidence but edge holds); Charlotte +4.5 backed by exceptional L15 form (+43.5) and play-in motivation vs Boston. Pace data technically available but O/U lines not offered on tonight's slate — no totals evaluated. Houston vs Phoenix was a near-miss borderline rejection.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 10740,
+    "tokens_out": 4915,
+    "cost_usd": 0.105945
   }
 ]
