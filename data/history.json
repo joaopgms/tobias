@@ -26,7 +26,7 @@
           "wins": 2,
           "losses": 1,
           "peak_bankroll": 1178.0,
-          "total_bets": 3
+          "total_bets": 4
         }
       ]
     }
@@ -841,6 +841,41 @@
         }
       ],
       "summary": "Day 2026-04-06 commit — 3 bets totalling €500.00. 0 cancelled. Bankroll: €1000.00 → €500.00."
+    },
+    {
+      "entry_id": "nba_entry_20260407",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-04-07T22:22:48.833378+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1178.0,
+      "total_staked": 175.0,
+      "bankroll_after": 1003.0,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260407_001",
+          "match": "Los Angeles Lakers vs Oklahoma City Thunder",
+          "time": "2026-04-08T02:30:00Z",
+          "pick": "Oklahoma City Thunder -18.5 (spread)",
+          "odds": 1.92,
+          "stake": 175.0,
+          "potential_return": 336.0,
+          "reasoning": "Late-breaking trigger: LeBron James confirmed OUT (Management) at commit time — was Questionable/GTD at Scout. Combined with Luka Doncic OUT, Austin Reaves OUT, Marcus Smart OUT, the Lakers are playing with a skeleton roster of reserves. OKC (62-16) has SGA healthy and a full squad minus Jalen Williams — still elite. OKC L15 NetRtg: +48.0 vs LAL L15: +3.8 — gap of +44.2. Line moved from +16.5 to +18.5 as LeBron OUT was confirmed; movement is fully explained by the injury news. OKC -18.5 at 1.92 represents genuine value against a decimated opponent. EV = (0.62 × 1.92) - 1 = 0.1904.",
+          "confidence": 62,
+          "anchor_players": [
+            "LeBron James (LAL) — OUT confirmed",
+            "Luka Doncic (LAL) — OUT confirmed",
+            "Shai Gilgeous-Alexander (OKC) — active"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-04-07T22:22:50Z"
+        }
+      ],
+      "summary": "Day 2026-04-07 commit — 1 bets totalling €175.00. 0 cancelled. Bankroll: €1178.00 → €1003.00."
     }
   ]
 }
