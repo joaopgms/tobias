@@ -1,1 +1,2 @@
 {"ts": "2026-04-06T10:58:18.818334+00:00", "agent": "settler", "settled_count": 0, "wins": 0, "losses": 0, "skipped": [], "bust": false, "bankroll_before": 1000.0, "bankroll_after": 1000.0, "pnl_today": 0.0}
+{"ts": "2026-04-07T10:57:16.481236+00:00", "agent": "settler", "settled_count": 3, "wins": 2, "losses": 1, "skipped": [], "bust": false, "bankroll_before": 500.0, "bankroll_after": 1178.0, "pnl_today": 678.0}
