@@ -1,15 +1,15 @@
 {
   "season": "2024-25",
   "game": 2,
-  "bankroll": 500.0,
+  "bankroll": 1178.0,
   "bankroll_initial": 1000.0,
-  "bankroll_peak": 1000.0,
+  "bankroll_peak": 1178.0,
   "total_staked": 500.0,
-  "total_returned": 0.0,
-  "net_pnl": 0.0,
+  "total_returned": 678.0,
+  "net_pnl": 178.0,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-04-06T22:27:33.598986+00:00",
+  "last_updated": "2026-04-07T10:57:16.481236+00:00",
   "first_game_time": "2026-04-06T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
@@ -20,7 +20,7 @@
   "commit_updated_at": "2026-04-06T22:27:33.598986+00:00",
   "commit_date": "2026-04-06",
   "analyst_updated_at": "2026-04-06T11:47:45.935284+00:00",
-  "settler_updated_at": "2026-04-06T10:58:18.818334+00:00",
+  "settler_updated_at": "2026-04-07T10:57:16.481236+00:00",
   "agent_models": {
     "settler": "no-llm",
     "analyst": "claude-sonnet-4-6",
@@ -29,7 +29,8 @@
   },
   "last_report": "",
   "draft_picks": [],
-  "pending_bets": [
+  "pending_bets": [],
+  "settled_bets": [
     {
       "id": "nba_bet_20260406_001",
       "match": "Atlanta Hawks vs New York Knicks",
@@ -45,10 +46,10 @@
         "Mikal Bridges"
       ],
       "reasoning": "COMMIT REVIEW — CONFIRMED. Scout odds 2.02, commit odds 2.00 (movement -0.02, minimal, within 0.10 threshold). Anchor players Brunson, KAT, Bridges all active (not listed on injury report). ATL injury update: only RayJ Dennis Questionable (G League Two-Way — irrelevant to thesis). Core thesis intact: NYK season NetRtg +6.6 vs ATL +2.6 (4.0-pt gap in NYK's favour). ATL L10 hot streak fade signal valid (8-2 L10 but 45-33 season record vs NYK 50-28). NYK better season record, better NetRtg, healthy franchise players. ATL's surge (L15 +36.6) flagged but regression-fade at 2.00 still strong value. EV recalculated at commit odds: EV = (0.72 × 2.00) - 1 = 0.44. Well above 0.05 threshold. Odds 2.00 within ML range (1.65-2.50). Confidence 72 (High tier) unchanged. Stake maintained at €150 (15% — conservative within High tier due to ATL home court and L15 surge counter-signal).",
-      "result": null,
-      "returned": null,
-      "pnl": null,
-      "settled_at": null,
+      "result": "WON",
+      "returned": 300.0,
+      "pnl": 150.0,
+      "settled_at": "2026-04-07T10:57:16.481236+00:00",
       "committed_at": "2026-04-06T22:27:36Z"
     },
     {
@@ -66,10 +67,10 @@
         "Michael Porter Jr."
       ],
       "reasoning": "COMMIT REVIEW — CONFIRMED at current line. Scout drafted DEN -8.5 at 1.94. Current market: DEN -8.0 at 1.95. Spread compressed 0.5 pts (slight adjustment against DEN spread), but odds improved +0.01 to 1.95. Anchor check: Jokic, Murray, MPJ all active (none listed on injury report). POR injury update confirms thesis: Damian Lillard OUT (injury management confirmed by NBA official), Jerami Grant OUT (right calf), Shaedon Sharpe OUT (reaction), Vit Krejci OUT. POR missing four key contributors including franchise player Lillard. DEN core intact with Jokic (presumed available), home court advantage at Ball Arena, W8 streak, 9-1 L10. Season NetRtg gap: DEN +4.8 vs POR -0.4 = 5.2 pts in DEN's favour. Counter-signal noted: POR L15 +46.2 is anomalously high but roster tonight is severely depleted — L15 figure does not reflect tonight's deployment. At -8.0 (easier cover than -8.5), the pick retains strong value. EV = (0.68 × 1.95) - 1 = 0.326. Spread odds 1.95 within target (1.80-2.30). Confidence 68 (Medium tier) unchanged. Stake €150 maintained.",
-      "result": null,
-      "returned": null,
-      "pnl": null,
-      "settled_at": null,
+      "result": "LOST",
+      "returned": 0.0,
+      "pnl": -150.0,
+      "settled_at": "2026-04-07T10:57:16.481236+00:00",
       "committed_at": "2026-04-06T22:27:36Z"
     },
     {
@@ -87,14 +88,13 @@
         "Devin Vassell"
       ],
       "reasoning": "LATE PICK — ADDED AT COMMIT. Scout noted this game and drafted SAS -8.5 at 1.90 but it was not included in final draft picks for commit review. Re-evaluated at commit time. TIME GATE: Game at 00:00 UTC, commit at 22:27 UTC = 93 min > 20 min ✅. ODDS GATE: SAS -8.5 at 1.89. Within spread target 1.80-2.30 ✅. QUANTITY GATE: First and only new pick at commit phase ✅. LINE MOVEMENT: Scout had 1.90, now 1.89 — movement of -0.01, negligible. INJURY CHECK (NBA Official): SAS injury report shows only Harrison Ingram Out (G League), David Jones Garcia Out (ankle surgery), Emanuel Miller Out (G League) — no franchise-level absences. PHI: Johni Broome Out (recovery), Cameron Payne Out (strain) — no franchise-level absences. SAS anchor players (Wembanyama, Castle, Vassell) not listed = active. THESIS: SAS L15 +48.9 (elite, top of entire league). Season NetRtg +8.2 vs PHI -0.2 = 8.4-pt gap. SAS record 59-19 vs PHI 43-35. SAS L10 9-1 vs PHI 6-4. SAS home at Frost Bank Center. PHI L15 +11.9 is decent but SAS form is genuinely elite — record validates this is not a misleading hot streak on a mediocre team (59-19 is a top-tier record). CONFIDENCE: Base 65 (SAS clearly superior team, home, elite form) + 5 (PHI depleted: Broome, Payne out) = 70. EV = (0.70 × 1.89) - 1 = 1.323 - 1 = 0.323 ≥ 0.05 ✅. STAKE: Confidence 70 = High tier (70-84) = 20-25% of €1,000. Use 20% = €200. Total committed stake after all picks: €150 + €150 + €200 = €500 = 50% of bankroll ≤ 70% ✅.",
-      "result": null,
-      "returned": null,
-      "pnl": null,
-      "settled_at": null,
+      "result": "WON",
+      "returned": 378.0,
+      "pnl": 178.0,
+      "settled_at": "2026-04-07T10:57:16.481236+00:00",
       "committed_at": "2026-04-06T22:27:36Z"
     }
   ],
-  "settled_bets": [],
   "rejected_games": [
     {
       "match": "Atlanta Hawks vs New York Knicks",
@@ -342,7 +342,8 @@
       -11,
       -17,
       11,
-      40
+      40,
+      3
     ],
     "New Orleans Pelicans": [
       -5,
@@ -359,7 +360,8 @@
       9,
       -14,
       7,
-      9
+      9,
+      16
     ],
     "Orlando Magic": [
       -5,
@@ -368,7 +370,8 @@
       4,
       -29,
       11,
-      4
+      4,
+      16
     ],
     "Phoenix Suns": [
       -2,
@@ -384,7 +387,8 @@
       6,
       23,
       13,
-      2
+      2,
+      5
     ],
     "Miami Heat": [
       17,
@@ -408,7 +412,8 @@
       -4,
       11,
       5,
-      23
+      23,
+      -16
     ],
     "Atlanta Hawks": [
       1,
@@ -416,7 +421,8 @@
       10,
       10,
       29,
-      34
+      34,
+      -3
     ],
     "Indiana Pacers": [
       -7,
@@ -440,7 +446,8 @@
       -10,
       22,
       12,
-      -23
+      -23,
+      -13
     ],
     "Chicago Bulls": [
       -20,
@@ -475,6 +482,7 @@
       -26,
       -11,
       -32,
+      -16,
       -16
     ],
     "San Antonio Spurs": [
@@ -483,7 +491,8 @@
       15,
       14,
       19,
-      -2
+      -2,
+      13
     ],
     "Utah Jazz": [
       -23,
@@ -541,7 +550,8 @@
       -7,
       35,
       10,
-      12
+      12,
+      -5
     ],
     "Milwaukee Bucks": [
       -31,
@@ -571,17 +581,22 @@
     ]
   },
   "game_log_recorded": [
-    "Memphis Grizzlies@Milwaukee Bucks",
+    "Orlando Magic@New Orleans Pelicans",
     "Los Angeles Lakers@Dallas Mavericks",
+    "Houston Rockets@Golden State Warriors",
+    "Phoenix Suns@Chicago Bulls",
+    "Memphis Grizzlies@Milwaukee Bucks",
+    "Toronto Raptors@Boston Celtics",
+    "Indiana Pacers@Cleveland Cavaliers",
+    "Detroit Pistons@Orlando Magic",
+    "Cleveland Cavaliers@Memphis Grizzlies",
+    "New York Knicks@Atlanta Hawks",
+    "Portland Trail Blazers@Denver Nuggets",
+    "Washington Wizards@Brooklyn Nets",
+    "Philadelphia 76ers@San Antonio Spurs",
     "Utah Jazz@Oklahoma City Thunder",
     "Charlotte Hornets@Minnesota Timberwolves",
-    "Phoenix Suns@Chicago Bulls",
-    "Washington Wizards@Brooklyn Nets",
-    "Houston Rockets@Golden State Warriors",
-    "LA Clippers@Sacramento Kings",
-    "Indiana Pacers@Cleveland Cavaliers",
-    "Toronto Raptors@Boston Celtics",
-    "Orlando Magic@New Orleans Pelicans"
+    "LA Clippers@Sacramento Kings"
   ],
   "cached_context": {
     "cached_at": "2026-04-06",
