@@ -1,15 +1,15 @@
 {
   "season": "2024-25",
   "game": 2,
-  "bankroll": 1003.0,
+  "bankroll": 1339.0,
   "bankroll_initial": 1000.0,
-  "bankroll_peak": 1178.0,
+  "bankroll_peak": 1339.0,
   "total_staked": 675.0,
-  "total_returned": 678.0,
-  "net_pnl": 178.0,
+  "total_returned": 1014.0,
+  "net_pnl": 339.0,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-04-07T22:22:48.833378+00:00",
+  "last_updated": "2026-04-08T10:58:17.841029+00:00",
   "first_game_time": "2026-04-07T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
@@ -20,7 +20,7 @@
   "commit_updated_at": "2026-04-07T22:22:48.833378+00:00",
   "commit_date": "2026-04-07",
   "analyst_updated_at": "2026-04-07T11:52:57.696992+00:00",
-  "settler_updated_at": "2026-04-07T10:57:16.481236+00:00",
+  "settler_updated_at": "2026-04-08T10:58:17.841029+00:00",
   "agent_models": {
     "settler": "no-llm",
     "analyst": "claude-sonnet-4-6",
@@ -29,29 +29,7 @@
   },
   "last_report": "",
   "draft_picks": [],
-  "pending_bets": [
-    {
-      "id": "nba_bet_20260407_001",
-      "match": "Los Angeles Lakers vs Oklahoma City Thunder",
-      "time": "2026-04-08T02:30:00Z",
-      "pick": "Oklahoma City Thunder -18.5 (spread)",
-      "odds": 1.92,
-      "stake": 175.0,
-      "potential_return": 336.0,
-      "reasoning": "Late-breaking trigger: LeBron James confirmed OUT (Management) at commit time — was Questionable/GTD at Scout. Combined with Luka Doncic OUT, Austin Reaves OUT, Marcus Smart OUT, the Lakers are playing with a skeleton roster of reserves. OKC (62-16) has SGA healthy and a full squad minus Jalen Williams — still elite. OKC L15 NetRtg: +48.0 vs LAL L15: +3.8 — gap of +44.2. Line moved from +16.5 to +18.5 as LeBron OUT was confirmed; movement is fully explained by the injury news. OKC -18.5 at 1.92 represents genuine value against a decimated opponent. EV = (0.62 × 1.92) - 1 = 0.1904.",
-      "confidence": 62,
-      "anchor_players": [
-        "LeBron James (LAL) — OUT confirmed",
-        "Luka Doncic (LAL) — OUT confirmed",
-        "Shai Gilgeous-Alexander (OKC) — active"
-      ],
-      "result": null,
-      "returned": null,
-      "pnl": null,
-      "settled_at": null,
-      "committed_at": "2026-04-07T22:22:50Z"
-    }
-  ],
+  "pending_bets": [],
   "settled_bets": [
     {
       "id": "nba_bet_20260406_001",
@@ -115,6 +93,27 @@
       "pnl": 178.0,
       "settled_at": "2026-04-07T10:57:16.481236+00:00",
       "committed_at": "2026-04-06T22:27:36Z"
+    },
+    {
+      "id": "nba_bet_20260407_001",
+      "match": "Los Angeles Lakers vs Oklahoma City Thunder",
+      "time": "2026-04-08T02:30:00Z",
+      "pick": "Oklahoma City Thunder -18.5 (spread)",
+      "odds": 1.92,
+      "stake": 175.0,
+      "potential_return": 336.0,
+      "reasoning": "Late-breaking trigger: LeBron James confirmed OUT (Management) at commit time — was Questionable/GTD at Scout. Combined with Luka Doncic OUT, Austin Reaves OUT, Marcus Smart OUT, the Lakers are playing with a skeleton roster of reserves. OKC (62-16) has SGA healthy and a full squad minus Jalen Williams — still elite. OKC L15 NetRtg: +48.0 vs LAL L15: +3.8 — gap of +44.2. Line moved from +16.5 to +18.5 as LeBron OUT was confirmed; movement is fully explained by the injury news. OKC -18.5 at 1.92 represents genuine value against a decimated opponent. EV = (0.62 × 1.92) - 1 = 0.1904.",
+      "confidence": 62,
+      "anchor_players": [
+        "LeBron James (LAL) — OUT confirmed",
+        "Luka Doncic (LAL) — OUT confirmed",
+        "Shai Gilgeous-Alexander (OKC) — active"
+      ],
+      "result": "WON",
+      "returned": 336.0,
+      "pnl": 161.0,
+      "settled_at": "2026-04-08T10:58:17.841029+00:00",
+      "committed_at": "2026-04-07T22:22:50Z"
     }
   ],
   "rejected_games": [
@@ -267,7 +266,8 @@
       31,
       20,
       21,
-      14
+      14,
+      -11
     ],
     "Sacramento Kings": [
       -44,
@@ -276,7 +276,8 @@
       -17,
       8,
       4,
-      -29
+      -29,
+      -5
     ],
     "New York Knicks": [
       5,
@@ -294,7 +295,8 @@
       -32,
       -12,
       -4,
-      -4
+      -4,
+      19
     ],
     "Cleveland Cavaliers": [
       5,
@@ -321,7 +323,8 @@
       26,
       -4,
       -20,
-      10
+      10,
+      -14
     ],
     "Denver Nuggets": [
       2,
@@ -337,7 +340,8 @@
       -17,
       10,
       -18,
-      16
+      16,
+      -26
     ],
     "Dallas Mavericks": [
       -7,
@@ -345,7 +349,8 @@
       -30,
       -24,
       -11,
-      6
+      6,
+      -13
     ],
     "Detroit Pistons": [
       -1,
@@ -372,7 +377,8 @@
       17,
       19,
       -21,
-      -9
+      -9,
+      -20
     ],
     "Los Angeles Lakers": [
       7,
@@ -380,7 +386,8 @@
       19,
       14,
       -43,
-      -6
+      -6,
+      -36
     ],
     "Philadelphia 76ers": [
       20,
@@ -398,7 +405,8 @@
       -15,
       -19,
       -40,
-      -10
+      -10,
+      31
     ],
     "Boston Celtics": [
       10,
@@ -407,7 +415,8 @@
       -10,
       18,
       32,
-      14
+      14,
+      11
     ],
     "Oklahoma City Thunder": [
       -10,
@@ -415,7 +424,8 @@
       11,
       4,
       43,
-      35
+      35,
+      36
     ],
     "Memphis Grizzlies": [
       -25,
@@ -443,7 +453,8 @@
       -9,
       -13,
       -34,
-      -35
+      -35,
+      -19
     ],
     "Washington Wizards": [
       23,
@@ -452,7 +463,8 @@
       -19,
       -22,
       -16,
-      -6
+      -6,
+      -31
     ],
     "Minnesota Timberwolves": [
       2,
@@ -460,7 +472,8 @@
       30,
       -5,
       -12,
-      -14
+      -14,
+      20
     ],
     "Houston Rockets": [
       -2,
@@ -469,7 +482,8 @@
       17,
       6,
       34,
-      1
+      1,
+      14
     ],
     "Golden State Warriors": [
       3,
@@ -477,7 +491,8 @@
       -23,
       -14,
       -7,
-      -1
+      -1,
+      5
     ],
     "Brooklyn Nets": [
       -3,
@@ -485,6 +500,7 @@
       17,
       -31,
       -34,
+      6,
       6
     ],
     "Portland Trail Blazers": [
@@ -502,7 +518,8 @@
       24,
       -6,
       -32,
-      16
+      16,
+      -6
     ],
     "LA Clippers": [
       25,
@@ -510,7 +527,8 @@
       14,
       -10,
       -19,
-      29
+      29,
+      13
     ],
     "Toronto Raptors": [
       -25,
@@ -519,26 +537,37 @@
       -11,
       -8,
       32,
-      -14
+      -14,
+      26
     ]
   },
   "game_log_recorded": [
-    "Orlando Magic@New Orleans Pelicans",
-    "Los Angeles Lakers@Dallas Mavericks",
-    "Houston Rockets@Golden State Warriors",
     "Phoenix Suns@Chicago Bulls",
-    "Memphis Grizzlies@Milwaukee Bucks",
-    "Toronto Raptors@Boston Celtics",
-    "Indiana Pacers@Cleveland Cavaliers",
-    "Detroit Pistons@Orlando Magic",
-    "Cleveland Cavaliers@Memphis Grizzlies",
-    "New York Knicks@Atlanta Hawks",
-    "Portland Trail Blazers@Denver Nuggets",
-    "Washington Wizards@Brooklyn Nets",
-    "Philadelphia 76ers@San Antonio Spurs",
+    "Orlando Magic@New Orleans Pelicans",
     "Utah Jazz@Oklahoma City Thunder",
+    "Utah Jazz@New Orleans Pelicans",
+    "Miami Heat@Toronto Raptors",
+    "Los Angeles Lakers@Dallas Mavericks",
+    "Toronto Raptors@Boston Celtics",
+    "LA Clippers@Sacramento Kings",
+    "Portland Trail Blazers@Denver Nuggets",
+    "Memphis Grizzlies@Milwaukee Bucks",
+    "Sacramento Kings@Golden State Warriors",
+    "Dallas Mavericks@LA Clippers",
+    "Washington Wizards@Brooklyn Nets",
+    "Milwaukee Bucks@Brooklyn Nets",
+    "Minnesota Timberwolves@Indiana Pacers",
+    "Philadelphia 76ers@San Antonio Spurs",
+    "Indiana Pacers@Cleveland Cavaliers",
     "Charlotte Hornets@Minnesota Timberwolves",
-    "LA Clippers@Sacramento Kings"
+    "Chicago Bulls@Washington Wizards",
+    "Charlotte Hornets@Boston Celtics",
+    "Cleveland Cavaliers@Memphis Grizzlies",
+    "Houston Rockets@Phoenix Suns",
+    "Oklahoma City Thunder@Los Angeles Lakers",
+    "Detroit Pistons@Orlando Magic",
+    "Houston Rockets@Golden State Warriors",
+    "New York Knicks@Atlanta Hawks"
   ],
   "cached_context": {
     "cached_at": "2026-04-07",
