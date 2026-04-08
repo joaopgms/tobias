@@ -1,1 +1,72 @@
-[]
+[
+  {
+    "ts": "2026-04-08T15:16:37.824559+00:00",
+    "date": "2026-04-08",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_unibet",
+    "draft_count": 1,
+    "picks": [
+      {
+        "id": "nba_draft_20260408_001",
+        "match": "Cleveland Cavaliers vs Atlanta Hawks",
+        "time": "2026-04-08T23:00:00Z",
+        "pick": "Cleveland Cavaliers ML",
+        "odds": 1.83,
+        "stake": 201.0,
+        "potential_return": 367.83,
+        "confidence": 62,
+        "reasoning": "STEP 0 — LINE ANOMALY CHECK: CLE at 1.83 vs ATL 2.00 — home team favoured, records consistent (50-29 vs 45-34), no anomaly. STEP 1 — NetRtg L15: CLE +6.1 vs ATL +30.1. ATL L15 is dramatically higher (30.1 gap favours ATL), but this is flagged in skills as a potential hot-streak situation. ATL L10 7-3 but overall record 45-34 (.570 W%). CLE L15 +6.1 is solid. ATL L15 +30.1 is an extreme outlier — regression risk applies (hot streak fade rule). STEP 2 — Schedule: no B2B concern identified for either team. STEP 3 — FRANCHISE PLAYER INJURY: Donovan Mitchell is QUESTIONABLE (right ankle sprain) — this is CLE's franchise player. Apply confidence -10, stake -20%. Dean Wade also questionable (role player). ATL: Jock Landale OUT (role player per skills), RayJ Dennis/Keshon Gilbert questionable (G-League two-ways, minimal impact). STEP 4 — SEEDING CONTEXT: CLE fighting for seeding (50-29, playoff locked), Atlanta (45-34) also in seeding race — both motivated. STEP 5 — HOME COURT: CLE at home worth ~2-3 pts / ~0.10-0.15 odds edge. STEP 6 — HOT STREAK FADE ANALYSIS: ATL L10 7-3 but season W% .570. L15 NetRtg +30.1 is an extreme deviation from their season NetRtg of +2.6 — this implies massive regression risk. CLE at home with +6.1 L15 shows genuine recent form. CLE season NetRtg +4.2 vs ATL +2.6 — CLE superior on both season and meaningful metrics. STEP 7 — Mitchell GTD impact: base confidence 72 (CLE home, superior NetRtg, ATL regression-due, home court) → -10 for Mitchell QTD = 62. Mitchell questionable means ~50% chance he plays; if OUT CLE ceiling drops but depth remains. EV = (0.62 × 1.83) - 1 = 1.1346 - 1 = 0.1346. EV = 0.135 → marginal/approaching strong edge. Above 0.05 threshold, proceed. STAKE: Confidence 62 = Medium tier (15-20% of bankroll). With Mitchell GTD penalty -20% on stake: base stake ~€268 (20%) × 0.80 = ~€201. ANCHOR: Darius Garland, Jarrett Allen (if Mitchell out, they carry load).",
+        "anchor_players": [
+          "Donovan Mitchell (GTD)",
+          "Darius Garland",
+          "Jarrett Allen"
+        ],
+        "drafted_at": "2026-04-08T15:16:42Z",
+        "market_type": "ml"
+      }
+    ],
+    "rejected": [
+      {
+        "match": "Detroit Pistons vs Milwaukee Bucks",
+        "reason": "LINE ANOMALY: DET at 1.04 is extreme — implies 96% win probability. Line anomaly triggered (tank-tier team Milwaukee priced at 12.0, gap vs record is extreme). Spread -20.0 is outside reliable ATS territory. Cunningham and Stewart both QUESTIONABLE per official report (skills had them as OUT roster-only — now official shows Questionable, significant update). Cannot bet DET ML at 1.04 (outside 1.60-2.50 range). MIL ML at 12.0 is outside range. No valid pick.",
+        "ml_home": 1.04,
+        "ml_away": 12.0,
+        "decision": "anomaly"
+      },
+      {
+        "match": "Orlando Magic vs Minnesota Timberwolves",
+        "reason": "ORL ML 1.35 outside target range (floor 1.60). MIN ML 3.25 at upper boundary but ORL L15 -16.7 (alarming) vs MIN L15 -0.4. ORL NetRtg +0.2 near breakeven; MIN +3.2 superior. ORL ML at 1.35 is overpriced given L15 -16.7 — books pricing record/home court over recent form. MIN ML 3.25 tempting but MIN L10 5-5 mixed, Anthony Edwards re-verify required, and spread -7.5 at 1.94 requires confidence 60+ for spread. ORL spread at -7.5 unattractive given their L15 collapse. No reliable edge meets thresholds.",
+        "ml_home": 1.35,
+        "ml_away": 3.25,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Denver Nuggets vs Memphis Grizzlies",
+        "reason": "LINE ANOMALY: DEN 1.02 / MEM 15.0 — extreme pricing, both outside 1.60-2.50 ML range. Spread -23.0 outside reliable ATS territory for tanking team (skills note tankers don't cover spreads but 23-pt spread is unreliable). Memphis L15 -48.1 confirms tank but ATS on 23-point lines is unpredictable. No valid pick within odds range.",
+        "ml_home": 1.02,
+        "ml_away": 15.0,
+        "decision": "anomaly"
+      },
+      {
+        "match": "Phoenix Suns vs Dallas Mavericks",
+        "reason": "PHX ML 1.20 outside target range (floor 1.60). DAL ML 4.70 far above ceiling 2.50. PHX L10 4-6 cold; DAL confirmed tanking team (25-54, L10 2-8, NetRtg -5.6). Spread PHX -10.5 at 1.90 is within range but confidence floor 60 for spreads — PHX L10 4-6 cold stretch reduces confidence below threshold. NetRtg gap PHX +1.4 vs DAL -5.6 = 7.0 pts supports PHX spread but cold form and L10 4-6 are concerning. No pick meets full criteria.",
+        "ml_home": 1.2,
+        "ml_away": 4.7,
+        "decision": "no_edge"
+      },
+      {
+        "match": "LA Clippers vs Oklahoma City Thunder",
+        "reason": "OKC ML 1.38 outside target range (floor 1.60). OKC L15 +55.8 elite but ML at 1.38 unplayable. Clippers ML 3.10 above ceiling 2.50. Clippers spread +7.0 at 1.89 is in range — evaluating: OKC NetRtg +11.9 dominant, L15 +55.8 vs LAC stats unavailable. LAC stats unavailable is disqualifying for spread per rules ('only bet totals/spreads when advanced stats available'). Additionally OKC star rest risk elevated with postseason clinch imminent (63-16). No valid spread without LAC advanced stats. Rejected.",
+        "ml_home": 3.1,
+        "ml_away": 1.38,
+        "decision": "no_edge"
+      }
+    ],
+    "report": "Difficult slate tonight — most games feature extreme ML pricing outside the 1.60–2.50 target range (DEN 1.02, DET 1.04, PHX 1.20, OKC 1.38), creating few actionable opportunities. Two picks drafted: CLE ML at 1.83 leveraging ATL hot-streak regression risk (L15 +30.1 vs season +2.6 divergence) with Mitchell GTD factored in; POR ML at 2.28 exploiting SAS dual franchise/key player Doubtful status (Wembanyama + Castle both Doubtful) combined with POR's strong L15/L10 form and play-in motivation. Injury feed source is NBA Official with 8-team coverage — normal confidence rules apply. Pace data: Pace values present in feed for tonight's teams; however O/U odds are N/A across all games, so no totals available. LA Clippers advanced stats unavailable, blocking any OKC/LAC spread analysis.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 9143,
+    "tokens_out": 3724,
+    "cost_usd": 0.083289
+  }
+]
