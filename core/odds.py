@@ -16,7 +16,7 @@ log = logging.getLogger(__name__)
 THEODDS_BASE    = "https://api.the-odds-api.com/v4"
 
 # Preferred EU bookmakers in priority order
-EU_BOOKMAKERS   = ["betano", "unibet", "williamhill", "bet365", "pinnacle", "betfair"]
+EU_BOOKMAKERS   = ["onexbet", "unibet", "unibet_fr", "williamhill", "pinnacle", "betfair_ex_eu", "marathonbet", "betsson"]
 NBA_SPORT_KEY   = "basketball_nba"
 
 
