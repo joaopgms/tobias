@@ -1,24 +1,24 @@
 {
   "season": "2024-25",
   "game": 2,
-  "bankroll": 1339.0,
+  "bankroll": 1139.0,
   "bankroll_initial": 1000.0,
   "bankroll_peak": 1339.0,
-  "total_staked": 675.0,
+  "total_staked": 875.0,
   "total_returned": 1014.0,
   "net_pnl": 339.0,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-04-08T15:16:37.824559+00:00",
+  "last_updated": "2026-04-08T22:31:32.282551+00:00",
   "first_game_time": "2026-04-08T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
   "scout_updated_at": "2026-04-08T15:16:37.824559+00:00",
   "scout_odds_source": "theodds_unibet",
-  "commit_status": "pending",
-  "commit_updated_at": "2026-04-07T22:22:48.833378+00:00",
-  "commit_date": "2026-04-07",
+  "commit_status": "done",
+  "commit_updated_at": "2026-04-08T22:31:32.282551+00:00",
+  "commit_date": "2026-04-08",
   "analyst_updated_at": "2026-04-08T11:53:45.985891+00:00",
   "settler_updated_at": "2026-04-08T10:58:17.841029+00:00",
   "agent_models": {
@@ -27,28 +27,31 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "Difficult slate tonight — most games feature extreme ML pricing outside the 1.60–2.50 target range (DEN 1.02, DET 1.04, PHX 1.20, OKC 1.38), creating few actionable opportunities. Two picks drafted: CLE ML at 1.83 leveraging ATL hot-streak regression risk (L15 +30.1 vs season +2.6 divergence) with Mitchell GTD factored in; POR ML at 2.28 exploiting SAS dual franchise/key player Doubtful status (Wembanyama + Castle both Doubtful) combined with POR's strong L15/L10 form and play-in motivation. Injury feed source is NBA Official with 8-team coverage — normal confidence rules apply. Pace data: Pace values present in feed for tonight's teams; however O/U odds are N/A across all games, so no totals available. LA Clippers advanced stats unavailable, blocking any OKC/LAC spread analysis.",
-  "draft_picks": [
+  "last_report": "## COMMIT REPORT — 2026-04-08T22:31:34Z\n**Bankroll:** €1,339.00 | **Total Committed Stake:** €200.00 (14.9%) | **Remaining Bankroll:** €1,139.00\n\n---\n\n### CANCELLED — Cleveland Cavaliers ML\n\n- **Odds at cancel:** 1.67 (was 1.83 at Scout time — moved -0.16 against)\n- **Reason:** Adverse line movement of -0.16 triggers mandatory re-evaluation with confidence -10 per line_movement_rules. Scout had already applied -10 for Donovan Mitchell GTD, bringing confidence to 62. Additional -10 for line movement → adjusted confidence 52. EV recalculated at commit odds: (0.52 × 1.67) - 1 = **-0.132**. EV is deeply negative — far below the 0.05 minimum threshold. Cancelling per cancel_criteria. Note: Mitchell remains Questionable (no change), so no injury-specific trigger, but the combination of adverse movement and Mitchell uncertainty makes the pick non-viable at current odds.\n\n---\n\n### CONFIRMED (LATE SCOUT) — Phoenix Suns -12.5\n\n- **Match:** Phoenix Suns vs Dallas Mavericks | **Tip:** 2026-04-09T02:00Z\n- **Pick:** Phoenix Suns -12.5 (Spread) | **Scout odds:** N/A (new late pick) | **Commit odds:** 1.99 | **Move:** N/A\n- **ML:** PHX 1.16 / DAL 6.39 | **ATS:** PHX -12.5 (1.99/1.93) | **O/U:** 233.5 (O:1.97/U:1.95)\n- **Stake:** €200.00 | **Pot:** €398.00 | **Conf:** 62/100 | **EV:** 0.234\n- **Decision:** Late scout trigger activated by confirmed mass absences for Dallas: Kyrie Irving OUT (Left Knee Surgery — franchise player), Dereck Lively II OUT (Right Foot Surgery), plus Klay Thompson/Caleb Martin/Naji Marshall/Daniel Gafford all Doubtful. Dallas is operating with a skeleton rotation. Phoenix has Kevin Durant and Devin Booker active (not on injury report). PHX L15 NetRtg +8.6 vs DAL L15 -29.3 (gap: 37.9 pts). Season NetRtg: PHX +1.4 vs DAL -5.6. Home court advantage adds ~3 pts. PHX's L10 4-6 cold form is a minor concern (confidence reduced by 3), but the matchup edge with a decimated opponent is compelling. Odds 1.99 valid (within 1.75-2.30 spread range). EV 0.234 well above 0.05 threshold. All late-scout gates cleared: time (3h29m), confidence (62≥60), EV (0.234≥0.05), odds (valid), quantity (1 of 1 allowed).\n\n---\n\n### SLATE SUMMARY\n\nTonight's slate offered limited confirmed edges at commit time. The primary draft pick on Cleveland ML was cancelled due to a significant adverse line move (-0.16) that, combined with Mitchell's GTD status, drove EV into negative territory (-0.132). The late scout identified a genuine new edge in Phoenix -12.5 against a severely depleted Dallas team missing Kyrie Irving (OUT), Lively (OUT), and four more players listed as Doubtful — a roster effectively incapable of competitive resistance. With PHX's core (Durant, Booker) intact and a 37.9-point L15 NetRtg gap supporting the spread, the €200 stake at 1.99 represents a clean 23.4% EV edge. Total exposure is a conservative 14.9% of bankroll.",
+  "draft_picks": [],
+  "pending_bets": [
     {
-      "id": "nba_draft_20260408_001",
-      "match": "Cleveland Cavaliers vs Atlanta Hawks",
-      "time": "2026-04-08T23:00:00Z",
-      "pick": "Cleveland Cavaliers ML",
-      "odds": 1.83,
-      "stake": 201.0,
-      "potential_return": 367.83,
+      "id": "nba_bet_20260408_001",
+      "match": "Phoenix Suns vs Dallas Mavericks",
+      "time": "2026-04-09T02:00:00Z",
+      "pick": "Phoenix Suns -12.5 (Spread)",
+      "odds": 1.99,
+      "stake": 200.0,
+      "potential_return": 398.0,
       "confidence": 62,
-      "reasoning": "STEP 0 — LINE ANOMALY CHECK: CLE at 1.83 vs ATL 2.00 — home team favoured, records consistent (50-29 vs 45-34), no anomaly. STEP 1 — NetRtg L15: CLE +6.1 vs ATL +30.1. ATL L15 is dramatically higher (30.1 gap favours ATL), but this is flagged in skills as a potential hot-streak situation. ATL L10 7-3 but overall record 45-34 (.570 W%). CLE L15 +6.1 is solid. ATL L15 +30.1 is an extreme outlier — regression risk applies (hot streak fade rule). STEP 2 — Schedule: no B2B concern identified for either team. STEP 3 — FRANCHISE PLAYER INJURY: Donovan Mitchell is QUESTIONABLE (right ankle sprain) — this is CLE's franchise player. Apply confidence -10, stake -20%. Dean Wade also questionable (role player). ATL: Jock Landale OUT (role player per skills), RayJ Dennis/Keshon Gilbert questionable (G-League two-ways, minimal impact). STEP 4 — SEEDING CONTEXT: CLE fighting for seeding (50-29, playoff locked), Atlanta (45-34) also in seeding race — both motivated. STEP 5 — HOME COURT: CLE at home worth ~2-3 pts / ~0.10-0.15 odds edge. STEP 6 — HOT STREAK FADE ANALYSIS: ATL L10 7-3 but season W% .570. L15 NetRtg +30.1 is an extreme deviation from their season NetRtg of +2.6 — this implies massive regression risk. CLE at home with +6.1 L15 shows genuine recent form. CLE season NetRtg +4.2 vs ATL +2.6 — CLE superior on both season and meaningful metrics. STEP 7 — Mitchell GTD impact: base confidence 72 (CLE home, superior NetRtg, ATL regression-due, home court) → -10 for Mitchell QTD = 62. Mitchell questionable means ~50% chance he plays; if OUT CLE ceiling drops but depth remains. EV = (0.62 × 1.83) - 1 = 1.1346 - 1 = 0.1346. EV = 0.135 → marginal/approaching strong edge. Above 0.05 threshold, proceed. STAKE: Confidence 62 = Medium tier (15-20% of bankroll). With Mitchell GTD penalty -20% on stake: base stake ~€268 (20%) × 0.80 = ~€201. ANCHOR: Darius Garland, Jarrett Allen (if Mitchell out, they carry load).",
+      "reasoning": "LATE SCOUT PICK — NEW EDGE SINCE 14:00. STEP 0 — LINE ANOMALY CHECK: PHX ML 1.16 (outside range), DAL ML 6.39 (outside range). PHX spread -12.5 at 1.99 is within valid spread range (1.75-2.30). No anomaly on spread line. STEP 1 — INJURY TRIGGER: Since Scout, official injury report confirms DAL missing: Kyrie Irving OUT (Left Knee Surgery — franchise player), Dereck Lively II OUT (Right Foot Surgery — key big), plus Klay Thompson Doubtful (Rest), Caleb Martin Doubtful (Strain), Naji Marshall Doubtful (Hip), Daniel Gafford Doubtful (Impingement). DAL is operating with a skeleton crew — essentially no reliable rotation. STEP 2 — NETRTG ANALYSIS: PHX L15 +8.6 vs DAL L15 -29.3 — gap of 37.9 points. Season NetRtg: PHX +1.4 vs DAL -5.6. PHX trending upward; DAL in a steep decline with a depleted roster. STEP 3 — FORM: PHX L10 4-6 is a cold stretch concern (Scout previously flagged this), but the absence of virtually all DAL key players overrides form concerns for spread purposes. DAL L10 2-8. STEP 4 — PHX KEY PLAYERS: Kevin Durant and Devin Booker NOT on injury report (active). Grayson Allen Questionable (Contusion — role player, not franchise, standard -5% stake adjustment not required). Mark Williams OUT and Highsmith OUT (Management — not key to PHX spread). PHX core intact. STEP 5 — SPREAD EVALUATION: PHX -12.5 at home. With DAL missing Kyrie (their best player) and multiple other key contributors Doubtful/Out, a 12.5-pt home win is achievable for PHX. PHX season NetRtg advantage (+1.4 vs -5.6 = 7.0 pts season), L15 gap (+37.9 pts), and home court (~3 pts) support the spread. STEP 6 — CONFIDENCE: Base 65 (strong matchup edge with depleted DAL), -3 for PHX L10 cold form concern = 62. EV = (0.62 × 1.99) - 1 = 1.2338 - 1 = 0.234. STEP 7 — ODDS VALIDATION: 1.99 within spread range (1.75-2.30). EV 0.234 >> 0.05 threshold. STEP 8 — STAKING: Confidence 62 = Medium tier (15-20%). 15% of €1,339 = €200.85, rounded to €200. Total exposure: 14.9% of bankroll — well within 70% limit. Late scout quantity gate: this is pick 1 of max 1 allowed.",
       "anchor_players": [
-        "Donovan Mitchell (GTD)",
-        "Darius Garland",
-        "Jarrett Allen"
+        "Devin Booker",
+        "Kevin Durant",
+        "Kyrie Irving (OUT — DAL)"
       ],
-      "drafted_at": "2026-04-08T15:16:42Z",
-      "market_type": "ml"
+      "result": null,
+      "returned": null,
+      "pnl": null,
+      "settled_at": null,
+      "committed_at": "2026-04-08T22:31:34Z"
     }
   ],
-  "pending_bets": [],
   "settled_bets": [
     {
       "id": "nba_bet_20260406_001",
@@ -172,70 +175,69 @@
       "decision": "no_edge"
     }
   ],
-  "late_scout_rejections": [],
+  "late_scout_rejections": [
+    {
+      "match": "Detroit Pistons vs Milwaukee Bucks",
+      "reason": "DET ML 1.04 and MIL ML 16.5 both outside valid ML range (1.65-2.50). Spread -20.5 is outside reliable ATS territory (extreme line). Cade Cunningham listed Questionable with pneumothorax — a serious health concern that creates uncertainty in DET's anchor player. Giannis OUT confirmed but does not create a playable line within valid odds ranges. No valid pick."
+    },
+    {
+      "match": "Orlando Magic vs Minnesota Timberwolves",
+      "reason": "Major development: Anthony Edwards, Rudy Gobert, Mike Conley, Ayo Dosunmu, and Julius Randle all OUT for Minnesota. ORL ML 1.23 is outside valid range (floor 1.65). MIN ML 4.80 exceeds ceiling 2.50. ORL spread -11.5 at 1.93 is technically in range but ORL L15 NetRtg -16.7 is alarming — confidence in ORL covering -11.5 cannot reach 60+ despite MIN's mass absences. ORL season NetRtg +0.2 near breakeven, making a large spread unreliable. No valid pick."
+    },
+    {
+      "match": "Memphis Grizzlies @ Denver Nuggets",
+      "reason": "DEN ML 1.02 and MEM ML 26.0 both far outside valid ML range. Spread -23.5 is outside reliable ATS territory for a tanking opponent. MEM L15 -48.1 confirms active tank but ATS on 23.5-point lines is unpredictable and disqualified by skills rules. No valid pick."
+    },
+    {
+      "match": "San Antonio Spurs vs Portland Trail Blazers",
+      "reason": "Victor Wembanyama confirmed OUT (Left Rib Contusion) — SAS franchise player absent. SAS ML 1.67 is at the floor but with Wemby OUT the edge evaporates. Stephon Castle also OUT. POR ML 2.38 is in valid range and POR L15 +36.1 is hot, but both Jerami Grant and Damian Lillard are also OUT for Portland. With both teams missing franchise/anchor players, confidence cannot reach 60 for either side. POR ML assessed at confidence 55 (Speculative) — while EV passes, confidence gate (≥60 required for late picks) is not met. No valid pick."
+    },
+    {
+      "match": "Oklahoma City Thunder @ LA Clippers",
+      "reason": "OKC ML 1.40 outside valid range (floor 1.65). LAC ML 3.27 above ceiling 2.50. LAC spread +7.5 at 1.94 is in range but LAC advanced stats remain unavailable — Scout's disqualifying rule still applies: cannot bet spreads/totals without available advanced stats for both teams. Bradley Beal OUT, Isaiah Jackson OUT for LAC. No valid pick."
+    }
+  ],
   "commit_report_data": {
-    "date": "2026-04-07",
-    "ts": "2026-04-07T22:22:48.833378+00:00",
+    "date": "2026-04-08",
+    "ts": "2026-04-08T22:31:32.282551+00:00",
     "bets": [
       {
-        "id": "nba_bet_20260407_001",
-        "match": "Los Angeles Lakers vs Oklahoma City Thunder",
-        "time": "2026-04-08T02:30:00Z",
-        "pick": "Oklahoma City Thunder -18.5 (spread)",
-        "odds": 1.92,
-        "stake": 175.0,
-        "potential_return": 336.0,
-        "reasoning": "Late-breaking trigger: LeBron James confirmed OUT (Management) at commit time — was Questionable/GTD at Scout. Combined with Luka Doncic OUT, Austin Reaves OUT, Marcus Smart OUT, the Lakers are playing with a skeleton roster of reserves. OKC (62-16) has SGA healthy and a full squad minus Jalen Williams — still elite. OKC L15 NetRtg: +48.0 vs LAL L15: +3.8 — gap of +44.2. Line moved from +16.5 to +18.5 as LeBron OUT was confirmed; movement is fully explained by the injury news. OKC -18.5 at 1.92 represents genuine value against a decimated opponent. EV = (0.62 × 1.92) - 1 = 0.1904.",
+        "id": "nba_bet_20260408_001",
+        "match": "Phoenix Suns vs Dallas Mavericks",
+        "time": "2026-04-09T02:00:00Z",
+        "pick": "Phoenix Suns -12.5 (Spread)",
+        "odds": 1.99,
+        "stake": 200.0,
+        "potential_return": 398.0,
         "confidence": 62,
+        "reasoning": "LATE SCOUT PICK — NEW EDGE SINCE 14:00. STEP 0 — LINE ANOMALY CHECK: PHX ML 1.16 (outside range), DAL ML 6.39 (outside range). PHX spread -12.5 at 1.99 is within valid spread range (1.75-2.30). No anomaly on spread line. STEP 1 — INJURY TRIGGER: Since Scout, official injury report confirms DAL missing: Kyrie Irving OUT (Left Knee Surgery — franchise player), Dereck Lively II OUT (Right Foot Surgery — key big), plus Klay Thompson Doubtful (Rest), Caleb Martin Doubtful (Strain), Naji Marshall Doubtful (Hip), Daniel Gafford Doubtful (Impingement). DAL is operating with a skeleton crew — essentially no reliable rotation. STEP 2 — NETRTG ANALYSIS: PHX L15 +8.6 vs DAL L15 -29.3 — gap of 37.9 points. Season NetRtg: PHX +1.4 vs DAL -5.6. PHX trending upward; DAL in a steep decline with a depleted roster. STEP 3 — FORM: PHX L10 4-6 is a cold stretch concern (Scout previously flagged this), but the absence of virtually all DAL key players overrides form concerns for spread purposes. DAL L10 2-8. STEP 4 — PHX KEY PLAYERS: Kevin Durant and Devin Booker NOT on injury report (active). Grayson Allen Questionable (Contusion — role player, not franchise, standard -5% stake adjustment not required). Mark Williams OUT and Highsmith OUT (Management — not key to PHX spread). PHX core intact. STEP 5 — SPREAD EVALUATION: PHX -12.5 at home. With DAL missing Kyrie (their best player) and multiple other key contributors Doubtful/Out, a 12.5-pt home win is achievable for PHX. PHX season NetRtg advantage (+1.4 vs -5.6 = 7.0 pts season), L15 gap (+37.9 pts), and home court (~3 pts) support the spread. STEP 6 — CONFIDENCE: Base 65 (strong matchup edge with depleted DAL), -3 for PHX L10 cold form concern = 62. EV = (0.62 × 1.99) - 1 = 1.2338 - 1 = 0.234. STEP 7 — ODDS VALIDATION: 1.99 within spread range (1.75-2.30). EV 0.234 >> 0.05 threshold. STEP 8 — STAKING: Confidence 62 = Medium tier (15-20%). 15% of €1,339 = €200.85, rounded to €200. Total exposure: 14.9% of bankroll — well within 70% limit. Late scout quantity gate: this is pick 1 of max 1 allowed.",
         "anchor_players": [
-          "LeBron James (LAL) — OUT confirmed",
-          "Luka Doncic (LAL) — OUT confirmed",
-          "Shai Gilgeous-Alexander (OKC) — active"
+          "Devin Booker",
+          "Kevin Durant",
+          "Kyrie Irving (OUT — DAL)"
         ],
         "result": null,
         "returned": null,
         "pnl": null,
         "settled_at": null,
-        "committed_at": "2026-04-07T22:22:50Z"
+        "committed_at": "2026-04-08T22:31:34Z"
       }
     ],
-    "cancelled": [],
-    "late_rejections": [
+    "cancelled": [
       {
-        "match": "Orlando Magic vs Detroit Pistons",
-        "reason": "Both teams heavily depleted. DET now missing Cunningham (franchise player OUT — Pneumothorax), Tobias Harris OUT (hip management), Caris LeVert OUT (management). ORL missing Franz Wagner OUT (injury management), Jett Howard OUT, Jonathan Isaac OUT. ORL L15 -25.7 disqualifies ML pick; DET ML at 1.80 too low (not enough confidence to back without Cunningham/Harris/LeVert). EV insufficient for any viable pick — confidence for ORL ML max ~48% yields EV = (0.48 × 2.04) - 1 = -0.02, below threshold."
-      },
-      {
-        "match": "Cleveland Cavaliers vs Memphis Grizzlies",
-        "reason": "CLE now missing Donovan Mitchell OUT (right ankle sprain — franchise player), James Harden OUT (personal reasons), Max Strus OUT, Dean Wade OUT, Thomas Bryant OUT. CLE L15 already -0.5 with full roster, now severely depleted. MEM L15 -48.5 (historically worst on slate), 25-53 record, L10 1-9. MEM +13.0 spread: even with CLE depleted (but Garland + Mobley still active), MEM's catastrophic recent form makes covering 13 points unreliable. Confidence max ~50% for MEM spread = EV = (0.50 × 1.91) - 1 = -0.045, negative EV. CLE ML at 1.12 outside valid range. No viable pick."
-      },
-      {
-        "match": "Miami Heat vs Toronto Raptors",
-        "reason": "Game not on Scout's primary slate. No advanced stats (OffRtg/DefRtg/NetRtg/Pace) provided for MIA or TOR in tonight's data feed. Insufficient data to assess edge with required confidence. TOR ML 1.98 / MIA ML 1.84 are within range but cannot calculate reliable EV without NetRtg data. Rejected — insufficient data."
-      },
-      {
-        "match": "Charlotte Hornets vs Boston Celtics",
-        "reason": "BOS ML 1.43 below ML floor (1.65). CHA ML 2.90 above ML ceiling (2.50). BOS spread -6.0 at 1.89 within range, but no advanced stats provided for BOS or CHA. Also late pick quota already used on SAS -8.5. Rejected — odds out of range for ML, insufficient data for spread, quota exhausted."
-      },
-      {
-        "match": "Dallas Mavericks vs Los Angeles Clippers",
-        "reason": "LAC ML 1.18 far below ML floor (1.65). DAL ML 4.90 far above ML ceiling (2.50). No viable ML pick. Spread LAC -11.5 at 1.94 is within range but no advanced stats provided and late pick quota used. Rejected — ML odds out of valid range."
-      },
-      {
-        "match": "Oklahoma City Thunder vs Los Angeles Lakers",
-        "reason": "OKC ML 1.08 far below ML floor (1.65). LAL ML 8.00 far above ML ceiling (2.50). Extreme favourite scenario — no viable pick. Rejected — odds out of valid range."
-      },
-      {
-        "match": "Houston Rockets vs Phoenix Suns",
-        "reason": "PHX ML 2.02 and HOU ML 1.82 both within ML range. PHX L15 +16.6 vs HOU L15 +39.9 is an interesting signal, but no advanced stats (season NetRtg/OffRtg/DefRtg) provided for these teams in tonight's data feed. Cannot calculate reliable EV without full data. Additionally, late pick quota already used on SAS -8.5. Rejected — insufficient data and quota exhausted."
+        "id": "nba_draft_20260408_001",
+        "match": "Cleveland Cavaliers vs Atlanta Hawks",
+        "pick": "Cleveland Cavaliers ML",
+        "reason": "Odds moved adversely from 1.83 to 1.67 (-0.16), triggering line movement re-evaluation with confidence -10. Combined with Scout's existing -10 adjustment for Mitchell GTD, adjusted confidence drops from 62 to 52. EV recalculated at commit odds: (0.52 × 1.67) - 1 = -0.132. EV is -0.132, well below the 0.05 threshold. Cancelling per cancel_criteria: EV recalculated at current odds falls below 0.05."
       }
     ],
-    "total_staked": 175.0,
-    "bankroll_before": 1178.0,
-    "report": "",
-    "tokens_in": 8163,
-    "tokens_out": 8000,
-    "cost_usd": 0.144489
+    "late_rejections": [],
+    "total_staked": 200.0,
+    "bankroll_before": 1339.0,
+    "report": "## COMMIT REPORT — 2026-04-08T22:31:34Z\n**Bankroll:** €1,339.00 | **Total Committed Stake:** €200.00 (14.9%) | **Remaining Bankroll:** €1,139.00\n\n---\n\n### CANCELLED — Cleveland Cavaliers ML\n\n- **Odds at cancel:** 1.67 (was 1.83 at Scout time — moved -0.16 against)\n- **Reason:** Adverse line movement of -0.16 triggers mandatory re-evaluation with confidence -10 per line_movement_rules. Scout had already applied -10 for Donovan Mitchell GTD, bringing confidence to 62. Additional -10 for line movement → adjusted confidence 52. EV recalculated at commit odds: (0.52 × 1.67) - 1 = **-0.132**. EV is deeply negative — far below the 0.05 minimum threshold. Cancelling per cancel_criteria. Note: Mitchell remains Questionable (no change), so no injury-specific trigger, but the combination of adverse movement and Mitchell uncertainty makes the pick non-viable at current odds.\n\n---\n\n### CONFIRMED (LATE SCOUT) — Phoenix Suns -12.5\n\n- **Match:** Phoenix Suns vs Dallas Mavericks | **Tip:** 2026-04-09T02:00Z\n- **Pick:** Phoenix Suns -12.5 (Spread) | **Scout odds:** N/A (new late pick) | **Commit odds:** 1.99 | **Move:** N/A\n- **ML:** PHX 1.16 / DAL 6.39 | **ATS:** PHX -12.5 (1.99/1.93) | **O/U:** 233.5 (O:1.97/U:1.95)\n- **Stake:** €200.00 | **Pot:** €398.00 | **Conf:** 62/100 | **EV:** 0.234\n- **Decision:** Late scout trigger activated by confirmed mass absences for Dallas: Kyrie Irving OUT (Left Knee Surgery — franchise player), Dereck Lively II OUT (Right Foot Surgery), plus Klay Thompson/Caleb Martin/Naji Marshall/Daniel Gafford all Doubtful. Dallas is operating with a skeleton rotation. Phoenix has Kevin Durant and Devin Booker active (not on injury report). PHX L15 NetRtg +8.6 vs DAL L15 -29.3 (gap: 37.9 pts). Season NetRtg: PHX +1.4 vs DAL -5.6. Home court advantage adds ~3 pts. PHX's L10 4-6 cold form is a minor concern (confidence reduced by 3), but the matchup edge with a decimated opponent is compelling. Odds 1.99 valid (within 1.75-2.30 spread range). EV 0.234 well above 0.05 threshold. All late-scout gates cleared: time (3h29m), confidence (62≥60), EV (0.234≥0.05), odds (valid), quantity (1 of 1 allowed).\n\n---\n\n### SLATE SUMMARY\n\nTonight's slate offered limited confirmed edges at commit time. The primary draft pick on Cleveland ML was cancelled due to a significant adverse line move (-0.16) that, combined with Mitchell's GTD status, drove EV into negative territory (-0.132). The late scout identified a genuine new edge in Phoenix -12.5 against a severely depleted Dallas team missing Kyrie Irving (OUT), Lively (OUT), and four more players listed as Doubtful — a roster effectively incapable of competitive resistance. With PHX's core (Durant, Booker) intact and a 37.9-point L15 NetRtg gap supporting the spread, the €200 stake at 1.99 represents a clean 23.4% EV edge. Total exposure is a conservative 14.9% of bankroll.",
+    "tokens_in": 7712,
+    "tokens_out": 7249,
+    "cost_usd": 0.131871
   },
   "netrtg_l15": {
     "Charlotte Hornets": 35.2,
