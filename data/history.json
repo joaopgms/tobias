@@ -23,9 +23,9 @@
           "game": 2,
           "started_at": "2026-04-05T10:44:07.102344+00:00",
           "bankroll_start": 1000.0,
-          "wins": 2,
+          "wins": 3,
           "losses": 1,
-          "peak_bankroll": 1178.0,
+          "peak_bankroll": 1339.0,
           "total_bets": 4
         }
       ]
@@ -868,10 +868,10 @@
             "Luka Doncic (LAL) — OUT confirmed",
             "Shai Gilgeous-Alexander (OKC) — active"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "WON",
+          "returned": 336.0,
+          "pnl": 161.0,
+          "settled_at": "2026-04-08T10:58:17.841029+00:00",
           "committed_at": "2026-04-07T22:22:50Z"
         }
       ],
