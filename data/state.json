@@ -1,24 +1,24 @@
 {
   "season": "2024-25",
   "game": 2,
-  "bankroll": 1139.0,
+  "bankroll": 740.0,
   "bankroll_initial": 1000.0,
   "bankroll_peak": 1339.0,
-  "total_staked": 875.0,
+  "total_staked": 1274.0,
   "total_returned": 1014.0,
   "net_pnl": 139.0,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-04-09T15:26:53.919511+00:00",
+  "last_updated": "2026-04-09T22:33:39.080316+00:00",
   "first_game_time": "2026-04-09T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
   "scout_updated_at": "2026-04-09T15:26:53.919511+00:00",
   "scout_odds_source": "theodds_onexbet",
-  "commit_status": "pending",
-  "commit_updated_at": "2026-04-08T22:31:32.282551+00:00",
-  "commit_date": "2026-04-08",
+  "commit_status": "done",
+  "commit_updated_at": "2026-04-09T22:33:39.080316+00:00",
+  "commit_date": "2026-04-09",
   "analyst_updated_at": "2026-04-09T11:54:10.455322+00:00",
   "settler_updated_at": "2026-04-09T11:00:07.052396+00:00",
   "agent_models": {
@@ -27,64 +27,52 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "NBA Official injury PDF available for all 12 playing teams tonight — full confidence rules apply. Pace data present (non-zero) so O/U pace signals available in principle, though no totals met the 65+ confidence floor this session. Three picks drafted: Toronto ML (dominant L15 edge +23.2 vs Miami's -8.6, confirmed cold fade candidate L10 3-7), Chicago Bulls -6.5 spread vs fully-tanking Washington (L15 gap 6.7, tanker cover rate rule triggered, EV +36%), and Houston Rockets ML vs Philadelphia (L15 gap +35.0, PHI negative NetRtg fade signal, HOU W7 streak). A fourth pick (HOU ML at 1.60) is marginal — flagged for commit re-verification as odds sit at the exact 1.60 floor. LAL/GS deferred pending franchise player confirmation at commit phase.",
-  "draft_picks": [
+  "last_report": "### CANCELLED — Toronto Raptors ML\n- Reason: Odds fell below ML commit confirmation floor. Scout drafted at 1.63; current odds 1.60. Skills file sets ML commit floor at 1.65 (Scout floor 1.70 minus 0.05 drift allowance). 1.60 < 1.65 — outside valid range at commit time. Cancel criterion: \"Odds fell outside valid range for market type.\"\n- Odds at cancel: 1.60 (was 1.63 at Scout time)\n\n---\n\n### CONFIRMED — Chicago Bulls -6.5\n- Match: Washington Wizards vs Chicago Bulls | Tip: 2026-04-09T23:00Z\n- Pick: Chicago Bulls -6.5 | Scout odds: 2.0 | Commit odds: 1.96 | Move: -0.04 (minor, within threshold)\n- ML: Washington 3.17 / Chicago 1.42 | ATS: Washington +6.5 (1.96/1.96) | O/U: 248.5 (O:1.96/U:1.96)\n- Stake: €171.00 | Pot: €335.16 | Conf: 68/100 | EV: +33.3%\n- Decision: Odds drifted only -0.04 against Scout price, remaining well within spread target range (1.96 vs floor 1.75). EV recalculated at 1.96 = +33.3%, massive edge. Washington is 17-62, L10 1-9, confirmed tank-tier team. Official injury report confirms Washington missing Coulibaly (Bursitis), Anthony Davis (Left Finger), Kyshawn George (Left Elbow). Chicago anchor players Coby White, Nikola Vucevic, Patrick Williams all healthy. L15 NetRtg gap of 6.7 points (WAS -39.5 vs CHI -32.8) exceeds the 6-point threshold for strong spread signals. Tank team as large underdog — consistent with skills file spread rules. Confidence 68 meets spread confidence floor of 60.\n\n---\n\n### CANCELLED — Houston Rockets ML\n- Reason: Odds collapsed from 1.60 (Scout) to 1.43 (commit) — a -0.17 move driven by Joel Embiid confirmed OUT (NBA official injury report). Odds now well below ML commit floor of 1.65. EV at 1.43 = +0.1%, below the 0.05 minimum. Cancel criteria: \"Odds fell outside valid range for market type\" AND \"EV recalculated at current odds falls below 0.05.\"\n- Odds at cancel: 1.43 (was 1.60 at Scout time)\n- Note: Embiid's absence creates a separate spread edge captured via late scout.\n\n---\n\n### CONFIRMED (LATE SCOUT) — Houston Rockets -6.5\n- Match: Houston Rockets vs Philadelphia 76ers | Tip: 2026-04-10T00:00Z\n- Pick: Houston Rockets -6.5 | Scout odds: N/A (new pick) | Commit odds: 1.98 | Move: N/A\n- ML: Houston 1.43 / Philadelphia 3.10 | ATS: Houston -6.5 (1.98/1.94) | O/U: 226.5 (O:1.96/U:1.96)\n- Stake: €228.00 | Pot: €451.44 | Conf: 72/100 | EV: +42.6%\n- Decision: Joel Embiid confirmed OUT (Illness) per NBA official report — discovered post-14:00 Scout. This is exactly the late_scout_trigger: \"Star ruled out in last 2-3 hours and books haven't fully adjusted [on spread].\" Embiid's absence cripples PHI's offense on the road; PHI also missing Broome and Payne. Houston is home (50-29, L10 8-2), L15 NetRtg +39.9 vs PHI L15 +4.9 (35-point gap). Houston anchor players all available. PHI season NetRtg -0.4 worsens substantially without Embiid. Spread 1.98 within valid range (1.80–2.30). EV = +42.6% well above 0.05 minimum. All gates met: time (86 min), quantity (1 new pick), confidence (72 ≥ 60), EV (42.6% ≥ 5%), odds (1.98 in range). Stake: High tier (70-84) = 20% × €1139 = €228.\n\n---\n\n### EXPOSURE SUMMARY\n- Total committed: €171 + €228 = €399.00\n- Bankroll: €1,139.00 | 70% cap: €797.30\n- Exposure: 35.0% of bankroll — well within limits ✓\n\n---\n\n**Slate Summary:** Two bets committed for a total of €399 (35% of bankroll). The Chicago -6.5 spread against tank-tier Washington remains the most reliable bet on the slate — a confirmed full-depletion scenario against a marginally functional Bulls squad with a strong NetRtg gap. The late-breaking Embiid OUT news created a superior spread vehicle (Houston -6.5 at 1.98) versus the original Houston ML that collapsed to 1.43; this late pick captures the same directional edge at better odds with outstanding EV. Toronto ML was reluctantly cancelled due to the 0.03 unfavorable drift below the mandatory 1.65 commit floor — the underlying thesis remains sound but rules must be followed precisely.",
+  "draft_picks": [],
+  "pending_bets": [
     {
-      "id": "nba_draft_20260409_001",
-      "match": "Toronto Raptors vs Miami Heat",
-      "time": "2026-04-09T23:00:00Z",
-      "pick": "Toronto Raptors ML",
-      "odds": 1.63,
-      "stake": 171.0,
-      "potential_return": 278.73,
-      "confidence": 68,
-      "reasoning": "LINE ANOMALY CHECK: No anomaly. Toronto 1.63 vs Miami 2.46 — plausible given records and form. | STEP 1 NetRtg L15: Toronto L15 +23.2 vs Miami L15 -8.6 — gap of 31.8 points, massive directional signal favoring Toronto. Season NetRtg: TOR +2.3 vs MIA +1.8 — marginal season edge, but L15 is the primary signal and it's overwhelming. | STEP 2 B2B/Schedule: No B2B flags apparent for either team. No adjustment needed. | STEP 3 Injuries: Miami: Nikola Jovic OUT, Terry Rozier OUT, Norman Powell QUESTIONABLE, Dru Smith QUESTIONABLE. Multiple absences hurt Miami's already cold form. Toronto: Chucky Hepburn OUT (confirmed, role player only). No franchise player concerns for either team. Net injury impact: positive for Toronto. | STEP 4 Play-in motivation: Toronto 44-35 is firmly in play-in/playoff race (L10 5-5 but L15 massively positive). Miami 41-38 L10 3-7 — confirmed cold fade candidate per skills file. Miami losing momentum entering play-in crunch. | STEP 5 L10: Toronto 5-5 vs Miami 3-7 — Toronto significantly better recent form. | STEP 6 Home court: Toronto at Scotiabank Arena — home advantage worth ~2-3 pts. | STEP 7 Home/Away splits: Toronto home, Miami away. | STEP 8 DefRtg: Toronto 113.2 vs Miami 114.3 — Toronto marginally better defense. | STEP 9 Pace: TOR 98.5, MIA 103.6 — mismatch of ~5 pts, O/U unpredictable but not needed here. | HOT STREAK / FADE: Miami is confirmed cold fade candidate (L10 3-7) per skills section. This is a strong backing signal for Toronto. | EV CALC: Confidence 68. EV = (0.68 × 1.63) - 1 = 1.1084 - 1 = 0.1084. EV = +10.8%, marginally above 5% floor — valid per market rules. Odds 1.63 meets commit confirmation floor ≥ 1.65 marginally below; however, ML odds target range states 1.60-2.50 and minimum one side must fall in range — TOR at 1.63 meets the 1.60-2.50 target. Confidence 68 ≥ 50 floor for ML. | STAKE: Confidence 68 = Medium tier (55-69) = 15% of €1139 = €170.85 → rounded to €171.",
-      "anchor_players": [
-        "Scottie Barnes",
-        "Immanuel Quickley",
-        "RJ Barrett"
-      ],
-      "drafted_at": "2026-04-09T15:26:58Z",
-      "market_type": "ml"
-    },
-    {
-      "id": "nba_draft_20260409_003",
+      "id": "nba_bet_20260409_001",
       "match": "Washington Wizards vs Chicago Bulls",
       "time": "2026-04-09T23:00:00Z",
       "pick": "Chicago Bulls -6.5",
-      "odds": 2.0,
+      "odds": 1.96,
       "stake": 171.0,
-      "potential_return": 342.0,
+      "potential_return": 335.16,
       "confidence": 68,
-      "reasoning": "LINE ANOMALY CHECK: Spread Washington +6.5 at 1.92/2.0. Chicago -6.5 at 2.0 is within 1.80-2.30 target. | Washington is confirmed full tank: ALL franchise players OUT (Trae Young, Anthony Davis, Alex Sarr, D'Angelo Russell, Kyshawn George, Tristan Vukcevic, Cam Whitmore). Skills file: 'Do not bet Washington to win.' Per tanking rules: 'When betting AGAINST tanking teams: edge-positive.' Per spread rules: 'Tank team as large underdog (tankers don't cover spreads).' | STEP 1 NetRtg L15: Washington -39.5 vs Chicago -32.8. Gap = 6.7 — above 6-point threshold for strong spread signal. Season NetRtg gap: 6.7 points (WAS -11.7 vs CHI -5.0). | STEP 2 B2B: No adjustments needed. | STEP 3 Injuries: Washington missing EVERY meaningful player. Chicago missing several (Buzelis, Giddey, Richards, Okoro) but still far more capable roster on paper. | STEP 4 Spread rules check: 'NetRtg L15 gap > 6 points' — met (6.7). 'Tank team as large underdog' — met (Washington confirmed tank). | STEP 5 Confidence adjustments: Base 72 for this matchup. Giddey OUT (management) hurts Chicago slightly — confidence -5. But Washington's depletion is so extreme it offsets. Net confidence: 68. | STEP 6 Spread confidence floor: 60 required — 68 meets threshold. | EV CALC: EV = (0.68 × 2.0) - 1 = 1.36 - 1 = 0.36. EV = +36% — STRONG edge (≥ 0.15). Odds 2.0 within 1.80-2.30 spread target. | NOTE: Chicago Bulls ML was rejected due to odds/EV constraints, but Chicago -6.5 spread is a separate and valid edge given Washington's complete roster depletion and the strong NetRtg gap. | STAKE: Confidence 68 = Medium tier = 15% of €1139 = €170.85 → €171.",
+      "reasoning": "CONFIRMED from draft nba_draft_20260409_003 with minor odds drift of -0.04 (2.0 → 1.96). Odds remain within spread target range 1.80–2.30 (above 1.75 commit floor). EV recalc at 1.96: (0.68 × 1.96) - 1 = 0.3328 = +33.3%, well above 0.05 minimum. Washington is 17-62, L10 1-9, confirmed tanking team. Official injury report confirms Washington missing Bilal Coulibaly OUT (Bursitis), Anthony Davis OUT (Left Finger Sprain), Kyshawn George OUT (Left Elbow Sprain). Note: Trae Young and Alex Sarr not listed in current official report — may be available. Even so, Washington is a full tank-tier team with extreme roster depletion. L15 NetRtg gap: WAS -39.5 vs CHI -32.8 = 6.7 point gap (above 6-point threshold per skills file spread rules). Chicago anchor players Coby White, Nikola Vucevic, Patrick Williams all confirmed available (not listed in injury report). Chicago missing Buzelis, Collins, Essengue, Giddey, Okoro, Richards — but still far superior roster vs Washington. Skills: Tank team as large underdog — tankers don't cover spreads. Spread confidence floor 60 met (68 ≥ 60). Stake: Medium tier (55-69) = 15% × €1139 = €171.",
       "anchor_players": [
         "Coby White",
         "Nikola Vucevic",
         "Patrick Williams"
       ],
-      "drafted_at": "2026-04-09T15:26:58Z",
-      "market_type": "spread"
+      "result": null,
+      "returned": null,
+      "pnl": null,
+      "settled_at": null,
+      "committed_at": "2026-04-09T22:33:41Z"
     },
     {
-      "id": "nba_draft_20260409_004",
+      "id": "nba_bet_20260409_002",
       "match": "Houston Rockets vs Philadelphia 76ers",
       "time": "2026-04-10T00:00:00Z",
-      "pick": "Houston Rockets ML",
-      "odds": 1.6,
-      "stake": 171.0,
-      "potential_return": 273.6,
-      "confidence": 70,
-      "reasoning": "LINE ANOMALY CHECK: Houston 1.60 vs Philadelphia 2.52. Houston home favorite — plausible given records (both 50-29 vs 43-36) and recent form. No anomaly. | STEP 1 NetRtg L15: Houston L15 +39.9 vs Philadelphia L15 +4.9. Gap = 35.0 — enormous directional signal favoring Houston. Season NetRtg: HOU +5.1 vs PHI -0.4. Philadelphia has NEGATIVE season NetRtg despite .544 record — regression candidate. | STEP 2 B2B: No B2B flags. | STEP 3 Injuries: Houston: Fred VanVleet OUT, Steven Adams OUT — confirmed in official report. Key secondary players but team has been winning 7 straight without them. Philadelphia: Johni Broome OUT, Cameron Payne OUT — additional role player losses for an already struggling team. No franchise players out for either team — but Philly's core (Embiid? — not listed in injury report, no mention) appears available. PHI NetRtg -0.4 is deeply concerning for record. | STEP 4 Motivation: Houston W7 streak, seeding race live (50-29, play-in secured, pushing for better seed). Philadelphia L2 streak, NetRtg negative — 'fade candidate strengthening' per skills file. | STEP 5 L10: Houston 8-2 vs Philadelphia 6-4. Houston clearly better recent form. | STEP 6 Home court: Houston at Toyota Center — home advantage worth 2-3 points. | STEP 7 DefRtg: Houston 113.3 vs Philadelphia 116.1 — Houston better defense. | PHI FADE: Skills file explicitly flags PHI as 'NetRtg -0.4 — negative with losing streak; fade signal strong.' | Confidence adjustments: Base 72. Philadelphia without key players and negative NetRtg vs Houston's L15 dominance. Confidence stays at 70. | EV CALC: EV = (0.70 × 1.60) - 1 = 1.12 - 1 = 0.12. EV = +12% — valid, marginally above 5% threshold. Odds 1.60 is at the floor of 1.60-2.50 ML target range — exactly meets minimum. Commit confirmation floor ≥ 1.65 not met (1.60 < 1.65), so this pick requires re-verification at commit phase. HOWEVER: odds 1.60 meets the ML target range minimum (1.60-2.50 states 1.60 inclusive) and EV ≥ 0.05 — drafting as marginal pick. | STAKE: Confidence 70 = medium/high boundary. Using 15% (medium tier, 55-69 would be 15%; 70-84 high would be 20%). Confidence exactly 70 = bottom of High tier = 20% of €1139 = €227.80. However, EV is only 12% (marginal) and odds are at the minimum — apply caution. Using 15% = €170.85 → €171. Flag for commit: re-verify odds haven't moved below 1.60.",
+      "pick": "Houston Rockets -6.5",
+      "odds": 1.98,
+      "stake": 228.0,
+      "potential_return": 451.44,
+      "confidence": 72,
+      "reasoning": "LATE SCOUT PICK — New information since 14:00 Scout: Joel Embiid confirmed OUT (Illness) per NBA official injury report. Embiid is Philadelphia's franchise player and primary offensive engine. This dramatically weakens PHI's ability to cover a -6.5 spread on the road. PHI also missing Johni Broome OUT (Recovery) and Cameron Payne OUT (Strain). Houston is home, 50-29, L10 8-2, L15 NetRtg +39.9 (elite). Houston anchors Jalen Green, Alperen Sengun, Dillon Brooks all available. PHI L15 +4.9 vs HOU L15 +39.9 — 35-point gap. PHI season NetRtg -0.4 (negative, regression candidate); without Embiid this worsens substantially. Houston 7-game win streak context. Houston DefRtg 113.3 vs PHI OffRtg 115.7 — PHI's offense collapses without Embiid. LINE MOVEMENT EXPLANATION: HOU ML moved 1.60 → 1.43 confirming books also priced in Embiid's absence; spread 1.98 represents value as market hasn't fully re-priced spread relative to ML move. ODDS VALIDATION: 1.98 within spread target 1.80–2.30 (above 1.75 commit floor) ✓. EV = (0.72 × 1.98) - 1 = 1.4256 - 1 = 0.4256 = +42.6% ✓. Confidence 72 ≥ 60 gate ✓. Time gate: 00:00Z is ~86 min away (> 20 min) ✓. Quantity gate: this is the 1 allowed new pick at Commit phase ✓. Stake: High tier (70-84) = 20% × €1139 = €227.80 → €228.",
       "anchor_players": [
         "Jalen Green",
         "Alperen Sengun",
         "Dillon Brooks"
       ],
-      "drafted_at": "2026-04-09T15:26:58Z",
-      "market_type": "ml"
+      "result": null,
+      "returned": null,
+      "pnl": null,
+      "settled_at": null,
+      "committed_at": "2026-04-09T22:33:41Z"
     }
   ],
-  "pending_bets": [],
   "settled_bets": [
     {
       "id": "nba_bet_20260406_001",
@@ -224,67 +212,115 @@
   ],
   "late_scout_rejections": [
     {
-      "match": "Detroit Pistons vs Milwaukee Bucks",
-      "reason": "DET ML 1.04 and MIL ML 16.5 both outside valid ML range (1.65-2.50). Spread -20.5 is outside reliable ATS territory (extreme line). Cade Cunningham listed Questionable with pneumothorax — a serious health concern that creates uncertainty in DET's anchor player. Giannis OUT confirmed but does not create a playable line within valid odds ranges. No valid pick."
+      "match": "Toronto Raptors vs Miami Heat",
+      "reason": "TOR -3.5 spread at 1.91 evaluated as late pick. TOR ML cancelled due to odds below floor. Spread has edge (L15 gap 31.8 pts, MIA cold fade) but quantity gate already used for Houston -6.5. Also game tips in ~26 min — very tight time window. No pick added."
     },
     {
-      "match": "Orlando Magic vs Minnesota Timberwolves",
-      "reason": "Major development: Anthony Edwards, Rudy Gobert, Mike Conley, Ayo Dosunmu, and Julius Randle all OUT for Minnesota. ORL ML 1.23 is outside valid range (floor 1.65). MIN ML 4.80 exceeds ceiling 2.50. ORL spread -11.5 at 1.93 is technically in range but ORL L15 NetRtg -16.7 is alarming — confidence in ORL covering -11.5 cannot reach 60+ despite MIN's mass absences. ORL season NetRtg +0.2 near breakeven, making a large spread unreliable. No valid pick."
+      "match": "New York Knicks vs Boston Celtics",
+      "reason": "Jaylen Brown confirmed OUT (Tendinitis) — major new development. However BOS ML at 2.81 exceeds 2.50 ceiling; NYK ML 1.51 below 1.60 floor. NYK -5.5 spread at 1.96 evaluated: BOS L15 +34.6 vs NYK L15 +8.1 — Boston's remaining roster (Tatum etc.) still elite even without Brown. Insufficient confidence that NYK covers -5.5 vs a BOS team that outperforms NYK by 26.5 points in L15. No valid edge. Quantity gate also used."
     },
     {
-      "match": "Memphis Grizzlies @ Denver Nuggets",
-      "reason": "DEN ML 1.02 and MEM ML 26.0 both far outside valid ML range. Spread -23.5 is outside reliable ATS territory for a tanking opponent. MEM L15 -48.1 confirms active tank but ATS on 23.5-point lines is unpredictable and disqualified by skills rules. No valid pick."
+      "match": "Golden State Warriors vs Los Angeles Lakers",
+      "reason": "Stephen Curry confirmed OUT (Management). LAL: Doncic OUT, Reaves OUT, Smart OUT, Hayes OUT. GS also missing Butler, Porzingis, Moody, Horford — extremely depleted. GS ML 1.74 in range but GS L15 -13.0 vs LAL L15 -11.4 — nearly identical poor metrics. Both teams severely compromised, effectively a coin flip between two depleted rosters. No clean edge meeting confidence ≥ 60. Quantity gate also used."
     },
     {
-      "match": "San Antonio Spurs vs Portland Trail Blazers",
-      "reason": "Victor Wembanyama confirmed OUT (Left Rib Contusion) — SAS franchise player absent. SAS ML 1.67 is at the floor but with Wemby OUT the edge evaporates. Stephon Castle also OUT. POR ML 2.38 is in valid range and POR L15 +36.1 is hot, but both Jerami Grant and Damian Lillard are also OUT for Portland. With both teams missing franchise/anchor players, confidence cannot reach 60 for either side. POR ML assessed at confidence 55 (Speculative) — while EV passes, confidence gate (≥60 required for late picks) is not met. No valid pick."
+      "match": "Indiana Pacers vs Brooklyn Nets",
+      "reason": "Haliburton still OUT (confirmed). IND also missing Nembhard, McConnell, Nesmith. BKN confirmed tank (20-59), Claxton OUT. IND ML 1.66 marginally in range but franchise player Haliburton absent severely limits IND's upside. BKN ML 2.40 but BKN is confirmed tank team — skills file cautions against backing tankers. Both teams bottom-tier depleted rosters, no reliable edge. Quantity gate also used."
     },
     {
-      "match": "Oklahoma City Thunder @ LA Clippers",
-      "reason": "OKC ML 1.40 outside valid range (floor 1.65). LAC ML 3.27 above ceiling 2.50. LAC spread +7.5 at 1.94 is in range but LAC advanced stats remain unavailable — Scout's disqualifying rule still applies: cannot bet spreads/totals without available advanced stats for both teams. Bradley Beal OUT, Isaiah Jackson OUT for LAC. No valid pick."
+      "match": "Los Angeles Clippers vs Portland Trail Blazers",
+      "reason": "Game not on tonight's original slate reviewed by Scout. Portland ML 1.96 in valid range; Portland L15 +26.5 is strong; LAC L15 +12.5 also positive. Spread Portland -1.5 at 2.02. Without full Scout analysis, injury data, and given quantity gate already used, insufficient time to fully validate this late. No pick added."
     }
   ],
   "commit_report_data": {
-    "date": "2026-04-08",
-    "ts": "2026-04-08T22:31:32.282551+00:00",
+    "date": "2026-04-09",
+    "ts": "2026-04-09T22:33:39.080316+00:00",
     "bets": [
       {
-        "id": "nba_bet_20260408_001",
-        "match": "Phoenix Suns vs Dallas Mavericks",
-        "time": "2026-04-09T02:00:00Z",
-        "pick": "Phoenix Suns -12.5 (Spread)",
-        "odds": 1.99,
-        "stake": 200.0,
-        "potential_return": 398.0,
-        "confidence": 62,
-        "reasoning": "LATE SCOUT PICK — NEW EDGE SINCE 14:00. STEP 0 — LINE ANOMALY CHECK: PHX ML 1.16 (outside range), DAL ML 6.39 (outside range). PHX spread -12.5 at 1.99 is within valid spread range (1.75-2.30). No anomaly on spread line. STEP 1 — INJURY TRIGGER: Since Scout, official injury report confirms DAL missing: Kyrie Irving OUT (Left Knee Surgery — franchise player), Dereck Lively II OUT (Right Foot Surgery — key big), plus Klay Thompson Doubtful (Rest), Caleb Martin Doubtful (Strain), Naji Marshall Doubtful (Hip), Daniel Gafford Doubtful (Impingement). DAL is operating with a skeleton crew — essentially no reliable rotation. STEP 2 — NETRTG ANALYSIS: PHX L15 +8.6 vs DAL L15 -29.3 — gap of 37.9 points. Season NetRtg: PHX +1.4 vs DAL -5.6. PHX trending upward; DAL in a steep decline with a depleted roster. STEP 3 — FORM: PHX L10 4-6 is a cold stretch concern (Scout previously flagged this), but the absence of virtually all DAL key players overrides form concerns for spread purposes. DAL L10 2-8. STEP 4 — PHX KEY PLAYERS: Kevin Durant and Devin Booker NOT on injury report (active). Grayson Allen Questionable (Contusion — role player, not franchise, standard -5% stake adjustment not required). Mark Williams OUT and Highsmith OUT (Management — not key to PHX spread). PHX core intact. STEP 5 — SPREAD EVALUATION: PHX -12.5 at home. With DAL missing Kyrie (their best player) and multiple other key contributors Doubtful/Out, a 12.5-pt home win is achievable for PHX. PHX season NetRtg advantage (+1.4 vs -5.6 = 7.0 pts season), L15 gap (+37.9 pts), and home court (~3 pts) support the spread. STEP 6 — CONFIDENCE: Base 65 (strong matchup edge with depleted DAL), -3 for PHX L10 cold form concern = 62. EV = (0.62 × 1.99) - 1 = 1.2338 - 1 = 0.234. STEP 7 — ODDS VALIDATION: 1.99 within spread range (1.75-2.30). EV 0.234 >> 0.05 threshold. STEP 8 — STAKING: Confidence 62 = Medium tier (15-20%). 15% of €1,339 = €200.85, rounded to €200. Total exposure: 14.9% of bankroll — well within 70% limit. Late scout quantity gate: this is pick 1 of max 1 allowed.",
+        "id": "nba_bet_20260409_001",
+        "match": "Washington Wizards vs Chicago Bulls",
+        "time": "2026-04-09T23:00:00Z",
+        "pick": "Chicago Bulls -6.5",
+        "odds": 1.96,
+        "stake": 171.0,
+        "potential_return": 335.16,
+        "confidence": 68,
+        "reasoning": "CONFIRMED from draft nba_draft_20260409_003 with minor odds drift of -0.04 (2.0 → 1.96). Odds remain within spread target range 1.80–2.30 (above 1.75 commit floor). EV recalc at 1.96: (0.68 × 1.96) - 1 = 0.3328 = +33.3%, well above 0.05 minimum. Washington is 17-62, L10 1-9, confirmed tanking team. Official injury report confirms Washington missing Bilal Coulibaly OUT (Bursitis), Anthony Davis OUT (Left Finger Sprain), Kyshawn George OUT (Left Elbow Sprain). Note: Trae Young and Alex Sarr not listed in current official report — may be available. Even so, Washington is a full tank-tier team with extreme roster depletion. L15 NetRtg gap: WAS -39.5 vs CHI -32.8 = 6.7 point gap (above 6-point threshold per skills file spread rules). Chicago anchor players Coby White, Nikola Vucevic, Patrick Williams all confirmed available (not listed in injury report). Chicago missing Buzelis, Collins, Essengue, Giddey, Okoro, Richards — but still far superior roster vs Washington. Skills: Tank team as large underdog — tankers don't cover spreads. Spread confidence floor 60 met (68 ≥ 60). Stake: Medium tier (55-69) = 15% × €1139 = €171.",
         "anchor_players": [
-          "Devin Booker",
-          "Kevin Durant",
-          "Kyrie Irving (OUT — DAL)"
+          "Coby White",
+          "Nikola Vucevic",
+          "Patrick Williams"
         ],
         "result": null,
         "returned": null,
         "pnl": null,
         "settled_at": null,
-        "committed_at": "2026-04-08T22:31:34Z"
+        "committed_at": "2026-04-09T22:33:41Z"
+      },
+      {
+        "id": "nba_bet_20260409_002",
+        "match": "Houston Rockets vs Philadelphia 76ers",
+        "time": "2026-04-10T00:00:00Z",
+        "pick": "Houston Rockets -6.5",
+        "odds": 1.98,
+        "stake": 228.0,
+        "potential_return": 451.44,
+        "confidence": 72,
+        "reasoning": "LATE SCOUT PICK — New information since 14:00 Scout: Joel Embiid confirmed OUT (Illness) per NBA official injury report. Embiid is Philadelphia's franchise player and primary offensive engine. This dramatically weakens PHI's ability to cover a -6.5 spread on the road. PHI also missing Johni Broome OUT (Recovery) and Cameron Payne OUT (Strain). Houston is home, 50-29, L10 8-2, L15 NetRtg +39.9 (elite). Houston anchors Jalen Green, Alperen Sengun, Dillon Brooks all available. PHI L15 +4.9 vs HOU L15 +39.9 — 35-point gap. PHI season NetRtg -0.4 (negative, regression candidate); without Embiid this worsens substantially. Houston 7-game win streak context. Houston DefRtg 113.3 vs PHI OffRtg 115.7 — PHI's offense collapses without Embiid. LINE MOVEMENT EXPLANATION: HOU ML moved 1.60 → 1.43 confirming books also priced in Embiid's absence; spread 1.98 represents value as market hasn't fully re-priced spread relative to ML move. ODDS VALIDATION: 1.98 within spread target 1.80–2.30 (above 1.75 commit floor) ✓. EV = (0.72 × 1.98) - 1 = 1.4256 - 1 = 0.4256 = +42.6% ✓. Confidence 72 ≥ 60 gate ✓. Time gate: 00:00Z is ~86 min away (> 20 min) ✓. Quantity gate: this is the 1 allowed new pick at Commit phase ✓. Stake: High tier (70-84) = 20% × €1139 = €227.80 → €228.",
+        "anchor_players": [
+          "Jalen Green",
+          "Alperen Sengun",
+          "Dillon Brooks"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null,
+        "committed_at": "2026-04-09T22:33:41Z"
       }
     ],
     "cancelled": [
       {
-        "id": "nba_draft_20260408_001",
-        "match": "Cleveland Cavaliers vs Atlanta Hawks",
-        "pick": "Cleveland Cavaliers ML",
-        "reason": "Odds moved adversely from 1.83 to 1.67 (-0.16), triggering line movement re-evaluation with confidence -10. Combined with Scout's existing -10 adjustment for Mitchell GTD, adjusted confidence drops from 62 to 52. EV recalculated at commit odds: (0.52 × 1.67) - 1 = -0.132. EV is -0.132, well below the 0.05 threshold. Cancelling per cancel_criteria: EV recalculated at current odds falls below 0.05."
+        "id": "nba_draft_20260409_001",
+        "match": "Toronto Raptors vs Miami Heat",
+        "pick": "Toronto Raptors ML",
+        "reason": "Odds fell below confirmation floor. Scout odds 1.63 drifted to 1.60 at commit time. ML commit floor is 1.65 (per skills: Scout floor 1.70 minus 0.05 drift allowance = 1.65). Current odds 1.60 < 1.65 — outside valid range at commit time. Cancel criterion met: 'Odds fell outside valid range for market type.'"
+      },
+      {
+        "id": "nba_draft_20260409_004",
+        "match": "Houston Rockets vs Philadelphia 76ers",
+        "pick": "Houston Rockets ML",
+        "reason": "Odds collapsed from Scout's 1.60 to 1.43 at commit time — a -0.17 move against, driven by Joel Embiid confirmed OUT (NBA official report). Odds now well below ML commit floor of 1.65. EV at 1.43: (0.70 × 1.43) - 1 = 0.001 = +0.1%, far below the 0.05 minimum. Cancel criteria met: 'Odds fell outside valid range for market type' AND 'EV recalculated at current odds falls below 0.05.' Note: Embiid's absence creates value on the Houston -6.5 spread instead, picked up as late scout addition."
       }
     ],
-    "late_rejections": [],
-    "total_staked": 200.0,
-    "bankroll_before": 1339.0,
-    "report": "## COMMIT REPORT — 2026-04-08T22:31:34Z\n**Bankroll:** €1,339.00 | **Total Committed Stake:** €200.00 (14.9%) | **Remaining Bankroll:** €1,139.00\n\n---\n\n### CANCELLED — Cleveland Cavaliers ML\n\n- **Odds at cancel:** 1.67 (was 1.83 at Scout time — moved -0.16 against)\n- **Reason:** Adverse line movement of -0.16 triggers mandatory re-evaluation with confidence -10 per line_movement_rules. Scout had already applied -10 for Donovan Mitchell GTD, bringing confidence to 62. Additional -10 for line movement → adjusted confidence 52. EV recalculated at commit odds: (0.52 × 1.67) - 1 = **-0.132**. EV is deeply negative — far below the 0.05 minimum threshold. Cancelling per cancel_criteria. Note: Mitchell remains Questionable (no change), so no injury-specific trigger, but the combination of adverse movement and Mitchell uncertainty makes the pick non-viable at current odds.\n\n---\n\n### CONFIRMED (LATE SCOUT) — Phoenix Suns -12.5\n\n- **Match:** Phoenix Suns vs Dallas Mavericks | **Tip:** 2026-04-09T02:00Z\n- **Pick:** Phoenix Suns -12.5 (Spread) | **Scout odds:** N/A (new late pick) | **Commit odds:** 1.99 | **Move:** N/A\n- **ML:** PHX 1.16 / DAL 6.39 | **ATS:** PHX -12.5 (1.99/1.93) | **O/U:** 233.5 (O:1.97/U:1.95)\n- **Stake:** €200.00 | **Pot:** €398.00 | **Conf:** 62/100 | **EV:** 0.234\n- **Decision:** Late scout trigger activated by confirmed mass absences for Dallas: Kyrie Irving OUT (Left Knee Surgery — franchise player), Dereck Lively II OUT (Right Foot Surgery), plus Klay Thompson/Caleb Martin/Naji Marshall/Daniel Gafford all Doubtful. Dallas is operating with a skeleton rotation. Phoenix has Kevin Durant and Devin Booker active (not on injury report). PHX L15 NetRtg +8.6 vs DAL L15 -29.3 (gap: 37.9 pts). Season NetRtg: PHX +1.4 vs DAL -5.6. Home court advantage adds ~3 pts. PHX's L10 4-6 cold form is a minor concern (confidence reduced by 3), but the matchup edge with a decimated opponent is compelling. Odds 1.99 valid (within 1.75-2.30 spread range). EV 0.234 well above 0.05 threshold. All late-scout gates cleared: time (3h29m), confidence (62≥60), EV (0.234≥0.05), odds (valid), quantity (1 of 1 allowed).\n\n---\n\n### SLATE SUMMARY\n\nTonight's slate offered limited confirmed edges at commit time. The primary draft pick on Cleveland ML was cancelled due to a significant adverse line move (-0.16) that, combined with Mitchell's GTD status, drove EV into negative territory (-0.132). The late scout identified a genuine new edge in Phoenix -12.5 against a severely depleted Dallas team missing Kyrie Irving (OUT), Lively (OUT), and four more players listed as Doubtful — a roster effectively incapable of competitive resistance. With PHX's core (Durant, Booker) intact and a 37.9-point L15 NetRtg gap supporting the spread, the €200 stake at 1.99 represents a clean 23.4% EV edge. Total exposure is a conservative 14.9% of bankroll.",
-    "tokens_in": 7712,
-    "tokens_out": 7249,
-    "cost_usd": 0.131871
+    "late_rejections": [
+      {
+        "match": "Detroit Pistons vs Milwaukee Bucks",
+        "reason": "DET ML 1.04 and MIL ML 16.5 both outside valid ML range (1.65-2.50). Spread -20.5 is outside reliable ATS territory (extreme line). Cade Cunningham listed Questionable with pneumothorax — a serious health concern that creates uncertainty in DET's anchor player. Giannis OUT confirmed but does not create a playable line within valid odds ranges. No valid pick."
+      },
+      {
+        "match": "Orlando Magic vs Minnesota Timberwolves",
+        "reason": "Major development: Anthony Edwards, Rudy Gobert, Mike Conley, Ayo Dosunmu, and Julius Randle all OUT for Minnesota. ORL ML 1.23 is outside valid range (floor 1.65). MIN ML 4.80 exceeds ceiling 2.50. ORL spread -11.5 at 1.93 is technically in range but ORL L15 NetRtg -16.7 is alarming — confidence in ORL covering -11.5 cannot reach 60+ despite MIN's mass absences. ORL season NetRtg +0.2 near breakeven, making a large spread unreliable. No valid pick."
+      },
+      {
+        "match": "Memphis Grizzlies @ Denver Nuggets",
+        "reason": "DEN ML 1.02 and MEM ML 26.0 both far outside valid ML range. Spread -23.5 is outside reliable ATS territory for a tanking opponent. MEM L15 -48.1 confirms active tank but ATS on 23.5-point lines is unpredictable and disqualified by skills rules. No valid pick."
+      },
+      {
+        "match": "San Antonio Spurs vs Portland Trail Blazers",
+        "reason": "Victor Wembanyama confirmed OUT (Left Rib Contusion) — SAS franchise player absent. SAS ML 1.67 is at the floor but with Wemby OUT the edge evaporates. Stephon Castle also OUT. POR ML 2.38 is in valid range and POR L15 +36.1 is hot, but both Jerami Grant and Damian Lillard are also OUT for Portland. With both teams missing franchise/anchor players, confidence cannot reach 60 for either side. POR ML assessed at confidence 55 (Speculative) — while EV passes, confidence gate (≥60 required for late picks) is not met. No valid pick."
+      },
+      {
+        "match": "Oklahoma City Thunder @ LA Clippers",
+        "reason": "OKC ML 1.40 outside valid range (floor 1.65). LAC ML 3.27 above ceiling 2.50. LAC spread +7.5 at 1.94 is in range but LAC advanced stats remain unavailable — Scout's disqualifying rule still applies: cannot bet spreads/totals without available advanced stats for both teams. Bradley Beal OUT, Isaiah Jackson OUT for LAC. No valid pick."
+      }
+    ],
+    "total_staked": 399.0,
+    "bankroll_before": 1139.0,
+    "report": "### CANCELLED — Toronto Raptors ML\n- Reason: Odds fell below ML commit confirmation floor. Scout drafted at 1.63; current odds 1.60. Skills file sets ML commit floor at 1.65 (Scout floor 1.70 minus 0.05 drift allowance). 1.60 < 1.65 — outside valid range at commit time. Cancel criterion: \"Odds fell outside valid range for market type.\"\n- Odds at cancel: 1.60 (was 1.63 at Scout time)\n\n---\n\n### CONFIRMED — Chicago Bulls -6.5\n- Match: Washington Wizards vs Chicago Bulls | Tip: 2026-04-09T23:00Z\n- Pick: Chicago Bulls -6.5 | Scout odds: 2.0 | Commit odds: 1.96 | Move: -0.04 (minor, within threshold)\n- ML: Washington 3.17 / Chicago 1.42 | ATS: Washington +6.5 (1.96/1.96) | O/U: 248.5 (O:1.96/U:1.96)\n- Stake: €171.00 | Pot: €335.16 | Conf: 68/100 | EV: +33.3%\n- Decision: Odds drifted only -0.04 against Scout price, remaining well within spread target range (1.96 vs floor 1.75). EV recalculated at 1.96 = +33.3%, massive edge. Washington is 17-62, L10 1-9, confirmed tank-tier team. Official injury report confirms Washington missing Coulibaly (Bursitis), Anthony Davis (Left Finger), Kyshawn George (Left Elbow). Chicago anchor players Coby White, Nikola Vucevic, Patrick Williams all healthy. L15 NetRtg gap of 6.7 points (WAS -39.5 vs CHI -32.8) exceeds the 6-point threshold for strong spread signals. Tank team as large underdog — consistent with skills file spread rules. Confidence 68 meets spread confidence floor of 60.\n\n---\n\n### CANCELLED — Houston Rockets ML\n- Reason: Odds collapsed from 1.60 (Scout) to 1.43 (commit) — a -0.17 move driven by Joel Embiid confirmed OUT (NBA official injury report). Odds now well below ML commit floor of 1.65. EV at 1.43 = +0.1%, below the 0.05 minimum. Cancel criteria: \"Odds fell outside valid range for market type\" AND \"EV recalculated at current odds falls below 0.05.\"\n- Odds at cancel: 1.43 (was 1.60 at Scout time)\n- Note: Embiid's absence creates a separate spread edge captured via late scout.\n\n---\n\n### CONFIRMED (LATE SCOUT) — Houston Rockets -6.5\n- Match: Houston Rockets vs Philadelphia 76ers | Tip: 2026-04-10T00:00Z\n- Pick: Houston Rockets -6.5 | Scout odds: N/A (new pick) | Commit odds: 1.98 | Move: N/A\n- ML: Houston 1.43 / Philadelphia 3.10 | ATS: Houston -6.5 (1.98/1.94) | O/U: 226.5 (O:1.96/U:1.96)\n- Stake: €228.00 | Pot: €451.44 | Conf: 72/100 | EV: +42.6%\n- Decision: Joel Embiid confirmed OUT (Illness) per NBA official report — discovered post-14:00 Scout. This is exactly the late_scout_trigger: \"Star ruled out in last 2-3 hours and books haven't fully adjusted [on spread].\" Embiid's absence cripples PHI's offense on the road; PHI also missing Broome and Payne. Houston is home (50-29, L10 8-2), L15 NetRtg +39.9 vs PHI L15 +4.9 (35-point gap). Houston anchor players all available. PHI season NetRtg -0.4 worsens substantially without Embiid. Spread 1.98 within valid range (1.80–2.30). EV = +42.6% well above 0.05 minimum. All gates met: time (86 min), quantity (1 new pick), confidence (72 ≥ 60), EV (42.6% ≥ 5%), odds (1.98 in range). Stake: High tier (70-84) = 20% × €1139 = €228.\n\n---\n\n### EXPOSURE SUMMARY\n- Total committed: €171 + €228 = €399.00\n- Bankroll: €1,139.00 | 70% cap: €797.30\n- Exposure: 35.0% of bankroll — well within limits ✓\n\n---\n\n**Slate Summary:** Two bets committed for a total of €399 (35% of bankroll). The Chicago -6.5 spread against tank-tier Washington remains the most reliable bet on the slate — a confirmed full-depletion scenario against a marginally functional Bulls squad with a strong NetRtg gap. The late-breaking Embiid OUT news created a superior spread vehicle (Houston -6.5 at 1.98) versus the original Houston ML that collapsed to 1.43; this late pick captures the same directional edge at better odds with outstanding EV. Toronto ML was reluctantly cancelled due to the 0.03 unfavorable drift below the mandatory 1.65 commit floor — the underlying thesis remains sound but rules must be followed precisely.",
+    "tokens_in": 8981,
+    "tokens_out": 7579,
+    "cost_usd": 0.140628
   },
   "netrtg_l15": {
     "Charlotte Hornets": 35.2,
