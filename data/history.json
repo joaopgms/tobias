@@ -24,7 +24,7 @@
           "started_at": "2026-04-05T10:44:07.102344+00:00",
           "bankroll_start": 1000.0,
           "wins": 3,
-          "losses": 1,
+          "losses": 2,
           "peak_bankroll": 1339.0,
           "total_bets": 5
         }
@@ -910,10 +910,10 @@
             "Kevin Durant",
             "Kyrie Irving (OUT — DAL)"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -200.0,
+          "settled_at": "2026-04-09T11:00:07.052396+00:00",
           "committed_at": "2026-04-08T22:31:34Z"
         }
       ],
