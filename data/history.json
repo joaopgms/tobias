@@ -26,7 +26,7 @@
           "wins": 3,
           "losses": 2,
           "peak_bankroll": 1339.0,
-          "total_bets": 5
+          "total_bets": 7
         }
       ]
     }
@@ -918,6 +918,75 @@
         }
       ],
       "summary": "Day 2026-04-08 commit — 1 bets totalling €200.00. 1 cancelled. Bankroll: €1339.00 → €1139.00."
+    },
+    {
+      "entry_id": "nba_entry_20260409",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-04-09T22:33:39.080316+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1139.0,
+      "total_staked": 399.0,
+      "bankroll_after": 740.0,
+      "cancelled_picks": [
+        {
+          "id": "nba_draft_20260409_001",
+          "match": "Toronto Raptors vs Miami Heat",
+          "pick": "Toronto Raptors ML",
+          "reason": "Odds fell below confirmation floor. Scout odds 1.63 drifted to 1.60 at commit time. ML commit floor is 1.65 (per skills: Scout floor 1.70 minus 0.05 drift allowance = 1.65). Current odds 1.60 < 1.65 — outside valid range at commit time. Cancel criterion met: 'Odds fell outside valid range for market type.'"
+        },
+        {
+          "id": "nba_draft_20260409_004",
+          "match": "Houston Rockets vs Philadelphia 76ers",
+          "pick": "Houston Rockets ML",
+          "reason": "Odds collapsed from Scout's 1.60 to 1.43 at commit time — a -0.17 move against, driven by Joel Embiid confirmed OUT (NBA official report). Odds now well below ML commit floor of 1.65. EV at 1.43: (0.70 × 1.43) - 1 = 0.001 = +0.1%, far below the 0.05 minimum. Cancel criteria met: 'Odds fell outside valid range for market type' AND 'EV recalculated at current odds falls below 0.05.' Note: Embiid's absence creates value on the Houston -6.5 spread instead, picked up as late scout addition."
+        }
+      ],
+      "bets": [
+        {
+          "id": "nba_bet_20260409_001",
+          "match": "Washington Wizards vs Chicago Bulls",
+          "time": "2026-04-09T23:00:00Z",
+          "pick": "Chicago Bulls -6.5",
+          "odds": 1.96,
+          "stake": 171.0,
+          "potential_return": 335.16,
+          "confidence": 68,
+          "reasoning": "CONFIRMED from draft nba_draft_20260409_003 with minor odds drift of -0.04 (2.0 → 1.96). Odds remain within spread target range 1.80–2.30 (above 1.75 commit floor). EV recalc at 1.96: (0.68 × 1.96) - 1 = 0.3328 = +33.3%, well above 0.05 minimum. Washington is 17-62, L10 1-9, confirmed tanking team. Official injury report confirms Washington missing Bilal Coulibaly OUT (Bursitis), Anthony Davis OUT (Left Finger Sprain), Kyshawn George OUT (Left Elbow Sprain). Note: Trae Young and Alex Sarr not listed in current official report — may be available. Even so, Washington is a full tank-tier team with extreme roster depletion. L15 NetRtg gap: WAS -39.5 vs CHI -32.8 = 6.7 point gap (above 6-point threshold per skills file spread rules). Chicago anchor players Coby White, Nikola Vucevic, Patrick Williams all confirmed available (not listed in injury report). Chicago missing Buzelis, Collins, Essengue, Giddey, Okoro, Richards — but still far superior roster vs Washington. Skills: Tank team as large underdog — tankers don't cover spreads. Spread confidence floor 60 met (68 ≥ 60). Stake: Medium tier (55-69) = 15% × €1139 = €171.",
+          "anchor_players": [
+            "Coby White",
+            "Nikola Vucevic",
+            "Patrick Williams"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-04-09T22:33:41Z"
+        },
+        {
+          "id": "nba_bet_20260409_002",
+          "match": "Houston Rockets vs Philadelphia 76ers",
+          "time": "2026-04-10T00:00:00Z",
+          "pick": "Houston Rockets -6.5",
+          "odds": 1.98,
+          "stake": 228.0,
+          "potential_return": 451.44,
+          "confidence": 72,
+          "reasoning": "LATE SCOUT PICK — New information since 14:00 Scout: Joel Embiid confirmed OUT (Illness) per NBA official injury report. Embiid is Philadelphia's franchise player and primary offensive engine. This dramatically weakens PHI's ability to cover a -6.5 spread on the road. PHI also missing Johni Broome OUT (Recovery) and Cameron Payne OUT (Strain). Houston is home, 50-29, L10 8-2, L15 NetRtg +39.9 (elite). Houston anchors Jalen Green, Alperen Sengun, Dillon Brooks all available. PHI L15 +4.9 vs HOU L15 +39.9 — 35-point gap. PHI season NetRtg -0.4 (negative, regression candidate); without Embiid this worsens substantially. Houston 7-game win streak context. Houston DefRtg 113.3 vs PHI OffRtg 115.7 — PHI's offense collapses without Embiid. LINE MOVEMENT EXPLANATION: HOU ML moved 1.60 → 1.43 confirming books also priced in Embiid's absence; spread 1.98 represents value as market hasn't fully re-priced spread relative to ML move. ODDS VALIDATION: 1.98 within spread target 1.80–2.30 (above 1.75 commit floor) ✓. EV = (0.72 × 1.98) - 1 = 1.4256 - 1 = 0.4256 = +42.6% ✓. Confidence 72 ≥ 60 gate ✓. Time gate: 00:00Z is ~86 min away (> 20 min) ✓. Quantity gate: this is the 1 allowed new pick at Commit phase ✓. Stake: High tier (70-84) = 20% × €1139 = €227.80 → €228.",
+          "anchor_players": [
+            "Jalen Green",
+            "Alperen Sengun",
+            "Dillon Brooks"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-04-09T22:33:41Z"
+        }
+      ],
+      "summary": "Day 2026-04-09 commit — 2 bets totalling €399.00. 2 cancelled. Bankroll: €1139.00 → €740.00."
     }
   ]
 }
