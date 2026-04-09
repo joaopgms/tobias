@@ -6,10 +6,10 @@
   "bankroll_peak": 1339.0,
   "total_staked": 875.0,
   "total_returned": 1014.0,
-  "net_pnl": 339.0,
+  "net_pnl": 139.0,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-04-08T22:31:32.282551+00:00",
+  "last_updated": "2026-04-09T11:00:07.052396+00:00",
   "first_game_time": "2026-04-08T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
@@ -20,7 +20,7 @@
   "commit_updated_at": "2026-04-08T22:31:32.282551+00:00",
   "commit_date": "2026-04-08",
   "analyst_updated_at": "2026-04-08T11:53:45.985891+00:00",
-  "settler_updated_at": "2026-04-08T10:58:17.841029+00:00",
+  "settler_updated_at": "2026-04-09T11:00:07.052396+00:00",
   "agent_models": {
     "settler": "no-llm",
     "analyst": "claude-sonnet-4-6",
@@ -29,29 +29,7 @@
   },
   "last_report": "## COMMIT REPORT — 2026-04-08T22:31:34Z\n**Bankroll:** €1,339.00 | **Total Committed Stake:** €200.00 (14.9%) | **Remaining Bankroll:** €1,139.00\n\n---\n\n### CANCELLED — Cleveland Cavaliers ML\n\n- **Odds at cancel:** 1.67 (was 1.83 at Scout time — moved -0.16 against)\n- **Reason:** Adverse line movement of -0.16 triggers mandatory re-evaluation with confidence -10 per line_movement_rules. Scout had already applied -10 for Donovan Mitchell GTD, bringing confidence to 62. Additional -10 for line movement → adjusted confidence 52. EV recalculated at commit odds: (0.52 × 1.67) - 1 = **-0.132**. EV is deeply negative — far below the 0.05 minimum threshold. Cancelling per cancel_criteria. Note: Mitchell remains Questionable (no change), so no injury-specific trigger, but the combination of adverse movement and Mitchell uncertainty makes the pick non-viable at current odds.\n\n---\n\n### CONFIRMED (LATE SCOUT) — Phoenix Suns -12.5\n\n- **Match:** Phoenix Suns vs Dallas Mavericks | **Tip:** 2026-04-09T02:00Z\n- **Pick:** Phoenix Suns -12.5 (Spread) | **Scout odds:** N/A (new late pick) | **Commit odds:** 1.99 | **Move:** N/A\n- **ML:** PHX 1.16 / DAL 6.39 | **ATS:** PHX -12.5 (1.99/1.93) | **O/U:** 233.5 (O:1.97/U:1.95)\n- **Stake:** €200.00 | **Pot:** €398.00 | **Conf:** 62/100 | **EV:** 0.234\n- **Decision:** Late scout trigger activated by confirmed mass absences for Dallas: Kyrie Irving OUT (Left Knee Surgery — franchise player), Dereck Lively II OUT (Right Foot Surgery), plus Klay Thompson/Caleb Martin/Naji Marshall/Daniel Gafford all Doubtful. Dallas is operating with a skeleton rotation. Phoenix has Kevin Durant and Devin Booker active (not on injury report). PHX L15 NetRtg +8.6 vs DAL L15 -29.3 (gap: 37.9 pts). Season NetRtg: PHX +1.4 vs DAL -5.6. Home court advantage adds ~3 pts. PHX's L10 4-6 cold form is a minor concern (confidence reduced by 3), but the matchup edge with a decimated opponent is compelling. Odds 1.99 valid (within 1.75-2.30 spread range). EV 0.234 well above 0.05 threshold. All late-scout gates cleared: time (3h29m), confidence (62≥60), EV (0.234≥0.05), odds (valid), quantity (1 of 1 allowed).\n\n---\n\n### SLATE SUMMARY\n\nTonight's slate offered limited confirmed edges at commit time. The primary draft pick on Cleveland ML was cancelled due to a significant adverse line move (-0.16) that, combined with Mitchell's GTD status, drove EV into negative territory (-0.132). The late scout identified a genuine new edge in Phoenix -12.5 against a severely depleted Dallas team missing Kyrie Irving (OUT), Lively (OUT), and four more players listed as Doubtful — a roster effectively incapable of competitive resistance. With PHX's core (Durant, Booker) intact and a 37.9-point L15 NetRtg gap supporting the spread, the €200 stake at 1.99 represents a clean 23.4% EV edge. Total exposure is a conservative 14.9% of bankroll.",
   "draft_picks": [],
-  "pending_bets": [
-    {
-      "id": "nba_bet_20260408_001",
-      "match": "Phoenix Suns vs Dallas Mavericks",
-      "time": "2026-04-09T02:00:00Z",
-      "pick": "Phoenix Suns -12.5 (Spread)",
-      "odds": 1.99,
-      "stake": 200.0,
-      "potential_return": 398.0,
-      "confidence": 62,
-      "reasoning": "LATE SCOUT PICK — NEW EDGE SINCE 14:00. STEP 0 — LINE ANOMALY CHECK: PHX ML 1.16 (outside range), DAL ML 6.39 (outside range). PHX spread -12.5 at 1.99 is within valid spread range (1.75-2.30). No anomaly on spread line. STEP 1 — INJURY TRIGGER: Since Scout, official injury report confirms DAL missing: Kyrie Irving OUT (Left Knee Surgery — franchise player), Dereck Lively II OUT (Right Foot Surgery — key big), plus Klay Thompson Doubtful (Rest), Caleb Martin Doubtful (Strain), Naji Marshall Doubtful (Hip), Daniel Gafford Doubtful (Impingement). DAL is operating with a skeleton crew — essentially no reliable rotation. STEP 2 — NETRTG ANALYSIS: PHX L15 +8.6 vs DAL L15 -29.3 — gap of 37.9 points. Season NetRtg: PHX +1.4 vs DAL -5.6. PHX trending upward; DAL in a steep decline with a depleted roster. STEP 3 — FORM: PHX L10 4-6 is a cold stretch concern (Scout previously flagged this), but the absence of virtually all DAL key players overrides form concerns for spread purposes. DAL L10 2-8. STEP 4 — PHX KEY PLAYERS: Kevin Durant and Devin Booker NOT on injury report (active). Grayson Allen Questionable (Contusion — role player, not franchise, standard -5% stake adjustment not required). Mark Williams OUT and Highsmith OUT (Management — not key to PHX spread). PHX core intact. STEP 5 — SPREAD EVALUATION: PHX -12.5 at home. With DAL missing Kyrie (their best player) and multiple other key contributors Doubtful/Out, a 12.5-pt home win is achievable for PHX. PHX season NetRtg advantage (+1.4 vs -5.6 = 7.0 pts season), L15 gap (+37.9 pts), and home court (~3 pts) support the spread. STEP 6 — CONFIDENCE: Base 65 (strong matchup edge with depleted DAL), -3 for PHX L10 cold form concern = 62. EV = (0.62 × 1.99) - 1 = 1.2338 - 1 = 0.234. STEP 7 — ODDS VALIDATION: 1.99 within spread range (1.75-2.30). EV 0.234 >> 0.05 threshold. STEP 8 — STAKING: Confidence 62 = Medium tier (15-20%). 15% of €1,339 = €200.85, rounded to €200. Total exposure: 14.9% of bankroll — well within 70% limit. Late scout quantity gate: this is pick 1 of max 1 allowed.",
-      "anchor_players": [
-        "Devin Booker",
-        "Kevin Durant",
-        "Kyrie Irving (OUT — DAL)"
-      ],
-      "result": null,
-      "returned": null,
-      "pnl": null,
-      "settled_at": null,
-      "committed_at": "2026-04-08T22:31:34Z"
-    }
-  ],
+  "pending_bets": [],
   "settled_bets": [
     {
       "id": "nba_bet_20260406_001",
@@ -136,6 +114,27 @@
       "pnl": 161.0,
       "settled_at": "2026-04-08T10:58:17.841029+00:00",
       "committed_at": "2026-04-07T22:22:50Z"
+    },
+    {
+      "id": "nba_bet_20260408_001",
+      "match": "Phoenix Suns vs Dallas Mavericks",
+      "time": "2026-04-09T02:00:00Z",
+      "pick": "Phoenix Suns -12.5 (Spread)",
+      "odds": 1.99,
+      "stake": 200.0,
+      "potential_return": 398.0,
+      "confidence": 62,
+      "reasoning": "LATE SCOUT PICK — NEW EDGE SINCE 14:00. STEP 0 — LINE ANOMALY CHECK: PHX ML 1.16 (outside range), DAL ML 6.39 (outside range). PHX spread -12.5 at 1.99 is within valid spread range (1.75-2.30). No anomaly on spread line. STEP 1 — INJURY TRIGGER: Since Scout, official injury report confirms DAL missing: Kyrie Irving OUT (Left Knee Surgery — franchise player), Dereck Lively II OUT (Right Foot Surgery — key big), plus Klay Thompson Doubtful (Rest), Caleb Martin Doubtful (Strain), Naji Marshall Doubtful (Hip), Daniel Gafford Doubtful (Impingement). DAL is operating with a skeleton crew — essentially no reliable rotation. STEP 2 — NETRTG ANALYSIS: PHX L15 +8.6 vs DAL L15 -29.3 — gap of 37.9 points. Season NetRtg: PHX +1.4 vs DAL -5.6. PHX trending upward; DAL in a steep decline with a depleted roster. STEP 3 — FORM: PHX L10 4-6 is a cold stretch concern (Scout previously flagged this), but the absence of virtually all DAL key players overrides form concerns for spread purposes. DAL L10 2-8. STEP 4 — PHX KEY PLAYERS: Kevin Durant and Devin Booker NOT on injury report (active). Grayson Allen Questionable (Contusion — role player, not franchise, standard -5% stake adjustment not required). Mark Williams OUT and Highsmith OUT (Management — not key to PHX spread). PHX core intact. STEP 5 — SPREAD EVALUATION: PHX -12.5 at home. With DAL missing Kyrie (their best player) and multiple other key contributors Doubtful/Out, a 12.5-pt home win is achievable for PHX. PHX season NetRtg advantage (+1.4 vs -5.6 = 7.0 pts season), L15 gap (+37.9 pts), and home court (~3 pts) support the spread. STEP 6 — CONFIDENCE: Base 65 (strong matchup edge with depleted DAL), -3 for PHX L10 cold form concern = 62. EV = (0.62 × 1.99) - 1 = 1.2338 - 1 = 0.234. STEP 7 — ODDS VALIDATION: 1.99 within spread range (1.75-2.30). EV 0.234 >> 0.05 threshold. STEP 8 — STAKING: Confidence 62 = Medium tier (15-20%). 15% of €1,339 = €200.85, rounded to €200. Total exposure: 14.9% of bankroll — well within 70% limit. Late scout quantity gate: this is pick 1 of max 1 allowed.",
+      "anchor_players": [
+        "Devin Booker",
+        "Kevin Durant",
+        "Kyrie Irving (OUT — DAL)"
+      ],
+      "result": "LOST",
+      "returned": 0.0,
+      "pnl": -200.0,
+      "settled_at": "2026-04-09T11:00:07.052396+00:00",
+      "committed_at": "2026-04-08T22:31:34Z"
     }
   ],
   "rejected_games": [
@@ -319,7 +318,8 @@
       -14,
       7,
       9,
-      16
+      16,
+      6
     ],
     "Orlando Magic": [
       -5,
@@ -329,7 +329,8 @@
       -29,
       11,
       4,
-      16
+      16,
+      12
     ],
     "Phoenix Suns": [
       -2,
@@ -338,7 +339,8 @@
       -4,
       -20,
       10,
-      -14
+      -14,
+      5
     ],
     "Denver Nuggets": [
       2,
@@ -347,7 +349,8 @@
       23,
       13,
       2,
-      5
+      5,
+      17
     ],
     "Miami Heat": [
       17,
@@ -364,7 +367,8 @@
       -24,
       -11,
       6,
-      -13
+      -13,
+      -5
     ],
     "Detroit Pistons": [
       -1,
@@ -374,7 +378,8 @@
       11,
       5,
       23,
-      -16
+      -16,
+      26
     ],
     "Atlanta Hawks": [
       1,
@@ -383,7 +388,8 @@
       10,
       29,
       34,
-      -3
+      -3,
+      -6
     ],
     "Indiana Pacers": [
       -7,
@@ -439,7 +445,8 @@
       4,
       43,
       35,
-      36
+      36,
+      18
     ],
     "Memphis Grizzlies": [
       -25,
@@ -449,7 +456,8 @@
       -11,
       -32,
       -16,
-      -16
+      -16,
+      -17
     ],
     "San Antonio Spurs": [
       25,
@@ -458,7 +466,8 @@
       14,
       19,
       -2,
-      13
+      13,
+      11
     ],
     "Utah Jazz": [
       -23,
@@ -487,7 +496,8 @@
       -5,
       -12,
       -14,
-      20
+      20,
+      -12
     ],
     "Houston Rockets": [
       -2,
@@ -523,7 +533,8 @@
       35,
       10,
       12,
-      -5
+      -5,
+      -11
     ],
     "Milwaukee Bucks": [
       -31,
@@ -533,7 +544,8 @@
       -6,
       -32,
       16,
-      -6
+      -6,
+      -26
     ],
     "LA Clippers": [
       25,
@@ -542,7 +554,8 @@
       -10,
       -19,
       29,
-      13
+      13,
+      -18
     ],
     "Toronto Raptors": [
       -25,
@@ -556,32 +569,39 @@
     ]
   },
   "game_log_recorded": [
-    "Phoenix Suns@Chicago Bulls",
-    "Orlando Magic@New Orleans Pelicans",
-    "Utah Jazz@Oklahoma City Thunder",
-    "Utah Jazz@New Orleans Pelicans",
-    "Miami Heat@Toronto Raptors",
-    "Los Angeles Lakers@Dallas Mavericks",
-    "Toronto Raptors@Boston Celtics",
-    "LA Clippers@Sacramento Kings",
-    "Portland Trail Blazers@Denver Nuggets",
     "Memphis Grizzlies@Milwaukee Bucks",
-    "Sacramento Kings@Golden State Warriors",
-    "Dallas Mavericks@LA Clippers",
-    "Washington Wizards@Brooklyn Nets",
-    "Milwaukee Bucks@Brooklyn Nets",
-    "Minnesota Timberwolves@Indiana Pacers",
-    "Philadelphia 76ers@San Antonio Spurs",
-    "Indiana Pacers@Cleveland Cavaliers",
     "Charlotte Hornets@Minnesota Timberwolves",
+    "Minnesota Timberwolves@Indiana Pacers",
+    "Miami Heat@Toronto Raptors",
     "Chicago Bulls@Washington Wizards",
+    "Toronto Raptors@Boston Celtics",
+    "Houston Rockets@Golden State Warriors",
+    "Portland Trail Blazers@Denver Nuggets",
+    "Oklahoma City Thunder@LA Clippers",
+    "Dallas Mavericks@LA Clippers",
+    "Atlanta Hawks@Cleveland Cavaliers",
     "Charlotte Hornets@Boston Celtics",
     "Cleveland Cavaliers@Memphis Grizzlies",
-    "Houston Rockets@Phoenix Suns",
-    "Oklahoma City Thunder@Los Angeles Lakers",
+    "LA Clippers@Sacramento Kings",
+    "Los Angeles Lakers@Dallas Mavericks",
+    "Phoenix Suns@Chicago Bulls",
+    "Milwaukee Bucks@Detroit Pistons",
     "Detroit Pistons@Orlando Magic",
-    "Houston Rockets@Golden State Warriors",
-    "New York Knicks@Atlanta Hawks"
+    "Oklahoma City Thunder@Los Angeles Lakers",
+    "Philadelphia 76ers@San Antonio Spurs",
+    "Indiana Pacers@Cleveland Cavaliers",
+    "Houston Rockets@Phoenix Suns",
+    "Orlando Magic@New Orleans Pelicans",
+    "Washington Wizards@Brooklyn Nets",
+    "Minnesota Timberwolves@Orlando Magic",
+    "Dallas Mavericks@Phoenix Suns",
+    "Milwaukee Bucks@Brooklyn Nets",
+    "Portland Trail Blazers@San Antonio Spurs",
+    "Utah Jazz@Oklahoma City Thunder",
+    "Utah Jazz@New Orleans Pelicans",
+    "New York Knicks@Atlanta Hawks",
+    "Sacramento Kings@Golden State Warriors",
+    "Memphis Grizzlies@Denver Nuggets"
   ],
   "cached_context": {
     "cached_at": "2026-04-08",
