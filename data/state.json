@@ -1,15 +1,15 @@
 {
   "season": "2024-25",
   "game": 2,
-  "bankroll": 740.0,
+  "bankroll": 1526.6,
   "bankroll_initial": 1000.0,
-  "bankroll_peak": 1339.0,
+  "bankroll_peak": 1526.6,
   "total_staked": 1274.0,
-  "total_returned": 1014.0,
-  "net_pnl": 139.0,
+  "total_returned": 1800.6,
+  "net_pnl": 526.6,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-04-09T22:33:39.080316+00:00",
+  "last_updated": "2026-04-10T10:56:29.323211+00:00",
   "first_game_time": "2026-04-09T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
@@ -20,7 +20,7 @@
   "commit_updated_at": "2026-04-09T22:33:39.080316+00:00",
   "commit_date": "2026-04-09",
   "analyst_updated_at": "2026-04-09T11:54:10.455322+00:00",
-  "settler_updated_at": "2026-04-09T11:00:07.052396+00:00",
+  "settler_updated_at": "2026-04-10T10:56:29.323211+00:00",
   "agent_models": {
     "settler": "no-llm",
     "analyst": "claude-sonnet-4-6",
@@ -29,50 +29,7 @@
   },
   "last_report": "### CANCELLED — Toronto Raptors ML\n- Reason: Odds fell below ML commit confirmation floor. Scout drafted at 1.63; current odds 1.60. Skills file sets ML commit floor at 1.65 (Scout floor 1.70 minus 0.05 drift allowance). 1.60 < 1.65 — outside valid range at commit time. Cancel criterion: \"Odds fell outside valid range for market type.\"\n- Odds at cancel: 1.60 (was 1.63 at Scout time)\n\n---\n\n### CONFIRMED — Chicago Bulls -6.5\n- Match: Washington Wizards vs Chicago Bulls | Tip: 2026-04-09T23:00Z\n- Pick: Chicago Bulls -6.5 | Scout odds: 2.0 | Commit odds: 1.96 | Move: -0.04 (minor, within threshold)\n- ML: Washington 3.17 / Chicago 1.42 | ATS: Washington +6.5 (1.96/1.96) | O/U: 248.5 (O:1.96/U:1.96)\n- Stake: €171.00 | Pot: €335.16 | Conf: 68/100 | EV: +33.3%\n- Decision: Odds drifted only -0.04 against Scout price, remaining well within spread target range (1.96 vs floor 1.75). EV recalculated at 1.96 = +33.3%, massive edge. Washington is 17-62, L10 1-9, confirmed tank-tier team. Official injury report confirms Washington missing Coulibaly (Bursitis), Anthony Davis (Left Finger), Kyshawn George (Left Elbow). Chicago anchor players Coby White, Nikola Vucevic, Patrick Williams all healthy. L15 NetRtg gap of 6.7 points (WAS -39.5 vs CHI -32.8) exceeds the 6-point threshold for strong spread signals. Tank team as large underdog — consistent with skills file spread rules. Confidence 68 meets spread confidence floor of 60.\n\n---\n\n### CANCELLED — Houston Rockets ML\n- Reason: Odds collapsed from 1.60 (Scout) to 1.43 (commit) — a -0.17 move driven by Joel Embiid confirmed OUT (NBA official injury report). Odds now well below ML commit floor of 1.65. EV at 1.43 = +0.1%, below the 0.05 minimum. Cancel criteria: \"Odds fell outside valid range for market type\" AND \"EV recalculated at current odds falls below 0.05.\"\n- Odds at cancel: 1.43 (was 1.60 at Scout time)\n- Note: Embiid's absence creates a separate spread edge captured via late scout.\n\n---\n\n### CONFIRMED (LATE SCOUT) — Houston Rockets -6.5\n- Match: Houston Rockets vs Philadelphia 76ers | Tip: 2026-04-10T00:00Z\n- Pick: Houston Rockets -6.5 | Scout odds: N/A (new pick) | Commit odds: 1.98 | Move: N/A\n- ML: Houston 1.43 / Philadelphia 3.10 | ATS: Houston -6.5 (1.98/1.94) | O/U: 226.5 (O:1.96/U:1.96)\n- Stake: €228.00 | Pot: €451.44 | Conf: 72/100 | EV: +42.6%\n- Decision: Joel Embiid confirmed OUT (Illness) per NBA official report — discovered post-14:00 Scout. This is exactly the late_scout_trigger: \"Star ruled out in last 2-3 hours and books haven't fully adjusted [on spread].\" Embiid's absence cripples PHI's offense on the road; PHI also missing Broome and Payne. Houston is home (50-29, L10 8-2), L15 NetRtg +39.9 vs PHI L15 +4.9 (35-point gap). Houston anchor players all available. PHI season NetRtg -0.4 worsens substantially without Embiid. Spread 1.98 within valid range (1.80–2.30). EV = +42.6% well above 0.05 minimum. All gates met: time (86 min), quantity (1 new pick), confidence (72 ≥ 60), EV (42.6% ≥ 5%), odds (1.98 in range). Stake: High tier (70-84) = 20% × €1139 = €228.\n\n---\n\n### EXPOSURE SUMMARY\n- Total committed: €171 + €228 = €399.00\n- Bankroll: €1,139.00 | 70% cap: €797.30\n- Exposure: 35.0% of bankroll — well within limits ✓\n\n---\n\n**Slate Summary:** Two bets committed for a total of €399 (35% of bankroll). The Chicago -6.5 spread against tank-tier Washington remains the most reliable bet on the slate — a confirmed full-depletion scenario against a marginally functional Bulls squad with a strong NetRtg gap. The late-breaking Embiid OUT news created a superior spread vehicle (Houston -6.5 at 1.98) versus the original Houston ML that collapsed to 1.43; this late pick captures the same directional edge at better odds with outstanding EV. Toronto ML was reluctantly cancelled due to the 0.03 unfavorable drift below the mandatory 1.65 commit floor — the underlying thesis remains sound but rules must be followed precisely.",
   "draft_picks": [],
-  "pending_bets": [
-    {
-      "id": "nba_bet_20260409_001",
-      "match": "Washington Wizards vs Chicago Bulls",
-      "time": "2026-04-09T23:00:00Z",
-      "pick": "Chicago Bulls -6.5",
-      "odds": 1.96,
-      "stake": 171.0,
-      "potential_return": 335.16,
-      "confidence": 68,
-      "reasoning": "CONFIRMED from draft nba_draft_20260409_003 with minor odds drift of -0.04 (2.0 → 1.96). Odds remain within spread target range 1.80–2.30 (above 1.75 commit floor). EV recalc at 1.96: (0.68 × 1.96) - 1 = 0.3328 = +33.3%, well above 0.05 minimum. Washington is 17-62, L10 1-9, confirmed tanking team. Official injury report confirms Washington missing Bilal Coulibaly OUT (Bursitis), Anthony Davis OUT (Left Finger Sprain), Kyshawn George OUT (Left Elbow Sprain). Note: Trae Young and Alex Sarr not listed in current official report — may be available. Even so, Washington is a full tank-tier team with extreme roster depletion. L15 NetRtg gap: WAS -39.5 vs CHI -32.8 = 6.7 point gap (above 6-point threshold per skills file spread rules). Chicago anchor players Coby White, Nikola Vucevic, Patrick Williams all confirmed available (not listed in injury report). Chicago missing Buzelis, Collins, Essengue, Giddey, Okoro, Richards — but still far superior roster vs Washington. Skills: Tank team as large underdog — tankers don't cover spreads. Spread confidence floor 60 met (68 ≥ 60). Stake: Medium tier (55-69) = 15% × €1139 = €171.",
-      "anchor_players": [
-        "Coby White",
-        "Nikola Vucevic",
-        "Patrick Williams"
-      ],
-      "result": null,
-      "returned": null,
-      "pnl": null,
-      "settled_at": null,
-      "committed_at": "2026-04-09T22:33:41Z"
-    },
-    {
-      "id": "nba_bet_20260409_002",
-      "match": "Houston Rockets vs Philadelphia 76ers",
-      "time": "2026-04-10T00:00:00Z",
-      "pick": "Houston Rockets -6.5",
-      "odds": 1.98,
-      "stake": 228.0,
-      "potential_return": 451.44,
-      "confidence": 72,
-      "reasoning": "LATE SCOUT PICK — New information since 14:00 Scout: Joel Embiid confirmed OUT (Illness) per NBA official injury report. Embiid is Philadelphia's franchise player and primary offensive engine. This dramatically weakens PHI's ability to cover a -6.5 spread on the road. PHI also missing Johni Broome OUT (Recovery) and Cameron Payne OUT (Strain). Houston is home, 50-29, L10 8-2, L15 NetRtg +39.9 (elite). Houston anchors Jalen Green, Alperen Sengun, Dillon Brooks all available. PHI L15 +4.9 vs HOU L15 +39.9 — 35-point gap. PHI season NetRtg -0.4 (negative, regression candidate); without Embiid this worsens substantially. Houston 7-game win streak context. Houston DefRtg 113.3 vs PHI OffRtg 115.7 — PHI's offense collapses without Embiid. LINE MOVEMENT EXPLANATION: HOU ML moved 1.60 → 1.43 confirming books also priced in Embiid's absence; spread 1.98 represents value as market hasn't fully re-priced spread relative to ML move. ODDS VALIDATION: 1.98 within spread target 1.80–2.30 (above 1.75 commit floor) ✓. EV = (0.72 × 1.98) - 1 = 1.4256 - 1 = 0.4256 = +42.6% ✓. Confidence 72 ≥ 60 gate ✓. Time gate: 00:00Z is ~86 min away (> 20 min) ✓. Quantity gate: this is the 1 allowed new pick at Commit phase ✓. Stake: High tier (70-84) = 20% × €1139 = €227.80 → €228.",
-      "anchor_players": [
-        "Jalen Green",
-        "Alperen Sengun",
-        "Dillon Brooks"
-      ],
-      "result": null,
-      "returned": null,
-      "pnl": null,
-      "settled_at": null,
-      "committed_at": "2026-04-09T22:33:41Z"
-    }
-  ],
+  "pending_bets": [],
   "settled_bets": [
     {
       "id": "nba_bet_20260406_001",
@@ -178,6 +135,48 @@
       "pnl": -200.0,
       "settled_at": "2026-04-09T11:00:07.052396+00:00",
       "committed_at": "2026-04-08T22:31:34Z"
+    },
+    {
+      "id": "nba_bet_20260409_001",
+      "match": "Washington Wizards vs Chicago Bulls",
+      "time": "2026-04-09T23:00:00Z",
+      "pick": "Chicago Bulls -6.5",
+      "odds": 1.96,
+      "stake": 171.0,
+      "potential_return": 335.16,
+      "confidence": 68,
+      "reasoning": "CONFIRMED from draft nba_draft_20260409_003 with minor odds drift of -0.04 (2.0 → 1.96). Odds remain within spread target range 1.80–2.30 (above 1.75 commit floor). EV recalc at 1.96: (0.68 × 1.96) - 1 = 0.3328 = +33.3%, well above 0.05 minimum. Washington is 17-62, L10 1-9, confirmed tanking team. Official injury report confirms Washington missing Bilal Coulibaly OUT (Bursitis), Anthony Davis OUT (Left Finger Sprain), Kyshawn George OUT (Left Elbow Sprain). Note: Trae Young and Alex Sarr not listed in current official report — may be available. Even so, Washington is a full tank-tier team with extreme roster depletion. L15 NetRtg gap: WAS -39.5 vs CHI -32.8 = 6.7 point gap (above 6-point threshold per skills file spread rules). Chicago anchor players Coby White, Nikola Vucevic, Patrick Williams all confirmed available (not listed in injury report). Chicago missing Buzelis, Collins, Essengue, Giddey, Okoro, Richards — but still far superior roster vs Washington. Skills: Tank team as large underdog — tankers don't cover spreads. Spread confidence floor 60 met (68 ≥ 60). Stake: Medium tier (55-69) = 15% × €1139 = €171.",
+      "anchor_players": [
+        "Coby White",
+        "Nikola Vucevic",
+        "Patrick Williams"
+      ],
+      "result": "WON",
+      "returned": 335.16,
+      "pnl": 164.16,
+      "settled_at": "2026-04-10T10:56:29.323211+00:00",
+      "committed_at": "2026-04-09T22:33:41Z"
+    },
+    {
+      "id": "nba_bet_20260409_002",
+      "match": "Houston Rockets vs Philadelphia 76ers",
+      "time": "2026-04-10T00:00:00Z",
+      "pick": "Houston Rockets -6.5",
+      "odds": 1.98,
+      "stake": 228.0,
+      "potential_return": 451.44,
+      "confidence": 72,
+      "reasoning": "LATE SCOUT PICK — New information since 14:00 Scout: Joel Embiid confirmed OUT (Illness) per NBA official injury report. Embiid is Philadelphia's franchise player and primary offensive engine. This dramatically weakens PHI's ability to cover a -6.5 spread on the road. PHI also missing Johni Broome OUT (Recovery) and Cameron Payne OUT (Strain). Houston is home, 50-29, L10 8-2, L15 NetRtg +39.9 (elite). Houston anchors Jalen Green, Alperen Sengun, Dillon Brooks all available. PHI L15 +4.9 vs HOU L15 +39.9 — 35-point gap. PHI season NetRtg -0.4 (negative, regression candidate); without Embiid this worsens substantially. Houston 7-game win streak context. Houston DefRtg 113.3 vs PHI OffRtg 115.7 — PHI's offense collapses without Embiid. LINE MOVEMENT EXPLANATION: HOU ML moved 1.60 → 1.43 confirming books also priced in Embiid's absence; spread 1.98 represents value as market hasn't fully re-priced spread relative to ML move. ODDS VALIDATION: 1.98 within spread target 1.80–2.30 (above 1.75 commit floor) ✓. EV = (0.72 × 1.98) - 1 = 1.4256 - 1 = 0.4256 = +42.6% ✓. Confidence 72 ≥ 60 gate ✓. Time gate: 00:00Z is ~86 min away (> 20 min) ✓. Quantity gate: this is the 1 allowed new pick at Commit phase ✓. Stake: High tier (70-84) = 20% × €1139 = €227.80 → €228.",
+      "anchor_players": [
+        "Jalen Green",
+        "Alperen Sengun",
+        "Dillon Brooks"
+      ],
+      "result": "WON",
+      "returned": 451.44,
+      "pnl": 223.44,
+      "settled_at": "2026-04-10T10:56:29.323211+00:00",
+      "committed_at": "2026-04-09T22:33:41Z"
     }
   ],
   "rejected_games": [
@@ -383,7 +382,8 @@
       -17,
       11,
       40,
-      3
+      3,
+      6
     ],
     "New Orleans Pelicans": [
       -5,
@@ -482,7 +482,8 @@
       19,
       -21,
       -9,
-      -20
+      -20,
+      29
     ],
     "Los Angeles Lakers": [
       7,
@@ -491,7 +492,8 @@
       14,
       -43,
       -6,
-      -36
+      -36,
+      16
     ],
     "Philadelphia 76ers": [
       20,
@@ -500,7 +502,8 @@
       22,
       12,
       -23,
-      -13
+      -13,
+      -11
     ],
     "Chicago Bulls": [
       -20,
@@ -520,7 +523,8 @@
       18,
       32,
       14,
-      11
+      11,
+      -6
     ],
     "Oklahoma City Thunder": [
       -10,
@@ -591,7 +595,8 @@
       6,
       34,
       1,
-      14
+      14,
+      11
     ],
     "Golden State Warriors": [
       3,
@@ -600,7 +605,8 @@
       -14,
       -7,
       -1,
-      5
+      5,
+      -16
     ],
     "Brooklyn Nets": [
       -3,
@@ -609,7 +615,8 @@
       -31,
       -34,
       6,
-      6
+      6,
+      -29
     ],
     "Portland Trail Blazers": [
       31,
@@ -653,39 +660,43 @@
     ]
   },
   "game_log_recorded": [
-    "Memphis Grizzlies@Milwaukee Bucks",
-    "Charlotte Hornets@Minnesota Timberwolves",
-    "Minnesota Timberwolves@Indiana Pacers",
-    "Miami Heat@Toronto Raptors",
-    "Chicago Bulls@Washington Wizards",
-    "Toronto Raptors@Boston Celtics",
-    "Houston Rockets@Golden State Warriors",
-    "Portland Trail Blazers@Denver Nuggets",
-    "Oklahoma City Thunder@LA Clippers",
-    "Dallas Mavericks@LA Clippers",
-    "Atlanta Hawks@Cleveland Cavaliers",
-    "Charlotte Hornets@Boston Celtics",
-    "Cleveland Cavaliers@Memphis Grizzlies",
-    "LA Clippers@Sacramento Kings",
-    "Los Angeles Lakers@Dallas Mavericks",
-    "Phoenix Suns@Chicago Bulls",
-    "Milwaukee Bucks@Detroit Pistons",
-    "Detroit Pistons@Orlando Magic",
-    "Oklahoma City Thunder@Los Angeles Lakers",
-    "Philadelphia 76ers@San Antonio Spurs",
-    "Indiana Pacers@Cleveland Cavaliers",
-    "Houston Rockets@Phoenix Suns",
-    "Orlando Magic@New Orleans Pelicans",
-    "Washington Wizards@Brooklyn Nets",
+    "Philadelphia 76ers@Houston Rockets",
     "Minnesota Timberwolves@Orlando Magic",
-    "Dallas Mavericks@Phoenix Suns",
+    "LA Clippers@Sacramento Kings",
+    "Oklahoma City Thunder@LA Clippers",
+    "Phoenix Suns@Chicago Bulls",
+    "Chicago Bulls@Washington Wizards",
+    "Portland Trail Blazers@Denver Nuggets",
+    "Los Angeles Lakers@Dallas Mavericks",
+    "Charlotte Hornets@Boston Celtics",
+    "Indiana Pacers@Cleveland Cavaliers",
+    "Sacramento Kings@Golden State Warriors",
+    "Dallas Mavericks@LA Clippers",
+    "Houston Rockets@Golden State Warriors",
+    "Milwaukee Bucks@Detroit Pistons",
+    "Houston Rockets@Phoenix Suns",
+    "Cleveland Cavaliers@Memphis Grizzlies",
+    "Charlotte Hornets@Minnesota Timberwolves",
+    "Los Angeles Lakers@Golden State Warriors",
+    "Utah Jazz@New Orleans Pelicans",
+    "Toronto Raptors@Boston Celtics",
+    "Memphis Grizzlies@Milwaukee Bucks",
+    "Atlanta Hawks@Cleveland Cavaliers",
+    "Washington Wizards@Brooklyn Nets",
     "Milwaukee Bucks@Brooklyn Nets",
+    "Minnesota Timberwolves@Indiana Pacers",
+    "New York Knicks@Atlanta Hawks",
+    "Oklahoma City Thunder@Los Angeles Lakers",
     "Portland Trail Blazers@San Antonio Spurs",
     "Utah Jazz@Oklahoma City Thunder",
-    "Utah Jazz@New Orleans Pelicans",
-    "New York Knicks@Atlanta Hawks",
-    "Sacramento Kings@Golden State Warriors",
-    "Memphis Grizzlies@Denver Nuggets"
+    "Miami Heat@Toronto Raptors",
+    "Boston Celtics@New York Knicks",
+    "Dallas Mavericks@Phoenix Suns",
+    "Philadelphia 76ers@San Antonio Spurs",
+    "Memphis Grizzlies@Denver Nuggets",
+    "Indiana Pacers@Brooklyn Nets",
+    "Orlando Magic@New Orleans Pelicans",
+    "Detroit Pistons@Orlando Magic"
   ],
   "cached_context": {
     "cached_at": "2026-04-09",
