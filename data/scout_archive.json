@@ -167,5 +167,20 @@
     "tokens_in": 9042,
     "tokens_out": 4647,
     "cost_usd": 0.096831
+  },
+  {
+    "ts": "2026-04-10T14:53:55.266490+00:00",
+    "date": "2026-04-10",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_onexbet",
+    "draft_count": 0,
+    "picks": [],
+    "rejected": [],
+    "report": "",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 12382,
+    "tokens_out": 10000,
+    "cost_usd": 0.187146
   }
 ]
