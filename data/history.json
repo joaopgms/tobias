@@ -26,7 +26,7 @@
           "wins": 5,
           "losses": 2,
           "peak_bankroll": 1526.6,
-          "total_bets": 7
+          "total_bets": 8
         }
       ]
     }
@@ -987,6 +987,38 @@
         }
       ],
       "summary": "Day 2026-04-09 commit — 2 bets totalling €399.00. 2 cancelled. Bankroll: €1139.00 → €740.00."
+    },
+    {
+      "entry_id": "nba_entry_20260411",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-04-11T02:47:06.035535+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1526.6,
+      "total_staked": 183.0,
+      "bankroll_after": 1343.6,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260411_001",
+          "match": "Houston Rockets vs Minnesota Timberwolves",
+          "time": "2026-04-11T00:00:00Z",
+          "pick": "Houston Rockets -8.5",
+          "odds": 1.85,
+          "stake": 183.0,
+          "potential_return": 338.55,
+          "reasoning": "Late scout pick. HOU (51-29, L10: 8-2, W8 streak, NetRtg L15: +39.0) is dominant at home vs MIN (47-33, L10: 4-6, NetRtg L15: -4.6). NetRtg gap of 43.6 points in HOU's favour is the primary signal. HOU on an 8-game winning streak with elite home form. MIN's Anthony Edwards listed Questionable (Maintenance) — franchise player rules applied: confidence -10, stake -20%. Edge exists regardless of Edwards presence given the enormous L15 form gap. HOU missing Adams (OUT) and VanVleet (OUT) but these were factored into the base confidence. Spread of -8.5 at 1.85 is within valid range. EV = 0.11 at adjusted confidence 60. Injury source nba_official, no data quality concerns.",
+          "confidence": 60,
+          "anchor_players": [
+            "Anthony Edwards"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null
+        }
+      ],
+      "summary": "Day 2026-04-11 commit — 1 bets totalling €183.00. 0 cancelled. Bankroll: €1526.60 → €1343.60."
     }
   ]
 }
