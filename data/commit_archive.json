@@ -201,5 +201,44 @@
     "tokens_in": 9641,
     "tokens_out": 8000,
     "cost_usd": 0.148923
+  },
+  {
+    "ts": "2026-04-12T21:26:02.727790+00:00",
+    "date": "2026-04-12",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 1,
+    "cancelled_count": 0,
+    "total_staked": 200.0,
+    "bankroll_before": 1343.6,
+    "bankroll_after": 1143.6,
+    "bets": [
+      {
+        "id": "nba_bet_20260412_001",
+        "match": "Minnesota Timberwolves vs New Orleans Pelicans",
+        "time": "2026-04-13T00:30Z",
+        "pick": "Minnesota Timberwolves -5.5",
+        "odds": 1.96,
+        "stake": 200,
+        "potential_return": 392.0,
+        "reasoning": "Late-breaking edge: NBA official injury report confirms MIN franchise players Anthony Edwards and Rudy Gobert are NOT listed on the injury report and are active tonight, reversing Scout's assessment that MIN was severely depleted. Scout rejected MIN due to reported absences of Edwards, Gobert, Randle — these players are not listed OUT at commit time, indicating they are available. NOP is a confirmed tank-tier team (26-55, L10 1-9, L15 -31.0) with 6 players OUT including Murphy, Missi, Bey, Jones, Matkovic, McGowens. MIN at home with core intact vs a gutted NOP roster at only -5.5 represents strong value — the line appears not to have fully adjusted to MIN's returning core. MIN 48-33, home court advantage, and the talent gap with NOP far exceeds a 5.5-point spread.",
+        "confidence": 65,
+        "anchor_players": [
+          "Anthony Edwards",
+          "Rudy Gobert"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null
+      }
+    ],
+    "cancelled": [],
+    "late_rejections": [],
+    "report": "",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 12019,
+    "tokens_out": 8000,
+    "cost_usd": 0.156057
   }
 ]
