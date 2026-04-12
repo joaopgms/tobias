@@ -26,7 +26,7 @@
           "wins": 5,
           "losses": 3,
           "peak_bankroll": 1526.6,
-          "total_bets": 8
+          "total_bets": 9
         }
       ]
     }
@@ -1019,6 +1019,39 @@
         }
       ],
       "summary": "Day 2026-04-11 commit — 1 bets totalling €183.00. 0 cancelled. Bankroll: €1526.60 → €1343.60."
+    },
+    {
+      "entry_id": "nba_entry_20260412",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-04-12T21:26:02.727790+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1343.6,
+      "total_staked": 200.0,
+      "bankroll_after": 1143.6,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260412_001",
+          "match": "Minnesota Timberwolves vs New Orleans Pelicans",
+          "time": "2026-04-13T00:30Z",
+          "pick": "Minnesota Timberwolves -5.5",
+          "odds": 1.96,
+          "stake": 200,
+          "potential_return": 392.0,
+          "reasoning": "Late-breaking edge: NBA official injury report confirms MIN franchise players Anthony Edwards and Rudy Gobert are NOT listed on the injury report and are active tonight, reversing Scout's assessment that MIN was severely depleted. Scout rejected MIN due to reported absences of Edwards, Gobert, Randle — these players are not listed OUT at commit time, indicating they are available. NOP is a confirmed tank-tier team (26-55, L10 1-9, L15 -31.0) with 6 players OUT including Murphy, Missi, Bey, Jones, Matkovic, McGowens. MIN at home with core intact vs a gutted NOP roster at only -5.5 represents strong value — the line appears not to have fully adjusted to MIN's returning core. MIN 48-33, home court advantage, and the talent gap with NOP far exceeds a 5.5-point spread.",
+          "confidence": 65,
+          "anchor_players": [
+            "Anthony Edwards",
+            "Rudy Gobert"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null
+        }
+      ],
+      "summary": "Day 2026-04-12 commit — 1 bets totalling €200.00. 0 cancelled. Bankroll: €1343.60 → €1143.60."
     }
   ]
 }
