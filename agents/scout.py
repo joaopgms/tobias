@@ -109,7 +109,8 @@ Tags must appear in this exact order:
 
 <rejected_games>
 [REQUIRED — JSON array for EVERY game NOT drafted.
-Format: {{"match": "HOME vs AWAY", "reason": "brief", "ml_home": 1.85, "ml_away": 2.10, "decision": "rejected|anomaly|no_edge|deferred"}}
+Format: {{"match": "HOME TEAM vs AWAY TEAM", "reason": "brief", "ml_home": 1.85, "ml_away": 2.10, "decision": "rejected|anomaly|no_edge|deferred"}}
+IMPORTANT: Use team names (e.g. "Minnesota Timberwolves vs New Orleans Pelicans"), NOT arena/venue names.
 Use [] only if ALL games were drafted. Every non-drafted game MUST appear here.]
 </rejected_games>
 
@@ -619,6 +620,25 @@ def run(store) -> None:
         state["rejected_games"] = json.loads(rejected_raw) if rejected_raw else []
     except Exception:
         state["rejected_games"] = []
+    # Normalise rejected_games match strings — LLM sometimes uses venue name instead of
+    # home team (because prompt shows "away @ home | time | venue"). Build venue→team map
+    # from ESPN games and replace any venue reference with the correct team name.
+    venue_to_team = {g.get("venue","").lower(): g["home"] for g in games if g.get("venue")}
+    def _normalise_match(match_str: str) -> str:
+        parts = match_str.replace(" vs ", " @ ").split(" @ ")
+        if len(parts) == 2:
+            away_part, home_part = parts[0].strip(), parts[1].strip()
+            home_norm = venue_to_team.get(home_part.lower(), home_part)
+            away_norm = venue_to_team.get(away_part.lower(), away_part)
+            return f"{away_norm} @ {home_norm}"
+        return match_str
+    for r in state["rejected_games"]:
+        if "match" in r:
+            r["match"] = _normalise_match(r["match"])
+    # Apply same normalisation to draft picks as safety net
+    for p in draft_picks:
+        if "match" in p:
+            p["match"] = _normalise_match(p["match"])
     # Append picks dropped by post-parse filters (8d/8e) — not in LLM rejected_games
     if post_filter_rejected:
         seen_matches = {r.get("match","") for r in state["rejected_games"]}
