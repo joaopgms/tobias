@@ -308,7 +308,7 @@ def run(store, force: bool = False) -> None:
                                   injuries_str, injuries_source,
                                   netrtg_l15_str, standings_str,
                                   adv_str, state, today),
-            max_tokens=8000,
+            max_tokens=12000,
             agent="commit",
         )
         raw = llm_result.text

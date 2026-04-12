@@ -74,6 +74,7 @@ TOBIAS_CONTEXT.md
 
 # ── CLAUDE CODE CONTEXT ───────────────────────────────────────────
 TOBIAS_CONTEXT.md
+.claude/
 
 # ══════════════════════════════════════════════════════════════════
 # NOTE — these files MUST be committed (do not add them above):
