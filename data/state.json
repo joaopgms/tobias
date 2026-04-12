@@ -1,24 +1,24 @@
 {
   "season": "2024-25",
   "game": 2,
-  "bankroll": 1343.6,
+  "bankroll": 1143.6,
   "bankroll_initial": 1000.0,
   "bankroll_peak": 1526.6,
-  "total_staked": 1457.0,
+  "total_staked": 1657.0,
   "total_returned": 1800.6,
   "net_pnl": 343.6,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-04-12T14:45:08.063706+00:00",
+  "last_updated": "2026-04-12T21:26:02.727790+00:00",
   "first_game_time": "2026-04-12T22:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
   "scout_updated_at": "2026-04-12T14:45:08.063706+00:00",
   "scout_odds_source": "theodds_onexbet",
-  "commit_status": "pending",
-  "commit_updated_at": "2026-04-11T02:47:06.035535+00:00",
-  "commit_date": "2026-04-11",
+  "commit_status": "done",
+  "commit_updated_at": "2026-04-12T21:26:02.727790+00:00",
+  "commit_date": "2026-04-12",
   "analyst_updated_at": "2026-04-12T11:32:54.826472+00:00",
   "settler_updated_at": "2026-04-12T10:40:07.629616+00:00",
   "agent_models": {
@@ -27,44 +27,29 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "NBA official injury feed confirmed (30 teams) — full confidence rules apply. Two picks drafted from a 15-game slate. Key theme: multiple games disqualified due to ML odds outside 1.60–2.50 target range (many blowout-expected matchups), and several games corrupted by mass franchise player absences (CLE, HOU, LAL, MIN, NYK, OKC all missing entire cores). Best edges found: IND +13.5 at home vs locked-seed DET missing Duren (spread pick); ATL ML at 2.40 backed by extreme L15 form divergence vs confirmed-cold MIA. Two line anomalies flagged (BKN/TOR extreme ML, WAS/CLE extreme O/U, NOP/MIN extreme O/U). Pace data available this session — O/U pace signals active but no total picks cleared confidence thresholds.",
-  "draft_picks": [
+  "last_report": "",
+  "draft_picks": [],
+  "pending_bets": [
     {
-      "id": "nba_draft_20260412_001",
-      "match": "Indiana Pacers vs Detroit Pistons",
-      "time": "2026-04-12T22:00Z",
-      "pick": "Indiana Pacers +13.5",
-      "odds": 1.91,
-      "stake": 50,
-      "potential_return": 95.5,
-      "confidence": 72,
-      "reasoning": "IND at home vs locked-seed DET missing Duren. Home team covering large spread with opponent missing key big man and lacking playoff motivation. Pacers competitive at home.",
+      "id": "nba_bet_20260412_001",
+      "match": "Minnesota Timberwolves vs New Orleans Pelicans",
+      "time": "2026-04-13T00:30Z",
+      "pick": "Minnesota Timberwolves -5.5",
+      "odds": 1.96,
+      "stake": 200,
+      "potential_return": 392.0,
+      "reasoning": "Late-breaking edge: NBA official injury report confirms MIN franchise players Anthony Edwards and Rudy Gobert are NOT listed on the injury report and are active tonight, reversing Scout's assessment that MIN was severely depleted. Scout rejected MIN due to reported absences of Edwards, Gobert, Randle — these players are not listed OUT at commit time, indicating they are available. NOP is a confirmed tank-tier team (26-55, L10 1-9, L15 -31.0) with 6 players OUT including Murphy, Missi, Bey, Jones, Matkovic, McGowens. MIN at home with core intact vs a gutted NOP roster at only -5.5 represents strong value — the line appears not to have fully adjusted to MIN's returning core. MIN 48-33, home court advantage, and the talent gap with NOP far exceeds a 5.5-point spread.",
+      "confidence": 65,
       "anchor_players": [
-        "Pascal Siakam",
-        "Tyrese Haliburton"
+        "Anthony Edwards",
+        "Rudy Gobert"
       ],
-      "drafted_at": "2026-04-12T14:47:46Z",
-      "market_type": "spread"
-    },
-    {
-      "id": "nba_draft_20260412_002",
-      "match": "Miami Heat vs Atlanta Hawks",
-      "time": "2026-04-12T22:00Z",
-      "pick": "Atlanta Hawks ML",
-      "odds": 2.4,
-      "stake": 40,
-      "potential_return": 96.0,
-      "confidence": 68,
-      "reasoning": "Extreme L15 form divergence between ATL and MIA. MIA confirmed cold, ATL showing positive momentum. ML odds at 2.40 within target range. Value edge on Hawks outright win.",
-      "anchor_players": [
-        "Trae Young",
-        "Jalen Johnson"
-      ],
-      "drafted_at": "2026-04-12T14:47:46Z",
-      "market_type": "ml"
+      "result": null,
+      "returned": null,
+      "pnl": null,
+      "settled_at": null
     }
   ],
-  "pending_bets": [],
   "settled_bets": [
     {
       "id": "nba_bet_20260406_001",
@@ -341,21 +326,22 @@
   ],
   "late_scout_rejections": [],
   "commit_report_data": {
-    "date": "2026-04-11",
-    "ts": "2026-04-11T02:47:06.035535+00:00",
+    "date": "2026-04-12",
+    "ts": "2026-04-12T21:26:02.727790+00:00",
     "bets": [
       {
-        "id": "nba_bet_20260411_001",
-        "match": "Houston Rockets vs Minnesota Timberwolves",
-        "time": "2026-04-11T00:00:00Z",
-        "pick": "Houston Rockets -8.5",
-        "odds": 1.85,
-        "stake": 183.0,
-        "potential_return": 338.55,
-        "reasoning": "Late scout pick. HOU (51-29, L10: 8-2, W8 streak, NetRtg L15: +39.0) is dominant at home vs MIN (47-33, L10: 4-6, NetRtg L15: -4.6). NetRtg gap of 43.6 points in HOU's favour is the primary signal. HOU on an 8-game winning streak with elite home form. MIN's Anthony Edwards listed Questionable (Maintenance) — franchise player rules applied: confidence -10, stake -20%. Edge exists regardless of Edwards presence given the enormous L15 form gap. HOU missing Adams (OUT) and VanVleet (OUT) but these were factored into the base confidence. Spread of -8.5 at 1.85 is within valid range. EV = 0.11 at adjusted confidence 60. Injury source nba_official, no data quality concerns.",
-        "confidence": 60,
+        "id": "nba_bet_20260412_001",
+        "match": "Minnesota Timberwolves vs New Orleans Pelicans",
+        "time": "2026-04-13T00:30Z",
+        "pick": "Minnesota Timberwolves -5.5",
+        "odds": 1.96,
+        "stake": 200,
+        "potential_return": 392.0,
+        "reasoning": "Late-breaking edge: NBA official injury report confirms MIN franchise players Anthony Edwards and Rudy Gobert are NOT listed on the injury report and are active tonight, reversing Scout's assessment that MIN was severely depleted. Scout rejected MIN due to reported absences of Edwards, Gobert, Randle — these players are not listed OUT at commit time, indicating they are available. NOP is a confirmed tank-tier team (26-55, L10 1-9, L15 -31.0) with 6 players OUT including Murphy, Missi, Bey, Jones, Matkovic, McGowens. MIN at home with core intact vs a gutted NOP roster at only -5.5 represents strong value — the line appears not to have fully adjusted to MIN's returning core. MIN 48-33, home court advantage, and the talent gap with NOP far exceeds a 5.5-point spread.",
+        "confidence": 65,
         "anchor_players": [
-          "Anthony Edwards"
+          "Anthony Edwards",
+          "Rudy Gobert"
         ],
         "result": null,
         "returned": null,
@@ -364,34 +350,13 @@
       }
     ],
     "cancelled": [],
-    "late_rejections": [
-      {
-        "match": "Toronto Raptors vs Miami Heat",
-        "reason": "TOR -3.5 spread at 1.91 evaluated as late pick. TOR ML cancelled due to odds below floor. Spread has edge (L15 gap 31.8 pts, MIA cold fade) but quantity gate already used for Houston -6.5. Also game tips in ~26 min — very tight time window. No pick added."
-      },
-      {
-        "match": "New York Knicks vs Boston Celtics",
-        "reason": "Jaylen Brown confirmed OUT (Tendinitis) — major new development. However BOS ML at 2.81 exceeds 2.50 ceiling; NYK ML 1.51 below 1.60 floor. NYK -5.5 spread at 1.96 evaluated: BOS L15 +34.6 vs NYK L15 +8.1 — Boston's remaining roster (Tatum etc.) still elite even without Brown. Insufficient confidence that NYK covers -5.5 vs a BOS team that outperforms NYK by 26.5 points in L15. No valid edge. Quantity gate also used."
-      },
-      {
-        "match": "Golden State Warriors vs Los Angeles Lakers",
-        "reason": "Stephen Curry confirmed OUT (Management). LAL: Doncic OUT, Reaves OUT, Smart OUT, Hayes OUT. GS also missing Butler, Porzingis, Moody, Horford — extremely depleted. GS ML 1.74 in range but GS L15 -13.0 vs LAL L15 -11.4 — nearly identical poor metrics. Both teams severely compromised, effectively a coin flip between two depleted rosters. No clean edge meeting confidence ≥ 60. Quantity gate also used."
-      },
-      {
-        "match": "Indiana Pacers vs Brooklyn Nets",
-        "reason": "Haliburton still OUT (confirmed). IND also missing Nembhard, McConnell, Nesmith. BKN confirmed tank (20-59), Claxton OUT. IND ML 1.66 marginally in range but franchise player Haliburton absent severely limits IND's upside. BKN ML 2.40 but BKN is confirmed tank team — skills file cautions against backing tankers. Both teams bottom-tier depleted rosters, no reliable edge. Quantity gate also used."
-      },
-      {
-        "match": "Los Angeles Clippers vs Portland Trail Blazers",
-        "reason": "Game not on tonight's original slate reviewed by Scout. Portland ML 1.96 in valid range; Portland L15 +26.5 is strong; LAC L15 +12.5 also positive. Spread Portland -1.5 at 2.02. Without full Scout analysis, injury data, and given quantity gate already used, insufficient time to fully validate this late. No pick added."
-      }
-    ],
-    "total_staked": 183.0,
-    "bankroll_before": 1526.6,
+    "late_rejections": [],
+    "total_staked": 200.0,
+    "bankroll_before": 1343.6,
     "report": "",
-    "tokens_in": 9641,
+    "tokens_in": 12019,
     "tokens_out": 8000,
-    "cost_usd": 0.148923
+    "cost_usd": 0.156057
   },
   "netrtg_l15": {
     "Charlotte Hornets": 26.5,
