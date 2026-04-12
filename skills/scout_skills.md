@@ -1,7 +1,7 @@
 ---
-version: 28
-updated_at: 2026-04-11T11:28:22.840892+00:00
-updated_by: analyst_2026-04-11
+version: 29
+updated_at: 2026-04-12T11:32:54.826472+00:00
+updated_by: analyst_2026-04-12
 llm: claude-sonnet-4-6
 ---
 
@@ -95,36 +95,100 @@ Known absences (roster-only flags — confirmed via ESPN roster cross-reference,
 These are flagged as likely OUT but must be re-verified against NBA official PDF each session.
 
 Oklahoma City Thunder:
+- Alex Caruso (G): OUT [roster-only]
+- Shai Gilgeous-Alexander (G): OUT [roster-only] — FRANCHISE PLAYER
+- Isaiah Hartenstein (C): OUT [roster-only] — key big
+- Chet Holmgren (C): OUT [roster-only] — FRANCHISE PLAYER
+- Isaiah Joe (G): OUT [roster-only]
+- Ajay Mitchell (G): OUT [roster-only]
 - Thomas Sorber (C): OUT [roster-only]
-NOTE: OKC's overall squad status requires re-verification via NBA official PDF. Do NOT draft OKC picks without verification given end-of-season rest patterns at the top of standings.
+- Cason Wallace (G): OUT [roster-only]
+- Jalen Williams (G): OUT [roster-only] — FRANCHISE PLAYER
+- Jaylin Williams (F): OUT [roster-only]
+NOTE: OKC has ALL major franchise players in roster-only OUT feed. Do NOT draft OKC picks without NBA official PDF verification. Top seed locked at 64-17 — star rest risk MAXIMUM.
 
 San Antonio Spurs:
 - David Jones Garcia (F): OUT [roster-only]
-NOTE: Victor Wembanyama NOT in current verified absence feed — re-verify before any SAS pick. Star rest risk elevated; top seed locked at 62-19.
+- Luke Kornet (C): OUT [roster-only]
+NOTE: Victor Wembanyama NOT in current verified absence feed — re-verify before any SAS pick. Star rest risk elevated; top seed secured at 62-19.
+
+Detroit Pistons:
+- Jalen Duren (C): OUT [roster-only] — key big
+NOTE: Cade Cunningham and Isaiah Stewart NOT in current verified absence feed — re-verify before any DET pick.
+
+Boston Celtics:
+- Jaylen Brown (G): OUT [roster-only] — FRANCHISE PLAYER
+- Neemias Queta (C): OUT [roster-only]
+- Jayson Tatum (F): OUT [roster-only] — FRANCHISE PLAYER
+- Derrick White (G): OUT [roster-only] — key secondary player
+NOTE: Both Tatum and Brown in roster-only OUT feed — BOS franchise player depth critically thin. Do NOT draft BOS ML without re-verification.
+
+New York Knicks:
+- OG Anunoby (F): OUT [roster-only] — key wing
+- Jalen Brunson (G): OUT [roster-only] — FRANCHISE PLAYER
+- Josh Hart (G): OUT [roster-only] — key secondary player
+- Tyler Kolek (G): OUT [roster-only]
+- Mitchell Robinson (C): OUT [roster-only]
+- Karl-Anthony Towns (C): OUT [roster-only] — FRANCHISE PLAYER
+NOTE: NYK has multiple franchise-level players in roster-only OUT feed. Do NOT draft NYK ML without NBA official PDF verification.
 
 Denver Nuggets:
+- Christian Braun (G): OUT [roster-only]
+- Aaron Gordon (F): OUT [roster-only] — key piece
+- Tim Hardaway Jr. (G): OUT [roster-only]
+- Cameron Johnson (F): OUT [roster-only]
 - Spencer Jones (F): OUT [roster-only]
+- Jamal Murray (G): OUT [roster-only] — FRANCHISE PLAYER
 - Peyton Watson (G): OUT [roster-only]
+NOTE: Nikola Jokic NOT in current verified absence feed — re-verify before any DEN pick. Jamal Murray in roster-only OUT feed — DEN depth significantly altered without Murray.
 
 Los Angeles Lakers:
 - Luka Doncic (G): OUT [roster-only] — FRANCHISE PLAYER. Do NOT bet LAL ML without re-verification.
-- Jaxson Hayes (C): OUT [roster-only] — key big.
+- Jaxson Hayes (C): OUT [roster-only] — key big
 - Austin Reaves (G): OUT [roster-only] — key secondary player; LAL depth critically thin.
 
 Houston Rockets:
 - Steven Adams (C): OUT [roster-only]
+- Kevin Durant (F): OUT [roster-only] — FRANCHISE PLAYER
+- Alperen Sengun (C): OUT [roster-only] — FRANCHISE PLAYER
+- Jabari Smith Jr. (F): OUT [roster-only]
+- Amen Thompson (G): OUT [roster-only]
 - Fred VanVleet (G): OUT [roster-only]
+NOTE: Houston has Durant AND Sengun in roster-only OUT feed. Do NOT draft HOU ML without NBA official PDF verification.
 
 Cleveland Cavaliers:
+- Jarrett Allen (C): OUT [roster-only] — FRANCHISE PLAYER
 - Thomas Bryant (C): OUT [roster-only]
+- Keon Ellis (G): OUT [roster-only]
+- James Harden (G): OUT [roster-only] — FRANCHISE PLAYER
+- Sam Merrill (G): OUT [roster-only]
+- Donovan Mitchell (G): OUT [roster-only] — FRANCHISE PLAYER
+- Evan Mobley (C): OUT [roster-only] — FRANCHISE PLAYER
+- Dennis Schroder (G): OUT [roster-only]
+- Dean Wade (F): OUT [roster-only]
+NOTE: CLE has Mitchell, Allen, Mobley, Harden all in roster-only OUT feed — virtually entire core absent. Do NOT draft CLE without NBA official PDF verification.
+
+Minnesota Timberwolves:
+- Kyle Anderson (F): OUT [roster-only]
+- Mike Conley (G): OUT [roster-only]
+- Ayo Dosunmu (G): OUT [roster-only]
+- Anthony Edwards (G): OUT [roster-only] — FRANCHISE PLAYER
+- Rudy Gobert (C): OUT [roster-only] — FRANCHISE PLAYER
+- Bones Hyland (G): OUT [roster-only]
+- Jaden McDaniels (F): OUT [roster-only] — key wing
+- Julius Randle (F): OUT [roster-only] — FRANCHISE PLAYER
+- Naz Reid (C): OUT [roster-only] — key big
+NOTE: MIN has Edwards, Gobert, Randle all in roster-only OUT feed — virtually entire core absent. Do NOT draft MIN without NBA official PDF verification.
 
 Atlanta Hawks:
 - Jock Landale (C): OUT [roster-only]
 
 Toronto Raptors:
 - Chucky Hepburn (G): OUT [roster-only]
+NOTE: Immanuel Quickley NOT in current verified absence feed — re-verify before any TOR pick.
 
 Washington Wizards:
+- Bilal Coulibaly (G): OUT [roster-only + injury landscape confirmed]
 - Anthony Davis (F): OUT [roster-only] — FRANCHISE PLAYER
 - Kyshawn George (F): OUT [roster-only]
 - Tre Johnson (G): OUT [roster-only + injury landscape confirmed]
@@ -133,21 +197,22 @@ Washington Wizards:
 - Tristan Vukcevic (F): OUT [roster-only + injury landscape confirmed]
 - Cam Whitmore (F): OUT [roster-only]
 - Trae Young (G): OUT [roster-only] — FRANCHISE PLAYER
-
-NOTE: Victor Wembanyama (SAS), Cade Cunningham (DET), Isaiah Stewart (DET), Immanuel Quickley (TOR), Jaden McDaniels (MIN), Shai Gilgeous-Alexander (OKC), Jalen Williams (OKC), Chet Holmgren (OKC), Isaiah Hartenstein (OKC), Donovan Mitchell (CLE), Jarrett Allen (CLE), Anthony Edwards (MIN), Rudy Gobert (MIN) — NOT in current verified absence feed. Do NOT list as OUT. Re-verify via NBA official PDF before any pick involving their teams.
+NOTE: Washington full tank confirmed. Do NOT bet Washington to win under any circumstances.
 
 Franchise players requiring mandatory NBA official PDF verification before ANY pick involving their team:
+- Shai Gilgeous-Alexander, Jalen Williams, Chet Holmgren (OKC) — roster-only OUT; top-seed rest risk maximum
+- Jayson Tatum, Jaylen Brown (BOS) — roster-only OUT; franchise core absent
+- Jalen Brunson, Karl-Anthony Towns (NYK) — roster-only OUT; franchise core absent
+- Jamal Murray (DEN) — roster-only OUT; Jokic status requires verification
+- Kevin Durant, Alperen Sengun (HOU) — roster-only OUT; franchise duo absent
+- Donovan Mitchell, Jarrett Allen, Evan Mobley, James Harden (CLE) — roster-only OUT; entire core absent
+- Anthony Edwards, Rudy Gobert, Julius Randle (MIN) — roster-only OUT; entire core absent
+- Luka Doncic (LAL) — roster-only OUT; removes primary offensive engine
 - Luka Doncic (Los Angeles Lakers) — OUT [roster-only]; removes primary offensive engine.
-- Any player flagged [roster-only] — NOT confirmed via official injury report.
-
-CRITICAL: Alex Sarr, Tristan Vukcevic, and Tre Johnson confirmed OUT via injury landscape feed this session.
-Washington Wizards: Anthony Davis confirmed via injury landscape. Full tank confirmed — Do NOT bet Washington to win.
-
-LOS ANGELES LAKERS ALERT: Luka Doncic AND Austin Reaves AND Jaxson Hayes all OUT [roster-only] — franchise player and two key supporting pieces absent. LAL ML bets require extreme caution; do NOT draft without re-verification.
 
 ## SECTION:tanking_teams
 Confirmed tanking-tier teams (all three criteria met):
-- Washington Wizards: bottom of standings; Trae Young, Anthony Davis, D'Angelo Russell, Alex Sarr, Tre Johnson, Kyshawn George, Cam Whitmore, Tristan Vukcevic all OUT — clearest tank in league. Do not bet Washington to win.
+- Washington Wizards: bottom of standings; Trae Young, Anthony Davis, D'Angelo Russell, Alex Sarr, Tre Johnson, Kyshawn George, Cam Whitmore, Tristan Vukcevic, Bilal Coulibaly all OUT — clearest tank in league. Do not bet Washington to win.
 - Sacramento Kings: ~18-52 region, L10: 5-5 — worst record in West; NetRtg worst in league.
 - Brooklyn Nets: ~17-52 region, L10: 2-8 — bottom East; extreme negative NetRtg.
 - Utah Jazz: ~20-49 region, L10: 2-8 — confirmed tank.
@@ -166,19 +231,19 @@ When betting ON tanking teams: require odds ≥ 2.20 and strong situational reas
 Emerging tank-watch:
 - Chicago Bulls (~28-41 region, L10: 4-6) — borderline play-in; monitor.
 - New Orleans Pelicans (~24-46 region, L10: 6-4) — record tank-tier but L10 shows fight; treat as volatile, not confirmed tank.
-- Golden State Warriors: 37-44, L10: 4-6, streak: L2 — NetRtg -0.4 below breakeven; confirmed tank-watch. Play-in path eliminated or near-eliminated.
+- Golden State Warriors: 37-44, L10: 4-6, streak: L2 — NetRtg -0.4; confirmed tank-watch. Play-in path eliminated or near-eliminated.
 
 Current standings and form (updated this session — 2026-04-19):
-- OKC Thunder: 64-17, L10: 8-2, streak: L1 — elite; NetRtg +11.6 best in league. Top seed locked; star rest risk MAXIMUM. Re-verify all OKC absences via NBA official PDF before any pick.
-- San Antonio Spurs: 62-19, L10: 9-1, streak: W3 — elite tier; NetRtg +8.5. David Jones Garcia OUT [roster-only]. Victor Wembanyama NOT in current verified absence feed — re-verify before any SAS pick. Star rest risk elevated; top seed locked.
-- Detroit Pistons: 59-22, L10: 7-3, streak: W2 — NetRtg +8.2; Cade Cunningham and Isaiah Stewart NOT in current verified absence feed — re-verify before any DET pick.
-- Boston Celtics: 55-26, L10: 8-2, streak: W1 — NetRtg +8.2; seeding race active.
-- New York Knicks: 53-28, L10: 7-3, streak: W5 — NetRtg +6.7; strong East seeding push.
-- Denver Nuggets: 53-28, L10: 10-0, streak: W11 — NetRtg +5.1; historic winning streak extending. Spencer Jones, Peyton Watson OUT [roster-only] (role players only). HOT STREAK FLAG: W% .654 above .550 threshold — do NOT auto-fade per rule, but opponent NetRtg gap > 4.0 required before backing.
+- OKC Thunder: 64-17, L10: 8-2, streak: L1 — elite; NetRtg +11.6 best in league. Top seed locked; Shai Gilgeous-Alexander, Jalen Williams, Chet Holmgren, Isaiah Hartenstein all roster-only OUT — star rest risk MAXIMUM. Do NOT draft OKC picks without NBA official PDF verification.
+- San Antonio Spurs: 62-19, L10: 9-1, streak: W3 — elite tier; NetRtg +8.5. David Jones Garcia, Luke Kornet OUT [roster-only]. Victor Wembanyama NOT in current verified absence feed — re-verify before any SAS pick. Star rest risk elevated.
+- Detroit Pistons: 59-22, L10: 7-3, streak: W2 — NetRtg +8.2; Jalen Duren OUT [roster-only]. Cade Cunningham and Isaiah Stewart NOT in current verified absence feed — re-verify before any DET pick.
+- Boston Celtics: 55-26, L10: 8-2, streak: W1 — NetRtg +8.2; Jayson Tatum AND Jaylen Brown AND Derrick White all roster-only OUT. BOS franchise core critically depleted — Do NOT draft BOS without re-verification.
+- New York Knicks: 53-28, L10: 7-3, streak: W5 — NetRtg +6.7; Jalen Brunson AND Karl-Anthony Towns AND OG Anunoby AND Josh Hart all roster-only OUT. NYK franchise core critically depleted — Do NOT draft NYK without re-verification.
+- Denver Nuggets: 53-28, L10: 10-0, streak: W11 — NetRtg +5.1; Jamal Murray, Aaron Gordon, Christian Braun, Cameron Johnson, Tim Hardaway Jr. all roster-only OUT. HOT STREAK FLAG: 11-game winning streak; Nikola Jokic status requires re-verification. Require NetRtg gap > 4.0 before backing opponent fade.
 - Los Angeles Lakers: 52-29, L10: 6-4, streak: W2 — NetRtg +1.5; Luka Doncic, Austin Reaves, Jaxson Hayes all OUT [roster-only]. LAL record disguises severely depleted roster. Do NOT bet LAL without re-verification.
-- Cleveland Cavaliers: 51-30, L10: 7-3, streak: L1 — NetRtg +3.9; Thomas Bryant OUT [roster-only]. Key franchise players (Mitchell, Allen) NOT in current verified absence feed — re-verify before any CLE pick.
-- Houston Rockets: 51-30, L10: 8-2, streak: L1 — Fred VanVleet, Steven Adams OUT [roster-only]; NetRtg +5.1; seeding race live. Streak snapped — monitor.
-- Minnesota Timberwolves: 48-33, L10: 5-5, streak: W1 — NetRtg +3.0; Anthony Edwards AND Rudy Gobert NOT in current verified absence feed — re-verify before any MIN pick.
+- Cleveland Cavaliers: 51-30, L10: 7-3, streak: L1 — NetRtg +3.9; Donovan Mitchell, Jarrett Allen, Evan Mobley, James Harden, Dennis Schroder all roster-only OUT — virtually entire competitive core absent. Do NOT draft CLE without NBA official PDF verification.
+- Houston Rockets: 51-30, L10: 8-2, streak: L1 — Kevin Durant AND Alperen Sengun AND Fred VanVleet all roster-only OUT; NetRtg +5.1; seeding race live but franchise core depleted. Do NOT draft HOU without re-verification.
+- Minnesota Timberwolves: 48-33, L10: 5-5, streak: W1 — NetRtg +3.0; Anthony Edwards, Rudy Gobert, Julius Randle, Jaden McDaniels all roster-only OUT — entire core absent. Do NOT draft MIN without NBA official PDF verification.
 - Atlanta Hawks: 46-35, L10: 7-3, streak: W1 — NetRtg +2.7; Jock Landale OUT [roster-only]. Play-in secured; monitoring streak sustainability.
 - Toronto Raptors: 45-36, L10: 5-5, streak: L1 — NetRtg +2.2; Chucky Hepburn OUT [roster-only]; Immanuel Quickley NOT in current verified absence feed — re-verify before any TOR pick.
 - Orlando Magic: 45-36, L10: 7-3, streak: W5 — NetRtg +0.6; play-in motivated; verify roster before bets.
@@ -191,17 +256,17 @@ Current standings and form (updated this session — 2026-04-19):
 - Golden State Warriors: 37-44, L10: 4-6, streak: L2 — NetRtg -0.4; confirmed tank-watch; do not back GS without significant situational reason.
 
 HOT STREAK FADE CANDIDATES:
-- Denver Nuggets (53-28, L10: 10-0, W11): W% .654 above .550 so auto-fade rule does NOT apply; but 11-game streak warrants monitoring — require NetRtg gap > 4.0 before backing their opponent.
+- Denver Nuggets (53-28, L10: 10-0, W11): Requires Jokic presence verification before any directional bet; opposing-team fade requires NetRtg gap > 4.0 AND verification of DEN roster state.
 - Charlotte Hornets (43-38, streak: L2): NetRtg +4.9 but two-game losing streak after strong L10; fade risk elevated.
 - Miami Heat (42-39, L10: 4-6): confirmed cold fade candidate — do not back Miami without strong situational reason.
 - Los Angeles Lakers (52-29, streak: W2): Luka Doncic + Austin Reaves + Jaxson Hayes OUT fundamentally changes LAL ceiling; treat record as inflated.
 
 SCHEDULE SEEDING CONTEXT (mid-to-late April — final regular season stretch):
 - OKC (64-17), Spurs (62-19), Pistons (59-22) locked into top seeds — star rest risk MAXIMUM. Treat as severely depleted until verified each session.
-- Denver (53-28, W11 streak) surging into top-3 West — monitor rest patterns as seeding locks in.
+- BOS, NYK, CLE, HOU all have multiple franchise-level players in roster-only OUT feed — NONE of these teams are safe to pick without NBA official PDF verification this session.
+- Denver (53-28, W11 streak) surging; Jokic status must be verified before any DEN directional bet.
 - Play-in bubble (seeds 7-10 East/West): Charlotte (43-38), Portland (41-40), Clippers (41-40), Miami (42-39) — motivation-positive for play-in teams.
-- Houston (51-30) West seeding push — motivated but streak just snapped.
-- MIN without verified Edwards + Gobert status is fundamentally altered — treat as volatile until confirmed.
+- MIN without verified Edwards + Gobert + Randle status is fundamentally altered — treat as volatile until confirmed.
 - GS Warriors (37-44) tank-watch confirmed; Portland at .506 is play-in motivated.
 
 ## SECTION:b2b_rules
