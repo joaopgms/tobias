@@ -275,5 +275,161 @@
     "tokens_in": 13035,
     "tokens_out": 7190,
     "cost_usd": 0.146955
+  },
+  {
+    "ts": "2026-04-12T14:45:08.063706+00:00",
+    "date": "2026-04-12",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_onexbet",
+    "draft_count": 2,
+    "picks": [
+      {
+        "id": "nba_draft_20260412_001",
+        "match": "Indiana Pacers vs Detroit Pistons",
+        "time": "2026-04-12T22:00Z",
+        "pick": "Indiana Pacers +13.5",
+        "odds": 1.91,
+        "stake": 50,
+        "potential_return": 95.5,
+        "confidence": 72,
+        "reasoning": "IND at home vs locked-seed DET missing Duren. Home team covering large spread with opponent missing key big man and lacking playoff motivation. Pacers competitive at home.",
+        "anchor_players": [
+          "Pascal Siakam",
+          "Tyrese Haliburton"
+        ],
+        "drafted_at": "2026-04-12T14:47:46Z",
+        "market_type": "spread"
+      },
+      {
+        "id": "nba_draft_20260412_002",
+        "match": "Miami Heat vs Atlanta Hawks",
+        "time": "2026-04-12T22:00Z",
+        "pick": "Atlanta Hawks ML",
+        "odds": 2.4,
+        "stake": 40,
+        "potential_return": 96.0,
+        "confidence": 68,
+        "reasoning": "Extreme L15 form divergence between ATL and MIA. MIA confirmed cold, ATL showing positive momentum. ML odds at 2.40 within target range. Value edge on Hawks outright win.",
+        "anchor_players": [
+          "Trae Young",
+          "Jalen Johnson"
+        ],
+        "drafted_at": "2026-04-12T14:47:46Z",
+        "market_type": "ml"
+      }
+    ],
+    "rejected": [
+      {
+        "match": "Kaseya Center vs Atlanta Hawks",
+        "reason": "DRAFTED — see draft_picks 002",
+        "ml_home": 1.66,
+        "ml_away": 2.4,
+        "decision": "rejected"
+      },
+      {
+        "match": "TD Garden vs Orlando Magic",
+        "reason": "BOS ML at 7.03 outside range 1.60-2.50; ORL ML at 1.14 outside range. BOS L15 +33.3 vs ORL L15 -3.1 — BOS genuinely superior but Tatum OUT, Brown OUT, Hauser Doubtful, Pritchard Doubtful, Vucevic Doubtful. BOS depleted roster makes any ML unreliable. ORL spread +12.5 at 2.04: ORL L15 -3.1, below-average recent form; no edge fading BOS spread when BOS roster is uncertain. No reliable pick available.",
+        "ml_home": 7.03,
+        "ml_away": 1.14,
+        "decision": "rejected"
+      },
+      {
+        "match": "Rocket Arena vs Washington Wizards",
+        "reason": "WAS confirmed full tank — Do NOT bet WAS to win. CLE ML 1.22 outside ML target range 1.60-2.50. CLE spread -9.5 at 1.88: CLE has Mitchell, Allen, Mobley, Harden all OUT — virtually entire core absent. CLE L15 -0.3 reflects depleted roster. O/U 245.5 shows extreme pricing (O:3.46/U:1.37) — anomalous line, avoid. No pick available.",
+        "ml_home": 1.22,
+        "ml_away": 4.98,
+        "decision": "anomaly"
+      },
+      {
+        "match": "Indiana Pacers vs Detroit Pistons",
+        "reason": "DRAFTED — see draft_picks 001",
+        "ml_home": 7.12,
+        "ml_away": 1.14,
+        "decision": "rejected"
+      },
+      {
+        "match": "Madison Square Garden vs Charlotte Hornets",
+        "reason": "NYK ML 6.75 — all franchise players (Brunson, Towns, Anunoby, Hart) confirmed OUT via NBA official. NYK is severely depleted. CHO ML 1.15 outside target range 1.60-2.50. CHO spread -13.5 at 1.88 is within range but CHO L15 +26.5 vs NYK L15 +13.6 — gap of 13 pts favours CHO, but CHO is on a 2-game losing streak and 1.88 is below spread floor of 1.80 (exactly at boundary). NYK without stars makes this unusual — books pricing 13.5 spread with NYK fully gutted. No reliable ML pick. Spread insufficient confidence given CHO recent streak concern.",
+        "ml_home": 6.75,
+        "ml_away": 1.15,
+        "decision": "rejected"
+      },
+      {
+        "match": "Xfinity Mobile Arena vs Milwaukee Bucks",
+        "reason": "PHI ML 1.11 — outside target range 1.60-2.50. PHI lacks Joel Embiid (OUT) and Johni Broome (OUT). MIL missing Giannis (OUT hyperextension), Kuzma (OUT), Porter Jr (OUT), Portis (OUT) — MIL franchise player absent and team confirmed tank-watch. MIL ML 8.60 — extreme odds reflect gutted roster. No reliable edge on either side.",
+        "ml_home": 1.11,
+        "ml_away": 8.6,
+        "decision": "rejected"
+      },
+      {
+        "match": "Scotiabank Arena vs Brooklyn Nets",
+        "reason": "TOR ML 1.01 / BKN ML 32.0 — extreme line anomaly. TOR -23.5 spread at 1.95 within range but 23.5-point spread is too extreme to forecast reliably. BKN confirmed tank team (L15 -32.3) but extreme spreads carry unpredictable cover risk. Flagging ML as anomaly; spread not drafted due to extreme margin uncertainty.",
+        "ml_home": 1.01,
+        "ml_away": 32.0,
+        "decision": "anomaly"
+      },
+      {
+        "match": "American Airlines Center vs Chicago Bulls",
+        "reason": "DAL ML 1.42 — outside target range 1.60-2.50. CHI ML 3.15 — within range. CHI L15 -36.7 vs DAL L15 -30.4 — both teams are bad in recent form; neither offers a positive edge. CHI confirmed tank-watch (31-50, L10 2-8). DAL confirmed tank (25-56). Multiple CHI players OUT (Buzelis, Collins, Giddey, Okoro, Richards). DAL missing Kyrie Irving, Lively, several Doubtfuls. No reliable edge betting on either tanking team.",
+        "ml_home": 1.42,
+        "ml_away": 3.15,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Toyota Center vs Memphis Grizzlies",
+        "reason": "HOU ML 1.14 — outside target range. MEM ML 7.07 — extreme. MEM confirmed tank (25-56, L10 1-9, L15 -56.4). HOU missing Durant, Sengun, VanVleet, Adams, Thompson, Smith Jr. — franchise duo absent. HOU L15 +33.9 but that is with a depleted roster signal. No reliable spread edge: HOU -12.5 at 1.88 with HOU fully depleted but MEM in extreme tank. Spread unreliable with multiple unknown starters.",
+        "ml_home": 1.14,
+        "ml_away": 7.07,
+        "decision": "rejected"
+      },
+      {
+        "match": "Target Center vs New Orleans Pelicans",
+        "reason": "MIN ML 1.39 — outside target range. NOP ML 3.31 — within range. MIN missing Edwards, Gobert, Randle, Conley, Dosunmu, Anderson, Hyland (all OUT) — virtually entire core absent. MIN L15 -2.9 reflects depleted state. NOP ML 3.31 vs a MIN without stars is interesting, but NOP (26-55, L10 1-9, L15 -31.0) is itself a tank-tier team in terrible recent form. Betting NOP over gutted MIN is betting one tanker over another. O/U 244.5: extreme pricing (O:3.46/U:1.37) — anomalous line. No reliable edge.",
+        "ml_home": 1.39,
+        "ml_away": 3.31,
+        "decision": "anomaly"
+      },
+      {
+        "match": "Paycom Center vs Phoenix Suns",
+        "reason": "OKC ML 1.45 — outside target range 1.60-2.50. PHX ML 3.02 — within range. OKC confirmed to be missing SGA, Hartenstein, Caruso (all OUT per NBA official today). OKC without SGA and Hartenstein is significantly weaker. PHX L15 -0.6 is essentially flat; season NetRtg +1.0. PHX missing Booker (OUT), Brooks (OUT), Allen (OUT) — severely depleted. L15 OKC +42.8 vs PHX -0.6 even without stars shows OKC depth. PHX ML at 3.02 is tempting but PHX is also missing key players. Confidence insufficient to back PHX at 3.02 against even a depleted OKC with elite depth.",
+        "ml_home": 1.45,
+        "ml_away": 3.02,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Frost Bank Center vs Denver Nuggets",
+        "reason": "SAS ML 1.22 — outside target range. DEN ML 4.98 — within range. DEN L15 +30.1 and on W11 streak (53-28 overall). SAS L15 +46.2 — elite recent form and home. Victor Wembanyama Questionable (rib soreness) — FRANCHISE PLAYER, applying confidence -15 per rules. SAS without Wemby loses enormous edge; with Wemby they're a top-3 team. DEN missing Murray, Gordon, Braun, Hardaway Jr., Johnson — severely depleted. Jokic status: NOT on injury list — Jokic appears active. DEN with Jokic only vs SAS with/without Wemby creates uncertain matchup. DEN ML at 4.98 is interesting but Wemby Questionable complicates it. If Wemby plays, SAS is dominant; if he sits, DEN with Jokic has a shot. Cannot build bet thesis on Wemby being out (confidence -25 per rules). No reliable edge.",
+        "ml_home": 1.22,
+        "ml_away": 4.98,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Crypto.com Arena vs Utah Jazz",
+        "reason": "LAL ML 1.12 — outside target range. UTA ML 7.65 — extreme. LAL missing Doncic (OUT), Reaves (OUT), Hayes Questionable, LeBron Questionable. LAL record (52-29) inflated per skills. UTA confirmed tank (22-59, L10 1-9, L15 -37.4) — missing Collier, Filipowski, George, Harkless, JJJ, Kessler. UTA is a shell of a team. Spread: LAL -14.5 at 2.0 — within range, but LAL also missing stars (LeBron Questionable) and UTA is fully gutted. Cannot reliably assess cover with LeBron GTD and LAL franchise players missing. No pick.",
+        "ml_home": 1.12,
+        "ml_away": 7.65,
+        "decision": "rejected"
+      },
+      {
+        "match": "Intuit Dome vs Golden State Warriors",
+        "reason": "LAC ML 1.47 — outside target range. GSW ML 2.96 — within range. LAC stats unavailable (advanced stats missing). GSW tank-watch confirmed (37-44, L10 4-6, L15 -17.1). LAC missing Beal (OUT), Jackson (OUT), Leonard Questionable (ankle). GSW missing Butler (OUT), Moody (OUT), Cryer (OUT), Green Questionable. LAC advanced stats unavailable — skills rule: do not bet spreads or totals without advanced stats. GSW ML at 2.96 vs a LAC with missing stars and unavailable stats: GSW L15 -17.1 shows poor recent form even for a tank-watch team. Cannot back GSW confidently. No pick.",
+        "ml_home": 1.47,
+        "ml_away": 2.96,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Moda Center vs Sacramento Kings",
+        "reason": "POR ML 1.08 — outside target range. SAC ML 10.70 — extreme. SAC confirmed tank (22-59, L15 -28.8). POR play-in motivated (41-40) and home. However POR ML 1.08 is outside the target range of 1.60-2.50. Spread: POR -16.5 at 1.96 — within range, but 16.5 is extreme. POR missing Lillard (OUT), Grant (OUT) — two key pieces. POR L15 +29.9 is strong but their star absences make 16.5 spread unreliable. Not enough confidence to draft spread with POR depleted and SAC at extreme odds.",
+        "ml_home": 1.08,
+        "ml_away": 10.7,
+        "decision": "rejected"
+      }
+    ],
+    "report": "NBA official injury feed confirmed (30 teams) — full confidence rules apply. Two picks drafted from a 15-game slate. Key theme: multiple games disqualified due to ML odds outside 1.60–2.50 target range (many blowout-expected matchups), and several games corrupted by mass franchise player absences (CLE, HOU, LAL, MIN, NYK, OKC all missing entire cores). Best edges found: IND +13.5 at home vs locked-seed DET missing Duren (spread pick); ATL ML at 2.40 backed by extreme L15 form divergence vs confirmed-cold MIA. Two line anomalies flagged (BKN/TOR extreme ML, WAS/CLE extreme O/U, NOP/MIN extreme O/U). Pace data available this session — O/U pace signals active but no total picks cleared confidence thresholds.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 14488,
+    "tokens_out": 8710,
+    "cost_usd": 0.17411400000000002
   }
 ]
