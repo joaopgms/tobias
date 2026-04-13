@@ -44,6 +44,21 @@ Play-in specific rules (applies only during play-in phase):
 - Teams playing in the play-in have been motivated all season — their regular season L15 form is relevant.
 - Home court in play-in is meaningful — home team has historically covered at higher rate in play-in games.
 
+## SECTION:h2h_playoff
+Regular season H2H as a playoff signal — rules and current data:
+
+**How to use H2H in playoffs:**
+- 3-1 or 4-0 regular season H2H dominance → confidence +8 on the dominant team.
+  Apply in Games 1-3 of series only — coaching adjustments diminish this edge by Game 4+.
+- 2-2 split → neutral, no adjustment.
+- 1-3 or 0-4 → confidence +8 on the team that dominated (inverse applies symmetrically).
+- After Game 3 of series: ignore H2H entirely — live series data is more predictive.
+- If H2H games were played with significantly different rosters (key player absent):
+  flag and discount — those results don't reflect the current matchup.
+
+**Analyst updates current H2H records here each series:**
+[Analyst populates regular season H2H records for each active playoff series on first playoff run.]
+
 ## SECTION:l15_caveat
 L15 NetRtg caveat for playoffs:
 - Regular season margins against eliminated/tanking opponents are less predictive in playoffs.

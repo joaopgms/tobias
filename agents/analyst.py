@@ -362,6 +362,9 @@ Sections to update:
 - series_context: Current series scores (e.g. "OKC leads SAS 2-1 — Game 4 tonight at OKC").
   Include home court team for the series and which team has the advantage.
 - elimination_flags: Any team facing elimination (down 3-0 or 3-1 in a series, or play-in loser-out game).
+- h2h_playoff: Regular season H2H records for each active series. Format: "OKC vs SAS: OKC 3-1 (regular season)".
+  Flag if any H2H games were played without key players — discount those results.
+  Clear completed series and add new ones as bracket advances.
 - playoff_rest: Update if rest days between games change (e.g. 3-day break before a Game 5).
 - no_tanking: Keep as-is — no tanking exists in playoffs.
 DO NOT patch tanking_teams or b2b_rules in scout_skills during {phase_label} — they are irrelevant.
