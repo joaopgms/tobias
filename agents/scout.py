@@ -20,7 +20,7 @@ import logging
 from datetime import datetime, date, timezone
 
 from core.llm import call_llm, call_llm_full, extract_tag, agent_model_name
-from core.espn import fetch_scoreboard, fetch_injuries, fetch_standings, fetch_first_game_time_utc, fetch_advanced_stats, format_advanced_stats_for_prompt
+from core.espn import fetch_scoreboard, fetch_injuries, fetch_standings, fetch_first_game_time_utc, fetch_advanced_stats, format_advanced_stats_for_prompt, fetch_season_phase
 from core.nba_injuries import fetch_official_nba_injuries
 from core.odds import fetch_betano_nba_odds, format_odds_for_prompt, odds_available, get_odds_failure_reasons
 from core.validators import validate_all_drafts, ValidationError
@@ -46,15 +46,29 @@ def _build_scout_prompt(skills: str, games_text: str, odds_text: str,
                          injuries_text: str, standings_text: str,
                          advanced_stats: str,
                          injuries_source: str,
-                         state: dict, today: str) -> str:
+                         state: dict, today: str,
+                         season_phase: str = "regular",
+                         playoff_context: str = "") -> str:
     bankroll = state["bankroll"]
     season   = state["season"]
     game_n   = state["game"]
 
+    is_postseason = season_phase in ("playoffs", "playin")
+    phase_label = {"regular": "Regular Season", "playin": "Play-In Tournament",
+                   "playoffs": "Playoffs", "preseason": "Preseason"}.get(season_phase, season_phase)
+
+    # Inject playoff context block instead of tanking/b2b when in postseason
+    playoff_block = ""
+    if is_postseason and playoff_context:
+        playoff_block = f"""
+## PLAYOFF / PLAY-IN CONTEXT (replaces tanking and B2B rules this phase)
+{playoff_context}
+"""
+
     return f"""## YOUR SKILLS (follow these criteria exactly)
 {skills}
-
-## TODAY: {today} | Season: {season} | Game: {game_n}
+{playoff_block}
+## TODAY: {today} | Season: {season} | Game: {game_n} | Phase: {phase_label}
 ## BANKROLL: €{bankroll:.2f}
 
 ## TONIGHT'S NBA SLATE
@@ -220,6 +234,15 @@ def run(store) -> None:
     if not skills:
         log.warning("Scout: scout_skills.md is empty — using defaults")
 
+    # ── 3b. Season phase + playoff context ────────────────────────────────────
+    season_phase = fetch_season_phase()
+    playoff_context = ""
+    if season_phase in ("playoffs", "playin"):
+        playoff_context = store.read_md("playoff_context") or ""
+        log.info(f"Scout: season phase={season_phase} — playoff context loaded ({len(playoff_context)} chars)")
+    else:
+        log.info(f"Scout: season phase={season_phase} — regular season mode")
+
     # ── 4. Fetch data ─────────────────────────────────────────────────────────
     log.info("Scout: fetching NBA data…")
     games        = fetch_scoreboard()
@@ -304,7 +327,9 @@ def run(store) -> None:
             SCOUT_SYSTEM,
             _build_scout_prompt(skills, games_str, odds_str, injuries_str,
                                  standings_str, adv_str,
-                                 injuries_source, state, today),
+                                 injuries_source, state, today,
+                                 season_phase=season_phase,
+                                 playoff_context=playoff_context),
             max_tokens=14000,
             agent="scout",
         )
@@ -332,7 +357,9 @@ def run(store) -> None:
         log.error("Scout: <draft_picks> tag missing — attempting retries")
         prompt_full = _build_scout_prompt(skills, games_str, odds_str, injuries_str,
                                            standings_str, adv_str,
-                                           injuries_source, state, today)
+                                           injuries_source, state, today,
+                                           season_phase=season_phase,
+                                           playoff_context=playoff_context)
         prompt_minimal = (
             f"You are the Scout agent. Today: {today} | Bankroll: €{state['bankroll']:.2f}\n"
             f"Output ONLY these XML tags — nothing else before or after:\n\n"

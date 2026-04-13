@@ -55,17 +55,29 @@ def _build_commit_prompt(skills: str, draft_picks: list, rejected_games: list,
                           injuries_text: str, injuries_source: str,
                           netrtg_l15_text: str, standings_text: str,
                           adv_stats_text: str,
-                          state: dict, today: str) -> str:
+                          state: dict, today: str,
+                          season_phase: str = "regular",
+                          playoff_context: str = "") -> str:
     bankroll = state["bankroll"]
     now_iso  = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    is_postseason = season_phase in ("playoffs", "playin")
+    phase_label = {"regular": "Regular Season", "playin": "Play-In Tournament",
+                   "playoffs": "Playoffs", "preseason": "Preseason"}.get(season_phase, season_phase)
+    playoff_block = ""
+    if is_postseason and playoff_context:
+        playoff_block = f"""
+## PLAYOFF / PLAY-IN CONTEXT (replaces tanking and B2B rules this phase)
+{playoff_context}
+"""
 
     picks_json     = json.dumps(draft_picks, separators=(',', ':'))
     rejected_json  = json.dumps(rejected_games, separators=(',', ':')) if rejected_games else "[]"
 
     return f"""## YOUR SKILLS (follow these criteria exactly)
 {skills}
-
-## NOW: {now_iso} | Bankroll: €{bankroll:.2f}
+{playoff_block}
+## NOW: {now_iso} | Bankroll: €{bankroll:.2f} | Phase: {phase_label}
 
 ## TONIGHT'S FULL SLATE
 {games_text}
@@ -251,6 +263,16 @@ def run(store, force: bool = False) -> None:
     # ── 4. Load skills ────────────────────────────────────────────────────────
     skills = store.read_md("commit_skills")
 
+    # ── 4b. Season phase + playoff context ────────────────────────────────────
+    from core.espn import fetch_season_phase
+    season_phase = fetch_season_phase()
+    playoff_context = ""
+    if season_phase in ("playoffs", "playin"):
+        playoff_context = store.read_md("playoff_context") or ""
+        log.info(f"Commit: season phase={season_phase} — playoff context loaded")
+    else:
+        log.info(f"Commit: season phase={season_phase} — regular season mode")
+
     # ── 5. Fetch live data ────────────────────────────────────────────────────
     log.info("Commit: fetching live odds + injuries…")
     odds      = fetch_betano_nba_odds()
@@ -307,7 +329,9 @@ def run(store, force: bool = False) -> None:
                                   games_str, odds_str,
                                   injuries_str, injuries_source,
                                   netrtg_l15_str, standings_str,
-                                  adv_str, state, today),
+                                  adv_str, state, today,
+                                  season_phase=season_phase,
+                                  playoff_context=playoff_context),
             max_tokens=12000,
             agent="commit",
         )

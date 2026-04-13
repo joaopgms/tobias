@@ -24,7 +24,7 @@ import logging
 from datetime import datetime, date, timezone
 
 from core.llm import call_llm, call_llm_full, call_llm_full, extract_tag, agent_model_name
-from core.espn import fetch_standings, fetch_injuries, fetch_advanced_stats, fetch_franchise_player_statuses
+from core.espn import fetch_standings, fetch_injuries, fetch_advanced_stats, fetch_franchise_player_statuses, fetch_season_phase
 
 log = logging.getLogger(__name__)
 
@@ -339,11 +339,54 @@ def _build_analyst_prompt(stats_block: str, milestone_instructions: str,
                            injuries_text: str, advanced_stats: str,
                            franchise_status: str,
                            scout_content: str, commit_content: str,
-                           analyst_rules: str = "") -> str:
+                           analyst_rules: str = "",
+                           season_phase: str = "regular",
+                           playoff_context: str = "") -> str:
+
+    is_postseason = season_phase in ("playoffs", "playin")
+    phase_label = {"regular": "Regular Season", "playin": "Play-In Tournament",
+                   "playoffs": "Playoffs", "preseason": "Preseason"}.get(season_phase, season_phase)
+
+    playoff_section = ""
+    playoff_patch_instructions = ""
+    playoff_output_field = ""
+    if is_postseason:
+        playoff_section = f"""
+## CURRENT playoff_context.md
+{playoff_context or "(empty — populate this session)"}
+"""
+        playoff_patch_instructions = f"""
+## PLAYOFF CONTEXT PATCHES (PRIORITY — update every session during {phase_label})
+You MUST update playoff_context.md every session during playoffs/play-in.
+Sections to update:
+- series_context: Current series scores (e.g. "OKC leads SAS 2-1 — Game 4 tonight at OKC").
+  Include home court team for the series and which team has the advantage.
+- elimination_flags: Any team facing elimination (down 3-0 or 3-1 in a series, or play-in loser-out game).
+- playoff_rest: Update if rest days between games change (e.g. 3-day break before a Game 5).
+- no_tanking: Keep as-is — no tanking exists in playoffs.
+DO NOT patch tanking_teams or b2b_rules in scout_skills during {phase_label} — they are irrelevant.
+DO patch franchise_player_rules — injuries still matter critically in playoffs.
+"""
+        playoff_output_field = """
+  "playoff_context_patches": [
+    {
+      "section": "section_name",
+      "action": "replace",
+      "new_content": "full replacement text for this section",
+      "reason": "one sentence"
+    }
+  ],"""
+
+    regular_patch_note = "" if is_postseason else "- Always update tanking_teams and franchise_player_rules if data changed"
+    b2b_note = "" if is_postseason else "- b2b_rules: B2B impact rules. Only change with performance evidence (5+ B2B bets settled)."
+    tanking_note = "" if is_postseason else "- tanking_teams: Confirmed tanks, tank-watch, hot streaks. Update every session with standings."
+
     return f"""## YOUR RULES (from analyst_rules.md — follow exactly)
 {analyst_rules}
 
 ---
+
+## SEASON PHASE: {phase_label}
 
 ## PERFORMANCE STATS (pre-computed — trust these numbers)
 {stats_block}
@@ -366,22 +409,22 @@ def _build_analyst_prompt(stats_block: str, milestone_instructions: str,
 
 ## CURRENT commit_skills.md
 {commit_content}
-
+{playoff_section}
 ---
 
 ## NOW
 You maintain two skills files that govern Scout (14:00 daily) and Commit (pre tip-off).
 You have two jobs:
-1. Keep factual data current — tanking teams, franchise player absences, hot/cold streaks, standings
+1. Keep factual data current — franchise player absences, hot/cold streaks, standings{", series scores and elimination flags" if is_postseason else ", tanking teams"}
 2. When performance data exists — connect win/loss patterns to specific sections and tighten rules
-
+{playoff_patch_instructions}
 ## SCOUT SKILLS SECTIONS YOU CAN PATCH
 - odds_targets: ML/spread/O-U target ranges. Only change with strong market evidence.
 - priority_stats: Scouting priority order including line anomaly check. Only restructure with evidence.
 - ev_requirement: EV floor (currently 0.05). Only tighten/loosen based on settled bet patterns.
 - franchise_player_rules: Current player absences + confidence adjustments. Update every session with injury feed.
-- tanking_teams: Confirmed tanks, tank-watch, hot streaks. Update every session with standings.
-- b2b_rules: B2B impact rules. Only change with performance evidence (5+ B2B bets settled).
+{tanking_note}
+{b2b_note}
 - confidence_staking: Staking tiers. Only change after 20+ settled bets show a pattern.
 - selectivity: Draft criteria. Only tighten/loosen based on pick quality evidence.
 
@@ -397,7 +440,7 @@ You have two jobs:
 ## PERFORMANCE FEEDBACK RULE
 If settled bets exist: for each losing pattern (3+ losses on same signal type), identify which section
 governed those picks and propose a targeted tightening. Be specific — cite the losing picks.
-If no settled bets: focus only on factual data updates (tanking_teams, franchise_player_rules).
+If no settled bets: focus only on factual data updates (franchise_player_rules{", series context" if is_postseason else ", tanking_teams"}).
 Never patch strategic sections (ev_requirement, confidence_staking, b2b_rules) without performance evidence.
 
 ## STATISTICAL EVIDENCE STANDARD
@@ -406,7 +449,7 @@ Use the pre-computed PERFORMANCE STATS above when referencing numbers — do not
 - Milestone run (flagged above): full systematic review across all dimensions required.
   confidence gate raises to 0.85 for any strategic section. Every patch must cite a specific stat row.
   Add a milestone summary to analyst_notes: which signals are working, which aren't, what changed.
-- Checkpoint run (flagged above): read-only. Only patch tanking_teams and franchise_player_rules.
+- Checkpoint run (flagged above): read-only. Only patch franchise_player_rules{" and series_context" if is_postseason else " and tanking_teams"}.
   Note patterns in analyst_notes for future reference. Do NOT touch strategic sections.
 
 Output ONLY valid JSON in this exact structure:
@@ -427,7 +470,7 @@ Output ONLY valid JSON in this exact structure:
       "new_content": "full replacement text for this section",
       "reason": "one sentence explaining the evidence for this change"
     }}
-  ],
+  ],{playoff_output_field}
   "analyst_notes": "2-3 sentences summarising today's key findings and macro NBA trends",
   "no_change_reason": "if no patches needed, explain why — otherwise leave empty",
   "intelligence_gaps": [
@@ -445,13 +488,13 @@ Rules:
 - "new_content" must be the COMPLETE replacement text (not a diff)
 - Only patch what the evidence supports — 0 patches is valid
 - Keep new_content compact — these files are fed to agents as context tokens
-- Always update tanking_teams and franchise_player_rules if data changed
+- {regular_patch_note if not is_postseason else "Always update franchise_player_rules and playoff_context series_context every session"}
 - Never patch commit_staking without also patching scout confidence_staking
 - intelligence_gaps: run through this checklist every session:
     1. Was there a line anomaly that advanced stats would have explained?
     2. Is there a stat trend (pace, DefRtg cluster, injury pattern) my agents don't track yet?
     3. Did any section produce a bad outcome this week that evidence now contradicts?
-    4. Are there upcoming schedule patterns (B2B clusters, playoff seeding races) worth noting?
+    4. {"Are there series momentum patterns or elimination game edges worth tracking?" if is_postseason else "Are there upcoming schedule patterns (B2B clusters, playoff seeding races) worth noting?"}
     5. Is the injury feed coverage adequate, or do I need a better source for any team?
   Output [] if nothing genuinely worth flagging. Quality over quantity.
 """
@@ -569,11 +612,18 @@ def run(store) -> None:
     adv_str        = _advanced_stats_text(adv_stats)
 
     # ── 3. Load current skills files ──────────────────────────────────────────
-    scout_content  = store.read_md("scout_skills")
-    commit_content = store.read_md("commit_skills")
-    analyst_rules  = store.read_md("analyst_rules")
+    scout_content    = store.read_md("scout_skills")
+    commit_content   = store.read_md("commit_skills")
+    analyst_rules    = store.read_md("analyst_rules")
     if not analyst_rules:
         log.warning("Analyst: analyst_rules.md missing — using minimal system prompt")
+
+    # ── 3b. Season phase + playoff context ────────────────────────────────────
+    season_phase    = fetch_season_phase()
+    playoff_context = ""
+    if season_phase in ("playoffs", "playin"):
+        playoff_context = store.read_md("playoff_context") or ""
+        log.info(f"Analyst: season phase={season_phase} — playoff context loaded")
 
     # ── 4. Parse current version numbers ──────────────────────────────────────
     scout_meta,  _ = _parse_frontmatter(scout_content)
@@ -602,10 +652,12 @@ def run(store) -> None:
     user   = _build_analyst_prompt(stats_block, milestone_instructions,
                                     standings_str, injuries_str,
                                     adv_str, franchise_str, scout_content,
-                                    commit_content, analyst_rules)
+                                    commit_content, analyst_rules,
+                                    season_phase=season_phase,
+                                    playoff_context=playoff_context)
     state["agent_models"] = state.get("agent_models", {})
     state["agent_models"]["analyst"] = llm
-    llm_result = call_llm_full(system, user, max_tokens=8000, agent="analyst")
+    llm_result = call_llm_full(system, user, max_tokens=10000, agent="analyst")
     raw = llm_result.text
 
     # ── 6. Parse LLM response ─────────────────────────────────────────────────
@@ -637,21 +689,22 @@ def run(store) -> None:
         store.write_data_js(state, history, config=store.read_config())
         return
 
-    scout_patches      = result.get("scout_patches", [])
-    commit_patches     = result.get("commit_patches", [])
-    analyst_notes      = result.get("analyst_notes", "")
-    no_change          = result.get("no_change_reason", "")
-    intelligence_gaps  = result.get("intelligence_gaps", [])
+    scout_patches          = result.get("scout_patches", [])
+    commit_patches         = result.get("commit_patches", [])
+    playoff_context_patches = result.get("playoff_context_patches", [])
+    analyst_notes          = result.get("analyst_notes", "")
+    no_change              = result.get("no_change_reason", "")
+    intelligence_gaps      = result.get("intelligence_gaps", [])
     if intelligence_gaps:
         log.info(f"Analyst: {len(intelligence_gaps)} intelligence gap(s) identified")
         for g in intelligence_gaps:
             log.info(f"  GAP: {g.get('gap','?')[:100]}")
 
-    log.info(f"Analyst: {len(scout_patches)} scout patches, {len(commit_patches)} commit patches")
+    log.info(f"Analyst: {len(scout_patches)} scout patches, {len(commit_patches)} commit patches, {len(playoff_context_patches)} playoff patches")
 
     # ── 7. Apply patches ──────────────────────────────────────────────────────
-    scout_changed = commit_changed = False
-    scout_applied = commit_applied = []
+    scout_changed = commit_changed = playoff_changed = False
+    scout_applied = commit_applied = playoff_applied = []
 
     if scout_patches:
         new_scout, scout_applied = _apply_patches(
@@ -668,6 +721,16 @@ def run(store) -> None:
             store.write_md("commit_skills", new_commit,
                            f"analyst: patch commit_skills v{commit_ver+1} ({today})")
             commit_changed = True
+
+    if playoff_context_patches and season_phase in ("playoffs", "playin"):
+        playoff_meta, _ = _parse_frontmatter(playoff_context)
+        playoff_ver = int(playoff_meta.get("version", 1))
+        new_playoff, playoff_applied = _apply_patches(
+            playoff_context, playoff_context_patches, playoff_ver + 1, now_iso, llm)
+        if playoff_applied:
+            store.write_md("playoff_context", new_playoff,
+                           f"analyst: patch playoff_context v{playoff_ver+1} ({today})")
+            playoff_changed = True
 
     # ── 8. Write analyst_notes.md ─────────────────────────────────────────────
     # Persist milestone so it doesn't retrigger tomorrow
@@ -693,13 +756,16 @@ milestone: {milestone_type or "daily"} ({total_settled} bets)
 ## Performance Stats
 {stats_block}
 
-{"## No changes this run" + chr(10) + no_change if no_change and not scout_applied and not commit_applied else ""}
+{"## No changes this run" + chr(10) + no_change if no_change and not scout_applied and not commit_applied and not playoff_applied else ""}
 
 ## Scout patches applied
 {chr(10).join(f"- [{p['section']}] {p['reason']}" for p in scout_applied) or "None"}
 
 ## Commit patches applied
 {chr(10).join(f"- [{p['section']}] {p['reason']}" for p in commit_applied) or "None"}
+
+## Playoff context patches applied
+{chr(10).join(f"- [{p['section']}] {p['reason']}" for p in playoff_applied) or "None (regular season or no updates needed)"}
 
 ## Intelligence gaps identified
 {chr(10).join(f"- **{g.get('gap','')}** — {g.get('why','')} → {g.get('suggestion','')}" for g in intelligence_gaps) or "None"}
@@ -715,6 +781,7 @@ milestone: {milestone_type or "daily"} ({total_settled} bets)
     _append_audit(store, now_iso, llm, error="",
                   scout_patches=scout_applied,
                   commit_patches=commit_applied,
+                  playoff_patches=playoff_applied,
                   notes=analyst_notes,
                   no_change=no_change,
                   intelligence_gaps=intelligence_gaps,
@@ -733,6 +800,7 @@ milestone: {milestone_type or "daily"} ({total_settled} bets)
 
 def _append_audit(store, ts: str, llm: str, error: str = "",
                   scout_patches: list = None, commit_patches: list = None,
+                  playoff_patches: list = None,
                   notes: str = "", no_change: str = "",
                   intelligence_gaps: list = None,
                   bankroll: float = 0, net_pnl: float = 0,
@@ -751,6 +819,7 @@ def _append_audit(store, ts: str, llm: str, error: str = "",
         "perf_stats":       perf_stats or {},
         "scout_patches":    scout_patches or [],
         "commit_patches":   commit_patches or [],
+        "playoff_patches":  playoff_patches or [],
         "notes":            notes,
         "no_change_reason": no_change,
         "intelligence_gaps": intelligence_gaps or [],

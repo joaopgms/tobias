@@ -30,6 +30,40 @@ def _get(url: str, timeout: int = 15) -> dict:
         return json.loads(r.read().decode())
 
 
+# ── Season phase ───────────────────────────────────────────────────────────────
+
+# ESPN season type IDs → phase string
+_SEASON_TYPE_MAP = {
+    "1": "preseason",
+    "2": "regular",
+    "3": "playoffs",
+    "5": "playin",
+}
+
+def fetch_season_phase() -> str:
+    """
+    Returns current NBA season phase: 'regular', 'playin', 'playoffs', or 'preseason'.
+    Reads from ESPN scoreboard leagues[0].season.type — same endpoint already used.
+    Tries today, yesterday, tomorrow to handle off-days with no games scheduled.
+    Falls back to 'regular' on any error.
+    """
+    for delta in [0, -1, 1, -2, 2]:
+        d = (date.today() + timedelta(days=delta)).strftime("%Y%m%d")
+        url = f"https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates={d}"
+        try:
+            data = _get(url)
+            leagues = data.get("leagues", [])
+            if leagues:
+                type_id = str(leagues[0].get("season", {}).get("type", {}).get("id", "2"))
+                phase = _SEASON_TYPE_MAP.get(type_id, "regular")
+                log.info(f"ESPN season phase: {phase} (type_id={type_id}, date={d})")
+                return phase
+        except Exception:
+            continue
+    log.warning("ESPN season phase: could not determine — defaulting to 'regular'")
+    return "regular"
+
+
 # ── Scoreboard ─────────────────────────────────────────────────────────────────
 
 def fetch_scoreboard(target_date: date | None = None) -> list[dict]:
