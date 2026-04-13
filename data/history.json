@@ -23,9 +23,9 @@
           "game": 2,
           "started_at": "2026-04-05T10:44:07.102344+00:00",
           "bankroll_start": 1000.0,
-          "wins": 5,
+          "wins": 6,
           "losses": 3,
-          "peak_bankroll": 1526.6,
+          "peak_bankroll": 1535.6,
           "total_bets": 9
         }
       ]
@@ -1045,10 +1045,10 @@
             "Anthony Edwards",
             "Rudy Gobert"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null
+          "result": "WON",
+          "returned": 392.0,
+          "pnl": 192.0,
+          "settled_at": "2026-04-13T11:18:22.259493+00:00"
         }
       ],
       "summary": "Day 2026-04-12 commit — 1 bets totalling €200.00. 0 cancelled. Bankroll: €1343.60 → €1143.60."
