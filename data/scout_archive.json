@@ -431,5 +431,35 @@
     "tokens_in": 14488,
     "tokens_out": 8710,
     "cost_usd": 0.17411400000000002
+  },
+  {
+    "ts": "2026-04-14T17:19:08.606633+00:00",
+    "date": "2026-04-14",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_onexbet",
+    "draft_count": 0,
+    "picks": [],
+    "rejected": [
+      {
+        "match": "Charlotte Hornets vs Miami Heat",
+        "reason": "Charlotte ML (1.45) fails EV test: EV = (0.72 × 1.45) - 1 = 0.044 < 0.05 minimum. Odds also below ML floor of 1.60. Spread: Charlotte -5.5 at 1.92 evaluated — confidence base ~65 (strong L15 gap of +16.7 pts, home court, superior NetRtg), but pace mismatch of 6.6 pts (CHA 96.8 vs MIA 103.4) requires confidence ≥70 per rules; base lands at ~65 pre-adjustments, below threshold. No franchise player injuries for either team (Jovic/Smith not franchise players). EV on spread: (0.65 × 1.92) - 1 = 0.248 — would pass EV, but confidence below 70 required floor for pace mismatch situation. Miami ML at 3.0 is above the 2.50 target ceiling; EV = (0.28 × 3.0) - 1 = -0.16, negative. No pick qualifies.",
+        "ml_home": 1.45,
+        "ml_away": 3.0,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Phoenix Suns vs Portland Trail Blazers",
+        "reason": "Portland ML (2.33) blocked by franchise_player_rules: Damian Lillard OUT per NBA official injury report tonight — 'do NOT bet that team to win unless opponent also missing a star.' Phoenix has no franchise player out (Allen is Questionable but not franchise player). Portland ML cannot be drafted. Phoenix ML at 1.69: L15 NetRtg gap strongly favours Portland (+30.4 vs +8.6, gap 21.8 pts), meaning Phoenix has inferior recent form despite home court. Portland's L15 dominance makes Phoenix ML a fade candidate, not a back. Spread PHX -3.5 at 2.01: With Lillard OUT, Portland weakened significantly — but Grant also Questionable. Without Lillard, Portland's recent form edge may not apply. Cannot reliably assess Portland's true strength with franchise player absent; spread confidence cannot be established. O/U 216.5: Pace data unreliable (CHA 96.8 pace not relevant; PHX 97.2 vs POR 100.5 — mismatch 3.3, under threshold, but OffRtg/DefRtg both below 116/115 range — lean under signals present but Lillard absence disrupts pace modelling). No pick qualifies with confidence and EV thresholds met given Lillard OUT.",
+        "ml_home": 1.69,
+        "ml_away": 2.33,
+        "decision": "no_edge"
+      }
+    ],
+    "report": "Two-game play-in slate tonight. Injury feed source is NBA Official (full confidence rules apply). Zero picks drafted after full evaluation of all markets. Charlotte vs Miami: Charlotte ML at 1.45 fails the EV minimum (0.044 < 0.05) and falls below the 1.60 ML odds floor; the spread at -5.5 shows a strong L15 edge (Charlotte +27.7 vs Miami +11.0) but the 6.6-point pace mismatch requires spread confidence ≥70, which cannot be reached after adjustments. Phoenix vs Portland: Damian Lillard listed OUT (injury management) per NBA official report, triggering the franchise player rule that blocks betting Portland to win; without Lillard, Portland's extraordinary L15 form (+30.4) is compromised, and no Phoenix-side market offers sufficient edge given Portland's superior recent metrics. Pace data unavailable universally per feed. A 0-pick session is the correct outcome — no forced plays.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 10721,
+    "tokens_out": 2628,
+    "cost_usd": 0.071583
   }
 ]
