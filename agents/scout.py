@@ -148,7 +148,7 @@ def _games_text(games: list[dict]) -> str:
     lines = []
     for g in games:
         t = g.get("time", "")[:16]
-        lines.append(f"{g['away']} @ {g['home']}  |  {t} UTC  |  {g.get('venue','')}")
+        lines.append(f"{g['home']} vs {g['away']}  |  {t} UTC  |  {g.get('venue','')}")
     return "\n".join(lines)
 
 
@@ -652,13 +652,20 @@ def run(store) -> None:
     # from ESPN games and replace any venue reference with the correct team name.
     venue_to_team = {g.get("venue","").lower(): g["home"] for g in games if g.get("venue")}
     def _normalise_match(match_str: str) -> str:
-        parts = match_str.replace(" vs ", " @ ").split(" @ ")
-        if len(parts) == 2:
+        # Normalise to "HOME vs AWAY" (UI splits on ' vs ')
+        # Input may be "HOME vs AWAY", "AWAY @ HOME", or "VENUE vs AWAY" etc.
+        if " @ " in match_str:
+            # "AWAY @ HOME" format — flip to "HOME vs AWAY"
+            parts = match_str.split(" @ ", 1)
             away_part, home_part = parts[0].strip(), parts[1].strip()
-            home_norm = venue_to_team.get(home_part.lower(), home_part)
-            away_norm = venue_to_team.get(away_part.lower(), away_part)
-            return f"{away_norm} @ {home_norm}"
-        return match_str
+        elif " vs " in match_str:
+            parts = match_str.split(" vs ", 1)
+            home_part, away_part = parts[0].strip(), parts[1].strip()
+        else:
+            return match_str
+        home_norm = venue_to_team.get(home_part.lower(), home_part)
+        away_norm = venue_to_team.get(away_part.lower(), away_part)
+        return f"{home_norm} vs {away_norm}"
     for r in state["rejected_games"]:
         if "match" in r:
             r["match"] = _normalise_match(r["match"])
