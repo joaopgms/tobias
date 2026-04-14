@@ -9,16 +9,16 @@
   "net_pnl": 535.6,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-04-14T17:19:08.606633+00:00",
+  "last_updated": "2026-04-14T22:51:57.878291+00:00",
   "first_game_time": "2026-04-14T23:30:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
   "scout_updated_at": "2026-04-14T17:19:08.606633+00:00",
   "scout_odds_source": "theodds_onexbet",
-  "commit_status": "pending",
-  "commit_updated_at": "2026-04-12T21:26:02.727790+00:00",
-  "commit_date": "2026-04-12",
+  "commit_status": "done",
+  "commit_updated_at": "2026-04-14T22:51:57.878291+00:00",
+  "commit_date": "2026-04-14",
   "analyst_updated_at": "2026-04-14T11:56:01.213390+00:00",
   "settler_updated_at": "2026-04-14T11:04:48.110891+00:00",
   "agent_models": {
@@ -27,7 +27,7 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "Two-game play-in slate tonight. Injury feed source is NBA Official (full confidence rules apply). Zero picks drafted after full evaluation of all markets. Charlotte vs Miami: Charlotte ML at 1.45 fails the EV minimum (0.044 < 0.05) and falls below the 1.60 ML odds floor; the spread at -5.5 shows a strong L15 edge (Charlotte +27.7 vs Miami +11.0) but the 6.6-point pace mismatch requires spread confidence ≥70, which cannot be reached after adjustments. Phoenix vs Portland: Damian Lillard listed OUT (injury management) per NBA official report, triggering the franchise player rule that blocks betting Portland to win; without Lillard, Portland's extraordinary L15 form (+30.4) is compromised, and no Phoenix-side market offers sufficient edge given Portland's superior recent metrics. Pace data unavailable universally per feed. A 0-pick session is the correct outcome — no forced plays.",
+  "last_report": "## Commit Report — 2026-04-14T22:51:59Z\n\n### BANKROLL: €1,535.60 | Phase: Play-In Tournament\n\n---\n\n### Task 1 — Draft Pick Review\n\n**No draft picks were submitted by Scout.** The draft picks array was empty. Nothing to confirm or cancel.\n\n---\n\n### Task 2 — Late Scout Analysis\n\nEight games were evaluated in the late scout window. All eight were rejected. Key findings:\n\n---\n\n### REJECTED (Late Scout) — Charlotte Hornets -5.5 vs Miami Heat\n- **Odds at evaluation:** CHA ML 1.47 | MIA ML 2.93 | CHA -5.5 @ 1.94 | O/U 228.5 @ 1.95/1.97\n- **Reason:** CHA ML (1.47) below floor of 1.65; MIA ML (2.93) above 2.50 ceiling. Spread re-evaluated: CHA's L15 dominance (+27.7 vs MIA's +11.0, gap +16.7) is a strong signal, and home court in play-in adds value. However, pace mismatch of 6.6 points (CHA 96.8 vs MIA 103.4) triggers the mandatory ≥70 confidence requirement for spread picks. MIA as #9 seed is in maximum elimination desperation (win-or-go-home), which historically offsets the statistical spread edge — confidence caps at approximately 62, falling short of the 70 threshold. O/U 228.5 lacks sufficient directional signal without clear under/over thesis. No qualifying pick.\n\n---\n\n### REJECTED (Late Scout) — Phoenix Suns vs Portland Trail Blazers\n- **Odds at evaluation:** PHX ML 1.66 | POR ML 2.40 | PHX -3.5 @ 2.04/POR +3.5 @ 1.88 | O/U 216.5 @ 1.96\n- **Reason:** Lillard confirmed OUT (Injury Management). Franchise player rule blocks POR ML — cannot bet team to win with franchise player absent when opponent has no equivalent star out (Allen only Questionable for PHX, not a franchise player). PHX ML at 1.66 barely clears the floor but confidence is only ~42: POR's extraordinary L15 form (+30.4 vs PHX's +8.6, gap +21.8) suggests the roster beyond Lillard has been dominant; POR's maximum elimination desperation as #10 seed (+10 confidence per play-in rules) makes PHX covering difficult; PHX L10 is a mediocre 5-5. Under 216.5: base confidence 60 (Lillard's absence reduces POR scoring), but Grant's Questionable status requires mandatory -10 confidence adjustment → drops to 50. EV at 50 = (0.50 × 1.96) - 1 = -0.02, below the 0.05 minimum. Cannot confirm any line in this game.\n\n---\n\n### REJECTED (Late Scout) — Golden State Warriors @ LA Clippers (West Play-In)\n- **Reason:** LAC ML 1.53 below floor; GSW ML 2.71 above ceiling. LAC -4.5 at 1.88: L15 gap is overwhelming (+22.8 LAC advantage), but GSW's maximum elimination desperation as #9 seed road underdog (+10 per playoff_motivation rules) reduces achievable confidence for LAC spread to ~50, below the 60 minimum for new late picks. GSW's L3 losing streak partially counters the desperation boost. No qualifying pick.\n\n---\n\n### REJECTED (Late Scout) — Other Games (TOR@CLE, MIN@DEN, ATL@NYK, HOU@LAL, ORL@PHI)\n- **Common reasons:** Multiple data deficiencies block confident picks: (1) NBA official injury report is silent on all these teams — skills specifically warn top seeds like HOU, MIN, CLE, NYK have \"widespread roster-only OUT flags\"; (2) Series context is unknown — cannot apply closing-game caution (skills: \"Do NOT bet the team up 3-0 at short spread odds\") without knowing series score; (3) Line anomaly flagged for TOR@CLE: CLE priced at 1.34 (implied ~74.6%) despite TOR's superior L15 form (+23.7 vs +3.4), likely reflecting series momentum that we cannot verify; (4) Most ML prices are outside valid range (1.34, 1.45, 1.46, 1.47, 1.48 all below floor; 2.91, 2.93, 2.97, 3.00, 3.67 above ceiling). DEN -5.5 at 1.91 was the most statistically compelling (L15 gap +30.8, L10 10-0) but lacks injury data and series state to confirm safely.\n\n---\n\n### Task 3 — Final Commit\n\n**No bets committed tonight.**\n\n**Total stake committed: €0.00**\n**Bankroll remaining: €1,535.60**\n\n### Slate Summary\n\nTonight's two play-in games offered limited exploitable edges at commit time: the Charlotte-Miami spread was blocked by a pace mismatch rule requiring 70+ confidence that the statistical edge couldn't quite reach given Miami's maximum elimination desperation as the #9 seed, and the Phoenix-Portland game was fundamentally compromised by Lillard's confirmed absence (franchise player rules) combined with Grant's uncertain status dragging the Under thesis below EV minimums. The broader odds board showed several games with statistically interesting L15 gaps (notably Denver's +30.8 lead over Minnesota and Houston's elite +38.9 L15), but the absence of series context, injury data for top seeds, and potential load management scenarios meant none could clear the confidence and data quality thresholds required for late-phase commitment. Bankroll preserved at €1,535.60 for tomorrow's slate.",
   "draft_picks": [],
   "pending_bets": [],
   "settled_bets": [
@@ -232,39 +232,52 @@
       "decision": "no_edge"
     }
   ],
-  "late_scout_rejections": [],
+  "late_scout_rejections": [
+    {
+      "match": "Charlotte Hornets vs Miami Heat",
+      "reason": "CHA ML 1.47 below ML floor of 1.65. MIA ML 2.93 above 2.50 ceiling. CHA -5.5 spread at 1.94 re-evaluated: L15 gap (+16.7 pts) and home court are strong signals, but pace mismatch of 6.6 pts (CHA 96.8 vs MIA 103.4) requires spread confidence ≥ 70. Best achievable confidence ~62 after accounting for MIA elimination desperation (max win-or-go-home as #9 seed), which offsets the statistical edge. Cannot reach 70 threshold. O/U 228.5 at 1.95/1.97: insufficient directional signal with both teams offensive-capable and pace uncertainty. No qualifying pick."
+    },
+    {
+      "match": "Phoenix Suns vs Portland Trail Blazers",
+      "reason": "Lillard OUT confirmed (Injury Management) — franchise player rule blocks POR ML (2.40): cannot bet POR to win while franchise player is absent and opponent (PHX) has no equivalent star out. PHX ML 1.66 barely above floor but confidence for PHX only ~40-45 (POR elimination desperation +10 as #10 seed road underdog; POR L15 +30.4 vastly superior even accounting for Lillard absence; PHX L10 5-5; mediocre NetRtg). Well below 60 required for new picks. Under 216.5 at 1.96: base confidence 60 (Lillard OUT reduces POR scoring meaningfully), but Grant Questionable forces -10 standard adjustment → confidence 50, EV = (0.50 × 1.96) - 1 = -0.02, below 0.05 minimum. Cannot confirm. POR +3.5 at 1.88: franchise player absent (Lillard) compromises spread assessment; reliability of coverage threshold cannot be established."
+    },
+    {
+      "match": "Golden State Warriors vs Los Angeles Clippers",
+      "reason": "West Play-In #9 vs #8. LAC ML 1.53 below ML floor 1.65. GSW ML 2.71 above 2.50 ceiling. LAC -4.5 at 1.88: L15 gap +22.8 favours LAC strongly, but GSW elimination desperation (+10 road underdog facing elimination) drags LAC spread confidence to ~50, below 60 minimum for new picks. GSW +4.5 at 2.04: GSW L15 -16.8 is deeply negative; net confidence after desperation bonus only ~45, below 60 threshold. O/U 220.5: insufficient injury data and no clear pace/scoring signal without team context. No qualifying pick."
+    },
+    {
+      "match": "Orlando Magic vs Philadelphia 76ers",
+      "reason": "ORL not listed as a play-in participant (East play-in: PHI, CHA, MIA, POR). ORL@PHI pairing is anomalous given 'regular season has concluded for non-play-in teams.' Insufficient context for this game — unclear if this is a first-round playoff matchup, a misaligned odds entry, or post-season exhibition. No reliable series context, rest data, or injury data (ORL and PHI absent from tonight's NBA official injury report). Cannot establish confident edge without knowing series state and whether this game is meaningful."
+    },
+    {
+      "match": "Minnesota Timberwolves vs Denver Nuggets",
+      "reason": "DEN L15 +29.9 vs MIN -0.9 — gap of +30.8 is the largest on the slate. DEN L10: 10-0 (extraordinary form). DEN -5.5 at 1.91 would pass EV at confidence 65. However: (1) No NBA official injury data for either team — skills note warns top seeds like MIN have 'multiple franchise players in roster-only OUT feed.' MIN could be severely depleted, making the spread potentially already baked in, or DEN could be managing load. (2) Unknown series context — if DEN is up 3-0/3-1, skills say 'Do NOT bet the team up 3-0 at short spread odds — closing games can be looser.' (3) MIN ML 3.00 is at ceiling; DEN ML 1.45 below floor, suggesting market sees DEN as heavy favourite already. Insufficient context to confirm."
+    },
+    {
+      "match": "Atlanta Hawks vs New York Knicks",
+      "reason": "ATL L15 +18.2 vs NYK +8.3 — gap of +10.0 favours ATL. ATL ML 2.97 above 2.50 ceiling. NYK ML 1.46 below floor. NYK -5.5 at 1.99 — in range, but series context unknown. Both teams may be seeded 5-6 in East (TOR and ATL per skills series_context note). Without confirmed series state, injury data (both absent from NBA official report), or knowing if this is a first-round playoff game or play-in variant, cannot establish reliable confidence ≥ 60."
+    },
+    {
+      "match": "Houston Rockets vs Los Angeles Lakers",
+      "reason": "HOU L15 +38.9 (strongest in the dataset). HOU -5.5 at 1.97 would be statistically compelling. However: (1) Skills specifically warn 'HOU — top seeds are fielding depleted rosters' with star rest concerns. (2) No injury data for HOU or LAL in tonight's NBA official report. (3) If HOU's franchise players are on rest (as implied by skills notes about widespread roster-only OUTs on top seeds), the L15 form and current competitive lineup may diverge significantly. (4) Series context unknown — LAL is #3 West seed (53-29), HOU likely #4/5 — unknown series state means cannot apply closing-game caution or elimination adjustments. Too many unknown variables for a high-confidence late pick."
+    },
+    {
+      "match": "Toronto Raptors vs Cleveland Cavaliers",
+      "reason": "CLE ML 1.34 — extreme favourite pricing, below all valid ranges and triggers line anomaly check: implied probability ~74.6% for CLE vs TOR. CLE L15 +3.4 vs TOR L15 +23.7 — gap of +20.3 actually FAVOURS Toronto, yet CLE is priced as a massive favourite. This is a significant anomaly: implied probability gap vs recent form gap. Per line_anomaly_check rules, home team with materially better record priced as heavy favourite requires investigation. TOR's superior L15 form (+23.7) and series NetRtg gap strongly suggest CLE's pricing may reflect series momentum (e.g. CLE up 3-0 or 3-1) rather than current talent gap. Without confirmed series context, cannot resolve the anomaly. TOR ML 3.67 above 2.50 ceiling. Cannot confirm any side."
+    }
+  ],
   "commit_report_data": {
-    "date": "2026-04-12",
-    "ts": "2026-04-12T21:26:02.727790+00:00",
-    "bets": [
-      {
-        "id": "nba_bet_20260412_001",
-        "match": "Minnesota Timberwolves vs New Orleans Pelicans",
-        "time": "2026-04-13T00:30Z",
-        "pick": "Minnesota Timberwolves -5.5",
-        "odds": 1.96,
-        "stake": 200,
-        "potential_return": 392.0,
-        "reasoning": "Late-breaking edge: NBA official injury report confirms MIN franchise players Anthony Edwards and Rudy Gobert are NOT listed on the injury report and are active tonight, reversing Scout's assessment that MIN was severely depleted. Scout rejected MIN due to reported absences of Edwards, Gobert, Randle — these players are not listed OUT at commit time, indicating they are available. NOP is a confirmed tank-tier team (26-55, L10 1-9, L15 -31.0) with 6 players OUT including Murphy, Missi, Bey, Jones, Matkovic, McGowens. MIN at home with core intact vs a gutted NOP roster at only -5.5 represents strong value — the line appears not to have fully adjusted to MIN's returning core. MIN 48-33, home court advantage, and the talent gap with NOP far exceeds a 5.5-point spread.",
-        "confidence": 65,
-        "anchor_players": [
-          "Anthony Edwards",
-          "Rudy Gobert"
-        ],
-        "result": null,
-        "returned": null,
-        "pnl": null,
-        "settled_at": null
-      }
-    ],
+    "date": "2026-04-14",
+    "ts": "2026-04-14T22:51:57.878291+00:00",
+    "bets": [],
     "cancelled": [],
     "late_rejections": [],
-    "total_staked": 200.0,
-    "bankroll_before": 1343.6,
-    "report": "",
-    "tokens_in": 12019,
-    "tokens_out": 8000,
-    "cost_usd": 0.156057
+    "total_staked": 0.0,
+    "bankroll_before": 1535.6,
+    "report": "## Commit Report — 2026-04-14T22:51:59Z\n\n### BANKROLL: €1,535.60 | Phase: Play-In Tournament\n\n---\n\n### Task 1 — Draft Pick Review\n\n**No draft picks were submitted by Scout.** The draft picks array was empty. Nothing to confirm or cancel.\n\n---\n\n### Task 2 — Late Scout Analysis\n\nEight games were evaluated in the late scout window. All eight were rejected. Key findings:\n\n---\n\n### REJECTED (Late Scout) — Charlotte Hornets -5.5 vs Miami Heat\n- **Odds at evaluation:** CHA ML 1.47 | MIA ML 2.93 | CHA -5.5 @ 1.94 | O/U 228.5 @ 1.95/1.97\n- **Reason:** CHA ML (1.47) below floor of 1.65; MIA ML (2.93) above 2.50 ceiling. Spread re-evaluated: CHA's L15 dominance (+27.7 vs MIA's +11.0, gap +16.7) is a strong signal, and home court in play-in adds value. However, pace mismatch of 6.6 points (CHA 96.8 vs MIA 103.4) triggers the mandatory ≥70 confidence requirement for spread picks. MIA as #9 seed is in maximum elimination desperation (win-or-go-home), which historically offsets the statistical spread edge — confidence caps at approximately 62, falling short of the 70 threshold. O/U 228.5 lacks sufficient directional signal without clear under/over thesis. No qualifying pick.\n\n---\n\n### REJECTED (Late Scout) — Phoenix Suns vs Portland Trail Blazers\n- **Odds at evaluation:** PHX ML 1.66 | POR ML 2.40 | PHX -3.5 @ 2.04/POR +3.5 @ 1.88 | O/U 216.5 @ 1.96\n- **Reason:** Lillard confirmed OUT (Injury Management). Franchise player rule blocks POR ML — cannot bet team to win with franchise player absent when opponent has no equivalent star out (Allen only Questionable for PHX, not a franchise player). PHX ML at 1.66 barely clears the floor but confidence is only ~42: POR's extraordinary L15 form (+30.4 vs PHX's +8.6, gap +21.8) suggests the roster beyond Lillard has been dominant; POR's maximum elimination desperation as #10 seed (+10 confidence per play-in rules) makes PHX covering difficult; PHX L10 is a mediocre 5-5. Under 216.5: base confidence 60 (Lillard's absence reduces POR scoring), but Grant's Questionable status requires mandatory -10 confidence adjustment → drops to 50. EV at 50 = (0.50 × 1.96) - 1 = -0.02, below the 0.05 minimum. Cannot confirm any line in this game.\n\n---\n\n### REJECTED (Late Scout) — Golden State Warriors @ LA Clippers (West Play-In)\n- **Reason:** LAC ML 1.53 below floor; GSW ML 2.71 above ceiling. LAC -4.5 at 1.88: L15 gap is overwhelming (+22.8 LAC advantage), but GSW's maximum elimination desperation as #9 seed road underdog (+10 per playoff_motivation rules) reduces achievable confidence for LAC spread to ~50, below the 60 minimum for new late picks. GSW's L3 losing streak partially counters the desperation boost. No qualifying pick.\n\n---\n\n### REJECTED (Late Scout) — Other Games (TOR@CLE, MIN@DEN, ATL@NYK, HOU@LAL, ORL@PHI)\n- **Common reasons:** Multiple data deficiencies block confident picks: (1) NBA official injury report is silent on all these teams — skills specifically warn top seeds like HOU, MIN, CLE, NYK have \"widespread roster-only OUT flags\"; (2) Series context is unknown — cannot apply closing-game caution (skills: \"Do NOT bet the team up 3-0 at short spread odds\") without knowing series score; (3) Line anomaly flagged for TOR@CLE: CLE priced at 1.34 (implied ~74.6%) despite TOR's superior L15 form (+23.7 vs +3.4), likely reflecting series momentum that we cannot verify; (4) Most ML prices are outside valid range (1.34, 1.45, 1.46, 1.47, 1.48 all below floor; 2.91, 2.93, 2.97, 3.00, 3.67 above ceiling). DEN -5.5 at 1.91 was the most statistically compelling (L15 gap +30.8, L10 10-0) but lacks injury data and series state to confirm safely.\n\n---\n\n### Task 3 — Final Commit\n\n**No bets committed tonight.**\n\n**Total stake committed: €0.00**\n**Bankroll remaining: €1,535.60**\n\n### Slate Summary\n\nTonight's two play-in games offered limited exploitable edges at commit time: the Charlotte-Miami spread was blocked by a pace mismatch rule requiring 70+ confidence that the statistical edge couldn't quite reach given Miami's maximum elimination desperation as the #9 seed, and the Phoenix-Portland game was fundamentally compromised by Lillard's confirmed absence (franchise player rules) combined with Grant's uncertain status dragging the Under thesis below EV minimums. The broader odds board showed several games with statistically interesting L15 gaps (notably Denver's +30.8 lead over Minnesota and Houston's elite +38.9 L15), but the absence of series context, injury data for top seeds, and potential load management scenarios meant none could clear the confidence and data quality thresholds required for late-phase commitment. Bankroll preserved at €1,535.60 for tomorrow's slate.",
+    "tokens_in": 7877,
+    "tokens_out": 10258,
+    "cost_usd": 0.177501
   },
   "netrtg_l15": {
     "Charlotte Hornets": 27.7,
