@@ -373,6 +373,29 @@ def run(store, force: bool = False) -> None:
         store.write_data_js(state, history, config=store.read_config())
         return
 
+    # ── 8b. Normalise match strings — same as scout ───────────────────────────
+    venue_to_team = {g.get("venue","").lower(): g["home"] for g in scoreboard if g.get("venue")}
+    espn_home_set = {g["home"].lower() for g in scoreboard}
+    espn_away_set = {g["away"].lower() for g in scoreboard}
+    def _normalise_match(match_str: str) -> str:
+        if " @ " in match_str:
+            parts = match_str.split(" @ ", 1)
+            away_part, home_part = parts[0].strip(), parts[1].strip()
+        elif " vs " in match_str:
+            parts = match_str.split(" vs ", 1)
+            home_part, away_part = parts[0].strip(), parts[1].strip()
+        else:
+            return match_str
+        home_norm = venue_to_team.get(home_part.lower(), home_part)
+        away_norm = venue_to_team.get(away_part.lower(), away_part)
+        return f"{home_norm} vs {away_norm}"
+    for b in committed_bets:
+        if "match" in b:
+            b["match"] = _normalise_match(b["match"])
+    for c in cancelled_picks:
+        if "match" in c:
+            c["match"] = _normalise_match(c["match"])
+
     # ── 9. Validate bets ──────────────────────────────────────────────────────
     try:
         validate_all_bets(committed_bets, "commit")
@@ -568,7 +591,7 @@ def _games_text(games: list) -> str:
                 time_str = dt.strftime("%H:%M UTC")
             except Exception:
                 time_str = t
-        lines.append(f"{g.get('away','?')} @ {g.get('home','?')} — {time_str}")
+        lines.append(f"{g.get('home','?')} vs {g.get('away','?')} — {time_str}")
     return "\n".join(lines)
 
 
