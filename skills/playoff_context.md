@@ -1,7 +1,7 @@
 ---
-version: 2
-updated_at: 2026-04-13T12:00:52.215834+00:00
-updated_by: analyst_2026-04-13
+version: 3
+updated_at: 2026-04-14T11:56:01.213390+00:00
+updated_by: analyst_2026-04-14
 llm: claude-sonnet-4-6
 ---
 
@@ -13,38 +13,39 @@ All 8 play-in participants (seeds 7-10 in each conference) are in win-or-go-home
 See playin_rules section for motivation and elimination rules specific to this phase.
 
 ## SECTION:series_context
-PLAY-IN TOURNAMENT — Active
+PLAY-IN TOURNAMENT — Active (updated 2026-04-19)
 
-Play-In participants based on current standings (seeds 7-10 each conference):
+Play-In participants based on final regular season standings (seeds 7-10 each conference):
 
 EAST Play-In (seeds 7-10):
-- #7 Philadelphia 76ers (45-37)
-- #8 Charlotte Hornets (44-38)
-- #9 Miami Heat (43-39)
-- #10 Portland Trail Blazers (42-40)
+- #7 Philadelphia 76ers (45-37) — NetRtg -0.2; volatile
+- #8 Charlotte Hornets (44-38) — NetRtg +5.0; best advanced stats of East play-in field
+- #9 Miami Heat (43-39) — NetRtg +2.2; W2 streak
+- #10 Portland Trail Blazers (42-40) — NetRtg -0.2; W2 streak; motivated
 
 WEST Play-In (seeds 7-10):
-- #7 Phoenix Suns (45-37)
-- #8 LA Clippers (42-40) [tied with Portland — conference split]
-- #9 Golden State Warriors (37-45) — NOTE: Warriors at 37-45 with NetRtg negative; verify they mathematically qualify
-- #10 TBD — final standings not yet locked
-
-NOTE: Play-in seeding may shift in final games. Scout must verify final seedings and matchups before drafting any play-in picks.
+- #7 Phoenix Suns (45-37) — NetRtg +1.4; W1
+- #8 LA Clippers (42-40) — NetRtg +1.1; W1
+- #9 Golden State Warriors (37-45) — NetRtg -0.4; L3 streak; tank-watch; verify they mathematically qualify
+- #10 TBD — final West standings not yet locked
 
 Play-in matchup format:
 - 7 vs 8 game: winner gets 7-seed playoff spot; loser gets another chance.
 - 9 vs 10 game: loser eliminated; winner plays the 7v8 loser.
 - 7v8 loser vs 9v10 winner: winner gets 8-seed playoff spot; loser eliminated.
 
-First-round playoff series (seeded, not yet started — awaiting play-in completion):
-Seeds 1-6 have home court locked. Matchups TBD pending play-in results.
-- East: #1 Detroit (60-22) vs #8 TBD | #2 Boston (56-26) vs #7 TBD | #3 NYK (53-29) vs #6 TBD | #4 CLE (52-30) vs #5 TOR/ATL TBD
-- West: #1 OKC (64-18) vs #8 TBD | #2 SAS (62-20) vs #7 TBD | #3 LAL (53-29) vs #6 TBD | #4 HOU (52-30) vs #5 MIN/DEN TBD
+Seeds 1-6 locked — awaiting play-in completion for first-round matchups:
+- EAST: #1 Detroit (60-22) | #2 Boston (56-26) | #3 New York Knicks (53-29) | #4 Cleveland (52-30) | #5 Houston (52-30) | #6 Minnesota (49-33)
+- WEST: #1 OKC (64-18) | #2 San Antonio (62-20) | #3 LA Lakers (53-29) | #4 Houston... 
+NOTE: East vs West bracket split — Houston and Minnesota are West seeds. Corrected:
+- EAST seeds 1-6: Detroit, Boston, NYK, Cleveland, Toronto (46-36), Atlanta (46-36)
+- WEST seeds 1-6: OKC, San Antonio, LA Lakers, Houston, Minnesota, Denver
+EXACT seedings require official confirmation — analyst will update once play-in matchups are set.
 
-NOTE: Exact seedings require final standings confirmation — analyst will update once play-in matchups are officially set.
+NOTE: With widespread roster-only OUT flags across OKC, SAS, BOS, NYK, CLE, MIN, HOU — many top seeds are fielding depleted rosters. Play-in teams may face heavily rested but roster-uncertain opponents in first round.
 
 ## SECTION:elimination_flags
-PLAY-IN ELIMINATION FLAGS:
+PLAY-IN ELIMINATION FLAGS (updated 2026-04-19):
 
 All play-in games are effectively win-or-go-home for certain seeds:
 - 9-seed (both conferences): Game 1 loss = eliminated. Maximum desperation.
@@ -53,12 +54,16 @@ All play-in games are effectively win-or-go-home for certain seeds:
 
 Current elimination risk teams (play-in participants):
 - EAST: Philadelphia 76ers (#7), Charlotte Hornets (#8), Miami Heat (#9), Portland Trail Blazers (#10)
-- WEST: Phoenix Suns (#7), LA Clippers (#8), Golden State Warriors (#9 — verify), TBD (#10)
+- WEST: Phoenix Suns (#7), LA Clippers (#8), Golden State Warriors (#9 — verify mathematical qualification), TBD (#10)
 
-Note: No series elimination data yet — first-round playoff series have not begun.
+HIGH-RISK FLAGS:
+- Golden State Warriors (37-45, L3, NetRtg -0.4): If they qualify as 9-seed, they face maximum elimination pressure with poor form — fade strongly unless opponent has comparable roster uncertainty.
+- Portland Trail Blazers (#10): On W2 streak but NetRtg -0.2; true talent borderline — one-and-done risk is real.
+- Philadelphia 76ers (#7): NetRtg -0.2; volatile; do not over-favour as the 7-seed.
+- Charlotte Hornets (#8): NetRtg +5.0 is the best of the play-in bubble teams — strongest statistical case.
+
+Note: No first-round playoff series elimination data yet — series have not begun.
 Analyst will populate game-by-game elimination flags once first-round series start.
-
-Golden State Warriors flag: Warriors at 37-45 with NetRtg -0.4 and L3 losing streak — if they qualify for play-in as a 9 or 10 seed, treat as maximum underdog with no roster confidence guarantee.
 
 ## SECTION:playoff_rest
 PLAY-IN REST RULES:
@@ -69,6 +74,11 @@ PLAY-IN REST RULES:
 - Home court in play-in is meaningful — home team has historically covered at higher rate.
   Apply home court value +3 points (slightly stronger than regular season ~2-3pts given stakes).
 
+PLAY-IN REST CONTEXT (2026-04-19):
+- Play-in schedule and rest days not yet confirmed — Scout must verify rest situation for each game at draft time.
+- Both conference play-in brackets start with 7v8 and 9v10 games. Rest days will depend on final scheduling.
+- Teams that closed the regular season with late games (e.g. last day of season) may have shorter rest.
+
 PLAYOFF REST RULES (first round, once series begin):
 - True B2B does NOT exist in playoffs — NBA mandates minimum 1 day off between games.
 - 1 rest day (minimum): short rest — confidence -10 on spread picks for the road team.
@@ -76,7 +86,7 @@ PLAYOFF REST RULES (first round, once series begin):
 - 3+ rest days: extended rest — slight rust risk for hot teams; confidence -5.
 - Home court advantage in playoffs worth ~3-4 points (stronger than regular season ~2-3pts).
 
-SCHEDULE NOTE: With widespread star rest across top seeds (OKC, SAS, BOS, NYK, DEN, CLE all have
+SCHEDULE NOTE: With widespread star rest across top seeds (OKC, SAS, BOS, NYK, DEN, CLE, MIN all have
 multiple franchise players in roster-only OUT feed), rest advantage calculations must factor in
 whether the rested team is actually fielding their competitive roster. Verify NBA official PDF.
 
@@ -115,17 +125,17 @@ Regular season H2H as a playoff/play-in signal — rules and current data:
 All listed H2H records require verification — multiple teams have franchise players in roster-only OUT feed,
 meaning many regular season H2H games may have been played with non-representative rosters.
 
-EAST potential play-in matchups H2H:
-- PHI vs CHA: [to be populated when matchup confirmed]
-- MIA vs POR: [to be populated when matchup confirmed]
+EAST play-in matchups H2H:
+- PHI (#7) vs CHA (#8): [to be populated when matchup confirmed — verify if H2H included key absences]
+- MIA (#9) vs POR (#10): [to be populated when matchup confirmed — verify if H2H included key absences]
 - Any 7v8 loser vs 9v10 winner matchup: [to be populated]
 
-WEST potential play-in matchups H2H:
-- PHX vs LAC: [to be populated when matchup confirmed]
-- GS vs [10-seed]: [to be populated when matchup confirmed]
+WEST play-in matchups H2H:
+- PHX (#7) vs LAC (#8): [to be populated when matchup confirmed]
+- GSW (#9) vs [10-seed]: [to be populated — GSW at 37-45 with L3; H2H likely compiled with varied rosters]
 
-NOTE: Given widespread roster-only OUT flags across multiple franchises, many H2H records this season
-were compiled with depleted rosters. Apply H2H adjustment only if the H2H games involved comparable roster strength.
+NOTE: Given widespread roster-only OUT flags across multiple franchises this season, many H2H records
+were compiled with depleted rosters. Apply H2H adjustment ONLY if the H2H games involved comparable roster strength.
 Analyst will populate confirmed H2H records once official play-in matchups are announced.
 
 ## SECTION:l15_caveat
