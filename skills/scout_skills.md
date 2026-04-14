@@ -1,7 +1,7 @@
 ---
-version: 30
-updated_at: 2026-04-13T12:00:52.215834+00:00
-updated_by: analyst_2026-04-13
+version: 31
+updated_at: 2026-04-14T11:56:01.213390+00:00
+updated_by: analyst_2026-04-14
 llm: claude-sonnet-4-6
 ---
 
@@ -111,22 +111,15 @@ San Antonio Spurs:
 - David Jones Garcia (F): OUT [roster-only]
 - Luke Kornet (C): OUT [roster-only]
 - Victor Wembanyama (F): OUT [roster-only] — FRANCHISE PLAYER
-NOTE: Victor Wembanyama now in verified absence feed. Do NOT draft SAS picks without NBA official PDF verification. Star rest risk elevated; top-2 seed locked at 62-20.
+NOTE: Victor Wembanyama in verified absence feed. Do NOT draft SAS picks without NBA official PDF verification. Star rest risk elevated; top-2 seed locked at 62-20.
 
 Detroit Pistons:
 - Jalen Duren (C): OUT [roster-only] — key big
 NOTE: Cade Cunningham and Isaiah Stewart NOT in current verified absence feed — re-verify before any DET pick.
 
 Boston Celtics:
-- Jaylen Brown (G): OUT [roster-only] — FRANCHISE PLAYER
-- Hugo Gonzalez (G): OUT [roster-only]
-- Sam Hauser (F): OUT [roster-only]
-- Payton Pritchard (G): OUT [roster-only]
-- Neemias Queta (C): OUT [roster-only]
 - Jayson Tatum (F): OUT [roster-only] — FRANCHISE PLAYER
-- Nikola Vucevic (C): OUT [roster-only]
-- Derrick White (G): OUT [roster-only] — key secondary player
-NOTE: Both Tatum and Brown in roster-only OUT feed — BOS franchise core critically thin. Do NOT draft BOS ML without re-verification.
+NOTE: Jaylen Brown NOT in current verified absence feed. Jayson Tatum in roster-only OUT feed — BOS franchise core critically thin. Do NOT draft BOS ML without re-verification.
 
 New York Knicks:
 - OG Anunoby (F): OUT [roster-only] — key wing
@@ -188,10 +181,9 @@ NOTE: MIN has Edwards, Gobert, Randle all in roster-only OUT feed — virtually 
 
 Atlanta Hawks:
 - Jock Landale (C): OUT [roster-only]
-- CJ McCollum (G): OUT [roster-only]
 - Onyeka Okongwu (F): OUT [roster-only] — key piece
 - Gabe Vincent (G): OUT [roster-only]
-NOTE: Multiple role players out for ATL. Trae Young NOT in current verified absence feed — re-verify before any ATL pick.
+NOTE: CJ McCollum removed from verified absence feed this session. Trae Young NOT in current verified absence feed — re-verify before any ATL pick.
 
 Toronto Raptors:
 - Chucky Hepburn (G): OUT [roster-only]
@@ -211,8 +203,8 @@ NOTE: Washington full tank confirmed. Do NOT bet Washington to win under any cir
 
 Franchise players requiring mandatory NBA official PDF verification before ANY pick involving their team:
 - Shai Gilgeous-Alexander, Jalen Williams, Chet Holmgren (OKC) — roster-only OUT; top-seed rest risk maximum
-- Victor Wembanyama (SAS) — now in verified absence feed; re-verify each session
-- Jayson Tatum, Jaylen Brown (BOS) — roster-only OUT; franchise core absent
+- Victor Wembanyama (SAS) — verified absence feed; re-verify each session
+- Jayson Tatum (BOS) — roster-only OUT; Jaylen Brown requires verification
 - Jalen Brunson, Karl-Anthony Towns (NYK) — roster-only OUT; franchise core absent
 - Jamal Murray (DEN) — roster-only OUT; Jokic status requires verification
 - Kevin Durant, Alperen Sengun (HOU) — roster-only OUT; franchise duo absent
@@ -244,22 +236,22 @@ When betting ON tanking teams: require odds ≥ 2.20 and strong situational reas
 
 Play-in and seeding-contention teams (updated 2026-04-19 — NOT tanking):
 - OKC Thunder: 64-18, L10: 7-3, streak: L2 — top seed locked; star rest risk MAXIMUM.
-- San Antonio Spurs: 62-20, L10: 8-2, streak: L1 — #2 seed locked; Victor Wembanyama now in OUT feed; rest risk elevated.
+- San Antonio Spurs: 62-20, L10: 8-2, streak: L1 — #2 seed locked; Victor Wembanyama in OUT feed; rest risk elevated.
 - Detroit Pistons: 60-22, L10: 8-2, streak: W3 — NetRtg +8.2; elite form.
-- Boston Celtics: 56-26, L10: 8-2, streak: W2 — NetRtg +8.2; franchise core depleted [roster-only OUT].
+- Boston Celtics: 56-26, L10: 8-2, streak: W2 — NetRtg +8.2; Jayson Tatum OUT [roster-only]; Jaylen Brown status requires verification.
 - Denver Nuggets: 54-28, L10: 10-0, streak: W12 — HOT STREAK; NetRtg +5.2; Jokic status requires verification.
 - New York Knicks: 53-29, L10: 6-4, streak: L1 — franchise core depleted [roster-only OUT].
 - Los Angeles Lakers: 53-29, L10: 7-3, streak: W3 — Luka Doncic + Reaves + Hayes OUT [roster-only]; record inflated.
 - Cleveland Cavaliers: 52-30, L10: 7-3, streak: W1 — virtually entire core OUT [roster-only].
 - Houston Rockets: 52-30, L10: 9-1, streak: W1 — Durant + Sengun OUT [roster-only]; seeding race live.
 - Minnesota Timberwolves: 49-33, L10: 5-5, streak: W2 — entire core OUT [roster-only].
-- Atlanta Hawks: 46-36, L10: 6-4, streak: L1 — play-in secured; multiple role players OUT; Trae Young requires verification.
+- Atlanta Hawks: 46-36, L10: 6-4, streak: L1 — play-in secured; Onyeka Okongwu OUT; Trae Young requires verification.
 - Toronto Raptors: 46-36, L10: 6-4, streak: W1 — NetRtg +2.6; play-in race.
 - Philadelphia 76ers: 45-37, L10: 6-4, streak: W2 — NetRtg -0.2; volatile; cautious.
 - Orlando Magic: 45-37, L10: 7-3, streak: L1 — NetRtg +0.6; play-in motivated.
 - Phoenix Suns: 45-37, L10: 5-5, streak: W1 — NetRtg +1.4; neutral.
 - Charlotte Hornets: 44-38, L10: 6-4, streak: W1 — NetRtg +5.0; play-in bubble.
-- Miami Heat: 43-39, L10: 5-5, streak: W2 — NetRtg +2.2; play-in bubble; bounce from cold stretch.
+- Miami Heat: 43-39, L10: 5-5, streak: W2 — NetRtg +2.2; play-in bubble.
 - Portland Trail Blazers: 42-40, L10: 7-3, streak: W2 — play-in bubble; motivation-positive.
 - LA Clippers: 42-40, L10: 6-4, streak: W1 — NetRtg +1.1; play-in bubble.
 - Golden State Warriors: 37-45, L10: 3-7, streak: L3 — NetRtg -0.4 (negative); confirmed tank-watch; play-in path effectively eliminated.
@@ -271,7 +263,7 @@ HOT STREAK FLAGS:
 EMERGING FADE CANDIDATES:
 - Golden State Warriors (37-45, L3): NetRtg negative; do not back without significant situational reason.
 - Orlando Magic (streak: L1): motivation positive but recent form dipping; neutral-cautious.
-- Atlanta Hawks (streak: L1): multiple role players now OUT; verify Trae Young before any ATL pick.
+- Atlanta Hawks (streak: L1): Okongwu OUT; verify Trae Young before any ATL pick.
 
 ## SECTION:b2b_rules
 B2B and rest day rules — apply numeric confidence adjustments:
