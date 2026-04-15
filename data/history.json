@@ -26,7 +26,7 @@
           "wins": 6,
           "losses": 3,
           "peak_bankroll": 1535.6,
-          "total_bets": 9
+          "total_bets": 11
         }
       ]
     }
@@ -1065,6 +1065,62 @@
       "cancelled_picks": [],
       "bets": [],
       "summary": "Day 2026-04-14 commit — 0 bets totalling €0.00. 0 cancelled. Bankroll: €1535.60 → €1535.60."
+    },
+    {
+      "entry_id": "nba_entry_20260415",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-04-15T23:07:20.715633+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1535.6,
+      "total_staked": 368.54,
+      "bankroll_after": 1167.06,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260415_001",
+          "match": "Philadelphia 76ers vs Orlando Magic",
+          "time": "2026-04-15T23:30:00Z",
+          "pick": "Philadelphia 76ers ML",
+          "odds": 1.85,
+          "stake": 184.27,
+          "potential_return": 340.9,
+          "confidence": 58,
+          "reasoning": "PLAY-IN GAME — PHI (#7) vs ORL (#8) at home. Primary edge: L15 NetRtg gap of +13.2 (PHI +9.1 vs ORL -4.1) — dominant signal in PHI's favour. Home court in play-in context adds further edge (~+3 pts). Odds moved marginally in favour (+0.01: 1.84→1.85). Anchor player adjustments at commit: Jett Howard NOT on injury report (Active) — one less ORL injury concern. Jonathan Isaac still Questionable (Left Knee Sprain); thesis does not depend on his absence but applies standard -10 confidence adjustment and -20% stake per rules. Confidence adjusted 68→58. Embiid OUT was already priced in and team-adjusted over extended absence. EV at commit: (0.58 × 1.85) - 1 = 0.073 ≥ 0.05. Stake adjusted to 80% of 15% tier due to Questionable player: 15% × €1535.60 × 0.80 = €184.27.",
+          "anchor_players": [
+            "Joel Embiid (PHI - OUT)",
+            "Jonathan Isaac (ORL - Questionable)",
+            "Jett Howard (ORL - Active, cleared from injury report at commit)"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-04-15T23:07:23Z"
+        },
+        {
+          "id": "nba_bet_20260415_002",
+          "match": "Philadelphia 76ers vs Orlando Magic",
+          "time": "2026-04-15T23:30:00Z",
+          "pick": "Philadelphia 76ers -1.5",
+          "odds": 1.98,
+          "stake": 184.27,
+          "potential_return": 364.85,
+          "confidence": 55,
+          "reasoning": "PLAY-IN SPREAD — PHI -1.5 at 1.98 (moved in favour: 1.92→1.98, +0.06). L15 NetRtg gap of +13.2 is well above the 6-point strong spread signal threshold. PHI home court advantage in play-in context (+3 pts). -1.5 is minimal spread — PHI's recent dominant form strongly suggests margin beyond 1.5. Confirmed at original stake per line movement rules (odds improved). Anchor player adjustments: Jonathan Isaac Questionable → confidence -10 (65→55), stake -20%. Jett Howard cleared — neutral. Injury source: nba_official (4 teams) — spread picks allowed. EV at commit: (0.55 × 1.98) - 1 = 0.089 ≥ 0.05. Combined same-game exposure with Pick 1: €368.54 = 24.0% of bankroll — well within 70% cap. Correlated risk acknowledged.",
+          "anchor_players": [
+            "Joel Embiid (PHI - OUT)",
+            "Jonathan Isaac (ORL - Questionable)",
+            "Jett Howard (ORL - Active, cleared from injury report at commit)"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-04-15T23:07:23Z"
+        }
+      ],
+      "summary": "Day 2026-04-15 commit — 2 bets totalling €368.54. 0 cancelled. Bankroll: €1535.60 → €1167.06."
     }
   ]
 }
