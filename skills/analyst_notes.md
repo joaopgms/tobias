@@ -1,14 +1,14 @@
 ---
-date: 2026-04-14
+date: 2026-04-15
 llm: claude-sonnet-4-6
 scout_patches: 2
 commit_patches: 0
 milestone: daily (9 bets)
 ---
 
-## Today's Analysis — 2026-04-14
+## Today's Analysis — 2026-04-15
 
-The verified absence feed has thinned significantly from prior sessions — multiple players previously listed as OUT for BOS (Jaylen Brown, Hugo Gonzalez, Sam Hauser, Payton Pritchard, Neemias Queta, Nikola Vucevic, Derrick White) and ATL (CJ McCollum) are no longer in today's confirmed list, suggesting either recovery, roster moves, or feed gaps; Scout MUST re-verify against NBA official PDF before any BOS pick. The Play-In Tournament is now the active phase with Charlotte Hornets holding the strongest NetRtg (+5.0) of any bubble team, making them a statistically credible underdog-fade target if priced wrong as 8-seed vs PHI. Denver's W12 streak (L10: 10-0, NetRtg +5.2) is the dominant hot-streak signal in the league, but Jamal Murray's roster-only OUT status and the need to verify Jokic's availability means DEN picks carry maximum uncertainty — do not draft without PDF confirmation.
+Play-in phase is active but official matchup schedules have not yet been announced — Scout must verify game times and rest days before drafting any picks this session. The most notable statistical anomaly entering the play-in is Charlotte Hornets (NetRtg +5.0) seeded #8 in the East with better advanced metrics than the #7 seed Sixers (NetRtg -0.2), making Charlotte a potential value fade target if priced as an underdog. The 2.10-2.50 odds range continues to show a 0W/3L record (€-229.31 loss), confirming this bracket produces negative EV — Scout should continue avoiding picks in this range unless EV calculation is exceptionally strong.
 
 ## Performance Stats
 ALL-TIME: 12W / 15L | Win rate: 44.4% | P&L: €-202.64 | Avg odds: 1.98 | Avg conf: 65.4/100
@@ -20,20 +20,19 @@ By odds range:  1.70-1.89 6bets 3W/3L 50.0% €-67.95  |  1.90-2.09 18bets 9W/9L
 
 
 ## Scout patches applied
-- [franchise_player_rules] Updated to reflect current verified absence feed: previous BOS entries (Jaylen Brown, Hugo Gonzalez, Sam Hauser, Payton Pritchard, Neemias Queta, Nikola Vucevic, Derrick White) and ATL entry (CJ McCollum) are NOT in today's verified list and must be removed per MANDATORY rule; Jayson Tatum remains verified OUT.
-- [tanking_teams] Refreshed ATL injury note to remove CJ McCollum (not in current verified absence feed) and corrected BOS note to reflect only Tatum as verified OUT with Brown requiring re-verification.
+- [franchise_player_rules] Mandatory every-session update: verified absence feed unchanged from prior session; confirmed Trae Young, Tre Johnson notes updated to reflect current roster-only status; no new additions or removals detected in this session's feed.
+- [tanking_teams] Mandatory session refresh with updated date stamp; all standings data confirmed against current session inputs with no substantive changes to team statuses.
 
 ## Commit patches applied
 None
 
 ## Playoff context patches applied
-- [series_context] Updated to reflect current final regular-season standings and current team streaks; corrected conference seeding brackets; flagged depleted top-seed rosters as play-in context.
-- [elimination_flags] Updated elimination flags with current NetRtg data, current streaks, and specific risk notes for each play-in participant to help Scout prioritise edges.
-- [h2h_playoff] Updated with current seedings and specific notes on roster-uncertainty caveats for play-in H2H; placeholder entries maintained pending official matchup confirmation.
-- [playoff_rest] Added play-in rest context note for 2026-04-19 session to flag that rest days are not yet confirmed and Scout must verify at draft time.
+- [series_context] Mandatory session update: corrected East/West seed ordering with Toronto and Atlanta as East 5-6, Denver as West 6, and flagged matchup announcement status as unconfirmed.
+- [elimination_flags] Mandatory session update: added specific strategic notes per elimination-risk team based on current NetRtg and streak data to give Scout actionable context.
+- [h2h_playoff] Mandatory session refresh: no new H2H data available as official play-in matchups not yet announced; updated date stamp and added GSW discount note.
+- [playoff_rest] Mandatory session refresh: updated date stamp, added note on recent regular season end and typical rest context entering play-in.
 
 ## Intelligence gaps identified
-- **Play-in matchup schedules (dates, venues, rest days) are not yet confirmed in the context data, preventing accurate rest-day and home-court adjustments.** — Rest-day confidence adjustments (-8 for road team on 1-day rest) and home-court value (+3 pts) are material to spread and ML picks in single-elimination games — without confirmed schedules these adjustments cannot be applied accurately. → Fetch official NBA play-in schedule (dates, times, venues) and populate playoff_context.md series_context and playoff_rest sections with confirmed matchup data before Scout runs.
-- **Multiple players previously listed as OUT for Boston Celtics (Jaylen Brown, Sam Hauser, Payton Pritchard, Nikola Vucevic, Derrick White) are absent from today's verified feed, but it is unclear whether this reflects recovery, rest, or feed incompleteness.** — If Jaylen Brown and others have returned to active status, the BOS franchise player rules and tanking_teams note overstated BOS roster depletion — potentially suppressing valid BOS picks in the play-in bracket. → Prioritise NBA official PDF cross-reference for BOS roster before each session; add explicit session note that BOS roster status is highly volatile and requires daily re-verification rather than carry-forward.
-- **Odds at 2.10–2.50 range have a 0W/3L record (0.0% win rate, €-229.31) — the worst performing odds band by a significant margin.** — This pattern suggests Scout is over-confident on longer-priced picks; the EV calculation may be producing false positives at the high end of the odds range where variance is highest and edges are hardest to identify. → Consider adding a selectivity rule capping picks at odds ≤ 2.10 unless NetRtg gap > 8pts or elimination-game desperation factor applies; requires 5+ more bets in this range to reach 0.70 confidence for a formal patch.
-- **ML market is 5W/7L (41.7%, €-256.91) all-time while Spread is 6W/6L (50.0%, €+77.54) — ML is meaningfully underperforming Spread despite being the more commonly drafted market.** — If ML selection criteria are producing worse outcomes than spread, Scout may be defaulting to ML when spread offers better risk-adjusted edge — the rules encourage spread evaluation but ML may still be the default in practice. → Review whether ML picks are being taken on games where a spread pick would have been better (e.g. large NetRtg gaps that make covering more predictable than outright winning); current evidence leans toward tightening ML confidence floor to 55 but sample is 12 bets — monitor for 5 more before patching.
+- **The 2.10-2.50 odds range has produced 0W/3L (€-229.31) — a clear bracket-level losing pattern suggesting current selection criteria do not adequately screen out value traps at higher odds.** — If this pattern reflects structural over-confidence at high odds (teams picked at 2.10-2.50 are likely longer shots that don't win at the rate confidence scores imply), tightening odds_targets ceiling or raising the EV floor for picks in this bracket would prevent continued losses. → Consider either reducing the ML ceiling from 2.50 to 2.20 OR raising the EV requirement to ≥ 0.10 for any pick with odds ≥ 2.10 — whichever is more consistent with the underlying thesis. Confidence in the direction is 0.72 but the sample is only 3 bets, which is below the evidence standard for patching market_rules or odds_targets. Flag for re-evaluation at 6+ bets.
+- **High confidence picks (8 bets, 3W/5L, 37.5%) are underperforming Medium confidence picks (9W/8L, 52.9%), suggesting the confidence calibration at the 70-84 tier may be systematically over-estimated.** — If high-confidence picks are winning at a lower rate than medium picks, the confidence signals used to reach the 70-84 tier may be producing false certainty — potentially from over-weighting individual signals like hot streaks or opponent tanking status without sufficient cross-validation. → At the next milestone review (after reaching 20+ high-confidence settled bets), audit which specific signal combinations drove high-confidence picks that lost — particularly whether roster-only OUT flags contributed to over-confidence by overstating opponent weakness without NBA PDF verification.
+- **Official play-in matchup schedules, confirmed game times, and rest day counts are not yet available in the session data, preventing Scout from applying play-in rest rules or home court adjustments accurately.** — Without confirmed schedules, Scout cannot determine which team has home court, verify B2B/rest situations, or apply the confidence -8 short-rest adjustment — all of which are material to play-in pick quality. → Infrastructure fix required: ensure the game schedule feed (including home team designation and tip-off times) is populated before Scout runs on play-in game days. Until confirmed, Scout should explicitly verify home court and rest days before drafting any play-in pick.
