@@ -1,7 +1,7 @@
 ---
-version: 31
-updated_at: 2026-04-14T11:56:01.213390+00:00
-updated_by: analyst_2026-04-14
+version: 32
+updated_at: 2026-04-15T11:55:22.003408+00:00
+updated_by: analyst_2026-04-15
 llm: claude-sonnet-4-6
 ---
 
@@ -183,7 +183,7 @@ Atlanta Hawks:
 - Jock Landale (C): OUT [roster-only]
 - Onyeka Okongwu (F): OUT [roster-only] — key piece
 - Gabe Vincent (G): OUT [roster-only]
-NOTE: CJ McCollum removed from verified absence feed this session. Trae Young NOT in current verified absence feed — re-verify before any ATL pick.
+NOTE: Trae Young NOT in current verified absence feed — re-verify before any ATL pick.
 
 Toronto Raptors:
 - Chucky Hepburn (G): OUT [roster-only]
@@ -234,7 +234,7 @@ Tanking criteria (ALL THREE must be met):
 When betting AGAINST tanking teams: edge-positive.
 When betting ON tanking teams: require odds ≥ 2.20 and strong situational reason.
 
-Play-in and seeding-contention teams (updated 2026-04-19 — NOT tanking):
+Play-in and seeding-contention teams (updated 2026-04-20 — NOT tanking):
 - OKC Thunder: 64-18, L10: 7-3, streak: L2 — top seed locked; star rest risk MAXIMUM.
 - San Antonio Spurs: 62-20, L10: 8-2, streak: L1 — #2 seed locked; Victor Wembanyama in OUT feed; rest risk elevated.
 - Detroit Pistons: 60-22, L10: 8-2, streak: W3 — NetRtg +8.2; elite form.
@@ -254,7 +254,7 @@ Play-in and seeding-contention teams (updated 2026-04-19 — NOT tanking):
 - Miami Heat: 43-39, L10: 5-5, streak: W2 — NetRtg +2.2; play-in bubble.
 - Portland Trail Blazers: 42-40, L10: 7-3, streak: W2 — play-in bubble; motivation-positive.
 - LA Clippers: 42-40, L10: 6-4, streak: W1 — NetRtg +1.1; play-in bubble.
-- Golden State Warriors: 37-45, L10: 3-7, streak: L3 — NetRtg -0.4 (negative); confirmed tank-watch; play-in path effectively eliminated.
+- Golden State Warriors: 37-45, L10: 3-7, streak: L3 — NetRtg -0.4 (negative); confirmed tank-watch; play-in path status requires mathematical verification.
 
 HOT STREAK FLAGS:
 - Denver Nuggets (W12, L10: 10-0): NetRtg +5.2; Jokic presence verification required before any directional bet.
