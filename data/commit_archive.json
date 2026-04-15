@@ -292,5 +292,92 @@
     "tokens_in": 7877,
     "tokens_out": 10258,
     "cost_usd": 0.177501
+  },
+  {
+    "ts": "2026-04-15T23:07:20.715633+00:00",
+    "date": "2026-04-15",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 2,
+    "cancelled_count": 0,
+    "total_staked": 368.54,
+    "bankroll_before": 1535.6,
+    "bankroll_after": 1167.06,
+    "bets": [
+      {
+        "id": "nba_bet_20260415_001",
+        "match": "Philadelphia 76ers vs Orlando Magic",
+        "time": "2026-04-15T23:30:00Z",
+        "pick": "Philadelphia 76ers ML",
+        "odds": 1.85,
+        "stake": 184.27,
+        "potential_return": 340.9,
+        "confidence": 58,
+        "reasoning": "PLAY-IN GAME — PHI (#7) vs ORL (#8) at home. Primary edge: L15 NetRtg gap of +13.2 (PHI +9.1 vs ORL -4.1) — dominant signal in PHI's favour. Home court in play-in context adds further edge (~+3 pts). Odds moved marginally in favour (+0.01: 1.84→1.85). Anchor player adjustments at commit: Jett Howard NOT on injury report (Active) — one less ORL injury concern. Jonathan Isaac still Questionable (Left Knee Sprain); thesis does not depend on his absence but applies standard -10 confidence adjustment and -20% stake per rules. Confidence adjusted 68→58. Embiid OUT was already priced in and team-adjusted over extended absence. EV at commit: (0.58 × 1.85) - 1 = 0.073 ≥ 0.05. Stake adjusted to 80% of 15% tier due to Questionable player: 15% × €1535.60 × 0.80 = €184.27.",
+        "anchor_players": [
+          "Joel Embiid (PHI - OUT)",
+          "Jonathan Isaac (ORL - Questionable)",
+          "Jett Howard (ORL - Active, cleared from injury report at commit)"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null,
+        "committed_at": "2026-04-15T23:07:23Z"
+      },
+      {
+        "id": "nba_bet_20260415_002",
+        "match": "Philadelphia 76ers vs Orlando Magic",
+        "time": "2026-04-15T23:30:00Z",
+        "pick": "Philadelphia 76ers -1.5",
+        "odds": 1.98,
+        "stake": 184.27,
+        "potential_return": 364.85,
+        "confidence": 55,
+        "reasoning": "PLAY-IN SPREAD — PHI -1.5 at 1.98 (moved in favour: 1.92→1.98, +0.06). L15 NetRtg gap of +13.2 is well above the 6-point strong spread signal threshold. PHI home court advantage in play-in context (+3 pts). -1.5 is minimal spread — PHI's recent dominant form strongly suggests margin beyond 1.5. Confirmed at original stake per line movement rules (odds improved). Anchor player adjustments: Jonathan Isaac Questionable → confidence -10 (65→55), stake -20%. Jett Howard cleared — neutral. Injury source: nba_official (4 teams) — spread picks allowed. EV at commit: (0.55 × 1.98) - 1 = 0.089 ≥ 0.05. Combined same-game exposure with Pick 1: €368.54 = 24.0% of bankroll — well within 70% cap. Correlated risk acknowledged.",
+        "anchor_players": [
+          "Joel Embiid (PHI - OUT)",
+          "Jonathan Isaac (ORL - Questionable)",
+          "Jett Howard (ORL - Active, cleared from injury report at commit)"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null,
+        "committed_at": "2026-04-15T23:07:23Z"
+      }
+    ],
+    "cancelled": [],
+    "late_rejections": [
+      {
+        "match": "LA Clippers vs Golden State Warriors",
+        "reason": "No valid market entry found at commit time. LAC ML drifted further down to 1.47 (floor 1.65, was already rejected at 1.51). GSW ML at 2.93 exceeds 2.50 ML ceiling (drifted further from Scout's 2.81). LAC spread -5.5 @ 1.96 is in range but LAC advanced stats remain unavailable — spread picks require advanced stats per data_quality_rules. No actionable edge on either side."
+      },
+      {
+        "match": "Toronto Raptors @ Cleveland Cavaliers",
+        "reason": "Not on tonight's confirmed slate (slate lists only PHI vs ORL and LAC vs GSW). CLE ML 1.30 is well below the 1.65 ML floor regardless. No evaluation required."
+      },
+      {
+        "match": "Minnesota Timberwolves @ Denver Nuggets",
+        "reason": "Not on tonight's confirmed slate. DEN ML 1.45 below 1.65 ML floor. No evaluation required."
+      },
+      {
+        "match": "Atlanta Hawks @ New York Knicks",
+        "reason": "Not on tonight's confirmed slate. NYK ML 1.49 below 1.65 ML floor. No evaluation required."
+      },
+      {
+        "match": "Houston Rockets @ Los Angeles Lakers",
+        "reason": "Not on tonight's confirmed slate. HOU ML 1.48 below 1.65 ML floor. No evaluation required."
+      },
+      {
+        "match": "Portland Trail Blazers @ San Antonio Spurs",
+        "reason": "Not on tonight's confirmed slate. SAS ML 1.20 far below 1.65 ML floor. No evaluation required."
+      }
+    ],
+    "report": "### CONFIRMED — Philadelphia 76ers ML\n\n- **Match:** Philadelphia 76ers vs Orlando Magic | **Tip:** 2026-04-15T23:30Z\n- **Pick:** PHI ML | **Scout odds:** 1.84 | **Commit odds:** 1.85 | **Move:** +0.01 (slightly in favour ✅)\n- **ML:** PHI 1.85 / ORL 2.08 | **ATS:** PHI -1.5 (1.98 / 1.94) | **O/U:** 223.5 (O:1.96 / U:1.96)\n- **Stake:** €184.27 | **Pot. Return:** €340.90 | **Conf:** 58/100 | **EV:** 0.073\n- **Decision:** Primary edge intact — L15 NetRtg gap of +13.2 is the dominant signal. Jett Howard cleared from injury report at commit (Active), a marginal positive for ORL's rotation but doesn't change PHI's fundamental L15 advantage. Jonathan Isaac remains Questionable → standard -10 confidence (68→58) and -20% stake adjustment applied per rules. EV at 0.073 clears the 0.05 threshold. Odds moved marginally in favour. Confirmed at adjusted stake.\n\n---\n\n### CONFIRMED — Philadelphia 76ers -1.5\n\n- **Match:** Philadelphia 76ers vs Orlando Magic | **Tip:** 2026-04-15T23:30Z\n- **Pick:** PHI -1.5 Spread | **Scout odds:** 1.92 | **Commit odds:** 1.98 | **Move:** +0.06 (in favour ✅)\n- **ML:** PHI 1.85 / ORL 2.08 | **ATS:** PHI -1.5 (1.98 / 1.94) | **O/U:** 223.5 (O:1.96 / U:1.96)\n- **Stake:** €184.27 | **Pot. Return:** €364.85 | **Conf:** 55/100 | **EV:** 0.089\n- **Decision:** Spread odds improved from 1.92 to 1.98 — confirming at original stake per line movement rules (no stake increase on improved odds). Injury source: nba_official (4 teams) — spread picks fully permitted. Same Jonathan Isaac Questionable adjustment applied: -10 confidence (65→55), -20% stake. At -1.5 with a 13.2 L15 NetRtg gap and home court advantage, PHI's margin of victory in recent form supports covering even a minimal spread. EV 0.089 ≥ 0.05. Combined same-game exposure is €368.54 (24.0% of bankroll) — well within 70% cap.\n\n---\n\n### LATE SCOUT — LAC vs GSW: No Entry\n\nLAC vs GSW was re-examined. No improvement from Scout rejection: LAC ML fell further to 1.47 (below 1.65 floor), GSW ML rose to 2.93 (above 2.50 ceiling), and LAC advanced stats remain unavailable — spread picks require advanced stats. No valid market entry. Rejected.\n\n---\n\n### SLATE SUMMARY\n\nTwo picks confirmed on Philadelphia 76ers vs Orlando Magic, leveraging a decisive L15 NetRtg gap of +13.2 and PHI's home court advantage in a win-or-go-home play-in scenario. Both confidence levels were reduced from Scout values due to Jonathan Isaac's Questionable status (applied standard -10 confidence / -20% stake per rules), but EV remains positive on both markets at 0.073 (ML) and 0.089 (spread). Total committed stake is €368.54 (24.0% of bankroll), well within the 70% exposure cap. The LAC vs GSW game remains unplayable at commit time — all market entries are outside valid odds ranges or require unavailable advanced stats.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 8769,
+    "tokens_out": 4954,
+    "cost_usd": 0.100617
   }
 ]
