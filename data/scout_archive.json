@@ -461,5 +461,65 @@
     "tokens_in": 10721,
     "tokens_out": 2628,
     "cost_usd": 0.071583
+  },
+  {
+    "ts": "2026-04-15T15:11:08.892455+00:00",
+    "date": "2026-04-15",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_onexbet",
+    "draft_count": 2,
+    "picks": [
+      {
+        "id": "nba_draft_20260415_001",
+        "match": "Philadelphia 76ers vs Orlando Magic",
+        "time": "2026-04-15T23:30:00Z",
+        "pick": "Philadelphia 76ers ML",
+        "odds": 1.84,
+        "stake": 230.34,
+        "potential_return": 423.83,
+        "confidence": 68,
+        "reasoning": "PLAY-IN GAME — PHI (#7 seed) vs ORL (#8 seed). Step 0 — No line anomaly: PHI at 1.84 home favourite is reasonable. Step 1 — NetRtg L15: PHI L15 +9.1 vs ORL L15 -4.1 — gap of 13.2 points, massive signal in PHI's favour. This is the PRIMARY edge. Season NetRtg: PHI -0.2 vs ORL +0.6 — nearly even, but L15 is decisive here. Step 2 — No B2B concerns in play-in. Step 3 — Franchise player injuries: PHI has Joel Embiid OUT (appendectomy) — significant, but Embiid has been absent for extended stretch so team has adjusted; Johni Broome also OUT. ORL: Jett Howard Questionable (ankle), Jonathan Isaac Questionable (knee) — both key rotation pieces in doubt. Net injury impact: Both teams missing key players, but ORL losing both Isaac and Howard (if both sit) would hurt their defensive identity more. Step 4 — Play-in motivation: Both teams fully motivated — 7 vs 8 seed, winner gets direct playoff spot, loser gets another chance. No motivation gap. Step 5 — L10 records: PHI 6-4 vs ORL 7-3 — slight ORL edge in L10, but L15 NetRtg overwhelmingly favours PHI. Step 6 — Home court: PHI at home, worth +3 points in play-in context. Step 7 — PHI home vs away splits favour home games. Step 8 — DefRtg: PHI 115.6 vs ORL 114.5 — negligible gap. Step 9 — Pace: PHI 99.4 vs ORL 100.0 — similar. H2H: Not decisively applicable without verified current-season data. SUMMARY: L15 NetRtg gap of 13.2 is the dominant signal — PHI's recent form is dramatically better. Home court adds further edge. ORL's questionable players (both defensive stalwarts) create additional uncertainty for them. PHI at 1.84 offers value. EV CALCULATION: confidence 68% → EV = (0.68 × 1.84) - 1 = 1.2512 - 1 = 0.2512 ≥ 0.15 (strong edge). Confidence tier 55-69 (Medium): stake 15% of €1535.60 = €230.34.",
+        "anchor_players": [
+          "Joel Embiid (PHI - OUT)",
+          "Jett Howard (ORL - Questionable)",
+          "Jonathan Isaac (ORL - Questionable)"
+        ],
+        "drafted_at": "2026-04-15T15:11:13Z",
+        "market_type": "ml"
+      },
+      {
+        "id": "nba_draft_20260415_002",
+        "match": "Philadelphia 76ers vs Orlando Magic",
+        "time": "2026-04-15T23:30:00Z",
+        "pick": "Philadelphia 76ers -1.5",
+        "odds": 1.92,
+        "stake": 230.34,
+        "potential_return": 442.25,
+        "confidence": 65,
+        "reasoning": "SPREAD — PHI -1.5 at 1.92 (within 1.80-2.30 target range). Building on the ML analysis: L15 NetRtg gap of +13.2 in PHI's favour is well above the 6-point strong spread signal threshold. Home court in play-in context adds +3 points. ORL has two Questionable players (Isaac, Howard) — if both sit, PHI's edge grows. At -1.5 this is a minimal spread, and PHI's L15 dominance strongly suggests they win by more than 1.5 on average in their current form. Confidence floor for spread is 60 — we're at 65. Advanced stats are available (NBA official source). Injury data is nba_official (4 teams reporting). EV CALCULATION: confidence 65% → EV = (0.65 × 1.92) - 1 = 1.248 - 1 = 0.248 ≥ 0.15 (strong edge). NOTE: ML and spread are independent picks on same game — L15 gap is large enough to justify both markets. Stake 15% of €1535.60 = €230.34. NOTE: Combined exposure on same game = 30% of bankroll which is at the upper limit for a single game — acceptable given strong L15 edge and play-in context, but be aware of correlated risk.",
+        "anchor_players": [
+          "Joel Embiid (PHI - OUT)",
+          "Jett Howard (ORL - Questionable)",
+          "Jonathan Isaac (ORL - Questionable)"
+        ],
+        "drafted_at": "2026-04-15T15:11:13Z",
+        "market_type": "spread"
+      }
+    ],
+    "rejected": [
+      {
+        "match": "LA Clippers vs Golden State Warriors",
+        "reason": "GSW L15 NetRtg -16.8 confirms abysmal recent form; however LAC ML at 1.51 is below the 1.60 minimum odds target range — no value. GSW at 2.81 is outside the 2.50 ML ceiling. Spread LAC -5.5 at 1.96 is in range, but LAC advanced stats unavailable (stats listed as unavailable) — skills rules require advanced stats for spread picks. Jimmy Butler OUT for GSW (ACL) is significant but already priced in. Bradley Beal OUT for LAC. Without LAC advanced stats, cannot properly evaluate DefRtg gap or NetRtg L15 for LAC — confidence would be capped. No valid market entry: ML odds out of range, spread requires unavailable advanced stats.",
+        "ml_home": 1.51,
+        "ml_away": 2.81,
+        "decision": "no_edge"
+      }
+    ],
+    "report": "Two-game play-in slate with one clear edge game (PHI vs ORL) and one rejected game (LAC vs GSW due to ML odds outside range and missing LAC advanced stats). PHI drafted in both ML and spread markets driven by dominant L15 NetRtg gap of +13.2 points — strongest directional signal of the session. Injury feed is NBA official (4 teams), full confidence rules apply. Pace data present (not universally 0.0), totals evaluated but no strong pace-based O/U edge identified. Total bankroll exposure: ~30% across two correlated PHI picks (same game) — flagged for Commit awareness. GSW rejection noted: historically worst L15 team on slate but no valid odds window on either side.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 10807,
+    "tokens_out": 1824,
+    "cost_usd": 0.059781
   }
 ]
