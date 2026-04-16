@@ -1391,7 +1391,12 @@ function renderAudit(){
           oddsDiag = `<div style="font-size:.68rem;color:var(--yellow);margin-top:6px">⚠️ No live odds available — picks deferred</div>`;
         }
       }
-      body+=`<div class="audit-pnl-row"><span class="audit-kv">Picks: <strong>${e.draft_count||0}</strong></span><span class="audit-kv">Odds: <strong>${e.odds_source||'-'}</strong></span><span class="audit-kv">Bankroll: <strong>€${(e.bankroll||0).toFixed(2)}</strong></span>${injBadge}${retriesBadge}${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>${oddsDiag}`;
+      const isNoGames = e.scout_status==='no_games';
+      if(isNoGames){
+        body+=`<div class="audit-pnl-row"><span class="audit-kv" style="color:var(--muted)">🏀 <strong>No games scheduled</strong></span><span class="audit-kv">Bankroll: <strong>€${(e.bankroll||0).toFixed(2)}</strong></span></div>`;
+      } else {
+        body+=`<div class="audit-pnl-row"><span class="audit-kv">Picks: <strong>${e.draft_count||0}</strong></span><span class="audit-kv">Odds: <strong>${e.odds_source||'-'}</strong></span><span class="audit-kv">Bankroll: <strong>€${(e.bankroll||0).toFixed(2)}</strong></span>${injBadge}${retriesBadge}${e.tokens_in?`<span class="audit-kv">Tokens: <strong>${e.tokens_in}↑ ${e.tokens_out}↓</strong></span><span class="audit-kv">Cost: <strong>$${(e.cost_usd||0).toFixed(4)}</strong></span>`:''}</div>${oddsDiag}`;
+      }
       if((e.picks||[]).length)body+=(e.picks||[]).map(p=>`<div class="audit-patch"><span class="patch-section">${getTeam((p.match||'').split(' vs ')[0]).abbr}</span><span class="patch-reason">${p.pick} @ ${p.odds} · conf=${p.confidence}</span></div>`).join('');
       if(e.error)body+=`<div style="color:var(--burg);font-size:.72rem;margin-top:6px">⚠️ ${e.error}</div>`;
     }else if(ag==='commit'){
@@ -1836,6 +1841,13 @@ function renderScoutTab(){
   if(todayEl){
     if(!todayReport){
       todayEl.innerHTML=`<div style="text-align:center;padding:40px;color:var(--muted);font-size:.82rem">No scout report yet today. Scout runs at 14:00 UTC.</div>`;
+    } else if(scoutStatus==='no_games'){
+      const noGamesDate = todayReport.updated_at ? fmt(todayReport.updated_at) : today;
+      todayEl.innerHTML=`<div style="text-align:center;padding:40px;color:var(--muted);font-size:.82rem">
+        <div style="font-size:1.4rem;margin-bottom:8px">🏀</div>
+        <div style="font-size:.88rem;font-weight:700;color:var(--text);margin-bottom:4px">No games today</div>
+        <div>Scout ran at ${noGamesDate} — no NBA games scheduled.</div>
+      </div>`;
     } else {
       const picks=(todayReport.picks||[]);
       const rejected=(todayReport.rejected||[]);
