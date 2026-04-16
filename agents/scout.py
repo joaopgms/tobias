@@ -272,7 +272,8 @@ def run(store) -> None:
         state["scout_updated_at"] = now_iso
         state["last_updated"]     = now_iso
         store.write_json("state", state, f"scout: no games {today}")
-        store.write_data_js(state, history, config=store.read_config())
+        _append_audit(store, now_iso, state.get("llm_provider", "claude"),
+                      state, history, bankroll=state["bankroll"])
         return
 
     # ── 5. Build prompt ───────────────────────────────────────────────────────
