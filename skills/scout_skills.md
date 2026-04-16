@@ -1,7 +1,7 @@
 ---
-version: 32
-updated_at: 2026-04-15T11:55:22.003408+00:00
-updated_by: analyst_2026-04-15
+version: 33
+updated_at: 2026-04-16T11:57:33.272731+00:00
+updated_by: analyst_2026-04-16
 llm: claude-sonnet-4-6
 ---
 
@@ -91,8 +91,7 @@ A Questionable player has ~50% chance of playing — never build a bet thesis on
 Franchise player Day-To-Day → confidence -5, stake -10%.
 If BOTH teams have franchise player uncertainty → evaluate net impact.
 
-NOTE — PLAY-IN PHASE: All teams below are play-in or seeding-relevant. Star rest risk persists for locked seeds.
-Roster-only flags must be re-verified against NBA official PDF each session before any pick.
+NOTE — PLAY-IN PHASE: All play-in teams are fully motivated. Star rest risk is low for play-in participants (win-or-go-home). Roster-only flags must be re-verified against NBA official PDF each session before any pick.
 
 Oklahoma City Thunder:
 - Alex Caruso (G): OUT [roster-only]
@@ -199,7 +198,7 @@ Washington Wizards:
 - Tristan Vukcevic (F): OUT [roster-only + injury landscape confirmed]
 - Cam Whitmore (F): OUT [roster-only]
 - Trae Young (G): OUT [roster-only] — FRANCHISE PLAYER
-NOTE: Washington full tank confirmed. Do NOT bet Washington to win under any circumstances.
+NOTE: Washington full tank confirmed. Do NOT bet Washington to win under any circumstances. NOTE: Trae Young appears in BOTH ATL and WAS verified absence feeds — confirm official team affiliation via NBA official PDF before any pick involving Atlanta.
 
 Franchise players requiring mandatory NBA official PDF verification before ANY pick involving their team:
 - Shai Gilgeous-Alexander, Jalen Williams, Chet Holmgren (OKC) — roster-only OUT; top-seed rest risk maximum
@@ -234,7 +233,7 @@ Tanking criteria (ALL THREE must be met):
 When betting AGAINST tanking teams: edge-positive.
 When betting ON tanking teams: require odds ≥ 2.20 and strong situational reason.
 
-Play-in and seeding-contention teams (updated 2026-04-20 — NOT tanking):
+Play-in and seeding-contention teams (updated 2026-04-21 — NOT tanking):
 - OKC Thunder: 64-18, L10: 7-3, streak: L2 — top seed locked; star rest risk MAXIMUM.
 - San Antonio Spurs: 62-20, L10: 8-2, streak: L1 — #2 seed locked; Victor Wembanyama in OUT feed; rest risk elevated.
 - Detroit Pistons: 60-22, L10: 8-2, streak: W3 — NetRtg +8.2; elite form.
@@ -245,7 +244,7 @@ Play-in and seeding-contention teams (updated 2026-04-20 — NOT tanking):
 - Cleveland Cavaliers: 52-30, L10: 7-3, streak: W1 — virtually entire core OUT [roster-only].
 - Houston Rockets: 52-30, L10: 9-1, streak: W1 — Durant + Sengun OUT [roster-only]; seeding race live.
 - Minnesota Timberwolves: 49-33, L10: 5-5, streak: W2 — entire core OUT [roster-only].
-- Atlanta Hawks: 46-36, L10: 6-4, streak: L1 — play-in secured; Onyeka Okongwu OUT; Trae Young requires verification.
+- Atlanta Hawks: 46-36, L10: 6-4, streak: L1 — play-in secured; Onyeka Okongwu OUT; Trae Young requires verification (data conflict — appears in WAS feed).
 - Toronto Raptors: 46-36, L10: 6-4, streak: W1 — NetRtg +2.6; play-in race.
 - Philadelphia 76ers: 45-37, L10: 6-4, streak: W2 — NetRtg -0.2; volatile; cautious.
 - Orlando Magic: 45-37, L10: 7-3, streak: L1 — NetRtg +0.6; play-in motivated.
@@ -263,7 +262,7 @@ HOT STREAK FLAGS:
 EMERGING FADE CANDIDATES:
 - Golden State Warriors (37-45, L3): NetRtg negative; do not back without significant situational reason.
 - Orlando Magic (streak: L1): motivation positive but recent form dipping; neutral-cautious.
-- Atlanta Hawks (streak: L1): Okongwu OUT; verify Trae Young before any ATL pick.
+- Atlanta Hawks (streak: L1): Okongwu OUT; verify Trae Young before any ATL pick (data conflict with WAS feed).
 
 ## SECTION:b2b_rules
 B2B and rest day rules — apply numeric confidence adjustments:
