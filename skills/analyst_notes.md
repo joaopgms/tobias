@@ -1,38 +1,38 @@
 ---
-date: 2026-04-15
+date: 2026-04-16
 llm: claude-sonnet-4-6
 scout_patches: 2
 commit_patches: 0
-milestone: daily (9 bets)
+milestone: daily (11 bets)
 ---
 
-## Today's Analysis — 2026-04-15
+## Today's Analysis — 2026-04-16
 
-Play-in phase is active but official matchup schedules have not yet been announced — Scout must verify game times and rest days before drafting any picks this session. The most notable statistical anomaly entering the play-in is Charlotte Hornets (NetRtg +5.0) seeded #8 in the East with better advanced metrics than the #7 seed Sixers (NetRtg -0.2), making Charlotte a potential value fade target if priced as an underdog. The 2.10-2.50 odds range continues to show a 0W/3L record (€-229.31 loss), confirming this bracket produces negative EV — Scout should continue avoiding picks in this range unless EV calculation is exceptionally strong.
+Primary data integrity concern this session: Trae Young appears in both the Atlanta Hawks and Washington Wizards verified absence feeds — this is a data pipeline conflict that must be resolved via NBA official PDF before any ATL pick is considered. The play-in field has a clear statistical outlier in Charlotte Hornets (NetRtg +5.0), who are notably stronger on advanced metrics than their #8 seeding suggests — if priced as underdog against Philadelphia (#7, NetRtg -0.2), the regression-fade opportunity is significant. Performance trends continue to favour spread picks (53.8% WR, +€258) over ML (46.2%, -€100) and totals (33.3%, -€23), with the odds band 2.10-2.50 producing 0W/3L — Scout should remain disciplined in avoiding that range.
 
 ## Performance Stats
-ALL-TIME: 12W / 15L | Win rate: 44.4% | P&L: €-202.64 | Avg odds: 1.98 | Avg conf: 65.4/100
-RECENT 20: 11W / 9L | 55.0% WR | P&L: €+407.86
-By market:      ML 12bets 5W/7L 41.7% €-256.91  |  SPREAD 12bets 6W/6L 50.0% €+77.54  |  TOTAL 3bets 1W/2L 33.3% €-23.27
-By confidence:  High 8bets 3W/5L 37.5% €+32.90  |  Medium 17bets 9W/8L 52.9% €-94.23  |  Speculative 2bets 0W/2L 0.0% €-141.31
-By odds range:  1.70-1.89 6bets 3W/3L 50.0% €-67.95  |  1.90-2.09 18bets 9W/9L 50.0% €+94.62  |  2.10-2.50 3bets 0W/3L 0.0% €-229.31
+ALL-TIME: 14W / 15L | Win rate: 48.3% | P&L: €+134.57 | Avg odds: 1.97 | Avg conf: 64.8/100
+RECENT 20: 12W / 8L | 60.0% WR | P&L: €+764.56
+By market:      ML 13bets 6W/7L 46.2% €-100.28  |  SPREAD 13bets 7W/6L 53.8% €+258.12  |  TOTAL 3bets 1W/2L 33.3% €-23.27
+By confidence:  High 8bets 3W/5L 37.5% €+32.90  |  Medium 19bets 11W/8L 57.9% €+242.98  |  Speculative 2bets 0W/2L 0.0% €-141.31
+By odds range:  1.70-1.89 7bets 4W/3L 57.1% €+88.68  |  1.90-2.09 19bets 10W/9L 52.6% €+275.20  |  2.10-2.50 3bets 0W/3L 0.0% €-229.31
 
 
 
 ## Scout patches applied
-- [franchise_player_rules] Mandatory every-session update: verified absence feed unchanged from prior session; confirmed Trae Young, Tre Johnson notes updated to reflect current roster-only status; no new additions or removals detected in this session's feed.
-- [tanking_teams] Mandatory session refresh with updated date stamp; all standings data confirmed against current session inputs with no substantive changes to team statuses.
+- [franchise_player_rules] Full sync with verified franchise player absence feed; added Trae Young data conflict flag (appears in both ATL and WAS feeds — data integrity issue requiring PDF verification); adjusted play-in rest risk note since win-or-go-home teams have no star rest incentive.
+- [tanking_teams] Minor factual update to reflect current session date and added Trae Young data conflict flag in ATL entry since he appears in the WAS verified absence feed — data integrity risk for any ATL picks.
 
 ## Commit patches applied
 None
 
 ## Playoff context patches applied
-- [series_context] Mandatory session update: corrected East/West seed ordering with Toronto and Atlanta as East 5-6, Denver as West 6, and flagged matchup announcement status as unconfirmed.
-- [elimination_flags] Mandatory session update: added specific strategic notes per elimination-risk team based on current NetRtg and streak data to give Scout actionable context.
-- [h2h_playoff] Mandatory session refresh: no new H2H data available as official play-in matchups not yet announced; updated date stamp and added GSW discount note.
-- [playoff_rest] Mandatory session refresh: updated date stamp, added note on recent regular season end and typical rest context entering play-in.
+- [series_context] Added Trae Young data conflict flag (appears in both ATL and WAS verified absence feeds) as a data integrity issue that must be resolved via NBA official PDF before any ATL pick; updated session date.
+- [elimination_flags] Added Trae Young data conflict flag as an active decision risk for any ATL-involved play-in scenario; updated session date.
+- [h2h_playoff] Updated session date; no new H2H data available as official play-in matchups not yet confirmed — placeholder structure maintained.
 
 ## Intelligence gaps identified
-- **The 2.10-2.50 odds range has produced 0W/3L (€-229.31) — a clear bracket-level losing pattern suggesting current selection criteria do not adequately screen out value traps at higher odds.** — If this pattern reflects structural over-confidence at high odds (teams picked at 2.10-2.50 are likely longer shots that don't win at the rate confidence scores imply), tightening odds_targets ceiling or raising the EV floor for picks in this bracket would prevent continued losses. → Consider either reducing the ML ceiling from 2.50 to 2.20 OR raising the EV requirement to ≥ 0.10 for any pick with odds ≥ 2.10 — whichever is more consistent with the underlying thesis. Confidence in the direction is 0.72 but the sample is only 3 bets, which is below the evidence standard for patching market_rules or odds_targets. Flag for re-evaluation at 6+ bets.
-- **High confidence picks (8 bets, 3W/5L, 37.5%) are underperforming Medium confidence picks (9W/8L, 52.9%), suggesting the confidence calibration at the 70-84 tier may be systematically over-estimated.** — If high-confidence picks are winning at a lower rate than medium picks, the confidence signals used to reach the 70-84 tier may be producing false certainty — potentially from over-weighting individual signals like hot streaks or opponent tanking status without sufficient cross-validation. → At the next milestone review (after reaching 20+ high-confidence settled bets), audit which specific signal combinations drove high-confidence picks that lost — particularly whether roster-only OUT flags contributed to over-confidence by overstating opponent weakness without NBA PDF verification.
-- **Official play-in matchup schedules, confirmed game times, and rest day counts are not yet available in the session data, preventing Scout from applying play-in rest rules or home court adjustments accurately.** — Without confirmed schedules, Scout cannot determine which team has home court, verify B2B/rest situations, or apply the confidence -8 short-rest adjustment — all of which are material to play-in pick quality. → Infrastructure fix required: ensure the game schedule feed (including home team designation and tip-off times) is populated before Scout runs on play-in game days. Until confirmed, Scout should explicitly verify home court and rest days before drafting any play-in pick.
+- **Trae Young appears in both Atlanta Hawks and Washington Wizards verified absence feeds — a clear data pipeline conflict with no resolution available from current inputs.** — Any Atlanta Hawks play-in pick that implicitly assumes Trae Young is available (or absent) could be built on wrong data; this corrupts both ML confidence and the franchise_player_rules adjustment for ATL. → Add a cross-team duplicate player check to the injury feed ingestion pipeline; flag any player appearing under two teams simultaneously and require NBA official PDF resolution before allowing picks on either team.
+- **West play-in 10-seed is listed as TBD — no team has been confirmed, and the bracket cannot be fully constructed without it.** — Scout cannot evaluate West 9v10 matchup odds or apply H2H/form context without knowing both participants, creating a dead zone in the West play-in betting slate. → Verify final West standings tiebreaker resolution via NBA.com official bracket page at each session until 10-seed is confirmed; populate playoff_context h2h_playoff and elimination_flags immediately upon confirmation.
+- **Odds band 2.10-2.50 has produced 0W/3L (-€229) but selectivity and odds_targets sections do not flag this range as elevated-risk.** — Three losses in this exact odds band may indicate Scout is systematically overestimating confidence on longer-priced picks, or that books are well-calibrated in this range and Tobias has no edge there. → Consider adding a soft flag in selectivity: 'Odds 2.10-2.50 — requires EV ≥ 0.12 (elevated from standard 0.05) given historical 0W/3L on this range; treat with extra caution until 5+ more bets provide a larger sample.'
+- **High-confidence picks (85-100 tier) are performing at only 37.5% WR (3W/5L, +€32) while medium-confidence (55-69) is 57.9% WR (11W/8L, +€242) — the staking structure rewards high-confidence picks with larger stakes despite worse outcomes.** — If this pattern holds, the staking tiers are misaligned with actual win-rate distribution — over-staking on high-confidence picks and under-staking on medium picks destroys expected value compared to a flatter structure. → After 10+ more high-confidence bets are settled, evaluate whether high-confidence tier staking (20-25%) should be reduced to match medium-tier levels (15-20%) given current inverted performance.
