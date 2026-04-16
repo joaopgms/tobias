@@ -1821,7 +1821,7 @@ function renderScoutTab(){
   const rejGames    = ST.rejected_games||[];
   const scoutUpdated = ST.scout_updated_at;
 
-  const todayReport = (scoutStatus === 'live' || scoutStatus === 'done') ? {
+  const todayReport = (scoutStatus === 'live' || scoutStatus === 'done' || scoutStatus === 'no_games') ? {
     date:     today,
     picks:    draftPicks,
     rejected: rejGames,
