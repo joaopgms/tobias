@@ -1,7 +1,7 @@
 ---
-version: 4
-updated_at: 2026-04-15T11:55:22.003408+00:00
-updated_by: analyst_2026-04-15
+version: 5
+updated_at: 2026-04-16T11:57:33.272731+00:00
+updated_by: analyst_2026-04-16
 llm: claude-sonnet-4-6
 ---
 
@@ -13,7 +13,7 @@ All 8 play-in participants (seeds 7-10 in each conference) are in win-or-go-home
 See playin_rules section for motivation and elimination rules specific to this phase.
 
 ## SECTION:series_context
-PLAY-IN TOURNAMENT — Active (updated 2026-04-20)
+PLAY-IN TOURNAMENT — Active (updated 2026-04-21)
 
 Play-In participants based on final regular season standings (seeds 7-10 each conference):
 
@@ -36,6 +36,8 @@ Play-in matchup format:
 
 Confirmed play-in matchups: NOT YET ANNOUNCED — Scout must verify official schedule before drafting any play-in picks.
 
+DATA INTEGRITY FLAG: Trae Young appears in both the Atlanta Hawks and Washington Wizards verified absence feeds. This is a data conflict. Do NOT assume Trae Young is available for ATL or assign his absence to WAS without NBA official PDF confirmation. Any pick involving ATL requires Trae Young status verified via official PDF.
+
 Seeds 1-6 awaiting play-in completion:
 EAST seeds 1-6: #1 Detroit (60-22) | #2 Boston (56-26) | #3 New York Knicks (53-29) | #4 Cleveland (52-30) | #5 Toronto (46-36) | #6 Atlanta (46-36)
 WEST seeds 1-6: #1 OKC (64-18) | #2 San Antonio (62-20) | #3 LA Lakers (53-29) | #4 Houston (52-30) | #5 Minnesota (49-33) | #6 Denver (54-28)
@@ -44,7 +46,7 @@ NOTE: With widespread roster-only OUT flags across OKC, SAS, BOS, NYK, CLE, MIN,
 NOTE: Denver (54-28, W12) ranked as #6 West seed is an anomaly — seeding should be re-verified against official NBA bracket once announced.
 
 ## SECTION:elimination_flags
-PLAY-IN ELIMINATION FLAGS (updated 2026-04-20):
+PLAY-IN ELIMINATION FLAGS (updated 2026-04-21):
 
 All play-in games are effectively win-or-go-home for certain seeds:
 - 9-seed (both conferences): Game 1 loss = eliminated. Maximum desperation.
@@ -60,6 +62,8 @@ HIGH-RISK FLAGS:
 - Portland Trail Blazers (#10, NetRtg -0.2): On W2 streak but true talent borderline — one-and-done risk is real; do not over-favour as underdog if pricing doesn't reflect elimination pressure gap.
 - Philadelphia 76ers (#7, NetRtg -0.2): Volatile; NetRtg is worst of any 7-seed in the field — do not default to 7-seed favourite pricing.
 - Charlotte Hornets (#8, NetRtg +5.0): Strongest statistical case of all play-in teams; if priced as underdog vs PHI, regression-fade rule may apply against Sixers.
+
+DATA INTEGRITY FLAG: Trae Young conflict (ATL/WAS feeds) — verify before any ATL Hawks pick.
 
 Note: No first-round playoff series elimination data yet — series have not begun.
 
@@ -120,7 +124,7 @@ Regular season H2H as a playoff/play-in signal — rules and current data:
 - If H2H games were played with significantly different rosters (key player absent):
   flag and discount — those results don't reflect the current matchup.
 
-**Play-in H2H notes (updated 2026-04-20 — matchups not yet officially confirmed):**
+**Play-in H2H notes (updated 2026-04-21 — matchups not yet officially confirmed):**
 All H2H records require population once official play-in matchups are announced.
 Multiple teams have franchise players in roster-only OUT feed — many regular season H2H games
 were played with non-representative rosters. Apply H2H adjustment ONLY if the H2H games involved
