@@ -23,9 +23,9 @@
           "game": 2,
           "started_at": "2026-04-05T10:44:07.102344+00:00",
           "bankroll_start": 1000.0,
-          "wins": 6,
+          "wins": 8,
           "losses": 3,
-          "peak_bankroll": 1535.6,
+          "peak_bankroll": 1872.81,
           "total_bets": 11
         }
       ]
@@ -1092,10 +1092,10 @@
             "Jonathan Isaac (ORL - Questionable)",
             "Jett Howard (ORL - Active, cleared from injury report at commit)"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "WON",
+          "returned": 340.9,
+          "pnl": 156.63,
+          "settled_at": "2026-04-16T11:05:05.250262+00:00",
           "committed_at": "2026-04-15T23:07:23Z"
         },
         {
@@ -1113,10 +1113,10 @@
             "Jonathan Isaac (ORL - Questionable)",
             "Jett Howard (ORL - Active, cleared from injury report at commit)"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "WON",
+          "returned": 364.85,
+          "pnl": 180.58,
+          "settled_at": "2026-04-16T11:05:05.250262+00:00",
           "committed_at": "2026-04-15T23:07:23Z"
         }
       ],
