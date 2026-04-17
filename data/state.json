@@ -1,24 +1,24 @@
 {
   "season": "2024-25",
   "game": 2,
-  "bankroll": 1872.81,
+  "bankroll": 1217.33,
   "bankroll_initial": 1000.0,
   "bankroll_peak": 1872.81,
-  "total_staked": 2025.54,
+  "total_staked": 2681.02,
   "total_returned": 2898.35,
   "net_pnl": 872.81,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-04-17T15:00:30.301398+00:00",
+  "last_updated": "2026-04-17T22:50:02.634876+00:00",
   "first_game_time": "2026-04-17T23:30:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
   "scout_updated_at": "2026-04-17T15:00:30.301398+00:00",
   "scout_odds_source": "theodds_onexbet",
-  "commit_status": "pending",
-  "commit_updated_at": "2026-04-15T23:07:20.715633+00:00",
-  "commit_date": "2026-04-15",
+  "commit_status": "done",
+  "commit_updated_at": "2026-04-17T22:50:02.634876+00:00",
+  "commit_date": "2026-04-17",
   "analyst_updated_at": "2026-04-17T11:51:04.120199+00:00",
   "settler_updated_at": "2026-04-17T10:57:49.526681+00:00",
   "agent_models": {
@@ -27,46 +27,50 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "Two-game play-in slate with clear directional signals. Injury feed source is NBA Official (4 teams reporting) — full confidence rules apply. Two ML picks drafted: CHA ML driven by an extraordinary L15 NetRtg gap (+25.7 vs -6.7 = 32.4pt gap) against a struggling ORL squad despite home court disadvantage. PHX ML supported by L15 gap of 23.5 points over GSW, compounded by Butler/Moody OUT for Warriors and GSW's L3 streak/negative season NetRtg. Spreads evaluated for both games but ML edges are cleaner given play-in variance and injury question marks on marginal players. Pace data available but both games near threshold — O/U signals inconclusive; no totals drafted. Total stake: €656.48 (35.1% of bankroll, within 70% daily cap). 30%+ reserve maintained.",
-  "draft_picks": [
+  "last_report": "### CONFIRMED — Charlotte Hornets ML\n\n- Match: **Orlando Magic vs Charlotte Hornets** | Tip: 2026-04-17T23:30Z\n- Pick: Charlotte Hornets ML | Scout odds: 1.68 | Commit odds: **1.68** | Move: **0.00 (no movement)**\n- ML: ORL 2.35 / CHA 1.68 | ATS: ORL +3.5 (1.92/2.00) | O/U: 218.5 (O:1.96/U:1.96)\n- Stake: **€374.56** | Pot: **€629.26** | Conf: **75/100** | EV: **0.26 (26%)**\n- Decision: Confirmed with increased confidence (70 → 75). Key update: Jonathan Isaac upgraded from Questionable to **OUT** (confirmed NBA official PDF — Left Knee Sprain). Isaac was ORL's primary rim protector; his confirmed absence removes the -5 conservative Scout discount and strengthens CHA's path to victory. Core thesis unchanged: CHA L15 NetRtg +25.7 vs ORL -6.7 (32.4-point gap), superior season NetRtg (+5.0 vs +0.6), OffRtg advantage (119.5 vs 115.1). ORL home court partially offsets but cannot overcome this talent/form gap with Isaac now officially OUT.\n\n---\n\n### CONFIRMED — Phoenix Suns ML\n\n- Match: **Phoenix Suns vs Golden State Warriors** | Tip: 2026-04-18T02:00Z\n- Pick: Phoenix Suns ML | Scout odds: 1.68 | Commit odds: **1.71** | Move: **+0.03 (improved in our favour)**\n- ML: PHX 1.71 / GSW 2.30 | ATS: PHX -2.5 (1.92/2.00) | O/U: 220.5 (O:2.04/U:1.88)\n- Stake: **€280.92** | Pot: **€480.37** | Conf: **68/100** | EV: **0.163 (16.3%)**\n- Decision: Confirmed. Odds drifted +0.03 in our favour (1.68 → 1.71) — noted, confirmed at original stake tier per line movement rules (do not increase stake on favourable drift). No new injuries — Jimmy Butler III remains OUT, PHX anchors (Booker, Durant, Beal) all healthy. Thesis intact: PHX L15 +6.7 vs GSW -16.8 (23.5-point gap), GSW L3 streak and 3-7 L10, PHX home court advantage (+3pts play-in). EV improved to 16.3% at commit odds.\n\n---\n\n### LATE SCOUT SUMMARY\nAll 6 non-play-in games checked — no new bets added. Four games (CLE, DEN, NYK, BOS as favourites) have ML odds far below the 1.65 floor; corresponding underdogs are above the 2.50 ceiling. All spread picks from these games were declined due to absence of injury data in tonight's nba_official feed (which only covers the 4 play-in teams). One available late pick slot was preserved but no qualifying edge found.\n\n---\n\n### SLATE SUMMARY\nBoth play-in draft picks confirmed with strong conviction. Total committed: **€655.48 (35.0% of €1,872.81 bankroll)** — well within the 70% maximum. The slate's strongest signal remains the historic CHA L15 advantage (+25.7 vs ORL's -6.7) now bolstered by Isaac's confirmed OUT status; PHX vs GSW offers a clean directional bet against a depleted, poor-form Warriors side in a home elimination game scenario. No late picks added due to odds range violations and incomplete injury data on non-play-in games.",
+  "draft_picks": [],
+  "pending_bets": [
     {
-      "id": "nba_draft_20260417_001",
+      "id": "nba_bet_20260417_001",
       "match": "Orlando Magic vs Charlotte Hornets",
       "time": "2026-04-17T23:30:00Z",
       "pick": "Charlotte Hornets ML",
       "odds": 1.68,
       "stake": 374.56,
       "potential_return": 629.26,
-      "confidence": 72,
-      "reasoning": "LINE ANOMALY CHECK: No anomaly — CHA priced as favourite at 1.68 with better record and superior stats, consistent with expectations. PRIORITY STATS: (1) NetRtg L15 GAP: CHA L15 +25.7 vs ORL L15 -6.7 — gap of 32.4 points, massive signal in Charlotte's favour. This is the dominant signal. (2) No B2B issues — both teams have standard rest in play-in context. (3) FRANCHISE PLAYER INJURIES: ORL has Jonathan Isaac Questionable (Left Knee) — Isaac is a key defensive piece but not a franchise player; confidence -5 applied. CHA has Moussa Diabate Questionable (Left Hip) — bench depth player, minimal impact; no confidence adjustment needed. (4) MOTIVATION: Both teams are in play-in, fully motivated. CHA as #8 seed faces the 7v8 loser if they lose; ORL as #7 seed (from context: ORL is the 7-seed based on 45-37 record vs CHA 44-38) — home court advantage applies here for ORL, worth ~3pts in play-in per rules. (5) L10: CHA 6-4 vs ORL 7-3 — ORL has slight L10 edge. (6) HOME COURT: ORL is the home team — adds ~3 pts of value in play-in per playoff_rest rules. Significant factor. (7) Season NetRtg: CHA +5.0 vs ORL +0.6 — CHA meaningfully superior. (8) DefRtg: Both teams at 114.5 — no gap; symmetric. OffRtg: CHA 119.5 vs ORL 115.1 — CHA clearly superior offensively. SYNTHESIS: The L15 gap of 32.4 is extraordinary — CHA has been in elite form, ORL has been poor. CHA's season NetRtg (+5.0 vs +0.6) and OffRtg advantage support the directional signal. ORL's home court (+3pts) and marginally better L10 are real but insufficient to overcome a 32-point L15 gap. Isaac Questionable (ORL) reduces their defensive anchor; apply -5 confidence for potential absence impact. Base confidence: 75 (strong L15 signal, NetRtg and OffRtg gap). Adjustments: Isaac Questionable on ORL side — this HELPS CHA bet, no penalty needed for CHA. For ORL home court value, reduce CHA confidence by 5 (home worth ~3pts in play-in). Net confidence: 70. EV = (0.70 × 1.68) - 1 = 1.176 - 1 = 0.176. EV = 17.6% — STRONG edge (≥ 0.15). Confidence 70 meets ML floor of 50. Odds 1.68 meets commit confirmation floor of 1.65 but is below ML target range of 1.60-2.50 — 1.68 IS within 1.60-2.50 range. Stake: confidence 70 = High tier (20-25% of bankroll) = 20% × €1872.81 = €374.56.",
+      "confidence": 75,
+      "reasoning": "CONFIRMED at commit. Odds unchanged at 1.68 (no movement from Scout). KEY INJURY UPDATE: Jonathan Isaac upgraded from Questionable to OUT (Left Knee Sprain confirmed on NBA official PDF). Isaac was ORL's primary rim protector and defensive anchor — his confirmed absence strengthens CHA's offensive attack path and removes Scout's -5 conservative confidence penalty for uncertainty. Revised confidence: 75 (Scout 70 + 5 for Isaac OUT confirmed benefiting CHA thesis). Thesis intact: CHA L15 NetRtg +25.7 vs ORL L15 -6.7 = gap of 32.4 points (dominant signal). Season NetRtg CHA +5.0 vs ORL +0.6. OffRtg advantage CHA 119.5 vs ORL 115.1. ORL home court (+3pts play-in) partially offset by 32-point L15 gap and now Isaac confirmed OUT. CHA Moussa Diabate still Questionable (bench player, no adjustment). EV = (0.75 × 1.68) - 1 = 0.26 (26%). High tier confidence 75 = 20% stake = €374.56. Data source: nba_official — full confidence rules apply. Total exposure post-commit: 35% of bankroll — well within 70% limit.",
       "anchor_players": [
         "Miles Bridges",
         "LaMelo Ball",
         "Franz Wagner"
       ],
-      "drafted_at": "2026-04-17T15:00:36Z",
-      "market_type": "ml"
+      "result": null,
+      "returned": null,
+      "pnl": null,
+      "settled_at": null
     },
     {
-      "id": "nba_draft_20260417_002",
+      "id": "nba_bet_20260417_002",
       "match": "Phoenix Suns vs Golden State Warriors",
       "time": "2026-04-18T02:00:00Z",
       "pick": "Phoenix Suns ML",
-      "odds": 1.68,
-      "stake": 281.92,
-      "potential_return": 473.63,
+      "odds": 1.71,
+      "stake": 280.92,
+      "potential_return": 480.37,
       "confidence": 68,
-      "reasoning": "LINE ANOMALY CHECK: No anomaly — PHX priced as home favourite at 1.68, consistent with better record (45-37 vs 37-45) and home court. GSW priced at 2.35. PRIORITY STATS: (1) NetRtg L15 GAP: PHX L15 +6.7 vs GSW L15 -16.8 — gap of 23.5 points, well above the 4.0 threshold. Massive directional signal for PHX. (2) No B2B issues in play-in per playoff_rest rules. (3) FRANCHISE PLAYER INJURIES: GSW has Jimmy Butler III OUT (Right ACL — Surgery), Moses Moody OUT (Surgery), Quinten Post OUT (Management), and Kristaps Porzingis QUESTIONABLE (Right Ankle). Butler OUT is significant — he's a franchise-level contributor. PHX has Grayson Allen QUESTIONABLE (Left Hamstring) and Mark Williams QUESTIONABLE (Left Foot) — Allen is secondary player, Williams is a rotation center; combined confidence -5 applied. GSW missing Butler (OUT) = franchise-level absence per rules; cannot bet GSW ML. For PHX pick: opponent (GSW) missing Butler = supports PHX bet. Butler OUT for GSW means do not bet GSW to win — but this SUPPORTS PHX. Porzingis Questionable for GSW (additional -10 on any GSW bet, irrelevant here). PHX Questionable players: -5 combined. (4) MOTIVATION: Both teams are in play-in; 9-seed (GSW) faces maximum elimination pressure. PHX as #7 seed (45-37) vs GSW as #9 seed (37-45). 9-seed elimination desperation is real but GSW's poor form (L3 streak, negative NetRtg) makes desperation insufficient. (5) L10: PHX 5-5 vs GSW 3-7 — GSW L10 is notably poor. (6) HOME COURT: PHX is the home team — +3 pts in play-in per rules. Significant advantage. (7) Season NetRtg: PHX +1.4 vs GSW -0.6 — PHX ahead. (8) GSW FADE CANDIDATE: Per skills emerging_fade section — GSW at L3 streak, NetRtg negative, do not back without significant reason. (9) Pace: PHX 97.2, GSW 99.0 — slight mismatch (1.8 pts), below 5pt threshold for unpredictability concern. SYNTHESIS: L15 gap of 23.5 strongly favours PHX. Season stats, L10, home court, and opponent roster depletion (Butler OUT) all stack on PHX side. GSW's desperation as 9-seed partially offset by terrible recent form and franchise player absences. Base confidence: 75. Adjustments: PHX Questionable players (Allen + Williams) -5; PHX confirmation as 7-seed vs 9-seed play-in edge +3. Net confidence: 68 (rounding). Note: GSW 37-45 is below .550 W% — per HOT STREAK FADE RULE reversed: GSW on L3, not a hot team; PHX is the more stable team here. EV = (0.68 × 1.68) - 1 = 1.1424 - 1 = 0.1424. EV = 14.2% — marginal-to-strong edge (≥ 0.05, approaching 0.15). Confidence 68 meets ML floor of 50. Odds 1.68 within 1.60-2.50 range. Stake: confidence 68 = Medium tier (15-20%) = 15% × €1872.81 = €281.92.",
+      "reasoning": "CONFIRMED at commit. Odds improved from Scout's 1.68 to 1.71 (+0.03 in our favour — noted, confirmed at original stake tier). Stake recalculated at current bankroll: 15% × €1,872.81 = €280.92. No new injury developments since Scout. Jimmy Butler III remains OUT (Right ACL Surgery confirmed). Porzingis Questionable unchanged. PHX anchor players (Booker, Durant, Beal) have no injury reports. Thesis fully intact: PHX L15 NetRtg +6.7 vs GSW L15 -16.8 = gap of 23.5 points. GSW 37-45 record, L3 streak, L10 3-7 — strongest fade candidate in play-in per skills. PHX home court (+3pts play-in). PHX 45-37 with stronger season NetRtg (+1.4 vs -0.6). Butler OUT decimates GSW's best player and defensive anchor. Confidence 68 unchanged (no new info to adjust). EV at commit odds = (0.68 × 1.71) - 1 = 0.163 (16.3%) — improved from Scout's 14.2%, comfortably above 0.05 threshold. Medium tier confidence 68 = 15% stake. Data source: nba_official — full confidence rules apply. Total combined stake: €655.48 = 35.0% of bankroll — within 70% limit.",
       "anchor_players": [
         "Devin Booker",
         "Bradley Beal",
-        "Kevin Durant (PHX roster)"
+        "Kevin Durant"
       ],
-      "drafted_at": "2026-04-17T15:00:36Z",
-      "market_type": "ml"
+      "result": null,
+      "returned": null,
+      "pnl": null,
+      "settled_at": null
     }
   ],
-  "pending_bets": [],
   "settled_bets": [
     {
       "id": "nba_bet_20260406_001",
@@ -313,118 +317,108 @@
   ],
   "late_scout_rejections": [
     {
-      "match": "LA Clippers vs Golden State Warriors",
-      "reason": "No valid market entry found at commit time. LAC ML drifted further down to 1.47 (floor 1.65, was already rejected at 1.51). GSW ML at 2.93 exceeds 2.50 ML ceiling (drifted further from Scout's 2.81). LAC spread -5.5 @ 1.96 is in range but LAC advanced stats remain unavailable — spread picks require advanced stats per data_quality_rules. No actionable edge on either side."
+      "match": "Cleveland Cavaliers vs Toronto Raptors",
+      "reason": "CLE ML 1.33 below ML floor of 1.65; TOR ML 3.72 above ML ceiling of 2.50. Spread in range but NBA official injury feed does not cover these non-play-in teams tonight — cannot evaluate safely without injury data. No valid bet."
     },
     {
-      "match": "Toronto Raptors @ Cleveland Cavaliers",
-      "reason": "Not on tonight's confirmed slate (slate lists only PHI vs ORL and LAC vs GSW). CLE ML 1.30 is well below the 1.65 ML floor regardless. No evaluation required."
+      "match": "Denver Nuggets vs Minnesota Timberwolves",
+      "reason": "DEN ML 1.42 below ML floor of 1.65; MIN ML 3.15 above ML ceiling of 2.50. Spread in range but no injury coverage for these teams in tonight's nba_official feed. Denver seeding anomaly flagged in skills (54-28 as #6 seed) — unresolved. Cannot confirm."
     },
     {
-      "match": "Minnesota Timberwolves @ Denver Nuggets",
-      "reason": "Not on tonight's confirmed slate. DEN ML 1.45 below 1.65 ML floor. No evaluation required."
+      "match": "New York Knicks vs Atlanta Hawks",
+      "reason": "NYK ML 1.45 below ML floor of 1.65; ATL ML 3.00 above ceiling of 2.50. Additionally, Trae Young data conflict (ATL/WAS feeds) flagged in skills — cannot confirm any ATL pick without official verification. No valid bet."
     },
     {
-      "match": "Atlanta Hawks @ New York Knicks",
-      "reason": "Not on tonight's confirmed slate. NYK ML 1.49 below 1.65 ML floor. No evaluation required."
+      "match": "Los Angeles Lakers vs Houston Rockets",
+      "reason": "HOU ML 1.50 below ML floor of 1.65; LAL ML 2.81 above ML ceiling of 2.50. Spread in range but no injury coverage for these teams in tonight's nba_official feed. Cannot evaluate safely."
     },
     {
-      "match": "Houston Rockets @ Los Angeles Lakers",
-      "reason": "Not on tonight's confirmed slate. HOU ML 1.48 below 1.65 ML floor. No evaluation required."
+      "match": "Boston Celtics vs Philadelphia 76ers",
+      "reason": "BOS ML 1.15 extreme — far below ML floor of 1.65; PHI ML 6.60 far above ceiling of 2.50. Spread BOS -13.5 is extreme — line anomaly check: implied probability gap massive; PHI NetRtg L15 +11.4 vs extreme underdog pricing creates anomaly concern. No valid bet at these odds ranges."
     },
     {
-      "match": "Portland Trail Blazers @ San Antonio Spurs",
-      "reason": "Not on tonight's confirmed slate. SAS ML 1.20 far below 1.65 ML floor. No evaluation required."
+      "match": "San Antonio Spurs vs Portland Trail Blazers",
+      "reason": "SAS ML 1.20 extreme — far below ML floor of 1.65; POR ML 5.34 far above ceiling of 2.50. SAS is #2 seed (62-20) vs POR #10 play-in — pricing makes sense directionally but ML odds entirely out of valid range. No valid bet."
     }
   ],
   "commit_report_data": {
-    "date": "2026-04-15",
-    "ts": "2026-04-15T23:07:20.715633+00:00",
+    "date": "2026-04-17",
+    "ts": "2026-04-17T22:50:02.634876+00:00",
     "bets": [
       {
-        "id": "nba_bet_20260415_001",
-        "match": "Philadelphia 76ers vs Orlando Magic",
-        "time": "2026-04-15T23:30:00Z",
-        "pick": "Philadelphia 76ers ML",
-        "odds": 1.85,
-        "stake": 184.27,
-        "potential_return": 340.9,
-        "confidence": 58,
-        "reasoning": "PLAY-IN GAME — PHI (#7) vs ORL (#8) at home. Primary edge: L15 NetRtg gap of +13.2 (PHI +9.1 vs ORL -4.1) — dominant signal in PHI's favour. Home court in play-in context adds further edge (~+3 pts). Odds moved marginally in favour (+0.01: 1.84→1.85). Anchor player adjustments at commit: Jett Howard NOT on injury report (Active) — one less ORL injury concern. Jonathan Isaac still Questionable (Left Knee Sprain); thesis does not depend on his absence but applies standard -10 confidence adjustment and -20% stake per rules. Confidence adjusted 68→58. Embiid OUT was already priced in and team-adjusted over extended absence. EV at commit: (0.58 × 1.85) - 1 = 0.073 ≥ 0.05. Stake adjusted to 80% of 15% tier due to Questionable player: 15% × €1535.60 × 0.80 = €184.27.",
+        "id": "nba_bet_20260417_001",
+        "match": "Orlando Magic vs Charlotte Hornets",
+        "time": "2026-04-17T23:30:00Z",
+        "pick": "Charlotte Hornets ML",
+        "odds": 1.68,
+        "stake": 374.56,
+        "potential_return": 629.26,
+        "confidence": 75,
+        "reasoning": "CONFIRMED at commit. Odds unchanged at 1.68 (no movement from Scout). KEY INJURY UPDATE: Jonathan Isaac upgraded from Questionable to OUT (Left Knee Sprain confirmed on NBA official PDF). Isaac was ORL's primary rim protector and defensive anchor — his confirmed absence strengthens CHA's offensive attack path and removes Scout's -5 conservative confidence penalty for uncertainty. Revised confidence: 75 (Scout 70 + 5 for Isaac OUT confirmed benefiting CHA thesis). Thesis intact: CHA L15 NetRtg +25.7 vs ORL L15 -6.7 = gap of 32.4 points (dominant signal). Season NetRtg CHA +5.0 vs ORL +0.6. OffRtg advantage CHA 119.5 vs ORL 115.1. ORL home court (+3pts play-in) partially offset by 32-point L15 gap and now Isaac confirmed OUT. CHA Moussa Diabate still Questionable (bench player, no adjustment). EV = (0.75 × 1.68) - 1 = 0.26 (26%). High tier confidence 75 = 20% stake = €374.56. Data source: nba_official — full confidence rules apply. Total exposure post-commit: 35% of bankroll — well within 70% limit.",
         "anchor_players": [
-          "Joel Embiid (PHI - OUT)",
-          "Jonathan Isaac (ORL - Questionable)",
-          "Jett Howard (ORL - Active, cleared from injury report at commit)"
+          "Miles Bridges",
+          "LaMelo Ball",
+          "Franz Wagner"
         ],
         "result": null,
         "returned": null,
         "pnl": null,
-        "settled_at": null,
-        "committed_at": "2026-04-15T23:07:23Z"
+        "settled_at": null
       },
       {
-        "id": "nba_bet_20260415_002",
-        "match": "Philadelphia 76ers vs Orlando Magic",
-        "time": "2026-04-15T23:30:00Z",
-        "pick": "Philadelphia 76ers -1.5",
-        "odds": 1.98,
-        "stake": 184.27,
-        "potential_return": 364.85,
-        "confidence": 55,
-        "reasoning": "PLAY-IN SPREAD — PHI -1.5 at 1.98 (moved in favour: 1.92→1.98, +0.06). L15 NetRtg gap of +13.2 is well above the 6-point strong spread signal threshold. PHI home court advantage in play-in context (+3 pts). -1.5 is minimal spread — PHI's recent dominant form strongly suggests margin beyond 1.5. Confirmed at original stake per line movement rules (odds improved). Anchor player adjustments: Jonathan Isaac Questionable → confidence -10 (65→55), stake -20%. Jett Howard cleared — neutral. Injury source: nba_official (4 teams) — spread picks allowed. EV at commit: (0.55 × 1.98) - 1 = 0.089 ≥ 0.05. Combined same-game exposure with Pick 1: €368.54 = 24.0% of bankroll — well within 70% cap. Correlated risk acknowledged.",
+        "id": "nba_bet_20260417_002",
+        "match": "Phoenix Suns vs Golden State Warriors",
+        "time": "2026-04-18T02:00:00Z",
+        "pick": "Phoenix Suns ML",
+        "odds": 1.71,
+        "stake": 280.92,
+        "potential_return": 480.37,
+        "confidence": 68,
+        "reasoning": "CONFIRMED at commit. Odds improved from Scout's 1.68 to 1.71 (+0.03 in our favour — noted, confirmed at original stake tier). Stake recalculated at current bankroll: 15% × €1,872.81 = €280.92. No new injury developments since Scout. Jimmy Butler III remains OUT (Right ACL Surgery confirmed). Porzingis Questionable unchanged. PHX anchor players (Booker, Durant, Beal) have no injury reports. Thesis fully intact: PHX L15 NetRtg +6.7 vs GSW L15 -16.8 = gap of 23.5 points. GSW 37-45 record, L3 streak, L10 3-7 — strongest fade candidate in play-in per skills. PHX home court (+3pts play-in). PHX 45-37 with stronger season NetRtg (+1.4 vs -0.6). Butler OUT decimates GSW's best player and defensive anchor. Confidence 68 unchanged (no new info to adjust). EV at commit odds = (0.68 × 1.71) - 1 = 0.163 (16.3%) — improved from Scout's 14.2%, comfortably above 0.05 threshold. Medium tier confidence 68 = 15% stake. Data source: nba_official — full confidence rules apply. Total combined stake: €655.48 = 35.0% of bankroll — within 70% limit.",
         "anchor_players": [
-          "Joel Embiid (PHI - OUT)",
-          "Jonathan Isaac (ORL - Questionable)",
-          "Jett Howard (ORL - Active, cleared from injury report at commit)"
+          "Devin Booker",
+          "Bradley Beal",
+          "Kevin Durant"
         ],
         "result": null,
         "returned": null,
         "pnl": null,
-        "settled_at": null,
-        "committed_at": "2026-04-15T23:07:23Z"
+        "settled_at": null
       }
     ],
     "cancelled": [],
     "late_rejections": [
       {
-        "match": "Charlotte Hornets vs Miami Heat",
-        "reason": "CHA ML 1.47 below ML floor of 1.65. MIA ML 2.93 above 2.50 ceiling. CHA -5.5 spread at 1.94 re-evaluated: L15 gap (+16.7 pts) and home court are strong signals, but pace mismatch of 6.6 pts (CHA 96.8 vs MIA 103.4) requires spread confidence ≥ 70. Best achievable confidence ~62 after accounting for MIA elimination desperation (max win-or-go-home as #9 seed), which offsets the statistical edge. Cannot reach 70 threshold. O/U 228.5 at 1.95/1.97: insufficient directional signal with both teams offensive-capable and pace uncertainty. No qualifying pick."
+        "match": "LA Clippers vs Golden State Warriors",
+        "reason": "No valid market entry found at commit time. LAC ML drifted further down to 1.47 (floor 1.65, was already rejected at 1.51). GSW ML at 2.93 exceeds 2.50 ML ceiling (drifted further from Scout's 2.81). LAC spread -5.5 @ 1.96 is in range but LAC advanced stats remain unavailable — spread picks require advanced stats per data_quality_rules. No actionable edge on either side."
       },
       {
-        "match": "Phoenix Suns vs Portland Trail Blazers",
-        "reason": "Lillard OUT confirmed (Injury Management) — franchise player rule blocks POR ML (2.40): cannot bet POR to win while franchise player is absent and opponent (PHX) has no equivalent star out. PHX ML 1.66 barely above floor but confidence for PHX only ~40-45 (POR elimination desperation +10 as #10 seed road underdog; POR L15 +30.4 vastly superior even accounting for Lillard absence; PHX L10 5-5; mediocre NetRtg). Well below 60 required for new picks. Under 216.5 at 1.96: base confidence 60 (Lillard OUT reduces POR scoring meaningfully), but Grant Questionable forces -10 standard adjustment → confidence 50, EV = (0.50 × 1.96) - 1 = -0.02, below 0.05 minimum. Cannot confirm. POR +3.5 at 1.88: franchise player absent (Lillard) compromises spread assessment; reliability of coverage threshold cannot be established."
+        "match": "Toronto Raptors @ Cleveland Cavaliers",
+        "reason": "Not on tonight's confirmed slate (slate lists only PHI vs ORL and LAC vs GSW). CLE ML 1.30 is well below the 1.65 ML floor regardless. No evaluation required."
       },
       {
-        "match": "Golden State Warriors vs Los Angeles Clippers",
-        "reason": "West Play-In #9 vs #8. LAC ML 1.53 below ML floor 1.65. GSW ML 2.71 above 2.50 ceiling. LAC -4.5 at 1.88: L15 gap +22.8 favours LAC strongly, but GSW elimination desperation (+10 road underdog facing elimination) drags LAC spread confidence to ~50, below 60 minimum for new picks. GSW +4.5 at 2.04: GSW L15 -16.8 is deeply negative; net confidence after desperation bonus only ~45, below 60 threshold. O/U 220.5: insufficient injury data and no clear pace/scoring signal without team context. No qualifying pick."
+        "match": "Minnesota Timberwolves @ Denver Nuggets",
+        "reason": "Not on tonight's confirmed slate. DEN ML 1.45 below 1.65 ML floor. No evaluation required."
       },
       {
-        "match": "Orlando Magic vs Philadelphia 76ers",
-        "reason": "ORL not listed as a play-in participant (East play-in: PHI, CHA, MIA, POR). ORL@PHI pairing is anomalous given 'regular season has concluded for non-play-in teams.' Insufficient context for this game — unclear if this is a first-round playoff matchup, a misaligned odds entry, or post-season exhibition. No reliable series context, rest data, or injury data (ORL and PHI absent from tonight's NBA official injury report). Cannot establish confident edge without knowing series state and whether this game is meaningful."
+        "match": "Atlanta Hawks @ New York Knicks",
+        "reason": "Not on tonight's confirmed slate. NYK ML 1.49 below 1.65 ML floor. No evaluation required."
       },
       {
-        "match": "Minnesota Timberwolves vs Denver Nuggets",
-        "reason": "DEN L15 +29.9 vs MIN -0.9 — gap of +30.8 is the largest on the slate. DEN L10: 10-0 (extraordinary form). DEN -5.5 at 1.91 would pass EV at confidence 65. However: (1) No NBA official injury data for either team — skills note warns top seeds like MIN have 'multiple franchise players in roster-only OUT feed.' MIN could be severely depleted, making the spread potentially already baked in, or DEN could be managing load. (2) Unknown series context — if DEN is up 3-0/3-1, skills say 'Do NOT bet the team up 3-0 at short spread odds — closing games can be looser.' (3) MIN ML 3.00 is at ceiling; DEN ML 1.45 below floor, suggesting market sees DEN as heavy favourite already. Insufficient context to confirm."
+        "match": "Houston Rockets @ Los Angeles Lakers",
+        "reason": "Not on tonight's confirmed slate. HOU ML 1.48 below 1.65 ML floor. No evaluation required."
       },
       {
-        "match": "Atlanta Hawks vs New York Knicks",
-        "reason": "ATL L15 +18.2 vs NYK +8.3 — gap of +10.0 favours ATL. ATL ML 2.97 above 2.50 ceiling. NYK ML 1.46 below floor. NYK -5.5 at 1.99 — in range, but series context unknown. Both teams may be seeded 5-6 in East (TOR and ATL per skills series_context note). Without confirmed series state, injury data (both absent from NBA official report), or knowing if this is a first-round playoff game or play-in variant, cannot establish reliable confidence ≥ 60."
-      },
-      {
-        "match": "Houston Rockets vs Los Angeles Lakers",
-        "reason": "HOU L15 +38.9 (strongest in the dataset). HOU -5.5 at 1.97 would be statistically compelling. However: (1) Skills specifically warn 'HOU — top seeds are fielding depleted rosters' with star rest concerns. (2) No injury data for HOU or LAL in tonight's NBA official report. (3) If HOU's franchise players are on rest (as implied by skills notes about widespread roster-only OUTs on top seeds), the L15 form and current competitive lineup may diverge significantly. (4) Series context unknown — LAL is #3 West seed (53-29), HOU likely #4/5 — unknown series state means cannot apply closing-game caution or elimination adjustments. Too many unknown variables for a high-confidence late pick."
-      },
-      {
-        "match": "Toronto Raptors vs Cleveland Cavaliers",
-        "reason": "CLE ML 1.34 — extreme favourite pricing, below all valid ranges and triggers line anomaly check: implied probability ~74.6% for CLE vs TOR. CLE L15 +3.4 vs TOR L15 +23.7 — gap of +20.3 actually FAVOURS Toronto, yet CLE is priced as a massive favourite. This is a significant anomaly: implied probability gap vs recent form gap. Per line_anomaly_check rules, home team with materially better record priced as heavy favourite requires investigation. TOR's superior L15 form (+23.7) and series NetRtg gap strongly suggest CLE's pricing may reflect series momentum (e.g. CLE up 3-0 or 3-1) rather than current talent gap. Without confirmed series context, cannot resolve the anomaly. TOR ML 3.67 above 2.50 ceiling. Cannot confirm any side."
+        "match": "Portland Trail Blazers @ San Antonio Spurs",
+        "reason": "Not on tonight's confirmed slate. SAS ML 1.20 far below 1.65 ML floor. No evaluation required."
       }
     ],
-    "total_staked": 368.54,
-    "bankroll_before": 1535.6,
-    "report": "### CONFIRMED — Philadelphia 76ers ML\n\n- **Match:** Philadelphia 76ers vs Orlando Magic | **Tip:** 2026-04-15T23:30Z\n- **Pick:** PHI ML | **Scout odds:** 1.84 | **Commit odds:** 1.85 | **Move:** +0.01 (slightly in favour ✅)\n- **ML:** PHI 1.85 / ORL 2.08 | **ATS:** PHI -1.5 (1.98 / 1.94) | **O/U:** 223.5 (O:1.96 / U:1.96)\n- **Stake:** €184.27 | **Pot. Return:** €340.90 | **Conf:** 58/100 | **EV:** 0.073\n- **Decision:** Primary edge intact — L15 NetRtg gap of +13.2 is the dominant signal. Jett Howard cleared from injury report at commit (Active), a marginal positive for ORL's rotation but doesn't change PHI's fundamental L15 advantage. Jonathan Isaac remains Questionable → standard -10 confidence (68→58) and -20% stake adjustment applied per rules. EV at 0.073 clears the 0.05 threshold. Odds moved marginally in favour. Confirmed at adjusted stake.\n\n---\n\n### CONFIRMED — Philadelphia 76ers -1.5\n\n- **Match:** Philadelphia 76ers vs Orlando Magic | **Tip:** 2026-04-15T23:30Z\n- **Pick:** PHI -1.5 Spread | **Scout odds:** 1.92 | **Commit odds:** 1.98 | **Move:** +0.06 (in favour ✅)\n- **ML:** PHI 1.85 / ORL 2.08 | **ATS:** PHI -1.5 (1.98 / 1.94) | **O/U:** 223.5 (O:1.96 / U:1.96)\n- **Stake:** €184.27 | **Pot. Return:** €364.85 | **Conf:** 55/100 | **EV:** 0.089\n- **Decision:** Spread odds improved from 1.92 to 1.98 — confirming at original stake per line movement rules (no stake increase on improved odds). Injury source: nba_official (4 teams) — spread picks fully permitted. Same Jonathan Isaac Questionable adjustment applied: -10 confidence (65→55), -20% stake. At -1.5 with a 13.2 L15 NetRtg gap and home court advantage, PHI's margin of victory in recent form supports covering even a minimal spread. EV 0.089 ≥ 0.05. Combined same-game exposure is €368.54 (24.0% of bankroll) — well within 70% cap.\n\n---\n\n### LATE SCOUT — LAC vs GSW: No Entry\n\nLAC vs GSW was re-examined. No improvement from Scout rejection: LAC ML fell further to 1.47 (below 1.65 floor), GSW ML rose to 2.93 (above 2.50 ceiling), and LAC advanced stats remain unavailable — spread picks require advanced stats. No valid market entry. Rejected.\n\n---\n\n### SLATE SUMMARY\n\nTwo picks confirmed on Philadelphia 76ers vs Orlando Magic, leveraging a decisive L15 NetRtg gap of +13.2 and PHI's home court advantage in a win-or-go-home play-in scenario. Both confidence levels were reduced from Scout values due to Jonathan Isaac's Questionable status (applied standard -10 confidence / -20% stake per rules), but EV remains positive on both markets at 0.073 (ML) and 0.089 (spread). Total committed stake is €368.54 (24.0% of bankroll), well within the 70% exposure cap. The LAC vs GSW game remains unplayable at commit time — all market entries are outside valid odds ranges or require unavailable advanced stats.",
-    "tokens_in": 8769,
-    "tokens_out": 4954,
-    "cost_usd": 0.100617
+    "total_staked": 655.48,
+    "bankroll_before": 1872.81,
+    "report": "### CONFIRMED — Charlotte Hornets ML\n\n- Match: **Orlando Magic vs Charlotte Hornets** | Tip: 2026-04-17T23:30Z\n- Pick: Charlotte Hornets ML | Scout odds: 1.68 | Commit odds: **1.68** | Move: **0.00 (no movement)**\n- ML: ORL 2.35 / CHA 1.68 | ATS: ORL +3.5 (1.92/2.00) | O/U: 218.5 (O:1.96/U:1.96)\n- Stake: **€374.56** | Pot: **€629.26** | Conf: **75/100** | EV: **0.26 (26%)**\n- Decision: Confirmed with increased confidence (70 → 75). Key update: Jonathan Isaac upgraded from Questionable to **OUT** (confirmed NBA official PDF — Left Knee Sprain). Isaac was ORL's primary rim protector; his confirmed absence removes the -5 conservative Scout discount and strengthens CHA's path to victory. Core thesis unchanged: CHA L15 NetRtg +25.7 vs ORL -6.7 (32.4-point gap), superior season NetRtg (+5.0 vs +0.6), OffRtg advantage (119.5 vs 115.1). ORL home court partially offsets but cannot overcome this talent/form gap with Isaac now officially OUT.\n\n---\n\n### CONFIRMED — Phoenix Suns ML\n\n- Match: **Phoenix Suns vs Golden State Warriors** | Tip: 2026-04-18T02:00Z\n- Pick: Phoenix Suns ML | Scout odds: 1.68 | Commit odds: **1.71** | Move: **+0.03 (improved in our favour)**\n- ML: PHX 1.71 / GSW 2.30 | ATS: PHX -2.5 (1.92/2.00) | O/U: 220.5 (O:2.04/U:1.88)\n- Stake: **€280.92** | Pot: **€480.37** | Conf: **68/100** | EV: **0.163 (16.3%)**\n- Decision: Confirmed. Odds drifted +0.03 in our favour (1.68 → 1.71) — noted, confirmed at original stake tier per line movement rules (do not increase stake on favourable drift). No new injuries — Jimmy Butler III remains OUT, PHX anchors (Booker, Durant, Beal) all healthy. Thesis intact: PHX L15 +6.7 vs GSW -16.8 (23.5-point gap), GSW L3 streak and 3-7 L10, PHX home court advantage (+3pts play-in). EV improved to 16.3% at commit odds.\n\n---\n\n### LATE SCOUT SUMMARY\nAll 6 non-play-in games checked — no new bets added. Four games (CLE, DEN, NYK, BOS as favourites) have ML odds far below the 1.65 floor; corresponding underdogs are above the 2.50 ceiling. All spread picks from these games were declined due to absence of injury data in tonight's nba_official feed (which only covers the 4 play-in teams). One available late pick slot was preserved but no qualifying edge found.\n\n---\n\n### SLATE SUMMARY\nBoth play-in draft picks confirmed with strong conviction. Total committed: **€655.48 (35.0% of €1,872.81 bankroll)** — well within the 70% maximum. The slate's strongest signal remains the historic CHA L15 advantage (+25.7 vs ORL's -6.7) now bolstered by Isaac's confirmed OUT status; PHX vs GSW offers a clean directional bet against a depleted, poor-form Warriors side in a home elimination game scenario. No late picks added due to odds range violations and incomplete injury data on non-play-in games.",
+    "tokens_in": 9912,
+    "tokens_out": 5135,
+    "cost_usd": 0.106761
   },
   "netrtg_l15": {
     "Charlotte Hornets": 25.7,
