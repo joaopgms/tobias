@@ -1,7 +1,7 @@
 ---
-version: 33
-updated_at: 2026-04-16T11:57:33.272731+00:00
-updated_by: analyst_2026-04-16
+version: 34
+updated_at: 2026-04-17T11:51:04.120199+00:00
+updated_by: analyst_2026-04-17
 llm: claude-sonnet-4-6
 ---
 
@@ -168,21 +168,20 @@ NOTE: CLE has Mitchell, Allen, Mobley, Harden all in roster-only OUT feed — vi
 
 Minnesota Timberwolves:
 - Kyle Anderson (F): OUT [roster-only]
-- Mike Conley (G): OUT [roster-only]
 - Ayo Dosunmu (G): OUT [roster-only]
 - Anthony Edwards (G): OUT [roster-only] — FRANCHISE PLAYER
-- Rudy Gobert (C): OUT [roster-only] — FRANCHISE PLAYER
 - Bones Hyland (G): OUT [roster-only]
 - Jaden McDaniels (F): OUT [roster-only] — key wing
 - Julius Randle (F): OUT [roster-only] — FRANCHISE PLAYER
 - Naz Reid (C): OUT [roster-only] — key big
-NOTE: MIN has Edwards, Gobert, Randle all in roster-only OUT feed — virtually entire core absent. Do NOT draft MIN without NBA official PDF verification.
+NOTE: MIN has Edwards, Randle all in roster-only OUT feed — core critically depleted. Do NOT draft MIN without NBA official PDF verification.
+UPDATE: Mike Conley (G) and Rudy Gobert (C) no longer appear in current verified absence feed — re-verify status before any MIN pick.
 
 Atlanta Hawks:
 - Jock Landale (C): OUT [roster-only]
 - Onyeka Okongwu (F): OUT [roster-only] — key piece
 - Gabe Vincent (G): OUT [roster-only]
-NOTE: Trae Young NOT in current verified absence feed — re-verify before any ATL pick.
+NOTE: Trae Young NOT in current verified absence feed — re-verify before any ATL pick. DATA CONFLICT: Trae Young appears in WAS feed — confirm official team affiliation via NBA official PDF.
 
 Toronto Raptors:
 - Chucky Hepburn (G): OUT [roster-only]
@@ -197,8 +196,8 @@ Washington Wizards:
 - Alex Sarr (C): OUT [roster-only + injury landscape confirmed] — FRANCHISE PLAYER
 - Tristan Vukcevic (F): OUT [roster-only + injury landscape confirmed]
 - Cam Whitmore (F): OUT [roster-only]
-- Trae Young (G): OUT [roster-only] — FRANCHISE PLAYER
-NOTE: Washington full tank confirmed. Do NOT bet Washington to win under any circumstances. NOTE: Trae Young appears in BOTH ATL and WAS verified absence feeds — confirm official team affiliation via NBA official PDF before any pick involving Atlanta.
+- Trae Young (G): OUT [roster-only] — FRANCHISE PLAYER (DATA CONFLICT: also appears in ATL feed — verify)
+NOTE: Washington full tank confirmed. Do NOT bet Washington to win under any circumstances.
 
 Franchise players requiring mandatory NBA official PDF verification before ANY pick involving their team:
 - Shai Gilgeous-Alexander, Jalen Williams, Chet Holmgren (OKC) — roster-only OUT; top-seed rest risk maximum
@@ -208,7 +207,7 @@ Franchise players requiring mandatory NBA official PDF verification before ANY p
 - Jamal Murray (DEN) — roster-only OUT; Jokic status requires verification
 - Kevin Durant, Alperen Sengun (HOU) — roster-only OUT; franchise duo absent
 - Donovan Mitchell, Jarrett Allen, Evan Mobley, James Harden (CLE) — roster-only OUT; entire core absent
-- Anthony Edwards, Rudy Gobert, Julius Randle (MIN) — roster-only OUT; entire core absent
+- Anthony Edwards, Julius Randle (MIN) — roster-only OUT; core depleted; Gobert/Conley status changed — re-verify
 - Luka Doncic (LAL) — roster-only OUT; removes primary offensive engine
 
 ## SECTION:tanking_teams
@@ -233,7 +232,7 @@ Tanking criteria (ALL THREE must be met):
 When betting AGAINST tanking teams: edge-positive.
 When betting ON tanking teams: require odds ≥ 2.20 and strong situational reason.
 
-Play-in and seeding-contention teams (updated 2026-04-21 — NOT tanking):
+Play-in and seeding-contention teams (updated 2026-04-22 — NOT tanking):
 - OKC Thunder: 64-18, L10: 7-3, streak: L2 — top seed locked; star rest risk MAXIMUM.
 - San Antonio Spurs: 62-20, L10: 8-2, streak: L1 — #2 seed locked; Victor Wembanyama in OUT feed; rest risk elevated.
 - Detroit Pistons: 60-22, L10: 8-2, streak: W3 — NetRtg +8.2; elite form.
@@ -243,7 +242,7 @@ Play-in and seeding-contention teams (updated 2026-04-21 — NOT tanking):
 - Los Angeles Lakers: 53-29, L10: 7-3, streak: W3 — Luka Doncic + Reaves + Hayes OUT [roster-only]; record inflated.
 - Cleveland Cavaliers: 52-30, L10: 7-3, streak: W1 — virtually entire core OUT [roster-only].
 - Houston Rockets: 52-30, L10: 9-1, streak: W1 — Durant + Sengun OUT [roster-only]; seeding race live.
-- Minnesota Timberwolves: 49-33, L10: 5-5, streak: W2 — entire core OUT [roster-only].
+- Minnesota Timberwolves: 49-33, L10: 5-5, streak: W2 — core depleted [roster-only]; Gobert/Conley status changed — re-verify.
 - Atlanta Hawks: 46-36, L10: 6-4, streak: L1 — play-in secured; Onyeka Okongwu OUT; Trae Young requires verification (data conflict — appears in WAS feed).
 - Toronto Raptors: 46-36, L10: 6-4, streak: W1 — NetRtg +2.6; play-in race.
 - Philadelphia 76ers: 45-37, L10: 6-4, streak: W2 — NetRtg -0.2; volatile; cautious.

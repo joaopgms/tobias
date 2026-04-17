@@ -1,7 +1,7 @@
 ---
-version: 5
-updated_at: 2026-04-16T11:57:33.272731+00:00
-updated_by: analyst_2026-04-16
+version: 6
+updated_at: 2026-04-17T11:51:04.120199+00:00
+updated_by: analyst_2026-04-17
 llm: claude-sonnet-4-6
 ---
 
@@ -13,7 +13,7 @@ All 8 play-in participants (seeds 7-10 in each conference) are in win-or-go-home
 See playin_rules section for motivation and elimination rules specific to this phase.
 
 ## SECTION:series_context
-PLAY-IN TOURNAMENT — Active (updated 2026-04-21)
+PLAY-IN TOURNAMENT — Active (updated 2026-04-22)
 
 Play-In participants based on final regular season standings (seeds 7-10 each conference):
 
@@ -42,11 +42,12 @@ Seeds 1-6 awaiting play-in completion:
 EAST seeds 1-6: #1 Detroit (60-22) | #2 Boston (56-26) | #3 New York Knicks (53-29) | #4 Cleveland (52-30) | #5 Toronto (46-36) | #6 Atlanta (46-36)
 WEST seeds 1-6: #1 OKC (64-18) | #2 San Antonio (62-20) | #3 LA Lakers (53-29) | #4 Houston (52-30) | #5 Minnesota (49-33) | #6 Denver (54-28)
 
-NOTE: With widespread roster-only OUT flags across OKC, SAS, BOS, NYK, CLE, MIN, HOU — many top seeds are fielding depleted rosters. Play-in teams may face heavily rested but roster-uncertain opponents in first round.
-NOTE: Denver (54-28, W12) ranked as #6 West seed is an anomaly — seeding should be re-verified against official NBA bracket once announced.
+ROSTER UNCERTAINTY NOTE: With widespread roster-only OUT flags across OKC, SAS, BOS, NYK, CLE, MIN, HOU — many top seeds are fielding depleted rosters. Play-in teams may face heavily rested but roster-uncertain opponents in first round.
+DENVER SEEDING ANOMALY: Denver (54-28, W12) ranked as #6 West seed — re-verify against official NBA bracket. Nikola Jokic status requires verification before any DEN directional pick.
+MIN ROSTER UPDATE: Mike Conley and Rudy Gobert no longer appear in current verified absence feed — re-verify status before any MIN pick.
 
 ## SECTION:elimination_flags
-PLAY-IN ELIMINATION FLAGS (updated 2026-04-21):
+PLAY-IN ELIMINATION FLAGS (updated 2026-04-22):
 
 All play-in games are effectively win-or-go-home for certain seeds:
 - 9-seed (both conferences): Game 1 loss = eliminated. Maximum desperation.
@@ -124,7 +125,7 @@ Regular season H2H as a playoff/play-in signal — rules and current data:
 - If H2H games were played with significantly different rosters (key player absent):
   flag and discount — those results don't reflect the current matchup.
 
-**Play-in H2H notes (updated 2026-04-21 — matchups not yet officially confirmed):**
+**Play-in H2H notes (updated 2026-04-22 — matchups not yet officially confirmed):**
 All H2H records require population once official play-in matchups are announced.
 Multiple teams have franchise players in roster-only OUT feed — many regular season H2H games
 were played with non-representative rosters. Apply H2H adjustment ONLY if the H2H games involved
