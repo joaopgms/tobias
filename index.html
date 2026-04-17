@@ -1911,7 +1911,7 @@ function renderCommitTab(){
       const bets=(todayReport.bets||[]);
       const cancelled=(todayReport.cancelled||[]);
       const lateRej=(todayReport.late_rejections||[]);
-      const lateRejCount=(todayReport.late_rejections||[]).length;
+      const lateRejCount=isStaleReport ? 0 : (todayReport.late_rejections||[]).length;
       const commitReportDate = todayReport.ts ? fmt(todayReport.ts) : (todayReport.updated_at ? fmt(todayReport.updated_at) : '-');
       const commitMatchDate = todayReport.date||today;
       let h=`<div style="font-size:.62rem;color:var(--muted);margin-bottom:6px;display:flex;gap:16px;flex-wrap:wrap;align-items:center">
@@ -1939,8 +1939,8 @@ function renderCommitTab(){
         cancelled.forEach((b,i)=>{ h+=buildCommitCard(b,i,'cc',true); });
         h+='</div>';
       }
-      // Late scout rejections
-      if(lateRej.length){
+      // Late scout rejections — only show if report is from today
+      if(lateRej.length && !isStaleReport){
         h+=`<div style="font-size:.62rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin:12px 0 6px">Late Scout — Checked, Not Added</div>`;
         h+='<div class="game-cards-grid">';
         lateRej.forEach((g,i)=>{ h+=buildGameCard(g,i,'cr'); });
