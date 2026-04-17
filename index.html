@@ -1894,7 +1894,7 @@ function renderScoutTab(){
 }
 
 function renderCommitTab(){
-  const today = new Date().toISOString().slice(0,10);
+  const _d=new Date(); const today=`${_d.getFullYear()}-${String(_d.getMonth()+1).padStart(2,'0')}-${String(_d.getDate()).padStart(2,'0')}`;
   const todayEl = document.getElementById('commitTodaySection');
 
   // Read from STATE_DATA.commit_report_data (written by commit agent)
@@ -1902,7 +1902,9 @@ function renderCommitTab(){
   const crd = ST.commit_report_data||null;
   // Show last commit report whenever status=done — scout resets to 'pending' each new day
   const todayReport = (commitStatus==='done' && crd) ? crd : null;
-  const isStaleReport = todayReport && todayReport.date && todayReport.date !== today;
+  // Use match date comparison: if report's match date is in the past vs today, it's stale
+  const commitMatchDay = todayReport && todayReport.date;
+  const isStaleReport = commitMatchDay && commitMatchDay < today;
 
   if(todayEl){
     if(!todayReport){
