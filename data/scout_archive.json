@@ -521,5 +521,72 @@
     "tokens_in": 10807,
     "tokens_out": 1824,
     "cost_usd": 0.059781
+  },
+  {
+    "ts": "2026-04-17T15:00:30.301398+00:00",
+    "date": "2026-04-17",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_onexbet",
+    "draft_count": 2,
+    "picks": [
+      {
+        "id": "nba_draft_20260417_001",
+        "match": "Orlando Magic vs Charlotte Hornets",
+        "time": "2026-04-17T23:30:00Z",
+        "pick": "Charlotte Hornets ML",
+        "odds": 1.68,
+        "stake": 374.56,
+        "potential_return": 629.26,
+        "confidence": 72,
+        "reasoning": "LINE ANOMALY CHECK: No anomaly — CHA priced as favourite at 1.68 with better record and superior stats, consistent with expectations. PRIORITY STATS: (1) NetRtg L15 GAP: CHA L15 +25.7 vs ORL L15 -6.7 — gap of 32.4 points, massive signal in Charlotte's favour. This is the dominant signal. (2) No B2B issues — both teams have standard rest in play-in context. (3) FRANCHISE PLAYER INJURIES: ORL has Jonathan Isaac Questionable (Left Knee) — Isaac is a key defensive piece but not a franchise player; confidence -5 applied. CHA has Moussa Diabate Questionable (Left Hip) — bench depth player, minimal impact; no confidence adjustment needed. (4) MOTIVATION: Both teams are in play-in, fully motivated. CHA as #8 seed faces the 7v8 loser if they lose; ORL as #7 seed (from context: ORL is the 7-seed based on 45-37 record vs CHA 44-38) — home court advantage applies here for ORL, worth ~3pts in play-in per rules. (5) L10: CHA 6-4 vs ORL 7-3 — ORL has slight L10 edge. (6) HOME COURT: ORL is the home team — adds ~3 pts of value in play-in per playoff_rest rules. Significant factor. (7) Season NetRtg: CHA +5.0 vs ORL +0.6 — CHA meaningfully superior. (8) DefRtg: Both teams at 114.5 — no gap; symmetric. OffRtg: CHA 119.5 vs ORL 115.1 — CHA clearly superior offensively. SYNTHESIS: The L15 gap of 32.4 is extraordinary — CHA has been in elite form, ORL has been poor. CHA's season NetRtg (+5.0 vs +0.6) and OffRtg advantage support the directional signal. ORL's home court (+3pts) and marginally better L10 are real but insufficient to overcome a 32-point L15 gap. Isaac Questionable (ORL) reduces their defensive anchor; apply -5 confidence for potential absence impact. Base confidence: 75 (strong L15 signal, NetRtg and OffRtg gap). Adjustments: Isaac Questionable on ORL side — this HELPS CHA bet, no penalty needed for CHA. For ORL home court value, reduce CHA confidence by 5 (home worth ~3pts in play-in). Net confidence: 70. EV = (0.70 × 1.68) - 1 = 1.176 - 1 = 0.176. EV = 17.6% — STRONG edge (≥ 0.15). Confidence 70 meets ML floor of 50. Odds 1.68 meets commit confirmation floor of 1.65 but is below ML target range of 1.60-2.50 — 1.68 IS within 1.60-2.50 range. Stake: confidence 70 = High tier (20-25% of bankroll) = 20% × €1872.81 = €374.56.",
+        "anchor_players": [
+          "Miles Bridges",
+          "LaMelo Ball",
+          "Franz Wagner"
+        ],
+        "drafted_at": "2026-04-17T15:00:36Z",
+        "market_type": "ml"
+      },
+      {
+        "id": "nba_draft_20260417_002",
+        "match": "Phoenix Suns vs Golden State Warriors",
+        "time": "2026-04-18T02:00:00Z",
+        "pick": "Phoenix Suns ML",
+        "odds": 1.68,
+        "stake": 281.92,
+        "potential_return": 473.63,
+        "confidence": 68,
+        "reasoning": "LINE ANOMALY CHECK: No anomaly — PHX priced as home favourite at 1.68, consistent with better record (45-37 vs 37-45) and home court. GSW priced at 2.35. PRIORITY STATS: (1) NetRtg L15 GAP: PHX L15 +6.7 vs GSW L15 -16.8 — gap of 23.5 points, well above the 4.0 threshold. Massive directional signal for PHX. (2) No B2B issues in play-in per playoff_rest rules. (3) FRANCHISE PLAYER INJURIES: GSW has Jimmy Butler III OUT (Right ACL — Surgery), Moses Moody OUT (Surgery), Quinten Post OUT (Management), and Kristaps Porzingis QUESTIONABLE (Right Ankle). Butler OUT is significant — he's a franchise-level contributor. PHX has Grayson Allen QUESTIONABLE (Left Hamstring) and Mark Williams QUESTIONABLE (Left Foot) — Allen is secondary player, Williams is a rotation center; combined confidence -5 applied. GSW missing Butler (OUT) = franchise-level absence per rules; cannot bet GSW ML. For PHX pick: opponent (GSW) missing Butler = supports PHX bet. Butler OUT for GSW means do not bet GSW to win — but this SUPPORTS PHX. Porzingis Questionable for GSW (additional -10 on any GSW bet, irrelevant here). PHX Questionable players: -5 combined. (4) MOTIVATION: Both teams are in play-in; 9-seed (GSW) faces maximum elimination pressure. PHX as #7 seed (45-37) vs GSW as #9 seed (37-45). 9-seed elimination desperation is real but GSW's poor form (L3 streak, negative NetRtg) makes desperation insufficient. (5) L10: PHX 5-5 vs GSW 3-7 — GSW L10 is notably poor. (6) HOME COURT: PHX is the home team — +3 pts in play-in per rules. Significant advantage. (7) Season NetRtg: PHX +1.4 vs GSW -0.6 — PHX ahead. (8) GSW FADE CANDIDATE: Per skills emerging_fade section — GSW at L3 streak, NetRtg negative, do not back without significant reason. (9) Pace: PHX 97.2, GSW 99.0 — slight mismatch (1.8 pts), below 5pt threshold for unpredictability concern. SYNTHESIS: L15 gap of 23.5 strongly favours PHX. Season stats, L10, home court, and opponent roster depletion (Butler OUT) all stack on PHX side. GSW's desperation as 9-seed partially offset by terrible recent form and franchise player absences. Base confidence: 75. Adjustments: PHX Questionable players (Allen + Williams) -5; PHX confirmation as 7-seed vs 9-seed play-in edge +3. Net confidence: 68 (rounding). Note: GSW 37-45 is below .550 W% — per HOT STREAK FADE RULE reversed: GSW on L3, not a hot team; PHX is the more stable team here. EV = (0.68 × 1.68) - 1 = 1.1424 - 1 = 0.1424. EV = 14.2% — marginal-to-strong edge (≥ 0.05, approaching 0.15). Confidence 68 meets ML floor of 50. Odds 1.68 within 1.60-2.50 range. Stake: confidence 68 = Medium tier (15-20%) = 15% × €1872.81 = €281.92.",
+        "anchor_players": [
+          "Devin Booker",
+          "Bradley Beal",
+          "Kevin Durant (PHX roster)"
+        ],
+        "drafted_at": "2026-04-17T15:00:36Z",
+        "market_type": "ml"
+      }
+    ],
+    "rejected": [
+      {
+        "match": "Orlando Magic vs Charlotte Hornets",
+        "reason": "Drafted CHA ML (pick 001). Spread evaluated: CHA -3.5 at 2.01 — with L15 gap of 32.4 strongly in CHA favour, spread has merit, but Isaac Questionable for ORL creates defensive uncertainty that could swing margin outcomes. ML offers cleaner edge at EV 17.6%; spread EV would require ~55% cover confidence at 2.01 odds (EV = 0.55×2.01-1 = 0.1055) which is achievable but ML edge is more reliable given play-in variance.",
+        "ml_home": 2.35,
+        "ml_away": 1.68,
+        "decision": "rejected"
+      },
+      {
+        "match": "Phoenix Suns vs Golden State Warriors",
+        "reason": "Drafted PHX ML (pick 002). Spread PHX -3.5 at 2.00 evaluated: requires ~50% cover confidence for EV=0, ~55% for EV≥0.05. GSW desperation as 9-seed with elimination pressure creates backdoor cover risk even against superior PHX. ML provides cleaner directional bet. O/U 219.5: both teams Pace ~97-99, near the <97 threshold for Under lean but not clearly met. Totals confidence floor is 65; PHX Allen and Williams Questionable adds uncertainty; O/U signal marginal. ML is the cleanest bet.",
+        "ml_home": 1.68,
+        "ml_away": 2.35,
+        "decision": "rejected"
+      }
+    ],
+    "report": "Two-game play-in slate with clear directional signals. Injury feed source is NBA Official (4 teams reporting) — full confidence rules apply. Two ML picks drafted: CHA ML driven by an extraordinary L15 NetRtg gap (+25.7 vs -6.7 = 32.4pt gap) against a struggling ORL squad despite home court disadvantage. PHX ML supported by L15 gap of 23.5 points over GSW, compounded by Butler/Moody OUT for Warriors and GSW's L3 streak/negative season NetRtg. Spreads evaluated for both games but ML edges are cleaner given play-in variance and injury question marks on marginal players. Pace data available but both games near threshold — O/U signals inconclusive; no totals drafted. Total stake: €656.48 (35.1% of bankroll, within 70% daily cap). 30%+ reserve maintained.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 11063,
+    "tokens_out": 2698,
+    "cost_usd": 0.073659
   }
 ]
