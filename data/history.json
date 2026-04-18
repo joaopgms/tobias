@@ -26,7 +26,7 @@
           "wins": 9,
           "losses": 4,
           "peak_bankroll": 1872.81,
-          "total_bets": 13
+          "total_bets": 16
         }
       ]
     }
@@ -1175,6 +1175,81 @@
         }
       ],
       "summary": "Day 2026-04-17 commit — 2 bets totalling €655.48. 0 cancelled. Bankroll: €1872.81 → €1217.33."
+    },
+    {
+      "entry_id": "nba_entry_20260418",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-04-18T16:29:48.660533+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1697.7,
+      "total_staked": 780.95,
+      "bankroll_after": 916.75,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260418_001",
+          "match": "Denver Nuggets vs Minnesota Timberwolves",
+          "time": "2026-04-18T19:30:00Z",
+          "pick": "Denver Nuggets -7.5",
+          "odds": 2.01,
+          "stake": 254.66,
+          "potential_return": 511.87,
+          "reasoning": "CONFIRMED from draft pick nba_draft_20260418_002. Odds unchanged at 2.01 (within 1.80-2.30 spread target). DEN L15 NetRtg +29.9 vs MIN L15 -0.9 = gap of 30.8 — largest on slate and decisive signal. Season NetRtg DEN +5.2 vs MIN +3.1. DEN L10 10-0 at home in playoffs. Jokic and Murray confirmed Active (not in absence feed). Anthony Edwards Questionable (Maintenance) — confidence -10 applied by Scout, thesis does not depend on his absence. EV = (0.70 x 2.01) - 1 = 0.407. Confidence 70 = High tier. Stake 15% of bankroll conservatively given Edwards uncertainty.",
+          "confidence": 70,
+          "anchor_players": [
+            "Anthony Edwards (Questionable - MIN)",
+            "Nikola Jokic (Active - DEN)",
+            "Jamal Murray (Active - DEN)"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null
+        },
+        {
+          "id": "nba_bet_20260418_002",
+          "match": "New York Knicks vs Atlanta Hawks",
+          "time": "2026-04-18T22:00:00Z",
+          "pick": "New York Knicks -5.5",
+          "odds": 1.92,
+          "stake": 254.66,
+          "potential_return": 488.94,
+          "reasoning": "CONFIRMED from draft pick nba_draft_20260418_003. Odds unchanged at 1.92 (within 1.80-2.30 spread target). NYK season NetRtg +6.5 vs ATL +2.4 = 4.1 gap. NYK OffRtg 119.9 vs ATL 116.1 — NYK +3.8 offensive edge. ATL L15 +18.2 is strong but represents extreme positive deviation from season baseline (+2.4), regression risk. Jalen Brunson and KAT confirmed Active (not in absence feed). Trae Young data conflict — not in NBA official absence PDF, treating as available, confidence -5 applied. Jock Landale OUT (non-franchise). NYK at MSG = maximum playoff home court advantage (+3-4 pts). EV = (0.68 x 1.92) - 1 = 0.306. Confidence 68 = Medium tier. Stake 15% bankroll.",
+          "confidence": 68,
+          "anchor_players": [
+            "Jalen Brunson (Active - NYK)",
+            "Karl-Anthony Towns (Active - NYK)",
+            "Trae Young (Status conflict - verify)"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null
+        },
+        {
+          "id": "nba_bet_20260418_003",
+          "match": "Los Angeles Lakers vs Houston Rockets",
+          "time": "2026-04-19T00:30:00Z",
+          "pick": "Houston Rockets -4.5",
+          "odds": 1.91,
+          "stake": 271.63,
+          "potential_return": 518.81,
+          "reasoning": "LATE SCOUT PICK. Scout rejected LAL/HOU due to LAL ML 2.77 exceeding 2.50 ceiling and Durant GTD uncertainty. Revisiting at commit time: LAL ML irrelevant for spread pick. HOU spread -4.5 @ 1.91 is within 1.80-2.30 target. ANOMALY RESOLVED: LAL priced as significant home underdog because Luka Doncic OUT (confirmed NBA official — Left Hamstring Strain) AND Austin Reaves OUT (confirmed NBA official — Strain). Both confirmed OUT, not questionable. This is not a pricing anomaly, it is correctly priced. HOU L15 NetRtg +38.9 — top of entire league. LAL L15 +11.4. L15 gap = 27.5 points. Season NetRtg: HOU +5.4 vs LAL +1.7 = 3.7 gap. HOU L10 9-1 (elite form). LAL depleted without franchise player Doncic + key secondary star Reaves. Kevin Durant Questionable (knee contusion) for HOU — thesis does NOT depend on Durant's absence; thesis is built on LAL's confirmed roster destruction. Durant GTD: confidence -10, stake -20% per GTD rules. Base confidence: 80 (L15 gap 27.5 = exceptional, LAL stars confirmed OUT, HOU elite form) -10 for Durant GTD = 70. EV = (0.70 x 1.91) - 1 = 0.337. Confidence 70 = High tier. Base stake 20% = €339.54, -20% for Durant GTD = €271.63. Time gate: 00:30 UTC, 8+ hours away. Anomaly confirmed resolved.",
+          "confidence": 70,
+          "anchor_players": [
+            "Luka Doncic (OUT - LAL)",
+            "Austin Reaves (OUT - LAL)",
+            "Kevin Durant (Questionable - HOU)",
+            "Alperen Sengun (Active - HOU)"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null
+        }
+      ],
+      "summary": "Day 2026-04-18 commit — 3 bets totalling €780.95. 0 cancelled. Bankroll: €1697.70 → €916.75."
     }
   ]
 }
