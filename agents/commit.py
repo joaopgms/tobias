@@ -285,11 +285,12 @@ def run(store, force: bool = False) -> None:
         injuries_source = "espn"
     else:
         injuries_source = "nba_official"
-    odds_str = format_odds_for_prompt(odds)
     # Filter injuries to tonight's teams only, use official formatter if available
     from core.espn import fetch_scoreboard, fetch_injuries, fetch_first_game_time_utc, fetch_standings, fetch_advanced_stats
     scoreboard = fetch_scoreboard()
-    tonight_teams = [g["home"] for g in scoreboard] + [g["away"] for g in scoreboard]
+    tonight_teams = set([g["home"] for g in scoreboard] + [g["away"] for g in scoreboard])
+    odds_filtered = [g for g in odds if g.get("home") in tonight_teams or g.get("away") in tonight_teams]
+    odds_str = format_odds_for_prompt(odds_filtered)
     if injuries_source == "nba_official":
         injuries_str = format_official_injuries(injuries, tonight_teams=tonight_teams)
     else:
