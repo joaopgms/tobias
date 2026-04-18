@@ -1,24 +1,24 @@
 {
   "season": "2024-25",
   "game": 2,
-  "bankroll": 1697.7,
+  "bankroll": 916.75,
   "bankroll_initial": 1000.0,
   "bankroll_peak": 1872.81,
-  "total_staked": 2681.02,
+  "total_staked": 3461.97,
   "total_returned": 3378.72,
   "net_pnl": 697.7,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-04-18T14:46:10.770879+00:00",
+  "last_updated": "2026-04-18T16:29:48.660533+00:00",
   "first_game_time": "2026-04-18T17:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
   "scout_updated_at": "2026-04-18T14:46:10.770879+00:00",
   "scout_odds_source": "theodds_onexbet",
-  "commit_status": "pending",
-  "commit_updated_at": "2026-04-17T22:50:02.634876+00:00",
-  "commit_date": "2026-04-17",
+  "commit_status": "done",
+  "commit_updated_at": "2026-04-18T16:29:48.660533+00:00",
+  "commit_date": "2026-04-18",
   "analyst_updated_at": "2026-04-18T11:33:06.380400+00:00",
   "settler_updated_at": "2026-04-18T10:41:49.359579+00:00",
   "agent_models": {
@@ -27,46 +27,71 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "Tonight's 4-game playoff slate (Game 2 across all series) produced 3 draft picks. Key theme: extreme L15 NetRtg divergences creating market inefficiencies — TOR's L15 +23.7 vs CLE's +3.4 presents extraordinary value at 3.90 (speculative ML). DEN's L15 +29.9 vs MIN's -0.9 is the slate's most decisive spread signal, amplified by DEN's W12 streak and home court. NYK spread backed by superior season NetRtg (+6.5 vs +2.4) and MSG home playoff advantage. LAL vs HOU rejected due to anomalous home-underdog pricing (LAL 2.77 exceeds ML ceiling) and Durant's Questionable status creating thesis instability. Total bankroll exposure: ~40% across 3 picks (within 70% daily max). Injury feed source: NBA Official — full coverage, normal confidence rules applied.",
-  "draft_picks": [
+  "last_report": "### CONFIRMED — Denver Nuggets -7.5\n\n- Match: Denver Nuggets vs Minnesota Timberwolves | Tip: 19:30 UTC\n- Pick: Denver Nuggets -7.5 | Scout odds: 2.01 | Commit odds: 2.01 | Move: 0.00\n- ML: 1.36/3.50 | ATS: -7.5 (2.01/1.91) | O/U: 232.5 (O:1.98/U:1.94)\n- Stake: €254.66 | Pot: €511.87 | Conf: 70/100 | EV: 0.407\n- Decision: Odds unchanged and valid. DEN L15 NetRtg advantage of 30.8 points (largest on slate) is the primary signal. Jokic and Murray confirmed active; Anthony Edwards Questionable (Maintenance) with -10 confidence already applied at Scout. Thesis does not depend on Edwards being absent — DEN's elite home form (L10 10-0) and superior L15 metrics stand independently. EV 0.407 is excellent.\n\n---\n\n### CONFIRMED — New York Knicks -5.5\n\n- Match: New York Knicks vs Atlanta Hawks | Tip: 22:00 UTC\n- Pick: New York Knicks -5.5 | Scout odds: 1.92 | Commit odds: 1.92 | Move: 0.00\n- ML: 1.42/3.15 | ATS: -5.5 (1.92/2.00) | O/U: 217.5 (O:1.94/U:1.98)\n- Stake: €254.66 | Pot: €488.94 | Conf: 68/100 | EV: 0.306\n- Decision: Odds unchanged and valid. NYK season NetRtg gap of 4.1 over ATL meets the ≥4.0 threshold. Brunson and KAT confirmed active. Trae Young not in NBA official absence PDF — data conflict uncertainty already absorbed in -5 confidence. ATL's L15 +18.2 vs season baseline +2.4 suggests hot-streak regression risk. MSG home court in playoffs amplifies the -5.5 edge. EV 0.306 is strong.\n\n---\n\n### NEW PICK — Houston Rockets -4.5\n\n- Match: Los Angeles Lakers vs Houston Rockets | Tip: 00:30 UTC\n- Pick: Houston Rockets -4.5 | Scout odds: N/A (rejected) | Commit odds: 1.91 | Move: N/A\n- ML: 2.77/1.51 | ATS: +4.5 (2.01) / -4.5 (1.91) | O/U: 208.5 (O:1.95/U:1.97)\n- Stake: €271.63 | Pot: €518.81 | Conf: 70/100 | EV: 0.337\n- Decision: Scout rejected due to LAL ML anomaly (2.77 > ceiling) and Durant GTD uncertainty. At commit time, the spread pick is fully valid at 1.91. LAL's anomalous pricing is explained by confirmed absences of Doncic (OUT, hamstring) and Reaves (OUT, strain). This is not a pricing error — it is correctly priced. HOU L15 +38.9 (top of league) vs LAL L15 +11.4 = 27.5-point gap. HOU L10 9-1. Alperen Sengun available. Durant GTD does not compromise thesis; his presence only strengthens the edge. Durant GTD penalty: confidence -10 (from base 80 → 70), stake -20% (from €339.54 → €271.63). Late scout trigger: confirmed star absence (two of them) and books' price explains what appeared anomalous at Scout.\n\n---\n\n**Slate Summary:** Three bets committed for a total stake of €780.95 (46.0% of bankroll), well within the 70% cap. All three picks are spread-based with valid odds in the 1.91–2.01 range and EV well above the 0.05 floor (0.337–0.407). The strongest signal is DEN's 30.8-point L15 NetRtg gap over MIN; the late addition of HOU -4.5 is supported by the clear catalyst of two confirmed LAL star absences, converting a previously rejected game into a legitimate edge. Both draft picks were confirmed without modification as no line movement or new injury information warranted cancellation.",
+  "draft_picks": [],
+  "pending_bets": [
     {
-      "id": "nba_draft_20260418_002",
+      "id": "nba_bet_20260418_001",
       "match": "Denver Nuggets vs Minnesota Timberwolves",
       "time": "2026-04-18T19:30:00Z",
       "pick": "Denver Nuggets -7.5",
       "odds": 2.01,
       "stake": 254.66,
       "potential_return": 511.87,
+      "reasoning": "CONFIRMED from draft pick nba_draft_20260418_002. Odds unchanged at 2.01 (within 1.80-2.30 spread target). DEN L15 NetRtg +29.9 vs MIN L15 -0.9 = gap of 30.8 — largest on slate and decisive signal. Season NetRtg DEN +5.2 vs MIN +3.1. DEN L10 10-0 at home in playoffs. Jokic and Murray confirmed Active (not in absence feed). Anthony Edwards Questionable (Maintenance) — confidence -10 applied by Scout, thesis does not depend on his absence. EV = (0.70 x 2.01) - 1 = 0.407. Confidence 70 = High tier. Stake 15% of bankroll conservatively given Edwards uncertainty.",
       "confidence": 70,
-      "reasoning": "LINE ANOMALY CHECK: DEN ML 1.36 below target range but spread at 2.01 is within 1.80-2.30 target. No anomaly. NETRTG L15: DEN L15 +29.9 vs MIN L15 -0.9 — gap of 30.8 points. This is the largest L15 gap on the entire slate and strongly favours Denver covering -7.5. Season NetRtg: DEN +5.2 vs MIN +3.1 (gap 2.1 — moderate). The L15 signal is decisive and overwhelming. INJURY CHECK: MIN — Anthony Edwards Questionable (maintenance). This is the franchise player. Applying confidence -10 for GTD/Questionable. Even if Edwards plays, a maintenance tag in a playoff game means he may be limited. DEN — Spencer Jones Questionable (minor, non-franchise), Peyton Watson Out. Jokic and Murray NOT in verified absence feed (confirmed per skills file update — Jamal Murray status changed, re-verify noted but they are not in current OUT feed). Treating DEN core as available. MOTIVATION: Both teams in first-round playoff series, Game 2. DEN home at Ball Arena — strong home advantage. DEN on W12 streak, L10: 10-0 — historic run. MIN L10: 5-5, streak W2 (entering playoffs). REST: Standard playoff rest — no B2B in playoffs. HOME COURT: +3-4 points in playoffs, amplifies -7.5 spread edge. SPREAD SIGNALS: L15 gap > 6 points (30+ gap), NetRtg gap directionally favourable, home team with elite form vs road team with negative L15 form. CONFIDENCE: Base 75 (L15 gap massive, DEN home hot streak, MIN franchise player questionable); -10 for Edwards GTD; net = 65. But raising to 70 given the extraordinary L15 signal (30.8 gap is exceptional). EV = (0.70 × 2.01) - 1 = 1.407 - 1 = 0.407. Strong edge (≥ 0.15). Confidence 70 = High tier, 20-25% stake. Using 15% conservatively given Edwards uncertainty. Stake = 15% × €1697.70 = €254.66.",
       "anchor_players": [
         "Anthony Edwards (Questionable - MIN)",
         "Nikola Jokic (Active - DEN)",
         "Jamal Murray (Active - DEN)"
       ],
-      "drafted_at": "2026-04-18T14:46:20Z",
-      "market_type": "spread"
+      "result": null,
+      "returned": null,
+      "pnl": null,
+      "settled_at": null
     },
     {
-      "id": "nba_draft_20260418_003",
+      "id": "nba_bet_20260418_002",
       "match": "New York Knicks vs Atlanta Hawks",
       "time": "2026-04-18T22:00:00Z",
       "pick": "New York Knicks -5.5",
       "odds": 1.92,
       "stake": 254.66,
       "potential_return": 488.94,
+      "reasoning": "CONFIRMED from draft pick nba_draft_20260418_003. Odds unchanged at 1.92 (within 1.80-2.30 spread target). NYK season NetRtg +6.5 vs ATL +2.4 = 4.1 gap. NYK OffRtg 119.9 vs ATL 116.1 — NYK +3.8 offensive edge. ATL L15 +18.2 is strong but represents extreme positive deviation from season baseline (+2.4), regression risk. Jalen Brunson and KAT confirmed Active (not in absence feed). Trae Young data conflict — not in NBA official absence PDF, treating as available, confidence -5 applied. Jock Landale OUT (non-franchise). NYK at MSG = maximum playoff home court advantage (+3-4 pts). EV = (0.68 x 1.92) - 1 = 0.306. Confidence 68 = Medium tier. Stake 15% bankroll.",
       "confidence": 68,
-      "reasoning": "LINE ANOMALY CHECK: NYK ML 1.42 below ML target range but spread at 1.92 within 1.80-2.30. No anomaly. NETRTG L15: NYK L15 +8.3 vs ATL L15 +18.2 — ATL L15 is higher (9.9 gap in ATL favour). However, season NetRtg NYK +6.5 vs ATL +2.4 — NYK significantly stronger by season metrics. The L15 divergence is notable but ATL's hot streak context requires evaluation. HOT STREAK FADE RULE: ATL at 46-36 overall = .561 W% — above .550 threshold, so strict hot streak fade rule doesn't apply. However, ATL L15 +18.2 vs season NetRtg +2.4 represents extreme positive deviation, suggesting regression candidate. INJURY CHECK: ATL — Jock Landale Out (non-franchise). Trae Young: NOT in current absence feed but skills file notes DATA CONFLICT (appears in both ATL and WAS feed). Per skills: re-verify before any ATL pick. NBA official PDF tonight lists no Trae Young absence for ATL — treating as available unless confirmed otherwise. NYK — No players in current verified absence feed; Jalen Brunson and KAT re-verified as available per session update. HOME COURT: NYK at MSG = maximum home advantage. Playoffs home court worth +3-4 pts — amplifies -5.5 spread for NYK. SEASON METRICS: NYK +6.5 season NetRtg vs ATL +2.4 = 4.1 gap in NYK favour. This meets ≥ 4.0 threshold. NYK stronger defensively (113.4 DefRtg vs ATL 113.8 — marginal). NYK OffRtg 119.9 vs ATL 116.1 — NYK +3.8 offensive edge. SPREAD SIGNALS: Season NetRtg gap 4.1 (meets threshold), MSG home court advantage in playoffs, ATL L15 likely representing regression risk. CONFIDENCE: Base 70 (NYK season metrics, home court, Brunson+KAT confirmed available); -5 for Trae Young data conflict uncertainty; net 65. Adjusted to 68 given strong home court amplifier. EV = (0.68 × 1.92) - 1 = 1.3056 - 1 = 0.3056. Strong edge (≥ 0.15). Confidence 68 = Medium tier, 15-20% stake. Using 15% = €254.66.",
       "anchor_players": [
         "Jalen Brunson (Active - NYK)",
         "Karl-Anthony Towns (Active - NYK)",
         "Trae Young (Status conflict - verify)"
       ],
-      "drafted_at": "2026-04-18T14:46:20Z",
-      "market_type": "spread"
+      "result": null,
+      "returned": null,
+      "pnl": null,
+      "settled_at": null
+    },
+    {
+      "id": "nba_bet_20260418_003",
+      "match": "Los Angeles Lakers vs Houston Rockets",
+      "time": "2026-04-19T00:30:00Z",
+      "pick": "Houston Rockets -4.5",
+      "odds": 1.91,
+      "stake": 271.63,
+      "potential_return": 518.81,
+      "reasoning": "LATE SCOUT PICK. Scout rejected LAL/HOU due to LAL ML 2.77 exceeding 2.50 ceiling and Durant GTD uncertainty. Revisiting at commit time: LAL ML irrelevant for spread pick. HOU spread -4.5 @ 1.91 is within 1.80-2.30 target. ANOMALY RESOLVED: LAL priced as significant home underdog because Luka Doncic OUT (confirmed NBA official — Left Hamstring Strain) AND Austin Reaves OUT (confirmed NBA official — Strain). Both confirmed OUT, not questionable. This is not a pricing anomaly, it is correctly priced. HOU L15 NetRtg +38.9 — top of entire league. LAL L15 +11.4. L15 gap = 27.5 points. Season NetRtg: HOU +5.4 vs LAL +1.7 = 3.7 gap. HOU L10 9-1 (elite form). LAL depleted without franchise player Doncic + key secondary star Reaves. Kevin Durant Questionable (knee contusion) for HOU — thesis does NOT depend on Durant's absence; thesis is built on LAL's confirmed roster destruction. Durant GTD: confidence -10, stake -20% per GTD rules. Base confidence: 80 (L15 gap 27.5 = exceptional, LAL stars confirmed OUT, HOU elite form) -10 for Durant GTD = 70. EV = (0.70 x 1.91) - 1 = 0.337. Confidence 70 = High tier. Base stake 20% = €339.54, -20% for Durant GTD = €271.63. Time gate: 00:30 UTC, 8+ hours away. Anomaly confirmed resolved.",
+      "confidence": 70,
+      "anchor_players": [
+        "Luka Doncic (OUT - LAL)",
+        "Austin Reaves (OUT - LAL)",
+        "Kevin Durant (Questionable - HOU)",
+        "Alperen Sengun (Active - HOU)"
+      ],
+      "result": null,
+      "returned": null,
+      "pnl": null,
+      "settled_at": null
     }
   ],
-  "pending_bets": [],
   "settled_bets": [
     {
       "id": "nba_bet_20260406_001",
@@ -351,47 +376,43 @@
   "late_scout_rejections": [
     {
       "match": "Cleveland Cavaliers vs Toronto Raptors",
-      "reason": "CLE ML 1.33 below ML floor of 1.65; TOR ML 3.72 above ML ceiling of 2.50. Spread in range but NBA official injury feed does not cover these non-play-in teams tonight — cannot evaluate safely without injury data. No valid bet."
+      "reason": "CLE ML 1.31 below floor. TOR ML 3.92 above ceiling. TOR spread +8.5 @ 1.92 technically in range but no clean edge — TOR L15 +23.7 is strong but Immanuel Quickley OUT (starting PG), CLE is strong home team with superior season metrics (+4.0 NetRtg). First game tips in 31 minutes — marginal time gate. No confident directional signal to justify adding."
     },
     {
-      "match": "Denver Nuggets vs Minnesota Timberwolves",
-      "reason": "DEN ML 1.42 below ML floor of 1.65; MIN ML 3.15 above ML ceiling of 2.50. Spread in range but no injury coverage for these teams in tonight's nba_official feed. Denver seeding anomaly flagged in skills (54-28 as #6 seed) — unresolved. Cannot confirm."
+      "match": "Philadelphia 76ers @ Boston Celtics",
+      "reason": "BOS ML 1.15 below floor. PHI ML 6.57 above ceiling. BOS spread -12.5 @ 1.96 technically in range but spread is very large. PHI is flagged as volatile in skills (NetRtg -0.2). No injury report available for either team tonight. No late-breaking catalyst to create edge vs a strong BOS home team. Quota already filled by HOU pick."
     },
     {
-      "match": "New York Knicks vs Atlanta Hawks",
-      "reason": "NYK ML 1.45 below ML floor of 1.65; ATL ML 3.00 above ceiling of 2.50. Additionally, Trae Young data conflict (ATL/WAS feeds) flagged in skills — cannot confirm any ATL pick without official verification. No valid bet."
+      "match": "Phoenix Suns @ Oklahoma City Thunder",
+      "reason": "OKC ML 1.12 below floor. PHX ML 7.85 above ceiling. OKC spread -13.5 @ 1.93 in range but -13.5 is a very large number to cover even for a 64-18 team. PHX is a play-in team under elimination pressure. No late injury news to drive PHX collapse. No edge identified. Quota already filled."
     },
     {
-      "match": "Los Angeles Lakers vs Houston Rockets",
-      "reason": "HOU ML 1.50 below ML floor of 1.65; LAL ML 2.81 above ML ceiling of 2.50. Spread in range but no injury coverage for these teams in tonight's nba_official feed. Cannot evaluate safely."
+      "match": "Orlando Magic @ Detroit Pistons",
+      "reason": "DET ML 1.29 below floor. ORL ML 4.12 above ceiling. DET spread -8.5 @ 1.95 in range with compelling L15 gap (DET +30.3 vs ORL +0.7 = 29.6 gap). This was a legitimate candidate for the late scout pick, but the HOU -4.5 pick was selected first based on the clearer catalyst (confirmed LAL star absences). Quantity gate of 1 new pick per day prevents adding this."
     },
     {
-      "match": "Boston Celtics vs Philadelphia 76ers",
-      "reason": "BOS ML 1.15 extreme — far below ML floor of 1.65; PHI ML 6.60 far above ceiling of 2.50. Spread BOS -13.5 is extreme — line anomaly check: implied probability gap massive; PHI NetRtg L15 +11.4 vs extreme underdog pricing creates anomaly concern. No valid bet at these odds ranges."
-    },
-    {
-      "match": "San Antonio Spurs vs Portland Trail Blazers",
-      "reason": "SAS ML 1.20 extreme — far below ML floor of 1.65; POR ML 5.34 far above ceiling of 2.50. SAS is #2 seed (62-20) vs POR #10 play-in — pricing makes sense directionally but ML odds entirely out of valid range. No valid bet."
+      "match": "Portland Trail Blazers @ San Antonio Spurs",
+      "reason": "SAS ML 1.21 below floor. POR ML 5.17 above ceiling. SAS spread -10.5 @ 1.92 in range. SAS L15 +38.8 is exceptional but POR L15 +28.5 is surprisingly strong for a 10-seed play-in team. No strong late-breaking catalyst. Quantity gate already filled by HOU pick."
     }
   ],
   "commit_report_data": {
-    "date": "2026-04-17",
-    "ts": "2026-04-17T22:50:02.634876+00:00",
+    "date": "2026-04-18",
+    "ts": "2026-04-18T16:29:48.660533+00:00",
     "bets": [
       {
-        "id": "nba_bet_20260417_001",
-        "match": "Orlando Magic vs Charlotte Hornets",
-        "time": "2026-04-17T23:30:00Z",
-        "pick": "Charlotte Hornets ML",
-        "odds": 1.68,
-        "stake": 374.56,
-        "potential_return": 629.26,
-        "confidence": 75,
-        "reasoning": "CONFIRMED at commit. Odds unchanged at 1.68 (no movement from Scout). KEY INJURY UPDATE: Jonathan Isaac upgraded from Questionable to OUT (Left Knee Sprain confirmed on NBA official PDF). Isaac was ORL's primary rim protector and defensive anchor — his confirmed absence strengthens CHA's offensive attack path and removes Scout's -5 conservative confidence penalty for uncertainty. Revised confidence: 75 (Scout 70 + 5 for Isaac OUT confirmed benefiting CHA thesis). Thesis intact: CHA L15 NetRtg +25.7 vs ORL L15 -6.7 = gap of 32.4 points (dominant signal). Season NetRtg CHA +5.0 vs ORL +0.6. OffRtg advantage CHA 119.5 vs ORL 115.1. ORL home court (+3pts play-in) partially offset by 32-point L15 gap and now Isaac confirmed OUT. CHA Moussa Diabate still Questionable (bench player, no adjustment). EV = (0.75 × 1.68) - 1 = 0.26 (26%). High tier confidence 75 = 20% stake = €374.56. Data source: nba_official — full confidence rules apply. Total exposure post-commit: 35% of bankroll — well within 70% limit.",
+        "id": "nba_bet_20260418_001",
+        "match": "Denver Nuggets vs Minnesota Timberwolves",
+        "time": "2026-04-18T19:30:00Z",
+        "pick": "Denver Nuggets -7.5",
+        "odds": 2.01,
+        "stake": 254.66,
+        "potential_return": 511.87,
+        "reasoning": "CONFIRMED from draft pick nba_draft_20260418_002. Odds unchanged at 2.01 (within 1.80-2.30 spread target). DEN L15 NetRtg +29.9 vs MIN L15 -0.9 = gap of 30.8 — largest on slate and decisive signal. Season NetRtg DEN +5.2 vs MIN +3.1. DEN L10 10-0 at home in playoffs. Jokic and Murray confirmed Active (not in absence feed). Anthony Edwards Questionable (Maintenance) — confidence -10 applied by Scout, thesis does not depend on his absence. EV = (0.70 x 2.01) - 1 = 0.407. Confidence 70 = High tier. Stake 15% of bankroll conservatively given Edwards uncertainty.",
+        "confidence": 70,
         "anchor_players": [
-          "Miles Bridges",
-          "LaMelo Ball",
-          "Franz Wagner"
+          "Anthony Edwards (Questionable - MIN)",
+          "Nikola Jokic (Active - DEN)",
+          "Jamal Murray (Active - DEN)"
         ],
         "result": null,
         "returned": null,
@@ -399,19 +420,40 @@
         "settled_at": null
       },
       {
-        "id": "nba_bet_20260417_002",
-        "match": "Phoenix Suns vs Golden State Warriors",
-        "time": "2026-04-18T02:00:00Z",
-        "pick": "Phoenix Suns ML",
-        "odds": 1.71,
-        "stake": 280.92,
-        "potential_return": 480.37,
+        "id": "nba_bet_20260418_002",
+        "match": "New York Knicks vs Atlanta Hawks",
+        "time": "2026-04-18T22:00:00Z",
+        "pick": "New York Knicks -5.5",
+        "odds": 1.92,
+        "stake": 254.66,
+        "potential_return": 488.94,
+        "reasoning": "CONFIRMED from draft pick nba_draft_20260418_003. Odds unchanged at 1.92 (within 1.80-2.30 spread target). NYK season NetRtg +6.5 vs ATL +2.4 = 4.1 gap. NYK OffRtg 119.9 vs ATL 116.1 — NYK +3.8 offensive edge. ATL L15 +18.2 is strong but represents extreme positive deviation from season baseline (+2.4), regression risk. Jalen Brunson and KAT confirmed Active (not in absence feed). Trae Young data conflict — not in NBA official absence PDF, treating as available, confidence -5 applied. Jock Landale OUT (non-franchise). NYK at MSG = maximum playoff home court advantage (+3-4 pts). EV = (0.68 x 1.92) - 1 = 0.306. Confidence 68 = Medium tier. Stake 15% bankroll.",
         "confidence": 68,
-        "reasoning": "CONFIRMED at commit. Odds improved from Scout's 1.68 to 1.71 (+0.03 in our favour — noted, confirmed at original stake tier). Stake recalculated at current bankroll: 15% × €1,872.81 = €280.92. No new injury developments since Scout. Jimmy Butler III remains OUT (Right ACL Surgery confirmed). Porzingis Questionable unchanged. PHX anchor players (Booker, Durant, Beal) have no injury reports. Thesis fully intact: PHX L15 NetRtg +6.7 vs GSW L15 -16.8 = gap of 23.5 points. GSW 37-45 record, L3 streak, L10 3-7 — strongest fade candidate in play-in per skills. PHX home court (+3pts play-in). PHX 45-37 with stronger season NetRtg (+1.4 vs -0.6). Butler OUT decimates GSW's best player and defensive anchor. Confidence 68 unchanged (no new info to adjust). EV at commit odds = (0.68 × 1.71) - 1 = 0.163 (16.3%) — improved from Scout's 14.2%, comfortably above 0.05 threshold. Medium tier confidence 68 = 15% stake. Data source: nba_official — full confidence rules apply. Total combined stake: €655.48 = 35.0% of bankroll — within 70% limit.",
         "anchor_players": [
-          "Devin Booker",
-          "Bradley Beal",
-          "Kevin Durant"
+          "Jalen Brunson (Active - NYK)",
+          "Karl-Anthony Towns (Active - NYK)",
+          "Trae Young (Status conflict - verify)"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null
+      },
+      {
+        "id": "nba_bet_20260418_003",
+        "match": "Los Angeles Lakers vs Houston Rockets",
+        "time": "2026-04-19T00:30:00Z",
+        "pick": "Houston Rockets -4.5",
+        "odds": 1.91,
+        "stake": 271.63,
+        "potential_return": 518.81,
+        "reasoning": "LATE SCOUT PICK. Scout rejected LAL/HOU due to LAL ML 2.77 exceeding 2.50 ceiling and Durant GTD uncertainty. Revisiting at commit time: LAL ML irrelevant for spread pick. HOU spread -4.5 @ 1.91 is within 1.80-2.30 target. ANOMALY RESOLVED: LAL priced as significant home underdog because Luka Doncic OUT (confirmed NBA official — Left Hamstring Strain) AND Austin Reaves OUT (confirmed NBA official — Strain). Both confirmed OUT, not questionable. This is not a pricing anomaly, it is correctly priced. HOU L15 NetRtg +38.9 — top of entire league. LAL L15 +11.4. L15 gap = 27.5 points. Season NetRtg: HOU +5.4 vs LAL +1.7 = 3.7 gap. HOU L10 9-1 (elite form). LAL depleted without franchise player Doncic + key secondary star Reaves. Kevin Durant Questionable (knee contusion) for HOU — thesis does NOT depend on Durant's absence; thesis is built on LAL's confirmed roster destruction. Durant GTD: confidence -10, stake -20% per GTD rules. Base confidence: 80 (L15 gap 27.5 = exceptional, LAL stars confirmed OUT, HOU elite form) -10 for Durant GTD = 70. EV = (0.70 x 1.91) - 1 = 0.337. Confidence 70 = High tier. Base stake 20% = €339.54, -20% for Durant GTD = €271.63. Time gate: 00:30 UTC, 8+ hours away. Anomaly confirmed resolved.",
+        "confidence": 70,
+        "anchor_players": [
+          "Luka Doncic (OUT - LAL)",
+          "Austin Reaves (OUT - LAL)",
+          "Kevin Durant (Questionable - HOU)",
+          "Alperen Sengun (Active - HOU)"
         ],
         "result": null,
         "returned": null,
@@ -422,36 +464,36 @@
     "cancelled": [],
     "late_rejections": [
       {
-        "match": "LA Clippers vs Golden State Warriors",
-        "reason": "No valid market entry found at commit time. LAC ML drifted further down to 1.47 (floor 1.65, was already rejected at 1.51). GSW ML at 2.93 exceeds 2.50 ML ceiling (drifted further from Scout's 2.81). LAC spread -5.5 @ 1.96 is in range but LAC advanced stats remain unavailable — spread picks require advanced stats per data_quality_rules. No actionable edge on either side."
+        "match": "Cleveland Cavaliers vs Toronto Raptors",
+        "reason": "CLE ML 1.33 below ML floor of 1.65; TOR ML 3.72 above ML ceiling of 2.50. Spread in range but NBA official injury feed does not cover these non-play-in teams tonight — cannot evaluate safely without injury data. No valid bet."
       },
       {
-        "match": "Toronto Raptors @ Cleveland Cavaliers",
-        "reason": "Not on tonight's confirmed slate (slate lists only PHI vs ORL and LAC vs GSW). CLE ML 1.30 is well below the 1.65 ML floor regardless. No evaluation required."
+        "match": "Denver Nuggets vs Minnesota Timberwolves",
+        "reason": "DEN ML 1.42 below ML floor of 1.65; MIN ML 3.15 above ML ceiling of 2.50. Spread in range but no injury coverage for these teams in tonight's nba_official feed. Denver seeding anomaly flagged in skills (54-28 as #6 seed) — unresolved. Cannot confirm."
       },
       {
-        "match": "Minnesota Timberwolves @ Denver Nuggets",
-        "reason": "Not on tonight's confirmed slate. DEN ML 1.45 below 1.65 ML floor. No evaluation required."
+        "match": "New York Knicks vs Atlanta Hawks",
+        "reason": "NYK ML 1.45 below ML floor of 1.65; ATL ML 3.00 above ceiling of 2.50. Additionally, Trae Young data conflict (ATL/WAS feeds) flagged in skills — cannot confirm any ATL pick without official verification. No valid bet."
       },
       {
-        "match": "Atlanta Hawks @ New York Knicks",
-        "reason": "Not on tonight's confirmed slate. NYK ML 1.49 below 1.65 ML floor. No evaluation required."
+        "match": "Los Angeles Lakers vs Houston Rockets",
+        "reason": "HOU ML 1.50 below ML floor of 1.65; LAL ML 2.81 above ML ceiling of 2.50. Spread in range but no injury coverage for these teams in tonight's nba_official feed. Cannot evaluate safely."
       },
       {
-        "match": "Houston Rockets @ Los Angeles Lakers",
-        "reason": "Not on tonight's confirmed slate. HOU ML 1.48 below 1.65 ML floor. No evaluation required."
+        "match": "Boston Celtics vs Philadelphia 76ers",
+        "reason": "BOS ML 1.15 extreme — far below ML floor of 1.65; PHI ML 6.60 far above ceiling of 2.50. Spread BOS -13.5 is extreme — line anomaly check: implied probability gap massive; PHI NetRtg L15 +11.4 vs extreme underdog pricing creates anomaly concern. No valid bet at these odds ranges."
       },
       {
-        "match": "Portland Trail Blazers @ San Antonio Spurs",
-        "reason": "Not on tonight's confirmed slate. SAS ML 1.20 far below 1.65 ML floor. No evaluation required."
+        "match": "San Antonio Spurs vs Portland Trail Blazers",
+        "reason": "SAS ML 1.20 extreme — far below ML floor of 1.65; POR ML 5.34 far above ceiling of 2.50. SAS is #2 seed (62-20) vs POR #10 play-in — pricing makes sense directionally but ML odds entirely out of valid range. No valid bet."
       }
     ],
-    "total_staked": 655.48,
-    "bankroll_before": 1872.81,
-    "report": "### CONFIRMED — Charlotte Hornets ML\n\n- Match: **Orlando Magic vs Charlotte Hornets** | Tip: 2026-04-17T23:30Z\n- Pick: Charlotte Hornets ML | Scout odds: 1.68 | Commit odds: **1.68** | Move: **0.00 (no movement)**\n- ML: ORL 2.35 / CHA 1.68 | ATS: ORL +3.5 (1.92/2.00) | O/U: 218.5 (O:1.96/U:1.96)\n- Stake: **€374.56** | Pot: **€629.26** | Conf: **75/100** | EV: **0.26 (26%)**\n- Decision: Confirmed with increased confidence (70 → 75). Key update: Jonathan Isaac upgraded from Questionable to **OUT** (confirmed NBA official PDF — Left Knee Sprain). Isaac was ORL's primary rim protector; his confirmed absence removes the -5 conservative Scout discount and strengthens CHA's path to victory. Core thesis unchanged: CHA L15 NetRtg +25.7 vs ORL -6.7 (32.4-point gap), superior season NetRtg (+5.0 vs +0.6), OffRtg advantage (119.5 vs 115.1). ORL home court partially offsets but cannot overcome this talent/form gap with Isaac now officially OUT.\n\n---\n\n### CONFIRMED — Phoenix Suns ML\n\n- Match: **Phoenix Suns vs Golden State Warriors** | Tip: 2026-04-18T02:00Z\n- Pick: Phoenix Suns ML | Scout odds: 1.68 | Commit odds: **1.71** | Move: **+0.03 (improved in our favour)**\n- ML: PHX 1.71 / GSW 2.30 | ATS: PHX -2.5 (1.92/2.00) | O/U: 220.5 (O:2.04/U:1.88)\n- Stake: **€280.92** | Pot: **€480.37** | Conf: **68/100** | EV: **0.163 (16.3%)**\n- Decision: Confirmed. Odds drifted +0.03 in our favour (1.68 → 1.71) — noted, confirmed at original stake tier per line movement rules (do not increase stake on favourable drift). No new injuries — Jimmy Butler III remains OUT, PHX anchors (Booker, Durant, Beal) all healthy. Thesis intact: PHX L15 +6.7 vs GSW -16.8 (23.5-point gap), GSW L3 streak and 3-7 L10, PHX home court advantage (+3pts play-in). EV improved to 16.3% at commit odds.\n\n---\n\n### LATE SCOUT SUMMARY\nAll 6 non-play-in games checked — no new bets added. Four games (CLE, DEN, NYK, BOS as favourites) have ML odds far below the 1.65 floor; corresponding underdogs are above the 2.50 ceiling. All spread picks from these games were declined due to absence of injury data in tonight's nba_official feed (which only covers the 4 play-in teams). One available late pick slot was preserved but no qualifying edge found.\n\n---\n\n### SLATE SUMMARY\nBoth play-in draft picks confirmed with strong conviction. Total committed: **€655.48 (35.0% of €1,872.81 bankroll)** — well within the 70% maximum. The slate's strongest signal remains the historic CHA L15 advantage (+25.7 vs ORL's -6.7) now bolstered by Isaac's confirmed OUT status; PHX vs GSW offers a clean directional bet against a depleted, poor-form Warriors side in a home elimination game scenario. No late picks added due to odds range violations and incomplete injury data on non-play-in games.",
-    "tokens_in": 9912,
-    "tokens_out": 5135,
-    "cost_usd": 0.106761
+    "total_staked": 780.95,
+    "bankroll_before": 1697.7,
+    "report": "### CONFIRMED — Denver Nuggets -7.5\n\n- Match: Denver Nuggets vs Minnesota Timberwolves | Tip: 19:30 UTC\n- Pick: Denver Nuggets -7.5 | Scout odds: 2.01 | Commit odds: 2.01 | Move: 0.00\n- ML: 1.36/3.50 | ATS: -7.5 (2.01/1.91) | O/U: 232.5 (O:1.98/U:1.94)\n- Stake: €254.66 | Pot: €511.87 | Conf: 70/100 | EV: 0.407\n- Decision: Odds unchanged and valid. DEN L15 NetRtg advantage of 30.8 points (largest on slate) is the primary signal. Jokic and Murray confirmed active; Anthony Edwards Questionable (Maintenance) with -10 confidence already applied at Scout. Thesis does not depend on Edwards being absent — DEN's elite home form (L10 10-0) and superior L15 metrics stand independently. EV 0.407 is excellent.\n\n---\n\n### CONFIRMED — New York Knicks -5.5\n\n- Match: New York Knicks vs Atlanta Hawks | Tip: 22:00 UTC\n- Pick: New York Knicks -5.5 | Scout odds: 1.92 | Commit odds: 1.92 | Move: 0.00\n- ML: 1.42/3.15 | ATS: -5.5 (1.92/2.00) | O/U: 217.5 (O:1.94/U:1.98)\n- Stake: €254.66 | Pot: €488.94 | Conf: 68/100 | EV: 0.306\n- Decision: Odds unchanged and valid. NYK season NetRtg gap of 4.1 over ATL meets the ≥4.0 threshold. Brunson and KAT confirmed active. Trae Young not in NBA official absence PDF — data conflict uncertainty already absorbed in -5 confidence. ATL's L15 +18.2 vs season baseline +2.4 suggests hot-streak regression risk. MSG home court in playoffs amplifies the -5.5 edge. EV 0.306 is strong.\n\n---\n\n### NEW PICK — Houston Rockets -4.5\n\n- Match: Los Angeles Lakers vs Houston Rockets | Tip: 00:30 UTC\n- Pick: Houston Rockets -4.5 | Scout odds: N/A (rejected) | Commit odds: 1.91 | Move: N/A\n- ML: 2.77/1.51 | ATS: +4.5 (2.01) / -4.5 (1.91) | O/U: 208.5 (O:1.95/U:1.97)\n- Stake: €271.63 | Pot: €518.81 | Conf: 70/100 | EV: 0.337\n- Decision: Scout rejected due to LAL ML anomaly (2.77 > ceiling) and Durant GTD uncertainty. At commit time, the spread pick is fully valid at 1.91. LAL's anomalous pricing is explained by confirmed absences of Doncic (OUT, hamstring) and Reaves (OUT, strain). This is not a pricing error — it is correctly priced. HOU L15 +38.9 (top of league) vs LAL L15 +11.4 = 27.5-point gap. HOU L10 9-1. Alperen Sengun available. Durant GTD does not compromise thesis; his presence only strengthens the edge. Durant GTD penalty: confidence -10 (from base 80 → 70), stake -20% (from €339.54 → €271.63). Late scout trigger: confirmed star absence (two of them) and books' price explains what appeared anomalous at Scout.\n\n---\n\n**Slate Summary:** Three bets committed for a total stake of €780.95 (46.0% of bankroll), well within the 70% cap. All three picks are spread-based with valid odds in the 1.91–2.01 range and EV well above the 0.05 floor (0.337–0.407). The strongest signal is DEN's 30.8-point L15 NetRtg gap over MIN; the late addition of HOU -4.5 is supported by the clear catalyst of two confirmed LAL star absences, converting a previously rejected game into a legitimate edge. Both draft picks were confirmed without modification as no line movement or new injury information warranted cancellation.",
+    "tokens_in": 9951,
+    "tokens_out": 6748,
+    "cost_usd": 0.131073
   },
   "netrtg_l15": {
     "Charlotte Hornets": 16.9,
