@@ -23,8 +23,8 @@
           "game": 2,
           "started_at": "2026-04-05T10:44:07.102344+00:00",
           "bankroll_start": 1000.0,
-          "wins": 8,
-          "losses": 3,
+          "wins": 9,
+          "losses": 4,
           "peak_bankroll": 1872.81,
           "total_bets": 13
         }
@@ -1148,10 +1148,10 @@
             "LaMelo Ball",
             "Franz Wagner"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -374.56,
+          "settled_at": "2026-04-18T10:41:49.359579+00:00"
         },
         {
           "id": "nba_bet_20260417_002",
@@ -1168,10 +1168,10 @@
             "Bradley Beal",
             "Kevin Durant"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null
+          "result": "WON",
+          "returned": 480.37,
+          "pnl": 199.45,
+          "settled_at": "2026-04-18T10:41:49.359579+00:00"
         }
       ],
       "summary": "Day 2026-04-17 commit — 2 bets totalling €655.48. 0 cancelled. Bankroll: €1872.81 → €1217.33."
