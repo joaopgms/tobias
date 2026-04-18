@@ -1,7 +1,7 @@
 ---
-version: 6
-updated_at: 2026-04-17T11:51:04.120199+00:00
-updated_by: analyst_2026-04-17
+version: 7
+updated_at: 2026-04-18T11:33:06.380400+00:00
+updated_by: analyst_2026-04-18
 llm: claude-sonnet-4-6
 ---
 
@@ -26,7 +26,7 @@ EAST Play-In (seeds 7-10):
 WEST Play-In (seeds 7-10):
 - #7 Phoenix Suns (45-37) — NetRtg +1.4; W1
 - #8 LA Clippers (42-40) — NetRtg +1.1; W1
-- #9 Golden State Warriors (37-45) — NetRtg -0.4; L3 streak; verify mathematical qualification as 9-seed
+- #9 Golden State Warriors (37-45) — NetRtg -0.4; L3 streak; confirmed eliminated from regular bracket; verify 9-seed mathematical qualification
 - #10 TBD — final West 10-seed requires official confirmation
 
 Play-in matchup format:
@@ -36,15 +36,23 @@ Play-in matchup format:
 
 Confirmed play-in matchups: NOT YET ANNOUNCED — Scout must verify official schedule before drafting any play-in picks.
 
+ROSTER STATUS UPDATES (2026-04-22):
+Several teams that previously had widespread roster-only OUT flags have seen significant changes in the verified absence feed this session. The following players no longer appear in the current verified feed and must be treated as status-changed (not confirmed OUT):
+- NYK: Jalen Brunson, Karl-Anthony Towns, OG Anunoby, Josh Hart
+- CLE: Donovan Mitchell, Jarrett Allen, Evan Mobley, James Harden
+- DEN: Jamal Murray, Aaron Gordon, Christian Braun
+- HOU: Alperen Sengun, Jabari Smith Jr., Amen Thompson
+- MIN: Julius Randle, Rudy Gobert, Mike Conley, Jaden McDaniels
+- LAL: Jaxson Hayes
+Re-verify ALL of the above against NBA official PDF before drafting any pick involving these teams.
+
 DATA INTEGRITY FLAG: Trae Young appears in both the Atlanta Hawks and Washington Wizards verified absence feeds. This is a data conflict. Do NOT assume Trae Young is available for ATL or assign his absence to WAS without NBA official PDF confirmation. Any pick involving ATL requires Trae Young status verified via official PDF.
 
 Seeds 1-6 awaiting play-in completion:
 EAST seeds 1-6: #1 Detroit (60-22) | #2 Boston (56-26) | #3 New York Knicks (53-29) | #4 Cleveland (52-30) | #5 Toronto (46-36) | #6 Atlanta (46-36)
 WEST seeds 1-6: #1 OKC (64-18) | #2 San Antonio (62-20) | #3 LA Lakers (53-29) | #4 Houston (52-30) | #5 Minnesota (49-33) | #6 Denver (54-28)
 
-ROSTER UNCERTAINTY NOTE: With widespread roster-only OUT flags across OKC, SAS, BOS, NYK, CLE, MIN, HOU — many top seeds are fielding depleted rosters. Play-in teams may face heavily rested but roster-uncertain opponents in first round.
 DENVER SEEDING ANOMALY: Denver (54-28, W12) ranked as #6 West seed — re-verify against official NBA bracket. Nikola Jokic status requires verification before any DEN directional pick.
-MIN ROSTER UPDATE: Mike Conley and Rudy Gobert no longer appear in current verified absence feed — re-verify status before any MIN pick.
 
 ## SECTION:elimination_flags
 PLAY-IN ELIMINATION FLAGS (updated 2026-04-22):
@@ -59,10 +67,13 @@ Current elimination risk teams (play-in participants):
 - WEST: Phoenix Suns (#7), LA Clippers (#8), Golden State Warriors (#9 — verify mathematical qualification), TBD (#10)
 
 HIGH-RISK FLAGS:
-- Golden State Warriors (37-45, L3, NetRtg -0.4): If confirmed as 9-seed, face maximum elimination pressure with poor form AND negative NetRtg — strongest fade candidate in tournament. Only consider backing if opponent has comparable roster uncertainty AND odds offer significant value.
+- Golden State Warriors (37-45, L3, NetRtg -0.4): Confirmed 9-seed (pending verification). Face maximum elimination pressure with poor form AND negative NetRtg — strongest fade candidate in tournament. Only consider backing if opponent has comparable roster uncertainty AND odds offer significant value (≥ 2.00).
 - Portland Trail Blazers (#10, NetRtg -0.2): On W2 streak but true talent borderline — one-and-done risk is real; do not over-favour as underdog if pricing doesn't reflect elimination pressure gap.
 - Philadelphia 76ers (#7, NetRtg -0.2): Volatile; NetRtg is worst of any 7-seed in the field — do not default to 7-seed favourite pricing.
 - Charlotte Hornets (#8, NetRtg +5.0): Strongest statistical case of all play-in teams; if priced as underdog vs PHI, regression-fade rule may apply against Sixers.
+
+ROSTER UNCERTAINTY FACTOR (2026-04-22):
+Multiple play-in teams' opponents (top-6 seeds) have seen significant roster status changes this session. Seeds 1-6 that previously had widespread absences may now be fielding stronger rosters than assumed. This increases the difficulty of play-in teams beating those opponents in potential first-round matchups.
 
 DATA INTEGRITY FLAG: Trae Young conflict (ATL/WAS feeds) — verify before any ATL Hawks pick.
 
@@ -127,9 +138,8 @@ Regular season H2H as a playoff/play-in signal — rules and current data:
 
 **Play-in H2H notes (updated 2026-04-22 — matchups not yet officially confirmed):**
 All H2H records require population once official play-in matchups are announced.
-Multiple teams have franchise players in roster-only OUT feed — many regular season H2H games
-were played with non-representative rosters. Apply H2H adjustment ONLY if the H2H games involved
-comparable roster strength.
+
+CRITICAL CAVEAT (2026-04-22): Multiple teams have seen significant roster status changes between this session and the regular season. Previously widespread absence flags for NYK, CLE, DEN, HOU, MIN, LAL may no longer reflect current availability. Regular season H2H games played with depleted rosters must be heavily discounted — verify roster state for each H2H game before applying the +8 adjustment.
 
 EAST play-in matchups H2H (to be populated when matchups confirmed):
 - PHI (#7) vs CHA (#8): [to be populated — verify if H2H included key absences for either team]
