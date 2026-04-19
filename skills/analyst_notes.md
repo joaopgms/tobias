@@ -1,39 +1,39 @@
 ---
-date: 2026-04-18
+date: 2026-04-19
 llm: claude-sonnet-4-6
 scout_patches: 2
 commit_patches: 0
-milestone: daily (13 bets)
+milestone: daily (16 bets)
 ---
 
-## Today's Analysis — 2026-04-18
+## Today's Analysis — 2026-04-19
 
-Major roster status shift this session: numerous players previously flagged as roster-only OUT (including Sengun, Murray, Mitchell, Allen, Mobley, Harden, Brunson, Towns, Randle, Gobert, Conley) no longer appear in the verified absence feed — this does NOT confirm them available, but mandates re-verification against NBA official PDF before any pick involving those teams. Performance data continues to show the High confidence tier underperforming badly (33.3% WR, -€341.66) while Medium confidence is carrying the system (60.0% WR, +€442.43), reinforcing the case that top-of-range confidence scores may be systematically inflated — worth monitoring closely as play-in picks tend to invite higher confidence calls. Charlotte Hornets (NetRtg +5.0, W1, best stats in East play-in field) and Miami Heat (NetRtg +2.2, W2) are the most statistically credible play-in sides; Golden State (NetRtg -0.4, L3, 37-45) remains the clearest fade target if play-in games offer appropriate odds.
+Major roster status shift this session: multiple franchise players previously in roster-only OUT feed (SGA, Jalen Williams, Chet Holmgren, Wembanyama, Jayson Tatum, Anthony Edwards) no longer appear in the current verified absence feed — this fundamentally changes the competitive landscape entering the play-in tournament and Scout must re-verify all of these via NBA official PDF before drafting any picks. Performance data shows a clear and actionable pattern: High confidence bets are severely underperforming (4W/7L, 36.4%, €-356 at the High tier), while Medium confidence bets are the profitable sweet spot (13W/8L, 61.9%, €+677) — this is the most important signal in the performance data and suggests the confidence calibration at the top end is too aggressive. Odds range 2.10-2.50 is 0W/3L (€-229) — this range is bleeding money and warrants serious scrutiny before any pick in that range is drafted.
 
 ## Performance Stats
-ALL-TIME: 15W / 16L | Win rate: 48.4% | P&L: €-40.54 | Avg odds: 1.96 | Avg conf: 65.3/100
-RECENT 20: 11W / 9L | 55.0% WR | P&L: €+481.78
-By market:      ML 15bets 7W/8L 46.7% €-275.39  |  SPREAD 13bets 7W/6L 53.8% €+258.12  |  TOTAL 3bets 1W/2L 33.3% €-23.27
-By confidence:  High 9bets 3W/6L 33.3% €-341.66  |  Medium 20bets 12W/8L 60.0% €+442.43  |  Speculative 2bets 0W/2L 0.0% €-141.31
-By odds range:  1.70-1.89 9bets 5W/4L 55.6% €-86.43  |  1.90-2.09 19bets 10W/9L 52.6% €+275.20  |  2.10-2.50 3bets 0W/3L 0.0% €-229.31
+ALL-TIME: 17W / 17L | Win rate: 50.0% | P&L: €+179.33 | Avg odds: 1.96 | Avg conf: 65.6/100
+RECENT 20: 11W / 9L | 55.0% WR | P&L: €+678.26
+By market:      ML 15bets 7W/8L 46.7% €-275.39  |  SPREAD 16bets 9W/7L 56.2% €+477.99  |  TOTAL 3bets 1W/2L 33.3% €-23.27
+By confidence:  High 11bets 4W/7L 36.4% €-356.08  |  Medium 21bets 13W/8L 61.9% €+676.72  |  Speculative 2bets 0W/2L 0.0% €-141.31
+By odds range:  1.70-1.89 9bets 5W/4L 55.6% €-86.43  |  1.90-2.09 22bets 12W/10L 54.5% €+495.07  |  2.10-2.50 3bets 0W/3L 0.0% €-229.31
 
 
 
 ## Scout patches applied
-- [franchise_player_rules] Verified absence feed has changed significantly since last session — several players previously flagged roster-only OUT (Sengun, Murray, Mitchell, Allen, Mobley, Harden, Brunson, Towns, Randle, Gobert, Conley, Reaves, Hayes) no longer appear in the current verified feed and must be treated as status-changed with re-verification required.
-- [tanking_teams] Golden State Warriors (37-45, L3, NetRtg -0.4) are confirmed below the play-in cutoff and showing deteriorating form — moving to confirmed tank-watch; standings data also cleaned up to remove outdated record approximations.
+- [franchise_player_rules] Updated verified franchise player statuses: multiple previously OUT players (Wembanyama, Tatum, SGA, Jalen Williams, Chet Holmgren, Anthony Edwards) no longer appear in current verified absence feed — their status must be treated as changed and re-verified, not assumed OUT.
+- [tanking_teams] Season is in play-in/playoff phase — tanking logic must be suppressed for all remaining motivated teams and the section clarified to reflect the active bracket.
 
 ## Commit patches applied
 None
 
 ## Playoff context patches applied
-- [series_context] Roster absence feed has changed materially this session with multiple previously-OUT players no longer appearing in the verified list — series context must reflect these updates so Scout can properly assess which teams can field competitive rosters.
-- [elimination_flags] Roster status changes this session mean top-seed strength assumptions need recalibration — elimination pressure flags updated to reflect this and GSW fade candidate note strengthened given confirmed 37-45 record with L3 and negative NetRtg.
-- [h2h_playoff] Roster status changes this session invalidate some H2H assumptions — caveat added to ensure Scout discounts H2H records compiled under materially different roster conditions.
+- [series_context] Updated to reflect current session verified absence feed changes — multiple previously OUT franchise players no longer confirmed absent, requiring re-verification flags, and Denver hot streak updated with current W12/L10 data.
+- [elimination_flags] Updated elimination flags to reflect current session status and clarify the GSW motivation paradox (motivated but statistically weak), with updated roster uncertainty context.
+- [h2h_playoff] Updated to reflect current session's roster status changes — previously assumed absences during regular season H2H may no longer apply, requiring fresh H2H evaluation once matchups are confirmed.
+- [playoff_rest] Updated rest context to reflect current session date and clarify that previous widespread absence flags may have cleared, changing rest-based edge calculations.
 
 ## Intelligence gaps identified
-- **High confidence tier (70-84) is producing a 33.3% win rate and -€341.66 P&L across 9 bets — significantly worse than Medium tier which wins at 60.0%.** — If High confidence picks are systematically losing, the confidence calibration methodology is inflated at the top end — bets are being over-sized and over-trusted, leading to disproportionate losses when wrong. → After reaching 15+ High confidence settled bets, formally review whether the confidence_staking High tier (20-25% stake) should be reduced to 15-20%, and whether the confidence floor for High should be raised to 75+ to filter out borderline calls.
-- **Speculative tier (50-54) shows 0% win rate across 2 bets and -€141.31 — the floor may be too low to produce positive EV at this odds range.** — Two speculative losses at high odds (likely 2.10+ range) contributed -€141.31 — if the system cannot generate genuine edge at 50-54 confidence, these bets should be eliminated entirely. → After 5+ speculative bets settled, evaluate whether the Speculative tier should be abolished (floor raised to 55 for all markets) or restricted to ML-only at odds ≥ 1.90.
-- **Odds range 2.10-2.50 shows 0W/3L and -€229.31 — the system is consistently failing at the upper end of the odds target range.** — Every bet placed at 2.10+ odds has lost, suggesting either the model is over-confident in underdogs or the odds target ceiling should be tightened. → Consider tightening ML odds ceiling from 2.50 to 2.20 for non-speculative picks, or requiring NetRtg L15 gap confirmation before any pick above 2.10.
-- **No confirmed play-in matchup schedule or official bracket has been provided — Scout cannot draft picks without knowing which teams are playing.** — All play-in pick analysis is blocked until official matchups are confirmed; Scout risks drafting picks for wrong matchups or non-existent games. → Infrastructure fix required: inject confirmed play-in schedule (7v8 and 9v10 matchups for both conferences, tip-off times, home court) into the daily context before Scout runs.
-- **Trae Young appears simultaneously in Atlanta Hawks and Washington Wizards verified absence feeds — a clear data integrity error that has persisted across multiple sessions.** — Any ATL pick evaluation is blocked pending resolution; if the system incorrectly treats Trae Young as unavailable for ATL when he is actually available, it could miss legitimate ATL edges or incorrectly discount ATL strength. → Infrastructure fix required: cross-reference Trae Young's official ESPN roster page and NBA trade database to confirm his current team before each session; inject confirmed team affiliation into the verified player statuses feed.
+- **High confidence tier (70-84) is producing catastrophic results: 4W/7L, 36.4%, €-356 — worse than speculative picks on a per-bet basis** — This is the single largest P&L drag in the system. If the confidence calibration at the 70-84 tier is systematically over-confident, every 'High' pick is destroying value. The pattern suggests scouts are reaching for High confidence on marginal edges. → Raise the High confidence floor threshold for drafting from 70 to 73, or add a secondary validation gate for High-tier picks requiring NetRtg gap ≥ 5 AND clean injury feed (nba_official) — this would filter the marginal High-tier picks that are losing. Confidence in this patch: 0.68 — just below the 0.70 threshold (11 bets is a moderate but not fully conclusive sample at this tier).
+- **Odds range 2.10-2.50 is 0W/3L (100% loss rate, €-229) — no wins at all in this range across the full dataset** — This range produces systematically negative outcomes — possibly because odds above 2.10 indicate the market has already priced in significant uncertainty that the agents are not adequately discounting. Three losses at this range with no wins is a clear pattern. → Lower the ML odds ceiling target from 2.50 to 2.10, or require EV ≥ 0.12 (doubled floor) for any pick with odds ≥ 2.10 to compensate for the elevated uncertainty. Confidence in this patch: 0.68 — just below 0.70 threshold (only 3 bets in this range is a thin sample).
+- **ML market is 7W/8L (46.7%, €-275) while Spread is 9W/7L (56.2%, €+478) — agents may be defaulting to ML when spread offers the better edge** — Spread bets are clearly the most profitable market type. If scouts are selecting ML over spread on the same game due to lower confidence requirements, they are leaving value on the table and taking on worse-EV bets. → The selectivity section already instructs spread-first evaluation — verify via scout_report logs whether agents are actually evaluating spreads first or defaulting to ML. If they are defaulting to ML, consider adding a mandatory spread-evaluation gate: 'If a game meets ML criteria AND NetRtg gap ≥ 4, the spread MUST be evaluated before drafting ML.' No patch needed yet — this is a process audit gap.
+- **Multiple play-in teams' regular season H2H records are unpopulated — play-in matchups not yet officially announced** — Without confirmed matchups, Scout cannot apply H2H confidence adjustments (+8) that could be decisive in close single-elimination games where every edge matters. → Infrastructure/data pipeline fix needed — requires official NBA play-in matchup announcement. Once announced, Analyst should immediately populate h2h_playoff section with verified H2H records for each confirmed matchup. No rule patch available until data exists.
