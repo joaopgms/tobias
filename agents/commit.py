@@ -396,6 +396,11 @@ def run(store, force: bool = False) -> None:
     for c in cancelled_picks:
         if "match" in c:
             c["match"] = _normalise_match(c["match"])
+    late_rejs = json.loads(late_rejections_raw) if late_rejections_raw else []
+    for r in late_rejs:
+        if "match" in r:
+            r["match"] = _normalise_match(r["match"])
+    state["late_scout_rejections"] = late_rejs
 
     # ── 9. Validate bets ──────────────────────────────────────────────────────
     try:
@@ -445,11 +450,6 @@ def run(store, force: bool = False) -> None:
         "tokens_out":      llm_result.tokens_out if llm_result else 0,
         "cost_usd":        llm_result.cost_usd if llm_result else 0,
     }
-    try:
-        state["late_scout_rejections"] = json.loads(late_rejections_raw) if late_rejections_raw else []
-    except Exception:
-        state["late_scout_rejections"] = []
-
     # ── 12. Update history ────────────────────────────────────────────────────
     season = state["season"]
     game_n = state["game"]
