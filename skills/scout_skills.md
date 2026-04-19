@@ -1,7 +1,7 @@
 ---
-version: 35
-updated_at: 2026-04-18T11:33:06.380400+00:00
-updated_by: analyst_2026-04-18
+version: 36
+updated_at: 2026-04-19T11:33:48.855773+00:00
+updated_by: analyst_2026-04-19
 llm: claude-sonnet-4-6
 ---
 
@@ -91,42 +91,29 @@ A Questionable player has ~50% chance of playing — never build a bet thesis on
 Franchise player Day-To-Day → confidence -5, stake -10%.
 If BOTH teams have franchise player uncertainty → evaluate net impact.
 
-NOTE — PLAY-IN PHASE: All play-in teams are fully motivated. Star rest risk is low for play-in participants (win-or-go-home). Roster-only flags must be re-verified against NBA official PDF each session before any pick.
+NOTE — PLAY-IN / PLAYOFF PHASE: All remaining teams are fully motivated. Star rest risk still applies for top seeds (OKC, SAS) who have seeding locked but are now in active playoff brackets. Roster-only flags MUST be re-verified against NBA official PDF each session before any pick.
 
 Oklahoma City Thunder:
-- Shai Gilgeous-Alexander (G): OUT [roster-only] — FRANCHISE PLAYER
-- Isaiah Hartenstein (C): OUT [roster-only] — key big
-- Chet Holmgren (C): OUT [roster-only] — FRANCHISE PLAYER
-- Isaiah Joe (G): OUT [roster-only]
-- Ajay Mitchell (G): OUT [roster-only]
 - Thomas Sorber (C): OUT [roster-only]
-- Cason Wallace (G): OUT [roster-only]
-- Jalen Williams (G): OUT [roster-only] — FRANCHISE PLAYER
-- Jaylin Williams (F): OUT [roster-only]
-NOTE: OKC has ALL major franchise players in roster-only OUT feed. Do NOT draft OKC picks without NBA official PDF verification. Top seed locked at 64-18 — star rest risk MAXIMUM.
+NOTE: Shai Gilgeous-Alexander, Jalen Williams, Chet Holmgren NOT in current verified absence feed — re-verify before any OKC pick. Previous session had all three in roster-only OUT — status may have changed. Top seed at 64-18; verify rest/rotation plans.
 
 San Antonio Spurs:
 - David Jones Garcia (F): OUT [roster-only]
-- Luke Kornet (C): OUT [roster-only]
-- Victor Wembanyama (F): OUT [roster-only] — FRANCHISE PLAYER
-NOTE: Victor Wembanyama in verified absence feed. Do NOT draft SAS picks without NBA official PDF verification. Star rest risk elevated; top-2 seed locked at 62-20.
+- Jordan McLaughlin (G): OUT [roster-only]
+NOTE: Victor Wembanyama NOT in current verified absence feed — re-verify before any SAS pick. Previously in OUT feed; status may have changed. #2 seed at 62-20.
 
 Detroit Pistons:
-- Jalen Duren (C): OUT [roster-only] — key big
-NOTE: Cade Cunningham and Isaiah Stewart NOT in current verified absence feed — re-verify before any DET pick.
+NOTE: No players in current verified absence feed. Re-verify Cade Cunningham, Isaiah Stewart, Jalen Duren before any DET pick.
 
 Boston Celtics:
-- Jayson Tatum (F): OUT [roster-only] — FRANCHISE PLAYER
-NOTE: Jaylen Brown NOT in current verified absence feed. Jayson Tatum in roster-only OUT feed — BOS franchise core critically thin. Do NOT draft BOS ML without re-verification.
+NOTE: No players in current verified absence feed. Jayson Tatum previously in roster-only OUT — status may have changed significantly. Re-verify Jayson Tatum and Jaylen Brown before any BOS pick.
 
 New York Knicks:
-- No players in current verified absence feed.
-NOTE: Jalen Brunson, Karl-Anthony Towns — NOT in current verified absence feed. Re-verify before any NYK pick. Previous session had multiple roster-only OUT flags — status changed; treat as active until re-verified.
+NOTE: No players in current verified absence feed. Jalen Brunson, Karl-Anthony Towns require re-verification before any NYK pick.
 
 Denver Nuggets:
-- Spencer Jones (F): OUT [roster-only]
 - Peyton Watson (G): OUT [roster-only]
-NOTE: Nikola Jokic and Jamal Murray NOT in current verified absence feed — re-verify before any DEN pick. Denver on W12 streak; seeding battle live. Murray previously flagged roster-only OUT — status may have changed.
+NOTE: Nikola Jokic and Jamal Murray NOT in current verified absence feed — re-verify before any DEN pick. Denver on W12 streak; #6 seed in West bracket.
 
 Los Angeles Lakers:
 - Luka Doncic (G): OUT [roster-only] — FRANCHISE PLAYER. Do NOT bet LAL ML without re-verification.
@@ -140,15 +127,14 @@ NOTE: Alperen Sengun NOT in current verified absence feed — re-verify before a
 
 Cleveland Cavaliers:
 - Thomas Bryant (C): OUT [roster-only]
-NOTE: Donovan Mitchell, Jarrett Allen, Evan Mobley NOT in current verified absence feed — re-verify before any CLE pick. Previously entire core was absent; status may have changed significantly.
+NOTE: Donovan Mitchell, Jarrett Allen, Evan Mobley NOT in current verified absence feed — re-verify before any CLE pick. Previously entire core was absent; status changed significantly.
 
 Minnesota Timberwolves:
-- Anthony Edwards (G): OUT [roster-only] — FRANCHISE PLAYER
-NOTE: Mike Conley, Rudy Gobert, Julius Randle NOT in current verified absence feed — re-verify status before any MIN pick. Edwards remains OUT.
+NOTE: No players in current verified absence feed. Anthony Edwards previously OUT [roster-only] — status may have changed. Re-verify Edwards, Rudy Gobert, Mike Conley, Julius Randle before any MIN pick.
 
 Atlanta Hawks:
 - Jock Landale (C): OUT [roster-only]
-NOTE: Trae Young NOT in current verified absence feed — re-verify before any ATL pick. DATA CONFLICT: Trae Young appears in WAS feed — confirm official team affiliation via NBA official PDF.
+NOTE: Trae Young NOT in current verified absence feed for ATL — DATA CONFLICT: Trae Young appears in WAS feed. Verify official team affiliation via NBA official PDF before any ATL pick.
 
 Toronto Raptors:
 - Chucky Hepburn (G): OUT [roster-only]
@@ -164,68 +150,35 @@ Washington Wizards:
 - Tristan Vukcevic (F): OUT [roster-only + injury landscape confirmed]
 - Cam Whitmore (F): OUT [roster-only]
 - Trae Young (G): OUT [roster-only] — FRANCHISE PLAYER (DATA CONFLICT: also appears in ATL feed — verify)
-NOTE: Washington full tank confirmed. Do NOT bet Washington to win under any circumstances.
+NOTE: Washington eliminated. Do NOT bet Washington to win under any circumstances.
 
 Franchise players requiring mandatory NBA official PDF verification before ANY pick involving their team:
-- Shai Gilgeous-Alexander, Jalen Williams, Chet Holmgren (OKC) — roster-only OUT; top-seed rest risk maximum
-- Victor Wembanyama (SAS) — verified absence feed; re-verify each session
-- Jayson Tatum (BOS) — roster-only OUT; Jaylen Brown requires verification
+- Shai Gilgeous-Alexander, Jalen Williams, Chet Holmgren (OKC) — previously roster-only OUT; re-verify status this session
+- Victor Wembanyama (SAS) — previously in OUT feed; re-verify status this session
+- Jayson Tatum (BOS) — previously roster-only OUT; re-verify status this session
 - Kevin Durant (HOU) — roster-only OUT; Sengun status changed — re-verify
-- Anthony Edwards (MIN) — roster-only OUT; Gobert/Conley/Randle status changed — re-verify
 - Luka Doncic (LAL) — roster-only OUT; removes primary offensive engine
+- Anthony Davis, D'Angelo Russell, Alex Sarr (WAS) — confirmed OUT; team eliminated
 
 ## SECTION:tanking_teams
-NOTE — PLAY-IN PHASE ACTIVE: Tanking logic applies only to teams eliminated from play-in contention.
-All play-in bubble teams (seeds 7-10) are fully motivated — do NOT apply tanking penalties to them.
-See playoff_context.md no_tanking section for play-in rules.
+NOTE — PLAYOFF PHASE ACTIVE: See playoff_context.md no_tanking section. Tanking logic does NOT apply to any remaining play-in or playoff team. All remaining teams are motivated. Only apply tank logic to fully eliminated non-playoff teams.
 
-Confirmed tanking-tier teams (eliminated from play-in, no motivation to win):
-- Washington Wizards: bottom of standings; Trae Young, Anthony Davis, D'Angelo Russell, Alex Sarr all OUT — clearest tank in league. Do not bet Washington to win.
-- Sacramento Kings: bottom West; worst record in West; NetRtg worst in league.
-- Brooklyn Nets: bottom East; extreme negative NetRtg.
-- Utah Jazz: confirmed tank.
-- Dallas Mavericks: confirmed tank.
-- Memphis Grizzlies: NetRtg negative; verify pick ownership before bets.
-- Milwaukee Bucks: verify pick ownership before each bet.
-- Golden State Warriors (37-45, L10: 3-7, streak: L3): NetRtg -0.4; eliminated from play-in contention — CONFIRMED TANK-WATCH. Do not back without significant situational edge.
+Eliminated / no-motivation teams (not in play-in or playoffs):
+- Washington Wizards: fully eliminated; Trae Young, Anthony Davis, D'Angelo Russell, Alex Sarr all OUT — clearest tank in league. Do not bet Washington to win.
+- Sacramento Kings: eliminated from playoff/play-in contention.
+- Brooklyn Nets: eliminated from playoff/play-in contention.
+- Utah Jazz: eliminated from playoff/play-in contention.
+- Dallas Mavericks: eliminated from playoff/play-in contention.
+- Memphis Grizzlies: eliminated from playoff/play-in contention.
+- Milwaukee Bucks: verify pick ownership before each bet; eliminated from play-in contention.
+- Golden State Warriors (37-45, L3): NetRtg -0.4 — SEE playoff_context.md; verified 9-seed in West play-in. Under play-in phase, treat as motivated (win-or-go-home). Do NOT apply tank logic. After elimination, revert to fade candidate.
 
-Tanking criteria (ALL THREE must be met):
-(a) Team owns its own 2026 draft pick
-(b) Bad record confirmed by both W-L AND L10
-(c) No realistic path to playoffs or play-in
+When betting AGAINST eliminated teams: edge-positive.
+When betting ON eliminated teams: require odds ≥ 2.20 and strong situational reason.
 
-When betting AGAINST tanking teams: edge-positive.
-When betting ON tanking teams: require odds ≥ 2.20 and strong situational reason.
-
-Play-in and seeding-contention teams (updated 2026-04-22 — NOT tanking):
-- OKC Thunder: 64-18, L10: 7-3, streak: L2 — top seed locked; star rest risk MAXIMUM.
-- San Antonio Spurs: 62-20, L10: 8-2, streak: L1 — #2 seed locked; Victor Wembanyama in OUT feed; rest risk elevated.
-- Detroit Pistons: 60-22, L10: 8-2, streak: W3 — NetRtg +8.2; elite form.
-- Boston Celtics: 56-26, L10: 8-2, streak: W2 — NetRtg +8.2; Jayson Tatum OUT [roster-only]; Jaylen Brown status requires verification.
-- Denver Nuggets: 54-28, L10: 10-0, streak: W12 — HOT STREAK; NetRtg +5.2; Jokic/Murray status requires verification.
-- New York Knicks: 53-29, L10: 6-4, streak: L1 — franchise core status changed from previous session; re-verify.
-- Los Angeles Lakers: 53-29, L10: 7-3, streak: W3 — Luka Doncic + Reaves OUT [roster-only]; record inflated.
-- Cleveland Cavaliers: 52-30, L10: 7-3, streak: W1 — previously entire core OUT; status changed — re-verify.
-- Houston Rockets: 52-30, L10: 9-1, streak: W1 — Durant OUT [roster-only]; Sengun status changed — re-verify.
-- Minnesota Timberwolves: 49-33, L10: 5-5, streak: W2 — Edwards OUT; Gobert/Conley/Randle status changed — re-verify.
-- Atlanta Hawks: 46-36, L10: 6-4, streak: L1 — play-in secured; Trae Young requires verification (data conflict).
-- Toronto Raptors: 46-36, L10: 6-4, streak: W1 — NetRtg +2.6; play-in race.
-- Philadelphia 76ers: 45-37, L10: 6-4, streak: W2 — NetRtg -0.2; volatile; cautious.
-- Orlando Magic: 45-37, L10: 7-3, streak: L1 — NetRtg +0.6; play-in motivated.
-- Phoenix Suns: 45-37, L10: 5-5, streak: W1 — NetRtg +1.4; neutral.
-- Charlotte Hornets: 44-38, L10: 6-4, streak: W1 — NetRtg +5.0; play-in bubble.
-- Miami Heat: 43-39, L10: 5-5, streak: W2 — NetRtg +2.2; play-in bubble.
-- Portland Trail Blazers: 42-40, L10: 7-3, streak: W2 — play-in bubble; motivation-positive.
-- LA Clippers: 42-40, L10: 6-4, streak: W1 — NetRtg +1.1; play-in bubble.
-
-HOT STREAK FLAGS:
-- Denver Nuggets (W12, L10: 10-0): NetRtg +5.2; Jokic presence verification required before any directional bet.
-- Los Angeles Lakers (W3): record disguises critically depleted roster — Doncic + Reaves OUT [roster-only].
-
-EMERGING FADE CANDIDATES:
-- Golden State Warriors (37-45, L3): NetRtg negative; confirmed tank-watch — eliminated from play-in.
-- Orlando Magic (streak: L1): motivation positive but recent form dipping; neutral-cautious.
-- Atlanta Hawks (streak: L1): verify Trae Young before any ATL pick (data conflict with WAS feed).
+Play-in and playoff teams (NOT tanking — all fully motivated):
+- See playoff_context.md series_context for current bracket and seeding.
+- Do NOT apply tanking penalties to any team listed in play-in participants or playoff bracket.
 
 ## SECTION:b2b_rules
 B2B and rest day rules — apply numeric confidence adjustments:
