@@ -26,7 +26,7 @@
           "wins": 11,
           "losses": 5,
           "peak_bankroll": 1917.57,
-          "total_bets": 16
+          "total_bets": 18
         }
       ]
     }
@@ -1250,6 +1250,61 @@
         }
       ],
       "summary": "Day 2026-04-18 commit — 3 bets totalling €780.95. 0 cancelled. Bankroll: €1697.70 → €916.75."
+    },
+    {
+      "entry_id": "nba_entry_20260419",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-04-19T16:17:47.892103+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1917.57,
+      "total_staked": 671.15,
+      "bankroll_after": 1246.42,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260419_001",
+          "match": "Detroit Pistons vs Orlando Magic",
+          "time": "2026-04-19T22:30:00Z",
+          "pick": "Detroit Pistons -8.5",
+          "odds": 1.89,
+          "stake": 383.51,
+          "potential_return": 724.83,
+          "confidence": 72,
+          "reasoning": "CONFIRMED from draft. Line moved favorably: Scout had DET -8.5 at 1.89; current market is DET -9.0 at 1.94/1.88, indicating books pushed spread further in DET's direction — bullish signal for DET dominance. Our -8.5 position is now more favorable than the current line. Anchor players verified: Cade Cunningham, Jalen Duren, Isaiah Stewart NOT in NBA official injury report (active). Paolo Banchero NOT in injury report (active). Jonathan Isaac (ORL) listed Questionable (knee sprain) — not a franchise player, not core to our thesis; edge exists independent of Isaac. Thesis unchanged: DET #1 East seed (60-22, L15 NetRtg +30.3) vs ORL (45-37, L15 NetRtg +0.7) — a massive 29.6pt L15 gap. Season NetRtg gap +7.6. DET DefRtg 109.8 vs ORL OffRtg 115.1 = DET limits ORL efficiently. Home court playoff boost +3pts. -8.5 well supported by advanced stats. EV = (0.72 × 1.89) - 1 = 0.3608 (36.1%). Stake: 20% bankroll (High tier, confidence 72). Odds 1.89 within valid range (1.75-2.30 floor at commit).",
+          "anchor_players": [
+            "Cade Cunningham",
+            "Jalen Duren",
+            "Isaiah Stewart",
+            "Paolo Banchero"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null
+        },
+        {
+          "id": "nba_bet_20260419_002",
+          "match": "San Antonio Spurs vs Portland Trail Blazers",
+          "time": "2026-04-20T01:00:00Z",
+          "pick": "San Antonio Spurs -10.5",
+          "odds": 1.9,
+          "stake": 287.64,
+          "potential_return": 546.52,
+          "confidence": 68,
+          "reasoning": "CONFIRMED from draft with confidence restored. Odds improved marginally: Scout 1.89, commit 1.90 (+0.01 favorable). WEMBANYAMA RE-VERIFY: NBA official PDF (6 teams listed) does NOT include Wembanyama in SAS absence feed — active confirmed. Scout applied -5 confidence penalty for Wembanyama uncertainty; that uncertainty is now resolved. Confidence restored from 63 back to 68. LILLARD CONFIRMED OUT: POR's franchise player listed OUT (Injury Management) in NBA official report — removes POR's primary offensive engine and validates our spread thesis. Jordan McLaughlin (SAS) OUT (ankle) — not a franchise player, minor impact. Devin Vassell NOT in injury report (active). Thesis strengthened: SAS (62-20, L15 NetRtg +38.8 — highest of any team tonight) vs POR (42-40, L15 NetRtg +28.5) = 10.3pt L15 gap. Season NetRtg gap +8.5. SAS DefRtg 111.4 vs POR OffRtg 114.5 (which will be materially worse without Lillard). Home court playoff boost +3pts. -10.5 at home vs Lillard-less POR is well-supported. EV = (0.68 × 1.90) - 1 = 0.292 (29.2%). Stake: 15% bankroll (Medium tier, confidence 68). Odds 1.90 within valid range (1.75-2.30 floor at commit).",
+          "anchor_players": [
+            "Victor Wembanyama",
+            "Devin Vassell",
+            "Damian Lillard"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null
+        }
+      ],
+      "summary": "Day 2026-04-19 commit — 2 bets totalling €671.15. 0 cancelled. Bankroll: €1917.57 → €1246.42."
     }
   ]
 }
