@@ -23,8 +23,8 @@
           "game": 2,
           "started_at": "2026-04-05T10:44:07.102344+00:00",
           "bankroll_start": 1000.0,
-          "wins": 11,
-          "losses": 5,
+          "wins": 12,
+          "losses": 6,
           "peak_bankroll": 1917.57,
           "total_bets": 18
         }
@@ -1278,10 +1278,10 @@
             "Isaiah Stewart",
             "Paolo Banchero"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -383.51,
+          "settled_at": "2026-04-20T11:19:29.543907+00:00"
         },
         {
           "id": "nba_bet_20260419_002",
@@ -1298,10 +1298,10 @@
             "Devin Vassell",
             "Damian Lillard"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null
+          "result": "WON",
+          "returned": 546.52,
+          "pnl": 258.88,
+          "settled_at": "2026-04-20T11:19:29.543907+00:00"
         }
       ],
       "summary": "Day 2026-04-19 commit — 2 bets totalling €671.15. 0 cancelled. Bankroll: €1917.57 → €1246.42."
