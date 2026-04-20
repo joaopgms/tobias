@@ -1,7 +1,7 @@
 ---
-version: 36
-updated_at: 2026-04-19T11:33:48.855773+00:00
-updated_by: analyst_2026-04-19
+version: 37
+updated_at: 2026-04-20T12:02:13.352242+00:00
+updated_by: analyst_2026-04-20
 llm: claude-sonnet-4-6
 ---
 
@@ -91,11 +91,11 @@ A Questionable player has ~50% chance of playing — never build a bet thesis on
 Franchise player Day-To-Day → confidence -5, stake -10%.
 If BOTH teams have franchise player uncertainty → evaluate net impact.
 
-NOTE — PLAY-IN / PLAYOFF PHASE: All remaining teams are fully motivated. Star rest risk still applies for top seeds (OKC, SAS) who have seeding locked but are now in active playoff brackets. Roster-only flags MUST be re-verified against NBA official PDF each session before any pick.
+NOTE — PLAY-IN / PLAYOFF PHASE: All remaining teams are fully motivated. Roster-only flags MUST be re-verified against NBA official PDF each session before any pick.
 
 Oklahoma City Thunder:
 - Thomas Sorber (C): OUT [roster-only]
-NOTE: Shai Gilgeous-Alexander, Jalen Williams, Chet Holmgren NOT in current verified absence feed — re-verify before any OKC pick. Previous session had all three in roster-only OUT — status may have changed. Top seed at 64-18; verify rest/rotation plans.
+NOTE: Shai Gilgeous-Alexander, Jalen Williams, Chet Holmgren NOT in current verified absence feed — re-verify before any OKC pick. Previously in roster-only OUT — status may have changed. Top seed at 64-18.
 
 San Antonio Spurs:
 - David Jones Garcia (F): OUT [roster-only]
@@ -106,7 +106,7 @@ Detroit Pistons:
 NOTE: No players in current verified absence feed. Re-verify Cade Cunningham, Isaiah Stewart, Jalen Duren before any DET pick.
 
 Boston Celtics:
-NOTE: No players in current verified absence feed. Jayson Tatum previously in roster-only OUT — status may have changed significantly. Re-verify Jayson Tatum and Jaylen Brown before any BOS pick.
+NOTE: No players in current verified absence feed. Jayson Tatum previously in roster-only OUT — status may have changed. Re-verify Jayson Tatum and Jaylen Brown before any BOS pick.
 
 New York Knicks:
 NOTE: No players in current verified absence feed. Jalen Brunson, Karl-Anthony Towns require re-verification before any NYK pick.
@@ -138,7 +138,7 @@ NOTE: Trae Young NOT in current verified absence feed for ATL — DATA CONFLICT:
 
 Toronto Raptors:
 - Chucky Hepburn (G): OUT [roster-only]
-NOTE: Immanuel Quickley NOT in current verified absence feed — re-verify before any TOR pick.
+- Immanuel Quickley (G): OUT [roster-only]
 
 Washington Wizards:
 - Bilal Coulibaly (G): OUT [roster-only + injury landscape confirmed]
