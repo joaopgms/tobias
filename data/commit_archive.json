@@ -636,5 +636,42 @@
     "tokens_in": 10164,
     "tokens_out": 6203,
     "cost_usd": 0.123537
+  },
+  {
+    "ts": "2026-04-20T22:34:03.850609+00:00",
+    "date": "2026-04-20",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 0,
+    "cancelled_count": 2,
+    "total_staked": 0.0,
+    "bankroll_before": 1792.94,
+    "bankroll_after": 1792.94,
+    "bets": [],
+    "cancelled": [
+      {
+        "id": "nba_draft_20260420_001",
+        "match": "Cleveland Cavaliers vs Toronto Raptors",
+        "pick": "Cleveland Cavaliers -8.5",
+        "reason": "Spread moved adversely from -8.5 to -9.5 at commit time (1 full point against). Odds also moved against (1.91 → 1.88). Per line_movement_rules, movement against requires confidence -10 re-evaluation. New confidence: 62 - 10 = 52. EV recalculated at new terms: (0.52 × 1.88) - 1 = -0.022. EV = -2.2%, below the required 0.05 floor. Cancelled per cancel_criteria: EV recalculated at current odds falls below 0.05."
+      },
+      {
+        "id": "nba_draft_20260420_002",
+        "match": "New York Knicks vs Atlanta Hawks",
+        "pick": "New York Knicks -6.0",
+        "reason": "Spread moved adversely from -6.0 to -6.5 at commit time (0.5 points against). Although odds improved slightly (1.88 → 1.93), the spread movement is adverse. Per line_movement_rules, movement against requires confidence -10 re-evaluation. Scout confidence was already adjusted to 60. New confidence: 60 - 10 = 50. EV recalculated at new terms: (0.50 × 1.93) - 1 = -0.035. EV = -3.5%, below the required 0.05 floor. Cancelled per cancel_criteria: EV recalculated at current odds falls below 0.05."
+      }
+    ],
+    "late_rejections": [
+      {
+        "match": "Denver Nuggets vs Minnesota Timberwolves",
+        "reason": "Evaluated DEN -7.5 @ 1.90 as potential late pick. DEN's L15 NetRtg gap of 33.7 pts over MIN is the largest in the dataset, and their W12 streak supports the edge. However, Anthony Edwards remains listed as Questionable (Maintenance) per NBA official PDF — not confirmed OUT. Per franchise_player_rules and late_scout_triggers rules, Questionable status requires confidence -10 on a player of his level. Starting base of 72 (massive L15 gap, home, W12), minus 10 (Edwards Questionable), minus 3 (Peyton Watson OUT), minus 5 (spread moved 0.5 pts against from Scout's -7.0 to current -7.5), plus 3 (DEN playoff home advantage W12) = 57. Confidence 57 fails the late_scout_triggers confidence gate of ≥ 60 required for new Commit-phase additions. EV at 57 confidence: (0.57 × 1.90) - 1 = 0.083 (8.3%) — EV passes, but confidence gate does not. Cannot confirm."
+      }
+    ],
+    "report": "## COMMIT REPORT — 2026-04-20 | Bankroll: €1,792.94\n\n---\n\n### CANCELLED — Cleveland Cavaliers -8.5\n\n- **Match:** Cleveland Cavaliers vs Toronto Raptors | Tip: 2026-04-20T23:00Z\n- **Pick:** Cleveland Cavaliers -8.5 | Scout odds: 1.91 | Commit odds: 1.88 | Move: -0.03 (odds) + spread moved 1.0 pt against (-8.5 → -9.5)\n- **ML:** 1.21 / 4.60 | **ATS:** -9.5 (1.88/1.94) | **O/U:** N/A\n- **Scout Stake:** €269.00 | **Scout Conf:** 62/100 | **Scout EV:** 18.4%\n- **Commit Re-eval:** Confidence 62 − 10 (adverse movement) = 52 | EV = (0.52 × 1.88) − 1 = **−0.022**\n- **Reason:** The spread moved a full point against (−8.5 → −9.5), making this materially harder to cover. Odds also worsened slightly (1.91 → 1.88). Per line_movement_rules, adverse movement mandates confidence −10. Resulting confidence 52 produces EV of −2.2%, well below the 0.05 minimum. Note: Immanuel Quickley officially confirmed OUT (Strain) via NBA official PDF — consistent with Scout's assumption, providing no additional boost. CLE anchors (Mitchell/Allen/Mobley) confirmed available. The edge existed at −8.5 but cannot be confirmed at −9.5 with negative EV.\n\n---\n\n### CANCELLED — New York Knicks -6.0\n\n- **Match:** New York Knicks vs Atlanta Hawks | Tip: 2026-04-21T00:00Z\n- **Pick:** New York Knicks -6.0 | Scout odds: 1.88 | Commit odds: 1.93 | Move: +0.05 (odds improved) but spread moved 0.5 pts against (−6.0 → −6.5)\n- **ML:** 1.41 / 2.95 | **ATS:** -6.5 (1.93/1.89) | **O/U:** N/A\n- **Scout Stake:** €269.00 | **Scout Conf:** 60/100 | **Scout EV:** 12.8%\n- **Commit Re-eval:** Confidence 60 − 10 (adverse spread movement) = 50 | EV = (0.50 × 1.93) − 1 = **−0.035**\n- **Reason:** Although odds improved marginally (+0.05), the spread tightened by half a point (−6.0 → −6.5), which is adverse for this pick. Per line_movement_rules, movement against requires confidence −10. Scout confidence was already reduced to 60 (from Okongwu Questionable). Adjusted confidence 50 produces EV of −3.5%, below the 0.05 floor. Onyeka Okongwu remains Questionable (no status change). NYK anchors (Brunson/Towns) confirmed available per NBA official PDF. The underlying edge (NYK season NetRtg gap, home court, ATL anchor availability) remains valid directionally, but the hardened spread combined with rules-based confidence reduction makes this unconfirmable at current terms.\n\n---\n\n### LATE SCOUT — Denver Nuggets vs Minnesota Timberwolves (REJECTED)\n\n- **Evaluated:** DEN −7.5 @ 1.90\n- **Key signal:** DEN L15 NetRtg +30.1 vs MIN −3.6 (gap = 33.7 pts, largest in dataset); DEN W12 streak; home court; Jamal Murray available (not in injury report)\n- **Issue:** Anthony Edwards remains Questionable (Maintenance) per NBA official PDF — not confirmed OUT. Franchise player Questionable = mandatory confidence −10. Starting base 72, adjusted to 57 after full deductions. Confidence gate for new late picks requires ≥ 60. EV = 8.3% (passes), but confidence 57 fails the gate. Cannot add.\n- **Note:** If Edwards is scratched during warm-ups and books don't adjust fully, this line would have significant value. However, rules require confirmed OUT status to remove the Questionable penalty.\n\n---\n\n### SLATE SUMMARY\n\nTonight's slate produced zero confirmed bets due to adverse late line movements on both confirmed draft picks — the CLE spread moved a full point harder (−8.5 → −9.5) and the NYK spread moved half a point harder (−6.0 → −6.5), both producing negative EV after mandatory confidence adjustments. The DEN/MIN game has a genuine statistical edge (33.7 L15 NetRtg gap) but Edwards' Questionable status holds confidence below the 60-minimum required for new Commit-phase additions. Bankroll remains intact at €1,792.94 for the next session.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 10724,
+    "tokens_out": 5108,
+    "cost_usd": 0.108792
   }
 ]
