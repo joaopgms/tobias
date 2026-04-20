@@ -1305,6 +1305,32 @@
         }
       ],
       "summary": "Day 2026-04-19 commit — 2 bets totalling €671.15. 0 cancelled. Bankroll: €1917.57 → €1246.42."
+    },
+    {
+      "entry_id": "nba_entry_20260420",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-04-20T22:34:03.850609+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1792.94,
+      "total_staked": 0.0,
+      "bankroll_after": 1792.94,
+      "cancelled_picks": [
+        {
+          "id": "nba_draft_20260420_001",
+          "match": "Cleveland Cavaliers vs Toronto Raptors",
+          "pick": "Cleveland Cavaliers -8.5",
+          "reason": "Spread moved adversely from -8.5 to -9.5 at commit time (1 full point against). Odds also moved against (1.91 → 1.88). Per line_movement_rules, movement against requires confidence -10 re-evaluation. New confidence: 62 - 10 = 52. EV recalculated at new terms: (0.52 × 1.88) - 1 = -0.022. EV = -2.2%, below the required 0.05 floor. Cancelled per cancel_criteria: EV recalculated at current odds falls below 0.05."
+        },
+        {
+          "id": "nba_draft_20260420_002",
+          "match": "New York Knicks vs Atlanta Hawks",
+          "pick": "New York Knicks -6.0",
+          "reason": "Spread moved adversely from -6.0 to -6.5 at commit time (0.5 points against). Although odds improved slightly (1.88 → 1.93), the spread movement is adverse. Per line_movement_rules, movement against requires confidence -10 re-evaluation. Scout confidence was already adjusted to 60. New confidence: 60 - 10 = 50. EV recalculated at new terms: (0.50 × 1.93) - 1 = -0.035. EV = -3.5%, below the required 0.05 floor. Cancelled per cancel_criteria: EV recalculated at current odds falls below 0.05."
+        }
+      ],
+      "bets": [],
+      "summary": "Day 2026-04-20 commit — 0 bets totalling €0.00. 2 cancelled. Bankroll: €1792.94 → €1792.94."
     }
   ]
 }
