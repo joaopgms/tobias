@@ -1,7 +1,7 @@
 ---
-version: 9
-updated_at: 2026-04-20T12:02:13.352242+00:00
-updated_by: analyst_2026-04-20
+version: 10
+updated_at: 2026-04-21T11:58:21.887040+00:00
+updated_by: analyst_2026-04-21
 llm: claude-sonnet-4-6
 ---
 
@@ -13,7 +13,7 @@ All 8 play-in participants (seeds 7-10 in each conference) are in win-or-go-home
 See playin_rules section for motivation and elimination rules specific to this phase.
 
 ## SECTION:series_context
-PLAY-IN TOURNAMENT — Active (updated 2026-04-24)
+PLAY-IN TOURNAMENT — Active (updated 2026-04-25)
 
 Play-In participants based on final regular season standings (seeds 7-10 each conference):
 
@@ -40,8 +40,8 @@ Seeds 1-6 awaiting play-in completion (will enter first round playoffs):
 EAST seeds 1-6: #1 Detroit (60-22, NetRtg +8.2) | #2 Boston (56-26, NetRtg +8.2) | #3 New York Knicks (53-29, NetRtg +6.5) | #4 Cleveland (52-30, NetRtg +4.0) | #5 Toronto (46-36, NetRtg +2.6) | #6 Atlanta (46-36, NetRtg +2.4)
 WEST seeds 1-6: #1 OKC (64-18, NetRtg +11.1) | #2 San Antonio (62-20, NetRtg +8.3) | #3 LA Lakers (53-29, NetRtg +1.7) | #4 Houston (52-30, NetRtg +5.4) | #5 Minnesota (49-33, NetRtg +3.1) | #6 Denver (54-28, NetRtg +5.2)
 
-ROSTER STATUS UPDATES (2026-04-24 session):
-Critical change from previous session: Multiple players previously in roster-only OUT feed NO LONGER appear in current verified absence feed. Treat these as status-changed — NOT confirmed OUT:
+ROSTER STATUS UPDATES (2026-04-25 session):
+No new changes to verified absence feed from prior session. All prior status flags remain:
 - OKC: Shai Gilgeous-Alexander, Jalen Williams, Chet Holmgren — MUST re-verify vs NBA official PDF
 - SAS: Victor Wembanyama — MUST re-verify vs NBA official PDF
 - BOS: Jayson Tatum — MUST re-verify vs NBA official PDF
@@ -50,14 +50,17 @@ Critical change from previous session: Multiple players previously in roster-onl
 - CLE: Donovan Mitchell, Jarrett Allen, Evan Mobley — re-verify
 - DEN: Jamal Murray, Aaron Gordon — re-verify
 - HOU: Alperen Sengun — re-verify
-NEW (2026-04-24): Immanuel Quickley (TOR) confirmed in roster-only OUT feed this session.
+- TOR: Immanuel Quickley (G) — confirmed OUT [roster-only]
+- LAL: Luka Doncic (G) OUT, Austin Reaves (G) OUT — depth critically thin
+- HOU: Kevin Durant (F) OUT, Fred VanVleet (G) OUT, Steven Adams (C) OUT
+- WAS: Anthony Davis, D'Angelo Russell, Alex Sarr, Trae Young all OUT — team fully eliminated
 
 DATA INTEGRITY FLAG: Trae Young appears in both ATL and WAS verified absence feeds. This is a data conflict. Do NOT assume availability for ATL or assign absence to WAS without NBA official PDF confirmation.
 
 DENVER SEEDING ANOMALY: Denver (54-28, W12, NetRtg +5.2) ranked as #6 West seed — re-verify against official NBA bracket. W12 streak is the longest active streak in the league.
 
 ## SECTION:elimination_flags
-PLAY-IN ELIMINATION FLAGS (updated 2026-04-24):
+PLAY-IN ELIMINATION FLAGS (updated 2026-04-25):
 
 All play-in games are effectively win-or-go-home for certain seeds:
 - 9-seed (both conferences): Game 1 loss = eliminated. Maximum desperation.
@@ -74,10 +77,8 @@ HIGH-RISK / FADE FLAGS:
 - Philadelphia 76ers (#7, NetRtg -0.2): Volatile; worst NetRtg of any 7-seed in the field. Charlotte Hornets (NetRtg +5.0) may be statistically superior despite being seeded lower.
 - Charlotte Hornets (#8, NetRtg +5.0): Strongest statistical case of all play-in teams. If priced as underdog vs PHI, regression-fade rule and NetRtg gap may support Charlotte.
 
-ROSTER UNCERTAINTY FACTOR (2026-04-24):
-Multiple top-6 seeds previously had widespread roster-only OUT flags. Current session shows significant status changes — many franchise players no longer confirmed absent. Seeds 1-6 may be fielding stronger rosters than assumed last session. This INCREASES difficulty for play-in teams in potential first-round matchups and changes relative strength assessments. Re-verify all top-seed rosters via NBA official PDF before any directional pick.
-
-Note: No first-round playoff series data yet — play-in results pending.
+ROSTER UNCERTAINTY FACTOR (2026-04-25):
+Multiple top-6 seeds previously had widespread roster-only OUT flags. Current session shows no new changes — prior status-change flags remain active. Seeds 1-6 may be fielding stronger rosters than assumed last session. This INCREASES difficulty for play-in teams in potential first-round matchups. Re-verify all top-seed rosters via NBA official PDF before any directional pick.
 
 ## SECTION:playoff_rest
 PLAY-IN REST RULES:
@@ -135,7 +136,7 @@ How to use H2H in play-in and playoffs:
 - If H2H games were played with significantly different rosters (key player absent):
   flag and discount — those results don't reflect the current matchup.
 
-CRITICAL CAVEAT (2026-04-24): Multiple teams had franchise players in roster-only OUT feed for extended periods during the regular season. Many of those absences have now cleared in the current verified feed. Regular season H2H games played with depleted rosters (OKC without SGA, BOS without Tatum, MIN without Edwards, etc.) must be heavily discounted — verify roster state for each H2H game before applying the +8 adjustment.
+CRITICAL CAVEAT (2026-04-25): Multiple teams had franchise players in roster-only OUT feed for extended periods during the regular season. Many of those absences have now cleared in the current verified feed. Regular season H2H games played with depleted rosters (OKC without SGA, BOS without Tatum, MIN without Edwards, etc.) must be heavily discounted — verify roster state for each H2H game before applying the +8 adjustment.
 
 EAST play-in matchups H2H (to be populated when matchups officially confirmed):
 - PHI (#7) vs CHA (#8): [populate after official announcement — verify if H2H included key absences]
