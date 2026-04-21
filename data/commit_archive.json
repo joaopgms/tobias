@@ -673,5 +673,69 @@
     "tokens_in": 10724,
     "tokens_out": 5108,
     "cost_usd": 0.108792
+  },
+  {
+    "ts": "2026-04-21T23:03:39.381224+00:00",
+    "date": "2026-04-21",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 2,
+    "cancelled_count": 0,
+    "total_staked": 538.0,
+    "bankroll_before": 1792.94,
+    "bankroll_after": 1254.94,
+    "bets": [
+      {
+        "id": "nba_bet_20260421_001",
+        "match": "Boston Celtics vs Philadelphia 76ers",
+        "time": "2026-04-21T23:00:00Z",
+        "pick": "Boston Celtics -14.5",
+        "odds": 1.92,
+        "stake": 269.0,
+        "potential_return": 516.48,
+        "confidence": 67,
+        "reasoning": "CONFIRMED at Scout odds 1.92 (Scout drafted -14.5 at 1.92; current market shows -13.5 at 1.93). Line tightened 1 point against our spread but odds negligibly improved (+0.01). Movement against = spread 1pt tighter, which mildly reduces cover probability. Confidence adjusted: 72 base → 67 (–5 for minor adverse spread movement). EV = (0.67 × 1.92) – 1 = 0.2864 — well above 0.05 threshold. Anchor checks: Joel Embiid confirmed OUT (appendectomy, NBA official PDF) removes PHI's franchise player and primary scoring/defensive anchor. Jayson Tatum NOT listed in tonight's injury report (6 teams reporting, BOS listed) → confirmed available. BOS L15 NetRtg +36.6 vs PHI +2.9 (gap = 33.7) — elite edge. Season NetRtg BOS +8.2 vs PHI –0.2. BOS at home (TD Garden) with playoff HCA +3–4pts. PHI without Embiid operating at –5 to –8 effective NetRtg range. Spread 1.92 within valid range (1.75–2.30 floor/ceiling). Stake 15% of €1,792.94 = €268.94 → €269 (Medium-High tier, caution applied for large spread). Total committed after both picks = €538 = 30.0% of bankroll, within 70% limit.",
+        "anchor_players": [
+          "Joel Embiid (OUT - PHI, confirmed NBA official)",
+          "Jayson Tatum (BOS - confirmed available, not in injury report)"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null
+      },
+      {
+        "id": "nba_bet_20260421_002",
+        "match": "San Antonio Spurs vs Portland Trail Blazers",
+        "time": "2026-04-22T00:00:00Z",
+        "pick": "San Antonio Spurs -11.0",
+        "odds": 1.91,
+        "stake": 269.0,
+        "potential_return": 513.79,
+        "confidence": 65,
+        "reasoning": "CONFIRMED at current odds 1.91, adjusted spread -11.0 (Scout drafted -11.5 at 1.92; current market shows -11.0 at 1.91). Spread tightened 0.5pts and odds dropped 0.01 — both minor adverse movements. Net effect: spread is actually EASIER to cover at -11.0 vs -11.5 (movement favors cover probability), but books signaled slight PHI-friendliness. Confidence adjusted: 70 base → 65 (–5 for minor adverse odds movement). EV = (0.65 × 1.91) – 1 = 0.2415 — well above 0.05 threshold. Anchor checks: Damian Lillard confirmed OUT (injury management, NBA official PDF) removes POR's franchise player and primary ball-handler/scorer. Victor Wembanyama NOT listed in tonight's injury report (6 teams reporting, SAS listed, only Jordan McLaughlin OUT with ankle sprain) → Wembanyama confirmed available. SAS L15 NetRtg +38.8 (highest of all teams tonight) vs POR +28.5 (gap = 10.3, above 4.0 signal threshold). Season NetRtg: SAS +8.3 vs POR –0.2 (gap = 8.5 — significant). SAS at Frost Bank Center with playoff HCA +3–4pts. POR without Lillard loses primary offensive creator; effective OffRtg drops to ~108–110 range vs SAS DefRtg 111.4 — severe disadvantage. SAS OffRtg 119.7 vs POR DefRtg 114.7 = +5.0 differential. Spread odds 1.91 within valid range (1.75–2.30). Stake 15% of €1,792.94 = €268.94 → €269 (Medium tier). Total committed = €538 = 30.0% of bankroll, within 70% cap.",
+        "anchor_players": [
+          "Damian Lillard (OUT - POR, confirmed NBA official)",
+          "Victor Wembanyama (SAS - confirmed available, not in injury report)",
+          "Jordan McLaughlin (OUT - SAS, ankle, bench player - no material impact)"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null
+      }
+    ],
+    "cancelled": [],
+    "late_rejections": [
+      {
+        "match": "Los Angeles Lakers vs Houston Rockets",
+        "reason": "Kevin Durant listed QUESTIONABLE (right knee contusion) at commit time. HOU thesis depends on their available roster quality — KD uncertainty triggers confidence –10 adjustment (per QUESTIONABLE/GTD rule for franchise-tier player on backed team). Base confidence 62 → adjusted 52 (Speculative tier). EV at confidence 52 with HOU –5.0 at 1.88: (0.52 × 1.88) – 1 = –0.022 — NEGATIVE EV, fails EV gate (must be ≥ 0.05). ML odds both out of valid range (LAL 2.75 > 2.50 ceiling; HOU 1.47 < 1.65 floor). Also: FVV OUT (ACL), Steven Adams OUT — HOU already thin without Durant. Not viable as LAL +5.0 either given Doncic OUT + Reaves OUT making LAL confidence too low. No valid pick for this game."
+      }
+    ],
+    "report": "### CONFIRMED — Boston Celtics -14.5\n\n- Match: Boston Celtics vs Philadelphia 76ers | Tip: 2026-04-21T23:00Z\n- Pick: BOS -14.5 | Scout odds: 1.92 | Commit odds: 1.92 | Move: Spread tightened 1pt (–14.5 → –13.5 available), odds +0.01 (negligible)\n- ML: 1.12 (BOS) / 6.40 (PHI) | ATS: –13.5 (1.93/1.90) current market | O/U: N/A\n- Stake: €269.00 | Pot: €516.48 | Conf: 67/100 | EV: 0.2864\n- Decision: Both anchor players confirmed (Embiid OUT, Tatum available). Line moved slightly against (1pt spread tighter) but odds essentially unchanged. EV remains extremely strong at 0.29. BOS L15 NetRtg gap (+33.7 vs PHI) is elite; PHI without franchise player at home for BOS is a decisive edge. Confirming at Scout odds with confidence adjusted –5 for minor adverse movement.\n\n---\n\n### CONFIRMED — San Antonio Spurs -11.0\n\n- Match: San Antonio Spurs vs Portland Trail Blazers | Tip: 2026-04-22T00:00Z\n- Pick: SAS -11.0 (improved from drafted -11.5) | Scout odds: 1.92 | Commit odds: 1.91 | Move: Spread improved 0.5pts (easier cover), odds –0.01\n- ML: 1.15 (SAS) / 5.60 (POR) | ATS: –11.0 (1.91/1.91) | O/U: N/A\n- Stake: €269.00 | Pot: €513.79 | Conf: 65/100 | EV: 0.2415\n- Decision: Both anchor players confirmed (Lillard OUT, Wembanyama available). Spread actually improved (–11.5 → –11.0, easier to cover); odds dropped only 0.01. EV strong at 0.24. SAS has highest L15 NetRtg of all teams tonight (+38.8); POR without Lillard severely depleted. Confirming at current odds with confidence adjusted –5 for minor adverse odds movement.\n\n---\n\n### LATE SCOUT — Los Angeles Lakers vs Houston Rockets — REJECTED\n\n- Decision: Kevin Durant listed QUESTIONABLE triggers confidence –10 on HOU pick. Adjusted confidence 52 produces negative EV (–0.022) at HOU –5.0 (1.88). ML options both out of valid range. No valid bet available for this game.\n\n---\n\n**Slate Summary:** Two picks confirmed totalling €538.00 (30.0% of €1,792.94 bankroll) — well within the 70% exposure cap. Both picks hinge on confirmed franchise-player absences (Embiid OUT for PHI, Lillard OUT for POR) against elite home teams with top-tier L15 NetRtg. The LAL vs HOU game could not be confirmed due to Kevin Durant's questionable status driving EV negative after the mandatory confidence adjustment. Both confirmed picks carry strong EV (0.29 and 0.24 respectively), with the BOS spread tightening 1pt and the SAS spread improving 0.5pts since Scout time.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 10119,
+    "tokens_out": 5121,
+    "cost_usd": 0.107172
   }
 ]
