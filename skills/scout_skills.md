@@ -1,7 +1,7 @@
 ---
-version: 38
-updated_at: 2026-04-21T11:58:21.887040+00:00
-updated_by: analyst_2026-04-21
+version: 39
+updated_at: 2026-04-22T11:58:26.545434+00:00
+updated_by: analyst_2026-04-22
 llm: claude-sonnet-4-6
 ---
 
@@ -91,25 +91,24 @@ A Questionable player has ~50% chance of playing — never build a bet thesis on
 Franchise player Day-To-Day → confidence -5, stake -10%.
 If BOTH teams have franchise player uncertainty → evaluate net impact.
 
-NOTE — PLAY-IN / PLAYOFF PHASE: All remaining teams are fully motivated. Roster-only flags MUST be re-verified against NBA official PDF each session before any pick.
+NOTE — PLAYOFF PHASE: All remaining teams are fully motivated. Roster-only flags MUST be re-verified against NBA official PDF each session before any pick.
 
 Oklahoma City Thunder:
 - Thomas Sorber (C): OUT [roster-only]
-NOTE: Shai Gilgeous-Alexander, Jalen Williams, Chet Holmgren NOT in current verified absence feed — re-verify before any OKC pick. Previously in roster-only OUT — status may have changed. Top seed at 64-18.
+NOTE: Shai Gilgeous-Alexander, Jalen Williams, Chet Holmgren NOT in current verified absence feed — re-verify before any OKC pick. Top seed at 64-18.
 
 San Antonio Spurs:
 - David Jones Garcia (F): OUT [roster-only]
-- Jordan McLaughlin (G): OUT [roster-only]
-NOTE: Victor Wembanyama NOT in current verified absence feed — re-verify before any SAS pick. Previously in OUT feed; status may have changed. #2 seed at 62-20.
+NOTE: Victor Wembanyama NOT in current verified absence feed — re-verify before any SAS pick. #2 seed at 62-20.
 
 Detroit Pistons:
 NOTE: No players in current verified absence feed. Re-verify Cade Cunningham, Isaiah Stewart, Jalen Duren before any DET pick.
 
 Boston Celtics:
-NOTE: No players in current verified absence feed. Jayson Tatum previously in roster-only OUT — status may have changed. Re-verify Jayson Tatum and Jaylen Brown before any BOS pick.
+NOTE: No players in current verified absence feed. Re-verify Jayson Tatum and Jaylen Brown before any BOS pick.
 
 New York Knicks:
-NOTE: No players in current verified absence feed. Jalen Brunson, Karl-Anthony Towns require re-verification before any NYK pick.
+NOTE: No players in current verified absence feed. Re-verify Jalen Brunson, Karl-Anthony Towns before any NYK pick.
 
 Denver Nuggets:
 - Peyton Watson (G): OUT [roster-only]
@@ -121,13 +120,12 @@ Los Angeles Lakers:
 
 Houston Rockets:
 - Steven Adams (C): OUT [roster-only]
-- Kevin Durant (F): OUT [roster-only] — FRANCHISE PLAYER
 - Fred VanVleet (G): OUT [roster-only]
-NOTE: Alperen Sengun NOT in current verified absence feed — re-verify before any HOU pick. Durant remains in roster-only OUT feed. Do NOT draft HOU ML without NBA official PDF verification.
+NOTE: Kevin Durant NOT in current verified absence feed for HOU this session — DATA FLAG: Durant was previously roster-only OUT; re-verify vs NBA official PDF before any HOU pick. Alperen Sengun also requires re-verification.
 
 Cleveland Cavaliers:
 - Thomas Bryant (C): OUT [roster-only]
-NOTE: Donovan Mitchell, Jarrett Allen, Evan Mobley NOT in current verified absence feed — re-verify before any CLE pick. Previously entire core was absent; status changed significantly.
+NOTE: Donovan Mitchell, Jarrett Allen, Evan Mobley NOT in current verified absence feed — re-verify before any CLE pick.
 
 Minnesota Timberwolves:
 NOTE: No players in current verified absence feed. Anthony Edwards previously OUT [roster-only] — status may have changed. Re-verify Edwards, Rudy Gobert, Mike Conley, Julius Randle before any MIN pick.
@@ -153,10 +151,10 @@ Washington Wizards:
 NOTE: Washington eliminated. Do NOT bet Washington to win under any circumstances.
 
 Franchise players requiring mandatory NBA official PDF verification before ANY pick involving their team:
-- Shai Gilgeous-Alexander, Jalen Williams, Chet Holmgren (OKC) — previously roster-only OUT; re-verify status this session
-- Victor Wembanyama (SAS) — previously in OUT feed; re-verify status this session
-- Jayson Tatum (BOS) — previously roster-only OUT; re-verify status this session
-- Kevin Durant (HOU) — roster-only OUT; Sengun status changed — re-verify
+- Shai Gilgeous-Alexander, Jalen Williams, Chet Holmgren (OKC) — re-verify each session
+- Victor Wembanyama (SAS) — re-verify each session
+- Jayson Tatum (BOS) — re-verify each session
+- Kevin Durant (HOU) — was roster-only OUT; NOT in current verified feed — re-verify status this session
 - Luka Doncic (LAL) — roster-only OUT; removes primary offensive engine
 - Anthony Davis, D'Angelo Russell, Alex Sarr (WAS) — confirmed OUT; team eliminated
 
