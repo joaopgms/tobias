@@ -839,5 +839,35 @@
     "tokens_in": 9887,
     "tokens_out": 3857,
     "cost_usd": 0.087516
+  },
+  {
+    "ts": "2026-04-22T15:19:18.225534+00:00",
+    "date": "2026-04-22",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_unibet",
+    "draft_count": 0,
+    "picks": [],
+    "rejected": [
+      {
+        "match": "Detroit Pistons vs Orlando Magic",
+        "reason": "DET ML 1.25 is far below the 1.60 minimum odds target. Spread odds 1.90/1.92 are within range, but DET -9.0 spread requires verification of ORL roster (Isaac Doubtful, no franchise player concern) and DET L15 +25.2 vs ORL L15 +2.9 is a massive 22.3pt gap. However, ML odds 1.25 signals extreme market confidence in DET — the spread at -9.0 is aggressive but plausible given NetRtg gap (+8.2 vs +0.6 = 7.6pt gap, above 6pt threshold). Confidence floor for spreads is 60. DET at home, rested, top seed in East (60-22), vs ORL (45-37, negative season trajectory). No DET franchise player concerns flagged (Cade Cunningham requires re-verify per skills — cannot confirm absence free). The spread edge is real statistically, but: (1) DET franchise players require NBA official PDF re-verify before any pick; (2) Isaac Doubtful for ORL reduces their best wing defender — actually HURTS the spread case (DET more likely to cover); (3) However the skills require re-verification of Cade Cunningham, Isaiah Stewart, Jalen Duren before any DET pick. Without confirmed NBA official PDF re-verification of DET franchise players, cannot commit spread pick at required confidence threshold. Drafting 0 picks — integrity gate enforced.",
+        "ml_home": 1.25,
+        "ml_away": 4.0,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Oklahoma City Thunder vs Phoenix Suns",
+        "reason": "LINE ANOMALY — OKC ML at 1.05 is extreme (implies 95.2% win probability). PHX ML at 10.0 is far outside all target ranges. Spread OKC -17.0 at 1.90/1.92 is within range, but the -17 line itself is historically anomalous for an NBA playoff game. OKC L15 +29.4 vs PHX L15 +9.7 is a 19.7pt gap — elite OKC dominance confirmed. PHX has Grayson Allen Questionable, Jordan Goodwin Questionable, Mark Williams Questionable (3 players with injury concerns). OKC only has Thomas Sorber Out (roster-only, minor). The -17.0 spread at 1.90 represents a genuine edge from pure statistics, but: (1) A 17-point playoff spread is extreme — NBA playoff games tighten, OKC SGA/Williams/Holmgren require mandatory NBA official PDF re-verify before any pick; (2) Without re-verification of OKC franchise players, cannot apply proper confidence adjustment; (3) PHX franchise player status (Kevin Durant was previously roster-only OUT — now NOT in current verified feed per HOU note, but PHX is the correct team here — this is a DIFFERENT Kevin Durant situation; PHX has Devin Booker as franchise player requiring implicit verification). The combination of anomalous line pricing (1.05/10.0), mandatory OKC franchise player re-verify requirement, and extreme spread number (-17) exceeds data quality gates. FLAG AS LINE ANOMALY for Commit investigation.",
+        "ml_home": 1.05,
+        "ml_away": 10.0,
+        "decision": "anomaly"
+      }
+    ],
+    "report": "Two-game playoff slate. Zero picks drafted due to data integrity gates and line anomalies. DET vs ORL: ML odds (1.25) out of range; spread edge statistically present (NetRtg gap +7.6, L15 gap +22.3) but DET franchise players (Cunningham, Stewart, Duren) require mandatory NBA official PDF re-verification before any pick can be committed. OKC vs PHX: flagged as LINE ANOMALY — 1.05/10.0 ML pricing and -17.0 playoff spread are both extreme; OKC franchise players (SGA, Williams, Holmgren) require re-verify. Both games deferred to Commit phase pending official roster confirmation. Injury feed source is NBA Official (full coverage), so data quality gates are met, but franchise player re-verify requirements per skills framework block commitment at Scout phase.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 9741,
+    "tokens_out": 1123,
+    "cost_usd": 0.046068
   }
 ]
