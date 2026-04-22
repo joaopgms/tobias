@@ -1,37 +1,38 @@
 ---
-date: 2026-04-21
+date: 2026-04-22
 llm: claude-sonnet-4-6
 scout_patches: 1
 commit_patches: 0
-milestone: daily (18 bets)
+milestone: daily (20 bets)
 ---
 
-## Today's Analysis — 2026-04-21
+## Today's Analysis — 2026-04-22
 
-Play-in matchups remain unconfirmed officially — Scout must not draft any play-in picks until the bracket is published. The most notable statistical edge in the field remains Charlotte Hornets (NetRtg +5.0) who are statistically the strongest play-in team despite being seeded 8th in the East; if priced as an underdog versus Philadelphia (NetRtg -0.2), this is a high-confidence regression-fade setup. Performance data shows High confidence bets are deeply underwater (4W/8L, -€739) while Medium confidence bets are the engine of profit (14W/8L, +€935) — no strategic rule changes are warranted without further evidence, but Scout should be aware of this tier inversion and avoid forcing High-tier confidence labels without overwhelming signal convergence.
+Performance data shows a stark confidence-tier inversion: High confidence bets (12 bets) are running at 33.3% WR and -€739.59, while Medium confidence (24 bets) are at 58.3% and +€397.60 — this is the most critical pattern in the dataset and suggests overconfidence calibration is miscalibrated rather than the underlying edge. The odds range 2.10-2.50 is 0W/3L (-€229.31), reinforcing that chasing longer prices has not worked; the sweet spot remains 1.90-2.09 (52% WR, +€215.95). On the playoff side, the LAL vs DEN first-round matchup (if confirmed) is the most structurally interesting series to watch: Denver on a W12 streak at +5.2 NetRtg faces a Lakers team without Doncic and Reaves, creating a potential extreme mismatch — verify rosters before any pick as LAL's situation could be resolved by the time series begins.
 
 ## Performance Stats
-ALL-TIME: 18W / 18L | Win rate: 50.0% | P&L: €+54.70 | Avg odds: 1.95 | Avg conf: 65.9/100
-RECENT 20: 12W / 8L | 60.0% WR | P&L: €+682.94
-By market:      ML 15bets 7W/8L 46.7% €-275.39  |  SPREAD 18bets 10W/8L 55.6% €+353.36  |  TOTAL 3bets 1W/2L 33.3% €-23.27
-By confidence:  High 12bets 4W/8L 33.3% €-739.59  |  Medium 22bets 14W/8L 63.6% €+935.60  |  Speculative 2bets 0W/2L 0.0% €-141.31
-By odds range:  1.70-1.89 10bets 5W/5L 50.0% €-469.94  |  1.90-2.09 23bets 13W/10L 56.5% €+753.95  |  2.10-2.50 3bets 0W/3L 0.0% €-229.31
+ALL-TIME: 18W / 20L | Win rate: 47.4% | P&L: €-483.30 | Avg odds: 1.95 | Avg conf: 65.9/100
+RECENT 20: 12W / 8L | 60.0% WR | P&L: €+254.94
+By market:      ML 15bets 7W/8L 46.7% €-275.39  |  SPREAD 20bets 10W/10L 50.0% €-184.64  |  TOTAL 3bets 1W/2L 33.3% €-23.27
+By confidence:  High 12bets 4W/8L 33.3% €-739.59  |  Medium 24bets 14W/10L 58.3% €+397.60  |  Speculative 2bets 0W/2L 0.0% €-141.31
+By odds range:  1.70-1.89 10bets 5W/5L 50.0% €-469.94  |  1.90-2.09 25bets 13W/12L 52.0% €+215.95  |  2.10-2.50 3bets 0W/3L 0.0% €-229.31
 
 
 
 ## Scout patches applied
-- [franchise_player_rules] Verified absence feed unchanged from prior session — all player statuses confirmed consistent with prior session data; no new additions or removals detected beyond what was already captured.
+- [franchise_player_rules] Updated HOU franchise player section to reflect Kevin Durant no longer appearing in the verified absence feed this session (data conflict flag added), and removed Jordan McLaughlin from SAS (not in verified list this session); all other entries preserved from verified feed.
 
 ## Commit patches applied
 None
 
 ## Playoff context patches applied
-- [series_context] Refreshing series_context timestamp and confirming no new play-in matchup announcements or roster changes have emerged in today's verified data feed.
-- [elimination_flags] No new elimination events have occurred — play-in bracket not yet officially confirmed; updating timestamp and retaining all prior flags with consistent data.
-- [h2h_playoff] Refreshing timestamp — no new H2H data available as official play-in matchups have not yet been announced; maintaining all prior caveats.
+- [series_context] Updated streak data from current standings, added Kevin Durant data-conflict flag, updated session date, and clarified LAL roster-thin status in seedings context.
+- [elimination_flags] Updated session date, added concrete NetRtg-based edge notes for each play-in matchup, clarified LAL roster risk vs DEN in first round, and maintained all existing elimination structure.
+- [h2h_playoff] Updated session date, added specific priority flag for LAL vs DEN first-round matchup given extreme roster asymmetry, maintained all structural H2H rules.
+- [playoff_rest] Updated session date and added OKC/SAS late-season streak note as potential load management signal; preserved all rest calculation rules.
 
 ## Intelligence gaps identified
-- **Official play-in matchup pairings and tip-off times have not been confirmed in the data feed, preventing any structured pre-game analysis for play-in games.** — Scout cannot safely draft any play-in picks without official matchup confirmation — incorrect pairing assumptions could produce picks on wrong team dynamics or wrong rest calculations. → Infrastructure fix needed: add an official NBA schedule API or confirmed bracket source to the daily data pull so play-in pairings are verified before Scout runs at 14:00 UTC.
-- **High confidence tier (conf 70-84) is producing 33.3% win rate and -€739.59 P&L across 12 bets, a severe underperformance versus the Medium tier (63.6%, +€935.60).** — This tier inversion suggests the signals being used to push picks into the High confidence bracket are not adding genuine edge — a selectivity rule or confidence ceiling could prevent overconfident picks in ambiguous matchups. → After 5 more High-tier settled bets, evaluate whether to add a High-tier qualifier: High confidence (70-84) requires NetRtg L15 gap ≥ 6 AND at least one secondary signal (B2B, DefRtg gap, franchise player absence). Without two converging signals, cap at Medium (55-69).
-- **Odds range 2.10-2.50 is producing 0W/3L (0.0%, -€229.31) — the upper end of the ML odds target range is systematically losing.** — Picks at 2.10-2.50 imply we are backing underdogs with ~40-48% implied probability, but we are winning 0% — suggesting our edge detection is failing at the top of the odds range, possibly because these are genuine underdogs we are over-crediting. → After 2-3 more settled bets in the 2.10-2.50 range, evaluate tightening ML ceiling to 2.10 or requiring NetRtg L15 gap ≥ 8 to justify backing any team priced above 2.10.
-- **Trae Young data conflict (appearing in both ATL and WAS verified absence feeds) has persisted across multiple sessions without resolution.** — If Trae Young is actually an Atlanta Hawk and active, any ATL pick could be incorrectly penalised; if he is genuinely injured/traded to WAS, ATL picks lack the key playmaker caveat. → Infrastructure fix: cross-reference NBA official transaction wire and official roster API to resolve team affiliation definitively. This is a data integrity issue that cannot be patched via rules.
+- **High confidence tier (70-84, 85-100) is producing 33.3% WR vs Medium tier at 58.3% — the confidence calibration model appears systematically overconfident at the top tier** — If high-confidence picks are losing at a 66.7% rate (-€739.59), the rules governing when to assign confidence ≥ 70 are producing incorrect signals, meaning staking rules are directing larger stakes toward worse-performing picks → After 5 more high-confidence settled bets (approaching 17 total), run a formal review of what signal types drove high confidence assignments on the 8 losses — if NetRtg L15, H2H, or franchise player flags were the primary drivers of high confidence in losing picks, tighten those confidence bonuses from +10 to +5
+- **Odds range 2.10-2.50 is 0W/3L (-€229.31) — the ceiling of the odds_targets range may be producing negative EV in practice despite passing the EV formula** — Three losses at the top of the odds range suggests either the EV calculation is accepting false edges at these prices (overestimating implied win probability) or the signal quality at these odds levels is insufficient → Consider tightening ML ceiling from 2.50 to 2.30 to match the spread ceiling, or adding a confidence floor of 60 for any ML pick priced 2.10-2.50 (same bar as spreads)
+- **Denver is ranked as #6 West seed (54-28) behind LA Lakers at #3 (53-29) — this seeding is arithmetically anomalous given Denver's superior record and W12 streak** — If the seeding is incorrect, first-round matchup assumptions (LAL vs DEN) could be wrong, leading Scout to evaluate the wrong matchup and apply incorrect home court, H2H, and series context → Infrastructure fix needed: pull official NBA bracket from NBA.com or ESPN bracket page to confirm West seeds 1-6; update series_context and h2h_playoff immediately upon confirmation
+- **Kevin Durant's absence status is contradicted between sessions — previously roster-only OUT, now absent from the verified absence feed — creating a data reliability issue for HOU picks** — If Durant is actually available, HOU becomes a significantly stronger pick candidate (52-30, +5.4 NetRtg, W1 streak); if he is still OUT but simply dropped from the feed, backing HOU is dangerous at reduced confidence → Infrastructure fix needed: cross-reference NBA official injury PDF specifically for HOU each session; add a 'feed-dropout flag' to data_quality_rules to catch players who disappear from the injury feed without a confirmed return-to-play note
