@@ -26,7 +26,7 @@
           "wins": 12,
           "losses": 8,
           "peak_bankroll": 1917.57,
-          "total_bets": 20
+          "total_bets": 21
         }
       ]
     }
@@ -1384,6 +1384,41 @@
         }
       ],
       "summary": "Day 2026-04-21 commit — 2 bets totalling €538.00. 0 cancelled. Bankroll: €1792.94 → €1254.94."
+    },
+    {
+      "entry_id": "nba_entry_20260422",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-04-22T22:19:43.345520+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1254.94,
+      "total_staked": 250.0,
+      "bankroll_after": 1004.94,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260422_001",
+          "match": "Detroit Pistons vs Orlando Magic",
+          "time": "2026-04-22T23:00:00Z",
+          "pick": "Detroit Pistons -8.5",
+          "odds": 1.87,
+          "stake": 250.0,
+          "potential_return": 467.5,
+          "reasoning": "Late scout pick. DET franchise players (Cade Cunningham, Isaiah Stewart, Jalen Duren) confirmed active via NBA official injury report omission. ORL's Jonathan Isaac confirmed OUT (Left Knee Sprain) — removes ORL's best wing defender and rim protector, making DET's offensive task easier and strengthening the spread case. NetRtg gap: +8.2 vs +0.6 = 7.6pt gap (above 6pt threshold). L15 gap: +25.2 vs +2.9 = 22.3pt gap (enormous). DET: 60-22 record, #1 East seed, home court in playoffs (worth +3-4pt), L10 8-2. Spread moved from -9.0 to -8.5 (half-point easier to cover). Odds 1.87 in valid range (floor 1.75). EV = (0.75 × 1.87) - 1 = +0.40. Confidence 75 (High tier): base 65 from NetRtg gap, +5 L15 dominance, +5 Isaac OUT helps DET offense. No anomaly concerns — heavy home favourite pricing is justified by record and NetRtg gap.",
+          "confidence": 75,
+          "anchor_players": [
+            "Cade Cunningham",
+            "Isaiah Stewart",
+            "Jalen Duren",
+            "Jonathan Isaac"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null
+        }
+      ],
+      "summary": "Day 2026-04-22 commit — 1 bets totalling €250.00. 0 cancelled. Bankroll: €1254.94 → €1004.94."
     }
   ]
 }
