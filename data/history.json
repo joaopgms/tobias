@@ -24,7 +24,7 @@
           "started_at": "2026-04-05T10:44:07.102344+00:00",
           "bankroll_start": 1000.0,
           "wins": 12,
-          "losses": 6,
+          "losses": 8,
           "peak_bankroll": 1917.57,
           "total_bets": 20
         }
@@ -1357,10 +1357,10 @@
             "Joel Embiid (OUT - PHI, confirmed NBA official)",
             "Jayson Tatum (BOS - confirmed available, not in injury report)"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -269.0,
+          "settled_at": "2026-04-22T11:07:03.556467+00:00"
         },
         {
           "id": "nba_bet_20260421_002",
@@ -1377,10 +1377,10 @@
             "Victor Wembanyama (SAS - confirmed available, not in injury report)",
             "Jordan McLaughlin (OUT - SAS, ankle, bench player - no material impact)"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -269.0,
+          "settled_at": "2026-04-22T11:07:03.556467+00:00"
         }
       ],
       "summary": "Day 2026-04-21 commit — 2 bets totalling €538.00. 0 cancelled. Bankroll: €1792.94 → €1254.94."
