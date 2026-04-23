@@ -23,7 +23,7 @@
           "game": 2,
           "started_at": "2026-04-05T10:44:07.102344+00:00",
           "bankroll_start": 1000.0,
-          "wins": 12,
+          "wins": 13,
           "losses": 8,
           "peak_bankroll": 1917.57,
           "total_bets": 21
@@ -1412,10 +1412,10 @@
             "Jalen Duren",
             "Jonathan Isaac"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null
+          "result": "WON",
+          "returned": 467.5,
+          "pnl": 217.5,
+          "settled_at": "2026-04-23T11:10:43.405328+00:00"
         }
       ],
       "summary": "Day 2026-04-22 commit — 1 bets totalling €250.00. 0 cancelled. Bankroll: €1254.94 → €1004.94."
