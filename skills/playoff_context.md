@@ -1,7 +1,7 @@
 ---
-version: 11
-updated_at: 2026-04-22T11:58:26.545434+00:00
-updated_by: analyst_2026-04-22
+version: 12
+updated_at: 2026-04-23T11:58:04.937939+00:00
+updated_by: analyst_2026-04-23
 llm: claude-sonnet-4-6
 ---
 
@@ -13,7 +13,7 @@ All 8 play-in participants (seeds 7-10 in each conference) are in win-or-go-home
 See playin_rules section for motivation and elimination rules specific to this phase.
 
 ## SECTION:series_context
-PLAY-IN TOURNAMENT — Active (updated 2026-04-28)
+PLAY-IN TOURNAMENT — Active (updated 2026-04-29)
 
 Play-In participants based on final regular season standings (seeds 7-10 each conference):
 
@@ -43,8 +43,9 @@ WEST seeds 1-6: #1 OKC (64-18, NetRtg +11.1, L2) | #2 San Antonio (62-20, NetRtg
 NOTE: OKC on L2 streak entering playoffs despite #1 seed and +11.1 NetRtg — monitor whether SGA, Williams, Holmgren re-verify as active. SAS also on L1.
 Denver W12 is the longest active streak in the league. #6 seed placement requires re-verification against official bracket — record (54-28) suggests potential seeding data anomaly vs LAL (53-29 at #3 seed).
 
-ROSTER STATUS UPDATES (2026-04-28 session):
+ROSTER STATUS UPDATES (2026-04-29 session):
 - Kevin Durant (HOU): NOT in current verified absence feed this session — was previously roster-only OUT. DATA FLAG: re-verify vs NBA official PDF before any HOU pick.
+- Immanuel Quickley (TOR): OUT [roster-only] — notable depth loss for Raptors (#5 East seed).
 - All other prior status flags remain active. See franchise_player_rules for full details.
 - WAS: Anthony Davis, D'Angelo Russell, Alex Sarr, Trae Young all OUT — team fully eliminated.
 
@@ -52,7 +53,7 @@ DATA INTEGRITY FLAG: Trae Young appears in both ATL and WAS verified absence fee
 DENVER SEEDING ANOMALY: Denver (54-28, W12) ranked as #6 West seed behind LAL (53-29) at #3 — re-verify against official NBA bracket before any series matchup assumption.
 
 ## SECTION:elimination_flags
-PLAY-IN ELIMINATION FLAGS (updated 2026-04-28):
+PLAY-IN ELIMINATION FLAGS (updated 2026-04-29):
 
 All play-in games are effectively win-or-go-home for certain seeds:
 - 9-seed (both conferences): Game 1 loss = eliminated. Maximum desperation.
@@ -69,13 +70,13 @@ HIGH-RISK / FADE FLAGS:
 - Philadelphia 76ers (#7, NetRtg -0.2): Volatile; worst NetRtg of any 7-seed. Charlotte Hornets (NetRtg +5.0) may be statistically superior despite lower seeding.
 - Charlotte Hornets (#8, NetRtg +5.0): Strongest statistical case of all play-in teams. If priced as underdog vs PHI, NetRtg gap +5.2 supports Charlotte as value pick. Apply regression-fade rule and check ML odds explicitly.
 
-STAT EDGE NOTES (2026-04-28):
+STAT EDGE NOTES (2026-04-29):
 - PHI vs CHA: Charlotte's NetRtg (+5.0) is 5.2 points better than PHI (-0.2). This is a meaningful gap (threshold ≥ 4.0). PHI is the higher seed but statistically weaker — line anomaly risk if PHI priced ≤ 1.65.
 - MIA vs POR: Miami (+2.2) vs Portland (-0.2) — 2.4pt gap, below threshold but directionally favours MIA. Home court is decisive here.
 - GSW vs [10-seed]: GSW at -0.4 NetRtg — fade-first approach. Verify 10-seed before any directional pick.
 - LAL entering playoffs with Doncic + Reaves both OUT: depth critically thin. Monitor vs DEN (W12, NetRtg +5.2) — first-round matchup could be extreme mismatch. Only back LAL if roster situation resolves via official PDF.
 
-ROSTER UNCERTAINTY FACTOR (2026-04-28):
+ROSTER UNCERTAINTY FACTOR (2026-04-29):
 OKC (L2) and SAS (L1) both enter as top seeds on losing streaks — verify whether key players (SGA, Holmgren, Williams, Wembanyama) are fully available via NBA official PDF. If franchise players confirm active, these losing streaks are likely load management / rest games and should not be over-weighted.
 
 ## SECTION:playoff_rest
@@ -133,7 +134,7 @@ How to use H2H in play-in and playoffs:
 - If H2H games were played with significantly different rosters (key player absent):
   flag and discount — those results don't reflect the current matchup.
 
-CRITICAL CAVEAT (2026-04-28): Multiple teams had franchise players in roster-only OUT feed for extended periods during the regular season. Regular season H2H games played with depleted rosters must be heavily discounted — verify roster state for each H2H game before applying the +8 adjustment. This is especially critical for OKC (SGA/Williams/Holmgren status), BOS (Tatum), MIN (Edwards), HOU (Durant), LAL (Doncic + Reaves).
+CRITICAL CAVEAT (2026-04-29): Multiple teams had franchise players in roster-only OUT feed for extended periods during the regular season. Regular season H2H games played with depleted rosters must be heavily discounted — verify roster state for each H2H game before applying the +8 adjustment. This is especially critical for OKC (SGA/Williams/Holmgren status), BOS (Tatum), MIN (Edwards), HOU (Durant), LAL (Doncic + Reaves).
 
 EAST play-in matchups H2H (to be populated when matchups officially confirmed):
 - PHI (#7) vs CHA (#8): [populate after official announcement — verify H2H roster context]
