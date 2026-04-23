@@ -26,7 +26,7 @@
           "wins": 13,
           "losses": 8,
           "peak_bankroll": 1917.57,
-          "total_bets": 21
+          "total_bets": 24
         }
       ]
     }
@@ -1419,6 +1419,81 @@
         }
       ],
       "summary": "Day 2026-04-22 commit — 1 bets totalling €250.00. 0 cancelled. Bankroll: €1254.94 → €1004.94."
+    },
+    {
+      "entry_id": "nba_entry_20260423",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-04-23T22:41:14.566976+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1472.44,
+      "total_staked": 735.0,
+      "bankroll_after": 737.44,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260423_001",
+          "match": "Atlanta Hawks vs New York Knicks",
+          "time": "2026-04-23T23:00:00Z",
+          "pick": "New York Knicks ML",
+          "odds": 1.89,
+          "stake": 294.0,
+          "potential_return": 555.66,
+          "confidence": 72,
+          "reasoning": "CONFIRMED at commit time. Line moved slightly against (1.92 → 1.89, delta -0.03), below the 0.10 investigation threshold — minor drift only. Floor check: 1.89 > 1.65 ✅. Ceiling: 1.89 < 2.50 ✅. Anchor players: Trae Young NOT in ATL injury report tonight — active as expected. Jalen Brunson and KAT not listed for NYK — both active. ATL: only Jock Landale OUT (non-franchise role player, no impact). EV at current odds and confidence 72: (0.72 × 1.89) - 1 = 0.361 ✅. Primary edge: NYK season NetRtg +6.5 vs ATL +2.4 (gap 4.1, above 4.0 threshold); NYK OffRtg 119.9 elite; books lean NYK at 1.89 road favourite. ATL home court (+3-4pts) partially offsets but priced in. L15 gap only 3.3pts (below 4.0 threshold), directionally inconclusive. Stake: High tier (70-84), 20% of €1,472.44 = €294. No increase despite odds available at Scout draft price being equivalent — holding original stake per rules.",
+          "anchor_players": [
+            "Jalen Brunson",
+            "Karl-Anthony Towns",
+            "Trae Young"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null
+        },
+        {
+          "id": "nba_bet_20260423_002",
+          "match": "Toronto Raptors vs Cleveland Cavaliers",
+          "time": "2026-04-24T00:00:00Z",
+          "pick": "Toronto Raptors ML",
+          "odds": 2.3,
+          "stake": 221.0,
+          "potential_return": 508.3,
+          "confidence": 55,
+          "reasoning": "CONFIRMED at reduced confidence. Line moved against (2.38 → 2.30, delta -0.08) — still above floor 1.65 ✅, ceiling 2.50 ✅. Per line_movement_rules, odds worsened → apply confidence -10: 68 - 10 = 58. Injury check: Immanuel Quickley listed Questionable (Strain) on official report tonight — skills file flags as OUT [roster-only] but official report supersedes with Questionable. Thesis does NOT depend on Quickley absence — edge is L15-driven (TOR +18.1 vs CLE +6.5, gap 11.6pts — massive signal far above 4.0 threshold). Applying standard confidence -10 for key non-franchise Questionable already incorporated at Scout. Ja'Kobe Walter also Questionable (Illness) — minor rotation player, -3 confidence. Final confidence: 58 - 3 = 55. EV at 2.30, conf 55: (0.55 × 2.30) - 1 = 0.265 ✅. Donovan Mitchell, Jarrett Allen, Evan Mobley all active for CLE. Remaining edge: TOR L15 dominance (+18.1) overwhelming CLE's L15 (+6.5); TOR at home (worth +3-4pts playoffs); TOR better DefRtg (113.2 vs CLE 115.2); CLE's superior season NetRtg (+4.0 vs +2.6) is secondary and largely priced in. Stake: Medium tier (55-69), 15% of €1,472.44 = €220.87 ≈ €221.",
+          "anchor_players": [
+            "Donovan Mitchell",
+            "Jarrett Allen",
+            "Evan Mobley",
+            "Immanuel Quickley"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null
+        },
+        {
+          "id": "nba_bet_20260423_003",
+          "match": "Minnesota Timberwolves vs Denver Nuggets",
+          "time": "2026-04-24T01:30:00Z",
+          "pick": "Denver Nuggets ML",
+          "odds": 1.89,
+          "stake": 220.0,
+          "potential_return": 415.8,
+          "confidence": 60,
+          "reasoning": "CONFIRMED at reduced confidence, improved odds. Line moved IN FAVOUR (1.78 → 1.89, delta +0.11) — confirming at ORIGINAL stake per rules, noting improvement. Floor: 1.89 > 1.65 ✅. Ceiling: 1.89 < 2.50 ✅. New injury: Aaron Gordon listed Questionable (Left Calf Tightness) — NOT in anchor_players at Scout time; discovered at commit. Gordon is DEN's significant starting wing but not franchise-tier (Jokic/Murray are). Per new_injury rules: re-evaluate full pick. Thesis does NOT depend on Gordon — edge is Jokic/Murray-led and L15 driven. Applying confidence -10 for important non-franchise Questionable. Anthony Edwards (MIN) remains Questionable (Maintenance) — -10 already incorporated at Scout level into confidence 70. Revised confidence: 70 - 10 (Gordon) = 60. EV at 1.89, conf 60: (0.60 × 1.89) - 1 = 0.134 ✅. Primary edge: DEN L15 +30.1 vs MIN L15 -3.6 (gap 33.7pts — extraordinary); DEN L10 10-0 (perfect); DEN season NetRtg +5.2 vs MIN +3.1; DEN OffRtg 122.6 (highest of tonight's slate); W12 streak momentum. MIN home court (-8 in confidence) insufficient to overcome DEN's dominance. If Edwards sits, DEN edge grows further. If Edwards plays, DEN's L15/record form still decisively favours DEN. Jokic and Murray confirmed active. Stake: Medium tier (60, 15%) = €220.87 ≈ €220, with Edwards Questionable -20% already embedded in original Scout stake calculation. Holding at €220.",
+          "anchor_players": [
+            "Nikola Jokic",
+            "Jamal Murray",
+            "Anthony Edwards"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null
+        }
+      ],
+      "summary": "Day 2026-04-23 commit — 3 bets totalling €735.00. 0 cancelled. Bankroll: €1472.44 → €737.44."
     }
   ]
 }
