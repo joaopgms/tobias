@@ -1,7 +1,7 @@
 ---
-version: 40
-updated_at: 2026-04-23T11:58:04.937939+00:00
-updated_by: analyst_2026-04-23
+version: 41
+updated_at: 2026-04-24T11:55:31.239998+00:00
+updated_by: analyst_2026-04-24
 llm: claude-sonnet-4-6
 ---
 
@@ -95,10 +95,11 @@ NOTE — PLAYOFF PHASE: All remaining teams are fully motivated. Roster-only fla
 
 Oklahoma City Thunder:
 - Thomas Sorber (C): OUT [roster-only]
-NOTE: Shai Gilgeous-Alexander, Jalen Williams, Chet Holmgren NOT in current verified absence feed — re-verify before any OKC pick. Top seed at 64-18.
+NOTE: Shai Gilgeous-Alexander, Jalen Williams, Chet Holmgren NOT in current verified absence feed — re-verify before any OKC pick. Jalen Williams also appears as OUT [roster-only] this session — treat as OUT until re-verified. Top seed at 64-18.
 
 San Antonio Spurs:
 - David Jones Garcia (F): OUT [roster-only]
+- Jordan McLaughlin (G): OUT [roster-only]
 NOTE: Victor Wembanyama NOT in current verified absence feed — re-verify before any SAS pick. #2 seed at 62-20.
 
 Detroit Pistons:
@@ -112,7 +113,7 @@ NOTE: No players in current verified absence feed. Re-verify Jalen Brunson, Karl
 
 Denver Nuggets:
 - Peyton Watson (G): OUT [roster-only]
-NOTE: Nikola Jokic and Jamal Murray NOT in current verified absence feed — re-verify before any DEN pick. Denver on W12 streak; #6 seed in West bracket.
+NOTE: Nikola Jokic and Jamal Murray NOT in current verified absence feed — re-verify before any DEN pick. Denver on W12 streak; verify seeding in official bracket.
 
 Los Angeles Lakers:
 - Luka Doncic (G): OUT [roster-only] — FRANCHISE PLAYER. Do NOT bet LAL ML without re-verification.
@@ -124,13 +125,13 @@ Houston Rockets:
 NOTE: Kevin Durant NOT in current verified absence feed for HOU this session — DATA FLAG: Durant was previously roster-only OUT; re-verify vs NBA official PDF before any HOU pick. Alperen Sengun also requires re-verification.
 
 Cleveland Cavaliers:
-- Thomas Bryant (C): OUT [roster-only]
-NOTE: Donovan Mitchell, Jarrett Allen, Evan Mobley NOT in current verified absence feed — re-verify before any CLE pick.
+NOTE: No players in current verified absence feed this session. Re-verify Donovan Mitchell, Jarrett Allen, Evan Mobley before any CLE pick.
 
 Minnesota Timberwolves:
 NOTE: No players in current verified absence feed. Anthony Edwards previously OUT [roster-only] — status may have changed. Re-verify Edwards, Rudy Gobert, Mike Conley, Julius Randle before any MIN pick.
 
 Atlanta Hawks:
+- Keshon Gilbert (G): OUT [roster-only]
 - Jock Landale (C): OUT [roster-only]
 NOTE: Trae Young NOT in current verified absence feed for ATL — DATA CONFLICT: Trae Young appears in WAS feed. Verify official team affiliation via NBA official PDF before any ATL pick.
 
@@ -151,7 +152,7 @@ Washington Wizards:
 NOTE: Washington eliminated. Do NOT bet Washington to win under any circumstances.
 
 Franchise players requiring mandatory NBA official PDF verification before ANY pick involving their team:
-- Shai Gilgeous-Alexander, Jalen Williams, Chet Holmgren (OKC) — re-verify each session
+- Shai Gilgeous-Alexander, Chet Holmgren (OKC) — re-verify each session; Jalen Williams now in verified absence feed as OUT [roster-only]
 - Victor Wembanyama (SAS) — re-verify each session
 - Jayson Tatum (BOS) — re-verify each session
 - Kevin Durant (HOU) — was roster-only OUT; NOT in current verified feed — re-verify status this session
