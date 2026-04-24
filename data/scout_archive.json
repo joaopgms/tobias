@@ -962,5 +962,63 @@
     "tokens_in": 10154,
     "tokens_out": 5515,
     "cost_usd": 0.113187
+  },
+  {
+    "ts": "2026-04-24T15:12:42.790206+00:00",
+    "date": "2026-04-24",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_onexbet",
+    "draft_count": 2,
+    "picks": [
+      {
+        "id": "nba_draft_20260424_001",
+        "match": "Houston Rockets vs Los Angeles Lakers",
+        "time": "2026-04-25T00:00Z",
+        "pick": "Houston Rockets -6.5",
+        "odds": 1.96,
+        "stake": 80,
+        "potential_return": 156.8,
+        "confidence": 68,
+        "reasoning": "Luka Doncic confirmed OUT for LAL creates strong HOU spread edge. LAL lose their primary playmaker and offensive engine. HOU at home with full roster vs depleted LAL. EV +17.6% after -20% stake adjustment for Durant Questionable flag requiring Commit-phase re-verification.",
+        "anchor_players": [
+          "Luka Doncic (OUT - LAL)",
+          "Kevin Durant (Questionable - HOU)"
+        ],
+        "drafted_at": "2026-04-24T15:14:39Z",
+        "market_type": "spread"
+      },
+      {
+        "id": "nba_draft_20260424_002",
+        "match": "Portland Trail Blazers vs San Antonio Spurs",
+        "time": "2026-04-25T02:30Z",
+        "pick": "San Antonio Spurs ML",
+        "odds": 1.8,
+        "stake": 72,
+        "potential_return": 129.6,
+        "confidence": 65,
+        "reasoning": "Damian Lillard confirmed OUT for POR removes their offensive centerpiece. SAS at home with Wembanyama Questionable but net roster advantage remains significant. EV +17% after -20% stake adjustment for Wembanyama Questionable flag requiring Commit-phase re-verification.",
+        "anchor_players": [
+          "Damian Lillard (OUT - POR)",
+          "Victor Wembanyama (Questionable - SAS)"
+        ],
+        "drafted_at": "2026-04-24T15:14:39Z",
+        "market_type": "ml"
+      }
+    ],
+    "rejected": [
+      {
+        "match": "Philadelphia 76ers vs Boston Celtics",
+        "reason": "BOS ML 1.36 outside target range 1.60-2.50. PHI +6.5 spread: PHI confidence = 55 base + 5 (home playoff response) - 15 (Embiid Doubtful) = 45, below spread floor of 60. O/U Under: BOS pace 94.8 supports Under, PHI OffRtg diminished with Embiid Doubtful, but totals confidence 62 below floor of 65 (standard) or 70 (if pace issues). No market meets minimum thresholds. BOS is clear winner but odds don't permit a valid bet.",
+        "ml_home": 3.48,
+        "ml_away": 1.36,
+        "decision": "no_edge"
+      }
+    ],
+    "report": "Three-game playoff slate with NBA Official injury data (full coverage). Two picks drafted. Key theme: confirmed franchise player absences creating genuine spread/ML edges. PHI vs BOS rejected — BOS ML too short (1.36), PHI spread confidence fails after Embiid Doubtful penalty. HOU vs LAL: Doncic confirmed OUT creates strong HOU spread edge at 1.96 (EV +17.6%). SAS vs POR: Lillard confirmed OUT for POR while Wembanyama Questionable creates net positive for SAS ML at 1.80 (EV +17%). Both picks carry franchise player Questionable flags (Durant, Wembanyama) requiring Commit-phase re-verification — stake adjustments already applied at -20% per rules.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 10982,
+    "tokens_out": 5886,
+    "cost_usd": 0.121236
   }
 ]
