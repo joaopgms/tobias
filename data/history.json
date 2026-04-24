@@ -26,7 +26,7 @@
           "wins": 14,
           "losses": 10,
           "peak_bankroll": 1917.57,
-          "total_bets": 24
+          "total_bets": 26
         }
       ]
     }
@@ -1494,6 +1494,67 @@
         }
       ],
       "summary": "Day 2026-04-23 commit — 3 bets totalling €735.00. 0 cancelled. Bankroll: €1472.44 → €737.44."
+    },
+    {
+      "entry_id": "nba_entry_20260424",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-04-24T22:33:30.982005+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1245.74,
+      "total_staked": 180.0,
+      "bankroll_after": 1065.74,
+      "cancelled_picks": [
+        {
+          "id": "nba_draft_20260424_002",
+          "match": "Portland Trail Blazers vs San Antonio Spurs",
+          "pick": "San Antonio Spurs ML",
+          "reason": "Odds drifted from 1.80 to 1.65 (against, -0.15). Per line movement rules: re-evaluate with confidence -10. Adjusted confidence: 65 (Scout) - 10 (line movement against) = 55. EV recalculated at 1.65 odds / 55 confidence = (0.55 × 1.65) - 1 = -0.0925, which is below the minimum EV gate of +0.05. Pick cancelled: EV recalculated at commit-time odds falls below 0.05."
+        }
+      ],
+      "bets": [
+        {
+          "id": "nba_bet_20260424_001",
+          "match": "Houston Rockets vs Los Angeles Lakers",
+          "time": "2026-04-25T00:00Z",
+          "pick": "Houston Rockets -8.5",
+          "odds": 1.96,
+          "stake": 80,
+          "potential_return": 156.8,
+          "confidence": 58,
+          "reasoning": "Luka Doncic confirmed OUT (Left Hamstring Strain) for LAL removes primary playmaker. Austin Reaves also Questionable, potentially further depleting LAL. HOU at home with strong L15 NetRtg +33.5 vs LAL +12.7. Kevin Durant Questionable triggers confidence -10 (from Scout's 68 to 58); thesis does not depend on Durant's absence — edge is built on Doncic OUT. Line moved from -6.5 to -8.5 (2 pts against, explained by public LAL injury news + Reaves Questionable adding further uncertainty). EV at 58 confidence / 1.96 odds = +0.137. Spread odds 1.96 within valid range 1.75–2.30. Stake held at Scout level (Durant Q already warranted -20% from base at Scout phase; confidence tier unchanged at Medium 55-69).",
+          "anchor_players": [
+            "Luka Doncic (OUT - LAL)",
+            "Kevin Durant (Questionable - HOU)",
+            "Austin Reaves (Questionable - LAL)"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-04-24T22:33:33Z"
+        },
+        {
+          "id": "nba_bet_20260424_002",
+          "match": "Philadelphia 76ers vs Boston Celtics",
+          "time": "2026-04-24T23:00Z",
+          "pick": "Under 215.5",
+          "odds": 1.96,
+          "stake": 100,
+          "potential_return": 196.0,
+          "confidence": 63,
+          "reasoning": "Late scout addition. Joel Embiid confirmed OUT (Appendectomy Recovery) — PHI loses their anchor scorer and playmaker, dramatically reducing PHI offensive output. BOS pace 94.8 (slowest pace in tonight's field) strongly suppresses possession count. BOS DefRtg 112.7 elite, will contain depleted PHI. PHI OffRtg 115.4 already modest and will regress sharply without Embiid. BOS L15 NetRtg +36.6 — dominant on both ends. Combined factors: slow tempo, PHI depleted offense, BOS elite defense all point firmly to Under. Scout rejected at 14:00 with confidence below 65 threshold; at commit time Embiid confirmed OUT (not Questionable) removes uncertainty — confidence firmed to 63. EV = (0.63 × 1.96) - 1 = +0.235. Odds 1.96 within O/U valid range 1.75–2.05. Injury source nba_official — full data quality gate passes. Time gate: 27 minutes to tip-off (>20 min). Late scout quantity gate: 1 new pick (within max 1 per day).",
+          "anchor_players": [
+            "Joel Embiid (OUT - PHI)"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-04-24T22:33:33Z"
+        }
+      ],
+      "summary": "Day 2026-04-24 commit — 2 bets totalling €180.00. 1 cancelled. Bankroll: €1245.74 → €1065.74."
     }
   ]
 }
