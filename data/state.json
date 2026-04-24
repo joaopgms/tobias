@@ -1,24 +1,24 @@
 {
   "season": "2024-25",
   "game": 2,
-  "bankroll": 1245.74,
+  "bankroll": 1065.74,
   "bankroll_initial": 1000.0,
   "bankroll_peak": 1917.57,
-  "total_staked": 5656.12,
+  "total_staked": 5836.12,
   "total_returned": 5901.86,
   "net_pnl": 245.74,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-04-24T15:12:42.790206+00:00",
+  "last_updated": "2026-04-24T22:33:30.982005+00:00",
   "first_game_time": "2026-04-24T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
   "scout_updated_at": "2026-04-24T15:12:42.790206+00:00",
   "scout_odds_source": "theodds_onexbet",
-  "commit_status": "pending",
-  "commit_updated_at": "2026-04-23T22:41:14.566976+00:00",
-  "commit_date": "2026-04-23",
+  "commit_status": "done",
+  "commit_updated_at": "2026-04-24T22:33:30.982005+00:00",
+  "commit_date": "2026-04-24",
   "analyst_updated_at": "2026-04-24T11:55:31.239998+00:00",
   "settler_updated_at": "2026-04-24T11:07:10.939778+00:00",
   "agent_models": {
@@ -27,44 +27,50 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "Three-game playoff slate with NBA Official injury data (full coverage). Two picks drafted. Key theme: confirmed franchise player absences creating genuine spread/ML edges. PHI vs BOS rejected — BOS ML too short (1.36), PHI spread confidence fails after Embiid Doubtful penalty. HOU vs LAL: Doncic confirmed OUT creates strong HOU spread edge at 1.96 (EV +17.6%). SAS vs POR: Lillard confirmed OUT for POR while Wembanyama Questionable creates net positive for SAS ML at 1.80 (EV +17%). Both picks carry franchise player Questionable flags (Durant, Wembanyama) requiring Commit-phase re-verification — stake adjustments already applied at -20% per rules.",
-  "draft_picks": [
+  "last_report": "### CONFIRMED — Houston Rockets -8.5 @ 1.96\n\n- Match: Houston Rockets vs Los Angeles Lakers | Tip: 2026-04-25T00:00Z\n- Pick: HOU -8.5 (spread) | Scout odds: -6.5 @ 1.96 | Commit odds: -8.5 @ 1.96 | Move: -2 pts spread (adverse, explained)\n- ML: HOU 1.29 / LAL 4.12 | ATS: HOU -8.5 (1.96 / 1.96) | O/U: 207.5 (O:2.04 / U:1.88)\n- Stake: €80 | Pot: €156.80 | Conf: 58/100 | EV: +0.137\n- Decision: Luka Doncic confirmed OUT removes LAL's entire offensive engine. Austin Reaves also Questionable, potentially eliminating both primary creators. Line moved 2 points against (from -6.5 to -8.5) — movement is fully explained by the public injury news cascade (Doncic OUT + Reaves Q). Kevin Durant's Questionable status prompted a confidence reduction (-10, from 68 to 58); thesis does not depend on Durant's absence — edge is built on LAL's depletion. EV remains strongly positive at +0.137. HOU L15 NetRtg (+33.5) vs LAL L15 (+12.7) supports the 8.5-point spread even with HOU missing Durant potentially. Spread odds 1.96 within valid range 1.75–2.30. Stake held at €80 (no increase permitted; confidence tier unchanged at Medium 55-69; stake already adjusted at Scout time for Durant Q).\n\n---\n\n### CONFIRMED (Late Scout) — Under 215.5 | Philadelphia 76ers vs Boston Celtics @ 1.96\n\n- Match: Philadelphia 76ers vs Boston Celtics | Tip: 2026-04-24T23:00Z\n- Pick: Under 215.5 | Scout odds: N/A (not drafted) | Commit odds: 1.96 | Move: N/A (new pick)\n- ML: PHI 4.12 / BOS 1.29 | ATS: PHI +9.5 (1.91 / 2.01) | O/U: 215.5 (O:1.96 / U:1.96)\n- Stake: €100 | Pot: €196.00 | Conf: 63/100 | EV: +0.235\n- Decision: Scout rejected all PHI/BOS markets at 14:00 due to odds out of range for BOS ML and insufficient confidence for PHI spread and totals. At commit time, the Under thesis has crystallised: Joel Embiid is confirmed OUT (not Questionable) via nba_official — his absence eliminates PHI's primary scorer and post-up threat, sharply reducing their offensive ceiling. BOS brings the lowest pace in tonight's slate (94.8) and an elite defence (DefRtg 112.7, L15 NetRtg +36.6). PHI's OffRtg of 115.4 will regress materially without Embiid. Three converging signals — slow BOS pace suppressing possessions, PHI depleted offence, BOS elite defence — all point firmly Under. Confidence firmed to 63 (above late-scout gate of 60); EV +0.235 well above gate; odds 1.96 within O/U valid range 1.75–2.05. Time gate: 27 minutes to tip-off. Quantity gate: 1 new pick (within daily max of 1).\n\n---\n\n### CANCELLED — San Antonio Spurs ML\n\n- Reason: Odds drifted from 1.80 (Scout) to 1.65 (commit) — adverse movement of -0.15. Per line movement rules: still above the ML floor of 1.65, but confidence must be reduced by -10 for adverse movement. Adjusted confidence: 55. EV recalculated = (0.55 × 1.65) - 1 = **-0.0925**, which is negative and well below the EV gate of +0.05. Cancellation trigger: \"EV recalculated at current odds falls below 0.05.\"\n- Odds at cancel: 1.65 (was 1.80 at Scout time)\n\n---\n\n### Slate Summary\n\nTonight's slate presents two confirmed positions totalling €180 (14.5% bankroll exposure, well within the 70% cap). The HOU -8.5 spread play is thesis-intact despite the line widening 2 points, supported by Doncic's confirmed absence and HOU's dominant recent form (+33.5 L15 NetRtg). The late-addition Under on BOS/PHI capitalises on Embiid's confirmed OUT status creating a slow-tempo, defence-dominant game — the strongest late-breaking edge available on tonight's slate. The SAS ML was correctly cancelled as adverse line drift destroyed the EV, and POR/SAS offered no alternative valid market given Wembanyama's unresolved Questionable status.",
+  "draft_picks": [],
+  "pending_bets": [
     {
-      "id": "nba_draft_20260424_001",
+      "id": "nba_bet_20260424_001",
       "match": "Houston Rockets vs Los Angeles Lakers",
       "time": "2026-04-25T00:00Z",
-      "pick": "Houston Rockets -6.5",
+      "pick": "Houston Rockets -8.5",
       "odds": 1.96,
       "stake": 80,
       "potential_return": 156.8,
-      "confidence": 68,
-      "reasoning": "Luka Doncic confirmed OUT for LAL creates strong HOU spread edge. LAL lose their primary playmaker and offensive engine. HOU at home with full roster vs depleted LAL. EV +17.6% after -20% stake adjustment for Durant Questionable flag requiring Commit-phase re-verification.",
+      "confidence": 58,
+      "reasoning": "Luka Doncic confirmed OUT (Left Hamstring Strain) for LAL removes primary playmaker. Austin Reaves also Questionable, potentially further depleting LAL. HOU at home with strong L15 NetRtg +33.5 vs LAL +12.7. Kevin Durant Questionable triggers confidence -10 (from Scout's 68 to 58); thesis does not depend on Durant's absence — edge is built on Doncic OUT. Line moved from -6.5 to -8.5 (2 pts against, explained by public LAL injury news + Reaves Questionable adding further uncertainty). EV at 58 confidence / 1.96 odds = +0.137. Spread odds 1.96 within valid range 1.75–2.30. Stake held at Scout level (Durant Q already warranted -20% from base at Scout phase; confidence tier unchanged at Medium 55-69).",
       "anchor_players": [
         "Luka Doncic (OUT - LAL)",
-        "Kevin Durant (Questionable - HOU)"
+        "Kevin Durant (Questionable - HOU)",
+        "Austin Reaves (Questionable - LAL)"
       ],
-      "drafted_at": "2026-04-24T15:14:39Z",
-      "market_type": "spread"
+      "result": null,
+      "returned": null,
+      "pnl": null,
+      "settled_at": null,
+      "committed_at": "2026-04-24T22:33:33Z"
     },
     {
-      "id": "nba_draft_20260424_002",
-      "match": "Portland Trail Blazers vs San Antonio Spurs",
-      "time": "2026-04-25T02:30Z",
-      "pick": "San Antonio Spurs ML",
-      "odds": 1.8,
-      "stake": 72,
-      "potential_return": 129.6,
-      "confidence": 65,
-      "reasoning": "Damian Lillard confirmed OUT for POR removes their offensive centerpiece. SAS at home with Wembanyama Questionable but net roster advantage remains significant. EV +17% after -20% stake adjustment for Wembanyama Questionable flag requiring Commit-phase re-verification.",
+      "id": "nba_bet_20260424_002",
+      "match": "Philadelphia 76ers vs Boston Celtics",
+      "time": "2026-04-24T23:00Z",
+      "pick": "Under 215.5",
+      "odds": 1.96,
+      "stake": 100,
+      "potential_return": 196.0,
+      "confidence": 63,
+      "reasoning": "Late scout addition. Joel Embiid confirmed OUT (Appendectomy Recovery) — PHI loses their anchor scorer and playmaker, dramatically reducing PHI offensive output. BOS pace 94.8 (slowest pace in tonight's field) strongly suppresses possession count. BOS DefRtg 112.7 elite, will contain depleted PHI. PHI OffRtg 115.4 already modest and will regress sharply without Embiid. BOS L15 NetRtg +36.6 — dominant on both ends. Combined factors: slow tempo, PHI depleted offense, BOS elite defense all point firmly to Under. Scout rejected at 14:00 with confidence below 65 threshold; at commit time Embiid confirmed OUT (not Questionable) removes uncertainty — confidence firmed to 63. EV = (0.63 × 1.96) - 1 = +0.235. Odds 1.96 within O/U valid range 1.75–2.05. Injury source nba_official — full data quality gate passes. Time gate: 27 minutes to tip-off (>20 min). Late scout quantity gate: 1 new pick (within max 1 per day).",
       "anchor_players": [
-        "Damian Lillard (OUT - POR)",
-        "Victor Wembanyama (Questionable - SAS)"
+        "Joel Embiid (OUT - PHI)"
       ],
-      "drafted_at": "2026-04-24T15:14:39Z",
-      "market_type": "ml"
+      "result": null,
+      "returned": null,
+      "pnl": null,
+      "settled_at": null,
+      "committed_at": "2026-04-24T22:33:33Z"
     }
   ],
-  "pending_bets": [],
   "settled_bets": [
     {
       "id": "nba_bet_20260406_001",
@@ -567,105 +573,75 @@
   ],
   "late_scout_rejections": [
     {
-      "match": "Atlanta Hawks vs New York Knicks",
-      "reason": "NYK ML already drafted. Spread NYK -1.5 at 2.01: L15 gap only 3.3pts (below 6pt threshold for spread conviction) — insufficient edge. O/U 214.5 at 1.96/1.96: mixed pace signals (ATL 101.7 vs NYK 96.8), no strong directional thesis at conf ≥ 60. ATL ML at 2.03: not compelling given NYK's season NetRtg advantage (+4.1pts) and books leaning NYK. No new edge."
-    },
-    {
-      "match": "Toronto Raptors vs Cleveland Cavaliers",
-      "reason": "TOR ML already drafted. Spread TOR +2.5 at 1.96: Quickley Questionable creates unresolved GTD uncertainty — spread requires more precision on roster; Scout deferred and still appropriate. O/U 222.5: Over at 2.04 (above 2.05 ceiling — invalid per odds_validation); Under at 1.88 (within range but no strong thesis — moderate paces 98.4/99.9, TOR's L15 dominance could mean either high-scoring blowout or defensive game; insufficient conviction at conf ≥ 60). No new edge."
-    },
-    {
-      "match": "Minnesota Timberwolves vs Denver Nuggets",
-      "reason": "DEN ML already drafted. MIN +1.5 at 2.01: Edwards still Questionable — same GTD uncertainty Scout flagged; spread precision too risky with franchise player status unresolved. DEN -1.5 spread at 1.91: below 1.80 spread floor — invalid per odds_validation. O/U 232.5: line moved from 234.5 to 232.5 (books likely pricing Edwards uncertainty, pushing toward Under). Under 232.5 at 1.88: within O/U range (1.75-2.05) but DEN OffRtg 122.6 is elite and if Edwards plays MIN scores well too; dual GTD uncertainty (Edwards + Gordon) creates too much variance. Insufficient confidence for ≥ 60 threshold on totals. No new edge added."
+      "match": "Portland Trail Blazers vs San Antonio Spurs",
+      "reason": "POR ML @ 2.42: Lillard confirmed OUT removes POR offensive core; building a POR ML thesis without Lillard is unsupported by stats (L15 NetRtg -0.2 season, SAS NetRtg +38.8 L15). Cannot use Wembanyama's potential absence as thesis basis — he is Questionable, not confirmed OUT per CRITICAL QUESTIONABLE/GTD RULE. SAS -3.5 spread @ 1.94 also rejected: Wembanyama Questionable forces confidence -10 reduction (base 60 → 50), EV = (0.50 × 1.94) - 1 = -0.03, below EV gate. No valid market available on this game at commit time."
     }
   ],
   "commit_report_data": {
-    "date": "2026-04-23",
-    "ts": "2026-04-23T22:41:14.566976+00:00",
+    "date": "2026-04-24",
+    "ts": "2026-04-24T22:33:30.982005+00:00",
     "bets": [
       {
-        "id": "nba_bet_20260423_001",
-        "match": "Atlanta Hawks vs New York Knicks",
-        "time": "2026-04-23T23:00:00Z",
-        "pick": "New York Knicks ML",
-        "odds": 1.89,
-        "stake": 294.0,
-        "potential_return": 555.66,
-        "confidence": 72,
-        "reasoning": "CONFIRMED at commit time. Line moved slightly against (1.92 → 1.89, delta -0.03), below the 0.10 investigation threshold — minor drift only. Floor check: 1.89 > 1.65 ✅. Ceiling: 1.89 < 2.50 ✅. Anchor players: Trae Young NOT in ATL injury report tonight — active as expected. Jalen Brunson and KAT not listed for NYK — both active. ATL: only Jock Landale OUT (non-franchise role player, no impact). EV at current odds and confidence 72: (0.72 × 1.89) - 1 = 0.361 ✅. Primary edge: NYK season NetRtg +6.5 vs ATL +2.4 (gap 4.1, above 4.0 threshold); NYK OffRtg 119.9 elite; books lean NYK at 1.89 road favourite. ATL home court (+3-4pts) partially offsets but priced in. L15 gap only 3.3pts (below 4.0 threshold), directionally inconclusive. Stake: High tier (70-84), 20% of €1,472.44 = €294. No increase despite odds available at Scout draft price being equivalent — holding original stake per rules.",
+        "id": "nba_bet_20260424_001",
+        "match": "Houston Rockets vs Los Angeles Lakers",
+        "time": "2026-04-25T00:00Z",
+        "pick": "Houston Rockets -8.5",
+        "odds": 1.96,
+        "stake": 80,
+        "potential_return": 156.8,
+        "confidence": 58,
+        "reasoning": "Luka Doncic confirmed OUT (Left Hamstring Strain) for LAL removes primary playmaker. Austin Reaves also Questionable, potentially further depleting LAL. HOU at home with strong L15 NetRtg +33.5 vs LAL +12.7. Kevin Durant Questionable triggers confidence -10 (from Scout's 68 to 58); thesis does not depend on Durant's absence — edge is built on Doncic OUT. Line moved from -6.5 to -8.5 (2 pts against, explained by public LAL injury news + Reaves Questionable adding further uncertainty). EV at 58 confidence / 1.96 odds = +0.137. Spread odds 1.96 within valid range 1.75–2.30. Stake held at Scout level (Durant Q already warranted -20% from base at Scout phase; confidence tier unchanged at Medium 55-69).",
         "anchor_players": [
-          "Jalen Brunson",
-          "Karl-Anthony Towns",
-          "Trae Young"
+          "Luka Doncic (OUT - LAL)",
+          "Kevin Durant (Questionable - HOU)",
+          "Austin Reaves (Questionable - LAL)"
         ],
         "result": null,
         "returned": null,
         "pnl": null,
-        "settled_at": null
+        "settled_at": null,
+        "committed_at": "2026-04-24T22:33:33Z"
       },
       {
-        "id": "nba_bet_20260423_002",
-        "match": "Toronto Raptors vs Cleveland Cavaliers",
-        "time": "2026-04-24T00:00:00Z",
-        "pick": "Toronto Raptors ML",
-        "odds": 2.3,
-        "stake": 221.0,
-        "potential_return": 508.3,
-        "confidence": 55,
-        "reasoning": "CONFIRMED at reduced confidence. Line moved against (2.38 → 2.30, delta -0.08) — still above floor 1.65 ✅, ceiling 2.50 ✅. Per line_movement_rules, odds worsened → apply confidence -10: 68 - 10 = 58. Injury check: Immanuel Quickley listed Questionable (Strain) on official report tonight — skills file flags as OUT [roster-only] but official report supersedes with Questionable. Thesis does NOT depend on Quickley absence — edge is L15-driven (TOR +18.1 vs CLE +6.5, gap 11.6pts — massive signal far above 4.0 threshold). Applying standard confidence -10 for key non-franchise Questionable already incorporated at Scout. Ja'Kobe Walter also Questionable (Illness) — minor rotation player, -3 confidence. Final confidence: 58 - 3 = 55. EV at 2.30, conf 55: (0.55 × 2.30) - 1 = 0.265 ✅. Donovan Mitchell, Jarrett Allen, Evan Mobley all active for CLE. Remaining edge: TOR L15 dominance (+18.1) overwhelming CLE's L15 (+6.5); TOR at home (worth +3-4pts playoffs); TOR better DefRtg (113.2 vs CLE 115.2); CLE's superior season NetRtg (+4.0 vs +2.6) is secondary and largely priced in. Stake: Medium tier (55-69), 15% of €1,472.44 = €220.87 ≈ €221.",
+        "id": "nba_bet_20260424_002",
+        "match": "Philadelphia 76ers vs Boston Celtics",
+        "time": "2026-04-24T23:00Z",
+        "pick": "Under 215.5",
+        "odds": 1.96,
+        "stake": 100,
+        "potential_return": 196.0,
+        "confidence": 63,
+        "reasoning": "Late scout addition. Joel Embiid confirmed OUT (Appendectomy Recovery) — PHI loses their anchor scorer and playmaker, dramatically reducing PHI offensive output. BOS pace 94.8 (slowest pace in tonight's field) strongly suppresses possession count. BOS DefRtg 112.7 elite, will contain depleted PHI. PHI OffRtg 115.4 already modest and will regress sharply without Embiid. BOS L15 NetRtg +36.6 — dominant on both ends. Combined factors: slow tempo, PHI depleted offense, BOS elite defense all point firmly to Under. Scout rejected at 14:00 with confidence below 65 threshold; at commit time Embiid confirmed OUT (not Questionable) removes uncertainty — confidence firmed to 63. EV = (0.63 × 1.96) - 1 = +0.235. Odds 1.96 within O/U valid range 1.75–2.05. Injury source nba_official — full data quality gate passes. Time gate: 27 minutes to tip-off (>20 min). Late scout quantity gate: 1 new pick (within max 1 per day).",
         "anchor_players": [
-          "Donovan Mitchell",
-          "Jarrett Allen",
-          "Evan Mobley",
-          "Immanuel Quickley"
+          "Joel Embiid (OUT - PHI)"
         ],
         "result": null,
         "returned": null,
         "pnl": null,
-        "settled_at": null
-      },
-      {
-        "id": "nba_bet_20260423_003",
-        "match": "Minnesota Timberwolves vs Denver Nuggets",
-        "time": "2026-04-24T01:30:00Z",
-        "pick": "Denver Nuggets ML",
-        "odds": 1.89,
-        "stake": 220.0,
-        "potential_return": 415.8,
-        "confidence": 60,
-        "reasoning": "CONFIRMED at reduced confidence, improved odds. Line moved IN FAVOUR (1.78 → 1.89, delta +0.11) — confirming at ORIGINAL stake per rules, noting improvement. Floor: 1.89 > 1.65 ✅. Ceiling: 1.89 < 2.50 ✅. New injury: Aaron Gordon listed Questionable (Left Calf Tightness) — NOT in anchor_players at Scout time; discovered at commit. Gordon is DEN's significant starting wing but not franchise-tier (Jokic/Murray are). Per new_injury rules: re-evaluate full pick. Thesis does NOT depend on Gordon — edge is Jokic/Murray-led and L15 driven. Applying confidence -10 for important non-franchise Questionable. Anthony Edwards (MIN) remains Questionable (Maintenance) — -10 already incorporated at Scout level into confidence 70. Revised confidence: 70 - 10 (Gordon) = 60. EV at 1.89, conf 60: (0.60 × 1.89) - 1 = 0.134 ✅. Primary edge: DEN L15 +30.1 vs MIN L15 -3.6 (gap 33.7pts — extraordinary); DEN L10 10-0 (perfect); DEN season NetRtg +5.2 vs MIN +3.1; DEN OffRtg 122.6 (highest of tonight's slate); W12 streak momentum. MIN home court (-8 in confidence) insufficient to overcome DEN's dominance. If Edwards sits, DEN edge grows further. If Edwards plays, DEN's L15/record form still decisively favours DEN. Jokic and Murray confirmed active. Stake: Medium tier (60, 15%) = €220.87 ≈ €220, with Edwards Questionable -20% already embedded in original Scout stake calculation. Holding at €220.",
-        "anchor_players": [
-          "Nikola Jokic",
-          "Jamal Murray",
-          "Anthony Edwards"
-        ],
-        "result": null,
-        "returned": null,
-        "pnl": null,
-        "settled_at": null
+        "settled_at": null,
+        "committed_at": "2026-04-24T22:33:33Z"
       }
     ],
-    "cancelled": [],
+    "cancelled": [
+      {
+        "id": "nba_draft_20260424_002",
+        "match": "Portland Trail Blazers vs San Antonio Spurs",
+        "pick": "San Antonio Spurs ML",
+        "reason": "Odds drifted from 1.80 to 1.65 (against, -0.15). Per line movement rules: re-evaluate with confidence -10. Adjusted confidence: 65 (Scout) - 10 (line movement against) = 55. EV recalculated at 1.65 odds / 55 confidence = (0.55 × 1.65) - 1 = -0.0925, which is below the minimum EV gate of +0.05. Pick cancelled: EV recalculated at commit-time odds falls below 0.05."
+      }
+    ],
     "late_rejections": [
       {
-        "match": "Atlanta Hawks vs New York Knicks",
-        "reason": "NYK ML already drafted. Spread NYK -1.5 at 2.01: L15 gap only 3.3pts (below 6pt threshold for spread conviction) — insufficient edge. O/U 214.5 at 1.96/1.96: mixed pace signals (ATL 101.7 vs NYK 96.8), no strong directional thesis at conf ≥ 60. ATL ML at 2.03: not compelling given NYK's season NetRtg advantage (+4.1pts) and books leaning NYK. No new edge."
-      },
-      {
-        "match": "Toronto Raptors vs Cleveland Cavaliers",
-        "reason": "TOR ML already drafted. Spread TOR +2.5 at 1.96: Quickley Questionable creates unresolved GTD uncertainty — spread requires more precision on roster; Scout deferred and still appropriate. O/U 222.5: Over at 2.04 (above 2.05 ceiling — invalid per odds_validation); Under at 1.88 (within range but no strong thesis — moderate paces 98.4/99.9, TOR's L15 dominance could mean either high-scoring blowout or defensive game; insufficient conviction at conf ≥ 60). No new edge."
-      },
-      {
-        "match": "Minnesota Timberwolves vs Denver Nuggets",
-        "reason": "DEN ML already drafted. MIN +1.5 at 2.01: Edwards still Questionable — same GTD uncertainty Scout flagged; spread precision too risky with franchise player status unresolved. DEN -1.5 spread at 1.91: below 1.80 spread floor — invalid per odds_validation. O/U 232.5: line moved from 234.5 to 232.5 (books likely pricing Edwards uncertainty, pushing toward Under). Under 232.5 at 1.88: within O/U range (1.75-2.05) but DEN OffRtg 122.6 is elite and if Edwards plays MIN scores well too; dual GTD uncertainty (Edwards + Gordon) creates too much variance. Insufficient confidence for ≥ 60 threshold on totals. No new edge added."
+        "match": "Portland Trail Blazers vs San Antonio Spurs",
+        "reason": "POR ML @ 2.42: Lillard confirmed OUT removes POR offensive core; building a POR ML thesis without Lillard is unsupported by stats (L15 NetRtg -0.2 season, SAS NetRtg +38.8 L15). Cannot use Wembanyama's potential absence as thesis basis — he is Questionable, not confirmed OUT per CRITICAL QUESTIONABLE/GTD RULE. SAS -3.5 spread @ 1.94 also rejected: Wembanyama Questionable forces confidence -10 reduction (base 60 → 50), EV = (0.50 × 1.94) - 1 = -0.03, below EV gate. No valid market available on this game at commit time."
       }
     ],
-    "total_staked": 735.0,
-    "bankroll_before": 1472.44,
-    "report": "### CONFIRMED — New York Knicks ML\n\n- **Match:** Atlanta Hawks vs New York Knicks | **Tip:** 2026-04-23T23:00Z\n- **Pick:** NYK ML | **Scout odds:** 1.92 | **Commit odds:** 1.89 | **Move:** -0.03 (minor drift, below 0.10 threshold)\n- **ML:** ATL 2.03 / NYK 1.89 | **ATS:** ATL +1.5 (1.91/2.01) | **O/U:** 214.5 (O:1.96/U:1.96)\n- **Stake:** €294.00 | **Pot:** €555.66 | **Conf:** 72/100 | **EV:** 0.361\n- **Decision:** All anchor players confirmed active (TY not in injury report; Brunson/KAT not listed). Odds drifted only -0.03 — negligible, well above floor. NYK's season NetRtg superiority (+6.5 vs ATL +2.4, gap 4.1pts above threshold), elite OffRtg (119.9), and books already pricing NYK as road favourite justify maintaining confidence 72. ATL home court priced in at 1.89. EV 0.361 remains exceptionally strong.\n\n---\n\n### CONFIRMED — Toronto Raptors ML\n\n- **Match:** Toronto Raptors vs Cleveland Cavaliers | **Tip:** 2026-04-24T00:00Z\n- **Pick:** TOR ML | **Scout odds:** 2.38 | **Commit odds:** 2.30 | **Move:** -0.08 (against, applied confidence -10 per rules)\n- **ML:** TOR 2.30 / CLE 1.71 | **ATS:** TOR +2.5 (1.96/1.96) | **O/U:** 222.5 (O:2.04/U:1.88)\n- **Stake:** €221.00 | **Pot:** €508.30 | **Conf:** 55/100 | **EV:** 0.265\n- **Decision:** Odds worsened → confidence reduced to 58 per line movement rules. Additional -3 for Ja'Kobe Walter Questionable → final confidence 55. Quickley listed Questionable on official report (not confirmed OUT) — but thesis is NOT injury-dependent; edge is L15-driven (TOR +18.1 vs CLE +6.5, gap 11.6pts). Thesis remains intact. EV 0.265 at 55 confidence is strong. Donovan Mitchell, Jarrett Allen, Evan Mobley all confirmed active for CLE. Home court (+3-4pts) and superior DefRtg (113.2 vs 115.2) support TOR.\n\n---\n\n### CONFIRMED — Denver Nuggets ML\n\n- **Match:** Minnesota Timberwolves vs Denver Nuggets | **Tip:** 2026-04-24T01:30Z\n- **Pick:** DEN ML | **Scout odds:** 1.78 | **Commit odds:** 1.89 | **Move:** +0.11 (IMPROVED — original stake maintained per rules)\n- **ML:** MIN 2.03 / DEN 1.89 | **ATS:** MIN +1.5 (1.91/2.01) | **O/U:** 232.5 (O:1.96/U:1.96)\n- **Stake:** €220.00 | **Pot:** €415.80 | **Conf:** 60/100 | **EV:** 0.134\n- **Decision:** Odds improved significantly (+0.11) — excellent sign, holding original stake per rules. New information: Aaron Gordon listed Questionable (Left Calf Tightness) — not in Scout's anchor players. Applying confidence -10 per new injury rules: 70 → 60. Thesis is Jokic/Murray-led and does NOT depend on Gordon. Both Jokic and Murray confirmed active. Edwards (MIN) remains Questionable — already priced into Scout's 70. Confidence 60 = Medium tier; EV 0.134 still comfortably above 0.05 threshold. DEN's dominance remains overwhelming: L15 +30.1 vs MIN -3.6 (gap 33.7pts), perfect L10 10-0, elite OffRtg 122.6, W12 streak. MIN home court adjustment insufficient to overcome.\n\n---\n\n### LATE SCOUT SUMMARY\n\nNo new picks added. Reviewed all three games thoroughly:\n- ATL/NYK: No spread or O/U edge at sufficient confidence (L15 gap below threshold for spread; mixed paces for totals)\n- TOR/CLE: Over 2.04 above ceiling; Under lacks directional conviction at conf ≥ 60; TOR spread deferred due to Quickley GTD\n- MIN/DEN: Spread markets either below floor (DEN) or Edwards-GTD-compromised (MIN); totals inconclusive given dual Questionable players (Edwards + Gordon)\n\n---\n\n### EXPOSURE SUMMARY\n\n| Pick | Odds | Stake | Pot. Return | Conf | EV |\n|------|------|-------|-------------|------|-----|\n| NYK ML | 1.89 | €294 | €555.66 | 72 | 0.361 |\n| TOR ML | 2.30 | €221 | €508.30 | 55 | 0.265 |\n| DEN ML | 1.89 | €220 | €415.80 | 60 | 0.134 |\n| **TOTAL** | | **€735** | **€1,479.76** | | |\n\n**Bankroll:** €1,472.44 | **70% Cap:** €1,030.71 | **Total Staked:** €735 (49.9%) ✅\n\nTonight's slate presents three confirmed MLB picks across all three playoff games, with total exposure at 49.9% of bankroll — well within the 70% safety cap. The strongest edge is DEN ML (extraordinary L15 dominance at 33.7pt gap, now at improved odds 1.89), followed by NYK ML (season NetRtg edge confirmed at 0.361 EV), and TOR ML (massive L15 gap of 11.6pts providing value despite confidence reduction from line drift and roster uncertainty). Aaron Gordon's late Questionable status for DEN was the key new development at commit time, requiring a confidence reduction but not cancellation given Jokic and Murray's confirmed availability.",
-    "tokens_in": 13482,
-    "tokens_out": 7404,
-    "cost_usd": 0.151506
+    "total_staked": 180.0,
+    "bankroll_before": 1245.74,
+    "report": "### CONFIRMED — Houston Rockets -8.5 @ 1.96\n\n- Match: Houston Rockets vs Los Angeles Lakers | Tip: 2026-04-25T00:00Z\n- Pick: HOU -8.5 (spread) | Scout odds: -6.5 @ 1.96 | Commit odds: -8.5 @ 1.96 | Move: -2 pts spread (adverse, explained)\n- ML: HOU 1.29 / LAL 4.12 | ATS: HOU -8.5 (1.96 / 1.96) | O/U: 207.5 (O:2.04 / U:1.88)\n- Stake: €80 | Pot: €156.80 | Conf: 58/100 | EV: +0.137\n- Decision: Luka Doncic confirmed OUT removes LAL's entire offensive engine. Austin Reaves also Questionable, potentially eliminating both primary creators. Line moved 2 points against (from -6.5 to -8.5) — movement is fully explained by the public injury news cascade (Doncic OUT + Reaves Q). Kevin Durant's Questionable status prompted a confidence reduction (-10, from 68 to 58); thesis does not depend on Durant's absence — edge is built on LAL's depletion. EV remains strongly positive at +0.137. HOU L15 NetRtg (+33.5) vs LAL L15 (+12.7) supports the 8.5-point spread even with HOU missing Durant potentially. Spread odds 1.96 within valid range 1.75–2.30. Stake held at €80 (no increase permitted; confidence tier unchanged at Medium 55-69; stake already adjusted at Scout time for Durant Q).\n\n---\n\n### CONFIRMED (Late Scout) — Under 215.5 | Philadelphia 76ers vs Boston Celtics @ 1.96\n\n- Match: Philadelphia 76ers vs Boston Celtics | Tip: 2026-04-24T23:00Z\n- Pick: Under 215.5 | Scout odds: N/A (not drafted) | Commit odds: 1.96 | Move: N/A (new pick)\n- ML: PHI 4.12 / BOS 1.29 | ATS: PHI +9.5 (1.91 / 2.01) | O/U: 215.5 (O:1.96 / U:1.96)\n- Stake: €100 | Pot: €196.00 | Conf: 63/100 | EV: +0.235\n- Decision: Scout rejected all PHI/BOS markets at 14:00 due to odds out of range for BOS ML and insufficient confidence for PHI spread and totals. At commit time, the Under thesis has crystallised: Joel Embiid is confirmed OUT (not Questionable) via nba_official — his absence eliminates PHI's primary scorer and post-up threat, sharply reducing their offensive ceiling. BOS brings the lowest pace in tonight's slate (94.8) and an elite defence (DefRtg 112.7, L15 NetRtg +36.6). PHI's OffRtg of 115.4 will regress materially without Embiid. Three converging signals — slow BOS pace suppressing possessions, PHI depleted offence, BOS elite defence — all point firmly Under. Confidence firmed to 63 (above late-scout gate of 60); EV +0.235 well above gate; odds 1.96 within O/U valid range 1.75–2.05. Time gate: 27 minutes to tip-off. Quantity gate: 1 new pick (within daily max of 1).\n\n---\n\n### CANCELLED — San Antonio Spurs ML\n\n- Reason: Odds drifted from 1.80 (Scout) to 1.65 (commit) — adverse movement of -0.15. Per line movement rules: still above the ML floor of 1.65, but confidence must be reduced by -10 for adverse movement. Adjusted confidence: 55. EV recalculated = (0.55 × 1.65) - 1 = **-0.0925**, which is negative and well below the EV gate of +0.05. Cancellation trigger: \"EV recalculated at current odds falls below 0.05.\"\n- Odds at cancel: 1.65 (was 1.80 at Scout time)\n\n---\n\n### Slate Summary\n\nTonight's slate presents two confirmed positions totalling €180 (14.5% bankroll exposure, well within the 70% cap). The HOU -8.5 spread play is thesis-intact despite the line widening 2 points, supported by Doncic's confirmed absence and HOU's dominant recent form (+33.5 L15 NetRtg). The late-addition Under on BOS/PHI capitalises on Embiid's confirmed OUT status creating a slow-tempo, defence-dominant game — the strongest late-breaking edge available on tonight's slate. The SAS ML was correctly cancelled as adverse line drift destroyed the EV, and POR/SAS offered no alternative valid market given Wembanyama's unresolved Questionable status.",
+    "tokens_in": 8877,
+    "tokens_out": 7337,
+    "cost_usd": 0.136686
   },
   "netrtg_l15": {
     "Charlotte Hornets": 16.9,
