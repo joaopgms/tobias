@@ -23,8 +23,8 @@
           "game": 2,
           "started_at": "2026-04-05T10:44:07.102344+00:00",
           "bankroll_start": 1000.0,
-          "wins": 13,
-          "losses": 8,
+          "wins": 14,
+          "losses": 10,
           "peak_bankroll": 1917.57,
           "total_bets": 24
         }
@@ -1446,10 +1446,10 @@
             "Karl-Anthony Towns",
             "Trae Young"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -294.0,
+          "settled_at": "2026-04-24T11:07:10.939778+00:00"
         },
         {
           "id": "nba_bet_20260423_002",
@@ -1467,10 +1467,10 @@
             "Evan Mobley",
             "Immanuel Quickley"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null
+          "result": "WON",
+          "returned": 508.3,
+          "pnl": 287.3,
+          "settled_at": "2026-04-24T11:07:10.939778+00:00"
         },
         {
           "id": "nba_bet_20260423_003",
@@ -1487,10 +1487,10 @@
             "Jamal Murray",
             "Anthony Edwards"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -220.0,
+          "settled_at": "2026-04-24T11:07:10.939778+00:00"
         }
       ],
       "summary": "Day 2026-04-23 commit — 3 bets totalling €735.00. 0 cancelled. Bankroll: €1472.44 → €737.44."
