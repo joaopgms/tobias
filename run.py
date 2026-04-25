@@ -83,22 +83,31 @@ def run_commit_if_ready():
         log.info(f"commit_if_ready: already committed on {today} and status=done — skipping")
         return
 
-    # ── WINDOW GATE ────────────────────────────────────────────────────────
-    first_game_time = state.get("first_game_time")
-    if not first_game_time:
-        log.info("commit_if_ready: no first_game_time in state — skipping")
+    # ── WINDOW GATE — per pick ─────────────────────────────────────────────
+    draft_picks = state.get("draft_picks", [])
+    if not draft_picks:
+        log.info("commit_if_ready: no draft picks — skipping")
         return
 
-    try:
-        fgt = datetime.fromisoformat(first_game_time.replace("Z", "+00:00"))
-    except ValueError:
-        log.warning(f"commit_if_ready: invalid first_game_time '{first_game_time}' — skipping")
-        return
+    window_picks = []
+    soonest_future = None
+    for p in draft_picks:
+        try:
+            t = datetime.fromisoformat(p["time"].replace("Z", "+00:00"))
+            delta_min = (t - now).total_seconds() / 60
+            if delta_min <= 45:
+                window_picks.append(p)
+            elif soonest_future is None or t < soonest_future:
+                soonest_future = t
+        except Exception:
+            continue
 
-    window_open = fgt - timedelta(minutes=45)
-    if now < window_open:
-        remaining = int((window_open - now).total_seconds() / 60)
-        log.info(f"commit_if_ready: {remaining}min until window — skipping")
+    if not window_picks:
+        if soonest_future:
+            remaining = int((soonest_future - timedelta(minutes=45) - now).total_seconds() / 60)
+            log.info(f"commit_if_ready: {remaining}min until next window — skipping")
+        else:
+            log.info("commit_if_ready: no picks with parseable time — skipping")
         return
 
     # ── STATUS GATE ────────────────────────────────────────────────────────
@@ -106,9 +115,9 @@ def run_commit_if_ready():
         log.info("commit_if_ready: status=done — skipping")
         return
 
-    log.info(f"commit_if_ready: window open (first game {fgt.strftime('%H:%M')} UTC) — running commit")
+    log.info(f"commit_if_ready: {len(window_picks)} pick(s) in window — running commit")
     from agents.commit import run
-    run(store, force=False)
+    run(store, force=False, window_picks=window_picks)
 
 
 # ── Entry ──────────────────────────────────────────────────────────────────────

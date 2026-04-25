@@ -57,7 +57,8 @@ def _build_commit_prompt(skills: str, draft_picks: list, rejected_games: list,
                           adv_stats_text: str,
                           state: dict, today: str,
                           season_phase: str = "regular",
-                          playoff_context: str = "") -> str:
+                          playoff_context: str = "",
+                          future_picks_count: int = 0) -> str:
     bankroll = state["bankroll"]
     now_iso  = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
@@ -73,6 +74,8 @@ def _build_commit_prompt(skills: str, draft_picks: list, rejected_games: list,
 
     picks_json     = json.dumps(draft_picks, separators=(',', ':'))
     rejected_json  = json.dumps(rejected_games, separators=(',', ':')) if rejected_games else "[]"
+    future_note    = (f" ({future_picks_count} pick(s) for later games are already queued and will be committed separately.)"
+                      if future_picks_count > 0 else "")
 
     return f"""## YOUR SKILLS (follow these criteria exactly)
 {skills}
@@ -122,7 +125,7 @@ Check what has changed since 14:00 Scout:
 - Significant line movement on any game?
 - Any game Scout rejected that now has value at current odds?
 Apply the same rules as Scout: only add picks with genuine edge (conf ≥ 60, EV ≥ 0.05, odds in range).
-Max 3 new picks. Only add games where first_game_time - now > 20 minutes.
+Max 3 new picks. Only add games where tip-off is within the next 90 minutes — later games will be evaluated at their own commit window.{future_note}
 
 ### Task 3 — Confirm final list and commit
 - Recalculate stakes based on current bankroll (€{bankroll:.2f})
@@ -232,18 +235,19 @@ def _check_bust(state: dict, history: dict) -> tuple[dict, dict, bool]:
 # ── Main run ───────────────────────────────────────────────────────────────────
 
 def should_run(state: dict) -> bool:
-    """Returns True if commit window is open. Used by run.py commit_if_ready."""
-    fgt = state.get("first_game_time")
-    if not fgt:
-        return False
-    try:
-        game_time = datetime.fromisoformat(fgt.replace("Z", "+00:00"))
-        return datetime.now(timezone.utc) >= game_time - timedelta(minutes=30)
-    except Exception:
-        return False
+    """Returns True if at least one draft pick's commit window is open."""
+    now = datetime.now(timezone.utc)
+    for p in state.get("draft_picks", []):
+        try:
+            t = datetime.fromisoformat(p["time"].replace("Z", "+00:00"))
+            if now >= t - timedelta(minutes=30):
+                return True
+        except Exception:
+            continue
+    return False
 
 
-def run(store, force: bool = False) -> None:
+def run(store, force: bool = False, window_picks: list = None) -> None:
     now     = datetime.now(timezone.utc)
     now_iso = now.isoformat()
     today   = now.strftime("%Y-%m-%d")
@@ -259,6 +263,9 @@ def run(store, force: bool = False) -> None:
 
     # ── 3. Load draft picks (commit always runs — late scout may find new edges) ─
     draft_picks = state.get("draft_picks", [])
+    # When called from commit_if_ready, only process picks in the current window;
+    # force=True (manual override) processes all picks regardless of time.
+    picks_to_process = window_picks if window_picks is not None else draft_picks
 
     # ── 4. Load skills ────────────────────────────────────────────────────────
     skills = store.read_md("commit_skills")
@@ -320,19 +327,21 @@ def run(store, force: bool = False) -> None:
         log.info("Commit: NetRtg L15 not yet available (game log accumulating)")
     netrtg_l15_str = _format_netrtg_l15_commit(netrtg_l15, scoreboard)
     rejected_games = state.get("rejected_games", [])
-    log.info(f"Commit: {len(scoreboard)} games tonight | {len(draft_picks)} draft picks | {len(rejected_games)} rejected | injuries: {injuries_source}")
+    future_picks_count = len(draft_picks) - len(picks_to_process)
+    log.info(f"Commit: {len(scoreboard)} games tonight | {len(picks_to_process)} in window | {future_picks_count} pending future | {len(rejected_games)} rejected | injuries: {injuries_source}")
     log.info(f"Commit: injuries source: {injuries_source} — calling LLM for final decision…")
     llm_result = None
     try:
         llm_result = call_llm_full(
             COMMIT_SYSTEM,
-            _build_commit_prompt(skills, draft_picks, rejected_games,
+            _build_commit_prompt(skills, picks_to_process, rejected_games,
                                   games_str, odds_str,
                                   injuries_str, injuries_source,
                                   netrtg_l15_str, standings_str,
                                   adv_str, state, today,
                                   season_phase=season_phase,
-                                  playoff_context=playoff_context),
+                                  playoff_context=playoff_context,
+                                  future_picks_count=future_picks_count),
             max_tokens=12000,
             agent="commit",
         )
@@ -429,10 +438,15 @@ def run(store, force: bool = False) -> None:
     state["agent_models"] = state.get("agent_models", {})
     state["agent_models"]["commit"] = llm
     state["pending_bets"]      = state.get("pending_bets", []) + committed_bets
-    state["draft_picks"]       = []                    # clear after commit
+    # Remove only picks processed in this window; future-game picks stay for their own window
+    committed_ids = {b["id"] for b in committed_bets}
+    cancelled_ids = {c["id"] for c in cancelled_picks if isinstance(c, dict) and "id" in c}
+    processed_ids = committed_ids | cancelled_ids
+    remaining_picks = [p for p in state.get("draft_picks", []) if p.get("id") not in processed_ids]
+    state["draft_picks"]   = remaining_picks
     # NOTE: rejected_games intentionally kept — Scout tab needs them until next Scout run
-    state["commit_status"]     = "done"
-    state["commit_date"]       = today   # date-based idempotency key
+    state["commit_status"] = "done" if not remaining_picks else "partial"
+    state["commit_date"]   = today
     state["commit_updated_at"] = now_iso
     state["last_updated"]      = now_iso
     state["last_report"]       = report_raw

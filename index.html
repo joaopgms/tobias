@@ -966,7 +966,7 @@ function renderAgents(){
 
   function setPill(pid,did,cls,txt){const p=document.getElementById(pid),d=document.getElementById(did);if(!p||!d)return;p.className=`agent-pill ${cls}`;d.className=`agent-dot ${cls}`;p.querySelector('span:last-child').textContent=txt;}
   setPill('scoutPill','scoutDot', scSt==='live'?'live':scSt==='unavailable'?'error':'pending', scSt==='live'?'live':scSt==='unavailable'?'error':'offline');
-  setPill('commitPill','commitDot', cmSt==='done'?'done':cmSt==='error'?'error':'pending', cmSt==='done'?'done':cmSt==='error'?'error':'offline');
+  setPill('commitPill','commitDot', cmSt==='done'?'done':cmSt==='error'?'error':cmSt==='partial'?'pending':'pending', cmSt==='done'?'done':cmSt==='error'?'error':cmSt==='partial'?'partial':'offline');
 
   // Set model labels
   const elAL=document.getElementById('analystLlm');  if(elAL) elAL.textContent=modelLabel(analystM);
@@ -1146,7 +1146,7 @@ function renderScout(){
   const commitReport = typeof COMMIT_REPORT !=='undefined'?COMMIT_REPORT:'';
   const su = typeof SCOUT_UPDATED_AT!=='undefined'?SCOUT_UPDATED_AT:'';
   const cu = ST.commit_updated_at||'';
-  const hasCommitted = ST.commit_status==='done' && !DRF.length;
+  const hasCommitted = (ST.commit_status==='done'||ST.commit_status==='partial') && !DRF.length;
   const titleEl    = document.getElementById('reportCardTitle');
   const renderedEl = document.getElementById('reportRendered');
   const rawEl      = document.getElementById('scoutModelOutput');
@@ -1904,8 +1904,8 @@ function renderCommitTab(){
   // Read from STATE_DATA.commit_report_data (written by commit agent)
   const commitStatus = ST.commit_status||'pending';
   const crd = ST.commit_report_data||null;
-  // Show last commit report whenever status=done — scout resets to 'pending' each new day
-  const todayReport = (commitStatus==='done' && crd) ? crd : null;
+  // Show last commit report whenever status=done or partial — scout resets to 'pending' each new day
+  const todayReport = ((commitStatus==='done'||commitStatus==='partial') && crd) ? crd : null;
   // Use match date comparison: if report's match date is in the past vs today, it's stale
   const commitMatchDay = todayReport && todayReport.date;
   const isStaleReport = commitMatchDay && commitMatchDay < today;
@@ -2023,7 +2023,7 @@ function copyBets(){doCopy(buildMsg()||'No bets','btnCopy','Copy');}
 function shareScoutWA(){const t=buildScoutMsg();if(!t){showToast('No picks!');return;}window.open('https://wa.me/?text='+encodeURIComponent(t),'_blank');}
 function copyScout(){doCopy(buildScoutMsg()||'No picks','btnScoutCopy','Copy');}
 function buildReportMsg(){
-  const isCommit = ST.commit_status==='done' && !DRF.length;
+  const isCommit = (ST.commit_status==='done'||ST.commit_status==='partial') && !DRF.length;
   const report = isCommit && (typeof COMMIT_REPORT!=='undefined'?COMMIT_REPORT:'')
                  ? (typeof COMMIT_REPORT!=='undefined'?COMMIT_REPORT:'')
                  : (typeof SCOUT_REPORT!=='undefined'?SCOUT_REPORT:'');
