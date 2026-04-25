@@ -891,7 +891,7 @@ function stats(){
 // -- CONFIDENCE -------------------------------------------------------------
 const CC=c=>c>=85?'conf-elite':c>=70?'conf-high':c>=55?'conf-med':c>=40?'conf-spec':'conf-no';
 const CL=c=>c>=85?'🔥 Elite':c>=70?'✅ High':c>=55?'🟡 Med':c>=40?'🔵 Spec':'❌';
-function mktBadge(pick){const p=(pick||'').toLowerCase();let cls,label;if(p.startsWith('over ')||/ over /i.test(p)){const m=(pick||'').match(/over\s+([\d.]+)/i);cls='mkt-ou';label=m?`O ${m[1]}`:'O/U';}else if(p.startsWith('under ')||/ under /i.test(p)){const m=(pick||'').match(/under\s+([\d.]+)/i);cls='mkt-ou';label=m?`U ${m[1]}`:'O/U';}else if(/[+\-]\d/.test(pick||'')&&!p.endsWith(' ml')){const m=(pick||'').match(/([+\-][\d.]+)/);cls='mkt-ats';label=m?`ATS ${m[1]}`:'ATS';}else{cls='mkt-ml';label='ML';}return`<span class="mkt-badge ${cls}">${label}</span>`;}
+function mktBadge(pick){const p=(pick||'').toLowerCase().trim();function ta(name){const t=getTeam(name.trim());return(t&&t.abbr&&t.abbr!=='?')?t.abbr:name.trim().split(' ').slice(-1)[0];}let cls,label;if(p.startsWith('over ')||/ over /i.test(p)){const m=(pick||'').match(/over\s+([\d.]+)/i);cls='mkt-ou';label=m?`O ${m[1]}`:'O/U';}else if(p.startsWith('under ')||/ under /i.test(p)){const m=(pick||'').match(/under\s+([\d.]+)/i);cls='mkt-ou';label=m?`U ${m[1]}`:'O/U';}else if(/[+\-]\d/.test(pick||'')&&!p.endsWith(' ml')){const m=(pick||'').match(/^(.+?)\s+([+\-][\d.]+)\s*$/);cls='mkt-ats';label=m?`S${m[2]}@${ta(m[1])}`:'S';}else{const name=(pick||'').replace(/ ml$/i,'').trim();cls='mkt-ml';label=`ML@${ta(name)}`;}return`<span class="mkt-badge ${cls}">${label}</span>`;}
 
 // -- TICKER -----------------------------------------------------------------
 function buildTicker(){
@@ -1268,7 +1268,7 @@ function renderTable(){
     const eid=`bx-${i}`;
     const logoM=n=>`<img src="${logoUrl(n)}" class="bet-row-logo" onerror="this.style.display='none'" alt="${getTeam(n).abbr}"/>`;
     return`<div class="bet-row" onclick="toggleBetRow('${eid}')">
-      <span class="bet-row-date">${(b.time?fmt(b.time):b.date||'').replace(',','')}</span>
+      <span class="bet-row-date">${b.time?fmtDate(b.time):b.date?b.date.slice(8,10)+'/'+b.date.slice(5,7):'-'}</span>
       <div class="bet-row-teams">${logoM(h)}<span class="bet-row-abbr">${getTeam(h).abbr}</span><span class="bet-row-vs">vs</span>${logoM(a)}<span class="bet-row-abbr">${getTeam(a).abbr}</span></div>
       ${mktBadge(b.pick)}
       <span class="bet-row-result">${rb}</span>
@@ -2082,6 +2082,7 @@ function showToast(m){const t=document.getElementById('copyToast');t.textContent
 
 // -- UTILS ------------------------------------------------------------------
 function fmt(iso){if(!iso)return'-';try{const d=new Date(iso);if(isNaN(d.getTime()))return iso;return d.toLocaleString('pt-PT',{timeZone:'Europe/Lisbon',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});}catch{return iso;}}
+function fmtDate(iso){if(!iso)return'-';try{const d=new Date(iso);if(isNaN(d.getTime()))return iso;return d.toLocaleString('pt-PT',{timeZone:'Europe/Lisbon',day:'2-digit',month:'2-digit'});}catch{return iso;}}
 
 // -- INIT -------------------------------------------------------------------
 function refresh(){
