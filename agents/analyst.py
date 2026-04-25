@@ -24,7 +24,9 @@ import logging
 from datetime import datetime, date, timezone
 
 from core.llm import call_llm, call_llm_full, call_llm_full, extract_tag, agent_model_name
-from core.espn import fetch_standings, fetch_injuries, fetch_advanced_stats, fetch_franchise_player_statuses, fetch_season_phase
+from core.espn import (fetch_standings, fetch_injuries, fetch_advanced_stats,
+                        fetch_franchise_player_statuses, fetch_season_phase,
+                        fetch_playoff_series, format_playoff_series_for_prompt)
 
 log = logging.getLogger(__name__)
 
@@ -341,7 +343,8 @@ def _build_analyst_prompt(stats_block: str, milestone_instructions: str,
                            scout_content: str, commit_content: str,
                            analyst_rules: str = "",
                            season_phase: str = "regular",
-                           playoff_context: str = "") -> str:
+                           playoff_context: str = "",
+                           playoff_series_str: str = "") -> str:
 
     is_postseason = season_phase in ("playoffs", "playin")
     phase_label = {"regular": "Regular Season", "playin": "Play-In Tournament",
@@ -352,6 +355,9 @@ def _build_analyst_prompt(stats_block: str, milestone_instructions: str,
     playoff_output_field = ""
     if is_postseason:
         playoff_section = f"""
+## LIVE PLAYOFF SERIES (from ESPN — use this as ground truth for series_context patches)
+{playoff_series_str or "No series data retrieved — patch series_context based on standings and injury data only."}
+
 ## CURRENT playoff_context.md
 {playoff_context or "(empty — populate this session)"}
 """
@@ -624,9 +630,12 @@ def run(store) -> None:
     # ── 3b. Season phase + playoff context ────────────────────────────────────
     season_phase    = fetch_season_phase()
     playoff_context = ""
+    playoff_series_str = ""
     if season_phase in ("playoffs", "playin"):
         playoff_context = store.read_md("playoff_context") or ""
-        log.info(f"Analyst: season phase={season_phase} — playoff context loaded")
+        playoff_series  = fetch_playoff_series()
+        playoff_series_str = format_playoff_series_for_prompt(playoff_series)
+        log.info(f"Analyst: season phase={season_phase} — playoff context + {len(playoff_series)} series loaded")
 
     # ── 4. Parse current version numbers ──────────────────────────────────────
     scout_meta,  _ = _parse_frontmatter(scout_content)
@@ -657,7 +666,8 @@ def run(store) -> None:
                                     adv_str, franchise_str, scout_content,
                                     commit_content, analyst_rules,
                                     season_phase=season_phase,
-                                    playoff_context=playoff_context)
+                                    playoff_context=playoff_context,
+                                    playoff_series_str=playoff_series_str)
     state["agent_models"] = state.get("agent_models", {})
     state["agent_models"]["analyst"] = llm
     llm_result = call_llm_full(system, user, max_tokens=10000, agent="analyst")

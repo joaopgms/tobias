@@ -4,6 +4,7 @@ ESPN hidden API helpers for Tobias.
 Scores, schedules, injuries, standings — all free, no API key.
 """
 
+import re
 import ssl
 import json
 import logging
@@ -62,6 +63,113 @@ def fetch_season_phase() -> str:
             continue
     log.warning("ESPN season phase: could not determine — defaulting to 'regular'")
     return "regular"
+
+
+# ── Playoff series ─────────────────────────────────────────────────────────────
+
+def fetch_playoff_series() -> list[dict]:
+    """
+    Scans the last 14 days of scoreboards to build current playoff series state.
+    Returns [] during regular season or on failure.
+    Each entry: {home, away, home_wins, away_wins, series_title, round_name, game_number}
+    """
+    series_map = {}  # frozenset({home, away}) → entry (first found = most recent)
+
+    for delta in range(0, 15):
+        d = (date.today() - timedelta(days=delta)).strftime("%Y%m%d")
+        url = f"https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates={d}"
+        try:
+            data = _get(url)
+            leagues = data.get("leagues", [])
+            if leagues:
+                type_id = str(leagues[0].get("season", {}).get("type", {}).get("id", "2"))
+                if type_id not in ("3", "5"):
+                    break  # not playoffs — stop scanning
+            events = data.get("events", [])
+            if not events and delta > 0:
+                continue  # off-day, keep scanning
+
+            for evt in events:
+                comp  = evt["competitions"][0]
+                comps = comp["competitors"]
+                home  = next((t for t in comps if t["homeAway"] == "home"), None)
+                away  = next((t for t in comps if t["homeAway"] == "away"), None)
+                if not home or not away:
+                    continue
+
+                home_name = home["team"]["displayName"]
+                away_name = away["team"]["displayName"]
+                key = frozenset([home_name, away_name])
+                if key in series_map:
+                    continue  # already have a more recent game for this series
+
+                # Extract series wins — ESPN stores in competition.series.competitors
+                series     = comp.get("series", {})
+                home_wins  = 0
+                away_wins  = 0
+                series_title = series.get("title", "") or comp.get("seriesSummary", "")
+                for sc in series.get("competitors", []):
+                    sc_id   = sc.get("id", "")
+                    sc_wins = int(sc.get("wins", 0))
+                    if sc_id == home.get("id", ""):
+                        home_wins = sc_wins
+                    elif sc_id == away.get("id", ""):
+                        away_wins = sc_wins
+
+                # Round name from competition notes or season type
+                round_name = ""
+                game_num   = 0
+                for note in comp.get("notes", []):
+                    text = note.get("headline", "")
+                    m = re.search(r"Game (\d+)", text, re.IGNORECASE)
+                    if m:
+                        game_num = int(m.group(1))
+                    if not round_name:
+                        round_name = text
+
+                series_map[key] = {
+                    "home":         home_name,
+                    "away":         away_name,
+                    "home_wins":    home_wins,
+                    "away_wins":    away_wins,
+                    "series_title": series_title,
+                    "round_name":   round_name,
+                    "game_number":  game_num,
+                }
+        except Exception as e:
+            log.debug(f"fetch_playoff_series {d}: {e}")
+            continue
+
+    result = list(series_map.values())
+    log.info(f"ESPN playoff series: {len(result)} series found")
+    return result
+
+
+def format_playoff_series_for_prompt(series: list[dict]) -> str:
+    if not series:
+        return "Playoff series data unavailable — Scout must verify from ESPN scoreboard."
+    lines = ["CURRENT PLAYOFF SERIES (from ESPN scoreboard):"]
+    for s in series:
+        home, away = s["home"], s["away"]
+        hw, aw     = s["home_wins"], s["away_wins"]
+        title      = s.get("series_title", "")
+        rnd        = s.get("round_name", "")
+        gnum       = s.get("game_number", 0)
+
+        if title:
+            line = title
+        elif hw > aw:
+            line = f"{home} leads {away} {hw}-{aw}"
+        elif aw > hw:
+            line = f"{away} leads {home} {aw}-{hw}"
+        else:
+            line = f"{home} vs {away} tied {hw}-{hw}"
+
+        suffix = f" (Game {gnum + 1} next)" if gnum else ""
+        if rnd:
+            suffix += f" [{rnd}]"
+        lines.append(f"  {line}{suffix}")
+    return "\n".join(lines)
 
 
 # ── Scoreboard ─────────────────────────────────────────────────────────────────
