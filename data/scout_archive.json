@@ -1020,5 +1020,83 @@
     "tokens_in": 10982,
     "tokens_out": 5886,
     "cost_usd": 0.121236
+  },
+  {
+    "ts": "2026-04-25T14:49:27.035510+00:00",
+    "date": "2026-04-25",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_onexbet",
+    "draft_count": 3,
+    "picks": [
+      {
+        "id": "nba_draft_20260425_001",
+        "match": "Orlando Magic vs Detroit Pistons",
+        "time": "2026-04-25T17:00:00Z",
+        "pick": "Detroit Pistons ML",
+        "odds": 1.79,
+        "stake": 252.0,
+        "potential_return": 451.08,
+        "confidence": 72,
+        "reasoning": "STEP 0 - LINE ANOMALY CHECK: Detroit (60-22, #1 East seed) priced as road favourite at 1.79 vs Orlando (45-37). Home underdog at 2.17 — checking: home team with 45-37 record vs 60-22 visitor; visitor is materially better record and priced as favourite. No anomaly — correct direction. No line movement flag. CLEAR. | STEP 1 - NetRtg L15: Detroit +25.2 vs Orlando +2.9 — gap of 22.3 points. This is an extraordinary gap, far exceeding the 4.0 threshold. Massive edge signal for Detroit. | STEP 2 - B2B/Schedule: No B2B situation noted. Both teams have adequate rest in playoffs. No adjustment needed. | STEP 3 - Franchise player injuries: Detroit — skills file notes to re-verify Cade Cunningham, Isaiah Stewart, Jalen Duren. NBA official injury report for tonight lists ONLY Jonathan Isaac (ORL) as out — no Detroit players listed. This implies Detroit's roster is intact (no absences in official PDF). Orlando missing Jonathan Isaac (rotation player, not franchise-level impact sufficient to change line). | STEP 4 - Playoff motivation: Game 2 of first-round series. Both teams fully motivated. Detroit is #1 East seed with 60-22 record — elite team. | STEP 5 - L10: Detroit 8-2, Orlando 7-3. Detroit edge. | STEP 6 - Home court: Orlando has home court here, worth ~3-4 pts in playoffs. Detroit's road record as a dominant team mitigates this. | STEP 7 - Season NetRtg: Detroit +8.2 vs Orlando +0.6 — gap of 7.6 points, well above threshold. | FRANCHISE PLAYER NOTE: NBA official PDF shows no DET absences tonight. Cunningham/Stewart/Duren assumed available pending no contrary flag. Confidence -0 from franchise player concern (all appear active per official report). | EV CALCULATION: Confidence 72. EV = (0.72 × 1.79) - 1 = 1.2888 - 1 = 0.2888 = 28.9%. STRONG EDGE (≥ 0.15). | STAKE: Confidence 72 = High tier (20-25% bankroll). Using 20% = €252.35, rounded to €252.00. Orlando's home court prevents full 25% allocation. | ODDS IN RANGE: 1.79 is within 1.60-2.50 ML target range. ✓",
+        "anchor_players": [
+          "Cade Cunningham",
+          "Isaiah Stewart",
+          "Jalen Duren"
+        ],
+        "drafted_at": "2026-04-25T14:49:36Z",
+        "market_type": "ml"
+      },
+      {
+        "id": "nba_draft_20260425_002",
+        "match": "Atlanta Hawks vs New York Knicks",
+        "time": "2026-04-25T22:00:00Z",
+        "pick": "New York Knicks ML",
+        "odds": 1.78,
+        "stake": 189.0,
+        "potential_return": 336.42,
+        "confidence": 68,
+        "reasoning": "STEP 0 - LINE ANOMALY CHECK: NYK (53-29, #3 East seed) priced as road favourite at 1.78 vs Atlanta (46-36, #6 seed). Home underdog ATL at 2.18. No anomaly — correct direction, higher seed as road favourite in series context is standard. No movement flag. CLEAR. | STEP 1 - NetRtg L15: NYK +10.4 vs ATL +13.7 — gap of 3.3 points in Atlanta's FAVOUR. Below the 4.0 threshold, so no decisive edge signal from L15. However season NetRtg favours NYK (+6.5 vs +2.4, gap of 4.1). Directional conflict — L15 slightly favours ATL, season NetRtg favours NYK. No strong directional signal from L15 alone; use season NetRtg as primary. | STEP 2 - B2B/Schedule: No B2B. Playoff rest rules apply — no adjustment. | STEP 3 - Franchise player injuries: NYK — skills file notes to re-verify Jalen Brunson, Karl-Anthony Towns. NBA official injury report tonight lists only Jock Landale (ATL, roster depth C) as absent — no NYK players listed. Brunson and KAT appear available. ATL losing Landale is marginal. | HOT STREAK FADE RULE: ATL is at 46-36 overall (.561 W%) with L10 6-4. Overall W% .561 is above the .550 sub-talent threshold noted in skills — this rule applies when W% is BELOW .550. ATL at .561 does NOT trigger the automatic hot-streak fade rule. However, season NetRtg of +2.4 is modest for a .561 record, suggesting some schedule-driven inflation. | STEP 4 - Playoff motivation: Game 2 playoff series. NYK is #3 seed vs #6 ATL. Both motivated. NYK coming off regular season with L1 entering playoffs — may have had minor load management. | STEP 5 - L10: NYK 6-4, ATL 6-4. Even. | STEP 6 - Home court: ATL has home court advantage (+3-4 pts in playoffs). This partially explains the close ML line. | STEP 7 - Season NetRtg: NYK +6.5 vs ATL +2.4 — gap of 4.1 points, meaningful. NYK also has better OffRtg (119.9 vs 116.1) and comparable DefRtg (113.4 vs 113.8). | DATA CONFLICT NOTE: Skills file notes Trae Young DATA CONFLICT (appears in both ATL and WAS feeds). NBA official injury report tonight shows only Jock Landale for ATL — no Trae Young absence listed. This suggests Young IS available for ATL, which is actually negative for NYK thesis. However NYK's superior NetRtg gap and roster quality still supports the pick. Confidence adjustment: applying -5 for residual Trae Young data uncertainty (could be active and influential). | CONFIDENCE: Base 73, -5 for Trae Young data conflict uncertainty = 68. | EV CALCULATION: EV = (0.68 × 1.78) - 1 = 1.2104 - 1 = 0.2104 = 21.0%. STRONG EDGE (≥ 0.15). | STAKE: Confidence 68 = Medium tier (15-20%). Using 15% = €189.26, rounded to €189.00. ATL home court and Young uncertainty prevent higher allocation. | ODDS IN RANGE: 1.78 is within 1.60-2.50 ML target range. ✓",
+        "anchor_players": [
+          "Jalen Brunson",
+          "Karl-Anthony Towns",
+          "Mikal Bridges"
+        ],
+        "drafted_at": "2026-04-25T14:49:36Z",
+        "market_type": "ml"
+      },
+      {
+        "id": "nba_draft_20260425_003",
+        "match": "Minnesota Timberwolves vs Denver Nuggets",
+        "time": "2026-04-26T00:30:00Z",
+        "pick": "Denver Nuggets ML",
+        "odds": 1.86,
+        "stake": 189.0,
+        "potential_return": 351.54,
+        "confidence": 68,
+        "reasoning": "STEP 0 - LINE ANOMALY CHECK: Denver (54-28, #6 West seed — seeding anomaly noted in skills) priced as road underdog favourite at 1.86 vs MIN (49-33, #5 seed) at 2.07 home. Denver is the ROAD team and the team with the better record (54-28 vs 49-33). MIN is home favourite at 2.07 — checking anomaly: 'Home team with materially better record priced as underdog at ≥ 2.20' — MIN is home at 2.07, not ≥ 2.20, so this specific anomaly flag doesn't trigger. The road better-record team (DEN) being priced as slight underdog is unusual but explainable by MIN home court + series context. No formal anomaly. | SEEDING ANOMALY NOTE: Skills file notes Denver (54-28, W12) ranked as #6 West seed behind LAL (#3) — verified against prompt standings. LAL is 53-29 vs DEN 54-28; DEN has better record. This is a noted data flag. In actual matchup context (vs MIN #5), Denver as road team with better record being slight underdog is explained by MIN home court. No bet-blocking anomaly. | STEP 1 - NetRtg L15: Denver +23.5 vs MIN +0.7 — gap of 22.8 points. MASSIVE edge signal, far exceeding 4.0 threshold. This is the strongest L15 signal on the slate. Denver has been dominant over the last 15 games. | STEP 2 - B2B/Schedule: No B2B. Denver W12 streak — motivated and in form. Aaron Gordon listed as Questionable (calf tightness) — he is important but not the franchise player. | STEP 3 - Franchise player injuries: Denver — skills file notes to re-verify Nikola Jokic and Jamal Murray. NBA official injury report tonight lists: Aaron Gordon Questionable, Peyton Watson Out. NO Jokic or Murray absence listed. Jokic appears available. Jokic available + DEN L15 +23.5 = enormous edge. Aaron Gordon Questionable: Gordon is a key role player but not franchise-level. Confidence -5 for Gordon uncertainty (Day-to-Day equivalent). | MIN franchise players: Skills file notes to re-verify Anthony Edwards (prior OUT status may have changed), Rudy Gobert, Mike Conley, Julius Randle. NBA official injury report tonight shows ZERO MIN absences listed. Edwards appears available. This removes the edge-amplifier for DEN from MIN star absence, but DEN's L15 advantage is overwhelming regardless. | STEP 4 - Playoff motivation: Both teams fully motivated in first-round playoff series. Denver (W12) is the hotter team. | STEP 5 - L10: Denver 10-0, MIN 5-5. Massive advantage for Denver. | STEP 6 - Home court: MIN has home court, worth +3-4 pts in playoffs. DEN's L15 dominance (+22.8 gap) far exceeds home court value. | STEP 7 - Season NetRtg: Denver +5.2 vs MIN +3.1 — gap of 2.1 pts, moderate. But L15 is the primary signal and it's decisive. | GORDON QUESTIONABLE: Applying -5 confidence adjustment. Base confidence: 73, -5 = 68. | EV CALCULATION: EV = (0.68 × 1.86) - 1 = 1.2648 - 1 = 0.2648 = 26.5%. STRONG EDGE (≥ 0.15). | ODDS: 1.86 within 1.60-2.50 ML target range. ✓ | STAKE: Confidence 68 = Medium tier (15-20%). Using 15% = €189.26, rounded to €189.00. Gordon uncertainty prevents higher tier.",
+        "anchor_players": [
+          "Nikola Jokic",
+          "Jamal Murray",
+          "Aaron Gordon"
+        ],
+        "drafted_at": "2026-04-25T14:49:36Z",
+        "market_type": "ml"
+      }
+    ],
+    "rejected": [
+      {
+        "match": "Phoenix Suns vs Oklahoma City Thunder",
+        "reason": "OKC ML at 1.27 is far below the 1.60 minimum odds target. PHX ML at 4.24 is above the 2.50 maximum. Spread PHX +9.5 at 1.91 is in range but: LINE ANOMALY CHECK — OKC missing Jalen Williams (confirmed OUT roster-only, franchise-level guard), Isaiah Joe (Doubtful), Thomas Sorber (Out). PHX has Grayson Allen Questionable and Jordan Goodwin Questionable. OKC's L15 +29.4 is dominant but priced at 1.27 meaning even at full confidence, EV = (0.90 × 1.27) - 1 = 0.143 — barely positive but odds outside acceptable ML range. Spread: PHX covering +9.5 at 1.91 — PHX L15 +9.7 vs OKC L15 +29.4 (gap 19.7pts favours OKC). Williams absence reduces OKC ceiling but season NetRtg +11.1 remains elite. With Williams OUT, OKC spread confidence would be ~65 max; EV = (0.65 × 1.91) - 1 = 0.2415 — technically meets bar, but skills file mandates re-verification of SGA and Holmgren status before any OKC pick. Official PDF shows only Williams/Sorber/Joe absent — SGA and Holmgren appear active. However, 9.5 point spread for road team with key player absent (Williams) against a playoff-motivated PHX creates genuine line uncertainty. Deferring to Commit phase for roster confirmation rather than drafting now.",
+        "ml_home": 4.24,
+        "ml_away": 1.27,
+        "decision": "deferred"
+      }
+    ],
+    "report": "Injury source confirmed NBA Official PDF — full confidence rules apply. Pace data available (non-zero) but Pace signals suppressed as secondary given strong NetRtg edges available. Three ML picks drafted across DET, NYK, and DEN — all backed by large NetRtg L15 gaps and confirmed franchise player availability per official PDF. DET vs ORL features the clearest edge (L15 gap +22.3, DET roster intact). DEN vs MIN is the most compelling statistical case (L15 gap +22.8, W12 streak, Jokic available). NYK vs ATL is the tightest pick, carried primarily by season NetRtg gap with Trae Young data conflict resolved in ATL's favour (Young appears active per official report, slight confidence reduction applied). OKC vs PHX deferred to Commit — ML odds out of range and Williams-absent spread requires SGA/Holmgren roster re-confirmation before committing. Total stake deployed: €630 of €1261.74 bankroll (~50%, within the 70% daily max).",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 10626,
+    "tokens_out": 3793,
+    "cost_usd": 0.088773
   }
 ]
