@@ -103,11 +103,10 @@ def fetch_playoff_series() -> list[dict]:
                 if key in series_map:
                     continue  # already have a more recent game for this series
 
-                # Extract series wins — ESPN stores in competition.series.competitors
-                series     = comp.get("series", {})
-                home_wins  = 0
-                away_wins  = 0
-                series_title = series.get("title", "") or comp.get("seriesSummary", "")
+                # Extract series wins — competitors[].id matches competitor["id"] exactly
+                series    = comp.get("series", {})
+                home_wins = 0
+                away_wins = 0
                 for sc in series.get("competitors", []):
                     sc_id   = sc.get("id", "")
                     sc_wins = int(sc.get("wins", 0))
@@ -116,16 +115,23 @@ def fetch_playoff_series() -> list[dict]:
                     elif sc_id == away.get("id", ""):
                         away_wins = sc_wins
 
-                # Round name from competition notes or season type
+                # Build readable title from wins (series.title is always "Playoff Series")
+                if home_wins > away_wins:
+                    series_title = f"{home_name} leads {home_wins}-{away_wins}"
+                elif away_wins > home_wins:
+                    series_title = f"{away_name} leads {away_wins}-{home_wins}"
+                else:
+                    series_title = f"Tied {home_wins}-{away_wins}"
+
+                # Round name and game number from notes[0].headline e.g. "East 1st Round - Game 3"
                 round_name = ""
                 game_num   = 0
-                for note in comp.get("notes", []):
-                    text = note.get("headline", "")
-                    m = re.search(r"Game (\d+)", text, re.IGNORECASE)
+                headline   = comp.get("notes", [{}])[0].get("headline", "")
+                if headline:
+                    m = re.search(r"Game (\d+)", headline, re.IGNORECASE)
                     if m:
                         game_num = int(m.group(1))
-                    if not round_name:
-                        round_name = text
+                    round_name = re.sub(r"\s*-\s*Game \d+", "", headline).strip()
 
                 series_map[key] = {
                     "home":         home_name,
