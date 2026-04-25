@@ -250,6 +250,8 @@
     .team-logo-sm{width:22px;height:22px;object-fit:contain;border-radius:3px}
     .badge{display:inline-flex;align-items:center;padding:3px 9px;border-radius:var(--r-pill);font-size:.64rem;font-weight:700;letter-spacing:.5px;border:1px solid transparent}
     .badge-won{background:var(--green-soft);color:var(--green);border-color:#b3e0cc}.badge-lost{background:var(--burg-soft);color:var(--burg);border-color:var(--burg-mid)}.badge-pending{background:var(--yellow-soft);color:var(--yellow);border-color:var(--yellow-mid)}
+    .mkt-badge{display:inline-flex;align-items:center;padding:1px 6px;border-radius:var(--r-pill);font-size:.6rem;font-weight:700;letter-spacing:.3px;border:1px solid transparent;white-space:nowrap}
+    .mkt-ml{background:var(--cyan-soft);color:var(--cyan);border-color:#a5d8e6}.mkt-ats{background:var(--yellow-soft);color:var(--yellow);border-color:var(--yellow-mid)}.mkt-ou{background:var(--teal-soft);color:var(--teal);border-color:var(--teal-mid)}
     .pnl-pos{color:var(--green);font-weight:700}.pnl-neg{color:var(--burg);font-weight:700}
     .reasoning-cell{font-size:.68rem;color:var(--muted);line-height:1.5;white-space:normal!important;min-width:180px;max-width:320px}
     .bet-cards-mobile{display:none;padding:4px 0}
@@ -513,7 +515,7 @@
         <button class="btn-copy" id="btnCopy" onclick="copyBets()">Copy</button>
       </div>
     </div>
-    <table><thead><tr><th onclick="sortBy('date')">Date ⇅</th><th onclick="sortBy('match')">Matchup ⇅</th><th onclick="sortBy('odds')">Odds ⇅</th><th onclick="sortBy('stake')">Stake ⇅</th><th>Potential</th><th onclick="sortBy('result')">Result ⇅</th><th onclick="sortBy('pnl')">P&L ⇅</th><th onclick="sortBy('confidence')">Conf. ⇅</th><th class="reasoning-cell">Analysis</th></tr></thead><tbody id="betTableBody"></tbody></table>
+    <table><thead><tr><th onclick="sortBy('date')">Date ⇅</th><th onclick="sortBy('match')">Matchup ⇅</th><th onclick="sortBy('odds')">Type / Odds ⇅</th><th onclick="sortBy('stake')">Stake ⇅</th><th>Potential</th><th onclick="sortBy('result')">Result ⇅</th><th onclick="sortBy('pnl')">P&L ⇅</th><th onclick="sortBy('confidence')">Conf. ⇅</th><th class="reasoning-cell">Analysis</th></tr></thead><tbody id="betTableBody"></tbody></table>
     <div class="bet-cards-mobile" id="betCardsMobile"></div>
     <div class="empty-state" id="emptyState" style="display:none"><span style="font-size:2.5rem;display:block;margin-bottom:10px">🏀</span>No bets match your filters.</div>
   </div>
@@ -889,6 +891,7 @@ function stats(){
 // -- CONFIDENCE -------------------------------------------------------------
 const CC=c=>c>=85?'conf-elite':c>=70?'conf-high':c>=55?'conf-med':c>=40?'conf-spec':'conf-no';
 const CL=c=>c>=85?'🔥 Elite':c>=70?'✅ High':c>=55?'🟡 Med':c>=40?'🔵 Spec':'❌';
+function mktBadge(pick){const p=(pick||'').toLowerCase();let cls,label;if(p.startsWith('over ')||/ over /i.test(p)){const m=(pick||'').match(/over\s+([\d.]+)/i);cls='mkt-ou';label=m?`O ${m[1]}`:'O/U';}else if(p.startsWith('under ')||/ under /i.test(p)){const m=(pick||'').match(/under\s+([\d.]+)/i);cls='mkt-ou';label=m?`U ${m[1]}`:'O/U';}else if(/[+\-]\d/.test(pick||'')&&!p.endsWith(' ml')){const m=(pick||'').match(/([+\-][\d.]+)/);cls='mkt-ats';label=m?`ATS ${m[1]}`:'ATS';}else{cls='mkt-ml';label='ML';}return`<span class="mkt-badge ${cls}">${label}</span>`;}
 
 // -- TICKER -----------------------------------------------------------------
 function buildTicker(){
@@ -1252,7 +1255,7 @@ function renderTable(){
     const gameTime = b.time ? fmt(b.time) : (b.date||'-');
     return`<tr><td style='white-space:nowrap'><span style="font-size:.72rem;color:var(--muted)">${gameTime}</span></td>
       <td><div class="team-cell">${logoImg(h)}<span>${getTeam(h).short}</span><span style="font-size:.55rem;font-weight:700;color:var(--muted);background:var(--surface);border:1px solid var(--border2);border-radius:3px;padding:0 3px;margin-left:2px">H</span><span style="color:var(--muted);margin:0 4px;font-size:.7rem">vs</span>${logoImg(a)}<span>${getTeam(a).short}</span><span style="font-size:.55rem;font-weight:700;color:var(--muted);background:var(--surface);border:1px solid var(--border2);border-radius:3px;padding:0 3px;margin-left:2px">A</span></div></td>
-      <td>${(b.odds||0).toFixed(2)}</td><td>€${(b.stake||0).toFixed(2)}</td><td>€${(b.potential_return||0).toFixed(2)}</td>
+      <td>${mktBadge(b.pick)} ${(b.odds||0).toFixed(2)}</td><td>€${(b.stake||0).toFixed(2)}</td><td>€${(b.potential_return||0).toFixed(2)}</td>
       <td>${rb}</td><td>${pnl}</td>
       <td><span class="conf-pill ${CC(b.confidence)}">${b.confidence}/100</span></td>
       <td class="reasoning-cell">${oneLiner(b.reasoning)}</td>
@@ -1267,6 +1270,7 @@ function renderTable(){
     return`<div class="bet-row" onclick="toggleBetRow('${eid}')">
       <span class="bet-row-date">${(b.time?fmt(b.time):b.date||'').replace(',','')}</span>
       <div class="bet-row-teams">${logoM(h)}<span class="bet-row-abbr">${getTeam(h).abbr}</span><span class="bet-row-vs">vs</span>${logoM(a)}<span class="bet-row-abbr">${getTeam(a).abbr}</span></div>
+      ${mktBadge(b.pick)}
       <span class="bet-row-result">${rb}</span>
       <span class="bet-row-chevron" id="${eid}-chev">▼</span>
     </div>
