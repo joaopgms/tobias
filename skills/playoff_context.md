@@ -1,7 +1,7 @@
 ---
-version: 13
-updated_at: 2026-04-24T11:55:31.239998+00:00
-updated_by: analyst_2026-04-24
+version: 14
+updated_at: 2026-04-25T11:36:49.332795+00:00
+updated_by: analyst_2026-04-25
 llm: claude-sonnet-4-6
 ---
 
@@ -13,7 +13,7 @@ All 8 play-in participants (seeds 7-10 in each conference) are in win-or-go-home
 See playin_rules section for motivation and elimination rules specific to this phase.
 
 ## SECTION:series_context
-PLAY-IN TOURNAMENT — Active (updated 2026-04-30)
+PLAY-IN TOURNAMENT — Active (updated 2026-05-01)
 
 Play-In participants based on final regular season standings (seeds 7-10 each conference):
 
@@ -38,10 +38,10 @@ Confirmed play-in matchups: NOT YET OFFICIALLY ANNOUNCED — Scout MUST verify o
 
 Seeds 1-6 awaiting play-in completion (will enter first round playoffs):
 EAST seeds 1-6: #1 Detroit (60-22, NetRtg +8.2, W3) | #2 Boston (56-26, NetRtg +8.2, W2) | #3 New York Knicks (53-29, NetRtg +6.5, L1) | #4 Cleveland (52-30, NetRtg +4.0, W1) | #5 Toronto (46-36, NetRtg +2.6, W1) | #6 Atlanta (46-36, NetRtg +2.4, L1)
-WEST seeds 1-6: #1 OKC (64-18, NetRtg +11.1, L2 — CAUTION: Jalen Williams now OUT [roster-only]) | #2 San Antonio (62-20, NetRtg +8.3, L1) | #3 LA Lakers (53-29, NetRtg +1.7, W3 — CAUTION: Doncic + Reaves both OUT) | #4 Houston (52-30, NetRtg +5.4, W1 — KD status requires re-verify) | #5 Minnesota (49-33, NetRtg +3.1, W2) | #6 Denver (54-28, NetRtg +5.2, W12)
+WEST seeds 1-6: #1 OKC (64-18, NetRtg +11.1, L2 — CAUTION: Jalen Williams OUT [roster-only] confirmed this session, re-verify SGA+Holmgren) | #2 San Antonio (62-20, NetRtg +8.3, L1) | #3 LA Lakers (53-29, NetRtg +1.7, W3 — CAUTION: Doncic + Reaves both OUT) | #4 Houston (52-30, NetRtg +5.4, W1 — KD status requires re-verify) | #5 Minnesota (49-33, NetRtg +3.1, W2) | #6 Denver (54-28, NetRtg +5.2, W12)
 
-ROSTER STATUS UPDATES (2026-04-30 session):
-- Jalen Williams (OKC): NOW in verified absence feed as OUT [roster-only] — significant change for #1 seed. Re-verify vs NBA official PDF before any OKC pick.
+ROSTER STATUS UPDATES (2026-05-01 session):
+- Jalen Williams (OKC): Confirmed in verified absence feed as OUT [roster-only] — significant for #1 seed. Re-verify vs NBA official PDF before any OKC pick.
 - Jordan McLaughlin (SAS): OUT [roster-only] — depth guard absence.
 - Keshon Gilbert (ATL): OUT [roster-only] — depth guard absence.
 - Kevin Durant (HOU): NOT in current verified absence feed — was previously roster-only OUT. DATA FLAG: re-verify vs NBA official PDF before any HOU pick.
@@ -50,10 +50,10 @@ ROSTER STATUS UPDATES (2026-04-30 session):
 
 DATA INTEGRITY FLAG: Trae Young appears in both ATL and WAS verified absence feeds. Do NOT assume ATL availability or WAS assignment without NBA official PDF confirmation.
 DENVER SEEDING ANOMALY: Denver (54-28, W12) ranked as #6 West seed behind LAL (53-29) at #3 — re-verify against official NBA bracket before any series matchup assumption.
-OKC ROSTER ALERT: Jalen Williams added to verified absence feed this session. If Williams is confirmed OUT alongside prior OKC absences, re-evaluate OKC ML/spread picks downward despite #1 seed status and +11.1 NetRtg.
+OKC ROSTER ALERT: Jalen Williams confirmed OUT [roster-only] this session. If Williams is confirmed OUT alongside prior OKC absences (Sorber), re-evaluate OKC ML/spread picks downward despite #1 seed status and +11.1 NetRtg. SGA and Holmgren must be re-verified before any OKC pick.
 
 ## SECTION:elimination_flags
-PLAY-IN ELIMINATION FLAGS (updated 2026-04-30):
+PLAY-IN ELIMINATION FLAGS (updated 2026-05-01):
 
 All play-in games are effectively win-or-go-home for certain seeds:
 - 9-seed (both conferences): Game 1 loss = eliminated. Maximum desperation.
@@ -70,12 +70,12 @@ HIGH-RISK / FADE FLAGS:
 - Philadelphia 76ers (#7, NetRtg -0.2): Volatile; worst NetRtg of any 7-seed. Charlotte Hornets (NetRtg +5.0) may be statistically superior despite lower seeding.
 - Charlotte Hornets (#8, NetRtg +5.0): Strongest statistical case of all play-in teams. If priced as underdog vs PHI, NetRtg gap +5.2 supports Charlotte as value pick.
 
-PLAYOFF ROUND 1 — ROSTER ALERT FLAGS (2026-04-30):
-- OKC (#1 West): Jalen Williams now OUT [roster-only]. If confirmed, reduces OKC ceiling despite +11.1 NetRtg. Re-verify SGA and Holmgren status before any OKC first-round pick. Do NOT assume standard #1 seed confidence without roster confirmation.
+PLAYOFF ROUND 1 — ROSTER ALERT FLAGS (2026-05-01):
+- OKC (#1 West): Jalen Williams NOW CONFIRMED OUT [roster-only]. Reduces OKC ceiling despite +11.1 NetRtg. Re-verify SGA and Holmgren status before any OKC first-round pick. Do NOT assume standard #1 seed confidence without roster confirmation.
 - LAL (#3 West): Doncic + Reaves both OUT — depth critically thin. First-round matchup vs DEN (W12, +5.2 NetRtg) is the highest-risk mismatched series in the bracket. Only back LAL if roster resolves via official PDF.
 - HOU (#4 West): Kevin Durant status unresolved — if Durant is confirmed active, HOU is a legitimate threat. If OUT, HOU faces significant disadvantage vs MIN (#5). Mandatory re-verify.
 
-STAT EDGE NOTES (2026-04-30):
+STAT EDGE NOTES (2026-05-01):
 - PHI vs CHA: Charlotte's NetRtg (+5.0) is 5.2 points better than PHI (-0.2). Meaningful gap (threshold ≥ 4.0). PHI is higher seed but statistically weaker — line anomaly risk if PHI priced ≤ 1.65.
 - MIA vs POR: Miami (+2.2) vs Portland (-0.2) — 2.4pt gap, directionally favours MIA. Home court decisive.
 - GSW vs [10-seed]: GSW at -0.4 NetRtg — fade-first approach. Verify 10-seed before any directional pick.
@@ -136,7 +136,7 @@ How to use H2H in play-in and playoffs:
 - If H2H games were played with significantly different rosters (key player absent):
   flag and discount — those results don't reflect the current matchup.
 
-CRITICAL CAVEAT (2026-04-30): Multiple teams had franchise players in roster-only OUT feed for extended periods. Regular season H2H games played with depleted rosters must be heavily discounted — verify roster state for each H2H game before applying the +8 adjustment. Especially critical for: OKC (SGA/Williams/Holmgren status — Williams now OUT [roster-only]), BOS (Tatum), MIN (Edwards), HOU (Durant — status unresolved), LAL (Doncic + Reaves both OUT).
+CRITICAL CAVEAT (2026-05-01): Multiple teams had franchise players in roster-only OUT feed for extended periods. Regular season H2H games played with depleted rosters must be heavily discounted — verify roster state for each H2H game before applying the +8 adjustment. Especially critical for: OKC (SGA/Williams/Holmgren — Williams now confirmed OUT [roster-only]), BOS (Tatum), MIN (Edwards — prior OUT status may have changed), HOU (Durant — status unresolved), LAL (Doncic + Reaves both OUT).
 
 EAST play-in matchups H2H (to be populated when matchups officially confirmed):
 - PHI (#7) vs CHA (#8): [populate after official announcement — verify H2H roster context; PHI NetRtg -0.2 vs CHA +5.0 means any CHA underdog price warrants scrutiny]
@@ -149,7 +149,7 @@ WEST play-in matchups H2H (to be populated when matchups officially confirmed):
 
 First-round playoff H2H (to be populated after play-in completes and bracket is set):
 - EAST: DET vs [8-seed] | BOS vs [7-seed] | NYK vs ATL (#6) | CLE vs TOR (#5)
-- WEST: OKC vs [8-seed — CAUTION: Williams OUT [roster-only], verify SGA+Holmgren] | SAS vs [7-seed] | LAL vs DEN (#6 — CAUTION: Doncic+Reaves OUT vs DEN W12, NetRtg gap +3.5 in DEN favour) | HOU vs MIN (#5 — CAUTION: Durant status unresolved)
+- WEST: OKC vs [8-seed — CAUTION: Williams confirmed OUT [roster-only], verify SGA+Holmgren] | SAS vs [7-seed] | LAL vs DEN (#6 — CAUTION: Doncic+Reaves OUT vs DEN W12, NetRtg gap +3.5 in DEN favour) | HOU vs MIN (#5 — CAUTION: Durant status unresolved)
 
 NOTE: H2H records to be populated once official matchups announced. LAL vs DEN remains highest-priority series due to roster asymmetry. Any H2H where Doncic was absent (LAL) must be flagged and discounted.
 
