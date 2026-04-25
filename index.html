@@ -877,8 +877,8 @@ function getFiltered(){
 function stats(){
   const b=allBets.filter(x=>x.season===activeSeason&&(activeGame==='all'||x.game==activeGame));
   const s=b.filter(x=>x.result),won=s.filter(x=>x.result==='WON'),lost=s.filter(x=>x.result==='LOST'),pend=b.filter(x=>!x.result);
-  const tStk=s.reduce((a,x)=>a+x.stake,0),tRet=won.reduce((a,x)=>a+(x.returned||0),0),pnl=tRet-tStk;
-  const wr=s.length?Math.round(won.length/s.length*100):null,roi=tStk?((pnl/tStk)*100).toFixed(1):null;
+  const tStk=b.reduce((a,x)=>a+x.stake,0),sStk=s.reduce((a,x)=>a+x.stake,0),tRet=won.reduce((a,x)=>a+(x.returned||0),0),pnl=tRet-sStk;
+  const wr=s.length?Math.round(won.length/s.length*100):null,roi=sStk?((pnl/sStk)*100).toFixed(1):null;
   const gameRecord=(HIST.seasons||[]).flatMap(s=>s.games||[]).find(g=>g.game==activeGame);
   const isCurrentGame=activeGame==='all'||activeGame==ST.game;
   const br=isCurrentGame?(ST.bankroll||1000):(gameRecord?.final_bankroll??1000);
@@ -1229,7 +1229,7 @@ function renderWL(){
 function renderAnalytics(){
   const s=stats();
   const aOdds=s.s.length?(s.s.reduce((a,b)=>a+(b.odds||0),0)/s.s.length).toFixed(2):'-';
-  const aStk=s.s.length?(s.tStk/s.s.length).toFixed(0):'-';
+  const aStk=s.b.length?(s.tStk/s.b.length).toFixed(0):'-';
   const best=s.won.length?s.won.reduce((b,x)=>(x.pnl||0)>(b.pnl||0)?x:b,s.won[0]):null;
   const stk=s.streak>1?`<span class="streak-badge ${s.sType==='WON'?'streak-w':'streak-l'}">${s.sType==='WON'?'🔥':'❄️'} ${s.streak} in a row</span>`:'-';
   document.getElementById('analyticsStats').innerHTML=`

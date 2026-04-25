@@ -411,6 +411,25 @@ def run(store, force: bool = False, window_picks: list = None) -> None:
             r["match"] = _normalise_match(r["match"])
     state["late_scout_rejections"] = late_rejs
 
+    # ── 8c. Enforce commit window — drop LLM-added out-of-window bets ─────────
+    # The LLM sees the full slate for late-scout and may add bets for late games
+    # even when instructed not to. Enforce the 90-min window in code.
+    if window_picks is not None and committed_bets:
+        cutoff = now + timedelta(minutes=90)
+        filtered = []
+        for b in committed_bets:
+            try:
+                bt = datetime.fromisoformat(b["time"].replace("Z", "+00:00"))
+                if bt <= cutoff:
+                    filtered.append(b)
+                else:
+                    log.warning(f"Commit: dropping out-of-window bet: {b.get('match')} tip {b['time']}")
+            except Exception:
+                filtered.append(b)
+        if len(filtered) < len(committed_bets):
+            log.info(f"Commit: {len(committed_bets) - len(filtered)} out-of-window bet(s) dropped")
+        committed_bets = filtered
+
     # ── 9. Validate bets ──────────────────────────────────────────────────────
     try:
         validate_all_bets(committed_bets, "commit")
