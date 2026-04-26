@@ -1092,5 +1092,48 @@
     "tokens_in": 9431,
     "tokens_out": 4120,
     "cost_usd": 0.090093
+  },
+  {
+    "ts": "2026-04-26T17:32:18.471810+00:00",
+    "date": "2026-04-26",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 0,
+    "cancelled_count": 1,
+    "total_staked": 0.0,
+    "bankroll_before": 855.24,
+    "bankroll_after": 855.24,
+    "bets": [],
+    "cancelled": [
+      {
+        "id": "nba_draft_20260426_002",
+        "match": "Toronto Raptors vs Cleveland Cavaliers",
+        "pick": "Toronto Raptors +4.5",
+        "reason": "Two compounding cancel triggers: (1) Game already in progress — tip was 17:00 UTC, commit time is 17:32 UTC; cannot bet a live game. (2) Odds moved against from 1.94 → 1.84 (-0.10), triggering confidence -10 adjustment per line_movement_rules. Revised confidence: 62 - 10 = 52. EV recalculated at current odds: (0.52 × 1.84) - 1 = -0.043, which is below the required 0.05 EV threshold. Cancel criteria met on both counts."
+      }
+    ],
+    "late_rejections": [
+      {
+        "match": "Toronto Raptors vs Cleveland Cavaliers",
+        "reason": "Game already in progress (tip 17:00 UTC, commit 17:32 UTC). No bet possible regardless of any other factors."
+      },
+      {
+        "match": "Portland Trail Blazers vs San Antonio Spurs",
+        "reason": "Outside 90-minute late scout window — tips at 19:30 UTC, 118 minutes from now. Additionally Victor Wembanyama remains QUESTIONABLE (Concussion Protocol) per fresh injury report — franchise player status unresolved, same block reason as Scout's rejection. Will be evaluated at its own commit window."
+      },
+      {
+        "match": "Philadelphia 76ers vs Boston Celtics",
+        "reason": "Outside 90-minute late scout window — tips at 23:00 UTC, ~328 minutes away. Joel Embiid still DOUBTFUL (Appendectomy Surgery Recovery), Kelly Oubre Jr. still Questionable. No change from Scout conditions. Will be evaluated at its own commit window."
+      },
+      {
+        "match": "Houston Rockets vs Los Angeles Lakers",
+        "reason": "Outside 90-minute late scout window — tips at 01:30 UTC, ~480 minutes away. Kevin Durant still QUESTIONABLE (Left Ankle Sprain), Austin Reaves still Questionable. HOU ML 1.57 below 1.60 minimum. No changed conditions vs Scout. Will be evaluated at its own commit window."
+      }
+    ],
+    "report": "### CANCELLED — Toronto Raptors +4.5\n\n- **Match:** Toronto Raptors vs Cleveland Cavaliers | Tip: 17:00 UTC (ALREADY IN PROGRESS at commit time 17:32 UTC)\n- **Pick:** TOR +4.5 → current line TOR +5.5 | Scout odds: 1.94 | Commit odds: 1.84 | Move: -0.10 (against)\n- **ML:** TOR 2.80 / CLE 1.43 | **ATS:** TOR +5.5 (1.84/1.90) | **O/U:** N/A\n- **Stake:** €150.92 (not committed) | **Conf:** 62 → 52 (adjusted) | **EV:** (0.52 × 1.84) - 1 = **-0.043**\n- **Decision:** Two independent cancel triggers — (1) Game is live; tip was 17:00 UTC and commit runs at 17:32 UTC, making this unactionable. (2) Even setting aside the in-game issue, the odds moved against by 0.10, triggering a mandatory confidence -10 reduction per line_movement_rules (62 → 52). EV at revised confidence and current odds = -0.043, below the required ≥0.05 threshold per cancel_criteria. Pick cancelled on both grounds.\n\n---\n\n### LATE SCOUT SUMMARY\n\n**TOR vs CLE:** In progress — no action possible.\n\n**POR vs SAS (19:30 UTC):** Outside the 90-minute late scout window (118 minutes to tip). Victor Wembanyama remains Questionable in the fresh injury report — the same franchise player uncertainty that blocked Scout's pick is still unresolved. This game will require its own commit window closer to tip-off, at which point Wembanyama's status should be clearer.\n\n**PHI vs BOS (23:00 UTC) and HOU vs LAL (01:30 UTC):** Both far outside the 90-minute window and both carry the same unresolved key player uncertainties (Embiid Doubtful, Durant Questionable) that blocked Scout analysis. These will receive full evaluation at their respective commit windows.\n\n---\n\n### SLATE SUMMARY\n\nNo bets are committed tonight. The sole draft pick (TOR +4.5) was cancelled due to the game already being in progress at commit time, compounded by a deteriorating EV calculation (-0.043) after mandatory odds-movement confidence adjustment. The remaining three games on tonight's slate fall outside the 90-minute late-scout window and will each receive their own commit evaluation; all three also carry unresolved franchise player injury situations (Wembanyama GTD concussion, Embiid Doubtful, Durant GTD) that must be clarified before any position can be taken. Bankroll of €855.24 is fully preserved.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 9414,
+    "tokens_out": 2730,
+    "cost_usd": 0.069192
   }
 ]
