@@ -1668,6 +1668,26 @@
         }
       ],
       "summary": "Day 2026-04-26 commit — 1 bets totalling €150.92. 0 cancelled. Bankroll: €1006.16 → €855.24."
+    },
+    {
+      "entry_id": "nba_entry_20260426",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-04-26T17:32:18.471810+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 855.24,
+      "total_staked": 0.0,
+      "bankroll_after": 855.24,
+      "cancelled_picks": [
+        {
+          "id": "nba_draft_20260426_002",
+          "match": "Toronto Raptors vs Cleveland Cavaliers",
+          "pick": "Toronto Raptors +4.5",
+          "reason": "Two compounding cancel triggers: (1) Game already in progress — tip was 17:00 UTC, commit time is 17:32 UTC; cannot bet a live game. (2) Odds moved against from 1.94 → 1.84 (-0.10), triggering confidence -10 adjustment per line_movement_rules. Revised confidence: 62 - 10 = 52. EV recalculated at current odds: (0.52 × 1.84) - 1 = -0.043, which is below the required 0.05 EV threshold. Cancel criteria met on both counts."
+        }
+      ],
+      "bets": [],
+      "summary": "Day 2026-04-26 commit — 0 bets totalling €0.00. 1 cancelled. Bankroll: €855.24 → €855.24."
     }
   ]
 }
