@@ -267,6 +267,16 @@ def run(store, force: bool = False, window_picks: list = None) -> None:
     # force=True (manual override) processes all picks regardless of time.
     picks_to_process = window_picks if window_picks is not None else draft_picks
 
+    # Guard: skip picks for games already committed in an earlier window
+    already_committed = {b["match"] for b in state.get("pending_bets", [])}
+    if already_committed:
+        dupe_picks = [p for p in picks_to_process if p.get("match") in already_committed]
+        if dupe_picks:
+            dupe_ids = {p["id"] for p in dupe_picks}
+            log.info(f"Commit: dropping {len(dupe_picks)} pick(s) for already-committed game(s): {[p.get('match') for p in dupe_picks]}")
+            state["draft_picks"] = [p for p in state.get("draft_picks", []) if p["id"] not in dupe_ids]
+            picks_to_process = [p for p in picks_to_process if p["id"] not in dupe_ids]
+
     # ── 4. Load skills ────────────────────────────────────────────────────────
     skills = store.read_md("commit_skills")
 
