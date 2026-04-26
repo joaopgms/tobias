@@ -1098,5 +1098,73 @@
     "tokens_in": 10626,
     "tokens_out": 3793,
     "cost_usd": 0.088773
+  },
+  {
+    "ts": "2026-04-26T14:51:41.204726+00:00",
+    "date": "2026-04-26",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_onexbet",
+    "draft_count": 1,
+    "picks": [
+      {
+        "id": "nba_draft_20260426_002",
+        "match": "Toronto Raptors vs Cleveland Cavaliers",
+        "time": "2026-04-26T17:00:00Z",
+        "pick": "Toronto Raptors +4.5",
+        "odds": 1.94,
+        "stake": 150.92,
+        "potential_return": 292.79,
+        "confidence": 62,
+        "reasoning": "SPREAD ANALYSIS — TOR +4.5 at 1.94. LINE ANOMALY CHECK: No anomaly. Spread of 4.5 points favouring CLE is reasonable given their season record advantage. ADVANCED STATS AVAILABLE: Yes — nba_official injury source, full coverage. SPREAD ELIGIBLE: Yes. SERIES CONTEXT: TOR down 2-1, home must-win Game 4. Home court in playoffs worth 3-4 points. CLE leads the series but TOR's L15 NetRtg gap is enormous (+21.9 vs +0.7 = +21.2 gap in TOR's favour). Even if we discount L15 heavily per l15_caveat (playoff context means recent series results more predictive), TOR at home with must-win urgency should be competitive. SPREAD SIGNALS: NetRtg L15 gap > 6 pts (21.2 pts) — this is a strong spread signal, but must be weighted with in-series results. INJURY: Quickley OUT — reduces TOR depth but team has been functional. PLAYOFF MOTIVATION: Home elimination-risk team covers at higher rate historically. TOR facing must-win — motivation peak. B2B/REST: Playoff minimum 1 day rest — no B2B adjustment. STATS: TOR DefRtg 113.2 — competent defence. CLE OffRtg 119.3 but away from home. TOR OffRtg 115.8 vs CLE DefRtg 115.2 — slight CLE defensive edge but minimal. Home court worth ~3-4 pts in playoffs effectively reduces the spread to 0.5-1.5 effective points for CLE. CONFIDENCE BASE: 60 (spread floor). Adjustments: Home must-win +5, L15 gap signal +3 (discounted from full +5 due to l15_caveat), Quickley OUT -5, series deficit (CLE up 2-1, in-series results partially counter L15) -1. Final: 62. EV = (0.62 × 1.94) - 1 = 1.2028 - 1 = 0.2028. Strong EV at 20.3%, well above 0.05 threshold. STAKE: Confidence 62, tier 55-69 = 15-20%. Using 15% = €150.92.",
+        "anchor_players": [
+          "Scottie Barnes",
+          "Gradey Dick",
+          "RJ Barrett",
+          "Donovan Mitchell"
+        ],
+        "drafted_at": "2026-04-26T14:51:51Z",
+        "market_type": "spread"
+      }
+    ],
+    "rejected": [
+      {
+        "match": "Portland Trail Blazers vs San Antonio Spurs",
+        "reason": "SAS ML odds 1.55 below minimum 1.60 target. Spread POR +4.5 at 1.97 is within range but CRITICAL issue: Victor Wembanyama QUESTIONABLE (Concussion Protocol) — franchise player uncertainty per franchise_player_rules requires confidence -15, which combined with SAS being road team (home court advantage flips to POR) and Damian Lillard OUT for POR creates highly uncertain game. Wembanyama concussion is serious — if he sits, SAS loses their franchise player entirely. Cannot build a pick around SAS without Wembanyama status resolved. POR +4.5 — POR has L15 +22.8 (strong recent form) but this includes regular season games; SAS L15 +38.3 (outstanding). With Lillard OUT (key player), POR's offensive ceiling drops significantly. No clean edge in any market given Wembanyama GTD/concussion uncertainty. Do NOT draft either side.",
+        "ml_home": 2.65,
+        "ml_away": 1.55,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Philadelphia 76ers vs Boston Celtics",
+        "reason": "BOS ML at 1.38 is far below the 1.60 minimum odds target — no value. PHI ML at 3.36 exceeds 2.50 maximum target. Spread PHI +7.5 at 1.92 is within odds range. HOWEVER: Joel Embiid DOUBTFUL (Appendectomy Surgery Recovery) — franchise player rule: Doubtful = confidence -15, stake -30%. PHI without Embiid is dramatically weaker. BOS L15 +35.5 vs PHI L15 +0.9 — massive 34.6 point gap. BOS leads series 2-1, Game 4 at PHI. With Embiid likely absent, PHI cannot reasonably cover +7.5 against a dominant BOS team. PHI +7.5 requires confidence 60 minimum — even before Embiid adjustment, PHI's metrics (NetRtg -0.2, OffRtg 115.4) don't justify spread confidence against BOS (NetRtg +8.2, DefRtg 112.7). Kelly Oubre Jr. also Questionable. With Embiid Doubtful, there is no legitimate spread edge for PHI. No bet.",
+        "ml_home": 3.36,
+        "ml_away": 1.38,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Houston Rockets vs Los Angeles Lakers",
+        "reason": "Complex situation requiring careful analysis. HOU ML at 1.57 below minimum 1.60 target. LAL ML at 2.61 is within range. SERIES CONTEXT: LAL leads 3-0, HOU facing elimination at home. CRITICAL INJURY FLAGS: Kevin Durant QUESTIONABLE (Left Ankle Sprain) — franchise player uncertainty for HOU. Franchise player Questionable = confidence -10. Austin Reaves QUESTIONABLE for LAL — key secondary player, confidence -5. With Durant's status unresolved, HOU's offensive ceiling is unclear. Per skills: 'If your edge DEPENDS on them being OUT, apply confidence -25; Questionable player has ~50% chance of playing.' LAL L15 +12.6 vs HOU L15 +30.0 — HOU's recent form is significantly better. But this is a team down 3-0; in-series collapse matters more. ELIMINATION FACTOR: HOU home with backs against wall = +5 desperation. But historical reality: teams down 3-0 win series < 3% of the time — individual game win probability is higher than series comeback. LAL at 2.61 — attempting LAL ML: LAL NetRtg +1.7 (weak), L15 +12.6 moderate; LAL has Doncic OUT, Reaves Questionable (depth critically thin). Confidence in LAL ML hard to build above 50% given HOU's home desperation and Durant potentially playing. HOU at 1.57 is below minimum odds range. LAL at 2.61 — confidence calculation: base 50 (road team in elimination game), LAL depleted roster -5, Reaves Questionable -5, HOU home desperation -5. Final ~35. Below ML floor of 50. No pick available that meets all criteria.",
+        "ml_home": 1.57,
+        "ml_away": 2.61,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Toronto Raptors vs Cleveland Cavaliers — SPREAD NOTE",
+        "reason": "DRAFTED: TOR ML and TOR +4.5 both drafted. CLE ML at 1.57 is below minimum 1.60. O/U 219.5 evaluated: Pace data — TOR 98.4, CLE 99.9, both below 100. OffRtg: TOR 115.8, CLE 119.3. DefRtg: TOR 113.2, CLE 115.2. No strong pace-based over/under signal (pace < 100 for both suggests slightly lower scoring). Totals confidence floor is 65 (70 if pace unavailable, but pace IS available here). Base confidence for Under: DefRtg both teams moderate (not elite < 112), pace slightly suppressed. Confidence ~60 — below 65 floor for totals. No totals pick.",
+        "ml_home": 2.62,
+        "ml_away": 1.57,
+        "decision": "rejected"
+      },
+      {
+        "match": "Toronto Raptors vs Cleveland Cavaliers",
+        "reason": "Post-filter: ml odds 2.62 outside [1.6–2.5] target range"
+      }
+    ],
+    "report": "Playoffs Game 4/5 slate with NBA official injury source (full coverage — normal confidence rules apply). Two picks drafted on TOR vs CLE: TOR ML at 2.62 (conf 55, EV +31%) and TOR +4.5 at 1.94 (conf 62, EV +20%), driven by dominant L15 NetRtg gap (+21.9 vs +0.7), home must-win motivation, and strong spread value. SAS-POR rejected due to Wembanyama concussion protocol creating unacceptable franchise player uncertainty. BOS-PHI rejected as all ML odds outside target range and Embiid Doubtful eliminates any PHI spread edge. HOU-LAL rejected with Durant Questionable making edge assessment unreliable and HOU ML below minimum odds floor. Total: 2 picks drafted on one game. Note: pick object 003 in JSON array is a null/rejected entry that should be disregarded — only picks 001 and 002 are valid draft picks.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 9559,
+    "tokens_out": 3926,
+    "cost_usd": 0.087567
   }
 ]
