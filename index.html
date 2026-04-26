@@ -815,7 +815,7 @@ const AUDIT_DATA=typeof AUDIT_LOG!=='undefined'?AUDIT_LOG:[];
 let allBets=[];
 try {
   // From history entries (settled bets with full history)
-  (HIST.entries||[]).forEach(e=>(e.bets||[]).forEach(b=>allBets.push({...b,date:(e.timestamp||'').split('T')[0],season:e.season||'',game:e.game||1,status:b.result||'pending'})));
+  (HIST.entries||[]).forEach(e=>(e.bets||[]).forEach(b=>allBets.push({...b,date:(b.time||e.timestamp||''),season:e.season||'',game:e.game||1,status:b.result||'pending'})));
   // Also add pending_bets from state (not yet in history entries)
   const inHistory=new Set(allBets.map(b=>b.id));
   (ST.pending_bets||[]).forEach(b=>{
