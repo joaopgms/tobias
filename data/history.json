@@ -23,8 +23,8 @@
           "game": 2,
           "started_at": "2026-04-05T10:44:07.102344+00:00",
           "bankroll_start": 1000.0,
-          "wins": 15,
-          "losses": 11,
+          "wins": 16,
+          "losses": 13,
           "peak_bankroll": 1917.57,
           "total_bets": 29
         }
@@ -1582,10 +1582,10 @@
             "Isaiah Stewart",
             "Jalen Duren"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -252.0,
+          "settled_at": "2026-04-26T10:47:17.865675+00:00",
           "committed_at": "2026-04-25T16:32:21Z"
         },
         {
@@ -1603,10 +1603,10 @@
             "Karl-Anthony Towns",
             "Mikal Bridges"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "WON",
+          "returned": 336.42,
+          "pnl": 147.42,
+          "settled_at": "2026-04-26T10:47:17.865675+00:00",
           "committed_at": "2026-04-25T16:32:21Z"
         },
         {
@@ -1624,10 +1624,10 @@
             "Jamal Murray",
             "Aaron Gordon"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -151.0,
+          "settled_at": "2026-04-26T10:47:17.865675+00:00",
           "committed_at": "2026-04-25T16:32:21Z"
         }
       ],
