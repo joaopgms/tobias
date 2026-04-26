@@ -1037,5 +1037,60 @@
     "tokens_in": 12017,
     "tokens_out": 5894,
     "cost_usd": 0.124461
+  },
+  {
+    "ts": "2026-04-26T16:33:31.634410+00:00",
+    "date": "2026-04-26",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 1,
+    "cancelled_count": 0,
+    "total_staked": 150.92,
+    "bankroll_before": 1006.16,
+    "bankroll_after": 855.24,
+    "bets": [
+      {
+        "id": "nba_bet_20260426_001",
+        "match": "Toronto Raptors vs Cleveland Cavaliers",
+        "time": "2026-04-26T17:00:00Z",
+        "pick": "Toronto Raptors +4.5",
+        "odds": 1.95,
+        "stake": 150.92,
+        "potential_return": 294.29,
+        "confidence": 62,
+        "reasoning": "COMMIT REVIEW — TOR +4.5 at 1.95 (Scout: 1.94, +0.01 improvement). ODDS VALIDATION: 1.95 within spread target 1.75-2.30 ✅. LINE MOVEMENT: +0.01 in our favour — confirming at original stake. ANCHOR PLAYER CHECK: Barnes, Dick, Barrett (TOR) all healthy; Mitchell (CLE) healthy. Quickley OUT was already priced in at Scout (-5 confidence). No new injuries. DATA QUALITY: nba_official source ✅. EV RECALC: (0.62 × 1.95) - 1 = 0.209 (20.9%) — strong, well above 0.05 threshold. SERIES CONTEXT: TOR down 2-1, home Game 4, must-win. Home court worth 3-4 pts in playoffs, effectively reducing the live spread to 0.5-1.5 effective points. STATS: TOR L15 NetRtg +21.9 vs CLE L15 +0.7 — massive 21.2pt gap, strong spread signal even discounted per l15_caveat. CLE OffRtg 119.3 but away; TOR DefRtg 113.2 competent. MOTIVATION: Home must-win elimination-risk teams historically cover at higher rate. STAKE: 15% × €1,006.16 = €150.92 (Confidence 62, tier 55-69 = 15-20%, using 15%).",
+        "anchor_players": [
+          "Scottie Barnes",
+          "Gradey Dick",
+          "RJ Barrett",
+          "Donovan Mitchell"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null,
+        "committed_at": "2026-04-26T16:33:39Z"
+      }
+    ],
+    "cancelled": [],
+    "late_rejections": [
+      {
+        "match": "Portland Trail Blazers vs San Antonio Spurs",
+        "reason": "Victor Wembanyama still QUESTIONABLE (Concussion Protocol) — no status change since Scout. With Damian Lillard OUT for POR, POR's offensive ceiling is severely compromised. If Wembanyama plays, SAS (L15 +38.3, NetRtg +8.3) should cover -4.5 comfortably. Applying franchise player Questionable rule: confidence -15. Base confidence for POR +4.5 at 1.97 cannot clear 55 floor after SAS dominance metrics and Lillard absence. SAS ML 1.55 below 1.65 floor. No valid market."
+      },
+      {
+        "match": "Philadelphia 76ers vs Boston Celtics",
+        "reason": "Embiid still DOUBTFUL — no upgrade. PHI +7.5 at 2.0 is the only market in odds range (BOS ML 1.34 far below 1.65 floor; PHI ML 3.64 above 2.50 ceiling). With Embiid Doubtful (-15 confidence), PHI home must-win (+5), BOS dominance (L15 +35.5, NetRtg +8.2) — final confidence ~30, well below 55 floor for spreads. No edge."
+      },
+      {
+        "match": "Houston Rockets vs Los Angeles Lakers",
+        "reason": "Durant still QUESTIONABLE (Left Ankle Sprain) — no resolution. HOU ML 1.57 below 1.65 floor. LAL ML 2.61 above 2.50 ceiling. HOU -4.5 spread at 1.99 evaluated: Durant QUESTIONABLE -10 confidence, HOU down 3-0 historically near-hopeless -10, base 55 → final ~35, below threshold. LAL +4.5 at 1.93: LAL depleted (Doncic OUT, Reaves QUESTIONABLE), series leadership value but Reaves QUESTIONABLE -10, HOU home desperation factor applies, final confidence sub-55. No valid edge in any market."
+      }
+    ],
+    "report": "### CONFIRMED — Toronto Raptors +4.5\n- Match: Toronto Raptors vs Cleveland Cavaliers | Tip: 2026-04-26T17:00 UTC\n- Pick: TOR +4.5 | Scout odds: 1.94 | Commit odds: 1.95 | Move: +0.01 (in our favour)\n- ML: TOR 2.65 / CLE 1.55 | ATS: TOR +4.5 (1.95/1.97) | O/U: 219.5 (O:1.99/U:1.93)\n- Stake: €150.92 | Pot: €294.29 | Conf: 62/100 | EV: 0.209 (20.9%)\n- Decision: All checks pass. Odds improved fractionally (+0.01). No new anchor injuries — Barnes, Dick, Barrett active; Mitchell active. Quickley OUT was already priced in Scout's confidence (-5 applied). TOR L15 NetRtg +21.9 vs CLE L15 +0.7 — a 21.2pt gap remains the primary spread signal. Home court advantage in playoffs (3-4 pts) effectively makes the live spread 0.5-1.5 effective points for CLE. TOR in a home must-win Game 4, down 2-1 — peak motivation. EV 20.9% is strong and well above the 0.05 minimum. Data source nba_official ✅. Confirmed at original stake.\n\n---\n\n### LATE SCOUT — No new picks added\n\n**POR vs SAS:** Wembanyama unchanged at QUESTIONABLE (Concussion Protocol). No clean edge with Lillard OUT and franchise player uncertainty. No market in valid odds range after applying -15 confidence. Rejected.\n\n**PHI vs BOS:** Embiid still DOUBTFUL. Only PHI +7.5 at 2.0 is in odds range, but with Embiid likely out against dominant BOS (L15 +35.5), confidence falls to ~30. No edge.\n\n**HOU vs LAL:** Durant still QUESTIONABLE. HOU ML 1.57 below floor. LAL ML 2.61 above ceiling. Spread markets don't generate sufficient confidence given Durant's uncertain status and HOU's 3-0 series deficit. No edge.\n\n---\n\n**Slate Summary:** One pick committed — TOR +4.5 at 1.95 for €150.92 (15% of bankroll, EV 20.9%). The core thesis remains intact: TOR's superior L15 form (+21.9 vs +0.7), home playoff advantage, and must-win desperation combine to make +4.5 excellent value even after discounting for CLE's season-long metrics advantage. All three rejected games remain too clouded by franchise player uncertainty (Wembanyama, Embiid, Durant) or odds outside valid range to warrant a late pick. Total exposure is 15.0% of bankroll, well within the 70% cap.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 9431,
+    "tokens_out": 4120,
+    "cost_usd": 0.090093
   }
 ]
