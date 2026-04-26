@@ -615,6 +615,7 @@ def run(store) -> None:
     if fgt:
         state["first_game_time"] = fgt
     log.info(f"Scout: first game time = {fgt}")
+    state["slate_game_times"] = sorted([g["time"] for g in games if g.get("time")])
 
     # ── 11. Update state ──────────────────────────────────────────────────────
     state["draft_picks"]      = draft_picks

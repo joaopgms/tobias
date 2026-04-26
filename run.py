@@ -69,26 +69,14 @@ def run_commit_if_ready():
     now   = datetime.now(timezone.utc)
     today = now.strftime("%Y-%m-%d")
 
-    # ── IDEMPOTENCY GUARD ──────────────────────────────────────────────────
-    # Skip only when BOTH conditions are true:
-    # 1. commit_date == today (we ran today)
-    # 2. commit_status == "done" (Scout hasn't reset it for a new slate)
-    # This handles the UTC midnight boundary: commit may run at 00:xx UTC for
-    # the previous night's US games, setting commit_date = today. When Scout
-    # then runs at 14:00 UTC with a fresh slate it resets commit_status to
-    # "pending" — that's the signal to allow commit to run again tonight.
     commit_date   = state.get("commit_date", "")
     commit_status = state.get("commit_status", "pending")
-    if commit_date == today and commit_status == "done":
-        log.info(f"commit_if_ready: already committed on {today} and status=done — skipping")
-        return
 
-    # ── WINDOW GATE — per pick ─────────────────────────────────────────────
-    draft_picks = state.get("draft_picks", [])
-    if not draft_picks:
-        log.info("commit_if_ready: no draft picks — skipping")
-        return
+    # ── WINDOW GATE — per pick or approaching slate game ───────────────────
+    draft_picks  = state.get("draft_picks", [])
+    slate_times  = state.get("slate_game_times", [])
 
+    # Picks within the 45-min tip-off window
     window_picks = []
     soonest_future = None
     for p in draft_picks:
@@ -102,20 +90,36 @@ def run_commit_if_ready():
         except Exception:
             continue
 
-    if not window_picks:
+    # Any slate game (including Scout-rejected) approaching tip-off?
+    # Opens a late-scout window even when draft_picks is empty.
+    approaching_game = False
+    for ts in slate_times:
+        try:
+            t = datetime.fromisoformat(ts.replace("Z", "+00:00"))
+            delta_min = (t - now).total_seconds() / 60
+            if -30 <= delta_min <= 45:   # window: up to 30 min past tip
+                approaching_game = True
+                break
+        except Exception:
+            continue
+
+    # Skip if done AND no game is approaching (nothing left to late-scout)
+    # commit_date == today guard preserves UTC midnight boundary behaviour:
+    # Scout resets commit_status to "pending" for the next day's slate.
+    if commit_date == today and commit_status == "done" and not approaching_game:
+        log.info("commit_if_ready: status=done and no approaching games — skipping")
+        return
+
+    # Skip if no picks in window AND no game approaching
+    if not window_picks and not approaching_game:
         if soonest_future:
             remaining = int((soonest_future - timedelta(minutes=45) - now).total_seconds() / 60)
             log.info(f"commit_if_ready: {remaining}min until next window — skipping")
         else:
-            log.info("commit_if_ready: no picks with parseable time — skipping")
+            log.info("commit_if_ready: no picks or approaching games — skipping")
         return
 
-    # ── STATUS GATE ────────────────────────────────────────────────────────
-    if commit_status == "done":
-        log.info("commit_if_ready: status=done — skipping")
-        return
-
-    log.info(f"commit_if_ready: {len(window_picks)} pick(s) in window — running commit")
+    log.info(f"commit_if_ready: {len(window_picks)} pick(s) in window | approaching_game={approaching_game} — running commit")
     from agents.commit import run
     run(store, force=False, window_picks=window_picks)
 
