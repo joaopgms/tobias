@@ -26,7 +26,7 @@
           "wins": 16,
           "losses": 13,
           "peak_bankroll": 1917.57,
-          "total_bets": 29
+          "total_bets": 30
         }
       ]
     }
@@ -1632,6 +1632,42 @@
         }
       ],
       "summary": "Day 2026-04-25 commit — 3 bets totalling €592.00. 0 cancelled. Bankroll: €1261.74 → €669.74."
+    },
+    {
+      "entry_id": "nba_entry_20260426",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-04-26T16:33:31.634410+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1006.16,
+      "total_staked": 150.92,
+      "bankroll_after": 855.24,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260426_001",
+          "match": "Toronto Raptors vs Cleveland Cavaliers",
+          "time": "2026-04-26T17:00:00Z",
+          "pick": "Toronto Raptors +4.5",
+          "odds": 1.95,
+          "stake": 150.92,
+          "potential_return": 294.29,
+          "confidence": 62,
+          "reasoning": "COMMIT REVIEW — TOR +4.5 at 1.95 (Scout: 1.94, +0.01 improvement). ODDS VALIDATION: 1.95 within spread target 1.75-2.30 ✅. LINE MOVEMENT: +0.01 in our favour — confirming at original stake. ANCHOR PLAYER CHECK: Barnes, Dick, Barrett (TOR) all healthy; Mitchell (CLE) healthy. Quickley OUT was already priced in at Scout (-5 confidence). No new injuries. DATA QUALITY: nba_official source ✅. EV RECALC: (0.62 × 1.95) - 1 = 0.209 (20.9%) — strong, well above 0.05 threshold. SERIES CONTEXT: TOR down 2-1, home Game 4, must-win. Home court worth 3-4 pts in playoffs, effectively reducing the live spread to 0.5-1.5 effective points. STATS: TOR L15 NetRtg +21.9 vs CLE L15 +0.7 — massive 21.2pt gap, strong spread signal even discounted per l15_caveat. CLE OffRtg 119.3 but away; TOR DefRtg 113.2 competent. MOTIVATION: Home must-win elimination-risk teams historically cover at higher rate. STAKE: 15% × €1,006.16 = €150.92 (Confidence 62, tier 55-69 = 15-20%, using 15%).",
+          "anchor_players": [
+            "Scottie Barnes",
+            "Gradey Dick",
+            "RJ Barrett",
+            "Donovan Mitchell"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-04-26T16:33:39Z"
+        }
+      ],
+      "summary": "Day 2026-04-26 commit — 1 bets totalling €150.92. 0 cancelled. Bankroll: €1006.16 → €855.24."
     }
   ]
 }
