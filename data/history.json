@@ -26,7 +26,7 @@
           "wins": 17,
           "losses": 13,
           "peak_bankroll": 1917.57,
-          "total_bets": 30
+          "total_bets": 31
         }
       ]
     }
@@ -1688,6 +1688,41 @@
       ],
       "bets": [],
       "summary": "Day 2026-04-26 commit — 0 bets totalling €0.00. 1 cancelled. Bankroll: €855.24 → €855.24."
+    },
+    {
+      "entry_id": "nba_entry_20260427",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-04-27T23:44:12.539386+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1149.53,
+      "total_staked": 172.43,
+      "bankroll_after": 977.1,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260427_001",
+          "match": "Orlando Magic vs Detroit Pistons",
+          "time": "2026-04-28T00:00:00Z",
+          "pick": "Detroit Pistons ML",
+          "odds": 1.66,
+          "stake": 172.43,
+          "potential_return": 286.23,
+          "confidence": 72,
+          "reasoning": "CONFIRMED from draft pick nba_draft_20260427_001. ODDS CHECK: Scout odds 1.68 → Commit odds 1.66 (moved -0.02 against, minimal movement well within 0.10 threshold). Floor 1.65 — current 1.66 passes ✓. ANCHOR PLAYERS: Cade Cunningham (active ✓), Jalen Duren (active ✓), Franz Wagner (active ✓), Paolo Banchero (active ✓). All anchors confirmed healthy. INJURY UPDATE: Jonathan Isaac confirmed OUT (was Doubtful at Scout — upgraded to OUT). Isaac OUT actually marginally helps DET as ORL loses a rotation contributor. Kevin Huerter Questionable (DET) — non-anchor, no confidence adjustment. CONFIDENCE: Maintained at 72. Isaac going from Doubtful to OUT is a slight positive for DET thesis; Scout had applied -5 for Doubtful, but since Isaac is not DET's anchor and his absence weakens ORL, no confidence reduction warranted. EV RECALC: EV = (0.72 × 1.66) - 1 = 1.1952 - 1 = 0.195. STRONG EDGE ≥ 0.05 ✓. EDGE BASIS: DET L15 NetRtg +25.2 vs ORL +2.9 (gap 22.3 pts). Season NetRtg DET +8.2 vs ORL +0.6. DET DefRtg 109.8 vs ORL 114.5 (4.7 pt defensive gap). Records: DET 60-22 vs ORL 45-37. Series tied 2-2, Game 5, ORL at home (3-4 pt playoff home advantage factored into 72 confidence). STAKE: High tier (70-84) at 15% = €172.43 (unchanged from Scout — do not increase on worsened odds).",
+          "anchor_players": [
+            "Cade Cunningham",
+            "Jalen Duren",
+            "Franz Wagner",
+            "Paolo Banchero"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null
+        }
+      ],
+      "summary": "Day 2026-04-27 commit — 1 bets totalling €172.43. 0 cancelled. Bankroll: €1149.53 → €977.10."
     }
   ]
 }
