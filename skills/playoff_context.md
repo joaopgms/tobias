@@ -1,7 +1,7 @@
 ---
-version: 16
-updated_at: 2026-04-26T11:37:52.009061+00:00
-updated_by: analyst_2026-04-26
+version: 17
+updated_at: 2026-04-27T12:19:07.019129+00:00
+updated_by: analyst_2026-04-27
 llm: claude-sonnet-4-6
 ---
 
@@ -13,53 +13,64 @@ Apply series context, elimination urgency, and Round 1 rest rules — NOT play-i
 playin_rules section is INACTIVE this phase — ignore it entirely.
 
 ## SECTION:series_context
-FIRST ROUND PLAYOFFS — Active (updated 2026-04-26)
+FIRST ROUND PLAYOFFS — Active (updated 2026-04-27)
 
 Play-in results: Phoenix Suns won West 7-seed, Orlando Magic won East 8-seed.
 
 EAST Round 1 (home team listed first in series):
-- Boston Celtics vs Philadelphia 76ers: BOS leads 2-1 — Game 4 at PHI upcoming
-- Orlando Magic vs Detroit Pistons: Tied 2-2 — Game 5 next [series flipped since last update]
-  NOTE: ORL had leads 2-1 last session; DET responded. Series now dead even.
-- Atlanta Hawks vs New York Knicks: ATL leads 2-1 — Game 4 upcoming at ATL
-  ALERT: 6-seed ATL (NetRtg +2.4) leading 3-seed NYK (NetRtg +6.5). ATL home court physical style neutralising NYK.
-- Cleveland Cavaliers vs Toronto Raptors: CLE leads 2-1 — Game 4 at TOR upcoming
+- Boston Celtics vs Philadelphia 76ers: BOS leads 3-1 — Game 5 next at BOS (BOS can close)
+  NOTE: BOS dominant. PHI facing elimination on road. Re-verify Tatum, Brown active before any pick.
+- Orlando Magic vs Detroit Pistons: Tied 2-2 — Game 5 next (verify home court)
+  NOTE: Series fully alive. Both teams relatively healthy. Game 5 is coin-flip without clear edge.
+- Atlanta Hawks vs New York Knicks: ATL leads 2-1 — Game 4/5 status requires re-verification
+  ALERT: 6-seed ATL (NetRtg +2.4) leading 3-seed NYK (NetRtg +6.5). ATL home court physical style neutralising NYK. Trae Young affiliation must be verified vs NBA official PDF before any ATL pick.
+- Cleveland Cavaliers vs Toronto Raptors: CLE leads 2-1 — Game 4/5 status requires re-verification
+  NOTE: TOR at home, must-win situation. Re-verify Mitchell, Allen, Mobley.
 
 WEST Round 1 (home team listed first in series):
-- Oklahoma City Thunder vs Phoenix Suns: OKC leads 3-0 — Game 4 next at PHX
-  NOTE: OKC dominant without Jalen Williams. SGA + Holmgren carrying. PHX facing elimination at home.
-- Los Angeles Lakers vs Houston Rockets: LAL leads 3-0 — Game 4 at HOU upcoming
-  MAJOR ALERT: LAL sweeping HOU despite Doncic + Reaves both OUT. HOU facing elimination at home.
-- San Antonio Spurs vs Portland Trail Blazers: SAS leads 2-1 — Game 4 at POR upcoming
-- Minnesota Timberwolves vs Denver Nuggets: MIN leads 3-1 — Game 5 next at DEN
-  NOTE: DEN (NetRtg +5.2, W12 regular season) has collapsed vs MIN. DEN facing elimination on home floor.
-  Edwards factor: MIN's defensive intensity has disrupted Jokic rhythm.
+- Oklahoma City Thunder vs Phoenix Suns: OKC leads 3-0 — Game 4/5 next (verify per ESPN)
+  NOTE: OKC dominant without Jalen Williams. SGA + Holmgren carrying. PHX facing/survived elimination?
+  Re-verify series score vs ESPN scoreboard — live data shows OKC leads 3-0, Game 5 next.
+- Los Angeles Lakers vs Houston Rockets: LAL leads 3-1 — Game 5 next at LAL (LAL can close)
+  MAJOR ALERT: LAL sweeping/dominating HOU despite Doncic + Reaves both OUT. HOU facing elimination on road.
+  NOTE: Live series data indicates Game 5 next — verify if HOU won Game 4.
+- San Antonio Spurs vs Portland Trail Blazers: SAS leads 3-1 — Game 5 next at SAS (SAS can close)
+  NOTE: SAS dominant. POR facing elimination on road. Re-verify Wembanyama active before any pick.
+- Minnesota Timberwolves vs Denver Nuggets: MIN leads 3-1 — Game 6 next at MIN
+  NOTE: DEN survived Game 5 elimination? Live data shows Game 6 next — re-verify. Jokic historically elevates in elimination games. DEN facing elimination on road at MIN.
+  Edwards factor: MIN's defensive intensity has disrupted Jokic rhythm. Re-verify Edwards status.
 
 ## SECTION:elimination_flags
-ROUND 1 ELIMINATION FLAGS (as of 2026-04-26):
-
-Teams facing elimination (down 3-0 — one loss = series over):
-- Houston Rockets: down 3-0 vs LAL. Next game at HOU (home). Maximum desperation — home court with backs against wall. Without Durant confirmed active, HOU lacks firepower. Historical: teams down 3-0 win the series < 3% of the time.
-- Phoenix Suns: down 3-0 vs OKC. Next game at PHX (home). Home court urgency but OKC dominant. Suns must extend or exit.
+ROUND 1 ELIMINATION FLAGS (as of 2026-04-27):
 
 Teams facing elimination (down 3-1 — one loss = series over):
-- Denver Nuggets: down 3-1 vs MIN. Next game at DEN (home). Home court must-win for DEN. Jokic historically elevates in elimination games — apply +5 desperation edge if betting DEN.
+- Houston Rockets: down 3-1 vs LAL. Next game at LAL (road elimination). Historical: teams down 3-1 win series ~4% of the time. Without Durant confirmed active, HOU firepower severely limited. Road elimination game — confidence +10 on HOU ML only if odds ≥ 2.20 and Durant confirmed active.
+- Denver Nuggets: down 3-1 vs MIN. Next game at MIN (road — Game 6). Jokic historically elevates in elimination games but facing road elimination. Re-verify Edwards status for MIN.
+- Philadelphia 76ers: down 3-1 vs BOS. Next game at BOS (road elimination). PHI depleted roster — do NOT bet PHI ML unless BOS has key absences.
+- Portland Trail Blazers: down 3-1 vs SAS. Next game at SAS (road elimination). POR motivated but massive NetRtg gap vs SAS.
 
-Teams at risk (down 2-1 — series still very alive):
-- Philadelphia 76ers: down 2-1 vs BOS, Game 4 at home. PHI must win to stay alive.
-- New York Knicks: down 2-1 vs ATL, Game 4 at ATL. Road must-win.
-- Toronto Raptors: down 2-1 vs CLE, Game 4 at home. Home must-win.
+Teams that can CLOSE OUT (up 3-1):
+- Los Angeles Lakers (vs HOU): can clinch at home. WARNING: closing-game looseness risk — do NOT bet LAL spread at short odds. LAL ML only if value exists.
+- Boston Celtics (vs PHI): can clinch at home. Same closing-game caution applies.
+- San Antonio Spurs (vs POR): can clinch at home. Wembanyama re-verify required.
+- Minnesota Timberwolves (vs DEN): can clinch away (Game 6 at MIN). Edwards status critical.
+
+Series still live (tied or close):
+- Orlando Magic vs Detroit Pistons: Tied 2-2 — Game 5 is a true elimination-adjacent game; loser faces 2-3 deficit.
+- Atlanta Hawks vs New York Knicks: ATL leads (verify exact score) — NYK in desperation mode.
+- Cleveland Cavaliers vs Toronto Raptors: CLE leads (verify exact score) — TOR home must-win.
+- Oklahoma City Thunder vs Phoenix Suns: OKC leads 3-0 (verify if PHX won Game 4) — PHX in extreme desperation.
 
 Applying elimination/desperation adjustments:
-→ Home team facing elimination (HOU, PHX, DEN): confidence +5 (home floor + desperation).
-→ Road team facing elimination (rare in playoffs): confidence +10 but stake conservatively.
-→ Do NOT blindly take the team up 3-0 (LAL, OKC) or 3-1 (MIN) at short spread odds — blowout risk in garbage time, starters may be rested.
-→ Series-closing games (team can clinch): closing team may play conservatively if big lead; fade spreads on heavy favourites closing out.
+→ Road team facing elimination (HOU at LAL, DEN at MIN, PHI at BOS, POR at SAS): confidence +10 but stake conservatively. Require odds ≥ 2.00.
+→ Home team closing out (LAL, BOS, SAS): avoid spread — ML only if value. Blowout risk in garbage time.
+→ Tied 2-2 series (ORL vs DET): treat as high-stakes even game — no directional desperation edge.
+→ PHX in 0-3 hole (if not yet eliminated): historical 3-0 comeback rate < 3%. PHX home urgency noted but OKC dominant.
 
 HIGH-RISK FLAGS:
-- DEN elimination game at home: Jokic is a proven elimination-game performer. Do not dismiss DEN ML at reasonable odds.
-- HOU down 3-0: historically near-hopeless but home desperation factor exists. Requires Durant confirmed.
-- OKC-PHX Game 4: PHX desperate at home — if Suns have key players active, value on PHX ML if odds ≥ 2.00.
+- DEN elimination game: Jokic is a proven elimination-game performer. Do not dismiss DEN ML at ≥ 2.00 odds, even on road.
+- HOU down 3-1: historically near-hopeless. Requires Durant confirmed active + odds ≥ 2.20.
+- ORL vs DET Game 5: no clear edge either way — this is a coin-flip. Do NOT force a pick on uncertain data.
 
 ## SECTION:playoff_rest
 ROUND 1 REST RULES (active):
@@ -72,19 +83,21 @@ ROUND 1 REST RULES (active):
 Verify actual rest days from ESPN scoreboard — do not assume.
 
 ## SECTION:playoff_motivation
-Playoff motivation hierarchy (Round 1 — best-of-7):
+Playoff motivation hierarchy (Round 1 — best-of-7, late stage):
 1. ELIMINATION GAME: team facing series elimination — maximum desperation factor.
    → Home team facing elimination: add confidence +5 (home floor + desperation).
-   → Road underdog facing elimination: add confidence +10 (historically covers at higher rate — nothing to lose).
+   → Road team facing elimination: add confidence +10 (nothing-to-lose factor) BUT stake conservatively.
+     Require odds ≥ 2.00 for road elimination plays.
    → Do NOT over-pay for the team about to close — blowout risk and star-resting in garbage time.
-2. SERIES MOMENTUM: team up 3-0 or 3-1 — closing-out focus, may rest starters in blowouts.
-   → Do NOT bet the team up 3-0 or 3-1 at short spread odds — closing games can be loose.
+2. SERIES MOMENTUM (up 3-1 — closing out away): road team closing out adds +5 (road dominance signal).
+   → Do NOT bet the closing team at short spread odds — closing looseness risk.
    → If closing team is heavy spread favourite (< 1.65), avoid spread — take ML only if value exists.
-3. HOME COURT SERIES SWING: home team that lost Game 1 — historically very motivated to respond.
-   → Add confidence +5 for home team coming off Game 1 loss.
-4. ROAD TEAM UP IN SERIES: rare and high-signal — add confidence +5 on road team to continue run.
-5. ELIMINATION GAME — HOME JOKIC FACTOR: Nikola Jokic historically elevates in playoff elimination games at home. Apply additional confidence +5 for DEN at home if facing elimination (stacks with +5 home elimination bonus = +10 total).
-6. NORMAL PLAYOFF GAME: no series-specific adjustment.
+3. HOME COURT SERIES SWING: home team that lost previous game — historically very motivated to respond.
+   → Add confidence +5 for home team coming off a loss.
+4. TIED SERIES (2-2): both teams fully motivated, home court worth 3-4 pts in playoffs. Treat as baseline — no desperation adjustment, standard home court edge applies.
+5. ELIMINATION GAME — JOKIC FACTOR: Nikola Jokic historically elevates in playoff elimination games. Apply additional confidence +5 for DEN if facing elimination (stacks with any home bonus = +10 at home, +10 on road). NOTE: DEN is on road for Game 6 — road elimination is highest desperation.
+6. CLOSING TEAM CAUTION (up 3-0 or 3-1): teams may lose focus in blowouts, starters may rest. Do NOT bet spread on these teams at < 1.70. ML only where genuine value exists.
+7. NORMAL PLAYOFF GAME: no series-specific adjustment.
 
 ## SECTION:playin_rules
 INACTIVE — Play-In Tournament is over. Do NOT apply any play-in rules.
@@ -106,17 +119,19 @@ H2H records compiled with depleted rosters must be discounted:
 - OKC (Williams now OUT) — H2H vs PHX compiled with different roster; use with caution
 - HOU (Durant status unresolved) — H2H may reflect roster not matching current lineup
 
-Active series H2H — verify from ESPN before each game (these are approximations, not confirmed):
-- ORL vs DET: Series tied 2-2. Regular season H2H — re-verify from ESPN. Both teams relatively healthy.
-- OKC vs PHX: OKC leads 3-0. Regular season H2H — discount any game where Williams was absent. PHX home for Game 4.
-- ATL vs NYK: ATL leads 2-1. Regular season H2H — discount any NYK game with Brunson absent. Physical ATL style.
-- MIN vs DEN: MIN leads 3-1. DEN's regular season W12 streak did NOT translate. MIN defensive physicality has neutralised Jokic enough to lead 3-1.
-- CLE vs TOR: CLE leads 2-1. Re-verify regular season H2H — likely CLE dominant given season records.
-- BOS vs PHI: BOS leads 2-1. Re-verify regular season H2H — PHI depleted roster may discount H2H.
-- SAS vs POR: SAS leads 2-1. Re-verify from ESPN.
-- LAL vs HOU: LAL leads 3-0. H2H largely irrelevant — LAL depleted roster with no Doncic/Reaves; HOU without Durant; series result speaks louder than H2H.
+NOTE: By Game 4+ of any series (where we now are in most matchups), coaching adjustments have largely
+neutralised H2H edge. Weight IN-SERIES results more heavily than regular season H2H at this stage.
+For teams now at Game 5/6, in-series game results are the PRIMARY signal — not regular season H2H.
 
-NOTE: By Game 4+ of any series, coaching adjustments have largely neutralised H2H edge. Weight in-series results more heavily than regular season H2H at this stage.
+Active series H2H (verify from ESPN before each game):
+- ORL vs DET: Series tied 2-2. Game 5. In-series split means H2H adds no directional edge. Re-verify regular season H2H.
+- OKC vs PHX: OKC leads 3-0 (or 3-1 — verify). In-series dominance > regular season H2H. Discount H2H games where Williams was absent.
+- ATL vs NYK: ATL leads series. In-series result > regular season H2H. Discount any NYK H2H game with Brunson absent.
+- MIN vs DEN: MIN leads 3-1. Game 6 next. DEN's regular season W12 streak did NOT translate. In-series is definitive signal — MIN has neutralised Jokic. H2H irrelevant at this stage.
+- CLE vs TOR: CLE leads series (verify exact score). Re-verify regular season H2H — likely CLE dominant given season records.
+- BOS vs PHI: BOS leads 3-1. In-series dominance confirms BOS edge. PHI depleted roster discounts any H2H.
+- SAS vs POR: SAS leads 3-1. Re-verify from ESPN. In-series result is the signal.
+- LAL vs HOU: LAL leads 3-1. H2H fully irrelevant — LAL depleted with no Doncic/Reaves; series result speaks louder.
 
 ## SECTION:l15_caveat
 L15 NetRtg caveat for Round 1 playoffs:
