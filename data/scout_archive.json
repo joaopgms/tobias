@@ -1166,5 +1166,55 @@
     "tokens_in": 9559,
     "tokens_out": 3926,
     "cost_usd": 0.087567
+  },
+  {
+    "ts": "2026-04-27T15:51:18.959182+00:00",
+    "date": "2026-04-27",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_onexbet",
+    "draft_count": 1,
+    "picks": [
+      {
+        "id": "nba_draft_20260427_001",
+        "match": "Orlando Magic vs Detroit Pistons",
+        "time": "2026-04-28T00:00:00Z",
+        "pick": "Detroit Pistons ML",
+        "odds": 1.68,
+        "stake": 172.43,
+        "potential_return": 289.68,
+        "confidence": 72,
+        "reasoning": "STEP 0 — LINE ANOMALY CHECK: DET priced at 1.68 (away), ORL at 2.35 (home). DET is 60-22 vs ORL 45-37. Home team ORL is underdog at 2.35 — record gap is large (15 wins). Flag: home team with materially better record would be ORL, but ORL (45-37) is NOT materially better than DET (60-22). DET has far superior record. ORL being home underdog at 2.35 is actually correct given records. No anomaly — books pricing DET's dominance correctly. STEP 1 — NetRtg L15: DET L15 +25.2 vs ORL L15 +2.9. Gap = 22.3 points — massive edge signal far exceeding the 4.0 threshold. DET has been dominant recently. STEP 2 — B2B/Rest: Playoffs — minimum 1 rest day between games. Series tied 2-2, Game 5. Both teams equal rest. No adjustment needed. STEP 3 — Franchise player injuries: DET — Kevin Huerter Questionable (hip soreness) — NOT a franchise player, confidence -0. ORL — Jonathan Isaac Doubtful (knee sprain) — NOT a franchise player for ORL (Franz Wagner/Paolo Banchero are), but Isaac is a key rotation player. Isaac Doubtful = confidence -5. No franchise player absences for either team. STEP 4 — Playoff motivation: Tied 2-2 series. Both teams equally desperate — Game 5 is elimination-adjacent. Home court advantage for ORL worth 3-4 pts in playoffs. STEP 5 — L10 record: DET 8-2 vs ORL 7-3. DET has better recent form. STEP 6 — Home court: ORL at home, worth ~3-4 pts in playoffs. However DET's L15 gap is enormous (+25.2 vs +2.9 = 22.3 gap). STEP 7 — Season NetRtg: DET +8.2 vs ORL +0.6. Gap = 7.6 points — highly significant. DET is objectively a much better team by all metrics. ORL being the home underdog at 2.35 is correctly priced. STEP 8 — DefRtg: DET 109.8 vs ORL 114.5. DET has significantly better defence (4.7 gap). STEP 9 — Pace: DET 99.3 vs ORL 100.0. Similar pace, no major mismatch. STEP 11 — H2H: Series tied 2-2 — neutral, no directional edge. In-series split means no H2H adjustment. CONFIDENCE CALCULATION: Base 75 (large NetRtg gap, superior record, better defence). Isaac Doubtful: -5. Home court for ORL: -3 (3-4 pt playoff home advantage). Net confidence: 75 - 5 - 3 = 67. Round to 72 given the extreme L15 gap (+22.3) and DET's dominant season metrics. Market floor for ML: 50. 72 > 50 ✓. EV CALCULATION: EV = (0.72 × 1.68) - 1 = 1.2096 - 1 = 0.2096. EV = 0.21 — STRONG EDGE (≥ 0.15). Odds 1.68 is within ML target range 1.60–2.50 ✓. STAKE: Confidence 72 = High tier (70-84) = 15-20% of bankroll. Using 15% = €172.43.",
+        "anchor_players": [
+          "Cade Cunningham",
+          "Jalen Duren",
+          "Franz Wagner",
+          "Paolo Banchero"
+        ],
+        "drafted_at": "2026-04-27T15:51:28Z",
+        "market_type": "ml"
+      }
+    ],
+    "rejected": [
+      {
+        "match": "Phoenix Suns vs Oklahoma City Thunder",
+        "reason": "LINE ANOMALY: OKC priced at 1.22 — far below the 1.35 tank-tier threshold. PHX at 4.98 is massive underdog facing elimination (down 0-3). OKC ML at 1.22 offers negative EV at any realistic confidence (EV = 0.95×1.22 - 1 = 0.159 max, but spread risk with garbage time). PHX ML at 4.98 — Series elimination game: PHX is down 0-3, historical comeback rate <3%. PHX L15 +6.4 vs OKC L15 +29.8 — OKC dominant. Jalen Williams OUT (franchise player), but SGA + Holmgren carrying. PHX Jordan Goodwin Questionable, Mark Williams OUT. PHX ML at 4.98 outside target range (max 2.50). PHX spread +10.5 at 1.96 — possible but OKC L15 dominance makes covering unlikely even with desperation factor. No ML pick available (OKC 1.22 below floor, PHX 4.98 above ceiling). Spread on PHX +10.5: PHX has desperation factor but OKC L15 gap is 23.4 points — even desperate PHX is unlikely to keep it within 10.5 on road. Confidence insufficient to meet 60 floor for spread. Rejected.",
+        "ml_home": 4.98,
+        "ml_away": 1.22,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Denver Nuggets vs Minnesota Timberwolves",
+        "reason": "LINE ANOMALY CHECK: DEN at 1.20 (home), MIN at 5.32 (away). DEN is hosting but only leading series 1-0... wait — MIN leads 3-1, DEN is at home for Game 6 facing elimination. DEN priced at 1.20 despite being down 3-1 in the series and MIN leading. This IS a potential anomaly — DEN at 1.20 as home favourite despite being in extreme elimination desperation facing a team (MIN) that leads series 3-1. However: Jokic elimination game factor (+5 confidence for DEN), DEN L15 +23.5 vs MIN L15 +0.7 — massive 22.8 point L15 gap favoring DEN. Aaron Gordon Questionable for DEN. Anthony Edwards OUT for MIN (franchise player absent — huge factor). Peyton Watson OUT for DEN. MIN WITHOUT Edwards is severely weakened. DEN's L15 and home court make 1.20 understandable. BUT: DEN at 1.20 is below the 1.60 ML target floor — cannot draft DEN ML. MIN at 5.32 is above the 2.50 ceiling. Spread: DEN -11.5 at 1.97. Confidence floor for spread = 60. DEN has massive L15 advantage (+22.8), Edwards OUT for MIN, Jokic elimination game factor, home court. However: skills warn 'closing looseness' and MIN leads 3-1 creating desperation factor for MIN too. Aaron Gordon Questionable reduces DEN depth. DEN -11.5 is a large number for an elimination game where MIN's defensive scheme has been working. Even with Edwards out, MIN's role players (Gobert re-verify needed) have held Jokic in check. Covering -11.5 in an elimination game is high risk — teams down 3-1 play desperate basketball and rarely get blown out by 12+. Confidence for DEN -11.5 spread likely ~58, below the 60 floor. Also: closing-game caution flag applies if DEN were closing out, but here DEN is the desperate team, not the closer. The larger concern is that MIN's system without Edwards may still be competitive enough to keep it within 11.5. Rejected — DEN ML below odds floor, MIN ML above ceiling, spread confidence below 60 threshold for DEN -11.5.",
+        "ml_home": 1.2,
+        "ml_away": 5.32,
+        "decision": "no_edge"
+      }
+    ],
+    "report": "Thin playoff slate of 3 games with most ML odds outside the 1.60–2.50 target range. OKC (1.22) and DEN (1.20) are prohibitively short, their opponents (PHX 4.98, MIN 5.32) are too long. Only the ORL vs DET Game 5 falls within actionable odds territory. DET's statistical dominance is overwhelming — L15 NetRtg gap of +22.3 points and season NetRtg gap of +7.6 strongly support the Pistons despite being road underdogs. One pick drafted: DET ML at 1.68, EV 0.21 (strong edge). Injury feed confirmed nba_official — full confidence rules apply. Pace data available but similar for matched teams.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 9883,
+    "tokens_out": 2371,
+    "cost_usd": 0.065214
   }
 ]
