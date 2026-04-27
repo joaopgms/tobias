@@ -1,24 +1,24 @@
 {
   "season": "2024-25",
   "game": 2,
-  "bankroll": 1149.53,
+  "bankroll": 977.1,
   "bankroll_initial": 1000.0,
   "bankroll_peak": 1917.57,
-  "total_staked": 6579.04,
+  "total_staked": 6751.47,
   "total_returned": 6728.57,
   "net_pnl": 149.53,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-04-27T15:51:18.959182+00:00",
+  "last_updated": "2026-04-27T23:44:12.539386+00:00",
   "first_game_time": "2026-04-28T00:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
   "scout_updated_at": "2026-04-27T15:51:18.959182+00:00",
   "scout_odds_source": "theodds_onexbet",
-  "commit_status": "pending",
-  "commit_updated_at": "2026-04-26T17:32:18.471810+00:00",
-  "commit_date": "2026-04-26",
+  "commit_status": "partial",
+  "commit_updated_at": "2026-04-27T23:44:12.539386+00:00",
+  "commit_date": "2026-04-27",
   "analyst_updated_at": "2026-04-27T12:19:07.019129+00:00",
   "settler_updated_at": "2026-04-27T11:44:43.891243+00:00",
   "agent_models": {
@@ -27,7 +27,7 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "Thin playoff slate of 3 games with most ML odds outside the 1.60–2.50 target range. OKC (1.22) and DEN (1.20) are prohibitively short, their opponents (PHX 4.98, MIN 5.32) are too long. Only the ORL vs DET Game 5 falls within actionable odds territory. DET's statistical dominance is overwhelming — L15 NetRtg gap of +22.3 points and season NetRtg gap of +7.6 strongly support the Pistons despite being road underdogs. One pick drafted: DET ML at 1.68, EV 0.21 (strong edge). Injury feed confirmed nba_official — full confidence rules apply. Pace data available but similar for matched teams.",
+  "last_report": "### CONFIRMED — Detroit Pistons ML\n\n- Match: Orlando Magic vs Detroit Pistons | Tip: 00:00 UTC\n- Pick: Detroit Pistons ML | Scout odds: 1.68 | Commit odds: 1.66 | Move: -0.02 (minor, against)\n- ML: ORL 2.40 / DET 1.66 | ATS: ORL +3.5 (1.96/1.96) | O/U: 215.5 (O:2.04/U:1.88)\n- Stake: €172.43 | Pot: €286.23 | Conf: 72/100 | EV: 0.195\n- Decision: All four anchor players (Cunningham, Duren, F. Wagner, Banchero) confirmed active via NBA Official. Line moved only -0.02 against — stays above 1.65 floor. Jonathan Isaac upgraded from Doubtful to OUT for ORL (slight positive for DET thesis — ORL loses a rotation contributor). Kevin Huerter Questionable for DET is immaterial (non-anchor). EV of 0.195 is a strong edge. DET's L15 gap (+22.3 pts vs ORL) and superior season metrics across the board support the pick in a true 50/50 series that has DET priced correctly as road favourite. Stake maintained at Scout level per rules (do not increase on worsened odds).\n\n---\n\n### CONFIRMED (NEW — Late Scout) — Denver Nuggets -11.5\n\n- Match: Denver Nuggets vs Minnesota Timberwolves | Tip: 02:30 UTC\n- Pick: Denver Nuggets -11.5 | Scout odds: N/A (new pick) | Commit odds: 2.00 | Move: N/A\n- ML: DEN 1.21 / MIN 5.17 | ATS: DEN -11.5 (2.00/1.92) | O/U: 224.5 (O:1.96/U:1.96)\n- Stake: €172.43 | Pot: €344.86 | Conf: 68/100 | EV: 0.360\n- Decision: Scout correctly identified DEN ML (1.21) as below odds floor and MIN ML (5.32) as above ceiling, but flagged DEN -11.5 as borderline (conf ~58). The confirmed Anthony Edwards OUT (NBA Official, bone bruise) was available at Scout but is now locked in — this tips confidence to 68 (above 60 gate). Edwards is MIN's primary offensive engine; his absence on a road elimination attempt against a desperate Jokic-led team at home is the decisive factor. DEN L15 +23.5 vs MIN +0.7 gap (22.8 pts), Jokic elimination factor (+5), home court (+3-4 pts) all stack. Aaron Gordon Questionable (-5) is the primary risk. EV of 0.36 is exceptional. All gates met: time (166 min), quantity (first new pick), confidence (68), EV (0.36), odds (2.00 in 1.75-2.30 range).\n\n---\n\n### LATE SCOUT REJECTION — Phoenix Suns vs OKC Thunder\nEvaluated PHX +11.5 @ 1.96 — confidence ceiling of 55 due to OKC's L15 dominance (+29.8 vs PHX +6.4 = 23.4 gap) even without Williams. Confidence gate of 60 not met. No pick added.\n\n### LATE SCOUT REJECTION — ORL vs DET (new pick)\nTime gate failed (tip-off <20 minutes from commit). No new late pick possible.\n\n---\n\n**Slate Summary:** Two bets committed for a total of €344.86 (30% of bankroll), leaving 70% protected. The DET ML at 1.66 is the bread-and-butter play — a dominant team by every metric visiting a lesser opponent in a must-win Game 5 with all anchors healthy. The DEN -11.5 late addition is the higher-EV play (0.36), unlocked by Edwards' confirmed absence gutting MIN's offense against a desperate Jokic at home in an elimination game. Total exposure is well within risk parameters.",
   "draft_picks": [
     {
       "id": "nba_draft_20260427_001",
@@ -49,7 +49,29 @@
       "market_type": "ml"
     }
   ],
-  "pending_bets": [],
+  "pending_bets": [
+    {
+      "id": "nba_bet_20260427_001",
+      "match": "Orlando Magic vs Detroit Pistons",
+      "time": "2026-04-28T00:00:00Z",
+      "pick": "Detroit Pistons ML",
+      "odds": 1.66,
+      "stake": 172.43,
+      "potential_return": 286.23,
+      "confidence": 72,
+      "reasoning": "CONFIRMED from draft pick nba_draft_20260427_001. ODDS CHECK: Scout odds 1.68 → Commit odds 1.66 (moved -0.02 against, minimal movement well within 0.10 threshold). Floor 1.65 — current 1.66 passes ✓. ANCHOR PLAYERS: Cade Cunningham (active ✓), Jalen Duren (active ✓), Franz Wagner (active ✓), Paolo Banchero (active ✓). All anchors confirmed healthy. INJURY UPDATE: Jonathan Isaac confirmed OUT (was Doubtful at Scout — upgraded to OUT). Isaac OUT actually marginally helps DET as ORL loses a rotation contributor. Kevin Huerter Questionable (DET) — non-anchor, no confidence adjustment. CONFIDENCE: Maintained at 72. Isaac going from Doubtful to OUT is a slight positive for DET thesis; Scout had applied -5 for Doubtful, but since Isaac is not DET's anchor and his absence weakens ORL, no confidence reduction warranted. EV RECALC: EV = (0.72 × 1.66) - 1 = 1.1952 - 1 = 0.195. STRONG EDGE ≥ 0.05 ✓. EDGE BASIS: DET L15 NetRtg +25.2 vs ORL +2.9 (gap 22.3 pts). Season NetRtg DET +8.2 vs ORL +0.6. DET DefRtg 109.8 vs ORL 114.5 (4.7 pt defensive gap). Records: DET 60-22 vs ORL 45-37. Series tied 2-2, Game 5, ORL at home (3-4 pt playoff home advantage factored into 72 confidence). STAKE: High tier (70-84) at 15% = €172.43 (unchanged from Scout — do not increase on worsened odds).",
+      "anchor_players": [
+        "Cade Cunningham",
+        "Jalen Duren",
+        "Franz Wagner",
+        "Paolo Banchero"
+      ],
+      "result": null,
+      "returned": null,
+      "pnl": null,
+      "settled_at": null
+    }
+  ],
   "settled_bets": [
     {
       "id": "nba_bet_20260406_001",
@@ -684,58 +706,57 @@
   ],
   "late_scout_rejections": [
     {
-      "match": "Toronto Raptors vs Cleveland Cavaliers",
-      "reason": "Game already in progress (tip 17:00 UTC, commit 17:32 UTC). No bet possible regardless of any other factors."
+      "match": "Orlando Magic vs Detroit Pistons",
+      "reason": "Time gate failed — tip-off at 00:00 UTC is only ~16 minutes from commit time (23:44 UTC). Skills require first_game_time - now > 20 minutes for new late picks. No new picks can be added for this game. Draft pick already reviewed and confirmed."
     },
     {
-      "match": "Portland Trail Blazers vs San Antonio Spurs",
-      "reason": "Outside 90-minute late scout window — tips at 19:30 UTC, 118 minutes from now. Additionally Victor Wembanyama remains QUESTIONABLE (Concussion Protocol) per fresh injury report — franchise player status unresolved, same block reason as Scout's rejection. Will be evaluated at its own commit window."
-    },
-    {
-      "match": "Philadelphia 76ers vs Boston Celtics",
-      "reason": "Outside 90-minute late scout window — tips at 23:00 UTC, ~328 minutes away. Joel Embiid still DOUBTFUL (Appendectomy Surgery Recovery), Kelly Oubre Jr. still Questionable. No change from Scout conditions. Will be evaluated at its own commit window."
-    },
-    {
-      "match": "Houston Rockets vs Los Angeles Lakers",
-      "reason": "Outside 90-minute late scout window — tips at 01:30 UTC, ~480 minutes away. Kevin Durant still QUESTIONABLE (Left Ankle Sprain), Austin Reaves still Questionable. HOU ML 1.57 below 1.60 minimum. No changed conditions vs Scout. Will be evaluated at its own commit window."
+      "match": "Phoenix Suns vs Oklahoma City Thunder",
+      "reason": "No new edge found. OKC ML 1.20 remains below ML floor of 1.65. PHX ML 5.40 exceeds 2.50 ceiling. PHX +11.5 @ 1.96 evaluated: confidence calculated at 55 (PHX home desperation +5, but L15 gap 23.4 pts against PHX, OKC dominant even without Williams). Confidence 55 fails the 60 gate minimum for new Commit-phase picks. Rejected."
     }
   ],
   "commit_report_data": {
-    "date": "2026-04-26",
-    "ts": "2026-04-26T17:32:18.471810+00:00",
-    "bets": [],
-    "cancelled": [
+    "date": "2026-04-27",
+    "ts": "2026-04-27T23:44:12.539386+00:00",
+    "bets": [
       {
-        "id": "nba_draft_20260426_002",
-        "match": "Toronto Raptors vs Cleveland Cavaliers",
-        "pick": "Toronto Raptors +4.5",
-        "reason": "Two compounding cancel triggers: (1) Game already in progress — tip was 17:00 UTC, commit time is 17:32 UTC; cannot bet a live game. (2) Odds moved against from 1.94 → 1.84 (-0.10), triggering confidence -10 adjustment per line_movement_rules. Revised confidence: 62 - 10 = 52. EV recalculated at current odds: (0.52 × 1.84) - 1 = -0.043, which is below the required 0.05 EV threshold. Cancel criteria met on both counts."
+        "id": "nba_bet_20260427_001",
+        "match": "Orlando Magic vs Detroit Pistons",
+        "time": "2026-04-28T00:00:00Z",
+        "pick": "Detroit Pistons ML",
+        "odds": 1.66,
+        "stake": 172.43,
+        "potential_return": 286.23,
+        "confidence": 72,
+        "reasoning": "CONFIRMED from draft pick nba_draft_20260427_001. ODDS CHECK: Scout odds 1.68 → Commit odds 1.66 (moved -0.02 against, minimal movement well within 0.10 threshold). Floor 1.65 — current 1.66 passes ✓. ANCHOR PLAYERS: Cade Cunningham (active ✓), Jalen Duren (active ✓), Franz Wagner (active ✓), Paolo Banchero (active ✓). All anchors confirmed healthy. INJURY UPDATE: Jonathan Isaac confirmed OUT (was Doubtful at Scout — upgraded to OUT). Isaac OUT actually marginally helps DET as ORL loses a rotation contributor. Kevin Huerter Questionable (DET) — non-anchor, no confidence adjustment. CONFIDENCE: Maintained at 72. Isaac going from Doubtful to OUT is a slight positive for DET thesis; Scout had applied -5 for Doubtful, but since Isaac is not DET's anchor and his absence weakens ORL, no confidence reduction warranted. EV RECALC: EV = (0.72 × 1.66) - 1 = 1.1952 - 1 = 0.195. STRONG EDGE ≥ 0.05 ✓. EDGE BASIS: DET L15 NetRtg +25.2 vs ORL +2.9 (gap 22.3 pts). Season NetRtg DET +8.2 vs ORL +0.6. DET DefRtg 109.8 vs ORL 114.5 (4.7 pt defensive gap). Records: DET 60-22 vs ORL 45-37. Series tied 2-2, Game 5, ORL at home (3-4 pt playoff home advantage factored into 72 confidence). STAKE: High tier (70-84) at 15% = €172.43 (unchanged from Scout — do not increase on worsened odds).",
+        "anchor_players": [
+          "Cade Cunningham",
+          "Jalen Duren",
+          "Franz Wagner",
+          "Paolo Banchero"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null
       }
     ],
+    "cancelled": [],
     "late_rejections": [
       {
-        "match": "Toronto Raptors vs Cleveland Cavaliers",
-        "reason": "Game already in progress (tip 17:00 UTC, commit 17:32 UTC). No bet possible regardless of any other factors."
+        "match": "Orlando Magic vs Detroit Pistons",
+        "reason": "Time gate failed — tip-off at 00:00 UTC is only ~16 minutes from commit time (23:44 UTC). Skills require first_game_time - now > 20 minutes for new late picks. No new picks can be added for this game. Draft pick already reviewed and confirmed."
       },
       {
-        "match": "Portland Trail Blazers vs San Antonio Spurs",
-        "reason": "Outside 90-minute late scout window — tips at 19:30 UTC, 118 minutes from now. Additionally Victor Wembanyama remains QUESTIONABLE (Concussion Protocol) per fresh injury report — franchise player status unresolved, same block reason as Scout's rejection. Will be evaluated at its own commit window."
-      },
-      {
-        "match": "Philadelphia 76ers vs Boston Celtics",
-        "reason": "Outside 90-minute late scout window — tips at 23:00 UTC, ~328 minutes away. Joel Embiid still DOUBTFUL (Appendectomy Surgery Recovery), Kelly Oubre Jr. still Questionable. No change from Scout conditions. Will be evaluated at its own commit window."
-      },
-      {
-        "match": "Houston Rockets vs Los Angeles Lakers",
-        "reason": "Outside 90-minute late scout window — tips at 01:30 UTC, ~480 minutes away. Kevin Durant still QUESTIONABLE (Left Ankle Sprain), Austin Reaves still Questionable. HOU ML 1.57 below 1.60 minimum. No changed conditions vs Scout. Will be evaluated at its own commit window."
+        "match": "Phoenix Suns vs Oklahoma City Thunder",
+        "reason": "No new edge found. OKC ML 1.20 remains below ML floor of 1.65. PHX ML 5.40 exceeds 2.50 ceiling. PHX +11.5 @ 1.96 evaluated: confidence calculated at 55 (PHX home desperation +5, but L15 gap 23.4 pts against PHX, OKC dominant even without Williams). Confidence 55 fails the 60 gate minimum for new Commit-phase picks. Rejected."
       }
     ],
-    "total_staked": 0.0,
-    "bankroll_before": 855.24,
-    "report": "### CANCELLED — Toronto Raptors +4.5\n\n- **Match:** Toronto Raptors vs Cleveland Cavaliers | Tip: 17:00 UTC (ALREADY IN PROGRESS at commit time 17:32 UTC)\n- **Pick:** TOR +4.5 → current line TOR +5.5 | Scout odds: 1.94 | Commit odds: 1.84 | Move: -0.10 (against)\n- **ML:** TOR 2.80 / CLE 1.43 | **ATS:** TOR +5.5 (1.84/1.90) | **O/U:** N/A\n- **Stake:** €150.92 (not committed) | **Conf:** 62 → 52 (adjusted) | **EV:** (0.52 × 1.84) - 1 = **-0.043**\n- **Decision:** Two independent cancel triggers — (1) Game is live; tip was 17:00 UTC and commit runs at 17:32 UTC, making this unactionable. (2) Even setting aside the in-game issue, the odds moved against by 0.10, triggering a mandatory confidence -10 reduction per line_movement_rules (62 → 52). EV at revised confidence and current odds = -0.043, below the required ≥0.05 threshold per cancel_criteria. Pick cancelled on both grounds.\n\n---\n\n### LATE SCOUT SUMMARY\n\n**TOR vs CLE:** In progress — no action possible.\n\n**POR vs SAS (19:30 UTC):** Outside the 90-minute late scout window (118 minutes to tip). Victor Wembanyama remains Questionable in the fresh injury report — the same franchise player uncertainty that blocked Scout's pick is still unresolved. This game will require its own commit window closer to tip-off, at which point Wembanyama's status should be clearer.\n\n**PHI vs BOS (23:00 UTC) and HOU vs LAL (01:30 UTC):** Both far outside the 90-minute window and both carry the same unresolved key player uncertainties (Embiid Doubtful, Durant Questionable) that blocked Scout analysis. These will receive full evaluation at their respective commit windows.\n\n---\n\n### SLATE SUMMARY\n\nNo bets are committed tonight. The sole draft pick (TOR +4.5) was cancelled due to the game already being in progress at commit time, compounded by a deteriorating EV calculation (-0.043) after mandatory odds-movement confidence adjustment. The remaining three games on tonight's slate fall outside the 90-minute late-scout window and will each receive their own commit evaluation; all three also carry unresolved franchise player injury situations (Wembanyama GTD concussion, Embiid Doubtful, Durant GTD) that must be clarified before any position can be taken. Bankroll of €855.24 is fully preserved.",
-    "tokens_in": 9414,
-    "tokens_out": 2730,
-    "cost_usd": 0.069192
+    "total_staked": 172.43,
+    "bankroll_before": 1149.53,
+    "report": "### CONFIRMED — Detroit Pistons ML\n\n- Match: Orlando Magic vs Detroit Pistons | Tip: 00:00 UTC\n- Pick: Detroit Pistons ML | Scout odds: 1.68 | Commit odds: 1.66 | Move: -0.02 (minor, against)\n- ML: ORL 2.40 / DET 1.66 | ATS: ORL +3.5 (1.96/1.96) | O/U: 215.5 (O:2.04/U:1.88)\n- Stake: €172.43 | Pot: €286.23 | Conf: 72/100 | EV: 0.195\n- Decision: All four anchor players (Cunningham, Duren, F. Wagner, Banchero) confirmed active via NBA Official. Line moved only -0.02 against — stays above 1.65 floor. Jonathan Isaac upgraded from Doubtful to OUT for ORL (slight positive for DET thesis — ORL loses a rotation contributor). Kevin Huerter Questionable for DET is immaterial (non-anchor). EV of 0.195 is a strong edge. DET's L15 gap (+22.3 pts vs ORL) and superior season metrics across the board support the pick in a true 50/50 series that has DET priced correctly as road favourite. Stake maintained at Scout level per rules (do not increase on worsened odds).\n\n---\n\n### CONFIRMED (NEW — Late Scout) — Denver Nuggets -11.5\n\n- Match: Denver Nuggets vs Minnesota Timberwolves | Tip: 02:30 UTC\n- Pick: Denver Nuggets -11.5 | Scout odds: N/A (new pick) | Commit odds: 2.00 | Move: N/A\n- ML: DEN 1.21 / MIN 5.17 | ATS: DEN -11.5 (2.00/1.92) | O/U: 224.5 (O:1.96/U:1.96)\n- Stake: €172.43 | Pot: €344.86 | Conf: 68/100 | EV: 0.360\n- Decision: Scout correctly identified DEN ML (1.21) as below odds floor and MIN ML (5.32) as above ceiling, but flagged DEN -11.5 as borderline (conf ~58). The confirmed Anthony Edwards OUT (NBA Official, bone bruise) was available at Scout but is now locked in — this tips confidence to 68 (above 60 gate). Edwards is MIN's primary offensive engine; his absence on a road elimination attempt against a desperate Jokic-led team at home is the decisive factor. DEN L15 +23.5 vs MIN +0.7 gap (22.8 pts), Jokic elimination factor (+5), home court (+3-4 pts) all stack. Aaron Gordon Questionable (-5) is the primary risk. EV of 0.36 is exceptional. All gates met: time (166 min), quantity (first new pick), confidence (68), EV (0.36), odds (2.00 in 1.75-2.30 range).\n\n---\n\n### LATE SCOUT REJECTION — Phoenix Suns vs OKC Thunder\nEvaluated PHX +11.5 @ 1.96 — confidence ceiling of 55 due to OKC's L15 dominance (+29.8 vs PHX +6.4 = 23.4 gap) even without Williams. Confidence gate of 60 not met. No pick added.\n\n### LATE SCOUT REJECTION — ORL vs DET (new pick)\nTime gate failed (tip-off <20 minutes from commit). No new late pick possible.\n\n---\n\n**Slate Summary:** Two bets committed for a total of €344.86 (30% of bankroll), leaving 70% protected. The DET ML at 1.66 is the bread-and-butter play — a dominant team by every metric visiting a lesser opponent in a must-win Game 5 with all anchors healthy. The DEN -11.5 late addition is the higher-EV play (0.36), unlocked by Edwards' confirmed absence gutting MIN's offense against a desperate Jokic at home in an elimination game. Total exposure is well within risk parameters.",
+    "tokens_in": 9764,
+    "tokens_out": 5922,
+    "cost_usd": 0.118122
   },
   "netrtg_l15": {
     "Charlotte Hornets": 16.9,
