@@ -26,7 +26,7 @@
           "wins": 17,
           "losses": 13,
           "peak_bankroll": 1917.57,
-          "total_bets": 31
+          "total_bets": 32
         }
       ]
     }
@@ -1723,6 +1723,40 @@
         }
       ],
       "summary": "Day 2026-04-27 commit — 1 bets totalling €172.43. 0 cancelled. Bankroll: €1149.53 → €977.10."
+    },
+    {
+      "entry_id": "nba_entry_20260428",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-04-28T03:45:04.321762+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 977.1,
+      "total_staked": 146.5,
+      "bankroll_after": 830.6,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260428_002",
+          "match": "San Antonio Spurs vs Portland Trail Blazers",
+          "time": "2026-04-28T01:30:00Z",
+          "pick": "Under 215.5",
+          "odds": 1.96,
+          "stake": 146.5,
+          "potential_return": 287.14,
+          "reasoning": "Late scout trigger: Damian Lillard confirmed OUT for Portland (NBA official injury report) — franchise-level scorer absent in road elimination game. SAS has elite DefRtg (111.4, best of all tonight's teams) and L15 NetRtg +38.3. POR OffRtg of 114.5 drops further without Lillard. Playoff pace significantly slower than regular season. SAS closing out at home — likely to control tempo, no incentive to push pace when ahead. Even without Lillard, POR is a desperate road team but their offense will be severely limited against SAS's elite defense. Books may not have fully repriced 215.5 downward to account for Lillard's absence. SAS spread avoided per closing-game caution rule (explicit skills instruction for SAS closing-out team). Under thesis holds independently of any single factor: elite defense + star absence + playoff pace + closing-game tempo control all converge on Under.",
+          "confidence": 63,
+          "anchor_players": [
+            "Victor Wembanyama (SAS — active, no OUT listed)",
+            "Damian Lillard (POR — OUT confirmed, NBA official)"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-04-28T03:45:07Z"
+        }
+      ],
+      "summary": "Day 2026-04-28 commit — 1 bets totalling €146.50. 0 cancelled. Bankroll: €977.10 → €830.60."
     }
   ]
 }
