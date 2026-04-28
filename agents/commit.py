@@ -1,24 +1,23 @@
 """
 agents/commit.py
-Tobias — Commit Agent (self-gating, every 30 min)
+Tobias — Commit Agent (runs once at 16:30 UTC)
 
 Responsibilities:
-  1. Self-gate: only run when now >= first_game_time - 30min
-  2. Load commit_skills.md (Analyst-maintained criteria)
-  3. Fetch live Betano odds for line movement check
-  4. Fetch fresh injury reports for anchor player check
-  5. Call LLM to: review draft picks, cancel/confirm, find new late picks
-  6. Commit confirmed bets: deduct stakes from bankroll, move to pending_bets
-  7. Clear draft_picks, set commit_status = "done"
-  8. Handle bust detection
-  9. Write state + history + data.js to GitHub
-  10. Append to audit/commit_log.jsonl
+  1. Load commit_skills.md (Analyst-maintained criteria)
+  2. Fetch live Betano odds for line movement check
+  3. Fetch fresh injury reports for anchor player check
+  4. Call LLM to: review draft picks, cancel/confirm, find new late picks
+  5. Commit confirmed bets: deduct stakes from bankroll, move to pending_bets
+  6. Clear draft_picks, set commit_status = "done"
+  7. Handle bust detection
+  8. Write state + history + data.js to GitHub
+  9. Append to audit/commit_log.jsonl
 """
 
 import json
 import re
 import logging
-from datetime import datetime, date, timezone, timedelta
+from datetime import datetime, date, timezone
 
 from core.llm import call_llm, call_llm_full, extract_tag, agent_model_name
 from core.nba_injuries import fetch_official_nba_injuries, format_injuries_for_prompt as format_official_injuries
@@ -57,8 +56,7 @@ def _build_commit_prompt(skills: str, draft_picks: list, rejected_games: list,
                           adv_stats_text: str,
                           state: dict, today: str,
                           season_phase: str = "regular",
-                          playoff_context: str = "",
-                          future_picks_count: int = 0) -> str:
+                          playoff_context: str = "") -> str:
     bankroll = state["bankroll"]
     now_iso  = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
@@ -74,8 +72,6 @@ def _build_commit_prompt(skills: str, draft_picks: list, rejected_games: list,
 
     picks_json     = json.dumps(draft_picks, separators=(',', ':'))
     rejected_json  = json.dumps(rejected_games, separators=(',', ':')) if rejected_games else "[]"
-    future_note    = (f" ({future_picks_count} pick(s) for later games are already queued and will be committed separately.)"
-                      if future_picks_count > 0 else "")
 
     return f"""## YOUR SKILLS (follow these criteria exactly)
 {skills}
@@ -125,7 +121,7 @@ Check what has changed since 14:00 Scout:
 - Significant line movement on any game?
 - Any game Scout rejected that now has value at current odds?
 Apply the same rules as Scout: only add picks with genuine edge (conf ≥ 60, EV ≥ 0.05, odds in range).
-Max 3 new picks. Only add games where tip-off is within the next 90 minutes — later games will be evaluated at their own commit window.{future_note}
+Max 3 new picks.
 
 ### Task 3 — Confirm final list and commit
 - Recalculate stakes based on current bankroll (€{bankroll:.2f})
@@ -234,20 +230,7 @@ def _check_bust(state: dict, history: dict) -> tuple[dict, dict, bool]:
 
 # ── Main run ───────────────────────────────────────────────────────────────────
 
-def should_run(state: dict) -> bool:
-    """Returns True if at least one draft pick's commit window is open."""
-    now = datetime.now(timezone.utc)
-    for p in state.get("draft_picks", []):
-        try:
-            t = datetime.fromisoformat(p["time"].replace("Z", "+00:00"))
-            if now >= t - timedelta(minutes=30):
-                return True
-        except Exception:
-            continue
-    return False
-
-
-def run(store, force: bool = False, window_picks: list = None) -> None:
+def run(store) -> None:
     now     = datetime.now(timezone.utc)
     now_iso = now.isoformat()
     today   = now.strftime("%Y-%m-%d")
@@ -257,25 +240,12 @@ def run(store, force: bool = False, window_picks: list = None) -> None:
     state, history = store.read_state_and_history()
 
     # ── 2. Guard: already committed today? ────────────────────────────────────
-    if state.get("commit_status") == "done" and not force:
+    if state.get("commit_status") == "done":
         log.info("Commit: already committed today — skipping")
         return
 
-    # ── 3. Load draft picks (commit always runs — late scout may find new edges) ─
+    # ── 3. Load draft picks ────────────────────────────────────────────────────
     draft_picks = state.get("draft_picks", [])
-    # When called from commit_if_ready, only process picks in the current window;
-    # force=True (manual override) processes all picks regardless of time.
-    picks_to_process = window_picks if window_picks is not None else draft_picks
-
-    # Guard: skip picks for games already committed in an earlier window
-    already_committed = {b["match"] for b in state.get("pending_bets", [])}
-    if already_committed:
-        dupe_picks = [p for p in picks_to_process if p.get("match") in already_committed]
-        if dupe_picks:
-            dupe_ids = {p["id"] for p in dupe_picks}
-            log.info(f"Commit: dropping {len(dupe_picks)} pick(s) for already-committed game(s): {[p.get('match') for p in dupe_picks]}")
-            state["draft_picks"] = [p for p in state.get("draft_picks", []) if p["id"] not in dupe_ids]
-            picks_to_process = [p for p in picks_to_process if p["id"] not in dupe_ids]
 
     # ── 4. Load skills ────────────────────────────────────────────────────────
     skills = store.read_md("commit_skills")
@@ -337,21 +307,19 @@ def run(store, force: bool = False, window_picks: list = None) -> None:
         log.info("Commit: NetRtg L15 not yet available (game log accumulating)")
     netrtg_l15_str = _format_netrtg_l15_commit(netrtg_l15, scoreboard)
     rejected_games = state.get("rejected_games", [])
-    future_picks_count = len(draft_picks) - len(picks_to_process)
-    log.info(f"Commit: {len(scoreboard)} games tonight | {len(picks_to_process)} in window | {future_picks_count} pending future | {len(rejected_games)} rejected | injuries: {injuries_source}")
+    log.info(f"Commit: {len(scoreboard)} games tonight | {len(draft_picks)} draft picks | {len(rejected_games)} rejected | injuries: {injuries_source}")
     log.info(f"Commit: injuries source: {injuries_source} — calling LLM for final decision…")
     llm_result = None
     try:
         llm_result = call_llm_full(
             COMMIT_SYSTEM,
-            _build_commit_prompt(skills, picks_to_process, rejected_games,
+            _build_commit_prompt(skills, draft_picks, rejected_games,
                                   games_str, odds_str,
                                   injuries_str, injuries_source,
                                   netrtg_l15_str, standings_str,
                                   adv_str, state, today,
                                   season_phase=season_phase,
-                                  playoff_context=playoff_context,
-                                  future_picks_count=future_picks_count),
+                                  playoff_context=playoff_context),
             max_tokens=12000,
             agent="commit",
         )
@@ -421,25 +389,6 @@ def run(store, force: bool = False, window_picks: list = None) -> None:
             r["match"] = _normalise_match(r["match"])
     state["late_scout_rejections"] = late_rejs
 
-    # ── 8c. Enforce commit window — drop LLM-added out-of-window bets ─────────
-    # The LLM sees the full slate for late-scout and may add bets for late games
-    # even when instructed not to. Enforce the 90-min window in code.
-    if window_picks is not None and committed_bets:
-        cutoff = now + timedelta(minutes=90)
-        filtered = []
-        for b in committed_bets:
-            try:
-                bt = datetime.fromisoformat(b["time"].replace("Z", "+00:00"))
-                if bt <= cutoff:
-                    filtered.append(b)
-                else:
-                    log.warning(f"Commit: dropping out-of-window bet: {b.get('match')} tip {b['time']}")
-            except Exception:
-                filtered.append(b)
-        if len(filtered) < len(committed_bets):
-            log.info(f"Commit: {len(committed_bets) - len(filtered)} out-of-window bet(s) dropped")
-        committed_bets = filtered
-
     # ── 9. Validate bets ──────────────────────────────────────────────────────
     try:
         validate_all_bets(committed_bets, "commit")
@@ -467,14 +416,9 @@ def run(store, force: bool = False, window_picks: list = None) -> None:
     state["agent_models"] = state.get("agent_models", {})
     state["agent_models"]["commit"] = llm
     state["pending_bets"]      = state.get("pending_bets", []) + committed_bets
-    # Remove only picks processed in this window; future-game picks stay for their own window
-    committed_ids = {b["id"] for b in committed_bets}
-    cancelled_ids = {c["id"] for c in cancelled_picks if isinstance(c, dict) and "id" in c}
-    processed_ids = committed_ids | cancelled_ids
-    remaining_picks = [p for p in state.get("draft_picks", []) if p.get("id") not in processed_ids]
-    state["draft_picks"]   = remaining_picks
+    state["draft_picks"]       = []
     # NOTE: rejected_games intentionally kept — Scout tab needs them until next Scout run
-    state["commit_status"] = "done" if not remaining_picks else "partial"
+    state["commit_status"] = "done"
     state["commit_date"]   = today
     state["commit_updated_at"] = now_iso
     state["last_updated"]      = now_iso

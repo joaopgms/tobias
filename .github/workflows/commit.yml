@@ -1,11 +1,9 @@
-name: Tobias — Commit Check (every 30 min)
+name: Tobias — Commit (16:30 UTC daily)
 
 on:
   schedule:
-    # Every 30 min from 14:00–02:00 UTC — covers all NBA tip-off windows
-    # Last NBA tip-offs are ~01:30 UTC, no need to run past 02:00
-    - cron: '*/30 14-23 * * *'
-    - cron: '*/30 0-2 * * *'
+    # Once daily at 16:30 UTC — after Scout (14:00) and before first tip-off (~17:00)
+    - cron: '30 16 * * *'
   workflow_dispatch:
 
 jobs:
@@ -23,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run commit (self-gating — exits silently if not time yet)
+      - name: Run commit
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GEMINI_API_KEY:    ${{ secrets.GEMINI_API_KEY }}
@@ -32,4 +30,4 @@ jobs:
           ODDSPAPI_KEY:      ${{ secrets.ODDSPAPI_KEY }}
           THE_ODDS_API_KEY:  ${{ secrets.THE_ODDS_API_KEY }}
           LLM_PROVIDER:      ${{ vars.LLM_PROVIDER || 'claude' }}
-        run: python run.py commit_if_ready
+        run: python run.py commit
