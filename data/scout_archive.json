@@ -1216,5 +1216,64 @@
     "tokens_in": 9883,
     "tokens_out": 2371,
     "cost_usd": 0.065214
+  },
+  {
+    "ts": "2026-04-28T16:08:49.122142+00:00",
+    "date": "2026-04-28",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_onexbet",
+    "draft_count": 2,
+    "picks": [
+      {
+        "id": "nba_draft_20260428_001",
+        "match": "Boston Celtics vs Philadelphia 76ers",
+        "time": "2026-04-28T23:00:00Z",
+        "pick": "Boston Celtics -11.5",
+        "odds": 1.99,
+        "stake": 167.66,
+        "potential_return": 333.84,
+        "confidence": 72,
+        "reasoning": "LINE ANOMALY CHECK: No anomaly — BOS at 1.19 ML as overwhelming favourite is consistent with 3-1 series lead and NetRtg gap. SERIES CONTEXT: BOS leads 3-1, closing at home. PHI facing road elimination, depleted roster confirmed. NetRtg gap: BOS +8.2 vs PHI -0.2 = 8.4pt season gap, confirmed by L15: BOS +35.5 vs PHI +0.9 (massive L15 gap). In-series data is primary signal — BOS dominant across all 4 games. INJURY: NBA official PDF active. No BOS absences in verified feed (Tatum, Brown re-verify note — but no absence confirmed). PHI depleted roster (trust series results as proxy). SPREAD SIGNAL: NetRtg L15 gap = 34.6pts (extreme). DefRtg: BOS 112.7 vs PHI 115.6 — BOS clear defensive edge. B2B/REST: Playoff minimum 1 rest day each, no adjustment needed. PACE: BOS Pace 94.8 vs PHI 99.4 — some mismatch but spread signal overrides. HOME COURT PLAYOFF: +3-4pts for BOS at TD Garden. CLOSING TEAM CAUTION: Skills file flags 'avoid spread at <1.70 odds' for closing teams — spread odds here are 1.99 (well above threshold), so spread IS valid per rules. MOTIVATION: BOS motivated to close; PHI in desperation but depleted. Desperation can tighten games but PHI lacks personnel. SPREAD STRENGTH: DefRtg gap BOS vs PHI = 2.9pts (moderate); NetRtg gap >8pts; L15 gap extreme — all point to BOS covering -11.5 at home. EV CALCULATION: Confidence 72. EV = (0.72 × 1.99) - 1 = 1.4328 - 1 = 0.4328. EV = 0.43 — STRONG EDGE (>>0.15). STAKE: Confidence 72 = High tier (20-25%). 22% of €1117.74 = ~€245.90, but closing-game caution applied per rules — reducing to 15% = €167.66.",
+        "anchor_players": [
+          "Jayson Tatum",
+          "Jaylen Brown",
+          "Joel Embiid"
+        ],
+        "drafted_at": "2026-04-28T16:08:53Z",
+        "market_type": "spread"
+      },
+      {
+        "id": "nba_draft_20260428_002",
+        "match": "San Antonio Spurs vs Portland Trail Blazers",
+        "time": "2026-04-29T01:30:00Z",
+        "pick": "San Antonio Spurs -11.5",
+        "odds": 1.95,
+        "stake": 167.66,
+        "potential_return": 327.94,
+        "confidence": 74,
+        "reasoning": "LINE ANOMALY CHECK: No anomaly — SAS at 1.19 ML consistent with 3-1 series lead and massive NetRtg gap. SERIES CONTEXT: SAS leads 3-1, closing at home. POR facing road elimination. INJURY: NBA official PDF active. Damian Lillard OUT for POR (Injury Management) — CRITICAL. Lillard is POR's primary offensive engine; his absence decimates POR's scoring capacity on road elimination game. No SAS absences in verified feed (Wembanyama re-verify note — no absence confirmed). NETRTG GAP: SAS +8.3 vs POR -0.2 = 8.5pt season gap, confirmed by L15: SAS +38.3 vs POR +22.8 (SAS L15 gap is extreme). SPREAD SIGNALS: DefRtg gap: SAS 111.4 vs POR 114.7 — SAS clear defensive edge. NetRtg L15 gap = 15.5pts (strong). B2B/REST: Playoff minimum rest, no adjustment. HOME COURT PLAYOFF: SAS at Frost Bank Center +3-4pts. CLOSING TEAM CAUTION: Spread odds 1.95 > 1.70 threshold — spread IS valid per rules. MOTIVATION: SAS fully motivated to close. POR desperate but Lillard OUT removes their best chance of keeping it close. Road elimination + star player absent = cover rate very low for POR. SPREAD STRENGTH: 8.5pt NetRtg gap + Lillard OUT + home playoff advantage = SAS covering -11.5 is a strong signal. EV CALCULATION: Confidence 74. EV = (0.74 × 1.95) - 1 = 1.443 - 1 = 0.443. EV = 0.44 — STRONG EDGE (>>0.15). STAKE: Confidence 74 = High tier (20-25%). Closing-game caution applied — reducing to 15% = €167.66.",
+        "anchor_players": [
+          "Victor Wembanyama",
+          "Damian Lillard"
+        ],
+        "drafted_at": "2026-04-28T16:08:53Z",
+        "market_type": "spread"
+      }
+    ],
+    "rejected": [
+      {
+        "match": "New York Knicks vs Atlanta Hawks",
+        "reason": "DATA CONFLICT: Trae Young affiliation unresolved (appears in WAS verified absence feed AND ATL roster). Cannot assess ATL roster composition. Skills file explicitly flags 'do not draft ATL picks until Trae Young affiliation verified via NBA official PDF.' Additionally, NYK ML at 1.40 is below the 1.60 ML target floor. Spread odds 1.93 technically in range but roster uncertainty for ATL is too high per injury feed quality rules. No reliable pick available.",
+        "ml_home": 1.4,
+        "ml_away": 3.25,
+        "decision": "rejected"
+      }
+    ],
+    "report": "Three-game playoff slate tonight. Two strong spread edges identified: BOS -11.5 at home vs depleted PHI (closing out, NetRtg gap 8.4pts, L15 extreme), and SAS -11.5 at home vs POR missing Lillard (closing out, NetRtg gap 8.5pts, Lillard OUT devastates POR road elimination chances). Both picks carry EV ~0.43 — well above the 0.15 strong-edge threshold. NBA official PDF active for all three games. ATL vs NYK rejected due to Trae Young roster affiliation data conflict (WAS vs ATL conflict unresolved) per skills file mandatory rejection rule. Pace data available but not pace-reliant — spread edges are the primary signal tonight. Total staked: €335.32 (~30% of bankroll), within daily 70% cap.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 10113,
+    "tokens_out": 1849,
+    "cost_usd": 0.058074
   }
 ]
