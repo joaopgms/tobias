@@ -1,38 +1,39 @@
 ---
-date: 2026-04-27
+date: 2026-04-28
 llm: claude-sonnet-4-6
 scout_patches: 1
 commit_patches: 0
-milestone: daily (30 bets)
+milestone: daily (32 bets)
 ---
 
-## Today's Analysis — 2026-04-27
+## Today's Analysis — 2026-04-28
 
-The playoff picture is crystallising rapidly with LAL, BOS, SAS, and MIN all up 3-1 and capable of closing out today/tomorrow — the key betting risk this session is over-backing these closing teams at compressed spread odds given garbage-time looseness. The Trae Young data conflict (appearing in both WAS and ATL verified feeds) is a critical data integrity issue that must be resolved via NBA official PDF before any ATL or NYK pick is drafted — this alone could corrupt both the ATL-NYK series evaluation and any Knicks fade thesis. Performance data shows High confidence bets are severely underperforming (33.3% WR, €-1068) while Medium confidence delivers the system's only profit (58.1% WR, €+621), confirming the established pattern that Scout must continue resisting high-confidence drafting unless evidence is overwhelming.
+Key series updates: OKC has swept PHX 4-0 (verify if series is officially complete), MIN leads DEN 3-2 meaning DEN survived Game 5 — Jokic's elimination-game elevation is the critical signal for Game 6 at MIN. The most urgent data conflict remains Trae Young's team affiliation — he appears in the WAS verified absence feed yet ATL is active in the playoffs; this MUST be resolved via NBA official PDF before any ATL pick can be safely drafted. Performance data continues to show High confidence picks (31.2% WR) significantly underperforming Medium confidence picks (59.4% WR), suggesting the system should lean into medium-confidence edges rather than forcing high-confidence thesis plays — no strategic patch is warranted yet at 16 High bets, but this pattern warrants close monitoring as we approach 20.
 
 ## Performance Stats
-ALL-TIME: 23W / 25L | Win rate: 47.9% | P&L: €-588.71 | Avg odds: 1.95 | Avg conf: 65.6/100
-RECENT 20: 10W / 10L | 50.0% WR | P&L: €-566.65
-By market:      ML 21bets 9W/12L 42.9% €-757.67  |  SPREAD 23bets 12W/11L 52.2% €+96.23  |  TOTAL 4bets 2W/2L 50.0% €+72.73
-By confidence:  High 15bets 5W/10L 33.3% €-1068.09  |  Medium 31bets 18W/13L 58.1% €+620.69  |  Speculative 2bets 0W/2L 0.0% €-141.31
-By odds range:  1.70-1.89 16bets 7W/9L 43.8% €-1022.02  |  1.90-2.09 28bets 15W/13L 53.6% €+375.32  |  2.10-2.50 4bets 1W/3L 25.0% €+57.99
+ALL-TIME: 24W / 26L | Win rate: 48.0% | P&L: €-620.50 | Avg odds: 1.94 | Avg conf: 65.7/100
+RECENT 20: 9W / 11L | 45.0% WR | P&L: €-954.52
+By market:      ML 22bets 9W/13L 40.9% €-930.10  |  SPREAD 23bets 12W/11L 52.2% €+96.23  |  TOTAL 5bets 3W/2L 60.0% €+213.37
+By confidence:  High 16bets 5W/11L 31.2% €-1240.52  |  Medium 32bets 19W/13L 59.4% €+761.33  |  Speculative 2bets 0W/2L 0.0% €-141.31
+By odds range:  1.70-1.89 17bets 7W/10L 41.2% €-1194.45  |  1.90-2.09 29bets 16W/13L 55.2% €+515.96  |  2.10-2.50 4bets 1W/3L 25.0% €+57.99
 
 
 
 ## Scout patches applied
-- [franchise_player_rules] Updated franchise player statuses using only verified names from the current session's feed; corrected HOU to down 3-1 (not 3-0) per live playoff series data, updated SAS to leads 3-1, BOS to leads 3-1, and flagged Anthony Edwards status alert given discrepancy between roster-only OUT and apparent MIN series dominance.
+- [franchise_player_rules] Updating franchise player statuses to reflect live ESPN series data showing MIN leads DEN 3-2 (not 3-1) and OKC leads PHX 4-0, and aligning all series-specific notes with current verified absence feed.
 
 ## Commit patches applied
 None
 
 ## Playoff context patches applied
-- [series_context] Updated all series scores from live ESPN scoreboard data; LAL now leads 3-1 (not 3-0), BOS leads 3-1, SAS leads 3-1, MIN leads 3-1 with Game 6 next — reflecting games played since last session.
-- [elimination_flags] Updated elimination flags to reflect 3-1 leads for LAL, BOS, SAS, MIN; shifted HOU and DEN to road elimination scenarios with appropriate confidence adjustments; added closing-out caution flags for teams up 3-1.
-- [h2h_playoff] Updated H2H section to reflect current series scores (3-1 leads for LAL, BOS, SAS, MIN) and reinforced that at Game 5/6 stage, in-series results dominate over regular season H2H.
-- [playoff_motivation] Updated motivation section to reflect current late-series stage where most matchups are at Game 5/6 (not Game 1-3), emphasising road elimination dynamics and closing-team caution for the multiple 3-1 leads.
+- [series_context] Updating series scores to reflect ESPN live data: OKC leads PHX 4-0 (series may be complete), MIN leads DEN 3-2 (DEN survived Game 5), and clarifying home court and elimination contexts for all active series.
+- [elimination_flags] Updating elimination flags to reflect MIN leading DEN 3-2 (DEN survived elimination), OKC potentially completing sweep of PHX, and adding ATL data conflict flag as a high-risk warning.
+- [h2h_playoff] Updating H2H section to reflect MIN leading DEN 3-2 (adding MIN/Edwards roster caveat for H2H), OKC 4-0 series context, and reinforcing that Game 5/6 series are now fully decided by in-series performance.
+- [playoff_motivation] Adding a 'survived elimination momentum' rule to capture the DEN Game 5 survival scenario (and future similar situations) where a team's escape from elimination can create positive psychological momentum for the next game.
+- [l15_caveat] Updating L15 caveat to reflect current series outcomes (SAS 3-1, BOS 3-1, MIN 3-2, LAL 3-1) validating or contradicting NetRtg predictions, providing Scout with calibrated guidance on when to trust vs discount L15 at this late series stage.
 
 ## Intelligence gaps identified
-- **Trae Young appears in both the Washington Wizards and Atlanta Hawks verified absence feeds simultaneously, creating an unresolvable team affiliation conflict with current data.** — Any pick involving ATL vs NYK cannot be properly evaluated if ATL's franchise PG status is unknown — this directly affects confidence calculations and the legitimacy of any Hawks bet thesis. → Require infrastructure fix: cross-reference Trae Young's official team registration in NBA transaction feed before each session. Patch ATL franchise_player_rules only after official affiliation confirmed. Flag as BLOCK on ATL picks until resolved.
-- **Anthony Edwards appears as roster-only OUT in the verified feed but MIN leads DEN 3-1 in a series where MIN's offensive engine would logically require Edwards — his actual status is ambiguous.** — If Edwards is active (which the series result implies), MIN's franchise_player_rules should not carry a confidence penalty for his absence — and any DEN elimination play must account for MIN at full strength. → Add a mandatory Anthony Edwards re-verification flag to MIN franchise_player_rules (already done this session) and require NBA official PDF confirmation before ANY MIN or DEN pick. Consider adding a 'status conflict' rule: if roster-only OUT contradicts evident on-court performance, treat as 'active pending re-verification' rather than OUT.
-- **High confidence bets (conf 70-100) have a 33.3% win rate and €-1068 P&L across 15 bets — a systematic pattern suggesting the confidence calibration at the top tier is consistently overestimating edge.** — If confidence 70-84 picks continue losing at this rate, the staking tier allocating 20-25% of bankroll to these picks is amplifying losses significantly — the system would perform better treating 70-84 as Medium confidence. → After 5 more settled bets in the High confidence tier, if WR remains below 40%, replace the confidence_staking High tier (70-84) stake ceiling from 25% down to 15-20%, effectively collapsing it toward the Medium tier. Currently at 15 bets — threshold for review is 20 bets.
-- **The ORL vs DET series (Tied 2-2, Game 5 next) has no clear team identification in the ESPN live series feed — the series entry shows 'Tied 2-2' without team names listed explicitly.** — Without confirmed team names and home court assignment for Game 5, Scout cannot apply home court advantage (worth 3-4 pts in playoffs) or any series momentum analysis to this matchup. → Update ESPN scoreboard parser to always include both team names and home court designation in series feed — not just record and series score. Until fixed, require manual verification of ORL vs DET home court before any pick on that series.
+- **Trae Young appears in the Washington Wizards verified absence feed despite ATL being active in the playoffs vs NYK — team affiliation cannot be determined from current data.** — Any ATL pick drafted without resolving this could be built on fundamentally incorrect roster assumptions; if Young is not on ATL, their offensive ceiling is severely reduced and the series edge vs NYK changes materially. → Require NBA official PDF verification of Young's team affiliation before ANY ATL pick is drafted; Scout should treat ATL picks as BANNED until this is resolved each session.
+- **High confidence bets (16 bets, 31.2% WR, -€1240.52) are massively underperforming medium confidence bets (32 bets, 59.4% WR, +€761.33) — the confidence-to-outcome relationship is inverted.** — If high-confidence picks are systematically losing while medium-confidence picks win, the system is overconfident on certain signal types; this could indicate that the signals used to push confidence into the 70-84 range are noisy or that those games attract sharper market pricing that eliminates edge. → After reaching 20 High confidence bets (currently 16), conduct a full audit of which specific signals (NetRtg gap, franchise player absence, series momentum) were present on the losing High confidence picks vs winning Medium ones; consider raising the High confidence threshold or adding an 'over-confidence suppressor' rule.
+- **ML market is significantly underperforming SPREAD market (ML 40.9% WR -€930 vs SPREAD 52.2% WR +€96) with roughly equal bet counts — suggesting ML odds are overpriced for the edges being identified.** — If the same edge expressed as a spread beats the same edge expressed as ML, Scout should be defaulting to spread bets more aggressively rather than ML bets, particularly on games with clear NetRtg gaps. → Add a rule to market_rules that when a game has NetRtg gap > 4 AND spread is available with odds 1.80-2.10, evaluate spread BEFORE ML as the primary market; current rules say evaluate both but don't prioritise spread in these scenarios.
+- **Denver Nuggets' W12 regular season streak did not predict playoff performance (down 3-2 to MIN) — the Hot Streak Fade Rule in selectivity may need a playoff-specific override.** — The current Hot Streak Fade Rule is written for regular season hot streaks from non-elite teams; DEN is a legitimate elite team whose regular season W12 streak was rendered irrelevant by playoff-specific matchup factors (MIN defensive scheme, Edwards presence), suggesting the rule needs a 'playoff games override — weight in-series results only' clause. → Add a note to the Hot Streak Fade Rule in selectivity: 'In playoff phase, regular season streaks are NOT predictive — use in-series record exclusively; do not apply hot streak fade logic to playoff teams regardless of regular season L10.'
