@@ -23,8 +23,8 @@
           "game": 2,
           "started_at": "2026-04-05T10:44:07.102344+00:00",
           "bankroll_start": 1000.0,
-          "wins": 17,
-          "losses": 13,
+          "wins": 18,
+          "losses": 14,
           "peak_bankroll": 1917.57,
           "total_bets": 32
         }
@@ -1716,10 +1716,10 @@
             "Franz Wagner",
             "Paolo Banchero"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -172.43,
+          "settled_at": "2026-04-28T11:46:16.952530+00:00"
         }
       ],
       "summary": "Day 2026-04-27 commit — 1 bets totalling €172.43. 0 cancelled. Bankroll: €1149.53 → €977.10."
@@ -1749,10 +1749,10 @@
             "Victor Wembanyama (SAS — active, no OUT listed)",
             "Damian Lillard (POR — OUT confirmed, NBA official)"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "WON",
+          "returned": 287.14,
+          "pnl": 140.64,
+          "settled_at": "2026-04-28T11:46:16.952530+00:00",
           "committed_at": "2026-04-28T03:45:07Z"
         }
       ],
