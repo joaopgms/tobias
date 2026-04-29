@@ -23,7 +23,7 @@
           "game": 2,
           "started_at": "2026-04-05T10:44:07.102344+00:00",
           "bankroll_start": 1000.0,
-          "wins": 18,
+          "wins": 19,
           "losses": 14,
           "peak_bankroll": 1917.57,
           "total_bets": 33
@@ -1756,10 +1756,10 @@
             "Damian Lillard"
           ],
           "reasoning": "CONFIRMED from draft pick nba_draft_20260428_002. ODDS VALIDATION: Current odds 1.96 (was 1.95 at Scout) — moved +0.01 in favour. Within valid spread range 1.75–2.30. EV = (0.74 × 1.96) - 1 = 0.4504 >> 0.05 threshold. LINE MOVEMENT: +0.01 in favour — confirm at original stake per rules, note improvement. ANCHOR CHECK: Wembanyama NOT listed in NBA official injury report → Active confirmed. Lillard OUT (Injury Management) confirmed in NBA official PDF — Scout thesis validated, no change to confidence. SERIES CONTEXT: SAS leads 3-1, closing at home at Frost Bank Center. POR facing road elimination. CLOSING CAUTION: Spread odds 1.96 > 1.70 threshold — spread valid per rules. Stake reduced to 15% per closing-game caution. NETRTG: SAS +8.3 vs POR -0.2 = 8.5pt gap, confirmed by L15: SAS +38.3 vs POR +22.8. DefRtg: SAS 111.4 vs POR 114.7. HOME COURT PLAYOFF: +3-4pts at Frost Bank Center. KEY EDGE: Lillard (POR primary offensive engine) OUT confirmed on road elimination game. Road elimination + depleted opponent + SAS dominant NetRtg = strong cover signal. STAKE: 15% of €977.10 = €146.57 (High tier adjusted for closing-game caution).",
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "WON",
+          "returned": 287.28,
+          "pnl": 140.71,
+          "settled_at": "2026-04-29T11:38:23.588154+00:00",
           "committed_at": "2026-04-28T23:03:07Z"
         }
       ],
