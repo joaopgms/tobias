@@ -26,7 +26,7 @@
           "wins": 19,
           "losses": 14,
           "peak_bankroll": 1917.57,
-          "total_bets": 33
+          "total_bets": 34
         }
       ]
     }
@@ -1764,6 +1764,40 @@
         }
       ],
       "summary": "Day 2026-04-28 commit — 1 bets totalling €146.57. 1 cancelled. Bankroll: €977.10 → €830.53."
+    },
+    {
+      "entry_id": "nba_entry_20260429",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-04-29T22:41:49.451750+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1117.81,
+      "total_staked": 134.0,
+      "bankroll_after": 983.81,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260429_001",
+          "match": "Los Angeles Lakers vs Houston Rockets",
+          "time": "2026-04-30T02:00:00Z",
+          "pick": "Los Angeles Lakers -3.5",
+          "odds": 1.93,
+          "stake": 134,
+          "potential_return": 258.62,
+          "reasoning": "Late scout addition. Kevin Durant (OUT - NBA official), Fred VanVleet (OUT), Steven Adams (OUT) all confirmed absent for Houston — severely depleted road elimination team. LAL leads series 3-1 and closes at home. Spread tightened from -4.5 (Scout) to -3.5 (current), making the bar easier to cover. LAL's series tactical dominance confirmed even without Doncic. Reaves Questionable triggered -10 confidence and -20% stake per franchise_player_rules. EV = (0.60 × 1.93) - 1 = 0.158. Closing-team caution noted but 1.93 odds above the spread-betting floor, and small -3.5 line reduces margin risk. Total exposure 12% of bankroll, well within limits.",
+          "confidence": 60,
+          "anchor_players": [
+            "Kevin Durant (HOU - OUT confirmed)",
+            "Austin Reaves (LAL - Questionable)"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-04-29T22:41:51Z"
+        }
+      ],
+      "summary": "Day 2026-04-29 commit — 1 bets totalling €134.00. 0 cancelled. Bankroll: €1117.81 → €983.81."
     }
   ]
 }
