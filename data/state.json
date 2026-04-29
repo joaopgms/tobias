@@ -9,14 +9,14 @@
   "net_pnl": 258.45,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-04-29T11:38:23.588154+00:00",
-  "first_game_time": "2026-04-28T23:00:00Z",
+  "last_updated": "2026-04-29T15:57:28.038035+00:00",
+  "first_game_time": "2026-04-29T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
-  "scout_updated_at": "2026-04-28T16:08:49.122142+00:00",
+  "scout_updated_at": "2026-04-29T15:57:28.038035+00:00",
   "scout_odds_source": "theodds_onexbet",
-  "commit_status": "done",
+  "commit_status": "pending",
   "commit_updated_at": "2026-04-28T23:03:05.263610+00:00",
   "commit_date": "2026-04-28",
   "analyst_updated_at": "2026-04-29T12:16:16.849956+00:00",
@@ -27,7 +27,7 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "### CONFIRMED — San Antonio Spurs -11.5\n\n- **Match:** San Antonio Spurs vs Portland Trail Blazers | **Tip:** 2026-04-29T01:30:00Z\n- **Pick:** SAS -11.5 | **Scout odds:** 1.95 | **Commit odds:** 1.96 | **Move:** +0.01 (improved slightly in favour)\n- **ML:** SAS 1.20 / POR 5.34 | **ATS:** -11.5 (1.96/1.96) | **O/U:** 218.5 (O:1.97/U:1.95)\n- **Stake:** €146.57 | **Pot:** €287.28 | **Conf:** 74/100 | **EV:** 0.4504\n- **Decision:** All confirmation criteria met. Odds improved +0.01 (confirm at original stake per rules, stake recalculated on current bankroll of €977.10 at 15% closing caution tier = €146.57). Wembanyama confirmed active (not in NBA official injury report). Damian Lillard OUT (Injury Management) confirmed via NBA official PDF — Scout thesis fully validated. SAS leads 3-1, closing at home, POR on road facing elimination without their primary offensive engine. NetRtg gap 8.5pts, L15 gap SAS +38.3 vs POR +22.8, DefRtg gap 3.3pts — all metrics firmly support SAS cover at -11.5.\n\n---\n\n### CANCELLED — Boston Celtics -11.5\n\n- **Reason:** Significant line movement against the drafted pick — market moved from BOS -11.5 to BOS -9.5 (2-point shift). The drafted line is no longer available. Per line_movement_rules, a 2-point spread movement (well above the 0.20 flag threshold) with no clear injury explanation triggers cancellation. Furthermore, the BOS vs PHI game tipped at 23:00 UTC and it is 23:03:07 UTC at commit time — the game is already in progress and the bet cannot be placed regardless.\n- **Odds at cancel:** 1.93 (for -9.5 line, was 1.99 for -11.5 at scout time)\n\n---\n\n### LATE SCOUT SUMMARY\n\n**NYK vs ATL:** Trae Young data conflict partially resolved (not listed OUT in NBA official tonight — only Landale OUT for ATL). However, skills file explicitly flags this tied 2-2 series as \"no clear directional edge — do NOT force a pick.\" NYK ML (1.43) below floor, ATL ML (3.10) above ceiling. NYK -6.5 spread technically in range but confidence insufficient (~55 max) and no compelling thesis beyond standard home court. Rejected per late_scout_triggers confidence gate (≥ 60 required).\n\n**BOS vs PHI:** Game in progress — time gate violation, no late pick possible.\n\n---\n\n### SLATE SUMMARY\n\nOne pick confirmed for tonight's slate: SAS -11.5 at 1.96 (€146.57, 15% bankroll, EV 0.45). The BOS -11.5 draft was cancelled due to significant line movement (market shifted to -9.5) combined with the game already being in progress at commit time. The NYK/ATL game was re-evaluated at commit but skills explicitly prohibit forcing a pick on a tied 2-2 series with no clear edge. Total exposure is €146.57 (15.0% of bankroll), well within the 70% cap, with a clean single-bet slate anchored by Lillard's confirmed absence for POR in a road elimination game.",
+  "last_report": "Difficult playoff slate — all three games produce no draftable picks. Primary obstacles: (1) DET/ORL game has ML odds outside target range on both sides (1.26/4.36), spread confidence cannot reach 60 floor with Wagner Questionable; (2) CLE/TOR has identical range problem (1.30/4.01) with unverified series score per ESPN data gap; (3) LAL/HOU has Durant explicitly confirmed OUT per NBA official PDF, which triggers the skills prohibition on HOU ML regardless of elimination-game factors, and LAL ML at 1.58 sits just below the 1.60 floor with closing-team caution preventing spread. NBA official injury PDF source confirms Durant OUT, Wagner Questionable, Isaac Doubtful. Zero picks drafted — valid outcome per selectivity rules.",
   "draft_picks": [],
   "pending_bets": [],
   "settled_bets": [
@@ -689,11 +689,25 @@
   ],
   "rejected_games": [
     {
-      "match": "New York Knicks vs Atlanta Hawks",
-      "reason": "DATA CONFLICT: Trae Young affiliation unresolved (appears in WAS verified absence feed AND ATL roster). Cannot assess ATL roster composition. Skills file explicitly flags 'do not draft ATL picks until Trae Young affiliation verified via NBA official PDF.' Additionally, NYK ML at 1.40 is below the 1.60 ML target floor. Spread odds 1.93 technically in range but roster uncertainty for ATL is too high per injury feed quality rules. No reliable pick available.",
-      "ml_home": 1.4,
-      "ml_away": 3.25,
-      "decision": "rejected"
+      "match": "Detroit Pistons vs Orlando Magic",
+      "reason": "ML odds out of target range: DET 1.26 (below 1.60 floor), ORL 4.36 (above 2.50 ceiling). Spread DET -9.5 at 1.92 in range but cannot reach confidence floor of 60 — Franz Wagner Questionable (-10) drops confidence below threshold, and closing-team caution prevents spread on ORL. In-series ORL leads 3-1 but no valid market entry point per odds target rules.",
+      "ml_home": 1.26,
+      "ml_away": 4.36,
+      "decision": "no_edge"
+    },
+    {
+      "match": "Cleveland Cavaliers vs Toronto Raptors",
+      "reason": "CLE ML at 1.30 below 1.60 ML floor. TOR ML at 4.01 above 2.50 ceiling. Spread CLE -9.5 at 2.00 in range but TOR L15 NetRtg +21.9 is anomalously high vs CLE L15 +0.7 — TOR has shown strong recent form despite overall record gap. Quickley OUT reduces TOR significantly. CLE series lead likely 3-1 or better but ESPN data shows 0-0 (unverified series score — skills require verification before pick). Cannot confirm home court advantage or series lead without confirmed data. Insufficient confidence to reach 60 floor for spread under data uncertainty.",
+      "ml_home": 1.3,
+      "ml_away": 4.01,
+      "decision": "no_edge"
+    },
+    {
+      "match": "Los Angeles Lakers vs Houston Rockets",
+      "reason": "HOU ML at 2.59 exceeds ML target ceiling of 2.50. LAL ML at 1.58 is below 1.60 floor. Spread LAL -4.5 at 2.00 in range but skills explicitly state 'Do NOT bet HOU ML unless Durant confirmed active' — Durant is CONFIRMED OUT per NBA official PDF this session. LAL closing at home (3-1) — closing team caution prevents spread. Reaves Questionable adds uncertainty. No valid market entry: HOU ML out of range AND Durant OUT prohibition, LAL ML below floor, LAL spread blocked by closing-team caution rule.",
+      "ml_home": 1.58,
+      "ml_away": 2.59,
+      "decision": "no_edge"
     }
   ],
   "late_scout_rejections": [
@@ -1275,66 +1289,44 @@
     "Orlando Magic@Chicago Bulls"
   ],
   "cached_context": {
-    "cached_at": "2026-04-28",
-    "games_str": "Boston Celtics vs Philadelphia 76ers  |  2026-04-28T23:00 UTC  |  TD Garden\nNew York Knicks vs Atlanta Hawks  |  2026-04-29T00:00 UTC  |  Madison Square Garden\nSan Antonio Spurs vs Portland Trail Blazers  |  2026-04-29T01:30 UTC  |  Frost Bank Center",
-    "standings_str": "Oklahoma City Thunder: 64-18  L10:7-3\nSan Antonio Spurs: 62-20  L10:8-2\nDetroit Pistons: 60-22  L10:8-2\nBoston Celtics: 56-26  L10:8-2\nDenver Nuggets: 54-28  L10:10-0\nNew York Knicks: 53-29  L10:6-4\nAtlanta Hawks: 46-36  L10:6-4\nPhiladelphia 76ers: 45-37  L10:6-4\nPortland Trail Blazers: 42-40  L10:7-3\nUtah Jazz: 22-60  L10:1-9\nUTAH: 22-60  L10:1-9\nBrooklyn Nets: 20-62  L10:3-7\nIndiana Pacers: 19-63  L10:3-7\nWashington Wizards: 17-65  L10:0-10",
-    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nBoston Celtics: OffRtg 120.8 | DefRtg 112.7 | NetRtg +8.2 | Pace 94.8 | L15:+35.5\nPhiladelphia 76ers: OffRtg 115.4 | DefRtg 115.6 | NetRtg -0.2 | Pace 99.4 | L15:+0.9\nNew York Knicks: OffRtg 119.9 | DefRtg 113.4 | NetRtg +6.5 | Pace 96.8 | L15:+10.4\nAtlanta Hawks: OffRtg 116.1 | DefRtg 113.8 | NetRtg +2.4 | Pace 101.7 | L15:+13.7\nSan Antonio Spurs: OffRtg 119.7 | DefRtg 111.4 | NetRtg +8.3 | Pace 99.9 | L15:+38.3\nPortland Trail Blazers: OffRtg 114.5 | DefRtg 114.7 | NetRtg -0.2 | Pace 100.5 | L15:+22.8"
+    "cached_at": "2026-04-29",
+    "games_str": "Detroit Pistons vs Orlando Magic  |  2026-04-29T23:00 UTC  |  Little Caesars Arena\nCleveland Cavaliers vs Toronto Raptors  |  2026-04-29T23:30 UTC  |  Rocket Arena\nLos Angeles Lakers vs Houston Rockets  |  2026-04-30T02:00 UTC  |  crypto.com Arena",
+    "standings_str": "Oklahoma City Thunder: 64-18  L10:7-3\nSan Antonio Spurs: 62-20  L10:8-2\nDetroit Pistons: 60-22  L10:8-2\nBoston Celtics: 56-26  L10:8-2\nDenver Nuggets: 54-28  L10:10-0\nLos Angeles Lakers: 53-29  L10:7-3\nCleveland Cavaliers: 52-30  L10:7-3\nHouston Rockets: 52-30  L10:9-1\nToronto Raptors: 46-36  L10:6-4\nOrlando Magic: 45-37  L10:7-3\nUtah Jazz: 22-60  L10:1-9\nUTAH: 22-60  L10:1-9\nBrooklyn Nets: 20-62  L10:3-7\nIndiana Pacers: 19-63  L10:3-7\nWashington Wizards: 17-65  L10:0-10",
+    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nDetroit Pistons: OffRtg 118.0 | DefRtg 109.8 | NetRtg +8.2 | Pace 99.3 | L15:+25.2\nOrlando Magic: OffRtg 115.1 | DefRtg 114.5 | NetRtg +0.6 | Pace 100.0 | L15:+2.9\nCleveland Cavaliers: OffRtg 119.3 | DefRtg 115.2 | NetRtg +4.0 | Pace 99.9 | L15:+0.7\nToronto Raptors: OffRtg 115.8 | DefRtg 113.2 | NetRtg +2.6 | Pace 98.4 | L15:+21.9\nLos Angeles Lakers: OffRtg 118.2 | DefRtg 116.5 | NetRtg +1.7 | Pace 98.3 | L15:+12.6\nHouston Rockets: OffRtg 118.7 | DefRtg 113.3 | NetRtg +5.4 | Pace 96.1 | L15:+30.0"
   },
   "scout_report_data": {
-    "date": "2026-04-28",
-    "updated_at": "2026-04-28T16:08:49.122142+00:00",
-    "picks": [
-      {
-        "id": "nba_draft_20260428_001",
-        "match": "Boston Celtics vs Philadelphia 76ers",
-        "time": "2026-04-28T23:00:00Z",
-        "pick": "Boston Celtics -11.5",
-        "odds": 1.99,
-        "stake": 167.66,
-        "potential_return": 333.84,
-        "confidence": 72,
-        "reasoning": "LINE ANOMALY CHECK: No anomaly — BOS at 1.19 ML as overwhelming favourite is consistent with 3-1 series lead and NetRtg gap. SERIES CONTEXT: BOS leads 3-1, closing at home. PHI facing road elimination, depleted roster confirmed. NetRtg gap: BOS +8.2 vs PHI -0.2 = 8.4pt season gap, confirmed by L15: BOS +35.5 vs PHI +0.9 (massive L15 gap). In-series data is primary signal — BOS dominant across all 4 games. INJURY: NBA official PDF active. No BOS absences in verified feed (Tatum, Brown re-verify note — but no absence confirmed). PHI depleted roster (trust series results as proxy). SPREAD SIGNAL: NetRtg L15 gap = 34.6pts (extreme). DefRtg: BOS 112.7 vs PHI 115.6 — BOS clear defensive edge. B2B/REST: Playoff minimum 1 rest day each, no adjustment needed. PACE: BOS Pace 94.8 vs PHI 99.4 — some mismatch but spread signal overrides. HOME COURT PLAYOFF: +3-4pts for BOS at TD Garden. CLOSING TEAM CAUTION: Skills file flags 'avoid spread at <1.70 odds' for closing teams — spread odds here are 1.99 (well above threshold), so spread IS valid per rules. MOTIVATION: BOS motivated to close; PHI in desperation but depleted. Desperation can tighten games but PHI lacks personnel. SPREAD STRENGTH: DefRtg gap BOS vs PHI = 2.9pts (moderate); NetRtg gap >8pts; L15 gap extreme — all point to BOS covering -11.5 at home. EV CALCULATION: Confidence 72. EV = (0.72 × 1.99) - 1 = 1.4328 - 1 = 0.4328. EV = 0.43 — STRONG EDGE (>>0.15). STAKE: Confidence 72 = High tier (20-25%). 22% of €1117.74 = ~€245.90, but closing-game caution applied per rules — reducing to 15% = €167.66.",
-        "anchor_players": [
-          "Jayson Tatum",
-          "Jaylen Brown",
-          "Joel Embiid"
-        ],
-        "drafted_at": "2026-04-28T16:08:53Z",
-        "market_type": "spread"
-      },
-      {
-        "id": "nba_draft_20260428_002",
-        "match": "San Antonio Spurs vs Portland Trail Blazers",
-        "time": "2026-04-29T01:30:00Z",
-        "pick": "San Antonio Spurs -11.5",
-        "odds": 1.95,
-        "stake": 167.66,
-        "potential_return": 327.94,
-        "confidence": 74,
-        "reasoning": "LINE ANOMALY CHECK: No anomaly — SAS at 1.19 ML consistent with 3-1 series lead and massive NetRtg gap. SERIES CONTEXT: SAS leads 3-1, closing at home. POR facing road elimination. INJURY: NBA official PDF active. Damian Lillard OUT for POR (Injury Management) — CRITICAL. Lillard is POR's primary offensive engine; his absence decimates POR's scoring capacity on road elimination game. No SAS absences in verified feed (Wembanyama re-verify note — no absence confirmed). NETRTG GAP: SAS +8.3 vs POR -0.2 = 8.5pt season gap, confirmed by L15: SAS +38.3 vs POR +22.8 (SAS L15 gap is extreme). SPREAD SIGNALS: DefRtg gap: SAS 111.4 vs POR 114.7 — SAS clear defensive edge. NetRtg L15 gap = 15.5pts (strong). B2B/REST: Playoff minimum rest, no adjustment. HOME COURT PLAYOFF: SAS at Frost Bank Center +3-4pts. CLOSING TEAM CAUTION: Spread odds 1.95 > 1.70 threshold — spread IS valid per rules. MOTIVATION: SAS fully motivated to close. POR desperate but Lillard OUT removes their best chance of keeping it close. Road elimination + star player absent = cover rate very low for POR. SPREAD STRENGTH: 8.5pt NetRtg gap + Lillard OUT + home playoff advantage = SAS covering -11.5 is a strong signal. EV CALCULATION: Confidence 74. EV = (0.74 × 1.95) - 1 = 1.443 - 1 = 0.443. EV = 0.44 — STRONG EDGE (>>0.15). STAKE: Confidence 74 = High tier (20-25%). Closing-game caution applied — reducing to 15% = €167.66.",
-        "anchor_players": [
-          "Victor Wembanyama",
-          "Damian Lillard"
-        ],
-        "drafted_at": "2026-04-28T16:08:53Z",
-        "market_type": "spread"
-      }
-    ],
+    "date": "2026-04-29",
+    "updated_at": "2026-04-29T15:57:28.038035+00:00",
+    "picks": [],
     "rejected": [
       {
-        "match": "New York Knicks vs Atlanta Hawks",
-        "reason": "DATA CONFLICT: Trae Young affiliation unresolved (appears in WAS verified absence feed AND ATL roster). Cannot assess ATL roster composition. Skills file explicitly flags 'do not draft ATL picks until Trae Young affiliation verified via NBA official PDF.' Additionally, NYK ML at 1.40 is below the 1.60 ML target floor. Spread odds 1.93 technically in range but roster uncertainty for ATL is too high per injury feed quality rules. No reliable pick available.",
-        "ml_home": 1.4,
-        "ml_away": 3.25,
-        "decision": "rejected"
+        "match": "Detroit Pistons vs Orlando Magic",
+        "reason": "ML odds out of target range: DET 1.26 (below 1.60 floor), ORL 4.36 (above 2.50 ceiling). Spread DET -9.5 at 1.92 in range but cannot reach confidence floor of 60 — Franz Wagner Questionable (-10) drops confidence below threshold, and closing-team caution prevents spread on ORL. In-series ORL leads 3-1 but no valid market entry point per odds target rules.",
+        "ml_home": 1.26,
+        "ml_away": 4.36,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Cleveland Cavaliers vs Toronto Raptors",
+        "reason": "CLE ML at 1.30 below 1.60 ML floor. TOR ML at 4.01 above 2.50 ceiling. Spread CLE -9.5 at 2.00 in range but TOR L15 NetRtg +21.9 is anomalously high vs CLE L15 +0.7 — TOR has shown strong recent form despite overall record gap. Quickley OUT reduces TOR significantly. CLE series lead likely 3-1 or better but ESPN data shows 0-0 (unverified series score — skills require verification before pick). Cannot confirm home court advantage or series lead without confirmed data. Insufficient confidence to reach 60 floor for spread under data uncertainty.",
+        "ml_home": 1.3,
+        "ml_away": 4.01,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Los Angeles Lakers vs Houston Rockets",
+        "reason": "HOU ML at 2.59 exceeds ML target ceiling of 2.50. LAL ML at 1.58 is below 1.60 floor. Spread LAL -4.5 at 2.00 in range but skills explicitly state 'Do NOT bet HOU ML unless Durant confirmed active' — Durant is CONFIRMED OUT per NBA official PDF this session. LAL closing at home (3-1) — closing team caution prevents spread. Reaves Questionable adds uncertainty. No valid market entry: HOU ML out of range AND Durant OUT prohibition, LAL ML below floor, LAL spread blocked by closing-team caution rule.",
+        "ml_home": 1.58,
+        "ml_away": 2.59,
+        "decision": "no_edge"
       }
     ],
-    "report": "Three-game playoff slate tonight. Two strong spread edges identified: BOS -11.5 at home vs depleted PHI (closing out, NetRtg gap 8.4pts, L15 extreme), and SAS -11.5 at home vs POR missing Lillard (closing out, NetRtg gap 8.5pts, Lillard OUT devastates POR road elimination chances). Both picks carry EV ~0.43 — well above the 0.15 strong-edge threshold. NBA official PDF active for all three games. ATL vs NYK rejected due to Trae Young roster affiliation data conflict (WAS vs ATL conflict unresolved) per skills file mandatory rejection rule. Pace data available but not pace-reliant — spread edges are the primary signal tonight. Total staked: €335.32 (~30% of bankroll), within daily 70% cap.",
+    "report": "Difficult playoff slate — all three games produce no draftable picks. Primary obstacles: (1) DET/ORL game has ML odds outside target range on both sides (1.26/4.36), spread confidence cannot reach 60 floor with Wagner Questionable; (2) CLE/TOR has identical range problem (1.30/4.01) with unverified series score per ESPN data gap; (3) LAL/HOU has Durant explicitly confirmed OUT per NBA official PDF, which triggers the skills prohibition on HOU ML regardless of elimination-game factors, and LAL ML at 1.58 sits just below the 1.60 floor with closing-team caution preventing spread. NBA official injury PDF source confirms Durant OUT, Wagner Questionable, Isaac Doubtful. Zero picks drafted — valid outcome per selectivity rules.",
     "odds_source": "theodds_onexbet",
     "injuries_source": "nba_official",
-    "tokens_in": 10113,
-    "tokens_out": 1849,
-    "cost_usd": 0.058074
+    "tokens_in": 11326,
+    "tokens_out": 2444,
+    "cost_usd": 0.070638
   },
   "analyst_checkpoint_done": true,
   "slate_game_times": [
