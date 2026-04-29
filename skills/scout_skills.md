@@ -1,7 +1,7 @@
 ---
-version: 45
-updated_at: 2026-04-28T12:23:04.164608+00:00
-updated_by: analyst_2026-04-28
+version: 46
+updated_at: 2026-04-29T12:16:16.849956+00:00
+updated_by: analyst_2026-04-29
 llm: claude-sonnet-4-6
 ---
 
@@ -95,25 +95,25 @@ NOTE — PLAYOFF PHASE: All remaining teams are fully motivated. Roster-only fla
 
 Oklahoma City Thunder:
 - Thomas Sorber (C): OUT [roster-only]
-- Jalen Williams (G): OUT [roster-only] — FRANCHISE PLAYER. OKC leads PHX 4-0 (series over per ESPN); verify series conclusion.
-NOTE: Shai Gilgeous-Alexander, Chet Holmgren NOT in current verified absence feed — re-verify before any OKC pick.
+- Jalen Williams (G): OUT [roster-only] — FRANCHISE PLAYER.
+NOTE: OKC leads PHX 4-0 — series likely complete or concluding with Game 5. Shai Gilgeous-Alexander, Chet Holmgren NOT in current verified absence feed — re-verify before any OKC pick.
 
 San Antonio Spurs:
 - David Jones Garcia (F): OUT [roster-only]
-NOTE: Victor Wembanyama NOT in current verified absence feed — re-verify before any SAS pick. SAS leads POR 3-1, Game 5/6 next — verify series status.
+NOTE: Victor Wembanyama NOT in current verified absence feed — re-verify before any SAS pick. SAS leads POR 4-1 — series likely complete or Game 6 next. Verify series conclusion.
 
 Detroit Pistons:
-NOTE: No players in current verified absence feed. Re-verify Cade Cunningham, Isaiah Stewart, Jalen Duren before any DET pick. ORL vs DET series alive — verify current score.
+NOTE: No players in current verified absence feed. Re-verify Cade Cunningham, Isaiah Stewart, Jalen Duren before any DET pick. ORL vs DET: verify current score from ESPN — series data shows Orlando leads 3-1, Game 6 next.
 
 Boston Celtics:
-NOTE: No players in current verified absence feed. Re-verify Jayson Tatum and Jaylen Brown before any BOS pick. BOS leads PHI 3-1, Game 5/6 next.
+NOTE: No players in current verified absence feed. Re-verify Jayson Tatum and Jaylen Brown before any BOS pick. BOS leads PHI 3-2 — Game 6 next (series alive). Verify home court.
 
 New York Knicks:
-NOTE: No players in current verified absence feed. Re-verify Jalen Brunson, Karl-Anthony Towns before any NYK pick. ATL vs NYK series — verify current score.
+NOTE: No players in current verified absence feed. Re-verify Jalen Brunson, Karl-Anthony Towns before any NYK pick. ATL vs NYK — ESPN shows NYK leads 3-2, Game 6 next. Verify from ESPN before pick.
 
 Denver Nuggets:
 - Peyton Watson (G): OUT [roster-only]
-NOTE: Nikola Jokic and Jamal Murray NOT in current verified absence feed — re-verify before any DEN pick. MIN leads DEN 3-2 (Game 6 next per ESPN — MIN can close on road or DEN survival game at home — verify home court).
+NOTE: Nikola Jokic and Jamal Murray NOT in current verified absence feed — re-verify before any DEN pick. MIN leads DEN 3-2 — Game 6 next at MIN (MIN can close on home floor). Edwards status critical for MIN.
 
 Los Angeles Lakers:
 - Luka Doncic (G): OUT [roster-only] — FRANCHISE PLAYER. LAL leads HOU 3-1, Game 5 next at LAL.
@@ -126,7 +126,7 @@ Houston Rockets:
 NOTE: Kevin Durant NOT in current verified absence feed — DATA FLAG: Durant was previously roster-only OUT; re-verify vs NBA official PDF before any HOU pick. Alperen Sengun also requires re-verification. HOU down 3-1, facing road elimination at LAL.
 
 Cleveland Cavaliers:
-NOTE: No players in current verified absence feed. Re-verify Donovan Mitchell, Jarrett Allen, Evan Mobley before any CLE pick. CLE vs TOR series — verify current score.
+NOTE: No players in current verified absence feed. Re-verify Donovan Mitchell, Jarrett Allen, Evan Mobley before any CLE pick. CLE vs TOR — verify current series score from ESPN (ESPN data shows a 0-0 entry suggesting play-in or data gap; CLE likely leads given record differential).
 
 Minnesota Timberwolves:
 - Donte DiVincenzo (G): OUT [roster-only]
@@ -135,12 +135,12 @@ Minnesota Timberwolves:
 Atlanta Hawks:
 - Keshon Gilbert (G): OUT [roster-only]
 - Jock Landale (C): OUT [roster-only]
-NOTE: Trae Young NOT in current verified absence feed for ATL — DATA CONFLICT: Trae Young appears in WAS verified absence feed. Verify official team affiliation via NBA official PDF before any ATL pick. ATL vs NYK series — verify current score.
+NOTE: Trae Young NOT in current verified absence feed for ATL — DATA CONFLICT: Trae Young appears in WAS verified absence feed. Verify official team affiliation via NBA official PDF before any ATL pick. ATL vs NYK — ESPN shows NYK leads 3-2, Game 6 next.
 
 Toronto Raptors:
 - Chucky Hepburn (G): OUT [roster-only]
 - Immanuel Quickley (G): OUT [roster-only]
-NOTE: CLE vs TOR series — verify current score and home court. Re-verify TOR star availability.
+NOTE: CLE vs TOR series — verify current score and home court from ESPN. Re-verify TOR star availability before any pick.
 
 Washington Wizards:
 - Bilal Coulibaly (G): OUT [roster-only + injury landscape confirmed]
