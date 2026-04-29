@@ -1275,5 +1275,42 @@
     "tokens_in": 10113,
     "tokens_out": 1849,
     "cost_usd": 0.058074
+  },
+  {
+    "ts": "2026-04-29T15:57:28.038035+00:00",
+    "date": "2026-04-29",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_onexbet",
+    "draft_count": 0,
+    "picks": [],
+    "rejected": [
+      {
+        "match": "Detroit Pistons vs Orlando Magic",
+        "reason": "ML odds out of target range: DET 1.26 (below 1.60 floor), ORL 4.36 (above 2.50 ceiling). Spread DET -9.5 at 1.92 in range but cannot reach confidence floor of 60 — Franz Wagner Questionable (-10) drops confidence below threshold, and closing-team caution prevents spread on ORL. In-series ORL leads 3-1 but no valid market entry point per odds target rules.",
+        "ml_home": 1.26,
+        "ml_away": 4.36,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Cleveland Cavaliers vs Toronto Raptors",
+        "reason": "CLE ML at 1.30 below 1.60 ML floor. TOR ML at 4.01 above 2.50 ceiling. Spread CLE -9.5 at 2.00 in range but TOR L15 NetRtg +21.9 is anomalously high vs CLE L15 +0.7 — TOR has shown strong recent form despite overall record gap. Quickley OUT reduces TOR significantly. CLE series lead likely 3-1 or better but ESPN data shows 0-0 (unverified series score — skills require verification before pick). Cannot confirm home court advantage or series lead without confirmed data. Insufficient confidence to reach 60 floor for spread under data uncertainty.",
+        "ml_home": 1.3,
+        "ml_away": 4.01,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Los Angeles Lakers vs Houston Rockets",
+        "reason": "HOU ML at 2.59 exceeds ML target ceiling of 2.50. LAL ML at 1.58 is below 1.60 floor. Spread LAL -4.5 at 2.00 in range but skills explicitly state 'Do NOT bet HOU ML unless Durant confirmed active' — Durant is CONFIRMED OUT per NBA official PDF this session. LAL closing at home (3-1) — closing team caution prevents spread. Reaves Questionable adds uncertainty. No valid market entry: HOU ML out of range AND Durant OUT prohibition, LAL ML below floor, LAL spread blocked by closing-team caution rule.",
+        "ml_home": 1.58,
+        "ml_away": 2.59,
+        "decision": "no_edge"
+      }
+    ],
+    "report": "Difficult playoff slate — all three games produce no draftable picks. Primary obstacles: (1) DET/ORL game has ML odds outside target range on both sides (1.26/4.36), spread confidence cannot reach 60 floor with Wagner Questionable; (2) CLE/TOR has identical range problem (1.30/4.01) with unverified series score per ESPN data gap; (3) LAL/HOU has Durant explicitly confirmed OUT per NBA official PDF, which triggers the skills prohibition on HOU ML regardless of elimination-game factors, and LAL ML at 1.58 sits just below the 1.60 floor with closing-team caution preventing spread. NBA official injury PDF source confirms Durant OUT, Wagner Questionable, Isaac Doubtful. Zero picks drafted — valid outcome per selectivity rules.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 11326,
+    "tokens_out": 2444,
+    "cost_usd": 0.070638
   }
 ]
