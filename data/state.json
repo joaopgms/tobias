@@ -1,24 +1,24 @@
 {
   "season": "2024-25",
   "game": 2,
-  "bankroll": 1117.81,
+  "bankroll": 983.81,
   "bankroll_initial": 1000.0,
   "bankroll_peak": 1917.57,
-  "total_staked": 7044.54,
+  "total_staked": 7178.54,
   "total_returned": 7302.99,
   "net_pnl": 258.45,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-04-29T15:57:28.038035+00:00",
+  "last_updated": "2026-04-29T22:41:49.451750+00:00",
   "first_game_time": "2026-04-29T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
   "scout_updated_at": "2026-04-29T15:57:28.038035+00:00",
   "scout_odds_source": "theodds_onexbet",
-  "commit_status": "pending",
-  "commit_updated_at": "2026-04-28T23:03:05.263610+00:00",
-  "commit_date": "2026-04-28",
+  "commit_status": "done",
+  "commit_updated_at": "2026-04-29T22:41:49.451750+00:00",
+  "commit_date": "2026-04-29",
   "analyst_updated_at": "2026-04-29T12:16:16.849956+00:00",
   "settler_updated_at": "2026-04-29T11:38:23.588154+00:00",
   "agent_models": {
@@ -27,9 +27,30 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "Difficult playoff slate — all three games produce no draftable picks. Primary obstacles: (1) DET/ORL game has ML odds outside target range on both sides (1.26/4.36), spread confidence cannot reach 60 floor with Wagner Questionable; (2) CLE/TOR has identical range problem (1.30/4.01) with unverified series score per ESPN data gap; (3) LAL/HOU has Durant explicitly confirmed OUT per NBA official PDF, which triggers the skills prohibition on HOU ML regardless of elimination-game factors, and LAL ML at 1.58 sits just below the 1.60 floor with closing-team caution preventing spread. NBA official injury PDF source confirms Durant OUT, Wagner Questionable, Isaac Doubtful. Zero picks drafted — valid outcome per selectivity rules.",
+  "last_report": "### CONFIRMED — Los Angeles Lakers -3.5\n\n- **Match:** Los Angeles Lakers vs Houston Rockets | Tip: 2026-04-30T02:00 UTC\n- **Pick:** LAL -3.5 (spread) | Scout odds: N/A (new late pick) | Commit odds: 1.93 | Move: N/A\n- **ML:** LAL 1.60 / HOU 2.52 | **ATS:** LAL -3.5 (1.93/1.99) | **O/U:** 208.5 (O:1.98/U:1.94)\n- **Stake:** €134 | **Pot:** €258.62 | **Conf:** 60/100 | **EV:** 0.158\n\n**Decision:** Late scout trigger confirmed. Kevin Durant (OUT — NBA official), Fred VanVleet (OUT — ACL), and Steven Adams (OUT — surgery) all officially absent for Houston. HOU faces road elimination severely depleted. LAL leads 3-1 and closes at home. Spread tightened from -4.5 (Scout reference) to -3.5 — a more achievable line. EV well above 0.05 floor. Austin Reaves Questionable triggered standard -10 confidence adjustment (from 70 → 60) and -20% stake reduction per franchise_player_rules. Closing-team caution noted; spread odds at 1.93 exceed the 1.70 spread-betting floor so rule does not prohibit confirmation. Total exposure: €134 / €1117.81 = 12.0% — well within 70% cap.\n\n---\n\n### LATE SCOUT — Detroit Pistons vs Orlando Magic (NOT ADDED — Time Gate)\n\nFranz Wagner confirmed OUT (was Questionable at Scout) — this is a meaningful late-breaking development that would have generated a DET -10.5 spread pick at confidence 60, EV ~0.164. However, the game tips at 23:00 UTC and commit time is 22:41 UTC (19 minutes), which violates the 20-minute time gate for new late picks. Forced to decline.\n\n---\n\n### LATE SCOUT — Cleveland Cavaliers vs Toronto Raptors (REJECTED)\n\nSeries score remains unverified (ESPN showed 0-0 at both Scout and Commit). TOR's L15 NetRtg of +21.9 is anomalously strong — books appear to be pricing recent TOR form. Quickley confirmed OUT hurts TOR, but without verified series score the required playoff_motivation adjustments cannot be applied. Confidence cannot reach the 60 floor under this data uncertainty. Rejected.\n\n---\n\n### Slate Summary\n\nTonight's slate yields one committed bet: LAL -3.5 vs the depleted Rockets, who arrive at Crypto.com Arena for a road elimination game without Durant, VanVleet, and Adams. The Franz Wagner OUT development for the DET/ORL game was the most compelling late-breaking signal, but the 19-minute gap to tip-off narrowly violated the time gate, preventing action. Total bankroll exposure is a conservative 12% (€134), maintaining strong capital preservation for the remainder of the playoff series.",
   "draft_picks": [],
-  "pending_bets": [],
+  "pending_bets": [
+    {
+      "id": "nba_bet_20260429_001",
+      "match": "Los Angeles Lakers vs Houston Rockets",
+      "time": "2026-04-30T02:00:00Z",
+      "pick": "Los Angeles Lakers -3.5",
+      "odds": 1.93,
+      "stake": 134,
+      "potential_return": 258.62,
+      "reasoning": "Late scout addition. Kevin Durant (OUT - NBA official), Fred VanVleet (OUT), Steven Adams (OUT) all confirmed absent for Houston — severely depleted road elimination team. LAL leads series 3-1 and closes at home. Spread tightened from -4.5 (Scout) to -3.5 (current), making the bar easier to cover. LAL's series tactical dominance confirmed even without Doncic. Reaves Questionable triggered -10 confidence and -20% stake per franchise_player_rules. EV = (0.60 × 1.93) - 1 = 0.158. Closing-team caution noted but 1.93 odds above the spread-betting floor, and small -3.5 line reduces margin risk. Total exposure 12% of bankroll, well within limits.",
+      "confidence": 60,
+      "anchor_players": [
+        "Kevin Durant (HOU - OUT confirmed)",
+        "Austin Reaves (LAL - Questionable)"
+      ],
+      "result": null,
+      "returned": null,
+      "pnl": null,
+      "settled_at": null,
+      "committed_at": "2026-04-29T22:41:51Z"
+    }
+  ],
   "settled_bets": [
     {
       "id": "nba_bet_20260406_001",
@@ -712,63 +733,56 @@
   ],
   "late_scout_rejections": [
     {
-      "match": "New York Knicks vs Atlanta Hawks",
-      "reason": "Skills file explicitly states 'do NOT force a pick' for this ORL vs DET-style tied series. Series tied 2-2 — both teams fully motivated, no directional edge. NYK ML at 1.43 is below the 1.65 ML floor (invalid). ATL ML at 3.10 is above the 2.50 ML ceiling (invalid). NYK -6.5 at 1.94 is within spread range, but series context provides no clear edge: L15 ATL +13.7 vs NYK +10.4 (ATL slightly better recently), season NetRtg NYK +6.5 vs ATL +2.4 (NYK advantage), but skills explicitly warn against forcing picks in this tied series. Trae Young data conflict appears resolved via NBA official (only Landale listed OUT for ATL tonight), but confidence insufficient for a qualifying pick. Best achievable confidence ~55 with no clear directional thesis — below the late-scout gate of 60 and not justified by the data."
+      "match": "Detroit Pistons vs Orlando Magic",
+      "reason": "Franz Wagner now confirmed OUT (was Questionable at Scout) — this would improve DET spread thesis significantly (confidence would reach ~60, EV ~0.164 at 1.94 on DET -10.5). However, time gate violation: game tips at 23:00 UTC, commit time is 22:41 UTC = only 19 minutes to tip-off, below the required 20-minute threshold for new late picks. Cannot add."
     },
     {
-      "match": "Boston Celtics vs Philadelphia 76ers",
-      "reason": "Game already in progress at commit time (tipped 23:00 UTC, commit at 23:03:07 UTC). Time gate: first_game_time - now is negative — late pick cannot be added. Additionally, the available spread has moved to BOS -9.5 from the drafted -11.5, and no new edge is clear enough to qualify even if the game had not started."
+      "match": "Cleveland Cavaliers vs Toronto Raptors",
+      "reason": "Series score remains unverified (ESPN showed 0-0 at Scout, still unconfirmed). TOR L15 NetRtg +21.9 is anomalously strong vs CLE L15 +0.7 — books may be pricing TOR's recent form, making CLE -10.5 at 2.01 suspect despite Quickley OUT. Without confirmed series score, cannot apply proper playoff_motivation adjustments or home court context. Confidence cannot reach 60 floor under data uncertainty. Rejected."
     }
   ],
   "commit_report_data": {
-    "date": "2026-04-28",
-    "ts": "2026-04-28T23:03:05.263610+00:00",
+    "date": "2026-04-29",
+    "ts": "2026-04-29T22:41:49.451750+00:00",
     "bets": [
       {
-        "id": "nba_bet_20260428_001",
-        "match": "San Antonio Spurs vs Portland Trail Blazers",
-        "time": "2026-04-29T01:30:00Z",
-        "pick": "San Antonio Spurs -11.5",
-        "odds": 1.96,
-        "stake": 146.57,
-        "potential_return": 287.28,
-        "confidence": 74,
+        "id": "nba_bet_20260429_001",
+        "match": "Los Angeles Lakers vs Houston Rockets",
+        "time": "2026-04-30T02:00:00Z",
+        "pick": "Los Angeles Lakers -3.5",
+        "odds": 1.93,
+        "stake": 134,
+        "potential_return": 258.62,
+        "reasoning": "Late scout addition. Kevin Durant (OUT - NBA official), Fred VanVleet (OUT), Steven Adams (OUT) all confirmed absent for Houston — severely depleted road elimination team. LAL leads series 3-1 and closes at home. Spread tightened from -4.5 (Scout) to -3.5 (current), making the bar easier to cover. LAL's series tactical dominance confirmed even without Doncic. Reaves Questionable triggered -10 confidence and -20% stake per franchise_player_rules. EV = (0.60 × 1.93) - 1 = 0.158. Closing-team caution noted but 1.93 odds above the spread-betting floor, and small -3.5 line reduces margin risk. Total exposure 12% of bankroll, well within limits.",
+        "confidence": 60,
         "anchor_players": [
-          "Victor Wembanyama",
-          "Damian Lillard"
+          "Kevin Durant (HOU - OUT confirmed)",
+          "Austin Reaves (LAL - Questionable)"
         ],
-        "reasoning": "CONFIRMED from draft pick nba_draft_20260428_002. ODDS VALIDATION: Current odds 1.96 (was 1.95 at Scout) — moved +0.01 in favour. Within valid spread range 1.75–2.30. EV = (0.74 × 1.96) - 1 = 0.4504 >> 0.05 threshold. LINE MOVEMENT: +0.01 in favour — confirm at original stake per rules, note improvement. ANCHOR CHECK: Wembanyama NOT listed in NBA official injury report → Active confirmed. Lillard OUT (Injury Management) confirmed in NBA official PDF — Scout thesis validated, no change to confidence. SERIES CONTEXT: SAS leads 3-1, closing at home at Frost Bank Center. POR facing road elimination. CLOSING CAUTION: Spread odds 1.96 > 1.70 threshold — spread valid per rules. Stake reduced to 15% per closing-game caution. NETRTG: SAS +8.3 vs POR -0.2 = 8.5pt gap, confirmed by L15: SAS +38.3 vs POR +22.8. DefRtg: SAS 111.4 vs POR 114.7. HOME COURT PLAYOFF: +3-4pts at Frost Bank Center. KEY EDGE: Lillard (POR primary offensive engine) OUT confirmed on road elimination game. Road elimination + depleted opponent + SAS dominant NetRtg = strong cover signal. STAKE: 15% of €977.10 = €146.57 (High tier adjusted for closing-game caution).",
         "result": null,
         "returned": null,
         "pnl": null,
         "settled_at": null,
-        "committed_at": "2026-04-28T23:03:07Z"
+        "committed_at": "2026-04-29T22:41:51Z"
       }
     ],
-    "cancelled": [
-      {
-        "id": "nba_draft_20260428_001",
-        "match": "Boston Celtics vs Philadelphia 76ers",
-        "pick": "Boston Celtics -11.5",
-        "reason": "Line moved significantly against the drafted pick. Scout drafted BOS -11.5 at odds 1.99. Current market shows BOS -9.5 (spread shifted 2 full points). The drafted line (-11.5) is no longer available in the market. A 2-point spread movement against the pick direction with no clear injury explanation constitutes a major line movement (> 0.20 threshold). Additionally, the game tipped at 23:00 UTC and it is now 23:03:07 UTC — the game is already in progress, making this bet impossible to place regardless. Cancelled per line_movement_rules: line moved materially against with no explicit cause identified, and game now in progress."
-      }
-    ],
+    "cancelled": [],
     "late_rejections": [
       {
-        "match": "New York Knicks vs Atlanta Hawks",
-        "reason": "Skills file explicitly states 'do NOT force a pick' for this ORL vs DET-style tied series. Series tied 2-2 — both teams fully motivated, no directional edge. NYK ML at 1.43 is below the 1.65 ML floor (invalid). ATL ML at 3.10 is above the 2.50 ML ceiling (invalid). NYK -6.5 at 1.94 is within spread range, but series context provides no clear edge: L15 ATL +13.7 vs NYK +10.4 (ATL slightly better recently), season NetRtg NYK +6.5 vs ATL +2.4 (NYK advantage), but skills explicitly warn against forcing picks in this tied series. Trae Young data conflict appears resolved via NBA official (only Landale listed OUT for ATL tonight), but confidence insufficient for a qualifying pick. Best achievable confidence ~55 with no clear directional thesis — below the late-scout gate of 60 and not justified by the data."
+        "match": "Detroit Pistons vs Orlando Magic",
+        "reason": "Franz Wagner now confirmed OUT (was Questionable at Scout) — this would improve DET spread thesis significantly (confidence would reach ~60, EV ~0.164 at 1.94 on DET -10.5). However, time gate violation: game tips at 23:00 UTC, commit time is 22:41 UTC = only 19 minutes to tip-off, below the required 20-minute threshold for new late picks. Cannot add."
       },
       {
-        "match": "Boston Celtics vs Philadelphia 76ers",
-        "reason": "Game already in progress at commit time (tipped 23:00 UTC, commit at 23:03:07 UTC). Time gate: first_game_time - now is negative — late pick cannot be added. Additionally, the available spread has moved to BOS -9.5 from the drafted -11.5, and no new edge is clear enough to qualify even if the game had not started."
+        "match": "Cleveland Cavaliers vs Toronto Raptors",
+        "reason": "Series score remains unverified (ESPN showed 0-0 at Scout, still unconfirmed). TOR L15 NetRtg +21.9 is anomalously strong vs CLE L15 +0.7 — books may be pricing TOR's recent form, making CLE -10.5 at 2.01 suspect despite Quickley OUT. Without confirmed series score, cannot apply proper playoff_motivation adjustments or home court context. Confidence cannot reach 60 floor under data uncertainty. Rejected."
       }
     ],
-    "total_staked": 146.57,
-    "bankroll_before": 977.1,
-    "report": "### CONFIRMED — San Antonio Spurs -11.5\n\n- **Match:** San Antonio Spurs vs Portland Trail Blazers | **Tip:** 2026-04-29T01:30:00Z\n- **Pick:** SAS -11.5 | **Scout odds:** 1.95 | **Commit odds:** 1.96 | **Move:** +0.01 (improved slightly in favour)\n- **ML:** SAS 1.20 / POR 5.34 | **ATS:** -11.5 (1.96/1.96) | **O/U:** 218.5 (O:1.97/U:1.95)\n- **Stake:** €146.57 | **Pot:** €287.28 | **Conf:** 74/100 | **EV:** 0.4504\n- **Decision:** All confirmation criteria met. Odds improved +0.01 (confirm at original stake per rules, stake recalculated on current bankroll of €977.10 at 15% closing caution tier = €146.57). Wembanyama confirmed active (not in NBA official injury report). Damian Lillard OUT (Injury Management) confirmed via NBA official PDF — Scout thesis fully validated. SAS leads 3-1, closing at home, POR on road facing elimination without their primary offensive engine. NetRtg gap 8.5pts, L15 gap SAS +38.3 vs POR +22.8, DefRtg gap 3.3pts — all metrics firmly support SAS cover at -11.5.\n\n---\n\n### CANCELLED — Boston Celtics -11.5\n\n- **Reason:** Significant line movement against the drafted pick — market moved from BOS -11.5 to BOS -9.5 (2-point shift). The drafted line is no longer available. Per line_movement_rules, a 2-point spread movement (well above the 0.20 flag threshold) with no clear injury explanation triggers cancellation. Furthermore, the BOS vs PHI game tipped at 23:00 UTC and it is 23:03:07 UTC at commit time — the game is already in progress and the bet cannot be placed regardless.\n- **Odds at cancel:** 1.93 (for -9.5 line, was 1.99 for -11.5 at scout time)\n\n---\n\n### LATE SCOUT SUMMARY\n\n**NYK vs ATL:** Trae Young data conflict partially resolved (not listed OUT in NBA official tonight — only Landale OUT for ATL). However, skills file explicitly flags this tied 2-2 series as \"no clear directional edge — do NOT force a pick.\" NYK ML (1.43) below floor, ATL ML (3.10) above ceiling. NYK -6.5 spread technically in range but confidence insufficient (~55 max) and no compelling thesis beyond standard home court. Rejected per late_scout_triggers confidence gate (≥ 60 required).\n\n**BOS vs PHI:** Game in progress — time gate violation, no late pick possible.\n\n---\n\n### SLATE SUMMARY\n\nOne pick confirmed for tonight's slate: SAS -11.5 at 1.96 (€146.57, 15% bankroll, EV 0.45). The BOS -11.5 draft was cancelled due to significant line movement (market shifted to -9.5) combined with the game already being in progress at commit time. The NYK/ATL game was re-evaluated at commit but skills explicitly prohibit forcing a pick on a tied 2-2 series with no clear edge. Total exposure is €146.57 (15.0% of bankroll), well within the 70% cap, with a clean single-bet slate anchored by Lillard's confirmed absence for POR in a road elimination game.",
-    "tokens_in": 9332,
-    "tokens_out": 4778,
-    "cost_usd": 0.099666
+    "total_staked": 134.0,
+    "bankroll_before": 1117.81,
+    "report": "### CONFIRMED — Los Angeles Lakers -3.5\n\n- **Match:** Los Angeles Lakers vs Houston Rockets | Tip: 2026-04-30T02:00 UTC\n- **Pick:** LAL -3.5 (spread) | Scout odds: N/A (new late pick) | Commit odds: 1.93 | Move: N/A\n- **ML:** LAL 1.60 / HOU 2.52 | **ATS:** LAL -3.5 (1.93/1.99) | **O/U:** 208.5 (O:1.98/U:1.94)\n- **Stake:** €134 | **Pot:** €258.62 | **Conf:** 60/100 | **EV:** 0.158\n\n**Decision:** Late scout trigger confirmed. Kevin Durant (OUT — NBA official), Fred VanVleet (OUT — ACL), and Steven Adams (OUT — surgery) all officially absent for Houston. HOU faces road elimination severely depleted. LAL leads 3-1 and closes at home. Spread tightened from -4.5 (Scout reference) to -3.5 — a more achievable line. EV well above 0.05 floor. Austin Reaves Questionable triggered standard -10 confidence adjustment (from 70 → 60) and -20% stake reduction per franchise_player_rules. Closing-team caution noted; spread odds at 1.93 exceed the 1.70 spread-betting floor so rule does not prohibit confirmation. Total exposure: €134 / €1117.81 = 12.0% — well within 70% cap.\n\n---\n\n### LATE SCOUT — Detroit Pistons vs Orlando Magic (NOT ADDED — Time Gate)\n\nFranz Wagner confirmed OUT (was Questionable at Scout) — this is a meaningful late-breaking development that would have generated a DET -10.5 spread pick at confidence 60, EV ~0.164. However, the game tips at 23:00 UTC and commit time is 22:41 UTC (19 minutes), which violates the 20-minute time gate for new late picks. Forced to decline.\n\n---\n\n### LATE SCOUT — Cleveland Cavaliers vs Toronto Raptors (REJECTED)\n\nSeries score remains unverified (ESPN showed 0-0 at both Scout and Commit). TOR's L15 NetRtg of +21.9 is anomalously strong — books appear to be pricing recent TOR form. Quickley confirmed OUT hurts TOR, but without verified series score the required playoff_motivation adjustments cannot be applied. Confidence cannot reach the 60 floor under this data uncertainty. Rejected.\n\n---\n\n### Slate Summary\n\nTonight's slate yields one committed bet: LAL -3.5 vs the depleted Rockets, who arrive at Crypto.com Arena for a road elimination game without Durant, VanVleet, and Adams. The Franz Wagner OUT development for the DET/ORL game was the most compelling late-breaking signal, but the 19-minute gap to tip-off narrowly violated the time gate, preventing action. Total bankroll exposure is a conservative 12% (€134), maintaining strong capital preservation for the remainder of the playoff series.",
+    "tokens_in": 9480,
+    "tokens_out": 6283,
+    "cost_usd": 0.122685
   },
   "netrtg_l15": {
     "Charlotte Hornets": 16.9,
