@@ -24,7 +24,7 @@
           "started_at": "2026-04-05T10:44:07.102344+00:00",
           "bankroll_start": 1000.0,
           "wins": 19,
-          "losses": 14,
+          "losses": 15,
           "peak_bankroll": 1917.57,
           "total_bets": 34
         }
@@ -1790,10 +1790,10 @@
             "Kevin Durant (HOU - OUT confirmed)",
             "Austin Reaves (LAL - Questionable)"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -134.0,
+          "settled_at": "2026-04-30T11:37:40.692536+00:00",
           "committed_at": "2026-04-29T22:41:51Z"
         }
       ],
