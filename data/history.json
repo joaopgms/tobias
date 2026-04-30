@@ -26,7 +26,7 @@
           "wins": 19,
           "losses": 15,
           "peak_bankroll": 1917.57,
-          "total_bets": 34
+          "total_bets": 35
         }
       ]
     }
@@ -1798,6 +1798,47 @@
         }
       ],
       "summary": "Day 2026-04-29 commit — 1 bets totalling €134.00. 0 cancelled. Bankroll: €1117.81 → €983.81."
+    },
+    {
+      "entry_id": "nba_entry_20260430",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-04-30T22:53:35.885989+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 983.81,
+      "total_staked": 147.57,
+      "bankroll_after": 836.24,
+      "cancelled_picks": [
+        {
+          "id": "nba_draft_20260430_001",
+          "match": "Atlanta Hawks vs New York Knicks",
+          "pick": "New York Knicks ML",
+          "reason": "Two compounding cancellation triggers: (1) Odds moved against from Scout's 1.70 to current 1.65 — exactly at commit floor. After applying mandatory -10 confidence adjustment for adverse line movement, EV = (0.63 × 1.65) - 1 = 0.0395, which is below the 0.05 EV threshold. (2) Per playoff_motivation skills, road team in Game 7 requires minimum odds of 1.90 — NYK as road team in Game 7 at ATL (State Farm Arena) is at 1.65, well below the 1.90 floor for road Game 7 picks. Both triggers independently mandate cancellation."
+        }
+      ],
+      "bets": [
+        {
+          "id": "nba_bet_20260430_001",
+          "match": "Philadelphia 76ers vs Boston Celtics",
+          "time": "2026-05-01T00:00:00Z",
+          "pick": "Under 213.5",
+          "odds": 1.94,
+          "stake": 147.57,
+          "potential_return": 286.29,
+          "confidence": 62,
+          "reasoning": "LATE SCOUT — Game 7 PHI vs BOS. BOS is the elite defensive team in this series: DefRtg 112.7 (best of tonight's teams), Pace 94.8 (slowest pace in the slate, actively suppresses possessions and scoring). BOS OffRtg 120.8 but BOS L15 NetRtg +35.5 reflects dominance achieved through efficiency, not pace. PHI OffRtg 115.4, DefRtg 115.6 — below average offense. Game 7 context: maximum intensity, both teams playing for survival/advancement. Historically Game 7s trend defensive — both teams protect leads more, less gambling on offense, fewer open looks. PHI depleted roster (survived two elimination games but at cost of energy/health — no specific injury listed but PHI NetRtg L15 only +0.9 suggests declining form). BOS L15 +35.5 dominant run. Injury check: nba_official report covers 5 teams tonight; neither PHI nor BOS have any players listed as Out or Questionable — confirmed clean bills of health for both franchises. No anchor player concerns. Total 213.5: with BOS's 94.8 pace (implies ~96 possessions per game) and PHI's defensive intensity in Game 7 survival mode, scoring environment compressed. BOS averaged well below 215 combined in slow-pace games. EV = (0.62 × 1.94) - 1 = 0.2028. Confidence 62 (medium tier). Pace data available (non-zero). O/U odds 1.94 within valid range (1.75–2.05). Note: spread is banned in Game 7 per playoff_motivation rules — O/U (totals) is a separate market and not banned. Time gate: 66+ minutes to tip at commit time (>20 min requirement met). No line movement concerns — odds within valid range.",
+          "anchor_players": [
+            "Jayson Tatum",
+            "Jaylen Brown",
+            "Joel Embiid"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null
+        }
+      ],
+      "summary": "Day 2026-04-30 commit — 1 bets totalling €147.57. 1 cancelled. Bankroll: €983.81 → €836.24."
     }
   ]
 }
