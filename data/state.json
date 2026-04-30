@@ -1,24 +1,24 @@
 {
   "season": "2024-25",
   "game": 2,
-  "bankroll": 983.81,
+  "bankroll": 836.24,
   "bankroll_initial": 1000.0,
   "bankroll_peak": 1917.57,
-  "total_staked": 7178.54,
+  "total_staked": 7326.11,
   "total_returned": 7302.99,
   "net_pnl": 124.45,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-04-30T15:48:31.233804+00:00",
+  "last_updated": "2026-04-30T22:53:35.885989+00:00",
   "first_game_time": "2026-04-30T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
   "scout_updated_at": "2026-04-30T15:48:31.233804+00:00",
   "scout_odds_source": "theodds_unibet",
-  "commit_status": "pending",
-  "commit_updated_at": "2026-04-29T22:41:49.451750+00:00",
-  "commit_date": "2026-04-29",
+  "commit_status": "done",
+  "commit_updated_at": "2026-04-30T22:53:35.885989+00:00",
+  "commit_date": "2026-04-30",
   "analyst_updated_at": "2026-04-30T12:13:55.979893+00:00",
   "settler_updated_at": "2026-04-30T11:37:40.692536+00:00",
   "agent_models": {
@@ -27,27 +27,30 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "Three-game playoff slate (Games 6-7 stage). Injury source is NBA Official (full coverage) — normal confidence rules apply. Only one pick meets all criteria: NYK ML in Game 7 at Atlanta. BOS-PHI rejected entirely due to odds outside ML target range (1.40/3.00) and Game 7 spread ban. MIN-DEN rejected due to Edwards OUT for MIN and DEN's 1.38 ML below the 1.60 floor. The NYK pick carries genuine edge (EV 0.19) supported by in-series validation and NetRtg advantage, partially offset by ATL home court G7 factor. Total picks drafted: 1. Note: the second array entry above is a reasoning artifact — only pick 001 (NYK ML) is an active draft pick; pick 002 has zero stake and was included only to document the BOS-PHI rejection logic inline.",
-  "draft_picks": [
+  "last_report": "### CANCELLED — New York Knicks ML\n- **Match:** Atlanta Hawks vs New York Knicks | Tip: 23:00Z\n- **Odds at cancel:** 1.65 (was 1.70 at Scout time) | Move: -0.05 (against)\n- **ML:** ATL 2.41 / NYK 1.65 | ATS: ATL +3.5 (1.93/1.99) | O/U: 215.5 (O:1.98/U:1.94)\n- **Trigger 1 — EV failure:** Line moved against by 0.05. Per skills, movement against mandates confidence -10 recalculation. Josh Hart appears active (not in nba_official report tonight → restore Scout's -5 penalty). Net confidence adjustment: Scout 68, +5 (Hart active), -10 (adverse movement) = 63. EV = (0.63 × 1.65) - 1 = **0.0395 < 0.05 threshold**. Fails EV gate.\n- **Trigger 2 — Game 7 road team odds floor:** Skills explicitly state road team in Game 7 requires odds ≥ 1.90. NYK at 1.65 as road team in Atlanta fails this requirement directly.\n- **Note:** ATL is confirmed home (State Farm Arena). Trae Young not listed in injury report = likely active for ATL, which is a risk factor Scout acknowledged. Both triggers independently cancel this pick.\n\n---\n\n### CONFIRMED — Under 213.5 (Philadelphia 76ers vs Boston Celtics) — LATE SCOUT ADDITION\n- **Match:** Philadelphia 76ers vs Boston Celtics | Tip: 2026-05-01T00:00Z\n- **Pick:** Under 213.5 | Scout odds: N/A (late add) | Commit odds: 1.94 | Move: N/A\n- **ML:** PHI 2.93 / BOS 1.47 | ATS: PHI +5.5 (1.99/1.93) | O/U: 213.5 (O:1.98/U:1.94)\n- **Stake:** €147.57 (15% of €983.81) | Pot: €286.29 | Conf: 62/100 | EV: 0.2028\n- **Decision:** BOS has the slowest pace in tonight's slate (94.8) and elite defense (DefRtg 112.7). Game 7 historically produces defensive intensity — both teams in survival/advancement mode amplify defensive commitment. PHI's L15 NetRtg +0.9 suggests declining offensive form. BOS L15 +35.5 reflects dominance. Clean injury reports for both franchises confirmed via nba_official. All gates clear: time gate ✅ (66 min), confidence gate ✅ (62 ≥ 60), EV gate ✅ (0.20 ≥ 0.05), odds gate ✅ (1.94 in 1.75–2.05 range). O/U is NOT banned in Game 7 — only spreads are banned per playoff_motivation rules.\n\n---\n\n### LATE SCOUT — MIN vs DEN: No pick\nDEN ML 1.42 (below 1.65 floor), MIN ML 3.15 (above 2.50 ceiling), spread banned in Game 7. Under 224.5 evaluated: Edwards OUT creates compelling Under thesis but Aaron Gordon Questionable mandates -10 confidence reduction, dropping to 48 — below the 60 confidence gate for late additions. No pick.\n\n---\n\n### SLATE SUMMARY\nTonight's three Game 7s present limited value due to extreme pricing on favourites. The sole committed bet targets the Under in PHI vs BOS, exploiting BOS's elite defense and glacially slow pace (94.8) against a PHI team showing declining form (L15 NetRtg +0.9) in a Game 7 environment that historically compresses scoring. The NYK ML draft pick was cancelled on two independent grounds: EV fell below 0.05 after mandatory adverse movement adjustment, and NYK as a Game 7 road team at 1.65 sits well below the 1.90 minimum odds floor required by playoff skills. Total committed stake is €147.57 — 15.0% of bankroll — well within the 70% exposure cap.",
+  "draft_picks": [],
+  "pending_bets": [
     {
-      "id": "nba_draft_20260430_001",
-      "match": "Atlanta Hawks vs New York Knicks",
-      "time": "2026-04-30T23:00:00Z",
-      "pick": "New York Knicks ML",
-      "odds": 1.7,
-      "stake": 196.76,
-      "potential_return": 334.49,
-      "confidence": 72,
-      "reasoning": "GAME 7 context: NYK leads ATL 3-2. NYK NetRtg L15 +10.4 vs ATL L15 +13.7 — ATL slightly higher L15 but season NetRtg gap is NYK +6.5 vs ATL +2.4 (4.1pt gap). ATL DATA CONFLICT on Trae Young affiliation has been resolved by NBA official injury report — Trae Young does NOT appear in tonight's ATL injury report, meaning ATL likely has Young. Jock Landale OUT (ATL) is minor. NYK: Josh Hart Questionable (back contusion) — confidence -10 per franchise player rules (not franchise but key contributor). However, Hart is not franchise-tier — apply -5 instead. NYK leads series 3-2 which validates their NetRtg edge in-series. Game 7 home team confidence bonus: +8 (Atlanta is HOME in Game 7). Wait — verify home court: game listed as 'Atlanta Hawks vs New York Knicks' at State Farm Arena — ATL IS HOME. Per skills, home team in Game 7 gets +8 confidence bonus. This cuts against NYK. Re-evaluate: Base confidence for NYK (stronger team, series leader): 65. ATL home court G7 bonus effectively means ATL gets +8. NYK as road team in G7: add +5 (nothing-to-lose). Net: NYK road G7 = 65 base. ATL home G7 = meaningful. NYK season NetRtg gap +4.1pts, series confirmed (leads 3-2). ATL L15 is strong (+13.7) but series results override L15. NYK in-series edge validated. ATL Trae Young conflict is noted but not confirmed absent — VERY HIGH RISK per skills. However NBA official injury report tonight does NOT list Trae Young as out for ATL, suggesting he is available. DATA CONFLICT note says 'Trae Young appears in WAS verified absence feed' — this is a roster/trade situation from earlier this season. As of tonight's official injury report, Young not listed for ATL absence, so likely playing. This resolves partially. NYK road G7: conf 65 base +5 (road G7 factor) = 70. Adjust -5 for ATL home court worth 3-4pts = effective 65-70. ATL home G7 historically 60-65% win rate creates real risk. But NYK's in-series validation and superior NetRtg (+4.1 gap) supports NYK. Odds 1.70 — just within ML target range floor (1.60 minimum). EV = (0.70 × 1.70) - 1 = 1.19 - 1 = 0.19. EV 0.19 ≥ 0.05 threshold. Strong edge. Confidence 70 → confidence -10 for Hart Questionable (per GTD rules as key rotation player, not franchise, apply -5) → final confidence 68, round to 70 for tier purposes (High tier: 20-25% stake). Hart is not a franchise player but is important — apply -5 confidence. Final confidence: 68. Stake: 20% of €983.81 = €196.76. NOTE per skills: 'Do NOT bet spread in Game 7 — ML only.' ML pick is correct market. Josh Hart Questionable creates minor uncertainty but NYK's depth is sufficient.",
+      "id": "nba_bet_20260430_001",
+      "match": "Philadelphia 76ers vs Boston Celtics",
+      "time": "2026-05-01T00:00:00Z",
+      "pick": "Under 213.5",
+      "odds": 1.94,
+      "stake": 147.57,
+      "potential_return": 286.29,
+      "confidence": 62,
+      "reasoning": "LATE SCOUT — Game 7 PHI vs BOS. BOS is the elite defensive team in this series: DefRtg 112.7 (best of tonight's teams), Pace 94.8 (slowest pace in the slate, actively suppresses possessions and scoring). BOS OffRtg 120.8 but BOS L15 NetRtg +35.5 reflects dominance achieved through efficiency, not pace. PHI OffRtg 115.4, DefRtg 115.6 — below average offense. Game 7 context: maximum intensity, both teams playing for survival/advancement. Historically Game 7s trend defensive — both teams protect leads more, less gambling on offense, fewer open looks. PHI depleted roster (survived two elimination games but at cost of energy/health — no specific injury listed but PHI NetRtg L15 only +0.9 suggests declining form). BOS L15 +35.5 dominant run. Injury check: nba_official report covers 5 teams tonight; neither PHI nor BOS have any players listed as Out or Questionable — confirmed clean bills of health for both franchises. No anchor player concerns. Total 213.5: with BOS's 94.8 pace (implies ~96 possessions per game) and PHI's defensive intensity in Game 7 survival mode, scoring environment compressed. BOS averaged well below 215 combined in slow-pace games. EV = (0.62 × 1.94) - 1 = 0.2028. Confidence 62 (medium tier). Pace data available (non-zero). O/U odds 1.94 within valid range (1.75–2.05). Note: spread is banned in Game 7 per playoff_motivation rules — O/U (totals) is a separate market and not banned. Time gate: 66+ minutes to tip at commit time (>20 min requirement met). No line movement concerns — odds within valid range.",
       "anchor_players": [
-        "Jalen Brunson",
-        "Karl-Anthony Towns"
+        "Jayson Tatum",
+        "Jaylen Brown",
+        "Joel Embiid"
       ],
-      "drafted_at": "2026-04-30T15:48:39Z",
-      "market_type": "ml"
+      "result": null,
+      "returned": null,
+      "pnl": null,
+      "settled_at": null
     }
   ],
-  "pending_bets": [],
   "settled_bets": [
     {
       "id": "nba_bet_20260406_001",
@@ -743,56 +746,71 @@
   ],
   "late_scout_rejections": [
     {
-      "match": "Detroit Pistons vs Orlando Magic",
-      "reason": "Franz Wagner now confirmed OUT (was Questionable at Scout) — this would improve DET spread thesis significantly (confidence would reach ~60, EV ~0.164 at 1.94 on DET -10.5). However, time gate violation: game tips at 23:00 UTC, commit time is 22:41 UTC = only 19 minutes to tip-off, below the required 20-minute threshold for new late picks. Cannot add."
+      "match": "Atlanta Hawks vs New York Knicks",
+      "reason": "Time gate FAILED — only 6 minutes to tip at commit time (22:53Z vs 23:00Z tip). Skills require >20 minutes before tip to add new late picks. No new pick addable regardless of edge."
     },
     {
-      "match": "Cleveland Cavaliers vs Toronto Raptors",
-      "reason": "Series score remains unverified (ESPN showed 0-0 at Scout, still unconfirmed). TOR L15 NetRtg +21.9 is anomalously strong vs CLE L15 +0.7 — books may be pricing TOR's recent form, making CLE -10.5 at 2.01 suspect despite Quickley OUT. Without confirmed series score, cannot apply proper playoff_motivation adjustments or home court context. Confidence cannot reach 60 floor under data uncertainty. Rejected."
+      "match": "Minnesota Timberwolves vs Denver Nuggets",
+      "reason": "No valid market available. DEN ML 1.42 below 1.65 floor; MIN ML 3.15 above 2.50 ceiling; spread banned in Game 7. O/U Under 224.5 evaluated: Edwards OUT decimates MIN offense creating Under thesis, but Aaron Gordon Questionable mandates -10 confidence adjustment per injury_check_rules, reducing confidence from 58 to 48 — below the 60 confidence gate required for new late picks. No pick addable."
+    },
+    {
+      "match": "Philadelphia 76ers vs Boston Celtics",
+      "reason": "ML markets invalid (BOS 1.47 below floor, PHI 2.93 above ceiling). Spread banned in Game 7. O/U Under 213.5 ADDED as late pick — see committed bets."
     }
   ],
   "commit_report_data": {
-    "date": "2026-04-29",
-    "ts": "2026-04-29T22:41:49.451750+00:00",
+    "date": "2026-04-30",
+    "ts": "2026-04-30T22:53:35.885989+00:00",
     "bets": [
       {
-        "id": "nba_bet_20260429_001",
-        "match": "Los Angeles Lakers vs Houston Rockets",
-        "time": "2026-04-30T02:00:00Z",
-        "pick": "Los Angeles Lakers -3.5",
-        "odds": 1.93,
-        "stake": 134,
-        "potential_return": 258.62,
-        "reasoning": "Late scout addition. Kevin Durant (OUT - NBA official), Fred VanVleet (OUT), Steven Adams (OUT) all confirmed absent for Houston — severely depleted road elimination team. LAL leads series 3-1 and closes at home. Spread tightened from -4.5 (Scout) to -3.5 (current), making the bar easier to cover. LAL's series tactical dominance confirmed even without Doncic. Reaves Questionable triggered -10 confidence and -20% stake per franchise_player_rules. EV = (0.60 × 1.93) - 1 = 0.158. Closing-team caution noted but 1.93 odds above the spread-betting floor, and small -3.5 line reduces margin risk. Total exposure 12% of bankroll, well within limits.",
-        "confidence": 60,
+        "id": "nba_bet_20260430_001",
+        "match": "Philadelphia 76ers vs Boston Celtics",
+        "time": "2026-05-01T00:00:00Z",
+        "pick": "Under 213.5",
+        "odds": 1.94,
+        "stake": 147.57,
+        "potential_return": 286.29,
+        "confidence": 62,
+        "reasoning": "LATE SCOUT — Game 7 PHI vs BOS. BOS is the elite defensive team in this series: DefRtg 112.7 (best of tonight's teams), Pace 94.8 (slowest pace in the slate, actively suppresses possessions and scoring). BOS OffRtg 120.8 but BOS L15 NetRtg +35.5 reflects dominance achieved through efficiency, not pace. PHI OffRtg 115.4, DefRtg 115.6 — below average offense. Game 7 context: maximum intensity, both teams playing for survival/advancement. Historically Game 7s trend defensive — both teams protect leads more, less gambling on offense, fewer open looks. PHI depleted roster (survived two elimination games but at cost of energy/health — no specific injury listed but PHI NetRtg L15 only +0.9 suggests declining form). BOS L15 +35.5 dominant run. Injury check: nba_official report covers 5 teams tonight; neither PHI nor BOS have any players listed as Out or Questionable — confirmed clean bills of health for both franchises. No anchor player concerns. Total 213.5: with BOS's 94.8 pace (implies ~96 possessions per game) and PHI's defensive intensity in Game 7 survival mode, scoring environment compressed. BOS averaged well below 215 combined in slow-pace games. EV = (0.62 × 1.94) - 1 = 0.2028. Confidence 62 (medium tier). Pace data available (non-zero). O/U odds 1.94 within valid range (1.75–2.05). Note: spread is banned in Game 7 per playoff_motivation rules — O/U (totals) is a separate market and not banned. Time gate: 66+ minutes to tip at commit time (>20 min requirement met). No line movement concerns — odds within valid range.",
         "anchor_players": [
-          "Kevin Durant (HOU - OUT confirmed)",
-          "Austin Reaves (LAL - Questionable)"
+          "Jayson Tatum",
+          "Jaylen Brown",
+          "Joel Embiid"
         ],
         "result": null,
         "returned": null,
         "pnl": null,
-        "settled_at": null,
-        "committed_at": "2026-04-29T22:41:51Z"
+        "settled_at": null
       }
     ],
-    "cancelled": [],
+    "cancelled": [
+      {
+        "id": "nba_draft_20260430_001",
+        "match": "Atlanta Hawks vs New York Knicks",
+        "pick": "New York Knicks ML",
+        "reason": "Two compounding cancellation triggers: (1) Odds moved against from Scout's 1.70 to current 1.65 — exactly at commit floor. After applying mandatory -10 confidence adjustment for adverse line movement, EV = (0.63 × 1.65) - 1 = 0.0395, which is below the 0.05 EV threshold. (2) Per playoff_motivation skills, road team in Game 7 requires minimum odds of 1.90 — NYK as road team in Game 7 at ATL (State Farm Arena) is at 1.65, well below the 1.90 floor for road Game 7 picks. Both triggers independently mandate cancellation."
+      }
+    ],
     "late_rejections": [
       {
-        "match": "Detroit Pistons vs Orlando Magic",
-        "reason": "Franz Wagner now confirmed OUT (was Questionable at Scout) — this would improve DET spread thesis significantly (confidence would reach ~60, EV ~0.164 at 1.94 on DET -10.5). However, time gate violation: game tips at 23:00 UTC, commit time is 22:41 UTC = only 19 minutes to tip-off, below the required 20-minute threshold for new late picks. Cannot add."
+        "match": "Atlanta Hawks vs New York Knicks",
+        "reason": "Time gate FAILED — only 6 minutes to tip at commit time (22:53Z vs 23:00Z tip). Skills require >20 minutes before tip to add new late picks. No new pick addable regardless of edge."
       },
       {
-        "match": "Cleveland Cavaliers vs Toronto Raptors",
-        "reason": "Series score remains unverified (ESPN showed 0-0 at Scout, still unconfirmed). TOR L15 NetRtg +21.9 is anomalously strong vs CLE L15 +0.7 — books may be pricing TOR's recent form, making CLE -10.5 at 2.01 suspect despite Quickley OUT. Without confirmed series score, cannot apply proper playoff_motivation adjustments or home court context. Confidence cannot reach 60 floor under data uncertainty. Rejected."
+        "match": "Minnesota Timberwolves vs Denver Nuggets",
+        "reason": "No valid market available. DEN ML 1.42 below 1.65 floor; MIN ML 3.15 above 2.50 ceiling; spread banned in Game 7. O/U Under 224.5 evaluated: Edwards OUT decimates MIN offense creating Under thesis, but Aaron Gordon Questionable mandates -10 confidence adjustment per injury_check_rules, reducing confidence from 58 to 48 — below the 60 confidence gate required for new late picks. No pick addable."
+      },
+      {
+        "match": "Philadelphia 76ers vs Boston Celtics",
+        "reason": "ML markets invalid (BOS 1.47 below floor, PHI 2.93 above ceiling). Spread banned in Game 7. O/U Under 213.5 ADDED as late pick — see committed bets."
       }
     ],
-    "total_staked": 134.0,
-    "bankroll_before": 1117.81,
-    "report": "### CONFIRMED — Los Angeles Lakers -3.5\n\n- **Match:** Los Angeles Lakers vs Houston Rockets | Tip: 2026-04-30T02:00 UTC\n- **Pick:** LAL -3.5 (spread) | Scout odds: N/A (new late pick) | Commit odds: 1.93 | Move: N/A\n- **ML:** LAL 1.60 / HOU 2.52 | **ATS:** LAL -3.5 (1.93/1.99) | **O/U:** 208.5 (O:1.98/U:1.94)\n- **Stake:** €134 | **Pot:** €258.62 | **Conf:** 60/100 | **EV:** 0.158\n\n**Decision:** Late scout trigger confirmed. Kevin Durant (OUT — NBA official), Fred VanVleet (OUT — ACL), and Steven Adams (OUT — surgery) all officially absent for Houston. HOU faces road elimination severely depleted. LAL leads 3-1 and closes at home. Spread tightened from -4.5 (Scout reference) to -3.5 — a more achievable line. EV well above 0.05 floor. Austin Reaves Questionable triggered standard -10 confidence adjustment (from 70 → 60) and -20% stake reduction per franchise_player_rules. Closing-team caution noted; spread odds at 1.93 exceed the 1.70 spread-betting floor so rule does not prohibit confirmation. Total exposure: €134 / €1117.81 = 12.0% — well within 70% cap.\n\n---\n\n### LATE SCOUT — Detroit Pistons vs Orlando Magic (NOT ADDED — Time Gate)\n\nFranz Wagner confirmed OUT (was Questionable at Scout) — this is a meaningful late-breaking development that would have generated a DET -10.5 spread pick at confidence 60, EV ~0.164. However, the game tips at 23:00 UTC and commit time is 22:41 UTC (19 minutes), which violates the 20-minute time gate for new late picks. Forced to decline.\n\n---\n\n### LATE SCOUT — Cleveland Cavaliers vs Toronto Raptors (REJECTED)\n\nSeries score remains unverified (ESPN showed 0-0 at both Scout and Commit). TOR's L15 NetRtg of +21.9 is anomalously strong — books appear to be pricing recent TOR form. Quickley confirmed OUT hurts TOR, but without verified series score the required playoff_motivation adjustments cannot be applied. Confidence cannot reach the 60 floor under this data uncertainty. Rejected.\n\n---\n\n### Slate Summary\n\nTonight's slate yields one committed bet: LAL -3.5 vs the depleted Rockets, who arrive at Crypto.com Arena for a road elimination game without Durant, VanVleet, and Adams. The Franz Wagner OUT development for the DET/ORL game was the most compelling late-breaking signal, but the 19-minute gap to tip-off narrowly violated the time gate, preventing action. Total bankroll exposure is a conservative 12% (€134), maintaining strong capital preservation for the remainder of the playoff series.",
-    "tokens_in": 9480,
-    "tokens_out": 6283,
-    "cost_usd": 0.122685
+    "total_staked": 147.57,
+    "bankroll_before": 983.81,
+    "report": "### CANCELLED — New York Knicks ML\n- **Match:** Atlanta Hawks vs New York Knicks | Tip: 23:00Z\n- **Odds at cancel:** 1.65 (was 1.70 at Scout time) | Move: -0.05 (against)\n- **ML:** ATL 2.41 / NYK 1.65 | ATS: ATL +3.5 (1.93/1.99) | O/U: 215.5 (O:1.98/U:1.94)\n- **Trigger 1 — EV failure:** Line moved against by 0.05. Per skills, movement against mandates confidence -10 recalculation. Josh Hart appears active (not in nba_official report tonight → restore Scout's -5 penalty). Net confidence adjustment: Scout 68, +5 (Hart active), -10 (adverse movement) = 63. EV = (0.63 × 1.65) - 1 = **0.0395 < 0.05 threshold**. Fails EV gate.\n- **Trigger 2 — Game 7 road team odds floor:** Skills explicitly state road team in Game 7 requires odds ≥ 1.90. NYK at 1.65 as road team in Atlanta fails this requirement directly.\n- **Note:** ATL is confirmed home (State Farm Arena). Trae Young not listed in injury report = likely active for ATL, which is a risk factor Scout acknowledged. Both triggers independently cancel this pick.\n\n---\n\n### CONFIRMED — Under 213.5 (Philadelphia 76ers vs Boston Celtics) — LATE SCOUT ADDITION\n- **Match:** Philadelphia 76ers vs Boston Celtics | Tip: 2026-05-01T00:00Z\n- **Pick:** Under 213.5 | Scout odds: N/A (late add) | Commit odds: 1.94 | Move: N/A\n- **ML:** PHI 2.93 / BOS 1.47 | ATS: PHI +5.5 (1.99/1.93) | O/U: 213.5 (O:1.98/U:1.94)\n- **Stake:** €147.57 (15% of €983.81) | Pot: €286.29 | Conf: 62/100 | EV: 0.2028\n- **Decision:** BOS has the slowest pace in tonight's slate (94.8) and elite defense (DefRtg 112.7). Game 7 historically produces defensive intensity — both teams in survival/advancement mode amplify defensive commitment. PHI's L15 NetRtg +0.9 suggests declining offensive form. BOS L15 +35.5 reflects dominance. Clean injury reports for both franchises confirmed via nba_official. All gates clear: time gate ✅ (66 min), confidence gate ✅ (62 ≥ 60), EV gate ✅ (0.20 ≥ 0.05), odds gate ✅ (1.94 in 1.75–2.05 range). O/U is NOT banned in Game 7 — only spreads are banned per playoff_motivation rules.\n\n---\n\n### LATE SCOUT — MIN vs DEN: No pick\nDEN ML 1.42 (below 1.65 floor), MIN ML 3.15 (above 2.50 ceiling), spread banned in Game 7. Under 224.5 evaluated: Edwards OUT creates compelling Under thesis but Aaron Gordon Questionable mandates -10 confidence reduction, dropping to 48 — below the 60 confidence gate for late additions. No pick.\n\n---\n\n### SLATE SUMMARY\nTonight's three Game 7s present limited value due to extreme pricing on favourites. The sole committed bet targets the Under in PHI vs BOS, exploiting BOS's elite defense and glacially slow pace (94.8) against a PHI team showing declining form (L15 NetRtg +0.9) in a Game 7 environment that historically compresses scoring. The NYK ML draft pick was cancelled on two independent grounds: EV fell below 0.05 after mandatory adverse movement adjustment, and NYK as a Game 7 road team at 1.65 sits well below the 1.90 minimum odds floor required by playoff skills. Total committed stake is €147.57 — 15.0% of bankroll — well within the 70% exposure cap.",
+    "tokens_in": 10214,
+    "tokens_out": 5134,
+    "cost_usd": 0.107652
   },
   "netrtg_l15": {
     "Charlotte Hornets": 16.9,
