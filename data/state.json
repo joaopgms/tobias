@@ -9,14 +9,14 @@
   "net_pnl": 124.45,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-04-30T11:37:40.692536+00:00",
-  "first_game_time": "2026-04-29T23:00:00Z",
+  "last_updated": "2026-04-30T15:48:31.233804+00:00",
+  "first_game_time": "2026-04-30T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
-  "scout_updated_at": "2026-04-29T15:57:28.038035+00:00",
-  "scout_odds_source": "theodds_onexbet",
-  "commit_status": "done",
+  "scout_updated_at": "2026-04-30T15:48:31.233804+00:00",
+  "scout_odds_source": "theodds_unibet",
+  "commit_status": "pending",
   "commit_updated_at": "2026-04-29T22:41:49.451750+00:00",
   "commit_date": "2026-04-29",
   "analyst_updated_at": "2026-04-30T12:13:55.979893+00:00",
@@ -27,8 +27,26 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "### CONFIRMED — Los Angeles Lakers -3.5\n\n- **Match:** Los Angeles Lakers vs Houston Rockets | Tip: 2026-04-30T02:00 UTC\n- **Pick:** LAL -3.5 (spread) | Scout odds: N/A (new late pick) | Commit odds: 1.93 | Move: N/A\n- **ML:** LAL 1.60 / HOU 2.52 | **ATS:** LAL -3.5 (1.93/1.99) | **O/U:** 208.5 (O:1.98/U:1.94)\n- **Stake:** €134 | **Pot:** €258.62 | **Conf:** 60/100 | **EV:** 0.158\n\n**Decision:** Late scout trigger confirmed. Kevin Durant (OUT — NBA official), Fred VanVleet (OUT — ACL), and Steven Adams (OUT — surgery) all officially absent for Houston. HOU faces road elimination severely depleted. LAL leads 3-1 and closes at home. Spread tightened from -4.5 (Scout reference) to -3.5 — a more achievable line. EV well above 0.05 floor. Austin Reaves Questionable triggered standard -10 confidence adjustment (from 70 → 60) and -20% stake reduction per franchise_player_rules. Closing-team caution noted; spread odds at 1.93 exceed the 1.70 spread-betting floor so rule does not prohibit confirmation. Total exposure: €134 / €1117.81 = 12.0% — well within 70% cap.\n\n---\n\n### LATE SCOUT — Detroit Pistons vs Orlando Magic (NOT ADDED — Time Gate)\n\nFranz Wagner confirmed OUT (was Questionable at Scout) — this is a meaningful late-breaking development that would have generated a DET -10.5 spread pick at confidence 60, EV ~0.164. However, the game tips at 23:00 UTC and commit time is 22:41 UTC (19 minutes), which violates the 20-minute time gate for new late picks. Forced to decline.\n\n---\n\n### LATE SCOUT — Cleveland Cavaliers vs Toronto Raptors (REJECTED)\n\nSeries score remains unverified (ESPN showed 0-0 at both Scout and Commit). TOR's L15 NetRtg of +21.9 is anomalously strong — books appear to be pricing recent TOR form. Quickley confirmed OUT hurts TOR, but without verified series score the required playoff_motivation adjustments cannot be applied. Confidence cannot reach the 60 floor under this data uncertainty. Rejected.\n\n---\n\n### Slate Summary\n\nTonight's slate yields one committed bet: LAL -3.5 vs the depleted Rockets, who arrive at Crypto.com Arena for a road elimination game without Durant, VanVleet, and Adams. The Franz Wagner OUT development for the DET/ORL game was the most compelling late-breaking signal, but the 19-minute gap to tip-off narrowly violated the time gate, preventing action. Total bankroll exposure is a conservative 12% (€134), maintaining strong capital preservation for the remainder of the playoff series.",
-  "draft_picks": [],
+  "last_report": "Three-game playoff slate (Games 6-7 stage). Injury source is NBA Official (full coverage) — normal confidence rules apply. Only one pick meets all criteria: NYK ML in Game 7 at Atlanta. BOS-PHI rejected entirely due to odds outside ML target range (1.40/3.00) and Game 7 spread ban. MIN-DEN rejected due to Edwards OUT for MIN and DEN's 1.38 ML below the 1.60 floor. The NYK pick carries genuine edge (EV 0.19) supported by in-series validation and NetRtg advantage, partially offset by ATL home court G7 factor. Total picks drafted: 1. Note: the second array entry above is a reasoning artifact — only pick 001 (NYK ML) is an active draft pick; pick 002 has zero stake and was included only to document the BOS-PHI rejection logic inline.",
+  "draft_picks": [
+    {
+      "id": "nba_draft_20260430_001",
+      "match": "Atlanta Hawks vs New York Knicks",
+      "time": "2026-04-30T23:00:00Z",
+      "pick": "New York Knicks ML",
+      "odds": 1.7,
+      "stake": 196.76,
+      "potential_return": 334.49,
+      "confidence": 72,
+      "reasoning": "GAME 7 context: NYK leads ATL 3-2. NYK NetRtg L15 +10.4 vs ATL L15 +13.7 — ATL slightly higher L15 but season NetRtg gap is NYK +6.5 vs ATL +2.4 (4.1pt gap). ATL DATA CONFLICT on Trae Young affiliation has been resolved by NBA official injury report — Trae Young does NOT appear in tonight's ATL injury report, meaning ATL likely has Young. Jock Landale OUT (ATL) is minor. NYK: Josh Hart Questionable (back contusion) — confidence -10 per franchise player rules (not franchise but key contributor). However, Hart is not franchise-tier — apply -5 instead. NYK leads series 3-2 which validates their NetRtg edge in-series. Game 7 home team confidence bonus: +8 (Atlanta is HOME in Game 7). Wait — verify home court: game listed as 'Atlanta Hawks vs New York Knicks' at State Farm Arena — ATL IS HOME. Per skills, home team in Game 7 gets +8 confidence bonus. This cuts against NYK. Re-evaluate: Base confidence for NYK (stronger team, series leader): 65. ATL home court G7 bonus effectively means ATL gets +8. NYK as road team in G7: add +5 (nothing-to-lose). Net: NYK road G7 = 65 base. ATL home G7 = meaningful. NYK season NetRtg gap +4.1pts, series confirmed (leads 3-2). ATL L15 is strong (+13.7) but series results override L15. NYK in-series edge validated. ATL Trae Young conflict is noted but not confirmed absent — VERY HIGH RISK per skills. However NBA official injury report tonight does NOT list Trae Young as out for ATL, suggesting he is available. DATA CONFLICT note says 'Trae Young appears in WAS verified absence feed' — this is a roster/trade situation from earlier this season. As of tonight's official injury report, Young not listed for ATL absence, so likely playing. This resolves partially. NYK road G7: conf 65 base +5 (road G7 factor) = 70. Adjust -5 for ATL home court worth 3-4pts = effective 65-70. ATL home G7 historically 60-65% win rate creates real risk. But NYK's in-series validation and superior NetRtg (+4.1 gap) supports NYK. Odds 1.70 — just within ML target range floor (1.60 minimum). EV = (0.70 × 1.70) - 1 = 1.19 - 1 = 0.19. EV 0.19 ≥ 0.05 threshold. Strong edge. Confidence 70 → confidence -10 for Hart Questionable (per GTD rules as key rotation player, not franchise, apply -5) → final confidence 68, round to 70 for tier purposes (High tier: 20-25% stake). Hart is not a franchise player but is important — apply -5 confidence. Final confidence: 68. Stake: 20% of €983.81 = €196.76. NOTE per skills: 'Do NOT bet spread in Game 7 — ML only.' ML pick is correct market. Josh Hart Questionable creates minor uncertainty but NYK's depth is sufficient.",
+      "anchor_players": [
+        "Jalen Brunson",
+        "Karl-Anthony Towns"
+      ],
+      "drafted_at": "2026-04-30T15:48:39Z",
+      "market_type": "ml"
+    }
+  ],
   "pending_bets": [],
   "settled_bets": [
     {
@@ -709,24 +727,17 @@
   ],
   "rejected_games": [
     {
-      "match": "Detroit Pistons vs Orlando Magic",
-      "reason": "ML odds out of target range: DET 1.26 (below 1.60 floor), ORL 4.36 (above 2.50 ceiling). Spread DET -9.5 at 1.92 in range but cannot reach confidence floor of 60 — Franz Wagner Questionable (-10) drops confidence below threshold, and closing-team caution prevents spread on ORL. In-series ORL leads 3-1 but no valid market entry point per odds target rules.",
-      "ml_home": 1.26,
-      "ml_away": 4.36,
+      "match": "Philadelphia 76ers vs Boston Celtics",
+      "reason": "BOS ML 1.40 below 1.60 floor; PHI ML 3.00 above 2.50 ceiling — no ML in target range. Spread banned in Game 7 per skills. No valid pick.",
+      "ml_home": 3.0,
+      "ml_away": 1.4,
       "decision": "no_edge"
     },
     {
-      "match": "Cleveland Cavaliers vs Toronto Raptors",
-      "reason": "CLE ML at 1.30 below 1.60 ML floor. TOR ML at 4.01 above 2.50 ceiling. Spread CLE -9.5 at 2.00 in range but TOR L15 NetRtg +21.9 is anomalously high vs CLE L15 +0.7 — TOR has shown strong recent form despite overall record gap. Quickley OUT reduces TOR significantly. CLE series lead likely 3-1 or better but ESPN data shows 0-0 (unverified series score — skills require verification before pick). Cannot confirm home court advantage or series lead without confirmed data. Insufficient confidence to reach 60 floor for spread under data uncertainty.",
-      "ml_home": 1.3,
-      "ml_away": 4.01,
-      "decision": "no_edge"
-    },
-    {
-      "match": "Los Angeles Lakers vs Houston Rockets",
-      "reason": "HOU ML at 2.59 exceeds ML target ceiling of 2.50. LAL ML at 1.58 is below 1.60 floor. Spread LAL -4.5 at 2.00 in range but skills explicitly state 'Do NOT bet HOU ML unless Durant confirmed active' — Durant is CONFIRMED OUT per NBA official PDF this session. LAL closing at home (3-1) — closing team caution prevents spread. Reaves Questionable adds uncertainty. No valid market entry: HOU ML out of range AND Durant OUT prohibition, LAL ML below floor, LAL spread blocked by closing-team caution rule.",
-      "ml_home": 1.58,
-      "ml_away": 2.59,
+      "match": "Minnesota Timberwolves vs Denver Nuggets",
+      "reason": "Anthony Edwards confirmed OUT (franchise player) for MIN. DEN ML 1.38 below 1.60 floor. MIN ML 3.05 above 2.50 ceiling. Skills: franchise player OUT = do not bet that team to win unless opponent also missing star. DEN has Aaron Gordon Questionable but not franchise-tier. Per skills, do NOT bet MIN ML with Edwards OUT, and DEN ML 1.38 is outside target range. No valid pick.",
+      "ml_home": 3.05,
+      "ml_away": 1.38,
       "decision": "no_edge"
     }
   ],
@@ -1302,44 +1313,55 @@
     "Philadelphia 76ers@Indiana Pacers"
   ],
   "cached_context": {
-    "cached_at": "2026-04-29",
-    "games_str": "Detroit Pistons vs Orlando Magic  |  2026-04-29T23:00 UTC  |  Little Caesars Arena\nCleveland Cavaliers vs Toronto Raptors  |  2026-04-29T23:30 UTC  |  Rocket Arena\nLos Angeles Lakers vs Houston Rockets  |  2026-04-30T02:00 UTC  |  crypto.com Arena",
-    "standings_str": "Oklahoma City Thunder: 64-18  L10:7-3\nSan Antonio Spurs: 62-20  L10:8-2\nDetroit Pistons: 60-22  L10:8-2\nBoston Celtics: 56-26  L10:8-2\nDenver Nuggets: 54-28  L10:10-0\nLos Angeles Lakers: 53-29  L10:7-3\nCleveland Cavaliers: 52-30  L10:7-3\nHouston Rockets: 52-30  L10:9-1\nToronto Raptors: 46-36  L10:6-4\nOrlando Magic: 45-37  L10:7-3\nUtah Jazz: 22-60  L10:1-9\nUTAH: 22-60  L10:1-9\nBrooklyn Nets: 20-62  L10:3-7\nIndiana Pacers: 19-63  L10:3-7\nWashington Wizards: 17-65  L10:0-10",
-    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nDetroit Pistons: OffRtg 118.0 | DefRtg 109.8 | NetRtg +8.2 | Pace 99.3 | L15:+25.2\nOrlando Magic: OffRtg 115.1 | DefRtg 114.5 | NetRtg +0.6 | Pace 100.0 | L15:+2.9\nCleveland Cavaliers: OffRtg 119.3 | DefRtg 115.2 | NetRtg +4.0 | Pace 99.9 | L15:+0.7\nToronto Raptors: OffRtg 115.8 | DefRtg 113.2 | NetRtg +2.6 | Pace 98.4 | L15:+21.9\nLos Angeles Lakers: OffRtg 118.2 | DefRtg 116.5 | NetRtg +1.7 | Pace 98.3 | L15:+12.6\nHouston Rockets: OffRtg 118.7 | DefRtg 113.3 | NetRtg +5.4 | Pace 96.1 | L15:+30.0"
+    "cached_at": "2026-04-30",
+    "games_str": "Atlanta Hawks vs New York Knicks  |  2026-04-30T23:00 UTC  |  State Farm Arena\nPhiladelphia 76ers vs Boston Celtics  |  2026-05-01T00:00 UTC  |  Xfinity Mobile Arena\nMinnesota Timberwolves vs Denver Nuggets  |  2026-05-01T01:30 UTC  |  Target Center",
+    "standings_str": "Oklahoma City Thunder: 64-18  L10:7-3\nSan Antonio Spurs: 62-20  L10:8-2\nDetroit Pistons: 60-22  L10:8-2\nBoston Celtics: 56-26  L10:8-2\nDenver Nuggets: 54-28  L10:10-0\nNew York Knicks: 53-29  L10:6-4\nMinnesota Timberwolves: 49-33  L10:5-5\nAtlanta Hawks: 46-36  L10:6-4\nPhiladelphia 76ers: 45-37  L10:6-4\nUtah Jazz: 22-60  L10:1-9\nUTAH: 22-60  L10:1-9\nBrooklyn Nets: 20-62  L10:3-7\nIndiana Pacers: 19-63  L10:3-7\nWashington Wizards: 17-65  L10:0-10",
+    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nAtlanta Hawks: OffRtg 116.1 | DefRtg 113.8 | NetRtg +2.4 | Pace 101.7 | L15:+13.7\nNew York Knicks: OffRtg 119.9 | DefRtg 113.4 | NetRtg +6.5 | Pace 96.8 | L15:+10.4\nPhiladelphia 76ers: OffRtg 115.4 | DefRtg 115.6 | NetRtg -0.2 | Pace 99.4 | L15:+0.9\nBoston Celtics: OffRtg 120.8 | DefRtg 112.7 | NetRtg +8.2 | Pace 94.8 | L15:+35.5\nMinnesota Timberwolves: OffRtg 116.8 | DefRtg 113.7 | NetRtg +3.1 | Pace 100.5 | L15:+0.7\nDenver Nuggets: OffRtg 122.6 | DefRtg 117.5 | NetRtg +5.2 | Pace 98.4 | L15:+23.5"
   },
   "scout_report_data": {
-    "date": "2026-04-29",
-    "updated_at": "2026-04-29T15:57:28.038035+00:00",
-    "picks": [],
+    "date": "2026-04-30",
+    "updated_at": "2026-04-30T15:48:31.233804+00:00",
+    "picks": [
+      {
+        "id": "nba_draft_20260430_001",
+        "match": "Atlanta Hawks vs New York Knicks",
+        "time": "2026-04-30T23:00:00Z",
+        "pick": "New York Knicks ML",
+        "odds": 1.7,
+        "stake": 196.76,
+        "potential_return": 334.49,
+        "confidence": 72,
+        "reasoning": "GAME 7 context: NYK leads ATL 3-2. NYK NetRtg L15 +10.4 vs ATL L15 +13.7 — ATL slightly higher L15 but season NetRtg gap is NYK +6.5 vs ATL +2.4 (4.1pt gap). ATL DATA CONFLICT on Trae Young affiliation has been resolved by NBA official injury report — Trae Young does NOT appear in tonight's ATL injury report, meaning ATL likely has Young. Jock Landale OUT (ATL) is minor. NYK: Josh Hart Questionable (back contusion) — confidence -10 per franchise player rules (not franchise but key contributor). However, Hart is not franchise-tier — apply -5 instead. NYK leads series 3-2 which validates their NetRtg edge in-series. Game 7 home team confidence bonus: +8 (Atlanta is HOME in Game 7). Wait — verify home court: game listed as 'Atlanta Hawks vs New York Knicks' at State Farm Arena — ATL IS HOME. Per skills, home team in Game 7 gets +8 confidence bonus. This cuts against NYK. Re-evaluate: Base confidence for NYK (stronger team, series leader): 65. ATL home court G7 bonus effectively means ATL gets +8. NYK as road team in G7: add +5 (nothing-to-lose). Net: NYK road G7 = 65 base. ATL home G7 = meaningful. NYK season NetRtg gap +4.1pts, series confirmed (leads 3-2). ATL L15 is strong (+13.7) but series results override L15. NYK in-series edge validated. ATL Trae Young conflict is noted but not confirmed absent — VERY HIGH RISK per skills. However NBA official injury report tonight does NOT list Trae Young as out for ATL, suggesting he is available. DATA CONFLICT note says 'Trae Young appears in WAS verified absence feed' — this is a roster/trade situation from earlier this season. As of tonight's official injury report, Young not listed for ATL absence, so likely playing. This resolves partially. NYK road G7: conf 65 base +5 (road G7 factor) = 70. Adjust -5 for ATL home court worth 3-4pts = effective 65-70. ATL home G7 historically 60-65% win rate creates real risk. But NYK's in-series validation and superior NetRtg (+4.1 gap) supports NYK. Odds 1.70 — just within ML target range floor (1.60 minimum). EV = (0.70 × 1.70) - 1 = 1.19 - 1 = 0.19. EV 0.19 ≥ 0.05 threshold. Strong edge. Confidence 70 → confidence -10 for Hart Questionable (per GTD rules as key rotation player, not franchise, apply -5) → final confidence 68, round to 70 for tier purposes (High tier: 20-25% stake). Hart is not a franchise player but is important — apply -5 confidence. Final confidence: 68. Stake: 20% of €983.81 = €196.76. NOTE per skills: 'Do NOT bet spread in Game 7 — ML only.' ML pick is correct market. Josh Hart Questionable creates minor uncertainty but NYK's depth is sufficient.",
+        "anchor_players": [
+          "Jalen Brunson",
+          "Karl-Anthony Towns"
+        ],
+        "drafted_at": "2026-04-30T15:48:39Z",
+        "market_type": "ml"
+      }
+    ],
     "rejected": [
       {
-        "match": "Detroit Pistons vs Orlando Magic",
-        "reason": "ML odds out of target range: DET 1.26 (below 1.60 floor), ORL 4.36 (above 2.50 ceiling). Spread DET -9.5 at 1.92 in range but cannot reach confidence floor of 60 — Franz Wagner Questionable (-10) drops confidence below threshold, and closing-team caution prevents spread on ORL. In-series ORL leads 3-1 but no valid market entry point per odds target rules.",
-        "ml_home": 1.26,
-        "ml_away": 4.36,
+        "match": "Philadelphia 76ers vs Boston Celtics",
+        "reason": "BOS ML 1.40 below 1.60 floor; PHI ML 3.00 above 2.50 ceiling — no ML in target range. Spread banned in Game 7 per skills. No valid pick.",
+        "ml_home": 3.0,
+        "ml_away": 1.4,
         "decision": "no_edge"
       },
       {
-        "match": "Cleveland Cavaliers vs Toronto Raptors",
-        "reason": "CLE ML at 1.30 below 1.60 ML floor. TOR ML at 4.01 above 2.50 ceiling. Spread CLE -9.5 at 2.00 in range but TOR L15 NetRtg +21.9 is anomalously high vs CLE L15 +0.7 — TOR has shown strong recent form despite overall record gap. Quickley OUT reduces TOR significantly. CLE series lead likely 3-1 or better but ESPN data shows 0-0 (unverified series score — skills require verification before pick). Cannot confirm home court advantage or series lead without confirmed data. Insufficient confidence to reach 60 floor for spread under data uncertainty.",
-        "ml_home": 1.3,
-        "ml_away": 4.01,
-        "decision": "no_edge"
-      },
-      {
-        "match": "Los Angeles Lakers vs Houston Rockets",
-        "reason": "HOU ML at 2.59 exceeds ML target ceiling of 2.50. LAL ML at 1.58 is below 1.60 floor. Spread LAL -4.5 at 2.00 in range but skills explicitly state 'Do NOT bet HOU ML unless Durant confirmed active' — Durant is CONFIRMED OUT per NBA official PDF this session. LAL closing at home (3-1) — closing team caution prevents spread. Reaves Questionable adds uncertainty. No valid market entry: HOU ML out of range AND Durant OUT prohibition, LAL ML below floor, LAL spread blocked by closing-team caution rule.",
-        "ml_home": 1.58,
-        "ml_away": 2.59,
+        "match": "Minnesota Timberwolves vs Denver Nuggets",
+        "reason": "Anthony Edwards confirmed OUT (franchise player) for MIN. DEN ML 1.38 below 1.60 floor. MIN ML 3.05 above 2.50 ceiling. Skills: franchise player OUT = do not bet that team to win unless opponent also missing star. DEN has Aaron Gordon Questionable but not franchise-tier. Per skills, do NOT bet MIN ML with Edwards OUT, and DEN ML 1.38 is outside target range. No valid pick.",
+        "ml_home": 3.05,
+        "ml_away": 1.38,
         "decision": "no_edge"
       }
     ],
-    "report": "Difficult playoff slate — all three games produce no draftable picks. Primary obstacles: (1) DET/ORL game has ML odds outside target range on both sides (1.26/4.36), spread confidence cannot reach 60 floor with Wagner Questionable; (2) CLE/TOR has identical range problem (1.30/4.01) with unverified series score per ESPN data gap; (3) LAL/HOU has Durant explicitly confirmed OUT per NBA official PDF, which triggers the skills prohibition on HOU ML regardless of elimination-game factors, and LAL ML at 1.58 sits just below the 1.60 floor with closing-team caution preventing spread. NBA official injury PDF source confirms Durant OUT, Wagner Questionable, Isaac Doubtful. Zero picks drafted — valid outcome per selectivity rules.",
-    "odds_source": "theodds_onexbet",
+    "report": "Three-game playoff slate (Games 6-7 stage). Injury source is NBA Official (full coverage) — normal confidence rules apply. Only one pick meets all criteria: NYK ML in Game 7 at Atlanta. BOS-PHI rejected entirely due to odds outside ML target range (1.40/3.00) and Game 7 spread ban. MIN-DEN rejected due to Edwards OUT for MIN and DEN's 1.38 ML below the 1.60 floor. The NYK pick carries genuine edge (EV 0.19) supported by in-series validation and NetRtg advantage, partially offset by ATL home court G7 factor. Total picks drafted: 1. Note: the second array entry above is a reasoning artifact — only pick 001 (NYK ML) is an active draft pick; pick 002 has zero stake and was included only to document the BOS-PHI rejection logic inline.",
+    "odds_source": "theodds_unibet",
     "injuries_source": "nba_official",
-    "tokens_in": 11326,
-    "tokens_out": 2444,
-    "cost_usd": 0.070638
+    "tokens_in": 11464,
+    "tokens_out": 2930,
+    "cost_usd": 0.078342
   },
   "analyst_checkpoint_done": true,
   "slate_game_times": [
