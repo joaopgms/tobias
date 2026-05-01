@@ -1360,5 +1360,46 @@
     "tokens_in": 11464,
     "tokens_out": 2930,
     "cost_usd": 0.078342
+  },
+  {
+    "ts": "2026-05-01T15:00:36.979824+00:00",
+    "date": "2026-05-01",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_onexbet",
+    "draft_count": 0,
+    "picks": [],
+    "rejected": [
+      {
+        "match": "Orlando Magic vs Detroit Pistons",
+        "reason": "Game 7 — ORL home. DET ML 1.60 (at floor, target range) fails EV: DET base confidence ~55 adjusted down by DET Harris Q (-10), DET Huerter Q (-10), ORL home G7 (-8 counterfactor), partially offset by Wagner OUT for ORL (+8), DET road G7 (+5) = net ~40, below ML floor of 50. EV = (0.40×1.60)-1 = -0.36, negative. ORL ML 2.52 outside target range (max 2.50) and EV unreliable with Wagner OUT and two DET questionables unresolved. Both markets fail. G7 ML-only rule respected — no spread. Spread considered: ORL +3.5 at 1.99 — G7 rule mandates ML only. No valid pick.",
+        "ml_home": 2.52,
+        "ml_away": 1.6,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Toronto Raptors vs Cleveland Cavaliers",
+        "reason": "Game 7 — TOR home. CLE ML 1.60 at floor. CLE L15 NetRtg +0.7 vs TOR L15 +21.9 — TOR has massive L15 advantage (21.2pt gap) which is the primary short-term signal. Season NetRtg: CLE +4.0 vs TOR +2.6, marginal CLE edge. TOR has home G7 court (+8 confidence). Quickley OUT for TOR reduces offensive ceiling (confidence -10 on TOR, or +edge for CLE). CLE base confidence vs TOR home: starting ~52. Adjustments: TOR home G7 = -8 for CLE road pick; TOR L15 massive advantage = -10; Quickley OUT for TOR = +8 offset; CLE road G7 +5. Net: 52 - 8 - 10 + 8 + 5 = 47, below ML floor of 50. TOR ML 2.52 outside target range. No valid pick. G7 ML-only rule — no spread. Both markets fail.",
+        "ml_home": 2.52,
+        "ml_away": 1.6,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Houston Rockets vs Los Angeles Lakers",
+        "reason": "Game 7 — HOU home (Toyota Center confirmed in slate). Kevin Durant DOUBTFUL per NBA Official injury report — skills rules: 'Franchise player Doubtful → confidence -15, stake -30%. Only proceed if EV still ≥ 0.05.' Durant status is the wildcard per playoff_context: 'Do NOT draft HOU without Durant confirmed active.' Durant is Doubtful, not confirmed active — skills franchise_player_rules require Durant active confirmation for HOU pick. HOU ML 1.62 in target range. LAL (Doncic OUT confirmed) ML 2.49 at top of range. LAL leads series 3-2 with tactical dominance. HOU home G7 + HOU desperation + Durant Doubtful (not confirmed): cannot draft HOU without Durant confirmed. LAL ML 2.49: LAL has no Doncic, road Game 7 — base confidence ~58. Adjustments: HOU home G7 = -8 for LAL road; Durant Doubtful creates HOU uncertainty (+5 offset for LAL); LAL road G7 +5; LAL series dominance (3-2 lead) +5; Luka OUT -10 (franchise player OUT, skills rule applies). Net: 58 - 8 + 5 + 5 + 5 - 10 = 55. EV = (0.55 × 2.49) - 1 = 1.3695 - 1 = 0.370. EV 0.37 is strong (≥ 0.15). Confidence 55 meets ML floor (50). BUT: skills franchise_player_rules — 'Franchise player OUT → do NOT bet that team to win unless opponent also missing a star or confirmed tanking.' Doncic is OUT. Opponent HOU: Durant is Doubtful (not confirmed OUT, ~50% chance playing). Skills: 'A Questionable/GTD player has ~50% chance of playing — never build a bet thesis on their absence.' Doubtful = ~20-25% chance playing, but skills says 'Franchise player Doubtful → confidence -15.' The rule for LAL pick requires checking if opponent (HOU) is 'also missing a star' — Durant is Doubtful (not confirmed OUT). This is borderline. However, the specific playoff_context rule says: 'HOU: Require Durant confirmed active + odds ≥ 2.00 for Game 7 pick' — this applies to HOU picks. For LAL pick: Doncic OUT, Durant Doubtful is a meaningful absence. If Durant plays, HOU home G7 is dangerous for LAL. The franchise player rule says do NOT bet LAL to win since Doncic is OUT unless opponent also missing a star. Durant Doubtful qualifies as opponent potentially missing a star, which partially satisfies the exception. But skills warns against betting on absence for a Doubtful player. Given Durant Doubtful is not 'confirmed OUT,' this pick is risky and the franchise player OUT rule for LAL is not cleanly satisfied. Additionally, skills says 'Do NOT bet LAL spread in Game 7 — garbage time / blowout risk.' ML is being considered. Conclusion: Durant is Doubtful (not confirmed OUT), which means HOU may have their star. The LAL pick with Doncic OUT vs potentially-Durant-active HOU at home in G7 carries too much uncertainty. Franchise player rule for LAL strictly says do not bet LAL to win unless opponent ALSO missing a star — Durant Doubtful does not meet confirmed OUT threshold. Rejecting LAL ML. HOU ML: Durant Doubtful = cannot confirm active, skills mandate no HOU pick without Durant confirmed. Both markets rejected.",
+        "ml_home": 1.62,
+        "ml_away": 2.49,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Kia Center vs Detroit Pistons",
+        "reason": "Post-filter: EV -0.80% below 5% floor (conf=62 odds=1.6)"
+      }
+    ],
+    "report": "Difficult Game 7 slate — all three games are maximum-intensity elimination matchups requiring strict application of ML-only rules. No picks drafted (0 picks — valid result). Key blockers: (1) ORL vs DET — DET road Game 7 EV turns negative after Harris/Huerter Questionable adjustments and ORL home court; ORL ML outside odds range at 2.52. (2) TOR vs CLE — TOR's massive L15 advantage (+21.9 vs +0.7) combined with TOR home Game 7 depresses CLE confidence below ML floor; TOR ML outside range. (3) LAL vs HOU — LAL franchise player (Doncic) confirmed OUT triggers hard rule against betting LAL to win unless opponent also missing a confirmed star; Durant is only Doubtful (not confirmed OUT), failing the exception threshold. Injury data source confirmed NBA Official — full coverage, no data quality gate triggered. Pace data available but ML-only rules for G7 make totals and spreads moot per playoff_motivation section.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 11650,
+    "tokens_out": 2953,
+    "cost_usd": 0.079245
   }
 ]
