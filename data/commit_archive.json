@@ -1382,5 +1382,29 @@
     "tokens_in": 10758,
     "tokens_out": 4839,
     "cost_usd": 0.104859
+  },
+  {
+    "ts": "2026-05-02T23:43:25.492500+00:00",
+    "date": "2026-05-02",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 0,
+    "cancelled_count": 0,
+    "total_staked": 0.0,
+    "bankroll_before": 1122.53,
+    "bankroll_after": 1122.53,
+    "bets": [],
+    "cancelled": [],
+    "late_rejections": [
+      {
+        "match": "Boston Celtics vs Philadelphia 76ers",
+        "reason": "LATE BREAK: Jayson Tatum confirmed OUT (Left Knee Stiffness — NBA Official). Market fully adjusted: BOS ML 1.31→2.04, PHI ML 3.90→1.78. Re-evaluated both sides post-Tatum. PHI ML 1.78: confidence ~58%, EV = (0.58×1.78)-1 = 0.032 — below 0.05 threshold. BOS ML 2.04: without Tatum, realistic confidence capped at ~45-50%; EV at 50% = (0.50×2.04)-1 = 0.02 — below 0.05 threshold. BOS spread -1.5: explicitly banned per Game 7 ML-only rule. O/U: not available. No valid market meets EV ≥ 0.05 requirement — market has fully priced Tatum's absence, eliminating exploitable edge on both sides."
+      }
+    ],
+    "report": "## Commit Report — 2026-05-02T23:43:27Z | Bankroll: €1122.53\n\n### Task 1 — Draft Picks Review\nNo draft picks were submitted from Scout phase. Nothing to review or cancel.\n\n### Task 2 — Late Scout: BOS vs PHI\n\n**TATUM OUT CONFIRMED (NBA Official)** — Left Knee Stiffness. Franchise player absent for Game 7 at TD Garden.\n\n**Line movement (Scout 14:00 → Commit 23:43):**\n- BOS ML: 1.31 → 2.04 (+0.73 — massive, fully explained by Tatum OUT)\n- PHI ML: 3.90 → 1.78 (-2.12 — enormous shortening, same cause)\n- BOS Spread: -8.5 → -1.5 (massive line move, same cause)\n\n**PHI ML 1.78 evaluation:** Confidence assessed at ~58% (road Game 7 base +5, survival momentum +5, Tatum OUT significant boost, partially offset by remaining BOS roster quality and home court). EV = (0.58 × 1.78) - 1 = **+0.032** — falls below the mandatory 0.05 EV floor. NOT added.\n\n**BOS ML 2.04 evaluation:** Without Tatum, realistic confidence for BOS capped at ~45-50% even with home court advantage (Game 7 home base offset by franchise player absence). EV at 50% = (0.50 × 2.04) - 1 = **+0.020** — below 0.05 floor. NOT added.\n\n**BOS Spread -1.5:** Explicitly prohibited by skills (\"ML only — do NOT bet spread in Game 7\"). NOT considered.\n\n**O/U:** Listed as N/A in live odds feed. NOT available.\n\n**Conclusion:** The market has fully and efficiently priced Tatum's absence. Both sides offer EV below the 0.05 minimum required threshold. No exploitable edge exists post-adjustment.\n\n### Slate Summary\n\nTonight's only game (BOS vs PHI, Game 7) was re-evaluated after Jayson Tatum was confirmed OUT with left knee stiffness — a development that dramatically reshaped the market (BOS ML from 1.31 to 2.04, PHI from 3.90 to 1.78). Despite thorough evaluation of all available markets post-Tatum, the efficient market adjustment eliminated exploitable EV on both sides, with PHI ML returning +0.032 and BOS ML returning approximately +0.020 — both below the mandatory 0.05 floor. No picks are committed tonight; the bankroll of €1122.53 is preserved in full.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 9450,
+    "tokens_out": 2742,
+    "cost_usd": 0.06948
   }
 ]
