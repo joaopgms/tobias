@@ -1401,5 +1401,28 @@
     "tokens_in": 11650,
     "tokens_out": 2953,
     "cost_usd": 0.079245
+  },
+  {
+    "ts": "2026-05-02T14:53:33.379060+00:00",
+    "date": "2026-05-02",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_onexbet",
+    "draft_count": 0,
+    "picks": [],
+    "rejected": [
+      {
+        "match": "Boston Celtics vs Philadelphia 76ers",
+        "reason": "BOS ML odds 1.31 — well below 1.60 floor, negative EV at any realistic confidence. PHI ML at 3.90 — Game 7 context: PHI won 2 consecutive elimination games (+5 survival confidence), but BOS home court (+8 G7 home) + massive NetRtg gap (+8.4pt) makes PHI confidence ceiling ~45%, which gives EV = (0.45 × 3.90) - 1 = 0.755, but confidence floor for ML is 50 — cannot justify PHI at sub-50 confidence. Spread: BOS -8.5 at 1.94 — skills explicitly state 'ML only — do NOT bet spread in Game 7.' O/U: Pace data: BOS 94.8, PHI 99.4 — pace mismatch but both values available; however skills state ML only in Game 7 and confidence floor for totals is 65+. PHI survival momentum is real but BOS home court + NetRtg gap is decisive — no market offers valid EV within rules.",
+        "ml_home": 1.31,
+        "ml_away": 3.9,
+        "decision": "no_edge"
+      }
+    ],
+    "report": "Single-game slate: BOS vs PHI Game 7. Zero picks drafted — no market meets the required thresholds. BOS ML at 1.31 is well outside the 1.60–2.50 target range and produces deeply negative EV at any confidence level. PHI ML at 3.90 cannot reach the 50% confidence floor required for ML picks given BOS's home court advantage (~60-65% G7 home win rate) and +8.4pt NetRtg gap. Skills explicitly prohibit spread bets in Game 7 (blowout risk). Injury feed source is nba_official (full coverage — no data quality penalty). This is a zero-pick session — correct outcome per selectivity rules.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 11376,
+    "tokens_out": 883,
+    "cost_usd": 0.047373
   }
 ]
