@@ -9,16 +9,16 @@
   "net_pnl": 263.17,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-05-02T14:53:33.379060+00:00",
+  "last_updated": "2026-05-02T23:43:25.492500+00:00",
   "first_game_time": "2026-05-02T23:30:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
   "scout_updated_at": "2026-05-02T14:53:33.379060+00:00",
   "scout_odds_source": "theodds_onexbet",
-  "commit_status": "pending",
-  "commit_updated_at": "2026-05-01T23:27:17.995400+00:00",
-  "commit_date": "2026-05-01",
+  "commit_status": "done",
+  "commit_updated_at": "2026-05-02T23:43:25.492500+00:00",
+  "commit_date": "2026-05-02",
   "analyst_updated_at": "2026-05-02T11:42:54.039271+00:00",
   "settler_updated_at": "2026-05-02T10:53:23.157071+00:00",
   "agent_models": {
@@ -27,7 +27,7 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "Single-game slate: BOS vs PHI Game 7. Zero picks drafted — no market meets the required thresholds. BOS ML at 1.31 is well outside the 1.60–2.50 target range and produces deeply negative EV at any confidence level. PHI ML at 3.90 cannot reach the 50% confidence floor required for ML picks given BOS's home court advantage (~60-65% G7 home win rate) and +8.4pt NetRtg gap. Skills explicitly prohibit spread bets in Game 7 (blowout risk). Injury feed source is nba_official (full coverage — no data quality penalty). This is a zero-pick session — correct outcome per selectivity rules.",
+  "last_report": "## Commit Report — 2026-05-02T23:43:27Z | Bankroll: €1122.53\n\n### Task 1 — Draft Picks Review\nNo draft picks were submitted from Scout phase. Nothing to review or cancel.\n\n### Task 2 — Late Scout: BOS vs PHI\n\n**TATUM OUT CONFIRMED (NBA Official)** — Left Knee Stiffness. Franchise player absent for Game 7 at TD Garden.\n\n**Line movement (Scout 14:00 → Commit 23:43):**\n- BOS ML: 1.31 → 2.04 (+0.73 — massive, fully explained by Tatum OUT)\n- PHI ML: 3.90 → 1.78 (-2.12 — enormous shortening, same cause)\n- BOS Spread: -8.5 → -1.5 (massive line move, same cause)\n\n**PHI ML 1.78 evaluation:** Confidence assessed at ~58% (road Game 7 base +5, survival momentum +5, Tatum OUT significant boost, partially offset by remaining BOS roster quality and home court). EV = (0.58 × 1.78) - 1 = **+0.032** — falls below the mandatory 0.05 EV floor. NOT added.\n\n**BOS ML 2.04 evaluation:** Without Tatum, realistic confidence for BOS capped at ~45-50% even with home court advantage (Game 7 home base offset by franchise player absence). EV at 50% = (0.50 × 2.04) - 1 = **+0.020** — below 0.05 floor. NOT added.\n\n**BOS Spread -1.5:** Explicitly prohibited by skills (\"ML only — do NOT bet spread in Game 7\"). NOT considered.\n\n**O/U:** Listed as N/A in live odds feed. NOT available.\n\n**Conclusion:** The market has fully and efficiently priced Tatum's absence. Both sides offer EV below the 0.05 minimum required threshold. No exploitable edge exists post-adjustment.\n\n### Slate Summary\n\nTonight's only game (BOS vs PHI, Game 7) was re-evaluated after Jayson Tatum was confirmed OUT with left knee stiffness — a development that dramatically reshaped the market (BOS ML from 1.31 to 2.04, PHI from 3.90 to 1.78). Despite thorough evaluation of all available markets post-Tatum, the efficient market adjustment eliminated exploitable EV on both sides, with PHI ML returning +0.032 and BOS ML returning approximately +0.020 — both below the mandatory 0.05 floor. No picks are committed tonight; the bankroll of €1122.53 is preserved in full.",
   "draft_picks": [],
   "pending_bets": [],
   "settled_bets": [
@@ -738,43 +738,27 @@
   ],
   "late_scout_rejections": [
     {
-      "match": "Orlando Magic vs Detroit Pistons",
-      "reason": "Game 7 — ML-only rule applies. ORL ML 2.63 exceeds ceiling of 2.50 (fails odds gate). DET ML 1.49 below floor of 1.65 (fails odds gate). Spread banned by Game 7 rule. O/U unavailable. Huerter now confirmed OUT (was Questionable at Scout) — this update partially improved DET's adjusted confidence, but odds movement has pushed DET ML further below floor (1.60→1.49) and ORL ML above ceiling (2.52→2.63). No valid market exists within rules."
-    },
-    {
-      "match": "Toronto Raptors vs Cleveland Cavaliers",
-      "reason": "Game 7 — ML-only rule applies. TOR ML 2.77 exceeds ceiling of 2.50 by significant margin (fails odds gate). CLE ML 1.51 below floor of 1.65 (fails odds gate). Spread banned by Game 7 rule. Brandon Ingram confirmed OUT (new vs Scout) further weakens TOR — but this has already been priced in by books (TOR ML moved from 2.52→2.77, CLE from 1.60→1.51). No valid market exists within rules."
-    },
-    {
-      "match": "Houston Rockets vs Los Angeles Lakers",
-      "reason": "Game 7 — major late-breaking update: Kevin Durant confirmed OUT (upgraded from Doubtful at Scout). This satisfied the franchise_player exception for LAL (opponent also missing star), and VanVleet OUT further weakens HOU. LAL confidence recalculated at ~65 (sufficient). However, LAL ML has moved to 2.52 — 0.02 above the hard ceiling of 2.50 (fails odds gate; no drift allowance for ceiling violations per skills). HOU ML 1.60 below floor of 1.65 (fails odds gate). HOU without Durant is not a valid betting target per playoff_context rules ('Require Durant confirmed active for Game 7 pick'). Spread banned by Game 7 rule. The edge identified by Durant's confirmed absence cannot be acted upon — LAL ML ceiling breach prevents commitment. No valid market within rules."
+      "match": "Boston Celtics vs Philadelphia 76ers",
+      "reason": "LATE BREAK: Jayson Tatum confirmed OUT (Left Knee Stiffness — NBA Official). Market fully adjusted: BOS ML 1.31→2.04, PHI ML 3.90→1.78. Re-evaluated both sides post-Tatum. PHI ML 1.78: confidence ~58%, EV = (0.58×1.78)-1 = 0.032 — below 0.05 threshold. BOS ML 2.04: without Tatum, realistic confidence capped at ~45-50%; EV at 50% = (0.50×2.04)-1 = 0.02 — below 0.05 threshold. BOS spread -1.5: explicitly banned per Game 7 ML-only rule. O/U: not available. No valid market meets EV ≥ 0.05 requirement — market has fully priced Tatum's absence, eliminating exploitable edge on both sides."
     }
   ],
   "commit_report_data": {
-    "date": "2026-05-01",
-    "ts": "2026-05-01T23:27:17.995400+00:00",
+    "date": "2026-05-02",
+    "ts": "2026-05-02T23:43:25.492500+00:00",
     "bets": [],
     "cancelled": [],
     "late_rejections": [
       {
-        "match": "Orlando Magic vs Detroit Pistons",
-        "reason": "Game 7 — ML-only rule applies. ORL ML 2.63 exceeds ceiling of 2.50 (fails odds gate). DET ML 1.49 below floor of 1.65 (fails odds gate). Spread banned by Game 7 rule. O/U unavailable. Huerter now confirmed OUT (was Questionable at Scout) — this update partially improved DET's adjusted confidence, but odds movement has pushed DET ML further below floor (1.60→1.49) and ORL ML above ceiling (2.52→2.63). No valid market exists within rules."
-      },
-      {
-        "match": "Toronto Raptors vs Cleveland Cavaliers",
-        "reason": "Game 7 — ML-only rule applies. TOR ML 2.77 exceeds ceiling of 2.50 by significant margin (fails odds gate). CLE ML 1.51 below floor of 1.65 (fails odds gate). Spread banned by Game 7 rule. Brandon Ingram confirmed OUT (new vs Scout) further weakens TOR — but this has already been priced in by books (TOR ML moved from 2.52→2.77, CLE from 1.60→1.51). No valid market exists within rules."
-      },
-      {
-        "match": "Houston Rockets vs Los Angeles Lakers",
-        "reason": "Game 7 — major late-breaking update: Kevin Durant confirmed OUT (upgraded from Doubtful at Scout). This satisfied the franchise_player exception for LAL (opponent also missing star), and VanVleet OUT further weakens HOU. LAL confidence recalculated at ~65 (sufficient). However, LAL ML has moved to 2.52 — 0.02 above the hard ceiling of 2.50 (fails odds gate; no drift allowance for ceiling violations per skills). HOU ML 1.60 below floor of 1.65 (fails odds gate). HOU without Durant is not a valid betting target per playoff_context rules ('Require Durant confirmed active for Game 7 pick'). Spread banned by Game 7 rule. The edge identified by Durant's confirmed absence cannot be acted upon — LAL ML ceiling breach prevents commitment. No valid market within rules."
+        "match": "Boston Celtics vs Philadelphia 76ers",
+        "reason": "LATE BREAK: Jayson Tatum confirmed OUT (Left Knee Stiffness — NBA Official). Market fully adjusted: BOS ML 1.31→2.04, PHI ML 3.90→1.78. Re-evaluated both sides post-Tatum. PHI ML 1.78: confidence ~58%, EV = (0.58×1.78)-1 = 0.032 — below 0.05 threshold. BOS ML 2.04: without Tatum, realistic confidence capped at ~45-50%; EV at 50% = (0.50×2.04)-1 = 0.02 — below 0.05 threshold. BOS spread -1.5: explicitly banned per Game 7 ML-only rule. O/U: not available. No valid market meets EV ≥ 0.05 requirement — market has fully priced Tatum's absence, eliminating exploitable edge on both sides."
       }
     ],
     "total_staked": 0.0,
     "bankroll_before": 1122.53,
-    "report": "## COMMIT REPORT — 2026-05-01T23:27:19Z\n**Bankroll: €1,122.53 | Phase: NBA Playoffs Round 1 — Game 7 Stage**\n\n---\n\n### PRELIMINARY VALIDATION\n\n- **Injury source:** `nba_official` — full normal rules apply ✅\n- **Data completeness:** All tonight's teams (ORL, DET, TOR, CLE, HOU, LAL) covered ✅\n- **Draft picks to review:** None (empty array from Scout) ✅\n- **Time gate for late picks:** All games >20 minutes from now ✅\n\n---\n\n### LATE SCOUT — GAME 1: Orlando Magic vs Detroit Pistons (Game 7)\n\n**Venue:** Kia Center (ORL home) | **Tip:** 23:00 UTC\n\n**Key changes since Scout:**\n- Kevin Huerter: Questionable → **OUT** (confirmed). Removes the Q-adjustment that hurt DET at Scout.\n- Franz Wagner: OUT (unchanged)\n- Odds: ORL 2.52→**2.63** (+0.11), DET 1.60→**1.49** (-0.11)\n\n**Odds validation:**\n- ORL ML 2.63 → ABOVE ceiling (2.50) ❌\n- DET ML 1.49 → BELOW floor (1.65) ❌\n- Spread ORL +4.5 @ 1.90 → In range BUT Game 7 = ML-only rule ❌\n- O/U → Unavailable ❌\n\n**Decision: NO PICK.** Both ML prices outside valid ranges. Game 7 rule prohibits spread. Despite Huerter's status clarification (OUT improves DET's situation slightly vs Scout), books have moved prices out of actionable range. No valid market.\n\n---\n\n### LATE SCOUT — GAME 2: Toronto Raptors vs Cleveland Cavaliers (Game 7)\n\n**Venue:** Scotiabank Arena (TOR home) | **Tip:** 23:30 UTC\n\n**Key changes since Scout:**\n- Brandon Ingram: Confirmed **OUT** (Inflammation) — significant offensive loss for TOR beyond Quickley already out\n- Quickley: OUT (unchanged)\n- Odds: TOR 2.52→**2.77** (+0.25 major movement), CLE 1.60→**1.51** (-0.09)\n\n**Line movement flag:** TOR moved +0.25 — exceeds 0.20 threshold → major signal check. **Explanation confirmed:** Ingram OUT confirmation + Quickley OUT = TOR losing two key offensive players. Books correctly priced TOR as a bigger underdog. No anomaly.\n\n**Odds validation:**\n- TOR ML 2.77 → ABOVE ceiling (2.50) ❌\n- CLE ML 1.51 → BELOW floor (1.65) ❌\n- Spread TOR +4.5 @ 2.00 → In range BUT Game 7 = ML-only rule ❌\n- O/U 218.5 @ 1.94/1.98 → In range BUT Game 7 = ML-only rule ❌\n\n**Decision: NO PICK.** Both MLs outside valid ranges. Game 7 rule prohibits spread and O/U. Despite dual TOR injuries strengthening CLE's case, CLE ML at 1.51 is well below the 1.65 floor. No valid market.\n\n---\n\n### LATE SCOUT — GAME 3: Houston Rockets vs Los Angeles Lakers (Game 7)\n\n**Venue:** Toyota Center (HOU home) | **Tip:** 01:30 UTC\n\n**KEY LATE-BREAKING DEVELOPMENT:**\nKevin Durant: Doubtful (Scout) → **OUT confirmed** (NBA Official)\n\nAdditional HOU absences: VanVleet OUT (ACL Repair, unchanged), Steven Adams OUT (unchanged)\n\n**Impact Assessment:** Durant's confirmation as OUT is the most significant late development tonight. This satisfies the playoff_context exception for LAL (opponent also missing a star), removes the primary barrier to a LAL ML pick, and represents genuine late-breaking value not fully priced in.\n\n**LAL ML confidence recalculation at commit time:**\n- Base (LAL road G7): 58\n- HOU home G7 factor: -8\n- Durant confirmed OUT (vs Doubtful at Scout): +10 (anchor OUT for opponent)\n- VanVleet OUT (additional key HOU player): +5\n- LAL road G7 motivation: +5\n- LAL in-series dominance (leads 3-2): +5\n- Doncic OUT (franchise player penalty): -10\n- Exception satisfied (Durant confirmed OUT = opponent also missing star): penalty converts to conditional — -10 already applied\n- **Net confidence: 65**\n\nEV calculation at LAL ML 2.52: (0.65 × 2.52) - 1 = 1.638 - 1 = **0.638** — extraordinary EV if odds were valid.\n\n**Odds validation:**\n- LAL ML **2.52** → **ABOVE ceiling of 2.50** ❌ (by 0.02)\n- HOU ML 1.60 → BELOW floor (1.65) ❌\n- Spread HOU -3.5 @ 1.93/1.99 → Game 7 = ML-only rule ❌\n\n**Decision: NO PICK — LAL ML ceiling breach.** Despite Durant's confirmed absence creating a genuine, well-defined edge with confidence 65 and EV 0.638, LAL ML at 2.52 exceeds the hard ceiling of 2.50. The skills rules specify \"ceiling: 2.50 — do not confirm if odds drifted above 2.50.\" Unlike the floor (which has a 0.05 drift allowance), the ceiling has no drift provision. The 0.02 overage prevents commitment.\n\nThis is the most painful decision of the night — Durant OUT represents exactly the \"star ruled out in last 2-3 hours with books not fully adjusted\" trigger in late_scout_triggers. However, the ceiling rule exists to prevent chasing inflated underdog odds that may carry hidden risk. Rules must be followed.\n\nHOU ML: Below floor AND playoff_context requires Durant confirmed active for HOU Game 7 pick — Durant is confirmed OUT, making HOU pick invalid on two counts.\n\n---\n\n### SLATE SUMMARY\n\nAll three Game 7 contests tonight lack valid betting opportunities within the system's rules. The dominant theme is that Game 7 ML-only rules, combined with books pushing prices outside valid ranges (both MLs consistently: favorites below 1.65 floor, underdogs above 2.50 ceiling), create an environment where no actionable edge exists despite genuine statistical disparities. The most compelling late development — Kevin Durant confirmed OUT for HOU, creating a legitimate LAL edge — is blocked by the LAL ML landing at 2.52 (0.02 above ceiling). Bankroll of €1,122.53 is preserved intact for future rounds.\n\n**Total committed: €0 | Bankroll remaining: €1,122.53**",
-    "tokens_in": 10758,
-    "tokens_out": 4839,
-    "cost_usd": 0.104859
+    "report": "## Commit Report — 2026-05-02T23:43:27Z | Bankroll: €1122.53\n\n### Task 1 — Draft Picks Review\nNo draft picks were submitted from Scout phase. Nothing to review or cancel.\n\n### Task 2 — Late Scout: BOS vs PHI\n\n**TATUM OUT CONFIRMED (NBA Official)** — Left Knee Stiffness. Franchise player absent for Game 7 at TD Garden.\n\n**Line movement (Scout 14:00 → Commit 23:43):**\n- BOS ML: 1.31 → 2.04 (+0.73 — massive, fully explained by Tatum OUT)\n- PHI ML: 3.90 → 1.78 (-2.12 — enormous shortening, same cause)\n- BOS Spread: -8.5 → -1.5 (massive line move, same cause)\n\n**PHI ML 1.78 evaluation:** Confidence assessed at ~58% (road Game 7 base +5, survival momentum +5, Tatum OUT significant boost, partially offset by remaining BOS roster quality and home court). EV = (0.58 × 1.78) - 1 = **+0.032** — falls below the mandatory 0.05 EV floor. NOT added.\n\n**BOS ML 2.04 evaluation:** Without Tatum, realistic confidence for BOS capped at ~45-50% even with home court advantage (Game 7 home base offset by franchise player absence). EV at 50% = (0.50 × 2.04) - 1 = **+0.020** — below 0.05 floor. NOT added.\n\n**BOS Spread -1.5:** Explicitly prohibited by skills (\"ML only — do NOT bet spread in Game 7\"). NOT considered.\n\n**O/U:** Listed as N/A in live odds feed. NOT available.\n\n**Conclusion:** The market has fully and efficiently priced Tatum's absence. Both sides offer EV below the 0.05 minimum required threshold. No exploitable edge exists post-adjustment.\n\n### Slate Summary\n\nTonight's only game (BOS vs PHI, Game 7) was re-evaluated after Jayson Tatum was confirmed OUT with left knee stiffness — a development that dramatically reshaped the market (BOS ML from 1.31 to 2.04, PHI from 3.90 to 1.78). Despite thorough evaluation of all available markets post-Tatum, the efficient market adjustment eliminated exploitable EV on both sides, with PHI ML returning +0.032 and BOS ML returning approximately +0.020 — both below the mandatory 0.05 floor. No picks are committed tonight; the bankroll of €1122.53 is preserved in full.",
+    "tokens_in": 9450,
+    "tokens_out": 2742,
+    "cost_usd": 0.06948
   },
   "netrtg_l15": {
     "Charlotte Hornets": 16.9,
