@@ -9,14 +9,14 @@
   "net_pnl": 263.17,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-05-03T10:55:20.664876+00:00",
-  "first_game_time": "2026-05-02T23:30:00Z",
+  "last_updated": "2026-05-03T14:53:24.554396+00:00",
+  "first_game_time": "2026-05-03T19:30:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
-  "scout_updated_at": "2026-05-02T14:53:33.379060+00:00",
-  "scout_odds_source": "theodds_onexbet",
-  "commit_status": "done",
+  "scout_updated_at": "2026-05-03T14:53:24.554396+00:00",
+  "scout_odds_source": "theodds_unibet",
+  "commit_status": "pending",
   "commit_updated_at": "2026-05-02T23:43:25.492500+00:00",
   "commit_date": "2026-05-02",
   "analyst_updated_at": "2026-05-03T11:40:18.924657+00:00",
@@ -27,7 +27,7 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "## Commit Report — 2026-05-02T23:43:27Z | Bankroll: €1122.53\n\n### Task 1 — Draft Picks Review\nNo draft picks were submitted from Scout phase. Nothing to review or cancel.\n\n### Task 2 — Late Scout: BOS vs PHI\n\n**TATUM OUT CONFIRMED (NBA Official)** — Left Knee Stiffness. Franchise player absent for Game 7 at TD Garden.\n\n**Line movement (Scout 14:00 → Commit 23:43):**\n- BOS ML: 1.31 → 2.04 (+0.73 — massive, fully explained by Tatum OUT)\n- PHI ML: 3.90 → 1.78 (-2.12 — enormous shortening, same cause)\n- BOS Spread: -8.5 → -1.5 (massive line move, same cause)\n\n**PHI ML 1.78 evaluation:** Confidence assessed at ~58% (road Game 7 base +5, survival momentum +5, Tatum OUT significant boost, partially offset by remaining BOS roster quality and home court). EV = (0.58 × 1.78) - 1 = **+0.032** — falls below the mandatory 0.05 EV floor. NOT added.\n\n**BOS ML 2.04 evaluation:** Without Tatum, realistic confidence for BOS capped at ~45-50% even with home court advantage (Game 7 home base offset by franchise player absence). EV at 50% = (0.50 × 2.04) - 1 = **+0.020** — below 0.05 floor. NOT added.\n\n**BOS Spread -1.5:** Explicitly prohibited by skills (\"ML only — do NOT bet spread in Game 7\"). NOT considered.\n\n**O/U:** Listed as N/A in live odds feed. NOT available.\n\n**Conclusion:** The market has fully and efficiently priced Tatum's absence. Both sides offer EV below the 0.05 minimum required threshold. No exploitable edge exists post-adjustment.\n\n### Slate Summary\n\nTonight's only game (BOS vs PHI, Game 7) was re-evaluated after Jayson Tatum was confirmed OUT with left knee stiffness — a development that dramatically reshaped the market (BOS ML from 1.31 to 2.04, PHI from 3.90 to 1.78). Despite thorough evaluation of all available markets post-Tatum, the efficient market adjustment eliminated exploitable EV on both sides, with PHI ML returning +0.032 and BOS ML returning approximately +0.020 — both below the mandatory 0.05 floor. No picks are committed tonight; the bankroll of €1122.53 is preserved in full.",
+  "last_report": "Two-game playoff slate (Game 7s: DET vs ORL, CLE vs TOR). Zero picks drafted. Both games are Game 7s, which explicitly bans spread bets per skills rules. Both home team ML odds (1.27, 1.30) fall well below the 1.60 minimum target, and both road team ML odds (3.85, 3.55) exceed the 2.50 maximum. No valid market exists on either game. Injury feed is NBA Official (full coverage). Pace data present but market restrictions make it irrelevant here. Session result: 0 picks — no edge meets qualification criteria.",
   "draft_picks": [],
   "pending_bets": [],
   "settled_bets": [
@@ -729,11 +729,18 @@
   ],
   "rejected_games": [
     {
-      "match": "Boston Celtics vs Philadelphia 76ers",
-      "reason": "BOS ML odds 1.31 — well below 1.60 floor, negative EV at any realistic confidence. PHI ML at 3.90 — Game 7 context: PHI won 2 consecutive elimination games (+5 survival confidence), but BOS home court (+8 G7 home) + massive NetRtg gap (+8.4pt) makes PHI confidence ceiling ~45%, which gives EV = (0.45 × 3.90) - 1 = 0.755, but confidence floor for ML is 50 — cannot justify PHI at sub-50 confidence. Spread: BOS -8.5 at 1.94 — skills explicitly state 'ML only — do NOT bet spread in Game 7.' O/U: Pace data: BOS 94.8, PHI 99.4 — pace mismatch but both values available; however skills state ML only in Game 7 and confidence floor for totals is 65+. PHI survival momentum is real but BOS home court + NetRtg gap is decisive — no market offers valid EV within rules.",
-      "ml_home": 1.31,
-      "ml_away": 3.9,
-      "decision": "no_edge"
+      "match": "Detroit Pistons vs Orlando Magic",
+      "reason": "DET ML at 1.27 is below the 1.60 minimum odds target. ORL ML at 3.85 exceeds 2.50 maximum. DET spread -8.5 at 1.92 falls in range BUT: skills explicitly state DO NOT bet spread in Game 7 (ML only rule). ORL leads series 3-2 per playoff context, and DET's superior NetRtg (+8.2 vs +0.6) has failed to translate across 5 games — ORL tactical dominance is confirmed. DET L15 +25.2 is strong but Game 7 spread rule prohibits this. Franz Wagner (ORL franchise-level player) confirmed OUT, Jonathan Isaac Doubtful — ORL depleted but still leads series. No valid market exists: ML odds out of range, spread banned in Game 7.",
+      "ml_home": 1.27,
+      "ml_away": 3.85,
+      "decision": "rejected"
+    },
+    {
+      "match": "Cleveland Cavaliers vs Toronto Raptors",
+      "reason": "CLE ML at 1.30 is below the 1.60 minimum odds target. TOR ML at 3.55 exceeds 2.50 maximum. CLE spread -7.5 at 1.88 falls in odds range BUT: skills explicitly state DO NOT bet spread in Game 7 (ML only rule). CLE leads series 3-2. TOR has Quickley confirmed OUT (key guard), reducing offensive ceiling. CLE L15 +0.7 is weak vs TOR L15 +21.9 — a notable L15 reversal. However, Quickley OUT and CLE's series lead partially offset this. Even so, Game 7 spread is explicitly prohibited. No valid market: ML odds out of range, spread banned in Game 7.",
+      "ml_home": 1.3,
+      "ml_away": 3.55,
+      "decision": "rejected"
     }
   ],
   "late_scout_rejections": [
@@ -1279,30 +1286,37 @@
     "Philadelphia 76ers@Houston Rockets"
   ],
   "cached_context": {
-    "cached_at": "2026-05-02",
-    "games_str": "Boston Celtics vs Philadelphia 76ers  |  2026-05-02T23:30 UTC  |  TD Garden",
-    "standings_str": "Oklahoma City Thunder: 64-18  L10:7-3\nSan Antonio Spurs: 62-20  L10:8-2\nDetroit Pistons: 60-22  L10:8-2\nBoston Celtics: 56-26  L10:8-2\nDenver Nuggets: 54-28  L10:10-0\nPhiladelphia 76ers: 45-37  L10:6-4\nUtah Jazz: 22-60  L10:1-9\nUTAH: 22-60  L10:1-9\nBrooklyn Nets: 20-62  L10:3-7\nIndiana Pacers: 19-63  L10:3-7\nWashington Wizards: 17-65  L10:0-10",
-    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nBoston Celtics: OffRtg 120.8 | DefRtg 112.7 | NetRtg +8.2 | Pace 94.8 | L15:+35.5\nPhiladelphia 76ers: OffRtg 115.4 | DefRtg 115.6 | NetRtg -0.2 | Pace 99.4 | L15:+0.9"
+    "cached_at": "2026-05-03",
+    "games_str": "Detroit Pistons vs Orlando Magic  |  2026-05-03T19:30 UTC  |  Little Caesars Arena\nCleveland Cavaliers vs Toronto Raptors  |  2026-05-03T23:30 UTC  |  Rocket Arena",
+    "standings_str": "Oklahoma City Thunder: 64-18  L10:7-3\nSan Antonio Spurs: 62-20  L10:8-2\nDetroit Pistons: 60-22  L10:8-2\nBoston Celtics: 56-26  L10:8-2\nDenver Nuggets: 54-28  L10:10-0\nCleveland Cavaliers: 52-30  L10:7-3\nToronto Raptors: 46-36  L10:6-4\nOrlando Magic: 45-37  L10:7-3\nUtah Jazz: 22-60  L10:1-9\nUTAH: 22-60  L10:1-9\nBrooklyn Nets: 20-62  L10:3-7\nIndiana Pacers: 19-63  L10:3-7\nWashington Wizards: 17-65  L10:0-10",
+    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nDetroit Pistons: OffRtg 118.0 | DefRtg 109.8 | NetRtg +8.2 | Pace 99.3 | L15:+25.2\nOrlando Magic: OffRtg 115.1 | DefRtg 114.5 | NetRtg +0.6 | Pace 100.0 | L15:+2.9\nCleveland Cavaliers: OffRtg 119.3 | DefRtg 115.2 | NetRtg +4.0 | Pace 99.9 | L15:+0.7\nToronto Raptors: OffRtg 115.8 | DefRtg 113.2 | NetRtg +2.6 | Pace 98.4 | L15:+21.9"
   },
   "scout_report_data": {
-    "date": "2026-05-02",
-    "updated_at": "2026-05-02T14:53:33.379060+00:00",
+    "date": "2026-05-03",
+    "updated_at": "2026-05-03T14:53:24.554396+00:00",
     "picks": [],
     "rejected": [
       {
-        "match": "Boston Celtics vs Philadelphia 76ers",
-        "reason": "BOS ML odds 1.31 — well below 1.60 floor, negative EV at any realistic confidence. PHI ML at 3.90 — Game 7 context: PHI won 2 consecutive elimination games (+5 survival confidence), but BOS home court (+8 G7 home) + massive NetRtg gap (+8.4pt) makes PHI confidence ceiling ~45%, which gives EV = (0.45 × 3.90) - 1 = 0.755, but confidence floor for ML is 50 — cannot justify PHI at sub-50 confidence. Spread: BOS -8.5 at 1.94 — skills explicitly state 'ML only — do NOT bet spread in Game 7.' O/U: Pace data: BOS 94.8, PHI 99.4 — pace mismatch but both values available; however skills state ML only in Game 7 and confidence floor for totals is 65+. PHI survival momentum is real but BOS home court + NetRtg gap is decisive — no market offers valid EV within rules.",
-        "ml_home": 1.31,
-        "ml_away": 3.9,
-        "decision": "no_edge"
+        "match": "Detroit Pistons vs Orlando Magic",
+        "reason": "DET ML at 1.27 is below the 1.60 minimum odds target. ORL ML at 3.85 exceeds 2.50 maximum. DET spread -8.5 at 1.92 falls in range BUT: skills explicitly state DO NOT bet spread in Game 7 (ML only rule). ORL leads series 3-2 per playoff context, and DET's superior NetRtg (+8.2 vs +0.6) has failed to translate across 5 games — ORL tactical dominance is confirmed. DET L15 +25.2 is strong but Game 7 spread rule prohibits this. Franz Wagner (ORL franchise-level player) confirmed OUT, Jonathan Isaac Doubtful — ORL depleted but still leads series. No valid market exists: ML odds out of range, spread banned in Game 7.",
+        "ml_home": 1.27,
+        "ml_away": 3.85,
+        "decision": "rejected"
+      },
+      {
+        "match": "Cleveland Cavaliers vs Toronto Raptors",
+        "reason": "CLE ML at 1.30 is below the 1.60 minimum odds target. TOR ML at 3.55 exceeds 2.50 maximum. CLE spread -7.5 at 1.88 falls in odds range BUT: skills explicitly state DO NOT bet spread in Game 7 (ML only rule). CLE leads series 3-2. TOR has Quickley confirmed OUT (key guard), reducing offensive ceiling. CLE L15 +0.7 is weak vs TOR L15 +21.9 — a notable L15 reversal. However, Quickley OUT and CLE's series lead partially offset this. Even so, Game 7 spread is explicitly prohibited. No valid market: ML odds out of range, spread banned in Game 7.",
+        "ml_home": 1.3,
+        "ml_away": 3.55,
+        "decision": "rejected"
       }
     ],
-    "report": "Single-game slate: BOS vs PHI Game 7. Zero picks drafted — no market meets the required thresholds. BOS ML at 1.31 is well outside the 1.60–2.50 target range and produces deeply negative EV at any confidence level. PHI ML at 3.90 cannot reach the 50% confidence floor required for ML picks given BOS's home court advantage (~60-65% G7 home win rate) and +8.4pt NetRtg gap. Skills explicitly prohibit spread bets in Game 7 (blowout risk). Injury feed source is nba_official (full coverage — no data quality penalty). This is a zero-pick session — correct outcome per selectivity rules.",
-    "odds_source": "theodds_onexbet",
+    "report": "Two-game playoff slate (Game 7s: DET vs ORL, CLE vs TOR). Zero picks drafted. Both games are Game 7s, which explicitly bans spread bets per skills rules. Both home team ML odds (1.27, 1.30) fall well below the 1.60 minimum target, and both road team ML odds (3.85, 3.55) exceed the 2.50 maximum. No valid market exists on either game. Injury feed is NBA Official (full coverage). Pace data present but market restrictions make it irrelevant here. Session result: 0 picks — no edge meets qualification criteria.",
+    "odds_source": "theodds_unibet",
     "injuries_source": "nba_official",
-    "tokens_in": 11376,
-    "tokens_out": 883,
-    "cost_usd": 0.047373
+    "tokens_in": 12307,
+    "tokens_out": 712,
+    "cost_usd": 0.047601
   },
   "analyst_checkpoint_done": true,
   "slate_game_times": [
