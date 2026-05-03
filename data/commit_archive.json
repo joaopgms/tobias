@@ -1406,5 +1406,33 @@
     "tokens_in": 9450,
     "tokens_out": 2742,
     "cost_usd": 0.06948
+  },
+  {
+    "ts": "2026-05-03T19:00:13.501751+00:00",
+    "date": "2026-05-03",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 0,
+    "cancelled_count": 0,
+    "total_staked": 0.0,
+    "bankroll_before": 1122.53,
+    "bankroll_after": 1122.53,
+    "bets": [],
+    "cancelled": [],
+    "late_rejections": [
+      {
+        "match": "Detroit Pistons vs Orlando Magic",
+        "reason": "Game 7 — ML only rule applies. DET ML 1.29 is far below the 1.65 floor. ORL ML 3.65 exceeds the 2.50 ceiling. Spread banned in Game 7 per skills. O/U unavailable. Jonathan Isaac upgraded from Doubtful to OUT (NBA official PDF) since Scout, further depleting ORL, but no valid market exists regardless. No pick possible."
+      },
+      {
+        "match": "Cleveland Cavaliers vs Toronto Raptors",
+        "reason": "Game 7 — ML only rule applies. CLE ML 1.29 is far below the 1.65 floor. TOR ML 3.65 exceeds the 2.50 ceiling. Spread banned in Game 7 per skills. O/U unavailable. Brandon Ingram now listed Doubtful (new since Scout) and Quickley confirmed OUT compounds TOR's offensive depletion, but TOR ML at 3.65 remains above the 2.50 ceiling — market has already fully priced this in. No pick possible."
+      }
+    ],
+    "report": "## Commit Report — 2026-05-03T19:00:16Z\n\n### Bankroll: €1,122.53 | Committed stake: €0.00 | Total exposure: 0%\n\n---\n\n### No Draft Picks to Review\nThe Scout phase produced zero draft picks. No confirmations or cancellations required.\n\n---\n\n### Late Scout — Game 1: Detroit Pistons vs Orlando Magic (Game 7, 19:30 UTC)\n\n**Odds validation:**\n- DET ML: 1.29 → Below floor of 1.65 ❌\n- ORL ML: 3.65 → Above ceiling of 2.50 ❌\n- DET Spread -8.0 @ 1.90/1.92 → Game 7 spread ban applies ❌\n- O/U: Not available ❌\n\n**New injury information since Scout:**\n- Jonathan Isaac: Doubtful at Scout → **OUT confirmed** (NBA official PDF). ORL further depleted.\n- Franz Wagner: **OUT** (confirmed, unchanged).\n- Kevin Huerter (DET): **OUT** (confirmed, unchanged).\n\n**Assessment:** Isaac's upgrade from Doubtful to OUT worsens ORL's depth but creates no new valid market. ORL ML remains at 3.65 (market has already priced in ORL's depleted roster). No market falls within odds_validation parameters. Spread is explicitly prohibited in Game 7 per skills. **No pick possible.**\n\n---\n\n### Late Scout — Game 2: Cleveland Cavaliers vs Toronto Raptors (Game 7, 23:30 UTC)\n\n**Odds validation:**\n- CLE ML: 1.29 → Below floor of 1.65 ❌\n- TOR ML: 3.65 → Above ceiling of 2.50 ❌\n- CLE Spread -8.0 @ 1.91/1.91 → Game 7 spread ban applies ❌\n- O/U: Not available ❌\n\n**New injury information since Scout:**\n- Immanuel Quickley (TOR): **OUT** (confirmed, unchanged from Scout).\n- Brandon Ingram (TOR): **Doubtful** — this is new since Scout. Ingram is TOR's secondary offensive engine; his likely absence further reduces TOR's ceiling.\n\n**Late scout trigger check:** Ingram Doubtful is the strongest new piece of information tonight. It represents a meaningful roster blow to TOR. However, TOR ML has already drifted from 3.55 (Scout) to 3.65 — the market has absorbed this news and pushed TOR ML further outside the valid range (ceiling: 2.50), not into it. CLE ML at 1.29 remains far below the 1.65 floor. No spread possible in Game 7. No O/U available. **No pick possible.**\n\n---\n\n### Slate Summary\n\nTonight's two-game playoff slate (ORL vs DET Game 7 at 19:30 UTC; CLE vs TOR Game 7 at 23:30 UTC) offers no actionable markets. Both games have ML odds heavily outside the valid range — heavy favourites priced at 1.29 and decided underdogs at 3.65 — with O/U unavailable and spreads explicitly prohibited in Game 7 scenarios. The most notable late development is Brandon Ingram now listed Doubtful for TOR (compounding Quickley OUT), and Jonathan Isaac upgraded from Doubtful to OUT for ORL, but both markets had already moved to reflect depleted rosters. Bankroll of €1,122.53 is fully preserved for future sessions.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 10330,
+    "tokens_out": 2207,
+    "cost_usd": 0.064095
   }
 ]
