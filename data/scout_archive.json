@@ -1454,5 +1454,35 @@
     "tokens_in": 12307,
     "tokens_out": 712,
     "cost_usd": 0.047601
+  },
+  {
+    "ts": "2026-05-04T16:04:38.292614+00:00",
+    "date": "2026-05-04",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_unibet",
+    "draft_count": 0,
+    "picks": [],
+    "rejected": [
+      {
+        "match": "New York Knicks vs Philadelphia 76ers",
+        "reason": "NYK ML 1.34 is below the 1.60 ML target floor. PHI ML 3.30 is above the 2.50 ML ceiling. Spread odds 1.90/1.92 are within target range but NYK -7.5 spread requires confidence ≥ 60. PHI L15 NetRtg only +0.9 vs NYK L15 +10.4 — NYK has clear edge but odds don't support a value pick. NYK ML 1.34: at 60% confidence EV = (0.60 × 1.34) - 1 = -0.196 — deeply negative. At even 80% confidence EV = (0.80 × 1.34) - 1 = +0.072 but ML confidence floor is 50 and odds are outside 1.60-2.50 range — hard rule disqualifies. Spread NYK -7.5 at 1.90: need confidence ≥ 60 and EV ≥ 0.05. NYK NetRtg L15 +10.4 vs PHI +0.9 = 9.5pt gap (exceeds 6pt strong signal). PHI missing key players from their Round 1 run — however, PHI injury feed shows no current absences for tonight's game. NYK home court in playoffs worth 3-4pts. Still, PHI won 4-3 in Round 1 showing playoff resilience. Round 2 Game 2 context: NYK leads series — no in-series signal yet beyond Game 1. The 7.5-point spread is aggressive given PHI's demonstrated playoff resilience. Confidence on NYK -7.5 assessed at ~58 (below 60 floor for spread). EV at 58% = (0.58 × 1.90) - 1 = +0.102 — marginal EV but below confidence floor. No qualified pick meets criteria.",
+        "ml_home": 1.34,
+        "ml_away": 3.3,
+        "decision": "no_edge"
+      },
+      {
+        "match": "San Antonio Spurs vs Minnesota Timberwolves",
+        "reason": "SAS ML 1.14 is far below 1.60 floor — no value. MIN ML 5.80 is above 2.50 ceiling. Spread SAS -12.5 at 1.92: within target odds but requires confidence ≥ 60. CRITICAL DATA ANOMALY: SAS L15 NetRtg shown as +38.3 — this is clearly a data error (impossible NBA rating); cannot rely on L15 for SAS. Season NetRtg SAS +8.3 vs MIN +3.1 = 5.2pt gap. MIN has Anthony Edwards listed as QUESTIONABLE (Left Knee Bone Bruise) — not confirmed OUT. Under franchise_player_rules: Questionable = confidence -10. If Edwards plays at reduced capacity, MIN ceiling is suppressed. However, Edwards is Questionable (not OUT), so cannot build thesis on his absence. MIN L15 only +0.7 vs SAS +8.3 season. SAS covering -12.5 requires dominant performance; in playoffs teams play tighter — spread blowout risk is real, but so is closing looseness risk (skills: 'Do NOT bet SAS spread at < 1.75'). SAS -12.5 at 1.92 is > 1.75 so that rule doesn't disqualify directly. BUT -12.5 is a very large line for a playoff game. Even with Edwards at reduced capacity, MIN is a motivated playoff team. Confidence on SAS -12.5 assessed at ~55 (at spread floor of 60? Below threshold). EV at 55% = (0.55 × 1.92) - 1 = +0.056 — marginally positive EV, but confidence falls below the 60 floor for spreads. Additionally, SAS L15 data anomaly (+38.3) triggers data quality concern — applying -5 confidence for missing/unreliable L15. Adjusted confidence ~50, below spread floor. No qualified pick.",
+        "ml_home": 1.14,
+        "ml_away": 5.8,
+        "decision": "no_edge"
+      }
+    ],
+    "report": "Two-game playoff slate (Round 2 East Semifinals Game 2 + SAS-MIN series game). Zero picks drafted. NYK ML 1.34 violates the hard 1.60–2.50 ML odds floor; PHI ML 3.30 exceeds the 2.50 ceiling; NYK spread confidence falls just below the 60 floor for ATS bets given PHI's demonstrated playoff resilience. SAS ML 1.14 is far outside range; SAS -12.5 spread is undermined by a corrupted L15 data anomaly (+38.3, impossible value) and Edwards Questionable status reducing confidence below the 60 ATS threshold. O/U lines unavailable for both games. Pace data suppressed (O/U signals not applicable). NBA official injury PDF confirmed as source — data quality gate passed, but no pick reached the minimum EV + confidence threshold combination.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 12638,
+    "tokens_out": 1336,
+    "cost_usd": 0.057954
   }
 ]
