@@ -9,14 +9,14 @@
   "net_pnl": 263.17,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-05-04T11:49:34.731586+00:00",
-  "first_game_time": "2026-05-03T19:30:00Z",
+  "last_updated": "2026-05-04T16:04:38.292614+00:00",
+  "first_game_time": "2026-05-05T00:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
-  "scout_updated_at": "2026-05-03T14:53:24.554396+00:00",
+  "scout_updated_at": "2026-05-04T16:04:38.292614+00:00",
   "scout_odds_source": "theodds_unibet",
-  "commit_status": "done",
+  "commit_status": "pending",
   "commit_updated_at": "2026-05-03T19:00:13.501751+00:00",
   "commit_date": "2026-05-03",
   "analyst_updated_at": "2026-05-04T12:20:08.624588+00:00",
@@ -27,7 +27,7 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "## Commit Report — 2026-05-03T19:00:16Z\n\n### Bankroll: €1,122.53 | Committed stake: €0.00 | Total exposure: 0%\n\n---\n\n### No Draft Picks to Review\nThe Scout phase produced zero draft picks. No confirmations or cancellations required.\n\n---\n\n### Late Scout — Game 1: Detroit Pistons vs Orlando Magic (Game 7, 19:30 UTC)\n\n**Odds validation:**\n- DET ML: 1.29 → Below floor of 1.65 ❌\n- ORL ML: 3.65 → Above ceiling of 2.50 ❌\n- DET Spread -8.0 @ 1.90/1.92 → Game 7 spread ban applies ❌\n- O/U: Not available ❌\n\n**New injury information since Scout:**\n- Jonathan Isaac: Doubtful at Scout → **OUT confirmed** (NBA official PDF). ORL further depleted.\n- Franz Wagner: **OUT** (confirmed, unchanged).\n- Kevin Huerter (DET): **OUT** (confirmed, unchanged).\n\n**Assessment:** Isaac's upgrade from Doubtful to OUT worsens ORL's depth but creates no new valid market. ORL ML remains at 3.65 (market has already priced in ORL's depleted roster). No market falls within odds_validation parameters. Spread is explicitly prohibited in Game 7 per skills. **No pick possible.**\n\n---\n\n### Late Scout — Game 2: Cleveland Cavaliers vs Toronto Raptors (Game 7, 23:30 UTC)\n\n**Odds validation:**\n- CLE ML: 1.29 → Below floor of 1.65 ❌\n- TOR ML: 3.65 → Above ceiling of 2.50 ❌\n- CLE Spread -8.0 @ 1.91/1.91 → Game 7 spread ban applies ❌\n- O/U: Not available ❌\n\n**New injury information since Scout:**\n- Immanuel Quickley (TOR): **OUT** (confirmed, unchanged from Scout).\n- Brandon Ingram (TOR): **Doubtful** — this is new since Scout. Ingram is TOR's secondary offensive engine; his likely absence further reduces TOR's ceiling.\n\n**Late scout trigger check:** Ingram Doubtful is the strongest new piece of information tonight. It represents a meaningful roster blow to TOR. However, TOR ML has already drifted from 3.55 (Scout) to 3.65 — the market has absorbed this news and pushed TOR ML further outside the valid range (ceiling: 2.50), not into it. CLE ML at 1.29 remains far below the 1.65 floor. No spread possible in Game 7. No O/U available. **No pick possible.**\n\n---\n\n### Slate Summary\n\nTonight's two-game playoff slate (ORL vs DET Game 7 at 19:30 UTC; CLE vs TOR Game 7 at 23:30 UTC) offers no actionable markets. Both games have ML odds heavily outside the valid range — heavy favourites priced at 1.29 and decided underdogs at 3.65 — with O/U unavailable and spreads explicitly prohibited in Game 7 scenarios. The most notable late development is Brandon Ingram now listed Doubtful for TOR (compounding Quickley OUT), and Jonathan Isaac upgraded from Doubtful to OUT for ORL, but both markets had already moved to reflect depleted rosters. Bankroll of €1,122.53 is fully preserved for future sessions.",
+  "last_report": "Two-game playoff slate (Round 2 East Semifinals Game 2 + SAS-MIN series game). Zero picks drafted. NYK ML 1.34 violates the hard 1.60–2.50 ML odds floor; PHI ML 3.30 exceeds the 2.50 ceiling; NYK spread confidence falls just below the 60 floor for ATS bets given PHI's demonstrated playoff resilience. SAS ML 1.14 is far outside range; SAS -12.5 spread is undermined by a corrupted L15 data anomaly (+38.3, impossible value) and Edwards Questionable status reducing confidence below the 60 ATS threshold. O/U lines unavailable for both games. Pace data suppressed (O/U signals not applicable). NBA official injury PDF confirmed as source — data quality gate passed, but no pick reached the minimum EV + confidence threshold combination.",
   "draft_picks": [],
   "pending_bets": [],
   "settled_bets": [
@@ -729,18 +729,18 @@
   ],
   "rejected_games": [
     {
-      "match": "Detroit Pistons vs Orlando Magic",
-      "reason": "DET ML at 1.27 is below the 1.60 minimum odds target. ORL ML at 3.85 exceeds 2.50 maximum. DET spread -8.5 at 1.92 falls in range BUT: skills explicitly state DO NOT bet spread in Game 7 (ML only rule). ORL leads series 3-2 per playoff context, and DET's superior NetRtg (+8.2 vs +0.6) has failed to translate across 5 games — ORL tactical dominance is confirmed. DET L15 +25.2 is strong but Game 7 spread rule prohibits this. Franz Wagner (ORL franchise-level player) confirmed OUT, Jonathan Isaac Doubtful — ORL depleted but still leads series. No valid market exists: ML odds out of range, spread banned in Game 7.",
-      "ml_home": 1.27,
-      "ml_away": 3.85,
-      "decision": "rejected"
+      "match": "New York Knicks vs Philadelphia 76ers",
+      "reason": "NYK ML 1.34 is below the 1.60 ML target floor. PHI ML 3.30 is above the 2.50 ML ceiling. Spread odds 1.90/1.92 are within target range but NYK -7.5 spread requires confidence ≥ 60. PHI L15 NetRtg only +0.9 vs NYK L15 +10.4 — NYK has clear edge but odds don't support a value pick. NYK ML 1.34: at 60% confidence EV = (0.60 × 1.34) - 1 = -0.196 — deeply negative. At even 80% confidence EV = (0.80 × 1.34) - 1 = +0.072 but ML confidence floor is 50 and odds are outside 1.60-2.50 range — hard rule disqualifies. Spread NYK -7.5 at 1.90: need confidence ≥ 60 and EV ≥ 0.05. NYK NetRtg L15 +10.4 vs PHI +0.9 = 9.5pt gap (exceeds 6pt strong signal). PHI missing key players from their Round 1 run — however, PHI injury feed shows no current absences for tonight's game. NYK home court in playoffs worth 3-4pts. Still, PHI won 4-3 in Round 1 showing playoff resilience. Round 2 Game 2 context: NYK leads series — no in-series signal yet beyond Game 1. The 7.5-point spread is aggressive given PHI's demonstrated playoff resilience. Confidence on NYK -7.5 assessed at ~58 (below 60 floor for spread). EV at 58% = (0.58 × 1.90) - 1 = +0.102 — marginal EV but below confidence floor. No qualified pick meets criteria.",
+      "ml_home": 1.34,
+      "ml_away": 3.3,
+      "decision": "no_edge"
     },
     {
-      "match": "Cleveland Cavaliers vs Toronto Raptors",
-      "reason": "CLE ML at 1.30 is below the 1.60 minimum odds target. TOR ML at 3.55 exceeds 2.50 maximum. CLE spread -7.5 at 1.88 falls in odds range BUT: skills explicitly state DO NOT bet spread in Game 7 (ML only rule). CLE leads series 3-2. TOR has Quickley confirmed OUT (key guard), reducing offensive ceiling. CLE L15 +0.7 is weak vs TOR L15 +21.9 — a notable L15 reversal. However, Quickley OUT and CLE's series lead partially offset this. Even so, Game 7 spread is explicitly prohibited. No valid market: ML odds out of range, spread banned in Game 7.",
-      "ml_home": 1.3,
-      "ml_away": 3.55,
-      "decision": "rejected"
+      "match": "San Antonio Spurs vs Minnesota Timberwolves",
+      "reason": "SAS ML 1.14 is far below 1.60 floor — no value. MIN ML 5.80 is above 2.50 ceiling. Spread SAS -12.5 at 1.92: within target odds but requires confidence ≥ 60. CRITICAL DATA ANOMALY: SAS L15 NetRtg shown as +38.3 — this is clearly a data error (impossible NBA rating); cannot rely on L15 for SAS. Season NetRtg SAS +8.3 vs MIN +3.1 = 5.2pt gap. MIN has Anthony Edwards listed as QUESTIONABLE (Left Knee Bone Bruise) — not confirmed OUT. Under franchise_player_rules: Questionable = confidence -10. If Edwards plays at reduced capacity, MIN ceiling is suppressed. However, Edwards is Questionable (not OUT), so cannot build thesis on his absence. MIN L15 only +0.7 vs SAS +8.3 season. SAS covering -12.5 requires dominant performance; in playoffs teams play tighter — spread blowout risk is real, but so is closing looseness risk (skills: 'Do NOT bet SAS spread at < 1.75'). SAS -12.5 at 1.92 is > 1.75 so that rule doesn't disqualify directly. BUT -12.5 is a very large line for a playoff game. Even with Edwards at reduced capacity, MIN is a motivated playoff team. Confidence on SAS -12.5 assessed at ~55 (at spread floor of 60? Below threshold). EV at 55% = (0.55 × 1.92) - 1 = +0.056 — marginally positive EV, but confidence falls below the 60 floor for spreads. Additionally, SAS L15 data anomaly (+38.3) triggers data quality concern — applying -5 confidence for missing/unreliable L15. Adjusted confidence ~50, below spread floor. No qualified pick.",
+      "ml_home": 1.14,
+      "ml_away": 5.8,
+      "decision": "no_edge"
     }
   ],
   "late_scout_rejections": [
@@ -1294,37 +1294,37 @@
     "Philadelphia 76ers@Boston Celtics"
   ],
   "cached_context": {
-    "cached_at": "2026-05-03",
-    "games_str": "Detroit Pistons vs Orlando Magic  |  2026-05-03T19:30 UTC  |  Little Caesars Arena\nCleveland Cavaliers vs Toronto Raptors  |  2026-05-03T23:30 UTC  |  Rocket Arena",
-    "standings_str": "Oklahoma City Thunder: 64-18  L10:7-3\nSan Antonio Spurs: 62-20  L10:8-2\nDetroit Pistons: 60-22  L10:8-2\nBoston Celtics: 56-26  L10:8-2\nDenver Nuggets: 54-28  L10:10-0\nCleveland Cavaliers: 52-30  L10:7-3\nToronto Raptors: 46-36  L10:6-4\nOrlando Magic: 45-37  L10:7-3\nUtah Jazz: 22-60  L10:1-9\nUTAH: 22-60  L10:1-9\nBrooklyn Nets: 20-62  L10:3-7\nIndiana Pacers: 19-63  L10:3-7\nWashington Wizards: 17-65  L10:0-10",
-    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nDetroit Pistons: OffRtg 118.0 | DefRtg 109.8 | NetRtg +8.2 | Pace 99.3 | L15:+25.2\nOrlando Magic: OffRtg 115.1 | DefRtg 114.5 | NetRtg +0.6 | Pace 100.0 | L15:+2.9\nCleveland Cavaliers: OffRtg 119.3 | DefRtg 115.2 | NetRtg +4.0 | Pace 99.9 | L15:+0.7\nToronto Raptors: OffRtg 115.8 | DefRtg 113.2 | NetRtg +2.6 | Pace 98.4 | L15:+21.9"
+    "cached_at": "2026-05-04",
+    "games_str": "New York Knicks vs Philadelphia 76ers  |  2026-05-05T00:00 UTC  |  Madison Square Garden\nSan Antonio Spurs vs Minnesota Timberwolves  |  2026-05-05T01:30 UTC  |  Frost Bank Center",
+    "standings_str": "Oklahoma City Thunder: 64-18  L10:7-3\nSan Antonio Spurs: 62-20  L10:8-2\nDetroit Pistons: 60-22  L10:8-2\nBoston Celtics: 56-26  L10:8-2\nDenver Nuggets: 54-28  L10:10-0\nNew York Knicks: 53-29  L10:6-4\nMinnesota Timberwolves: 49-33  L10:5-5\nPhiladelphia 76ers: 45-37  L10:6-4\nUtah Jazz: 22-60  L10:1-9\nUTAH: 22-60  L10:1-9\nBrooklyn Nets: 20-62  L10:3-7\nIndiana Pacers: 19-63  L10:3-7\nWashington Wizards: 17-65  L10:0-10",
+    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nNew York Knicks: OffRtg 119.9 | DefRtg 113.4 | NetRtg +6.5 | Pace 96.8 | L15:+10.4\nPhiladelphia 76ers: OffRtg 115.4 | DefRtg 115.6 | NetRtg -0.2 | Pace 99.4 | L15:+0.9\nSan Antonio Spurs: OffRtg 119.7 | DefRtg 111.4 | NetRtg +8.3 | Pace 99.9 | L15:+38.3\nMinnesota Timberwolves: OffRtg 116.8 | DefRtg 113.7 | NetRtg +3.1 | Pace 100.5 | L15:+0.7"
   },
   "scout_report_data": {
-    "date": "2026-05-03",
-    "updated_at": "2026-05-03T14:53:24.554396+00:00",
+    "date": "2026-05-04",
+    "updated_at": "2026-05-04T16:04:38.292614+00:00",
     "picks": [],
     "rejected": [
       {
-        "match": "Detroit Pistons vs Orlando Magic",
-        "reason": "DET ML at 1.27 is below the 1.60 minimum odds target. ORL ML at 3.85 exceeds 2.50 maximum. DET spread -8.5 at 1.92 falls in range BUT: skills explicitly state DO NOT bet spread in Game 7 (ML only rule). ORL leads series 3-2 per playoff context, and DET's superior NetRtg (+8.2 vs +0.6) has failed to translate across 5 games — ORL tactical dominance is confirmed. DET L15 +25.2 is strong but Game 7 spread rule prohibits this. Franz Wagner (ORL franchise-level player) confirmed OUT, Jonathan Isaac Doubtful — ORL depleted but still leads series. No valid market exists: ML odds out of range, spread banned in Game 7.",
-        "ml_home": 1.27,
-        "ml_away": 3.85,
-        "decision": "rejected"
+        "match": "New York Knicks vs Philadelphia 76ers",
+        "reason": "NYK ML 1.34 is below the 1.60 ML target floor. PHI ML 3.30 is above the 2.50 ML ceiling. Spread odds 1.90/1.92 are within target range but NYK -7.5 spread requires confidence ≥ 60. PHI L15 NetRtg only +0.9 vs NYK L15 +10.4 — NYK has clear edge but odds don't support a value pick. NYK ML 1.34: at 60% confidence EV = (0.60 × 1.34) - 1 = -0.196 — deeply negative. At even 80% confidence EV = (0.80 × 1.34) - 1 = +0.072 but ML confidence floor is 50 and odds are outside 1.60-2.50 range — hard rule disqualifies. Spread NYK -7.5 at 1.90: need confidence ≥ 60 and EV ≥ 0.05. NYK NetRtg L15 +10.4 vs PHI +0.9 = 9.5pt gap (exceeds 6pt strong signal). PHI missing key players from their Round 1 run — however, PHI injury feed shows no current absences for tonight's game. NYK home court in playoffs worth 3-4pts. Still, PHI won 4-3 in Round 1 showing playoff resilience. Round 2 Game 2 context: NYK leads series — no in-series signal yet beyond Game 1. The 7.5-point spread is aggressive given PHI's demonstrated playoff resilience. Confidence on NYK -7.5 assessed at ~58 (below 60 floor for spread). EV at 58% = (0.58 × 1.90) - 1 = +0.102 — marginal EV but below confidence floor. No qualified pick meets criteria.",
+        "ml_home": 1.34,
+        "ml_away": 3.3,
+        "decision": "no_edge"
       },
       {
-        "match": "Cleveland Cavaliers vs Toronto Raptors",
-        "reason": "CLE ML at 1.30 is below the 1.60 minimum odds target. TOR ML at 3.55 exceeds 2.50 maximum. CLE spread -7.5 at 1.88 falls in odds range BUT: skills explicitly state DO NOT bet spread in Game 7 (ML only rule). CLE leads series 3-2. TOR has Quickley confirmed OUT (key guard), reducing offensive ceiling. CLE L15 +0.7 is weak vs TOR L15 +21.9 — a notable L15 reversal. However, Quickley OUT and CLE's series lead partially offset this. Even so, Game 7 spread is explicitly prohibited. No valid market: ML odds out of range, spread banned in Game 7.",
-        "ml_home": 1.3,
-        "ml_away": 3.55,
-        "decision": "rejected"
+        "match": "San Antonio Spurs vs Minnesota Timberwolves",
+        "reason": "SAS ML 1.14 is far below 1.60 floor — no value. MIN ML 5.80 is above 2.50 ceiling. Spread SAS -12.5 at 1.92: within target odds but requires confidence ≥ 60. CRITICAL DATA ANOMALY: SAS L15 NetRtg shown as +38.3 — this is clearly a data error (impossible NBA rating); cannot rely on L15 for SAS. Season NetRtg SAS +8.3 vs MIN +3.1 = 5.2pt gap. MIN has Anthony Edwards listed as QUESTIONABLE (Left Knee Bone Bruise) — not confirmed OUT. Under franchise_player_rules: Questionable = confidence -10. If Edwards plays at reduced capacity, MIN ceiling is suppressed. However, Edwards is Questionable (not OUT), so cannot build thesis on his absence. MIN L15 only +0.7 vs SAS +8.3 season. SAS covering -12.5 requires dominant performance; in playoffs teams play tighter — spread blowout risk is real, but so is closing looseness risk (skills: 'Do NOT bet SAS spread at < 1.75'). SAS -12.5 at 1.92 is > 1.75 so that rule doesn't disqualify directly. BUT -12.5 is a very large line for a playoff game. Even with Edwards at reduced capacity, MIN is a motivated playoff team. Confidence on SAS -12.5 assessed at ~55 (at spread floor of 60? Below threshold). EV at 55% = (0.55 × 1.92) - 1 = +0.056 — marginally positive EV, but confidence falls below the 60 floor for spreads. Additionally, SAS L15 data anomaly (+38.3) triggers data quality concern — applying -5 confidence for missing/unreliable L15. Adjusted confidence ~50, below spread floor. No qualified pick.",
+        "ml_home": 1.14,
+        "ml_away": 5.8,
+        "decision": "no_edge"
       }
     ],
-    "report": "Two-game playoff slate (Game 7s: DET vs ORL, CLE vs TOR). Zero picks drafted. Both games are Game 7s, which explicitly bans spread bets per skills rules. Both home team ML odds (1.27, 1.30) fall well below the 1.60 minimum target, and both road team ML odds (3.85, 3.55) exceed the 2.50 maximum. No valid market exists on either game. Injury feed is NBA Official (full coverage). Pace data present but market restrictions make it irrelevant here. Session result: 0 picks — no edge meets qualification criteria.",
+    "report": "Two-game playoff slate (Round 2 East Semifinals Game 2 + SAS-MIN series game). Zero picks drafted. NYK ML 1.34 violates the hard 1.60–2.50 ML odds floor; PHI ML 3.30 exceeds the 2.50 ceiling; NYK spread confidence falls just below the 60 floor for ATS bets given PHI's demonstrated playoff resilience. SAS ML 1.14 is far outside range; SAS -12.5 spread is undermined by a corrupted L15 data anomaly (+38.3, impossible value) and Edwards Questionable status reducing confidence below the 60 ATS threshold. O/U lines unavailable for both games. Pace data suppressed (O/U signals not applicable). NBA official injury PDF confirmed as source — data quality gate passed, but no pick reached the minimum EV + confidence threshold combination.",
     "odds_source": "theodds_unibet",
     "injuries_source": "nba_official",
-    "tokens_in": 12307,
-    "tokens_out": 712,
-    "cost_usd": 0.047601
+    "tokens_in": 12638,
+    "tokens_out": 1336,
+    "cost_usd": 0.057954
   },
   "analyst_checkpoint_done": true,
   "slate_game_times": [
