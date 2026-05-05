@@ -1,24 +1,24 @@
 {
   "season": "2024-25",
   "game": 2,
-  "bankroll": 1122.53,
+  "bankroll": 954.53,
   "bankroll_initial": 1000.0,
   "bankroll_peak": 1917.57,
-  "total_staked": 7326.11,
+  "total_staked": 7494.11,
   "total_returned": 7589.28,
   "net_pnl": 263.17,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-05-05T15:56:55.837097+00:00",
+  "last_updated": "2026-05-05T22:55:52.843110+00:00",
   "first_game_time": "2026-05-05T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
   "scout_updated_at": "2026-05-05T15:56:55.837097+00:00",
   "scout_odds_source": "theodds_onexbet",
-  "commit_status": "pending",
-  "commit_updated_at": "2026-05-04T23:59:25.390142+00:00",
-  "commit_date": "2026-05-04",
+  "commit_status": "done",
+  "commit_updated_at": "2026-05-05T22:55:52.843110+00:00",
+  "commit_date": "2026-05-05",
   "analyst_updated_at": "2026-05-04T12:20:08.624588+00:00",
   "settler_updated_at": "2026-05-05T11:15:51.935938+00:00",
   "agent_models": {
@@ -27,29 +27,32 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "Two-game playoff slate tonight. One strong pick identified: Detroit Pistons ML at home vs Cleveland Cavaliers (Round 2). DET's L15 NetRtg gap (+25.2 vs CLE's +0.7) is the dominant signal, supported by superior season NetRtg (+8.2 vs +4.0), home court advantage, and strong recent record. EV = 0.224 — strong edge. Injury feed is NBA Official source — full confidence rules applied. OKC vs LAL rejected entirely: OKC ML 1.12 is below the 1.60 floor with near-zero EV; LAL ML 8.0 far exceeds the 2.50 ceiling; spread rejected due to blowout/garbage-time risk in a playoff context where OKC -15.5 is unreliable. Total picks drafted: 1.",
-  "draft_picks": [
+  "last_report": "### CANCELLED — Detroit Pistons ML\n\n- **Reason:** Odds fell below ML confirmation floor of 1.65 at commit time.\n- **Odds at cancel:** 1.63 (was 1.70 at scout time) | Movement: **-0.07 against**\n- The 7-point drift against our position pushed DET ML below the minimum acceptable floor (1.65). Even setting aside the required confidence -10 adjustment for adverse movement, the raw odds breach the floor. The market appears to have taken significant action on DET since Scout's 14:00 assessment — likely sharp money on the home favourite narrowing the line. Cannot confirm at 1.63. Cancelled per cancel_criteria: \"Odds fell below confirmation floor.\"\n\n---\n\n### CONFIRMED (Late Scout) — Under 214.5, OKC vs LAL\n\n- **Match:** Oklahoma City Thunder vs Los Angeles Lakers | Tip: 2026-05-06T00:30 UTC\n- **Pick:** Under 214.5 | Scout odds: N/A (new late pick) | Commit odds: 1.96 | Move: N/A\n- **ML:** OKC 1.11 / LAL 8.35 | **ATS:** OKC -15.5 (1.95/1.97) | **O/U:** 214.5 (O:1.96/U:1.96)\n- **Stake:** €168.00 | **Pot:** €328.56 | **Conf:** 65/100 | **EV:** 0.274\n- **Decision:** Late scout trigger confirmed. Both primary offensive anchors are OUT per NBA official PDF: Jalen Williams (OKC, Left Hamstring) and Luka Doncic (LAL, Left Hamstring). These are the two most impactful offensive players in this matchup. OKC possesses the league's best defense (DefRtg 107.9, NetRtg +11.1) and will be even more defensive-minded without their top offensive option. LAL's offensive ceiling drops dramatically without Doncic — they've survived the series 4-2 but rely on him for shot creation. Game 7 atmospherics produce deliberate, half-court basketball with both teams' pacing already below average. The 214.5 line, while not extreme, is undervaluing two franchise-caliber offensive absences simultaneously. O/U odds 1.96 are firmly within valid range (1.75–2.05). Time gate: 95+ minutes to tip. EV 0.274 well exceeds the 0.05 minimum. Injury source: nba_official — no fallback penalty. Pace data confirmed available (non-zero). Stake 15% of bankroll = €168, well within 70% exposure cap.\n\n---\n\n### SLATE SUMMARY\n\nTonight's commit phase produced one cancellation and one late addition. The DET ML pick was cancelled after odds drifted from 1.70 to 1.63, breaching the 1.65 commit-time floor — the market had clearly absorbed significant action on the Detroit home favourite. The late scout identified a compelling Under opportunity in OKC vs LAL Game 7, driven by confirmed late-breaking absences of both Jalen Williams and Luka Doncic (both Left Hamstring, NBA official source), combining OKC's elite defensive identity with Game 7 deliberate pace for a strong Under thesis at odds of 1.96. Total exposure is €168 (15% of bankroll), well within limits.",
+  "draft_picks": [],
+  "pending_bets": [
     {
-      "id": "nba_draft_20260505_001",
-      "match": "Detroit Pistons vs Cleveland Cavaliers",
-      "time": "2026-05-05T23:00:00Z",
-      "pick": "Detroit Pistons ML",
-      "odds": 1.7,
-      "stake": 225.0,
-      "potential_return": 382.5,
-      "confidence": 72,
-      "reasoning": "GAME CONTEXT: This is a NEW SERIES matchup (Round 2 Semifinals, Game 2 per playoff context). DET (60-22, L10:8-2) vs CLE (52-30, L10:7-3). HOME TEAM: Detroit Pistons at Little Caesars Arena.\n\nLINE ANOMALY CHECK: DET ML 1.70 as home favourite vs CLE ML 2.31. DET has materially better record (60-22 vs 52-30) and better NetRtg. No anomaly flagged — line consistent with records and home edge.\n\nNET RTG L15: DET L15 +25.2 vs CLE L15 +0.7. Gap = 24.5 points — MASSIVE signal. This exceeds the 4.0pt threshold by an enormous margin. DET is in elite recent form; CLE has been nearly flat in recent form. Season NetRtg: DET +8.2 vs CLE +4.0 — 4.2pt gap also favours DET.\n\nFRANCHISE PLAYER CHECK: DET — Kevin Huerter listed Questionable (Left Adductor Strain) per NBA Official Injury Report. Huerter is NOT a franchise player (confidence -5 for key guard, day-to-day style). Cade Cunningham, Isaiah Stewart, Jalen Duren NOT on injury report — assumed active. CLE — no players on tonight's NBA Official injury report. Donovan Mitchell, Jarrett Allen, Evan Mobley assumed active.\n\nINJURY FEED: Source is nba_official — full normal confidence rules apply. No ESPN fallback penalty.\n\nSCHEDULE/REST: Playoff context — no true B2B. Both teams presumably had similar rest days between series. No adjustment needed without specific rest day data.\n\nHOME COURT: DET at home in playoffs worth ~3-4 points. Significant factor.\n\nODDS TARGET: DET ML 1.70 — within 1.60-2.50 ML target range. ✓\n\nCONFIDENCE CALCULATION: Base 70 (DET materially better record, massive L15 gap, home court). Huerter Questionable: -5 (key guard, not franchise player). Net: 65. Round 2 Game 2 context — no in-series signal yet, but DET's statistical superiority is strong. Adjust up slightly for L15 gap dominance: 72.\n\nEV CALCULATION: EV = (0.72 × 1.70) - 1 = 1.224 - 1 = 0.224. EV = 0.224 ≥ 0.15 — STRONG EDGE. ✓\n\nSTAKE: Confidence 72 = High tier (70-84) → 20-25% of bankroll. Using 20% = €1122.53 × 0.20 = €224.51 → rounded to €225.",
+      "id": "nba_bet_20260505_001",
+      "match": "Oklahoma City Thunder vs Los Angeles Lakers",
+      "time": "2026-05-06T00:30:00Z",
+      "pick": "Under 214.5",
+      "odds": 1.96,
+      "stake": 168.0,
+      "potential_return": 328.56,
+      "confidence": 65,
+      "reasoning": "LATE SCOUT — NEW PICK. Game 7, OKC vs LAL. INJURY CONTEXT: Jalen Williams (OKC) confirmed OUT per NBA official PDF — primary OKC offensive weapon. Luka Doncic (LAL) confirmed OUT per NBA official PDF — LAL's primary creator. Two of the most impactful offensive players in this matchup are missing. DEFENSIVE PROFILE: OKC has the best DefRtg in the league (107.9) and NetRtg +11.1. Without Williams, OKC's offensive output is reduced but their defensive identity remains elite. LAL without Doncic has a significantly lower offensive ceiling — they've been winning this series 4-2 but Doncic's absence limits shot creation and offensive efficiency. GAME CONTEXT: Game 7 — historically deliberate, half-court oriented playoff basketball. Pace: OKC 99.3, LAL 98.3 — both below average pace in playoffs. Game 7 atmosphere typically further slows pace as both teams are cautious and defensive-minded. TOTAL ASSESSMENT: 214.5 already accounts for some offensive reduction, but with BOTH primary offensive stars absent and OKC's elite defense, the under is well-supported. Pace data available (non-zero) — no pace data flag. ODDS VALIDATION: 1.96 within O/U target range 1.75–2.05. EV = (0.65 × 1.96) - 1 = 0.274. SOURCE: nba_official — full confidence rules apply. TIME GATE: 95+ minutes to tip-off. STAKE: Confidence 65 = Medium tier (15-20%) → 15% of €1122.53 = €168.",
       "anchor_players": [
-        "Cade Cunningham",
-        "Isaiah Stewart",
-        "Jalen Duren",
-        "Donovan Mitchell"
+        "Jalen Williams",
+        "Luka Doncic",
+        "Shai Gilgeous-Alexander",
+        "LeBron James"
       ],
-      "drafted_at": "2026-05-05T15:57:00Z",
-      "market_type": "ml"
+      "result": null,
+      "returned": null,
+      "pnl": null,
+      "settled_at": null,
+      "committed_at": "2026-05-05T22:55:55Z"
     }
   ],
-  "pending_bets": [],
   "settled_bets": [
     {
       "id": "nba_bet_20260406_001",
@@ -758,35 +761,57 @@
   ],
   "late_scout_rejections": [
     {
-      "match": "New York Knicks vs Philadelphia 76ers",
-      "reason": "No qualified edge at commit time. NYK ML 1.35 below 1.65 floor; PHI ML 3.25 above 2.50 ceiling. NYK -7.5 spread at 1.91 is in range but confidence assessed at ~58 (below 60 required for spread bets). No new injury information materially changed the edge since Scout — Jeremy Sochan listed under NYK injury report is a data feed error (Sochan is a SAS player). PHI has no confirmed absences. Time gate also fails: game tips at 00:00 UTC with ~33 seconds remaining at commit time (must be >20 min to tip). No pick added."
-    },
-    {
-      "match": "San Antonio Spurs vs Minnesota Timberwolves",
-      "reason": "Massive unexplained line movement: SAS spread moved from -12.5 to -9.5 (3 full points toward MIN), triggering the >0.30 movement cancel rule. MIN ML moved from 5.80 to 4.35 (1.45 improvement). Cannot explicitly confirm cause — Edwards remains only Questionable (not OUT or confirmed active), same status as at Scout. SAS ML 1.22 below 1.65 floor; MIN ML 4.35 above 2.50 ceiling. SAS -9.5 spread at 1.89/1.93 is technically in range but confidence estimated at ~52-55 after applying: L15 data anomaly penalty (SAS L15 +38.3 is clearly erroneous, -5 confidence), Edwards Questionable adjustment, and unexplained sharp line movement. Confidence falls below 60 threshold required for spread bets. Per line_movement_rules: movement >0.30 requires cancel unless cause is explicitly confirmed. No pick added."
+      "match": "Oklahoma City Thunder vs Los Angeles Lakers",
+      "reason": "OKC ML 1.11 — far outside ML floor of 1.65, no valid entry. LAL ML 8.35 — far above ML ceiling of 2.50, no valid entry. OKC spread -15.5 at 1.95 — odds within range but blowout/garbage-time risk in a massive-favourite scenario corrupts spread value; playoff rules caution against large spreads in potential blowouts; Jalen Williams OUT reduces OKC's offensive floor making garbage time less predictable. O/U 214.5 at 1.96 — ADDED AS LATE PICK (Under): both primary offensive stars OUT (Williams + Doncic), elite OKC defense, Game 7 deliberate pace, valid odds and EV."
     }
   ],
   "commit_report_data": {
-    "date": "2026-05-04",
-    "ts": "2026-05-04T23:59:25.390142+00:00",
-    "bets": [],
-    "cancelled": [],
-    "late_rejections": [
+    "date": "2026-05-05",
+    "ts": "2026-05-05T22:55:52.843110+00:00",
+    "bets": [
       {
-        "match": "New York Knicks vs Philadelphia 76ers",
-        "reason": "No qualified edge at commit time. NYK ML 1.35 below 1.65 floor; PHI ML 3.25 above 2.50 ceiling. NYK -7.5 spread at 1.91 is in range but confidence assessed at ~58 (below 60 required for spread bets). No new injury information materially changed the edge since Scout — Jeremy Sochan listed under NYK injury report is a data feed error (Sochan is a SAS player). PHI has no confirmed absences. Time gate also fails: game tips at 00:00 UTC with ~33 seconds remaining at commit time (must be >20 min to tip). No pick added."
-      },
-      {
-        "match": "San Antonio Spurs vs Minnesota Timberwolves",
-        "reason": "Massive unexplained line movement: SAS spread moved from -12.5 to -9.5 (3 full points toward MIN), triggering the >0.30 movement cancel rule. MIN ML moved from 5.80 to 4.35 (1.45 improvement). Cannot explicitly confirm cause — Edwards remains only Questionable (not OUT or confirmed active), same status as at Scout. SAS ML 1.22 below 1.65 floor; MIN ML 4.35 above 2.50 ceiling. SAS -9.5 spread at 1.89/1.93 is technically in range but confidence estimated at ~52-55 after applying: L15 data anomaly penalty (SAS L15 +38.3 is clearly erroneous, -5 confidence), Edwards Questionable adjustment, and unexplained sharp line movement. Confidence falls below 60 threshold required for spread bets. Per line_movement_rules: movement >0.30 requires cancel unless cause is explicitly confirmed. No pick added."
+        "id": "nba_bet_20260505_001",
+        "match": "Oklahoma City Thunder vs Los Angeles Lakers",
+        "time": "2026-05-06T00:30:00Z",
+        "pick": "Under 214.5",
+        "odds": 1.96,
+        "stake": 168.0,
+        "potential_return": 328.56,
+        "confidence": 65,
+        "reasoning": "LATE SCOUT — NEW PICK. Game 7, OKC vs LAL. INJURY CONTEXT: Jalen Williams (OKC) confirmed OUT per NBA official PDF — primary OKC offensive weapon. Luka Doncic (LAL) confirmed OUT per NBA official PDF — LAL's primary creator. Two of the most impactful offensive players in this matchup are missing. DEFENSIVE PROFILE: OKC has the best DefRtg in the league (107.9) and NetRtg +11.1. Without Williams, OKC's offensive output is reduced but their defensive identity remains elite. LAL without Doncic has a significantly lower offensive ceiling — they've been winning this series 4-2 but Doncic's absence limits shot creation and offensive efficiency. GAME CONTEXT: Game 7 — historically deliberate, half-court oriented playoff basketball. Pace: OKC 99.3, LAL 98.3 — both below average pace in playoffs. Game 7 atmosphere typically further slows pace as both teams are cautious and defensive-minded. TOTAL ASSESSMENT: 214.5 already accounts for some offensive reduction, but with BOTH primary offensive stars absent and OKC's elite defense, the under is well-supported. Pace data available (non-zero) — no pace data flag. ODDS VALIDATION: 1.96 within O/U target range 1.75–2.05. EV = (0.65 × 1.96) - 1 = 0.274. SOURCE: nba_official — full confidence rules apply. TIME GATE: 95+ minutes to tip-off. STAKE: Confidence 65 = Medium tier (15-20%) → 15% of €1122.53 = €168.",
+        "anchor_players": [
+          "Jalen Williams",
+          "Luka Doncic",
+          "Shai Gilgeous-Alexander",
+          "LeBron James"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null,
+        "committed_at": "2026-05-05T22:55:55Z"
       }
     ],
-    "total_staked": 0.0,
+    "cancelled": [
+      {
+        "id": "nba_draft_20260505_001",
+        "match": "Detroit Pistons vs Cleveland Cavaliers",
+        "pick": "Detroit Pistons ML",
+        "reason": "Odds fell below confirmation floor. Scout odds 1.70 drifted to 1.63 at commit time. Commit ML floor is 1.65 — current odds of 1.63 are below this floor. Per cancel_criteria and line_movement_rules: 'Odds fell below confirmation floor'. Additionally, movement of -0.07 against would require confidence -10 recalculation, but the floor breach is the primary disqualifier."
+      }
+    ],
+    "late_rejections": [
+      {
+        "match": "Oklahoma City Thunder vs Los Angeles Lakers",
+        "reason": "OKC ML 1.11 — far outside ML floor of 1.65, no valid entry. LAL ML 8.35 — far above ML ceiling of 2.50, no valid entry. OKC spread -15.5 at 1.95 — odds within range but blowout/garbage-time risk in a massive-favourite scenario corrupts spread value; playoff rules caution against large spreads in potential blowouts; Jalen Williams OUT reduces OKC's offensive floor making garbage time less predictable. O/U 214.5 at 1.96 — ADDED AS LATE PICK (Under): both primary offensive stars OUT (Williams + Doncic), elite OKC defense, Game 7 deliberate pace, valid odds and EV."
+      }
+    ],
+    "total_staked": 168.0,
     "bankroll_before": 1122.53,
-    "report": "## Commit Report — 2026-05-04T23:59:27Z\n### Bankroll: €1122.53 | Total Staked: €0.00 | Exposure: 0%\n\n---\n\n### Task 1 — Draft Pick Review\nNo draft picks were submitted by the Scout phase. Nothing to confirm or cancel.\n\n---\n\n### Task 2 — Late Scout Analysis\n\n#### Game 1: New York Knicks vs Philadelphia 76ers (00:00 UTC, MSG)\n\n**Current odds:** NYK ML 1.35 / PHI ML 3.25 | NYK -7.5 @ 1.91/1.91 | O/U N/A\n\n**Line movement vs Scout:**\n- NYK ML: 1.34 → 1.35 (+0.01, negligible)\n- PHI ML: 3.30 → 3.25 (-0.05, negligible)\n- Spread: No meaningful movement (-7.5 unchanged, 1.90 → 1.91 trivial)\n\n**Injury update:** NYK injury report lists \"Jeremy Sochan Questionable\" — flagged as data feed error. Sochan is a SAN ANTONIO SPUR, not a Knick. Likely misattributed entry in the official feed. No genuine new injuries for NYK or PHI confirmed.\n\n**Edge evaluation:**\n- ML options: NYK 1.35 (below 1.65 floor) and PHI 3.25 (above 2.50 ceiling) — both disqualified by odds range rules.\n- NYK -7.5 @ 1.91: odds in range. However, confidence assessed at ~58 (Scout's assessment unchanged — no new injury data, no significant line movement). Below the 60-confidence floor required for spread picks.\n- Time gate: game tips at 00:00 UTC. Commit time is 23:59:27 UTC — approximately 33 seconds to tip. Time gate requires >20 minutes remaining. **HARD FAIL.**\n\n**REJECTED: Confidence below 60 for spread; ML odds outside valid range; time gate failed (<1 minute to tip)**\n\n---\n\n#### Game 2: San Antonio Spurs vs Minnesota Timberwolves (01:30 UTC, Frost Bank Center)\n\n**Current odds:** SAS ML 1.22 / MIN ML 4.35 | SAS -9.5 @ 1.89/1.93 | O/U N/A\n\n**Line movement vs Scout:**\n- SAS ML: 1.14 → 1.22 (+0.08 toward MIN, significant)\n- MIN ML: 5.80 → 4.35 (-1.45, massive movement toward MIN)\n- Spread: SAS -12.5 → SAS -9.5 **(3-point move toward MIN — major signal, >0.30 trigger engaged)**\n\n**Injury update:**\n- Anthony Edwards (MIN): Still Questionable (Left Knee Bone Bruise) — UNCHANGED from Scout. Not confirmed OUT.\n- Donte DiVincenzo (MIN): Confirmed OUT (Repair)\n- Ayo Dosunmu (MIN): Confirmed OUT (Right Calf Soreness)\n- Carter Bryant (SAS): Questionable (Right Foot Sprain) — not a franchise player, negligible impact\n\n**Line movement analysis:**\nThe 3-point spread move and 1.45-point MIN ML improvement represent one of the largest single-session movements observed. Per line_movement_rules: movement >0.30 requires cancel unless I can explicitly confirm the cause. Edwards' status has NOT changed (still Questionable), suggesting sharp/informed money is betting MIN based on an expectation Edwards plays, or books are recalibrating for information not yet publicly available. Without being able to explicitly confirm the cause, the >0.30 rule mandates no pick.\n\n**Edge evaluation (even setting movement aside):**\n- ML options: SAS 1.22 (below 1.65 floor) and MIN 4.35 (above 2.50 ceiling) — both disqualified.\n- SAS -9.5 @ 1.89/1.93: odds technically in range. However:\n  - SAS L15 NetRtg +38.3 is a confirmed data anomaly (impossible NBA rating) — per data_quality_rules, confidence -5 for unreliable L15\n  - Edwards Questionable (not OUT): cannot build thesis on his absence; applying confidence -10 per franchise player rules\n  - Unexplained major line movement adds further uncertainty\n  - Adjusted confidence: ~50-53 (starting from Scout's ~55, minus 5 for L15 anomaly, effectively at or below 50)\n  - **Below 60 threshold for spread bets**\n- MIN +9.5 @ 1.93: same odds range issue resolved, but thesis requires confidence ≥ 60. MIN missing DiVincenzo and Dosunmu; Edwards status uncertain; SAS is the stronger team statistically at home. Cannot reach 60 confidence on MIN covering.\n\n**REJECTED: Line movement >0.30 without explicit confirmed cause (mandatory cancel per line_movement_rules); confidence below 60 for all spread options; ML odds outside valid range**\n\n---\n\n### Task 3 — Final Stake Confirmation\n\n**Total picks committed: 0**\n**Total staked: €0.00**\n**Bankroll remaining: €1122.53**\n**Exposure: 0% (well below 70% limit)**\n\n---\n\n### Slate Summary\n\nTonight's two-game slate offered no qualified betting opportunities at commit time. The NYK-PHI game lacked qualified ML odds and had insufficient spread confidence (~58 vs 60 required), compounded by a time gate failure with under one minute to tip-off. The SAS-MIN game featured alarming unexplained line movement (3-point spread shift, massive MIN ML improvement) that triggered a mandatory cancel per movement rules, plus the same spread confidence issues Scout identified. No late-breaking injuries changed either equation: Edwards remains Questionable (unchanged), and the Sochan injury listing under NYK appears to be a feed error. Bankroll of €1,122.53 is preserved in full for tomorrow's action.",
-    "tokens_in": 11246,
-    "tokens_out": 4625,
-    "cost_usd": 0.103113
+    "report": "### CANCELLED — Detroit Pistons ML\n\n- **Reason:** Odds fell below ML confirmation floor of 1.65 at commit time.\n- **Odds at cancel:** 1.63 (was 1.70 at scout time) | Movement: **-0.07 against**\n- The 7-point drift against our position pushed DET ML below the minimum acceptable floor (1.65). Even setting aside the required confidence -10 adjustment for adverse movement, the raw odds breach the floor. The market appears to have taken significant action on DET since Scout's 14:00 assessment — likely sharp money on the home favourite narrowing the line. Cannot confirm at 1.63. Cancelled per cancel_criteria: \"Odds fell below confirmation floor.\"\n\n---\n\n### CONFIRMED (Late Scout) — Under 214.5, OKC vs LAL\n\n- **Match:** Oklahoma City Thunder vs Los Angeles Lakers | Tip: 2026-05-06T00:30 UTC\n- **Pick:** Under 214.5 | Scout odds: N/A (new late pick) | Commit odds: 1.96 | Move: N/A\n- **ML:** OKC 1.11 / LAL 8.35 | **ATS:** OKC -15.5 (1.95/1.97) | **O/U:** 214.5 (O:1.96/U:1.96)\n- **Stake:** €168.00 | **Pot:** €328.56 | **Conf:** 65/100 | **EV:** 0.274\n- **Decision:** Late scout trigger confirmed. Both primary offensive anchors are OUT per NBA official PDF: Jalen Williams (OKC, Left Hamstring) and Luka Doncic (LAL, Left Hamstring). These are the two most impactful offensive players in this matchup. OKC possesses the league's best defense (DefRtg 107.9, NetRtg +11.1) and will be even more defensive-minded without their top offensive option. LAL's offensive ceiling drops dramatically without Doncic — they've survived the series 4-2 but rely on him for shot creation. Game 7 atmospherics produce deliberate, half-court basketball with both teams' pacing already below average. The 214.5 line, while not extreme, is undervaluing two franchise-caliber offensive absences simultaneously. O/U odds 1.96 are firmly within valid range (1.75–2.05). Time gate: 95+ minutes to tip. EV 0.274 well exceeds the 0.05 minimum. Injury source: nba_official — no fallback penalty. Pace data confirmed available (non-zero). Stake 15% of bankroll = €168, well within 70% exposure cap.\n\n---\n\n### SLATE SUMMARY\n\nTonight's commit phase produced one cancellation and one late addition. The DET ML pick was cancelled after odds drifted from 1.70 to 1.63, breaching the 1.65 commit-time floor — the market had clearly absorbed significant action on the Detroit home favourite. The late scout identified a compelling Under opportunity in OKC vs LAL Game 7, driven by confirmed late-breaking absences of both Jalen Williams and Luka Doncic (both Left Hamstring, NBA official source), combining OKC's elite defensive identity with Game 7 deliberate pace for a strong Under thesis at odds of 1.96. Total exposure is €168 (15% of bankroll), well within limits.",
+    "tokens_in": 11329,
+    "tokens_out": 3138,
+    "cost_usd": 0.081057
   },
   "netrtg_l15": {
     "Charlotte Hornets": 16.9,
