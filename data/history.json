@@ -26,7 +26,7 @@
           "wins": 20,
           "losses": 15,
           "peak_bankroll": 1917.57,
-          "total_bets": 35
+          "total_bets": 36
         }
       ]
     }
@@ -1891,6 +1891,49 @@
       "cancelled_picks": [],
       "bets": [],
       "summary": "Day 2026-05-04 commit — 0 bets totalling €0.00. 0 cancelled. Bankroll: €1122.53 → €1122.53."
+    },
+    {
+      "entry_id": "nba_entry_20260505",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-05-05T22:55:52.843110+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1122.53,
+      "total_staked": 168.0,
+      "bankroll_after": 954.53,
+      "cancelled_picks": [
+        {
+          "id": "nba_draft_20260505_001",
+          "match": "Detroit Pistons vs Cleveland Cavaliers",
+          "pick": "Detroit Pistons ML",
+          "reason": "Odds fell below confirmation floor. Scout odds 1.70 drifted to 1.63 at commit time. Commit ML floor is 1.65 — current odds of 1.63 are below this floor. Per cancel_criteria and line_movement_rules: 'Odds fell below confirmation floor'. Additionally, movement of -0.07 against would require confidence -10 recalculation, but the floor breach is the primary disqualifier."
+        }
+      ],
+      "bets": [
+        {
+          "id": "nba_bet_20260505_001",
+          "match": "Oklahoma City Thunder vs Los Angeles Lakers",
+          "time": "2026-05-06T00:30:00Z",
+          "pick": "Under 214.5",
+          "odds": 1.96,
+          "stake": 168.0,
+          "potential_return": 328.56,
+          "confidence": 65,
+          "reasoning": "LATE SCOUT — NEW PICK. Game 7, OKC vs LAL. INJURY CONTEXT: Jalen Williams (OKC) confirmed OUT per NBA official PDF — primary OKC offensive weapon. Luka Doncic (LAL) confirmed OUT per NBA official PDF — LAL's primary creator. Two of the most impactful offensive players in this matchup are missing. DEFENSIVE PROFILE: OKC has the best DefRtg in the league (107.9) and NetRtg +11.1. Without Williams, OKC's offensive output is reduced but their defensive identity remains elite. LAL without Doncic has a significantly lower offensive ceiling — they've been winning this series 4-2 but Doncic's absence limits shot creation and offensive efficiency. GAME CONTEXT: Game 7 — historically deliberate, half-court oriented playoff basketball. Pace: OKC 99.3, LAL 98.3 — both below average pace in playoffs. Game 7 atmosphere typically further slows pace as both teams are cautious and defensive-minded. TOTAL ASSESSMENT: 214.5 already accounts for some offensive reduction, but with BOTH primary offensive stars absent and OKC's elite defense, the under is well-supported. Pace data available (non-zero) — no pace data flag. ODDS VALIDATION: 1.96 within O/U target range 1.75–2.05. EV = (0.65 × 1.96) - 1 = 0.274. SOURCE: nba_official — full confidence rules apply. TIME GATE: 95+ minutes to tip-off. STAKE: Confidence 65 = Medium tier (15-20%) → 15% of €1122.53 = €168.",
+          "anchor_players": [
+            "Jalen Williams",
+            "Luka Doncic",
+            "Shai Gilgeous-Alexander",
+            "LeBron James"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-05-05T22:55:55Z"
+        }
+      ],
+      "summary": "Day 2026-05-05 commit — 1 bets totalling €168.00. 1 cancelled. Bankroll: €1122.53 → €954.53."
     }
   ]
 }
