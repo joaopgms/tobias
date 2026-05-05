@@ -1484,5 +1484,48 @@
     "tokens_in": 12638,
     "tokens_out": 1336,
     "cost_usd": 0.057954
+  },
+  {
+    "ts": "2026-05-05T15:56:55.837097+00:00",
+    "date": "2026-05-05",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_onexbet",
+    "draft_count": 1,
+    "picks": [
+      {
+        "id": "nba_draft_20260505_001",
+        "match": "Detroit Pistons vs Cleveland Cavaliers",
+        "time": "2026-05-05T23:00:00Z",
+        "pick": "Detroit Pistons ML",
+        "odds": 1.7,
+        "stake": 225.0,
+        "potential_return": 382.5,
+        "confidence": 72,
+        "reasoning": "GAME CONTEXT: This is a NEW SERIES matchup (Round 2 Semifinals, Game 2 per playoff context). DET (60-22, L10:8-2) vs CLE (52-30, L10:7-3). HOME TEAM: Detroit Pistons at Little Caesars Arena.\n\nLINE ANOMALY CHECK: DET ML 1.70 as home favourite vs CLE ML 2.31. DET has materially better record (60-22 vs 52-30) and better NetRtg. No anomaly flagged — line consistent with records and home edge.\n\nNET RTG L15: DET L15 +25.2 vs CLE L15 +0.7. Gap = 24.5 points — MASSIVE signal. This exceeds the 4.0pt threshold by an enormous margin. DET is in elite recent form; CLE has been nearly flat in recent form. Season NetRtg: DET +8.2 vs CLE +4.0 — 4.2pt gap also favours DET.\n\nFRANCHISE PLAYER CHECK: DET — Kevin Huerter listed Questionable (Left Adductor Strain) per NBA Official Injury Report. Huerter is NOT a franchise player (confidence -5 for key guard, day-to-day style). Cade Cunningham, Isaiah Stewart, Jalen Duren NOT on injury report — assumed active. CLE — no players on tonight's NBA Official injury report. Donovan Mitchell, Jarrett Allen, Evan Mobley assumed active.\n\nINJURY FEED: Source is nba_official — full normal confidence rules apply. No ESPN fallback penalty.\n\nSCHEDULE/REST: Playoff context — no true B2B. Both teams presumably had similar rest days between series. No adjustment needed without specific rest day data.\n\nHOME COURT: DET at home in playoffs worth ~3-4 points. Significant factor.\n\nODDS TARGET: DET ML 1.70 — within 1.60-2.50 ML target range. ✓\n\nCONFIDENCE CALCULATION: Base 70 (DET materially better record, massive L15 gap, home court). Huerter Questionable: -5 (key guard, not franchise player). Net: 65. Round 2 Game 2 context — no in-series signal yet, but DET's statistical superiority is strong. Adjust up slightly for L15 gap dominance: 72.\n\nEV CALCULATION: EV = (0.72 × 1.70) - 1 = 1.224 - 1 = 0.224. EV = 0.224 ≥ 0.15 — STRONG EDGE. ✓\n\nSTAKE: Confidence 72 = High tier (70-84) → 20-25% of bankroll. Using 20% = €1122.53 × 0.20 = €224.51 → rounded to €225.",
+        "anchor_players": [
+          "Cade Cunningham",
+          "Isaiah Stewart",
+          "Jalen Duren",
+          "Donovan Mitchell"
+        ],
+        "drafted_at": "2026-05-05T15:57:00Z",
+        "market_type": "ml"
+      }
+    ],
+    "rejected": [
+      {
+        "match": "Oklahoma City Thunder vs Los Angeles Lakers",
+        "reason": "LINE ANOMALY: OKC ML 1.12 is outside the 1.60-2.50 target range and essentially offers no EV at any confidence level. LAL ML 8.0 is extreme — Luka Doncic confirmed OUT, OKC has the best NetRtg in the league (+11.1, L15 +29.8), and Jalen Williams is also OUT for OKC but team still historically dominant. The spread of OKC -15.5 at 1.97 is within range, but playoff rules explicitly state DO NOT bet LAL spread in Game 7 — applying same logic here as OKC is a massive favourite and garbage-time/blowout risk corrupts spread value. LAL ML at 8.0 fails ML odds target (max 2.50). No market offers a valid entry point: OKC ML too short, LAL ML too long, spread too large/risky in a potential blowout. REJECTED — no valid market entry.",
+        "ml_home": 1.12,
+        "ml_away": 8.0,
+        "decision": "rejected"
+      }
+    ],
+    "report": "Two-game playoff slate tonight. One strong pick identified: Detroit Pistons ML at home vs Cleveland Cavaliers (Round 2). DET's L15 NetRtg gap (+25.2 vs CLE's +0.7) is the dominant signal, supported by superior season NetRtg (+8.2 vs +4.0), home court advantage, and strong recent record. EV = 0.224 — strong edge. Injury feed is NBA Official source — full confidence rules applied. OKC vs LAL rejected entirely: OKC ML 1.12 is below the 1.60 floor with near-zero EV; LAL ML 8.0 far exceeds the 2.50 ceiling; spread rejected due to blowout/garbage-time risk in a playoff context where OKC -15.5 is unreliable. Total picks drafted: 1.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 12612,
+    "tokens_out": 1488,
+    "cost_usd": 0.060156
   }
 ]
