@@ -37,12 +37,14 @@ US_BOOKMAKERS = ["draftkings", "fanduel", "betmgm", "caesars"]
 def _theodds_nba_odds(api_key: str) -> list[dict]:
     """
     Fetch NBA odds from The-Odds-API.
-    Primary: EU bookmakers. Fallback: US bookmakers for games EU skips.
-    Free tier: 500 requests/month. Each call uses ~1 request.
+    EU bookmakers are primary (preferred for odds values).
+    US bookmakers fill any missing markets (spread/O/U) and cover games EU skips entirely.
+    Both fetches are always made; bookmakers are merged per game before normalization.
+    Free tier: 500 requests/month. Each call uses ~1 request (2 calls per run).
     """
     url = f"{THEODDS_BASE}/sports/{NBA_SPORT_KEY}/odds"
 
-    def _fetch(regions: str, bookmakers: list) -> list[dict]:
+    def _fetch_raw(regions: str, bookmakers: list) -> list[dict]:
         params = {
             "apiKey":     api_key,
             "regions":    regions,
@@ -59,24 +61,30 @@ def _theodds_nba_odds(api_key: str) -> list[dict]:
             for g in games:
                 present = sorted({b["key"] for b in g.get("bookmakers", [])})
                 log.debug(f"  {g.get('away_team','?')} @ {g.get('home_team','?')}: bookmakers present = {present}")
-            return [_normalise_theodds(g) for g in games if g]
+            return [g for g in games if g]
         except Exception as e:
             log.warning(f"The-Odds-API ({regions}) error: {e}")
             return []
 
-    eu_games = _fetch("eu", EU_BOOKMAKERS)
+    eu_raw = _fetch_raw("eu", EU_BOOKMAKERS)
+    us_raw = _fetch_raw("us", US_BOOKMAKERS)
 
-    # Fallback: fetch US bookmakers for any games EU didn't cover
-    eu_pairs = {frozenset([g["home"].lower(), g["away"].lower()]) for g in eu_games}
-    us_games = _fetch("us", US_BOOKMAKERS)
-    for g in us_games:
-        pair = frozenset([g["home"].lower(), g["away"].lower()])
-        if pair not in eu_pairs:
-            log.info(f"The-Odds-API: EU missing '{g['home']} vs {g['away']}' — using US fallback")
-            eu_games.append(g)
-            eu_pairs.add(pair)
+    # Merge bookmakers per game: EU first (priority for ML odds values),
+    # US appended so per-market fallback can fill spread/O/U if EU lacks them.
+    game_map: dict[frozenset, dict] = {}
+    for g in eu_raw + us_raw:
+        key = frozenset([g.get("home_team", "").lower(), g.get("away_team", "").lower()])
+        if key not in game_map:
+            merged = dict(g)
+            merged["bookmakers"] = list(g.get("bookmakers", []))
+            game_map[key] = merged
+        else:
+            existing_keys = {b["key"] for b in game_map[key]["bookmakers"]}
+            for bm in g.get("bookmakers", []):
+                if bm["key"] not in existing_keys:
+                    game_map[key]["bookmakers"].append(bm)
 
-    return eu_games
+    return [_normalise_theodds(g) for g in game_map.values()]
 
 
 def _normalise_theodds(g: dict) -> dict:
@@ -95,7 +103,8 @@ def _normalise_theodds(g: dict) -> dict:
     def _markets_for(bm: dict) -> dict:
         return {m["key"]: m for m in bm.get("markets", [])}
 
-    all_bm_priority = [bm_map[k] for k in EU_BOOKMAKERS if k in bm_map]
+    # EU first, then US as fallback for missing markets
+    all_bm_priority = [bm_map[k] for k in EU_BOOKMAKERS + US_BOOKMAKERS if k in bm_map]
     if not all_bm_priority and bookmakers:
         all_bm_priority = bookmakers  # last resort: whatever was returned
 
