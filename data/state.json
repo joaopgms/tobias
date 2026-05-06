@@ -9,14 +9,14 @@
   "net_pnl": 424.45,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-05-06T16:03:09.525079+00:00",
-  "first_game_time": "2026-05-05T23:00:00Z",
+  "last_updated": "2026-05-06T17:18:28.769723+00:00",
+  "first_game_time": "2026-05-06T23:00:00Z",
   "llm_provider": "claude",
-  "scout_status": "unavailable",
-  "scout_error": "Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011Cambe8EVuC1PRzMUxBP5s'}",
-  "scout_updated_at": "2026-05-05T15:56:55.837097+00:00",
-  "scout_odds_source": "theodds_onexbet",
-  "commit_status": "done",
+  "scout_status": "live",
+  "scout_error": "",
+  "scout_updated_at": "2026-05-06T17:18:28.769723+00:00",
+  "scout_odds_source": "theodds_unibet",
+  "commit_status": "pending",
   "commit_updated_at": "2026-05-05T22:55:52.843110+00:00",
   "commit_date": "2026-05-05",
   "analyst_updated_at": "2026-05-06T12:26:21.749533+00:00",
@@ -27,7 +27,7 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "### CANCELLED — Detroit Pistons ML\n\n- **Reason:** Odds fell below ML confirmation floor of 1.65 at commit time.\n- **Odds at cancel:** 1.63 (was 1.70 at scout time) | Movement: **-0.07 against**\n- The 7-point drift against our position pushed DET ML below the minimum acceptable floor (1.65). Even setting aside the required confidence -10 adjustment for adverse movement, the raw odds breach the floor. The market appears to have taken significant action on DET since Scout's 14:00 assessment — likely sharp money on the home favourite narrowing the line. Cannot confirm at 1.63. Cancelled per cancel_criteria: \"Odds fell below confirmation floor.\"\n\n---\n\n### CONFIRMED (Late Scout) — Under 214.5, OKC vs LAL\n\n- **Match:** Oklahoma City Thunder vs Los Angeles Lakers | Tip: 2026-05-06T00:30 UTC\n- **Pick:** Under 214.5 | Scout odds: N/A (new late pick) | Commit odds: 1.96 | Move: N/A\n- **ML:** OKC 1.11 / LAL 8.35 | **ATS:** OKC -15.5 (1.95/1.97) | **O/U:** 214.5 (O:1.96/U:1.96)\n- **Stake:** €168.00 | **Pot:** €328.56 | **Conf:** 65/100 | **EV:** 0.274\n- **Decision:** Late scout trigger confirmed. Both primary offensive anchors are OUT per NBA official PDF: Jalen Williams (OKC, Left Hamstring) and Luka Doncic (LAL, Left Hamstring). These are the two most impactful offensive players in this matchup. OKC possesses the league's best defense (DefRtg 107.9, NetRtg +11.1) and will be even more defensive-minded without their top offensive option. LAL's offensive ceiling drops dramatically without Doncic — they've survived the series 4-2 but rely on him for shot creation. Game 7 atmospherics produce deliberate, half-court basketball with both teams' pacing already below average. The 214.5 line, while not extreme, is undervaluing two franchise-caliber offensive absences simultaneously. O/U odds 1.96 are firmly within valid range (1.75–2.05). Time gate: 95+ minutes to tip. EV 0.274 well exceeds the 0.05 minimum. Injury source: nba_official — no fallback penalty. Pace data confirmed available (non-zero). Stake 15% of bankroll = €168, well within 70% exposure cap.\n\n---\n\n### SLATE SUMMARY\n\nTonight's commit phase produced one cancellation and one late addition. The DET ML pick was cancelled after odds drifted from 1.70 to 1.63, breaching the 1.65 commit-time floor — the market had clearly absorbed significant action on the Detroit home favourite. The late scout identified a compelling Under opportunity in OKC vs LAL Game 7, driven by confirmed late-breaking absences of both Jalen Williams and Luka Doncic (both Left Hamstring, NBA official source), combining OKC's elite defensive identity with Game 7 deliberate pace for a strong Under thesis at odds of 1.96. Total exposure is €168 (15% of bankroll), well within limits.",
+  "last_report": "Difficult slate for tonight — both games feature heavy home favourites priced well below the 1.60 ML minimum (SAS 1.22, NYK 1.21), eliminating ML picks entirely. Spread markets were evaluated but both face disqualifying issues: NYK vs PHI spread is priced at -10.5 already reflecting Embiid's confirmed absence (franchise player OUT, books have fully adjusted), making the edge unclear in a playoff context with garbage-time risk. SAS vs MIN spread is invalidated by Anthony Edwards' Questionable status (Left Knee Bone Bruise) — an unresolved franchise-player game-time decision that corrupts spread analysis. No O/U lines are available on either game. 0 picks drafted — correct outcome given odds floor failures and unresolved injury flags. Revisit SAS spread at Commit if Edwards is confirmed OUT before tip-off.",
   "draft_picks": [],
   "pending_bets": [],
   "settled_bets": [
@@ -751,10 +751,17 @@
   ],
   "rejected_games": [
     {
-      "match": "Oklahoma City Thunder vs Los Angeles Lakers",
-      "reason": "LINE ANOMALY: OKC ML 1.12 is outside the 1.60-2.50 target range and essentially offers no EV at any confidence level. LAL ML 8.0 is extreme — Luka Doncic confirmed OUT, OKC has the best NetRtg in the league (+11.1, L15 +29.8), and Jalen Williams is also OUT for OKC but team still historically dominant. The spread of OKC -15.5 at 1.97 is within range, but playoff rules explicitly state DO NOT bet LAL spread in Game 7 — applying same logic here as OKC is a massive favourite and garbage-time/blowout risk corrupts spread value. LAL ML at 8.0 fails ML odds target (max 2.50). No market offers a valid entry point: OKC ML too short, LAL ML too long, spread too large/risky in a potential blowout. REJECTED — no valid market entry.",
-      "ml_home": 1.12,
-      "ml_away": 8.0,
+      "match": "New York Knicks vs Philadelphia 76ers",
+      "reason": "NYK ML 1.21 well below 1.60 minimum odds target. Spread -10.5 at 1.89 — Joel Embiid OUT for PHI (franchise player) is a significant edge signal but NYK L15 NetRtg +18.8 vs PHI L15 -7.1 is a massive gap (25.9pts). However, odds fail all market type floors: ML 1.21 (below 1.60 minimum), Spread -10.5 at 1.89 could qualify on odds but EV check: conf 72 × 1.89 − 1 = 0.361 seems strong, BUT PHI is without Embiid (franchise player OUT) and the line is already -10.5 reflecting that absence — books have priced this in. PHI spread +10.5 at 1.93: PHI without Embiid, massive NetRtg gap, playoff momentum — insufficient edge for PHI cover. No O/U available. NYK ML at 1.21 fails odds floor (minimum 1.60). NYK spread -10.5: confidence would be ~70 based on NetRtg gap and Embiid absence, EV = 0.70 × 1.89 − 1 = 0.323, but CRITICAL: spread anomaly flag — Embiid already OUT so line priced accordingly; at -10.5 with PHI depleted, covers become unpredictable in playoffs (garbage time, line movements). Primary disqualifier: NYK ML odds 1.21 fails the 1.60 floor. Spread considered but playoff spread rule: 'Do NOT bet LAL spread — garbage-time risk' pattern applies to large favourites in playoffs. Deferred.",
+      "ml_home": 1.21,
+      "ml_away": 4.5,
+      "decision": "rejected"
+    },
+    {
+      "match": "San Antonio Spurs vs Minnesota Timberwolves",
+      "reason": "SAS ML 1.22 below 1.60 minimum odds floor. SAS Spread -10.0 at 1.94 considered: SAS L15 NetRtg +34.7 vs MIN L15 +1.1 is a massive gap (33.6pts). Anthony Edwards QUESTIONABLE (Left Knee Bone Bruise) — franchise player uncertainty applies confidence -10, and if Edwards plays the gap narrows significantly. Edwards is ~50% to play per GTD/Questionable rules, and the pick cannot be built on his absence. With Edwards possibly active: MIN NetRtg gap shrinks materially. SAS spread -10.0 in playoffs: garbage-time risk, plus Edwards status unresolved — skills rules state 'Game-time decisions unresolved for either team' is a reason to avoid spreads. Additionally, Donte DiVincenzo (MIN) confirmed OUT. No O/U available. SAS ML at 1.22 fails 1.60 floor. Spread deferred due to Edwards GTD creating unresolved game-time decision for MIN franchise player.",
+      "ml_home": 1.22,
+      "ml_away": 4.35,
       "decision": "rejected"
     }
   ],
@@ -817,20 +824,20 @@
     "Sacramento Kings": -29.4,
     "New York Knicks": 18.8,
     "New Orleans Pelicans": -29.6,
-    "Cleveland Cavaliers": 0.7,
+    "Cleveland Cavaliers": -1.5,
     "Orlando Magic": 2.9,
     "Phoenix Suns": 6.4,
     "Denver Nuggets": 23.5,
     "Miami Heat": 9.5,
     "Dallas Mavericks": -21.4,
-    "Detroit Pistons": 25.2,
+    "Detroit Pistons": 25.4,
     "Atlanta Hawks": 13.7,
     "Indiana Pacers": -4.6,
-    "Los Angeles Lakers": 12.6,
+    "Los Angeles Lakers": 7.7,
     "Philadelphia 76ers": -7.1,
     "Chicago Bulls": -39.0,
     "Boston Celtics": 35.5,
-    "Oklahoma City Thunder": 29.8,
+    "Oklahoma City Thunder": 31.6,
     "Memphis Grizzlies": -59.3,
     "San Antonio Spurs": 34.7,
     "Utah Jazz": -40.5,
@@ -1343,50 +1350,37 @@
     "Boston Celtics@New York Knicks"
   ],
   "cached_context": {
-    "cached_at": "2026-05-05",
-    "games_str": "Detroit Pistons vs Cleveland Cavaliers  |  2026-05-05T23:00 UTC  |  Little Caesars Arena\nOklahoma City Thunder vs Los Angeles Lakers  |  2026-05-06T00:30 UTC  |  Paycom Center",
-    "standings_str": "Oklahoma City Thunder: 64-18  L10:7-3\nSan Antonio Spurs: 62-20  L10:8-2\nDetroit Pistons: 60-22  L10:8-2\nBoston Celtics: 56-26  L10:8-2\nDenver Nuggets: 54-28  L10:10-0\nLos Angeles Lakers: 53-29  L10:7-3\nCleveland Cavaliers: 52-30  L10:7-3\nUtah Jazz: 22-60  L10:1-9\nUTAH: 22-60  L10:1-9\nBrooklyn Nets: 20-62  L10:3-7\nIndiana Pacers: 19-63  L10:3-7\nWashington Wizards: 17-65  L10:0-10",
-    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nDetroit Pistons: OffRtg 118.0 | DefRtg 109.8 | NetRtg +8.2 | Pace 99.3 | L15:+25.2\nCleveland Cavaliers: OffRtg 119.3 | DefRtg 115.2 | NetRtg +4.0 | Pace 99.9 | L15:+0.7\nOklahoma City Thunder: OffRtg 118.9 | DefRtg 107.9 | NetRtg +11.1 | Pace 99.3 | L15:+29.8\nLos Angeles Lakers: OffRtg 118.2 | DefRtg 116.5 | NetRtg +1.7 | Pace 98.3 | L15:+12.6"
+    "cached_at": "2026-05-06",
+    "games_str": "New York Knicks vs Philadelphia 76ers  |  2026-05-06T23:00 UTC  |  Madison Square Garden\nSan Antonio Spurs vs Minnesota Timberwolves  |  2026-05-07T01:30 UTC  |  Frost Bank Center",
+    "standings_str": "Oklahoma City Thunder: 64-18  L10:7-3\nSan Antonio Spurs: 62-20  L10:8-2\nDetroit Pistons: 60-22  L10:8-2\nBoston Celtics: 56-26  L10:8-2\nDenver Nuggets: 54-28  L10:10-0\nNew York Knicks: 53-29  L10:6-4\nMinnesota Timberwolves: 49-33  L10:5-5\nPhiladelphia 76ers: 45-37  L10:6-4\nUtah Jazz: 22-60  L10:1-9\nUTAH: 22-60  L10:1-9\nBrooklyn Nets: 20-62  L10:3-7\nIndiana Pacers: 19-63  L10:3-7\nWashington Wizards: 17-65  L10:0-10",
+    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nNew York Knicks: OffRtg 119.9 | DefRtg 113.4 | NetRtg +6.5 | Pace 96.8 | L15:+18.8\nPhiladelphia 76ers: OffRtg 115.4 | DefRtg 115.6 | NetRtg -0.2 | Pace 99.4 | L15:-7.1\nSan Antonio Spurs: OffRtg 119.7 | DefRtg 111.4 | NetRtg +8.3 | Pace 99.9 | L15:+34.7\nMinnesota Timberwolves: OffRtg 116.8 | DefRtg 113.7 | NetRtg +3.1 | Pace 100.5 | L15:+1.1"
   },
   "scout_report_data": {
-    "date": "2026-05-05",
-    "updated_at": "2026-05-05T15:56:55.837097+00:00",
-    "picks": [
-      {
-        "id": "nba_draft_20260505_001",
-        "match": "Detroit Pistons vs Cleveland Cavaliers",
-        "time": "2026-05-05T23:00:00Z",
-        "pick": "Detroit Pistons ML",
-        "odds": 1.7,
-        "stake": 225.0,
-        "potential_return": 382.5,
-        "confidence": 72,
-        "reasoning": "GAME CONTEXT: This is a NEW SERIES matchup (Round 2 Semifinals, Game 2 per playoff context). DET (60-22, L10:8-2) vs CLE (52-30, L10:7-3). HOME TEAM: Detroit Pistons at Little Caesars Arena.\n\nLINE ANOMALY CHECK: DET ML 1.70 as home favourite vs CLE ML 2.31. DET has materially better record (60-22 vs 52-30) and better NetRtg. No anomaly flagged — line consistent with records and home edge.\n\nNET RTG L15: DET L15 +25.2 vs CLE L15 +0.7. Gap = 24.5 points — MASSIVE signal. This exceeds the 4.0pt threshold by an enormous margin. DET is in elite recent form; CLE has been nearly flat in recent form. Season NetRtg: DET +8.2 vs CLE +4.0 — 4.2pt gap also favours DET.\n\nFRANCHISE PLAYER CHECK: DET — Kevin Huerter listed Questionable (Left Adductor Strain) per NBA Official Injury Report. Huerter is NOT a franchise player (confidence -5 for key guard, day-to-day style). Cade Cunningham, Isaiah Stewart, Jalen Duren NOT on injury report — assumed active. CLE — no players on tonight's NBA Official injury report. Donovan Mitchell, Jarrett Allen, Evan Mobley assumed active.\n\nINJURY FEED: Source is nba_official — full normal confidence rules apply. No ESPN fallback penalty.\n\nSCHEDULE/REST: Playoff context — no true B2B. Both teams presumably had similar rest days between series. No adjustment needed without specific rest day data.\n\nHOME COURT: DET at home in playoffs worth ~3-4 points. Significant factor.\n\nODDS TARGET: DET ML 1.70 — within 1.60-2.50 ML target range. ✓\n\nCONFIDENCE CALCULATION: Base 70 (DET materially better record, massive L15 gap, home court). Huerter Questionable: -5 (key guard, not franchise player). Net: 65. Round 2 Game 2 context — no in-series signal yet, but DET's statistical superiority is strong. Adjust up slightly for L15 gap dominance: 72.\n\nEV CALCULATION: EV = (0.72 × 1.70) - 1 = 1.224 - 1 = 0.224. EV = 0.224 ≥ 0.15 — STRONG EDGE. ✓\n\nSTAKE: Confidence 72 = High tier (70-84) → 20-25% of bankroll. Using 20% = €1122.53 × 0.20 = €224.51 → rounded to €225.",
-        "anchor_players": [
-          "Cade Cunningham",
-          "Isaiah Stewart",
-          "Jalen Duren",
-          "Donovan Mitchell"
-        ],
-        "drafted_at": "2026-05-05T15:57:00Z",
-        "market_type": "ml"
-      }
-    ],
+    "date": "2026-05-06",
+    "updated_at": "2026-05-06T17:18:28.769723+00:00",
+    "picks": [],
     "rejected": [
       {
-        "match": "Oklahoma City Thunder vs Los Angeles Lakers",
-        "reason": "LINE ANOMALY: OKC ML 1.12 is outside the 1.60-2.50 target range and essentially offers no EV at any confidence level. LAL ML 8.0 is extreme — Luka Doncic confirmed OUT, OKC has the best NetRtg in the league (+11.1, L15 +29.8), and Jalen Williams is also OUT for OKC but team still historically dominant. The spread of OKC -15.5 at 1.97 is within range, but playoff rules explicitly state DO NOT bet LAL spread in Game 7 — applying same logic here as OKC is a massive favourite and garbage-time/blowout risk corrupts spread value. LAL ML at 8.0 fails ML odds target (max 2.50). No market offers a valid entry point: OKC ML too short, LAL ML too long, spread too large/risky in a potential blowout. REJECTED — no valid market entry.",
-        "ml_home": 1.12,
-        "ml_away": 8.0,
+        "match": "New York Knicks vs Philadelphia 76ers",
+        "reason": "NYK ML 1.21 well below 1.60 minimum odds target. Spread -10.5 at 1.89 — Joel Embiid OUT for PHI (franchise player) is a significant edge signal but NYK L15 NetRtg +18.8 vs PHI L15 -7.1 is a massive gap (25.9pts). However, odds fail all market type floors: ML 1.21 (below 1.60 minimum), Spread -10.5 at 1.89 could qualify on odds but EV check: conf 72 × 1.89 − 1 = 0.361 seems strong, BUT PHI is without Embiid (franchise player OUT) and the line is already -10.5 reflecting that absence — books have priced this in. PHI spread +10.5 at 1.93: PHI without Embiid, massive NetRtg gap, playoff momentum — insufficient edge for PHI cover. No O/U available. NYK ML at 1.21 fails odds floor (minimum 1.60). NYK spread -10.5: confidence would be ~70 based on NetRtg gap and Embiid absence, EV = 0.70 × 1.89 − 1 = 0.323, but CRITICAL: spread anomaly flag — Embiid already OUT so line priced accordingly; at -10.5 with PHI depleted, covers become unpredictable in playoffs (garbage time, line movements). Primary disqualifier: NYK ML odds 1.21 fails the 1.60 floor. Spread considered but playoff spread rule: 'Do NOT bet LAL spread — garbage-time risk' pattern applies to large favourites in playoffs. Deferred.",
+        "ml_home": 1.21,
+        "ml_away": 4.5,
+        "decision": "rejected"
+      },
+      {
+        "match": "San Antonio Spurs vs Minnesota Timberwolves",
+        "reason": "SAS ML 1.22 below 1.60 minimum odds floor. SAS Spread -10.0 at 1.94 considered: SAS L15 NetRtg +34.7 vs MIN L15 +1.1 is a massive gap (33.6pts). Anthony Edwards QUESTIONABLE (Left Knee Bone Bruise) — franchise player uncertainty applies confidence -10, and if Edwards plays the gap narrows significantly. Edwards is ~50% to play per GTD/Questionable rules, and the pick cannot be built on his absence. With Edwards possibly active: MIN NetRtg gap shrinks materially. SAS spread -10.0 in playoffs: garbage-time risk, plus Edwards status unresolved — skills rules state 'Game-time decisions unresolved for either team' is a reason to avoid spreads. Additionally, Donte DiVincenzo (MIN) confirmed OUT. No O/U available. SAS ML at 1.22 fails 1.60 floor. Spread deferred due to Edwards GTD creating unresolved game-time decision for MIN franchise player.",
+        "ml_home": 1.22,
+        "ml_away": 4.35,
         "decision": "rejected"
       }
     ],
-    "report": "Two-game playoff slate tonight. One strong pick identified: Detroit Pistons ML at home vs Cleveland Cavaliers (Round 2). DET's L15 NetRtg gap (+25.2 vs CLE's +0.7) is the dominant signal, supported by superior season NetRtg (+8.2 vs +4.0), home court advantage, and strong recent record. EV = 0.224 — strong edge. Injury feed is NBA Official source — full confidence rules applied. OKC vs LAL rejected entirely: OKC ML 1.12 is below the 1.60 floor with near-zero EV; LAL ML 8.0 far exceeds the 2.50 ceiling; spread rejected due to blowout/garbage-time risk in a playoff context where OKC -15.5 is unreliable. Total picks drafted: 1.",
-    "odds_source": "theodds_onexbet",
+    "report": "Difficult slate for tonight — both games feature heavy home favourites priced well below the 1.60 ML minimum (SAS 1.22, NYK 1.21), eliminating ML picks entirely. Spread markets were evaluated but both face disqualifying issues: NYK vs PHI spread is priced at -10.5 already reflecting Embiid's confirmed absence (franchise player OUT, books have fully adjusted), making the edge unclear in a playoff context with garbage-time risk. SAS vs MIN spread is invalidated by Anthony Edwards' Questionable status (Left Knee Bone Bruise) — an unresolved franchise-player game-time decision that corrupts spread analysis. No O/U lines are available on either game. 0 picks drafted — correct outcome given odds floor failures and unresolved injury flags. Revisit SAS spread at Commit if Edwards is confirmed OUT before tip-off.",
+    "odds_source": "theodds_unibet",
     "injuries_source": "nba_official",
-    "tokens_in": 12612,
-    "tokens_out": 1488,
-    "cost_usd": 0.060156
+    "tokens_in": 12523,
+    "tokens_out": 1065,
+    "cost_usd": 0.053544
   },
   "analyst_checkpoint_done": true,
   "slate_game_times": [
