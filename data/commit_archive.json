@@ -1516,5 +1516,33 @@
     "tokens_in": 11329,
     "tokens_out": 3138,
     "cost_usd": 0.081057
+  },
+  {
+    "ts": "2026-05-06T23:11:00.286610+00:00",
+    "date": "2026-05-06",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 0,
+    "cancelled_count": 0,
+    "total_staked": 0.0,
+    "bankroll_before": 1283.81,
+    "bankroll_after": 1283.81,
+    "bets": [],
+    "cancelled": [],
+    "late_rejections": [
+      {
+        "match": "New York Knicks vs Philadelphia 76ers",
+        "reason": "NYK ML 1.22 fails ML floor (1.65). PHI ML 4.35 exceeds ML ceiling (2.50). NYK Spread -10.5 @ 1.92 passes odds range and EV mathematically (conf 62, EV 0.190) but rejected on qualitative grounds: playoff spread unpredictability at -10.5 with a desperate PHI team fighting elimination — PHI demonstrated playoff resilience all Round 1 (beat BOS 4-3 without Embiid), and the large-favourite spread rule (garbage-time risk pattern per skills) makes cover highly uncertain. O/U 214.0 has no clear directional edge: Embiid OUT reduces PHI scoring but NYK defense is strong; projected range straddles the line with insufficient confidence to reach 60 gate for a new late pick."
+      },
+      {
+        "match": "San Antonio Spurs vs Minnesota Timberwolves",
+        "reason": "SAS ML 1.24 fails ML floor (1.65). MIN ML 4.64 exceeds ML ceiling (2.50). SAS Spread -10.5 @ 1.96: base confidence 68 reduced to 58 (Edwards Questionable: -10) then further to 53 (playoff spread volatility with desperate MIN team down 1-0: -5); EV = 0.53 × 1.96 - 1 = 0.039, which falls below the required EV ≥ 0.05 threshold — rejected. O/U Under 217.5 @ 1.97: thesis valid (defensive teams, playoff pace, Edwards GTD) but confidence reaches only 53 after Questionable adjustment, below the 60 confidence gate required for new late picks per late_scout_triggers rules. Carter Bryant (SAS) Questionable is a non-franchise player — no material impact on assessment."
+      }
+    ],
+    "report": "## Commit Report — 2026-05-06T23:11:02Z | Bankroll: €1283.81\n\n### Task 1 — Draft Pick Review\nNo draft picks were passed from the Scout phase. Zero picks to review or cancel.\n\n### Task 2 — Late Scout\n\n**Data Quality**: Injury source is `nba_official` (full feed, 4 teams covered) — normal rules apply. Pace data is available. No data quality issues.\n\n#### LATE SCOUT — New York Knicks vs Philadelphia 76ers (23:00 UTC)\n\nKey update: O/U 214.0 (O:1.92/U:1.97) was not available at Scout — now available. Embiid status unchanged (OUT, confirmed nba_official). Mitchell Robinson added as Questionable (illness) for NYK.\n\n- **NYK ML 1.22**: Below 1.65 floor — rejected.\n- **PHI ML 4.35**: Above 2.50 ceiling — rejected.\n- **NYK Spread -10.5 @ 1.92**: Odds in valid range ✅. Embiid confirmed OUT ✅. NetRtg gap massive (25.9pts L15). After Robinson Questionable (-5) and baseline confidence of ~70, adjusted to 62. EV = 0.62 × 1.92 − 1 = 0.190 ✅. However, the skills explicitly flag the \"large-favourite spread garbage-time risk pattern\" for playoff games — with PHI fighting from 1-0 down in a desperate elimination scenario, having demonstrated playoff resilience all Round 1 (beat BOS 4-3 without Embiid), the -10.5 cover is too uncertain. The line is already priced reflecting Embiid's absence. Qualitative rejection: playoff spread rule + PHI's proven desperation resilience.\n- **O/U 214.0**: No clear directional edge — Embiid OUT reduces PHI offense but NYK's defense is strong; projected range straddles 214 without sufficient confidence to reach the 60-gate for a new late pick.\n\n#### LATE SCOUT — San Antonio Spurs vs Minnesota Timberwolves (01:30 UTC)\n\nKey updates: O/U 217.5 now available. Edwards remains Questionable (unchanged). Carter Bryant (SAS) added as Questionable — non-franchise player, minor impact. MIN ML moved from 4.35 → 4.64 (books adjusting, possibly reflecting Edwards uncertainty).\n\n- **SAS ML 1.24**: Below 1.65 floor — rejected.\n- **MIN ML 4.64**: Above 2.50 ceiling — rejected.\n- **SAS Spread -10.5 @ 1.96**: Massive L15 NetRtg gap (33.6pts). Wembanyama active ✅. Base confidence ~68. Edwards Questionable → -10 = 58. Playoff spread volatility with desperate MIN team (down 1-0, season on line) → -5 = 53. EV = 0.53 × 1.96 − 1 = **0.039 — FAILS EV ≥ 0.05 gate**. Rejected.\n- **O/U Under 217.5 @ 1.97**: Defensive teams, playoff pace, valid logic. Confidence reaches 63 (base 60, +3 for Edwards lean) → after Edwards Questionable adjustment (thesis works either way so standard -10) = **53 — below 60 confidence gate** for new late picks. Rejected.\n\n### Task 3 — Final Committed Bets\n\n**Zero bets confirmed.** No draft picks existed from Scout phase, and no late-scout edges met all required criteria (ML floor, ML ceiling, EV ≥ 0.05, confidence ≥ 60, playoff spread rules). Total exposure: €0.00 (0% of €1283.81 bankroll).\n\n**Slate Summary**: Tonight's two-game playoff slate (NYK/PHI, SAS/MIN) offers no viable betting angles at commit time. Both home teams are massive favourites with ML odds well below the 1.65 floor, while away ML prices exceed the 2.50 ceiling. The one mathematically viable pick (NYK -10.5) was rejected on qualitative playoff grounds — PHI's demonstrated resilience without Embiid makes a -10.5 cover in an elimination game too uncertain. The SAS spread failed the EV calculation after mandatory confidence reductions for Anthony Edwards' unresolved Questionable status. Bankroll of €1283.81 carries over intact to the next session.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 11025,
+    "tokens_out": 5026,
+    "cost_usd": 0.108465
   }
 ]
