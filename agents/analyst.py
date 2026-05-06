@@ -133,6 +133,53 @@ def _apply_patches(current_content: str, patches: list[dict],
     return _build_skills_file(meta, sections), applied
 
 
+def _sanitize_franchise_patches(patches: list[dict], verified: dict) -> list[dict]:
+    """
+    Strip player bullet lines from franchise_player_rules patches whose name
+    is not present in the verified statuses feed.  NOTE lines and team headers
+    are kept untouched — only "- Name (pos): status" style lines are filtered.
+
+    This hard-enforces what the prompt asks softly: no hallucinated players.
+    """
+    if not verified:
+        return patches  # nothing to validate against — pass through
+
+    # Build flat set of lower-cased verified player names
+    allowed = set()
+    for players in verified.values():
+        for p in players:
+            allowed.add(p["name"].lower())
+
+    result = []
+    for patch in patches:
+        if patch.get("section") != "franchise_player_rules":
+            result.append(patch)
+            continue
+
+        content = patch.get("new_content", "")
+        cleaned_lines = []
+        removed = []
+        for line in content.splitlines():
+            stripped = line.strip()
+            # Player bullet pattern: "- FirstName LastName (Pos): STATUS"
+            # All-caps words or short tokens after "- " indicate metadata, not a player name.
+            m = re.match(r'^-\s+([A-Z][a-z]+(?:\s+[A-Z][a-z\']+){1,3})\s*\(', stripped)
+            if m:
+                name = m.group(1).strip().lower()
+                if name not in allowed:
+                    removed.append(line)
+                    log.warning(f"Analyst: removed unverified player from franchise_player_rules: '{m.group(1).strip()}'")
+                    continue
+            cleaned_lines.append(line)
+
+        if removed:
+            patch = dict(patch)
+            patch["new_content"] = "\n".join(cleaned_lines)
+        result.append(patch)
+
+    return result
+
+
 # ── Performance summary for LLM context ───────────────────────────────────────
 
 def _perf_summary(state: dict) -> str:
@@ -515,14 +562,23 @@ def _franchise_status_text(statuses: dict) -> str:
     """Format verified franchise player statuses for Analyst prompt."""
     if not statuses:
         return "Franchise player verification: no notable absences confirmed from roster + injury feed."
-    lines = ["VERIFIED FRANCHISE PLAYER ABSENCES (confirmed via ESPN roster + NBA injury feed):"]
+    lines = [
+        "VERIFIED FRANCHISE PLAYER ABSENCES (confirmed via ESPN roster + NBA injury feed):",
+        "CRITICAL — HARD CONSTRAINT:",
+        "  1. When patching franchise_player_rules, list ONLY players whose name appears below.",
+        "  2. Each player entry must use the EXACT team shown here — never infer team from",
+        "     training knowledge. If you believe a player is on a different team, IGNORE that",
+        "     belief. This live feed is ground truth.",
+        "  3. A player NOT listed here must NOT appear in any franchise_player_rules patch.",
+        "  4. If a player from your training knowledge does not appear below, omit them entirely.",
+        "Violations (inventing players or wrong team affiliations) corrupt the skills file.",
+    ]
     for team, players in statuses.items():
         for p in players:
             verified = "[VERIFIED]" if p["verified"] else "[roster-only]"
             r = f" — {p['reason']}" if p.get("reason") else ""
             lines.append(f"  {team}: {p['name']} ({p['position']}) {p['status']}{r} [{verified}]")
-    lines.append("Use ONLY these verified names when patching franchise_player_rules.")
-    lines.append("Do NOT write any player name not in this list.")
+    lines.append("END OF VERIFIED LIST — no other players may be written into franchise_player_rules.")
     return "\n".join(lines)
 
 
@@ -712,6 +768,11 @@ def run(store) -> None:
         log.info(f"Analyst: {len(intelligence_gaps)} intelligence gap(s) identified")
         for g in intelligence_gaps:
             log.info(f"  GAP: {g.get('gap','?')[:100]}")
+
+    # ── Sanitize franchise_player_rules patches ───────────────────────────────
+    # Remove player bullet lines whose name isn't in the verified statuses feed.
+    # Prevents LLM hallucinating players onto wrong teams.
+    scout_patches = _sanitize_franchise_patches(scout_patches, franchise_statuses)
 
     log.info(f"Analyst: {len(scout_patches)} scout patches, {len(commit_patches)} commit patches, {len(playoff_context_patches)} playoff patches")
 

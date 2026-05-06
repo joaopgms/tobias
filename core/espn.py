@@ -133,6 +133,17 @@ def fetch_playoff_series() -> list[dict]:
                         game_num = int(m.group(1))
                     round_name = re.sub(r"\s*-\s*Game \d+", "", headline).strip()
 
+                # Cross-validate headline game number against win counts.
+                # ESPN headlines can carry stale or wrong numbers (e.g. "Game 7"
+                # when only 3 games have been played). wins-derived count is ground truth.
+                games_played = home_wins + away_wins
+                if game_num > 0 and games_played > 0 and abs(game_num - games_played) > 1:
+                    log.debug(
+                        f"fetch_playoff_series: headline game_num={game_num} but "
+                        f"wins {home_wins}+{away_wins}={games_played} — correcting"
+                    )
+                    game_num = games_played
+
                 series_map[key] = {
                     "home":         home_name,
                     "away":         away_name,
@@ -171,7 +182,13 @@ def format_playoff_series_for_prompt(series: list[dict]) -> str:
         else:
             line = f"{home} vs {away} tied {hw}-{hw}"
 
-        suffix = f" (Game {gnum + 1} next)" if gnum else ""
+        series_done = max(hw, aw) >= 4
+        if series_done:
+            suffix = " [COMPLETE]"
+        elif gnum:
+            suffix = f" (Game {gnum + 1} next)"
+        else:
+            suffix = ""
         if rnd:
             suffix += f" [{rnd}]"
         lines.append(f"  {line}{suffix}")
