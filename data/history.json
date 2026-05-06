@@ -23,7 +23,7 @@
           "game": 2,
           "started_at": "2026-04-05T10:44:07.102344+00:00",
           "bankroll_start": 1000.0,
-          "wins": 20,
+          "wins": 21,
           "losses": 15,
           "peak_bankroll": 1917.57,
           "total_bets": 36
@@ -1926,10 +1926,10 @@
             "Shai Gilgeous-Alexander",
             "LeBron James"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "WON",
+          "returned": 329.28,
+          "pnl": 161.28,
+          "settled_at": "2026-05-06T11:48:22.560962+00:00",
           "committed_at": "2026-05-05T22:55:55Z"
         }
       ],
