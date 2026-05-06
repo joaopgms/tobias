@@ -1,41 +1,41 @@
 ---
-date: 2026-05-04
+date: 2026-05-06
 llm: claude-sonnet-4-6
 scout_patches: 1
 commit_patches: 0
-milestone: daily (34 bets)
+milestone: daily (35 bets)
 ---
 
-## Today's Analysis — 2026-05-04
+## Today's Analysis — 2026-05-06
 
-The ESPN live feed is in a significant anomaly state this session — showing 'Game 8 next' for three best-of-7 series (DET-ORL, CLE-TOR, PHI-BOS all at 4-3) and 'Game 5 next' for OKC-PHX after a sweep. The most consequential potential development is PHI leading BOS 4-3: if PHI eliminated BOS, it would be the largest NetRtg upset this postseason (+8.4pt gap overcome) and would confirm that Jayson Tatum's roster-only OUT status was the decisive variable overriding all statistical signals — a critical validation of the franchise-player-overrides-NetRtg rule. The ML market has consistently underperformed (9W/13L, €-930) while spreads are positive (13W/12L, €+103) — Scout should actively prioritize spread markets in early Round 2 games where the NetRtg gap is large and home court is established, particularly OKC in any Round 2 matchup given their +11.1 NetRtg and dominant Round 1 sweep.
+The playoff picture has clarified significantly: four Round 2 series are confirmed active (NYK/DET/MIN/OKC each leading 1-0), and LAL-HOU Game 7 is the sole remaining Round 1 game. The most critical intelligence item today is re-verifying Anthony Edwards' status for MIN's Round 2 — he was roster-only OUT in Round 1 but MIN led DEN 4-2, and if he's active for Round 2, MIN's effective NetRtg is materially higher than the +3.1 season figure. Performance data continues to show ML is a loss market (-€930 on 22 bets, 40.9% win rate) while SPREAD (+€102.94) and TOTAL (+€372.73) are profitable — Scout should prioritise spread evaluation in Round 2 Game 2/3 matchups where NetRtg gaps exist, and avoid high-confidence ML bets given the clear pattern of over-confidence in that market (High confidence tier: 35.3% win rate, -€1,099).
 
 ## Performance Stats
-ALL-TIME: 25W / 27L | Win rate: 48.1% | P&L: €-615.71 | Avg odds: 1.94 | Avg conf: 65.8/100
-RECENT 20: 10W / 10L | 50.0% WR | P&L: €-303.54
-By market:      ML 22bets 9W/13L 40.9% €-930.10  |  SPREAD 25bets 13W/12L 52.0% €+102.94  |  TOTAL 5bets 3W/2L 60.0% €+211.45
-By confidence:  High 17bets 6W/11L 35.3% €-1099.81  |  Medium 33bets 19W/14L 57.6% €+625.41  |  Speculative 2bets 0W/2L 0.0% €-141.31
-By odds range:  1.70-1.89 17bets 7W/10L 41.2% €-1194.45  |  1.90-2.09 31bets 17W/14L 54.8% €+520.75  |  2.10-2.50 4bets 1W/3L 25.0% €+57.99
+ALL-TIME: 26W / 27L | Win rate: 49.1% | P&L: €-454.43 | Avg odds: 1.94 | Avg conf: 65.7/100
+RECENT 20: 10W / 10L | 50.0% WR | P&L: €-376.55
+By market:      ML 22bets 9W/13L 40.9% €-930.10  |  SPREAD 25bets 13W/12L 52.0% €+102.94  |  TOTAL 6bets 4W/2L 66.7% €+372.73
+By confidence:  High 17bets 6W/11L 35.3% €-1099.81  |  Medium 34bets 20W/14L 58.8% €+786.69  |  Speculative 2bets 0W/2L 0.0% €-141.31
+By odds range:  1.70-1.89 17bets 7W/10L 41.2% €-1194.45  |  1.90-2.09 32bets 18W/14L 56.2% €+682.03  |  2.10-2.50 4bets 1W/3L 25.0% €+57.99
 
 
 
 ## Scout patches applied
-- [franchise_player_rules] ESPN live feed confirms new series scores (East/West Semifinals starting at 0-0, Round 1 closers at 4-2/4-3) plus Kevin Huerter added to DET absence feed; all roster-only statuses preserved and series notes updated to reflect current bracket state.
+- [franchise_player_rules] Updated to reflect current ESPN live feed: NYK/MIN/DET/OKC all leading Round 2 1-0; LAL-HOU Game 7 and MIN-DEN Game 7 still active; series status for DET-ORL/CLE-TOR/PHI-BOS requires verification; Edwards status particularly important as MIN advanced to Round 2.
 
 ## Commit patches applied
 None
 
 ## Playoff context patches applied
-- [phase] ESPN live feed now shows two Round 2 series beginning (East and West Semifinals at 0-0 Game 2) alongside remaining Round 1 games, requiring phase update to reflect mixed playoff stage.
-- [series_context] ESPN live feed confirms two Round 2 series have begun (East and West Semifinals at 0-0 Game 2) while Round 1 final games continue, plus DET/CLE/PHI now show 4-3 leads with 'Game 8' anomalies requiring resolution.
-- [elimination_flags] ESPN live feed now shows DET/CLE/PHI all with 4-3 leads and 'Game 8 next' anomalies (impossible in best-of-7), plus Round 2 series beginning, requiring complete refresh of elimination flags.
-- [playoff_rest] Round 2 series beginning means teams advancing from Round 1 may have extended rest gaps before their first Semifinals game, requiring rest rule note for that scenario.
-- [playoff_motivation] ESPN live feed confirms Round 2 Semifinals have begun (0-0 Game 2) alongside remaining Round 1 games, requiring motivation hierarchy update for both phases simultaneously.
-- [h2h_playoff] ESPN live feed shows Round 2 beginning (0-0 Game 2 in both conferences) and Round 1 reaching 4-3 series scores, requiring full refresh of in-series signals and addition of Round 2 context.
-- [l15_caveat] ESPN live feed shows Round 2 beginning and Round 1 reaching conclusion with key NetRtg vs series result divergences fully established, requiring refresh of L15 caveat with Round 2-specific rules and updated divergence examples.
-- [no_tanking] Updating elimination list to reflect current bracket state including likely series conclusions from Round 1 4-3 results shown in ESPN feed.
+- [phase] ESPN live feed now shows four active Round 2 series with NYK/DET/MIN/OKC each leading 1-0, confirming their Round 1 series are complete; LAL-HOU Game 7 remains the only confirmed active Round 1 game.
+- [series_context] ESPN live feed confirms four active Round 2 series with NYK/DET/MIN/OKC each leading 1-0; this allows inference that their Round 1 opponents are eliminated and permits bracket reconstruction with the LAL-HOU Game 7 as the only remaining Round 1 game.
+- [elimination_flags] ESPN live feed confirming four Round 2 series allows inference of which Round 1 teams are eliminated; updated to reflect confirmed eliminations vs verified ones pending ESPN confirmation.
+- [playoff_motivation] Updated to reflect four active Round 2 series (NYK/DET/MIN/OKC each leading 1-0), LAL-HOU Game 7 as the only active Round 1 game, and added Edwards re-verification note given MIN's Round 2 advancement.
+- [h2h_playoff] Updated to reflect all four confirmed Round 2 series (NYK/DET/MIN/OKC leading 1-0), inferred Round 1 completions from bracket position, and carried forward key lesson about Edwards status re-verification for Round 2.
+- [no_tanking] Updated elimination flags to reflect Round 2 bracket confirming which Round 1 teams are eliminated, with appropriate verification flags for ESPN anomaly series.
+- [playoff_rest] Updated to reflect four active Round 2 series in early stages and the LAL-HOU Game 7 rest context; added note about teams closing Round 1 early having rest advantage over Game 7 survivors entering Round 2.
 
 ## Intelligence gaps identified
-- **Round 2 opponent identity is unknown for both East and West Semifinals — ESPN feed shows 'Tied 0-0 Game 2 next' without specifying which teams are playing.** — Scout cannot draft any Round 2 picks without knowing which teams are in each series — franchise player rules, NetRtg matchups, and home court all depend on knowing the exact matchup. → Scout MUST fetch ESPN scoreboard at draft time to identify Round 2 matchups before evaluating any pick. Add explicit instruction to priority_stats step 0 to verify Round 2 opponent from ESPN before any Semifinals pick.
-- **Three Round 1 series show 4-3 leads with 'Game 8 next' anomalies in ESPN feed — it is unclear whether DET, CLE, and PHI have already won their series or if there is a genuine scheduling issue.** — If PHI beat BOS 4-3 with Tatum OUT, this is the most important validation of franchise-player-overrides-NetRtg this postseason and would reshape Round 2 East Semifinals analysis entirely — Scout betting on wrong assumptions here would be costly. → Scout must include a mandatory ESPN series status re-verification step for all series showing anomalous game numbers (>7 in a best-of-7) before any pick is drafted. This is already in the rules but should be reinforced as a hard gate.
-- **Anthony Edwards (MIN) is listed as roster-only OUT but MIN leads DEN 4-2 in their series — suggesting either Edwards is actually playing (and the roster flag is stale) or MIN's depth has been sufficient, which is useful calibration data for how to weight franchise player absences.** — If Edwards has been out all series but MIN leads 4-2, it means MIN's betting edge has existed WITHOUT their franchise player — the current rule would have suppressed MIN picks unnecessarily and missed value. → Add a note to franchise_player_rules that in-series performance context can upgrade confidence on the team with a franchise player OUT — if that team leads 3-1 or 4-2, their out-player absence is already priced into the series result and should not receive fresh OUT penalty in Game 7.
+- **ML market is deeply unprofitable (9W/13L, 40.9%, -€930) while Spread (52%, +€103) and Total (66.7%, +€373) are profitable — but Scout may still be defaulting to ML picks when spread or total offers better edge** — The ML loss pattern is systematic, not noise — 13 losses on 22 bets with negative P&L despite reasonable odds. Spread and Total bets are both profitable. If Scout continues weighting ML as the default market, this structural loss will continue. → Add a 'market preference hierarchy' to selectivity or market_rules: when a spread edge exists (NetRtg gap > 6pts or B2B situation), EVALUATE spread first and only default to ML if spread confidence is below floor. This formalises what the data already shows.
+- **High confidence tier (70-84, 17 bets) has 35.3% win rate and -€1,099 — worse than Medium confidence (58.8%, +€787), suggesting the confidence scoring model is systematically over-confident** — This is the largest single P&L driver in the data. Bets placed with High confidence are losing at a rate that implies the true confidence should be 15-20 points lower on average. This could be causing over-staking on losing picks. → Consider adding a 'playoff confidence deflator' rule: in Round 2+ playoffs, apply confidence -10 to all High-tier picks before staking, since series-level variance and franchise player uncertainty make 75+ confidence picks less reliable. This would naturally push more picks into Medium staking range.
+- **Edwards re-verification: Anthony Edwards was roster-only OUT for all of Round 1, yet MIN led DEN 4-2 and advanced — his actual play status in Round 2 is unknown and could be the biggest single swing factor in West Semifinals picks** — If Edwards is active in Round 2, MIN's effective NetRtg is significantly higher than the +3.1 season figure, making MIN competitive even against DEN (+5.2) or another strong West team. Current franchise_player_rules still lists him as OUT from roster-only data. → Priority re-verification task for Scout before any MIN pick: cross-reference Edwards against NBA official PDF. If confirmed active, update franchise_player_rules to remove the OUT flag and recalibrate MIN confidence upward.
+- **Odds range 1.70-1.89 is significantly unprofitable (7W/10L, 41.2%, -€1,194) — the worst performing range — suggesting Scout is taking too many short-priced favourites that are correctly priced or slightly overpriced by books** — At 1.70-1.89 odds, a 41% win rate produces heavy negative EV. These are picks where Scout believes edge exists but the market is offering tight odds, leaving no margin for error. In Round 2 playoffs, short-priced favourites (e.g. OKC at home) will frequently fall in this range. → Add to selectivity: 'Avoid ML picks where odds fall in 1.70-1.89 range unless NetRtg gap ≥ 8pts AND home court confirmed AND no franchise player uncertainty. Prefer spread bet on same game instead.' This formalises the evidence showing this odds range consistently underperforms.
