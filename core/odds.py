@@ -83,40 +83,41 @@ def _normalise_theodds(g: dict) -> dict:
     ml_home = ml_away = spread = spread_odds_home = spread_odds_away = ou = None
     over_odds = under_odds = None
     bookmaker_used = "unknown"
-
-    # Try bookmakers in priority order
     bookmakers = g.get("bookmakers", [])
     bm_map = {b["key"]: b for b in bookmakers}
-    selected_bm = None
-    for key in EU_BOOKMAKERS:
-        if key in bm_map:
-            selected_bm = bm_map[key]
-            bookmaker_used = key
-            break
-    if not selected_bm and bookmakers:
-        selected_bm = bookmakers[0]
-        bookmaker_used = selected_bm.get("key", "unknown")
 
-    if selected_bm:
-        for market in selected_bm.get("markets", []):
-            key = market.get("key", "")
-            outcomes = market.get("outcomes", [])
-            if key == "h2h":
-                for o in outcomes:
-                    if o["name"] == home:   ml_home = o.get("price")
-                    elif o["name"] == away: ml_away = o.get("price")
-            elif key == "spreads":
-                for o in outcomes:
-                    if o["name"] == home:
-                        spread = o.get("point"); spread_odds_home = o.get("price")
-                    elif o["name"] == away:
-                        spread_odds_away = o.get("price")
-            elif key == "totals":
-                for o in outcomes:
-                    if o["name"] == "Over":
-                        ou = o.get("point"); over_odds = o.get("price")
-                    elif o["name"] == "Under":
-                        under_odds = o.get("price")
+    # Per-market bookmaker selection: for each market type use the highest-priority
+    # bookmaker that actually has that market. A single bookmaker may have ML but
+    # no totals — this ensures O/U can come from a different source if needed.
+    def _markets_for(bm: dict) -> dict:
+        return {m["key"]: m for m in bm.get("markets", [])}
+
+    all_bm_priority = [bm_map[k] for k in EU_BOOKMAKERS if k in bm_map]
+    if not all_bm_priority and bookmakers:
+        all_bm_priority = bookmakers  # last resort: whatever was returned
+
+    for bm in all_bm_priority:
+        mkts = _markets_for(bm)
+        if ml_home is None and "h2h" in mkts:
+            for o in mkts["h2h"].get("outcomes", []):
+                if o["name"] == home:   ml_home = o.get("price")
+                elif o["name"] == away: ml_away = o.get("price")
+            if ml_home is not None:
+                bookmaker_used = bm.get("key", bookmaker_used)
+        if spread is None and "spreads" in mkts:
+            for o in mkts["spreads"].get("outcomes", []):
+                if o["name"] == home:
+                    spread = o.get("point"); spread_odds_home = o.get("price")
+                elif o["name"] == away:
+                    spread_odds_away = o.get("price")
+        if ou is None and "totals" in mkts:
+            for o in mkts["totals"].get("outcomes", []):
+                if o["name"] == "Over":
+                    ou = o.get("point"); over_odds = o.get("price")
+                elif o["name"] == "Under":
+                    under_odds = o.get("price")
+        if ml_home is not None and spread is not None and ou is not None:
+            break  # all markets filled
 
     return {
         "home": home, "away": away, "time": start,
