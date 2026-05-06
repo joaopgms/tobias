@@ -1527,5 +1527,35 @@
     "tokens_in": 12612,
     "tokens_out": 1488,
     "cost_usd": 0.060156
+  },
+  {
+    "ts": "2026-05-06T17:18:28.769723+00:00",
+    "date": "2026-05-06",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_unibet",
+    "draft_count": 0,
+    "picks": [],
+    "rejected": [
+      {
+        "match": "New York Knicks vs Philadelphia 76ers",
+        "reason": "NYK ML 1.21 well below 1.60 minimum odds target. Spread -10.5 at 1.89 — Joel Embiid OUT for PHI (franchise player) is a significant edge signal but NYK L15 NetRtg +18.8 vs PHI L15 -7.1 is a massive gap (25.9pts). However, odds fail all market type floors: ML 1.21 (below 1.60 minimum), Spread -10.5 at 1.89 could qualify on odds but EV check: conf 72 × 1.89 − 1 = 0.361 seems strong, BUT PHI is without Embiid (franchise player OUT) and the line is already -10.5 reflecting that absence — books have priced this in. PHI spread +10.5 at 1.93: PHI without Embiid, massive NetRtg gap, playoff momentum — insufficient edge for PHI cover. No O/U available. NYK ML at 1.21 fails odds floor (minimum 1.60). NYK spread -10.5: confidence would be ~70 based on NetRtg gap and Embiid absence, EV = 0.70 × 1.89 − 1 = 0.323, but CRITICAL: spread anomaly flag — Embiid already OUT so line priced accordingly; at -10.5 with PHI depleted, covers become unpredictable in playoffs (garbage time, line movements). Primary disqualifier: NYK ML odds 1.21 fails the 1.60 floor. Spread considered but playoff spread rule: 'Do NOT bet LAL spread — garbage-time risk' pattern applies to large favourites in playoffs. Deferred.",
+        "ml_home": 1.21,
+        "ml_away": 4.5,
+        "decision": "rejected"
+      },
+      {
+        "match": "San Antonio Spurs vs Minnesota Timberwolves",
+        "reason": "SAS ML 1.22 below 1.60 minimum odds floor. SAS Spread -10.0 at 1.94 considered: SAS L15 NetRtg +34.7 vs MIN L15 +1.1 is a massive gap (33.6pts). Anthony Edwards QUESTIONABLE (Left Knee Bone Bruise) — franchise player uncertainty applies confidence -10, and if Edwards plays the gap narrows significantly. Edwards is ~50% to play per GTD/Questionable rules, and the pick cannot be built on his absence. With Edwards possibly active: MIN NetRtg gap shrinks materially. SAS spread -10.0 in playoffs: garbage-time risk, plus Edwards status unresolved — skills rules state 'Game-time decisions unresolved for either team' is a reason to avoid spreads. Additionally, Donte DiVincenzo (MIN) confirmed OUT. No O/U available. SAS ML at 1.22 fails 1.60 floor. Spread deferred due to Edwards GTD creating unresolved game-time decision for MIN franchise player.",
+        "ml_home": 1.22,
+        "ml_away": 4.35,
+        "decision": "rejected"
+      }
+    ],
+    "report": "Difficult slate for tonight — both games feature heavy home favourites priced well below the 1.60 ML minimum (SAS 1.22, NYK 1.21), eliminating ML picks entirely. Spread markets were evaluated but both face disqualifying issues: NYK vs PHI spread is priced at -10.5 already reflecting Embiid's confirmed absence (franchise player OUT, books have fully adjusted), making the edge unclear in a playoff context with garbage-time risk. SAS vs MIN spread is invalidated by Anthony Edwards' Questionable status (Left Knee Bone Bruise) — an unresolved franchise-player game-time decision that corrupts spread analysis. No O/U lines are available on either game. 0 picks drafted — correct outcome given odds floor failures and unresolved injury flags. Revisit SAS spread at Commit if Edwards is confirmed OUT before tip-off.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 12523,
+    "tokens_out": 1065,
+    "cost_usd": 0.053544
   }
 ]
