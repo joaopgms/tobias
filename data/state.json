@@ -9,16 +9,16 @@
   "net_pnl": 424.45,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-05-06T17:18:28.769723+00:00",
+  "last_updated": "2026-05-06T23:11:00.286610+00:00",
   "first_game_time": "2026-05-06T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
   "scout_updated_at": "2026-05-06T17:18:28.769723+00:00",
   "scout_odds_source": "theodds_unibet",
-  "commit_status": "pending",
-  "commit_updated_at": "2026-05-05T22:55:52.843110+00:00",
-  "commit_date": "2026-05-05",
+  "commit_status": "done",
+  "commit_updated_at": "2026-05-06T23:11:00.286610+00:00",
+  "commit_date": "2026-05-06",
   "analyst_updated_at": "2026-05-06T12:26:21.749533+00:00",
   "settler_updated_at": "2026-05-06T11:48:22.560962+00:00",
   "agent_models": {
@@ -27,7 +27,7 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "Difficult slate for tonight — both games feature heavy home favourites priced well below the 1.60 ML minimum (SAS 1.22, NYK 1.21), eliminating ML picks entirely. Spread markets were evaluated but both face disqualifying issues: NYK vs PHI spread is priced at -10.5 already reflecting Embiid's confirmed absence (franchise player OUT, books have fully adjusted), making the edge unclear in a playoff context with garbage-time risk. SAS vs MIN spread is invalidated by Anthony Edwards' Questionable status (Left Knee Bone Bruise) — an unresolved franchise-player game-time decision that corrupts spread analysis. No O/U lines are available on either game. 0 picks drafted — correct outcome given odds floor failures and unresolved injury flags. Revisit SAS spread at Commit if Edwards is confirmed OUT before tip-off.",
+  "last_report": "## Commit Report — 2026-05-06T23:11:02Z | Bankroll: €1283.81\n\n### Task 1 — Draft Pick Review\nNo draft picks were passed from the Scout phase. Zero picks to review or cancel.\n\n### Task 2 — Late Scout\n\n**Data Quality**: Injury source is `nba_official` (full feed, 4 teams covered) — normal rules apply. Pace data is available. No data quality issues.\n\n#### LATE SCOUT — New York Knicks vs Philadelphia 76ers (23:00 UTC)\n\nKey update: O/U 214.0 (O:1.92/U:1.97) was not available at Scout — now available. Embiid status unchanged (OUT, confirmed nba_official). Mitchell Robinson added as Questionable (illness) for NYK.\n\n- **NYK ML 1.22**: Below 1.65 floor — rejected.\n- **PHI ML 4.35**: Above 2.50 ceiling — rejected.\n- **NYK Spread -10.5 @ 1.92**: Odds in valid range ✅. Embiid confirmed OUT ✅. NetRtg gap massive (25.9pts L15). After Robinson Questionable (-5) and baseline confidence of ~70, adjusted to 62. EV = 0.62 × 1.92 − 1 = 0.190 ✅. However, the skills explicitly flag the \"large-favourite spread garbage-time risk pattern\" for playoff games — with PHI fighting from 1-0 down in a desperate elimination scenario, having demonstrated playoff resilience all Round 1 (beat BOS 4-3 without Embiid), the -10.5 cover is too uncertain. The line is already priced reflecting Embiid's absence. Qualitative rejection: playoff spread rule + PHI's proven desperation resilience.\n- **O/U 214.0**: No clear directional edge — Embiid OUT reduces PHI offense but NYK's defense is strong; projected range straddles 214 without sufficient confidence to reach the 60-gate for a new late pick.\n\n#### LATE SCOUT — San Antonio Spurs vs Minnesota Timberwolves (01:30 UTC)\n\nKey updates: O/U 217.5 now available. Edwards remains Questionable (unchanged). Carter Bryant (SAS) added as Questionable — non-franchise player, minor impact. MIN ML moved from 4.35 → 4.64 (books adjusting, possibly reflecting Edwards uncertainty).\n\n- **SAS ML 1.24**: Below 1.65 floor — rejected.\n- **MIN ML 4.64**: Above 2.50 ceiling — rejected.\n- **SAS Spread -10.5 @ 1.96**: Massive L15 NetRtg gap (33.6pts). Wembanyama active ✅. Base confidence ~68. Edwards Questionable → -10 = 58. Playoff spread volatility with desperate MIN team (down 1-0, season on line) → -5 = 53. EV = 0.53 × 1.96 − 1 = **0.039 — FAILS EV ≥ 0.05 gate**. Rejected.\n- **O/U Under 217.5 @ 1.97**: Defensive teams, playoff pace, valid logic. Confidence reaches 63 (base 60, +3 for Edwards lean) → after Edwards Questionable adjustment (thesis works either way so standard -10) = **53 — below 60 confidence gate** for new late picks. Rejected.\n\n### Task 3 — Final Committed Bets\n\n**Zero bets confirmed.** No draft picks existed from Scout phase, and no late-scout edges met all required criteria (ML floor, ML ceiling, EV ≥ 0.05, confidence ≥ 60, playoff spread rules). Total exposure: €0.00 (0% of €1283.81 bankroll).\n\n**Slate Summary**: Tonight's two-game playoff slate (NYK/PHI, SAS/MIN) offers no viable betting angles at commit time. Both home teams are massive favourites with ML odds well below the 1.65 floor, while away ML prices exceed the 2.50 ceiling. The one mathematically viable pick (NYK -10.5) was rejected on qualitative playoff grounds — PHI's demonstrated resilience without Embiid makes a -10.5 cover in an elimination game too uncertain. The SAS spread failed the EV calculation after mandatory confidence reductions for Anthony Edwards' unresolved Questionable status. Bankroll of €1283.81 carries over intact to the next session.",
   "draft_picks": [],
   "pending_bets": [],
   "settled_bets": [
@@ -767,57 +767,35 @@
   ],
   "late_scout_rejections": [
     {
-      "match": "Oklahoma City Thunder vs Los Angeles Lakers",
-      "reason": "OKC ML 1.11 — far outside ML floor of 1.65, no valid entry. LAL ML 8.35 — far above ML ceiling of 2.50, no valid entry. OKC spread -15.5 at 1.95 — odds within range but blowout/garbage-time risk in a massive-favourite scenario corrupts spread value; playoff rules caution against large spreads in potential blowouts; Jalen Williams OUT reduces OKC's offensive floor making garbage time less predictable. O/U 214.5 at 1.96 — ADDED AS LATE PICK (Under): both primary offensive stars OUT (Williams + Doncic), elite OKC defense, Game 7 deliberate pace, valid odds and EV."
+      "match": "New York Knicks vs Philadelphia 76ers",
+      "reason": "NYK ML 1.22 fails ML floor (1.65). PHI ML 4.35 exceeds ML ceiling (2.50). NYK Spread -10.5 @ 1.92 passes odds range and EV mathematically (conf 62, EV 0.190) but rejected on qualitative grounds: playoff spread unpredictability at -10.5 with a desperate PHI team fighting elimination — PHI demonstrated playoff resilience all Round 1 (beat BOS 4-3 without Embiid), and the large-favourite spread rule (garbage-time risk pattern per skills) makes cover highly uncertain. O/U 214.0 has no clear directional edge: Embiid OUT reduces PHI scoring but NYK defense is strong; projected range straddles the line with insufficient confidence to reach 60 gate for a new late pick."
+    },
+    {
+      "match": "San Antonio Spurs vs Minnesota Timberwolves",
+      "reason": "SAS ML 1.24 fails ML floor (1.65). MIN ML 4.64 exceeds ML ceiling (2.50). SAS Spread -10.5 @ 1.96: base confidence 68 reduced to 58 (Edwards Questionable: -10) then further to 53 (playoff spread volatility with desperate MIN team down 1-0: -5); EV = 0.53 × 1.96 - 1 = 0.039, which falls below the required EV ≥ 0.05 threshold — rejected. O/U Under 217.5 @ 1.97: thesis valid (defensive teams, playoff pace, Edwards GTD) but confidence reaches only 53 after Questionable adjustment, below the 60 confidence gate required for new late picks per late_scout_triggers rules. Carter Bryant (SAS) Questionable is a non-franchise player — no material impact on assessment."
     }
   ],
   "commit_report_data": {
-    "date": "2026-05-05",
-    "ts": "2026-05-05T22:55:52.843110+00:00",
-    "bets": [
-      {
-        "id": "nba_bet_20260505_001",
-        "match": "Oklahoma City Thunder vs Los Angeles Lakers",
-        "time": "2026-05-06T00:30:00Z",
-        "pick": "Under 214.5",
-        "odds": 1.96,
-        "stake": 168.0,
-        "potential_return": 328.56,
-        "confidence": 65,
-        "reasoning": "LATE SCOUT — NEW PICK. Game 7, OKC vs LAL. INJURY CONTEXT: Jalen Williams (OKC) confirmed OUT per NBA official PDF — primary OKC offensive weapon. Luka Doncic (LAL) confirmed OUT per NBA official PDF — LAL's primary creator. Two of the most impactful offensive players in this matchup are missing. DEFENSIVE PROFILE: OKC has the best DefRtg in the league (107.9) and NetRtg +11.1. Without Williams, OKC's offensive output is reduced but their defensive identity remains elite. LAL without Doncic has a significantly lower offensive ceiling — they've been winning this series 4-2 but Doncic's absence limits shot creation and offensive efficiency. GAME CONTEXT: Game 7 — historically deliberate, half-court oriented playoff basketball. Pace: OKC 99.3, LAL 98.3 — both below average pace in playoffs. Game 7 atmosphere typically further slows pace as both teams are cautious and defensive-minded. TOTAL ASSESSMENT: 214.5 already accounts for some offensive reduction, but with BOTH primary offensive stars absent and OKC's elite defense, the under is well-supported. Pace data available (non-zero) — no pace data flag. ODDS VALIDATION: 1.96 within O/U target range 1.75–2.05. EV = (0.65 × 1.96) - 1 = 0.274. SOURCE: nba_official — full confidence rules apply. TIME GATE: 95+ minutes to tip-off. STAKE: Confidence 65 = Medium tier (15-20%) → 15% of €1122.53 = €168.",
-        "anchor_players": [
-          "Jalen Williams",
-          "Luka Doncic",
-          "Shai Gilgeous-Alexander",
-          "LeBron James"
-        ],
-        "result": null,
-        "returned": null,
-        "pnl": null,
-        "settled_at": null,
-        "committed_at": "2026-05-05T22:55:55Z"
-      }
-    ],
-    "cancelled": [
-      {
-        "id": "nba_draft_20260505_001",
-        "match": "Detroit Pistons vs Cleveland Cavaliers",
-        "pick": "Detroit Pistons ML",
-        "reason": "Odds fell below confirmation floor. Scout odds 1.70 drifted to 1.63 at commit time. Commit ML floor is 1.65 — current odds of 1.63 are below this floor. Per cancel_criteria and line_movement_rules: 'Odds fell below confirmation floor'. Additionally, movement of -0.07 against would require confidence -10 recalculation, but the floor breach is the primary disqualifier."
-      }
-    ],
+    "date": "2026-05-06",
+    "ts": "2026-05-06T23:11:00.286610+00:00",
+    "bets": [],
+    "cancelled": [],
     "late_rejections": [
       {
-        "match": "Oklahoma City Thunder vs Los Angeles Lakers",
-        "reason": "OKC ML 1.11 — far outside ML floor of 1.65, no valid entry. LAL ML 8.35 — far above ML ceiling of 2.50, no valid entry. OKC spread -15.5 at 1.95 — odds within range but blowout/garbage-time risk in a massive-favourite scenario corrupts spread value; playoff rules caution against large spreads in potential blowouts; Jalen Williams OUT reduces OKC's offensive floor making garbage time less predictable. O/U 214.5 at 1.96 — ADDED AS LATE PICK (Under): both primary offensive stars OUT (Williams + Doncic), elite OKC defense, Game 7 deliberate pace, valid odds and EV."
+        "match": "New York Knicks vs Philadelphia 76ers",
+        "reason": "NYK ML 1.22 fails ML floor (1.65). PHI ML 4.35 exceeds ML ceiling (2.50). NYK Spread -10.5 @ 1.92 passes odds range and EV mathematically (conf 62, EV 0.190) but rejected on qualitative grounds: playoff spread unpredictability at -10.5 with a desperate PHI team fighting elimination — PHI demonstrated playoff resilience all Round 1 (beat BOS 4-3 without Embiid), and the large-favourite spread rule (garbage-time risk pattern per skills) makes cover highly uncertain. O/U 214.0 has no clear directional edge: Embiid OUT reduces PHI scoring but NYK defense is strong; projected range straddles the line with insufficient confidence to reach 60 gate for a new late pick."
+      },
+      {
+        "match": "San Antonio Spurs vs Minnesota Timberwolves",
+        "reason": "SAS ML 1.24 fails ML floor (1.65). MIN ML 4.64 exceeds ML ceiling (2.50). SAS Spread -10.5 @ 1.96: base confidence 68 reduced to 58 (Edwards Questionable: -10) then further to 53 (playoff spread volatility with desperate MIN team down 1-0: -5); EV = 0.53 × 1.96 - 1 = 0.039, which falls below the required EV ≥ 0.05 threshold — rejected. O/U Under 217.5 @ 1.97: thesis valid (defensive teams, playoff pace, Edwards GTD) but confidence reaches only 53 after Questionable adjustment, below the 60 confidence gate required for new late picks per late_scout_triggers rules. Carter Bryant (SAS) Questionable is a non-franchise player — no material impact on assessment."
       }
     ],
-    "total_staked": 168.0,
-    "bankroll_before": 1122.53,
-    "report": "### CANCELLED — Detroit Pistons ML\n\n- **Reason:** Odds fell below ML confirmation floor of 1.65 at commit time.\n- **Odds at cancel:** 1.63 (was 1.70 at scout time) | Movement: **-0.07 against**\n- The 7-point drift against our position pushed DET ML below the minimum acceptable floor (1.65). Even setting aside the required confidence -10 adjustment for adverse movement, the raw odds breach the floor. The market appears to have taken significant action on DET since Scout's 14:00 assessment — likely sharp money on the home favourite narrowing the line. Cannot confirm at 1.63. Cancelled per cancel_criteria: \"Odds fell below confirmation floor.\"\n\n---\n\n### CONFIRMED (Late Scout) — Under 214.5, OKC vs LAL\n\n- **Match:** Oklahoma City Thunder vs Los Angeles Lakers | Tip: 2026-05-06T00:30 UTC\n- **Pick:** Under 214.5 | Scout odds: N/A (new late pick) | Commit odds: 1.96 | Move: N/A\n- **ML:** OKC 1.11 / LAL 8.35 | **ATS:** OKC -15.5 (1.95/1.97) | **O/U:** 214.5 (O:1.96/U:1.96)\n- **Stake:** €168.00 | **Pot:** €328.56 | **Conf:** 65/100 | **EV:** 0.274\n- **Decision:** Late scout trigger confirmed. Both primary offensive anchors are OUT per NBA official PDF: Jalen Williams (OKC, Left Hamstring) and Luka Doncic (LAL, Left Hamstring). These are the two most impactful offensive players in this matchup. OKC possesses the league's best defense (DefRtg 107.9, NetRtg +11.1) and will be even more defensive-minded without their top offensive option. LAL's offensive ceiling drops dramatically without Doncic — they've survived the series 4-2 but rely on him for shot creation. Game 7 atmospherics produce deliberate, half-court basketball with both teams' pacing already below average. The 214.5 line, while not extreme, is undervaluing two franchise-caliber offensive absences simultaneously. O/U odds 1.96 are firmly within valid range (1.75–2.05). Time gate: 95+ minutes to tip. EV 0.274 well exceeds the 0.05 minimum. Injury source: nba_official — no fallback penalty. Pace data confirmed available (non-zero). Stake 15% of bankroll = €168, well within 70% exposure cap.\n\n---\n\n### SLATE SUMMARY\n\nTonight's commit phase produced one cancellation and one late addition. The DET ML pick was cancelled after odds drifted from 1.70 to 1.63, breaching the 1.65 commit-time floor — the market had clearly absorbed significant action on the Detroit home favourite. The late scout identified a compelling Under opportunity in OKC vs LAL Game 7, driven by confirmed late-breaking absences of both Jalen Williams and Luka Doncic (both Left Hamstring, NBA official source), combining OKC's elite defensive identity with Game 7 deliberate pace for a strong Under thesis at odds of 1.96. Total exposure is €168 (15% of bankroll), well within limits.",
-    "tokens_in": 11329,
-    "tokens_out": 3138,
-    "cost_usd": 0.081057
+    "total_staked": 0.0,
+    "bankroll_before": 1283.81,
+    "report": "## Commit Report — 2026-05-06T23:11:02Z | Bankroll: €1283.81\n\n### Task 1 — Draft Pick Review\nNo draft picks were passed from the Scout phase. Zero picks to review or cancel.\n\n### Task 2 — Late Scout\n\n**Data Quality**: Injury source is `nba_official` (full feed, 4 teams covered) — normal rules apply. Pace data is available. No data quality issues.\n\n#### LATE SCOUT — New York Knicks vs Philadelphia 76ers (23:00 UTC)\n\nKey update: O/U 214.0 (O:1.92/U:1.97) was not available at Scout — now available. Embiid status unchanged (OUT, confirmed nba_official). Mitchell Robinson added as Questionable (illness) for NYK.\n\n- **NYK ML 1.22**: Below 1.65 floor — rejected.\n- **PHI ML 4.35**: Above 2.50 ceiling — rejected.\n- **NYK Spread -10.5 @ 1.92**: Odds in valid range ✅. Embiid confirmed OUT ✅. NetRtg gap massive (25.9pts L15). After Robinson Questionable (-5) and baseline confidence of ~70, adjusted to 62. EV = 0.62 × 1.92 − 1 = 0.190 ✅. However, the skills explicitly flag the \"large-favourite spread garbage-time risk pattern\" for playoff games — with PHI fighting from 1-0 down in a desperate elimination scenario, having demonstrated playoff resilience all Round 1 (beat BOS 4-3 without Embiid), the -10.5 cover is too uncertain. The line is already priced reflecting Embiid's absence. Qualitative rejection: playoff spread rule + PHI's proven desperation resilience.\n- **O/U 214.0**: No clear directional edge — Embiid OUT reduces PHI offense but NYK's defense is strong; projected range straddles 214 without sufficient confidence to reach the 60-gate for a new late pick.\n\n#### LATE SCOUT — San Antonio Spurs vs Minnesota Timberwolves (01:30 UTC)\n\nKey updates: O/U 217.5 now available. Edwards remains Questionable (unchanged). Carter Bryant (SAS) added as Questionable — non-franchise player, minor impact. MIN ML moved from 4.35 → 4.64 (books adjusting, possibly reflecting Edwards uncertainty).\n\n- **SAS ML 1.24**: Below 1.65 floor — rejected.\n- **MIN ML 4.64**: Above 2.50 ceiling — rejected.\n- **SAS Spread -10.5 @ 1.96**: Massive L15 NetRtg gap (33.6pts). Wembanyama active ✅. Base confidence ~68. Edwards Questionable → -10 = 58. Playoff spread volatility with desperate MIN team (down 1-0, season on line) → -5 = 53. EV = 0.53 × 1.96 − 1 = **0.039 — FAILS EV ≥ 0.05 gate**. Rejected.\n- **O/U Under 217.5 @ 1.97**: Defensive teams, playoff pace, valid logic. Confidence reaches 63 (base 60, +3 for Edwards lean) → after Edwards Questionable adjustment (thesis works either way so standard -10) = **53 — below 60 confidence gate** for new late picks. Rejected.\n\n### Task 3 — Final Committed Bets\n\n**Zero bets confirmed.** No draft picks existed from Scout phase, and no late-scout edges met all required criteria (ML floor, ML ceiling, EV ≥ 0.05, confidence ≥ 60, playoff spread rules). Total exposure: €0.00 (0% of €1283.81 bankroll).\n\n**Slate Summary**: Tonight's two-game playoff slate (NYK/PHI, SAS/MIN) offers no viable betting angles at commit time. Both home teams are massive favourites with ML odds well below the 1.65 floor, while away ML prices exceed the 2.50 ceiling. The one mathematically viable pick (NYK -10.5) was rejected on qualitative playoff grounds — PHI's demonstrated resilience without Embiid makes a -10.5 cover in an elimination game too uncertain. The SAS spread failed the EV calculation after mandatory confidence reductions for Anthony Edwards' unresolved Questionable status. Bankroll of €1283.81 carries over intact to the next session.",
+    "tokens_in": 11025,
+    "tokens_out": 5026,
+    "cost_usd": 0.108465
   },
   "netrtg_l15": {
     "Charlotte Hornets": 16.9,
