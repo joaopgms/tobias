@@ -56,6 +56,9 @@ def _theodds_nba_odds(api_key: str) -> list[dict]:
             games = resp.json()
             remaining = resp.headers.get("x-requests-remaining", "?")
             log.info(f"The-Odds-API ({regions}): {len(games)} NBA games | requests remaining: {remaining}")
+            for g in games:
+                present = sorted({b["key"] for b in g.get("bookmakers", [])})
+                log.debug(f"  {g.get('away_team','?')} @ {g.get('home_team','?')}: bookmakers present = {present}")
             return [_normalise_theodds(g) for g in games if g]
         except Exception as e:
             log.warning(f"The-Odds-API ({regions}) error: {e}")
@@ -118,6 +121,11 @@ def _normalise_theodds(g: dict) -> dict:
                     under_odds = o.get("price")
         if ml_home is not None and spread is not None and ou is not None:
             break  # all markets filled
+
+    log.debug(
+        f"  {away} @ {home}: ML={bookmaker_used} spread={'yes' if spread else 'NO'} "
+        f"ou={'yes' if ou else 'NO'}"
+    )
 
     return {
         "home": home, "away": away, "time": start,
