@@ -29,3 +29,4 @@
 {"ts": "2026-05-04T11:49:34.731586+00:00", "agent": "settler", "settled_count": 0, "wins": 0, "losses": 0, "skipped": [], "bust": false, "bankroll_before": 1122.53, "bankroll_after": 1122.53, "pnl_today": 0.0}
 {"ts": "2026-05-05T11:15:51.935938+00:00", "agent": "settler", "settled_count": 0, "wins": 0, "losses": 0, "skipped": [], "bust": false, "bankroll_before": 1122.53, "bankroll_after": 1122.53, "pnl_today": 0.0}
 {"ts": "2026-05-06T11:48:22.560962+00:00", "agent": "settler", "settled_count": 1, "wins": 1, "losses": 0, "skipped": [], "bust": false, "bankroll_before": 954.53, "bankroll_after": 1283.81, "pnl_today": 329.28}
+{"ts": "2026-05-07T11:48:37.615762+00:00", "agent": "settler", "settled_count": 0, "wins": 0, "losses": 0, "skipped": [], "bust": false, "bankroll_before": 1283.81, "bankroll_after": 1283.81, "pnl_today": 0.0}
