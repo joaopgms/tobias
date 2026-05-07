@@ -26,7 +26,7 @@
           "wins": 21,
           "losses": 15,
           "peak_bankroll": 1917.57,
-          "total_bets": 36
+          "total_bets": 37
         }
       ]
     }
@@ -1947,6 +1947,48 @@
       "cancelled_picks": [],
       "bets": [],
       "summary": "Day 2026-05-06 commit — 0 bets totalling €0.00. 0 cancelled. Bankroll: €1283.81 → €1283.81."
+    },
+    {
+      "entry_id": "nba_entry_20260507",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-05-07T22:18:38.155969+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1283.81,
+      "total_staked": 192.57,
+      "bankroll_after": 1091.24,
+      "cancelled_picks": [
+        {
+          "id": "nba_draft_20260507_001",
+          "match": "Detroit Pistons vs Cleveland Cavaliers",
+          "pick": "Detroit Pistons ML",
+          "reason": "Odds out of valid range at commit time: current odds 1.61 fall below commit-time ML floor of 1.65 (Scout floor 1.70 minus 0.05 drift allowance = 1.65). Scout erroneously validated at 1.60 floor — Commit applies correct floor of 1.65 per skills. Odds unchanged at 1.61 from Scout draft."
+        }
+      ],
+      "bets": [
+        {
+          "id": "nba_bet_20260507_001",
+          "match": "Detroit Pistons vs Cleveland Cavaliers",
+          "time": "2026-05-07T23:00:00Z",
+          "pick": "Detroit Pistons -3.5",
+          "odds": 1.89,
+          "stake": 192.57,
+          "potential_return": 364.0,
+          "confidence": 65,
+          "reasoning": "ODDS VALIDATION: 1.89 within spread target range (1.75–2.30) ✅. No line movement since Scout (0.00 change). ANCHOR PLAYER CHECK: Cade Cunningham (NOT on injury report — Active ✅), Isaiah Stewart (NOT on injury report — Active ✅), Donovan Mitchell/CLE (NOT on injury report — Active ✅). Kevin Huerter (DET) remains Doubtful (Left Adductor) — role player, not franchise player, Scout already accounted for; bet thesis does NOT depend on his absence. Sam Merrill (CLE) Questionable — role player, no impact. THESIS INTACT: DET L15 NetRtg +25.4 vs CLE -1.5 = 26.9pt gap, strongest available spread signal. DET home court advantage (Little Caesars Arena, higher seed 60-22 vs 52-30) worth 3-4pts in playoffs. DET leads series 1-0 (Game 2 at home). Season NetRtg DET +8.2 vs CLE +4.0 (4.2pt gap). No franchise player concerns for either team. Playoff home court is decisive tiebreaker. EV RECALCULATION: EV = (0.65 × 1.89) - 1 = 1.2285 - 1 = 0.229 ✅ (≥ 0.05). STAKE: Confidence 65 = Medium tier (15% of €1,283.81 = €192.57). Total exposure 15.0% of bankroll — well within 70% cap. INJURY SOURCE: nba_official, 4-team coverage — full data quality, normal rules apply.",
+          "anchor_players": [
+            "Cade Cunningham",
+            "Isaiah Stewart",
+            "Donovan Mitchell"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-05-07T22:18:40Z"
+        }
+      ],
+      "summary": "Day 2026-05-07 commit — 1 bets totalling €192.57. 1 cancelled. Bankroll: €1283.81 → €1091.24."
     }
   ]
 }
