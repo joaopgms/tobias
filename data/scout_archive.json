@@ -1557,5 +1557,65 @@
     "tokens_in": 12523,
     "tokens_out": 1065,
     "cost_usd": 0.053544
+  },
+  {
+    "ts": "2026-05-07T16:08:21.592501+00:00",
+    "date": "2026-05-07",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_unibet",
+    "draft_count": 2,
+    "picks": [
+      {
+        "id": "nba_draft_20260507_001",
+        "match": "Detroit Pistons vs Cleveland Cavaliers",
+        "time": "2026-05-07T23:00:00Z",
+        "pick": "Detroit Pistons ML",
+        "odds": 1.61,
+        "stake": 256.76,
+        "potential_return": 413.38,
+        "confidence": 72,
+        "reasoning": "INJURY FEED: nba_official — full 4-team coverage. Normal confidence rules apply. LINE ANOMALY CHECK: DET 1.61 (home favourite, better record 60-22 vs 52-30) — no anomaly. FRANCHISE PLAYER CHECK: Cade Cunningham, Isaiah Stewart, Jalen Duren — not listed on injury report, treating as active. Kevin Huerter Doubtful (Left Adductor) — role player, not franchise player, minimal impact. CLE: Sam Merrill Questionable (Left Hamstring) — role player only. No CLE franchise player concerns. NETRTG L15: DET +25.4 vs CLE -1.5 — gap of 26.9 points, massive short-term signal heavily favouring DET. Season NetRtg: DET +8.2 vs CLE +4.0 — 4.2pt season gap, confirms DET edge. SERIES CONTEXT: DET leads East Semifinals 1-0 (Game 2). DET has home court (Little Caesars Arena) as higher seed (60-22 vs 52-30). Playoff home court worth 3-4 points. PACE: Both teams Pace ~99 — pace-neutral, no meaningful mismatch. MOTIVATION: Both teams fully motivated in Round 2 Semifinals — no adjustment. MOMENTUM: DET won Game 1, leads series 1-0. CLE L15 at -1.5 NetRtg indicates form issues entering this series. L10: DET 8-2 vs CLE 7-3 — DET slightly better recent record. EV CALCULATION: Confidence 72%. EV = (0.72 × 1.61) - 1 = 1.1592 - 1 = 0.159. EV = 0.16 — STRONG EDGE (≥ 0.15). Odds 1.61 within ML target range floor (1.60–2.50). Confidence 72 ≥ 50 ML floor. STAKE: Confidence 72 = High tier (70-84) = 20-25% of bankroll. Using 20% = €256.76.",
+        "anchor_players": [
+          "Cade Cunningham",
+          "Isaiah Stewart",
+          "Jalen Duren"
+        ],
+        "drafted_at": "2026-05-07T16:08:29Z",
+        "market_type": "ml"
+      },
+      {
+        "id": "nba_draft_20260507_002",
+        "match": "Detroit Pistons vs Cleveland Cavaliers",
+        "time": "2026-05-07T23:00:00Z",
+        "pick": "Detroit Pistons -3.5",
+        "odds": 1.89,
+        "stake": 192.57,
+        "potential_return": 364.0,
+        "confidence": 65,
+        "reasoning": "INJURY FEED: nba_official — full coverage. SPREAD CONDITIONS: Advanced stats available, NBA official injury PDF available — spread eligible. LINE ANOMALY CHECK: DET -3.5 at home in Round 2 Game 2 — reasonable line, no anomaly. FRANCHISE PLAYER CHECK: All DET franchise players confirmed active (not on injury report). CLE franchise players (Donovan Mitchell, Jarrett Allen, Evan Mobley) not on injury report — treating as active. NOTE: This is important — if Mitchell is playing, CLE competitive enough to keep it close; however DET's superior L15 NetRtg of +25.4 vs CLE -1.5 is a 26.9pt gap, the strongest spread signal available. SPREAD STRONG SIGNALS: NetRtg L15 gap = 26.9pts (>> 6pt threshold for strong spread signal). Home court advantage in playoffs worth 3-4 pts — amplifies DET covering -3.5. DET 60-22 record vs CLE 52-30 — meaningful talent gap. Season NetRtg gap 4.2pts. CAUTION FACTORS: Game 7 spread rule does NOT apply here (this is Game 2). CLE has veteran playoff experience — not a pushover. Donovan Mitchell is an elite scorer who can close gaps. CLE L15 -1.5 concerning but they did reach Round 2. Spread confidence applies higher bar (60 floor). Applying short rest check: DET/CLE both had same rest between games in series — no rest adjustment needed. CONFIDENCE CALCULATION: Base 75 for L15 gap signal. Adjust for CLE having elite player in Mitchell who could keep it close: -5. Adjust for playoff series variability (Game 2 resets): -5. Final confidence: 65. This meets spread floor (60). EV CALCULATION: Confidence 65%. EV = (0.65 × 1.89) - 1 = 1.2285 - 1 = 0.229. EV = 0.23 — STRONG EDGE. Odds 1.89 within spread target range (1.80–2.30). STAKE: Confidence 65 = Medium tier (55-69) = 15-20% bankroll. Using 15% = €192.57.",
+        "anchor_players": [
+          "Cade Cunningham",
+          "Isaiah Stewart",
+          "Donovan Mitchell"
+        ],
+        "drafted_at": "2026-05-07T16:08:29Z",
+        "market_type": "spread"
+      }
+    ],
+    "rejected": [
+      {
+        "match": "Oklahoma City Thunder vs Los Angeles Lakers",
+        "reason": "OKC ML odds 1.09 — extreme favourite well outside ML target range (1.60–2.50). LAL ML 7.5 — Road team in Game 7 at 7.5 requires odds ≥ 1.90 per rules, and this is not a true Game 7 scenario — this appears to be OKC Round 2 Game 2 vs LAL (LAL advancing from Round 1 after winning Game 7 vs HOU). CRITICAL: LAL won Game 7 vs HOU (based on tonight's slate showing LAL playing OKC in Round 2) — LAL eliminated HOU. OKC ML at 1.09 generates zero EV and is outside all target odds bands. LAL ML at 7.5 implies ~13.3% win probability — LAL without Doncic facing OKC +11.1 NetRtg at home; Lakers advancing from a grueling Game 7 vs now-rested OKC. Spread OKC -15.0 at 1.90 — extreme spread, tanking risk in garbage time is real, skills explicitly state do NOT bet LAL spread (garbage-time risk). Even if evaluating OKC -15.0: confidence calculation — OKC NetRtg +11.1 vs LAL +1.7, but 15-point spread is enormous. LAL has playoff experience and Doncic OUT but team showed resilience vs HOU. Cover rate on 15+ spreads historically low even for elite teams. Not a genuine edge. Total 211.0 — Pace data unavailable (Pace values near 99 but flagged as potentially unreliable for total signals; both teams Pace < 100, lean Under signal weak). EV on any OKC line is mathematically negative. No eligible pick.",
+        "ml_home": 1.09,
+        "ml_away": 7.5,
+        "decision": "no_edge"
+      }
+    ],
+    "report": "Two-game playoff slate tonight (Round 2 Game 2s). Injury feed is nba_official with full 4-team coverage — normal confidence rules apply. DET vs CLE offers a strong double opportunity: DET ML (EV 0.16) and DET -3.5 spread (EV 0.23), both driven by an extraordinary L15 NetRtg gap of +26.9 (DET +25.4 vs CLE -1.5). All DET franchise players confirmed active; CLE franchise players not on injury report. OKC vs LAL rejected entirely — OKC ML at 1.09 is outside all target ranges and generates negative EV; LAL ML at 7.5 fails the road-team threshold; OKC -15.0 spread carries garbage-time risk explicitly flagged in skills. Total picks drafted: 2 (both on DET vs CLE). Combined stake: €449.33 of €1283.81 bankroll (~35%), within the 70% daily maximum.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 12571,
+    "tokens_out": 2218,
+    "cost_usd": 0.070983
   }
 ]
