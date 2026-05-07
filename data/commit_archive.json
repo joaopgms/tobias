@@ -1544,5 +1544,58 @@
     "tokens_in": 11025,
     "tokens_out": 5026,
     "cost_usd": 0.108465
+  },
+  {
+    "ts": "2026-05-07T22:18:38.155969+00:00",
+    "date": "2026-05-07",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 1,
+    "cancelled_count": 1,
+    "total_staked": 192.57,
+    "bankroll_before": 1283.81,
+    "bankroll_after": 1091.24,
+    "bets": [
+      {
+        "id": "nba_bet_20260507_001",
+        "match": "Detroit Pistons vs Cleveland Cavaliers",
+        "time": "2026-05-07T23:00:00Z",
+        "pick": "Detroit Pistons -3.5",
+        "odds": 1.89,
+        "stake": 192.57,
+        "potential_return": 364.0,
+        "confidence": 65,
+        "reasoning": "ODDS VALIDATION: 1.89 within spread target range (1.75–2.30) ✅. No line movement since Scout (0.00 change). ANCHOR PLAYER CHECK: Cade Cunningham (NOT on injury report — Active ✅), Isaiah Stewart (NOT on injury report — Active ✅), Donovan Mitchell/CLE (NOT on injury report — Active ✅). Kevin Huerter (DET) remains Doubtful (Left Adductor) — role player, not franchise player, Scout already accounted for; bet thesis does NOT depend on his absence. Sam Merrill (CLE) Questionable — role player, no impact. THESIS INTACT: DET L15 NetRtg +25.4 vs CLE -1.5 = 26.9pt gap, strongest available spread signal. DET home court advantage (Little Caesars Arena, higher seed 60-22 vs 52-30) worth 3-4pts in playoffs. DET leads series 1-0 (Game 2 at home). Season NetRtg DET +8.2 vs CLE +4.0 (4.2pt gap). No franchise player concerns for either team. Playoff home court is decisive tiebreaker. EV RECALCULATION: EV = (0.65 × 1.89) - 1 = 1.2285 - 1 = 0.229 ✅ (≥ 0.05). STAKE: Confidence 65 = Medium tier (15% of €1,283.81 = €192.57). Total exposure 15.0% of bankroll — well within 70% cap. INJURY SOURCE: nba_official, 4-team coverage — full data quality, normal rules apply.",
+        "anchor_players": [
+          "Cade Cunningham",
+          "Isaiah Stewart",
+          "Donovan Mitchell"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null,
+        "committed_at": "2026-05-07T22:18:40Z"
+      }
+    ],
+    "cancelled": [
+      {
+        "id": "nba_draft_20260507_001",
+        "match": "Detroit Pistons vs Cleveland Cavaliers",
+        "pick": "Detroit Pistons ML",
+        "reason": "Odds out of valid range at commit time: current odds 1.61 fall below commit-time ML floor of 1.65 (Scout floor 1.70 minus 0.05 drift allowance = 1.65). Scout erroneously validated at 1.60 floor — Commit applies correct floor of 1.65 per skills. Odds unchanged at 1.61 from Scout draft."
+      }
+    ],
+    "late_rejections": [
+      {
+        "match": "Oklahoma City Thunder vs Los Angeles Lakers",
+        "reason": "No eligible market found at commit time. OKC ML 1.09 — far below floor of 1.65, negative EV, no viable pick. LAL ML 7.50 — above ceiling of 2.50, ineligible. OKC -15.0 spread at 1.91: odds in valid range, but confidence only ~50-52% on a 15-point playoff spread vs playoff-tested LAL (LeBron + AD both active), yielding EV ≤ 0.00 at confidence 50 and below threshold at realistic confidence estimate; skills also flag garbage-time risk on extreme LAL spreads. O/U 211.0 at 1.93/1.95: no strong directional signal — OKC and LAL both ~99 pace, playoff slowdown standard, tired LAL legs marginally favour Under but confidence only ~52-53%, EV = (0.53 × 1.95) - 1 = 0.034, below required 0.05 gate. No new injury developments since Scout — Jalen Williams and Luka Doncic both confirmed OUT as previously known; SGA, Chet Holmgren, LeBron, Anthony Davis all confirmed active. No late-breaking edge materialised."
+      }
+    ],
+    "report": "### CANCELLED — Detroit Pistons ML\n- Reason: Odds out of valid range at commit time. Current odds 1.61 fall below the commit-time ML floor of 1.65 (Scout floor 1.70 minus the 0.05 drift allowance = 1.65 minimum). The Scout drafted this pick at 1.61 using an incorrect floor of 1.60 — Commit applies the correct floor per skills v5. Odds are unchanged (no movement since Scout), so this is not a line movement cancellation but a floor correction.\n- Odds at cancel: 1.61 (was 1.61 at Scout time — no movement; floor mismatch identified at Commit re-validation)\n\n---\n\n### CONFIRMED — Detroit Pistons -3.5\n- Match: Detroit Pistons vs Cleveland Cavaliers | Tip: 2026-05-07T23:00 UTC\n- Pick: Detroit Pistons -3.5 | Scout odds: 1.89 | Commit odds: 1.89 | Move: 0.00 (no change)\n- ML: DET 1.61 / CLE 2.33 | ATS: -3.5 (1.89/1.93) | O/U: 215.5 (O:1.95/U:1.93)\n- Stake: €192.57 | Pot: €364.00 | Conf: 65/100 | EV: 0.229\n- Decision: All validation checks passed. Odds 1.89 within spread range (1.75–2.30). All anchor players confirmed active: Cade Cunningham, Isaiah Stewart (DET), Donovan Mitchell (CLE) — none on injury report. Kevin Huerter (DET) remains Doubtful but is a role player; bet thesis does not depend on any player absence and is grounded in DET's dominant L15 NetRtg gap (+25.4 vs -1.5 = 26.9pts), home court playoff advantage (3-4pts), series lead 1-0, and superior season record/NetRtg. EV of 0.229 is a strong edge. Stake 15.0% of bankroll, well within 70% cap.\n\n---\n\n### LATE SCOUT — Oklahoma City Thunder vs Los Angeles Lakers\n- No viable pick identified. All OKC/LAL markets ineligible: OKC ML at 1.09 far below floor; LAL ML at 7.50 above ceiling; OKC -15.0 spread has insufficient confidence (~50-52%) for a 15-point playoff spread yielding sub-0.05 EV; O/U 211.0 has no strong directional signal with EV of ~0.034 at realistic confidence. No new injury developments changed the picture from Scout's rejection.\n\n---\n\n**Slate Summary:** One pick confirmed (DET -3.5) from two draft picks, with the DET ML cancelled due to odds falling below the commit-time floor of 1.65. Total committed exposure is €192.57 (15.0% of bankroll), leaving significant reserves intact. The OKC-LAL game remains a rejected slate with no eligible market — extreme odds on OKC and insufficient confidence on any spread/total line preclude any action.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 12146,
+    "tokens_out": 4792,
+    "cost_usd": 0.108318
   }
 ]
