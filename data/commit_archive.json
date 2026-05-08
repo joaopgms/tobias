@@ -1597,5 +1597,40 @@
     "tokens_in": 12146,
     "tokens_out": 4792,
     "cost_usd": 0.108318
+  },
+  {
+    "ts": "2026-05-08T22:19:18.178882+00:00",
+    "date": "2026-05-08",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 0,
+    "cancelled_count": 1,
+    "total_staked": 0.0,
+    "bankroll_before": 1455.2,
+    "bankroll_after": 1455.2,
+    "bets": [],
+    "cancelled": [
+      {
+        "id": "nba_draft_20260508_001",
+        "match": "Philadelphia 76ers vs New York Knicks",
+        "pick": "New York Knicks ML",
+        "reason": "Anchor player OG Anunoby confirmed OUT at commit time (upgraded from Questionable to OUT per NBA official injury report). Additionally, current odds 2.52 exceed ML ceiling of 2.50, placing them outside valid range. Two independent cancellation triggers: (1) Anchor [OG Anunoby] OUT confirmed at commit time; (2) Odds out of valid range at commit time (2.52 > 2.50 ceiling)."
+      }
+    ],
+    "late_rejections": [
+      {
+        "match": "Philadelphia 76ers vs New York Knicks",
+        "reason": "NYK ML 2.52 exceeds ceiling (2.50) — invalid. PHI ML 1.60 below floor (1.65) — invalid. PHI -3.5 spread at 1.93: cannot reach confidence ≥ 60 — PHI L15 -7.1 vs NYK +18.8 gap too large, Embiid Questionable undermines PHI offensive ceiling. NYK +3.5 at 1.99: confidence assessed at 55 after Embiid GTD adjustment (-10), below the 60 confidence gate required for new Commit-phase picks. O/U 214.5: no thesis above 60 confidence given pace mismatch and injury uncertainty."
+      },
+      {
+        "match": "Minnesota Timberwolves vs San Antonio Spurs",
+        "reason": "SAS ML 1.50 below ML floor (1.65) — invalid. MIN ML 2.85 above ML ceiling (2.50) — invalid. MIN +5.5 at 1.95: base confidence ~58 before Edwards Questionable adjustment (-10) drops to 48, below both the 50-minimum tier and the 60 confidence gate for new Commit picks. SAS L15 +34.7 vs MIN L15 +1.1 gap (33.6 pts) is dominant signal against MIN covering even +5.5. SAS -5.5 at 1.97: confidence ~55-58 for road team laying 5.5 in playoffs — below 60 gate, and playoff home court (3-4 pts) makes this spread unfavourable for SAS. O/U 216.5: no thesis above 60 confidence. No valid market entry for this game."
+      }
+    ],
+    "report": "### CANCELLED — New York Knicks ML (nba_draft_20260508_001)\n- **Match:** Philadelphia 76ers vs New York Knicks | Tip: 2026-05-08T23:00Z\n- **Pick:** NYK ML | Scout odds: 2.10 | Commit odds: 2.52 | Move: +0.42 (massive move IN favour, but triggers major signal check)\n- **ML:** PHI 1.60 / NYK 2.52 | **Spread (PHI):** -3.5 (1.93/1.99) | **O/U:** 214.5 (O:1.99/U:1.93)\n- **Cancellation Reason 1:** Anchor player OG Anunoby confirmed **OUT** (Strain) per NBA official injury report. At Scout time, Anunoby was Questionable. He is now definitively ruled out. Per cancel_criteria and injury_check_rules: \"Anchor [OG Anunoby] OUT confirmed at commit time\" → cancel immediately.\n- **Cancellation Reason 2:** Current odds 2.52 exceed the ML ceiling of 2.50. Even ignoring the Anunoby trigger, the pick cannot be confirmed at odds outside the valid range. Odds out of valid range at commit time.\n- **Movement Context:** The +0.42 drift (2.10 → 2.52) is directly explained by Anunoby's confirmed absence — books adjusted PHI to 1.60 (home favourite by meaningful margin) and NYK to 2.52. The >0.30 movement rule required investigation; investigation confirmed the cause (Anunoby OUT) which actually worsens NYK's outlook, not just pricing.\n\n---\n\n### LATE SCOUT — Philadelphia 76ers vs New York Knicks (no pick added)\nInvestigated all markets post-cancellation. NYK ML (2.52) and PHI ML (1.60) both outside valid ranges. PHI -3.5 spread: cannot justify ≥60 confidence given PHI's catastrophic L15 (-7.1) against NYK's +18.8, even with Anunoby OUT boosting PHI's relative standing. Joel Embiid Questionable adds further uncertainty. NYK +3.5 at 1.99 assessed at 55 confidence (after Embiid GTD -10 adjustment from base ~65) — below the 60 confidence gate required for new Commit-phase picks. O/U 214.5: no compelling thesis above 60 confidence. No valid entry.\n\n### LATE SCOUT — Minnesota Timberwolves vs San Antonio Spurs (no pick added)\nNo change in Edwards status (remains Questionable). SAS ML (1.50) and MIN ML (2.85) both outside valid ranges. MIN +5.5 at 1.95: confidence collapses to ~48 after Edwards GTD adjustment (-10 from base ~58), below both the minimum staking threshold and the 60 confidence gate. SAS's L15 gap (+33.6 pts) is too dominant to back MIN covering even a generous spread. SAS -5.5 at 1.97: ~55-58 confidence for road team laying 5.5 in playoffs — below 60 gate. No valid entry.\n\n---\n\n### SLATE SUMMARY\nTonight's two-game slate produced **zero committed bets**. The sole draft pick (NYK ML) was cancelled due to two independent triggers: Anunoby confirmed OUT (anchor player) and odds drifting above the 2.50 ML ceiling. Late scout found no new edges meeting the ≥60 confidence gate across either game — PHI-NYK markets are invalidly priced or just below confidence threshold post-injury news, while MIN-SAS continues to have no valid ML odds and insufficient confidence for spread picks given SAS's dominant L15 form and Edwards' uncertain status. Current bankroll remains **€1,455.20** with 0% exposure tonight.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 11490,
+    "tokens_out": 5365,
+    "cost_usd": 0.114945
   }
 ]
