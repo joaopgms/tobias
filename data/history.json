@@ -23,7 +23,7 @@
           "game": 2,
           "started_at": "2026-04-05T10:44:07.102344+00:00",
           "bankroll_start": 1000.0,
-          "wins": 21,
+          "wins": 22,
           "losses": 15,
           "peak_bankroll": 1917.57,
           "total_bets": 37
@@ -1981,10 +1981,10 @@
             "Isaiah Stewart",
             "Donovan Mitchell"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "WON",
+          "returned": 363.96,
+          "pnl": 171.39,
+          "settled_at": "2026-05-08T11:17:15.477378+00:00",
           "committed_at": "2026-05-07T22:18:40Z"
         }
       ],
