@@ -1617,5 +1617,49 @@
     "tokens_in": 12571,
     "tokens_out": 2218,
     "cost_usd": 0.070983
+  },
+  {
+    "ts": "2026-05-08T15:27:18.304055+00:00",
+    "date": "2026-05-08",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_onexbet",
+    "draft_count": 1,
+    "picks": [
+      {
+        "id": "nba_draft_20260508_001",
+        "match": "Philadelphia 76ers vs New York Knicks",
+        "time": "2026-05-08T23:00:00Z",
+        "pick": "New York Knicks ML",
+        "odds": 2.1,
+        "stake": 218.28,
+        "potential_return": 458.39,
+        "confidence": 72,
+        "reasoning": "GAME CONTEXT: PHI vs NYK East Semifinals Game 3. NYK leads series 1-0. ANOMALY CHECK: PHI priced at 1.84 as home team — this requires scrutiny. PHI is home (Xfinity Mobile Arena) and has a slightly better record edge with home court, but NYK's statistical profile is significantly stronger. PHI at 1.84 vs NYK at 2.10 — no anomaly flagged (PHI home court advantage explains the pricing). LINE ANOMALY CHECK PASS. FRANCHISE PLAYER FLAGS: NYK — OG Anunoby Questionable, Josh Hart Questionable (both non-franchise players). PHI — Joel Embiid Questionable (Right Hip Soreness) — FRANCHISE PLAYER. Embiid Questionable: confidence -10, stake -20%. NetRtg L15: NYK +18.8 vs PHI -7.1 — MASSIVE gap of 25.9 points. This is the dominant signal. NYK season NetRtg +6.5 vs PHI -0.2 — 6.7pt gap reinforces the L15 signal. EMBIID STATUS: Questionable — ~50% chance of playing. His presence would matter significantly, but even with Embiid available, PHI's L15 of -7.1 indicates their defense and offense are both struggling in recent form. NYK's L15 of +18.8 is elite-level recent form. SERIES CONTEXT: NYK won Game 1 (leads 1-0). Home court for Game 3 appears to be PHI (Xfinity Mobile Arena listed as venue). This is an away game for NYK. ADJUSTMENT for Embiid Questionable: base confidence ~82 → -10 for Embiid GTD = 72. AWAY TEAM CONSIDERATIONS: NYK playing on PHI's floor but their L15 and season NetRtg gap are overwhelming. Home court worth ~3-4 pts in playoffs but NYK's L15 gap dwarfs this. SPREAD CONSIDERATION: NYK -1.5 at odds 1.96 also viable, but with Embiid GTD, game-time decision risk is high. ML preferred. EV CALCULATION: EV = (0.72 × 2.10) - 1 = 1.512 - 1 = 0.512. Strong EV well above 0.15 threshold. ML odds 2.10 within target range 1.60-2.50. CONFIDENCE TIER: 72 = High → 20-25% stake. With Embiid GTD applying -20% stake reduction: base 20% of €1455.20 = €291.04 × 0.75 = €218.28. INJURY DATA: nba_official source — full coverage, normal confidence rules apply.",
+        "anchor_players": [
+          "Jalen Brunson",
+          "Karl-Anthony Towns",
+          "OG Anunoby",
+          "Josh Hart",
+          "Joel Embiid"
+        ],
+        "drafted_at": "2026-05-08T15:27:25Z",
+        "market_type": "ml"
+      }
+    ],
+    "rejected": [
+      {
+        "match": "Minnesota Timberwolves vs San Antonio Spurs",
+        "reason": "SAS ML odds 1.52 below minimum target range of 1.60. MIN ML 2.74 is outside range (above 2.50). Spread: MIN +4.5 at 2.00 — viable odds range, but Anthony Edwards Questionable (Left Knee Bone Bruise) is a critical franchise player flag. Edwards GTD = confidence -10, and SAS L15 NetRtg +34.7 is a dominant recent form signal vs MIN L15 +1.1 (gap of 33.6 pts). SAS season NetRtg +8.3 vs MIN +3.1 also favours SAS. SAS is the away team but statistically dominant and in outstanding recent form. SAS ML at 1.52 cannot be drafted (below floor). MIN spread +4.5 at 2.00: MIN as home underdog with Edwards Questionable against SAS's elite recent form — MIN +4.5 requires confidence ≥ 60 for spread. Base confidence on MIN covering: their L15 +1.1 vs SAS +34.7 gap is brutal, Edwards GTD knocks -10, home court helps but SAS's L15 form is overwhelming. Cannot reach 60 confidence for MIN +4.5. SAS -4.5 at 1.92 (below 1.96 spread floor). No valid market entry point for this game with current odds structure.",
+        "ml_home": 2.74,
+        "ml_away": 1.52,
+        "decision": "no_edge"
+      }
+    ],
+    "report": "Two-game NBA playoff slate (2026-05-08). Injury source: nba_official (full coverage). One pick drafted: NYK ML in PHI vs NYK East Semifinals Game 3. NYK's L15 NetRtg (+18.8 vs PHI's -7.1) is the dominant signal — a 25.9pt gap in recent form that overwhelms PHI's home court advantage. Key risk: Joel Embiid Questionable (hip), which triggers -10 confidence adjustment but does not negate the edge given NYK's overwhelming recent form. SAS/MIN game rejected — SAS ML below odds floor (1.52), MIN ML above ceiling (2.74), and spread markets don't offer sufficient confidence given Edwards GTD and SAS's elite L15 form (+34.7). Pace data available but not decisive for totals in either game; no totals drafted.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 12596,
+    "tokens_out": 1543,
+    "cost_usd": 0.060933
   }
 ]
