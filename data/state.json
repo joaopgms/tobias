@@ -9,16 +9,16 @@
   "net_pnl": 595.84,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-05-08T15:27:18.304055+00:00",
+  "last_updated": "2026-05-08T22:19:18.178882+00:00",
   "first_game_time": "2026-05-08T23:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
   "scout_updated_at": "2026-05-08T15:27:18.304055+00:00",
   "scout_odds_source": "theodds_onexbet",
-  "commit_status": "pending",
-  "commit_updated_at": "2026-05-07T22:18:38.155969+00:00",
-  "commit_date": "2026-05-07",
+  "commit_status": "done",
+  "commit_updated_at": "2026-05-08T22:19:18.178882+00:00",
+  "commit_date": "2026-05-08",
   "analyst_updated_at": "2026-05-06T12:26:21.749533+00:00",
   "settler_updated_at": "2026-05-08T11:17:15.477378+00:00",
   "agent_models": {
@@ -27,29 +27,8 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "Two-game NBA playoff slate (2026-05-08). Injury source: nba_official (full coverage). One pick drafted: NYK ML in PHI vs NYK East Semifinals Game 3. NYK's L15 NetRtg (+18.8 vs PHI's -7.1) is the dominant signal — a 25.9pt gap in recent form that overwhelms PHI's home court advantage. Key risk: Joel Embiid Questionable (hip), which triggers -10 confidence adjustment but does not negate the edge given NYK's overwhelming recent form. SAS/MIN game rejected — SAS ML below odds floor (1.52), MIN ML above ceiling (2.74), and spread markets don't offer sufficient confidence given Edwards GTD and SAS's elite L15 form (+34.7). Pace data available but not decisive for totals in either game; no totals drafted.",
-  "draft_picks": [
-    {
-      "id": "nba_draft_20260508_001",
-      "match": "Philadelphia 76ers vs New York Knicks",
-      "time": "2026-05-08T23:00:00Z",
-      "pick": "New York Knicks ML",
-      "odds": 2.1,
-      "stake": 218.28,
-      "potential_return": 458.39,
-      "confidence": 72,
-      "reasoning": "GAME CONTEXT: PHI vs NYK East Semifinals Game 3. NYK leads series 1-0. ANOMALY CHECK: PHI priced at 1.84 as home team — this requires scrutiny. PHI is home (Xfinity Mobile Arena) and has a slightly better record edge with home court, but NYK's statistical profile is significantly stronger. PHI at 1.84 vs NYK at 2.10 — no anomaly flagged (PHI home court advantage explains the pricing). LINE ANOMALY CHECK PASS. FRANCHISE PLAYER FLAGS: NYK — OG Anunoby Questionable, Josh Hart Questionable (both non-franchise players). PHI — Joel Embiid Questionable (Right Hip Soreness) — FRANCHISE PLAYER. Embiid Questionable: confidence -10, stake -20%. NetRtg L15: NYK +18.8 vs PHI -7.1 — MASSIVE gap of 25.9 points. This is the dominant signal. NYK season NetRtg +6.5 vs PHI -0.2 — 6.7pt gap reinforces the L15 signal. EMBIID STATUS: Questionable — ~50% chance of playing. His presence would matter significantly, but even with Embiid available, PHI's L15 of -7.1 indicates their defense and offense are both struggling in recent form. NYK's L15 of +18.8 is elite-level recent form. SERIES CONTEXT: NYK won Game 1 (leads 1-0). Home court for Game 3 appears to be PHI (Xfinity Mobile Arena listed as venue). This is an away game for NYK. ADJUSTMENT for Embiid Questionable: base confidence ~82 → -10 for Embiid GTD = 72. AWAY TEAM CONSIDERATIONS: NYK playing on PHI's floor but their L15 and season NetRtg gap are overwhelming. Home court worth ~3-4 pts in playoffs but NYK's L15 gap dwarfs this. SPREAD CONSIDERATION: NYK -1.5 at odds 1.96 also viable, but with Embiid GTD, game-time decision risk is high. ML preferred. EV CALCULATION: EV = (0.72 × 2.10) - 1 = 1.512 - 1 = 0.512. Strong EV well above 0.15 threshold. ML odds 2.10 within target range 1.60-2.50. CONFIDENCE TIER: 72 = High → 20-25% stake. With Embiid GTD applying -20% stake reduction: base 20% of €1455.20 = €291.04 × 0.75 = €218.28. INJURY DATA: nba_official source — full coverage, normal confidence rules apply.",
-      "anchor_players": [
-        "Jalen Brunson",
-        "Karl-Anthony Towns",
-        "OG Anunoby",
-        "Josh Hart",
-        "Joel Embiid"
-      ],
-      "drafted_at": "2026-05-08T15:27:25Z",
-      "market_type": "ml"
-    }
-  ],
+  "last_report": "### CANCELLED — New York Knicks ML (nba_draft_20260508_001)\n- **Match:** Philadelphia 76ers vs New York Knicks | Tip: 2026-05-08T23:00Z\n- **Pick:** NYK ML | Scout odds: 2.10 | Commit odds: 2.52 | Move: +0.42 (massive move IN favour, but triggers major signal check)\n- **ML:** PHI 1.60 / NYK 2.52 | **Spread (PHI):** -3.5 (1.93/1.99) | **O/U:** 214.5 (O:1.99/U:1.93)\n- **Cancellation Reason 1:** Anchor player OG Anunoby confirmed **OUT** (Strain) per NBA official injury report. At Scout time, Anunoby was Questionable. He is now definitively ruled out. Per cancel_criteria and injury_check_rules: \"Anchor [OG Anunoby] OUT confirmed at commit time\" → cancel immediately.\n- **Cancellation Reason 2:** Current odds 2.52 exceed the ML ceiling of 2.50. Even ignoring the Anunoby trigger, the pick cannot be confirmed at odds outside the valid range. Odds out of valid range at commit time.\n- **Movement Context:** The +0.42 drift (2.10 → 2.52) is directly explained by Anunoby's confirmed absence — books adjusted PHI to 1.60 (home favourite by meaningful margin) and NYK to 2.52. The >0.30 movement rule required investigation; investigation confirmed the cause (Anunoby OUT) which actually worsens NYK's outlook, not just pricing.\n\n---\n\n### LATE SCOUT — Philadelphia 76ers vs New York Knicks (no pick added)\nInvestigated all markets post-cancellation. NYK ML (2.52) and PHI ML (1.60) both outside valid ranges. PHI -3.5 spread: cannot justify ≥60 confidence given PHI's catastrophic L15 (-7.1) against NYK's +18.8, even with Anunoby OUT boosting PHI's relative standing. Joel Embiid Questionable adds further uncertainty. NYK +3.5 at 1.99 assessed at 55 confidence (after Embiid GTD -10 adjustment from base ~65) — below the 60 confidence gate required for new Commit-phase picks. O/U 214.5: no compelling thesis above 60 confidence. No valid entry.\n\n### LATE SCOUT — Minnesota Timberwolves vs San Antonio Spurs (no pick added)\nNo change in Edwards status (remains Questionable). SAS ML (1.50) and MIN ML (2.85) both outside valid ranges. MIN +5.5 at 1.95: confidence collapses to ~48 after Edwards GTD adjustment (-10 from base ~58), below both the minimum staking threshold and the 60 confidence gate. SAS's L15 gap (+33.6 pts) is too dominant to back MIN covering even a generous spread. SAS -5.5 at 1.97: ~55-58 confidence for road team laying 5.5 in playoffs — below 60 gate. No valid entry.\n\n---\n\n### SLATE SUMMARY\nTonight's two-game slate produced **zero committed bets**. The sole draft pick (NYK ML) was cancelled due to two independent triggers: Anunoby confirmed OUT (anchor player) and odds drifting above the 2.50 ML ceiling. Late scout found no new edges meeting the ≥60 confidence gate across either game — PHI-NYK markets are invalidly priced or just below confidence threshold post-injury news, while MIN-SAS continues to have no valid ML odds and insufficient confidence for spread picks given SAS's dominant L15 form and Edwards' uncertain status. Current bankroll remains **€1,455.20** with 0% exposure tonight.",
+  "draft_picks": [],
   "pending_bets": [],
   "settled_bets": [
     {
@@ -802,56 +781,42 @@
   ],
   "late_scout_rejections": [
     {
-      "match": "Oklahoma City Thunder vs Los Angeles Lakers",
-      "reason": "No eligible market found at commit time. OKC ML 1.09 — far below floor of 1.65, negative EV, no viable pick. LAL ML 7.50 — above ceiling of 2.50, ineligible. OKC -15.0 spread at 1.91: odds in valid range, but confidence only ~50-52% on a 15-point playoff spread vs playoff-tested LAL (LeBron + AD both active), yielding EV ≤ 0.00 at confidence 50 and below threshold at realistic confidence estimate; skills also flag garbage-time risk on extreme LAL spreads. O/U 211.0 at 1.93/1.95: no strong directional signal — OKC and LAL both ~99 pace, playoff slowdown standard, tired LAL legs marginally favour Under but confidence only ~52-53%, EV = (0.53 × 1.95) - 1 = 0.034, below required 0.05 gate. No new injury developments since Scout — Jalen Williams and Luka Doncic both confirmed OUT as previously known; SGA, Chet Holmgren, LeBron, Anthony Davis all confirmed active. No late-breaking edge materialised."
+      "match": "Philadelphia 76ers vs New York Knicks",
+      "reason": "NYK ML 2.52 exceeds ceiling (2.50) — invalid. PHI ML 1.60 below floor (1.65) — invalid. PHI -3.5 spread at 1.93: cannot reach confidence ≥ 60 — PHI L15 -7.1 vs NYK +18.8 gap too large, Embiid Questionable undermines PHI offensive ceiling. NYK +3.5 at 1.99: confidence assessed at 55 after Embiid GTD adjustment (-10), below the 60 confidence gate required for new Commit-phase picks. O/U 214.5: no thesis above 60 confidence given pace mismatch and injury uncertainty."
+    },
+    {
+      "match": "Minnesota Timberwolves vs San Antonio Spurs",
+      "reason": "SAS ML 1.50 below ML floor (1.65) — invalid. MIN ML 2.85 above ML ceiling (2.50) — invalid. MIN +5.5 at 1.95: base confidence ~58 before Edwards Questionable adjustment (-10) drops to 48, below both the 50-minimum tier and the 60 confidence gate for new Commit picks. SAS L15 +34.7 vs MIN L15 +1.1 gap (33.6 pts) is dominant signal against MIN covering even +5.5. SAS -5.5 at 1.97: confidence ~55-58 for road team laying 5.5 in playoffs — below 60 gate, and playoff home court (3-4 pts) makes this spread unfavourable for SAS. O/U 216.5: no thesis above 60 confidence. No valid market entry for this game."
     }
   ],
   "commit_report_data": {
-    "date": "2026-05-07",
-    "ts": "2026-05-07T22:18:38.155969+00:00",
-    "bets": [
-      {
-        "id": "nba_bet_20260507_001",
-        "match": "Detroit Pistons vs Cleveland Cavaliers",
-        "time": "2026-05-07T23:00:00Z",
-        "pick": "Detroit Pistons -3.5",
-        "odds": 1.89,
-        "stake": 192.57,
-        "potential_return": 364.0,
-        "confidence": 65,
-        "reasoning": "ODDS VALIDATION: 1.89 within spread target range (1.75–2.30) ✅. No line movement since Scout (0.00 change). ANCHOR PLAYER CHECK: Cade Cunningham (NOT on injury report — Active ✅), Isaiah Stewart (NOT on injury report — Active ✅), Donovan Mitchell/CLE (NOT on injury report — Active ✅). Kevin Huerter (DET) remains Doubtful (Left Adductor) — role player, not franchise player, Scout already accounted for; bet thesis does NOT depend on his absence. Sam Merrill (CLE) Questionable — role player, no impact. THESIS INTACT: DET L15 NetRtg +25.4 vs CLE -1.5 = 26.9pt gap, strongest available spread signal. DET home court advantage (Little Caesars Arena, higher seed 60-22 vs 52-30) worth 3-4pts in playoffs. DET leads series 1-0 (Game 2 at home). Season NetRtg DET +8.2 vs CLE +4.0 (4.2pt gap). No franchise player concerns for either team. Playoff home court is decisive tiebreaker. EV RECALCULATION: EV = (0.65 × 1.89) - 1 = 1.2285 - 1 = 0.229 ✅ (≥ 0.05). STAKE: Confidence 65 = Medium tier (15% of €1,283.81 = €192.57). Total exposure 15.0% of bankroll — well within 70% cap. INJURY SOURCE: nba_official, 4-team coverage — full data quality, normal rules apply.",
-        "anchor_players": [
-          "Cade Cunningham",
-          "Isaiah Stewart",
-          "Donovan Mitchell"
-        ],
-        "result": null,
-        "returned": null,
-        "pnl": null,
-        "settled_at": null,
-        "committed_at": "2026-05-07T22:18:40Z"
-      }
-    ],
+    "date": "2026-05-08",
+    "ts": "2026-05-08T22:19:18.178882+00:00",
+    "bets": [],
     "cancelled": [
       {
-        "id": "nba_draft_20260507_001",
-        "match": "Detroit Pistons vs Cleveland Cavaliers",
-        "pick": "Detroit Pistons ML",
-        "reason": "Odds out of valid range at commit time: current odds 1.61 fall below commit-time ML floor of 1.65 (Scout floor 1.70 minus 0.05 drift allowance = 1.65). Scout erroneously validated at 1.60 floor — Commit applies correct floor of 1.65 per skills. Odds unchanged at 1.61 from Scout draft."
+        "id": "nba_draft_20260508_001",
+        "match": "Philadelphia 76ers vs New York Knicks",
+        "pick": "New York Knicks ML",
+        "reason": "Anchor player OG Anunoby confirmed OUT at commit time (upgraded from Questionable to OUT per NBA official injury report). Additionally, current odds 2.52 exceed ML ceiling of 2.50, placing them outside valid range. Two independent cancellation triggers: (1) Anchor [OG Anunoby] OUT confirmed at commit time; (2) Odds out of valid range at commit time (2.52 > 2.50 ceiling)."
       }
     ],
     "late_rejections": [
       {
-        "match": "Oklahoma City Thunder vs Los Angeles Lakers",
-        "reason": "No eligible market found at commit time. OKC ML 1.09 — far below floor of 1.65, negative EV, no viable pick. LAL ML 7.50 — above ceiling of 2.50, ineligible. OKC -15.0 spread at 1.91: odds in valid range, but confidence only ~50-52% on a 15-point playoff spread vs playoff-tested LAL (LeBron + AD both active), yielding EV ≤ 0.00 at confidence 50 and below threshold at realistic confidence estimate; skills also flag garbage-time risk on extreme LAL spreads. O/U 211.0 at 1.93/1.95: no strong directional signal — OKC and LAL both ~99 pace, playoff slowdown standard, tired LAL legs marginally favour Under but confidence only ~52-53%, EV = (0.53 × 1.95) - 1 = 0.034, below required 0.05 gate. No new injury developments since Scout — Jalen Williams and Luka Doncic both confirmed OUT as previously known; SGA, Chet Holmgren, LeBron, Anthony Davis all confirmed active. No late-breaking edge materialised."
+        "match": "Philadelphia 76ers vs New York Knicks",
+        "reason": "NYK ML 2.52 exceeds ceiling (2.50) — invalid. PHI ML 1.60 below floor (1.65) — invalid. PHI -3.5 spread at 1.93: cannot reach confidence ≥ 60 — PHI L15 -7.1 vs NYK +18.8 gap too large, Embiid Questionable undermines PHI offensive ceiling. NYK +3.5 at 1.99: confidence assessed at 55 after Embiid GTD adjustment (-10), below the 60 confidence gate required for new Commit-phase picks. O/U 214.5: no thesis above 60 confidence given pace mismatch and injury uncertainty."
+      },
+      {
+        "match": "Minnesota Timberwolves vs San Antonio Spurs",
+        "reason": "SAS ML 1.50 below ML floor (1.65) — invalid. MIN ML 2.85 above ML ceiling (2.50) — invalid. MIN +5.5 at 1.95: base confidence ~58 before Edwards Questionable adjustment (-10) drops to 48, below both the 50-minimum tier and the 60 confidence gate for new Commit picks. SAS L15 +34.7 vs MIN L15 +1.1 gap (33.6 pts) is dominant signal against MIN covering even +5.5. SAS -5.5 at 1.97: confidence ~55-58 for road team laying 5.5 in playoffs — below 60 gate, and playoff home court (3-4 pts) makes this spread unfavourable for SAS. O/U 216.5: no thesis above 60 confidence. No valid market entry for this game."
       }
     ],
-    "total_staked": 192.57,
-    "bankroll_before": 1283.81,
-    "report": "### CANCELLED — Detroit Pistons ML\n- Reason: Odds out of valid range at commit time. Current odds 1.61 fall below the commit-time ML floor of 1.65 (Scout floor 1.70 minus the 0.05 drift allowance = 1.65 minimum). The Scout drafted this pick at 1.61 using an incorrect floor of 1.60 — Commit applies the correct floor per skills v5. Odds are unchanged (no movement since Scout), so this is not a line movement cancellation but a floor correction.\n- Odds at cancel: 1.61 (was 1.61 at Scout time — no movement; floor mismatch identified at Commit re-validation)\n\n---\n\n### CONFIRMED — Detroit Pistons -3.5\n- Match: Detroit Pistons vs Cleveland Cavaliers | Tip: 2026-05-07T23:00 UTC\n- Pick: Detroit Pistons -3.5 | Scout odds: 1.89 | Commit odds: 1.89 | Move: 0.00 (no change)\n- ML: DET 1.61 / CLE 2.33 | ATS: -3.5 (1.89/1.93) | O/U: 215.5 (O:1.95/U:1.93)\n- Stake: €192.57 | Pot: €364.00 | Conf: 65/100 | EV: 0.229\n- Decision: All validation checks passed. Odds 1.89 within spread range (1.75–2.30). All anchor players confirmed active: Cade Cunningham, Isaiah Stewart (DET), Donovan Mitchell (CLE) — none on injury report. Kevin Huerter (DET) remains Doubtful but is a role player; bet thesis does not depend on any player absence and is grounded in DET's dominant L15 NetRtg gap (+25.4 vs -1.5 = 26.9pts), home court playoff advantage (3-4pts), series lead 1-0, and superior season record/NetRtg. EV of 0.229 is a strong edge. Stake 15.0% of bankroll, well within 70% cap.\n\n---\n\n### LATE SCOUT — Oklahoma City Thunder vs Los Angeles Lakers\n- No viable pick identified. All OKC/LAL markets ineligible: OKC ML at 1.09 far below floor; LAL ML at 7.50 above ceiling; OKC -15.0 spread has insufficient confidence (~50-52%) for a 15-point playoff spread yielding sub-0.05 EV; O/U 211.0 has no strong directional signal with EV of ~0.034 at realistic confidence. No new injury developments changed the picture from Scout's rejection.\n\n---\n\n**Slate Summary:** One pick confirmed (DET -3.5) from two draft picks, with the DET ML cancelled due to odds falling below the commit-time floor of 1.65. Total committed exposure is €192.57 (15.0% of bankroll), leaving significant reserves intact. The OKC-LAL game remains a rejected slate with no eligible market — extreme odds on OKC and insufficient confidence on any spread/total line preclude any action.",
-    "tokens_in": 12146,
-    "tokens_out": 4792,
-    "cost_usd": 0.108318
+    "total_staked": 0.0,
+    "bankroll_before": 1455.2,
+    "report": "### CANCELLED — New York Knicks ML (nba_draft_20260508_001)\n- **Match:** Philadelphia 76ers vs New York Knicks | Tip: 2026-05-08T23:00Z\n- **Pick:** NYK ML | Scout odds: 2.10 | Commit odds: 2.52 | Move: +0.42 (massive move IN favour, but triggers major signal check)\n- **ML:** PHI 1.60 / NYK 2.52 | **Spread (PHI):** -3.5 (1.93/1.99) | **O/U:** 214.5 (O:1.99/U:1.93)\n- **Cancellation Reason 1:** Anchor player OG Anunoby confirmed **OUT** (Strain) per NBA official injury report. At Scout time, Anunoby was Questionable. He is now definitively ruled out. Per cancel_criteria and injury_check_rules: \"Anchor [OG Anunoby] OUT confirmed at commit time\" → cancel immediately.\n- **Cancellation Reason 2:** Current odds 2.52 exceed the ML ceiling of 2.50. Even ignoring the Anunoby trigger, the pick cannot be confirmed at odds outside the valid range. Odds out of valid range at commit time.\n- **Movement Context:** The +0.42 drift (2.10 → 2.52) is directly explained by Anunoby's confirmed absence — books adjusted PHI to 1.60 (home favourite by meaningful margin) and NYK to 2.52. The >0.30 movement rule required investigation; investigation confirmed the cause (Anunoby OUT) which actually worsens NYK's outlook, not just pricing.\n\n---\n\n### LATE SCOUT — Philadelphia 76ers vs New York Knicks (no pick added)\nInvestigated all markets post-cancellation. NYK ML (2.52) and PHI ML (1.60) both outside valid ranges. PHI -3.5 spread: cannot justify ≥60 confidence given PHI's catastrophic L15 (-7.1) against NYK's +18.8, even with Anunoby OUT boosting PHI's relative standing. Joel Embiid Questionable adds further uncertainty. NYK +3.5 at 1.99 assessed at 55 confidence (after Embiid GTD -10 adjustment from base ~65) — below the 60 confidence gate required for new Commit-phase picks. O/U 214.5: no compelling thesis above 60 confidence. No valid entry.\n\n### LATE SCOUT — Minnesota Timberwolves vs San Antonio Spurs (no pick added)\nNo change in Edwards status (remains Questionable). SAS ML (1.50) and MIN ML (2.85) both outside valid ranges. MIN +5.5 at 1.95: confidence collapses to ~48 after Edwards GTD adjustment (-10 from base ~58), below both the minimum staking threshold and the 60 confidence gate. SAS's L15 gap (+33.6 pts) is too dominant to back MIN covering even a generous spread. SAS -5.5 at 1.97: ~55-58 confidence for road team laying 5.5 in playoffs — below 60 gate. No valid entry.\n\n---\n\n### SLATE SUMMARY\nTonight's two-game slate produced **zero committed bets**. The sole draft pick (NYK ML) was cancelled due to two independent triggers: Anunoby confirmed OUT (anchor player) and odds drifting above the 2.50 ML ceiling. Late scout found no new edges meeting the ≥60 confidence gate across either game — PHI-NYK markets are invalidly priced or just below confidence threshold post-injury news, while MIN-SAS continues to have no valid ML odds and insufficient confidence for spread picks given SAS's dominant L15 form and Edwards' uncertain status. Current bankroll remains **€1,455.20** with 0% exposure tonight.",
+    "tokens_in": 11490,
+    "tokens_out": 5365,
+    "cost_usd": 0.114945
   },
   "netrtg_l15": {
     "Charlotte Hornets": 16.9,
