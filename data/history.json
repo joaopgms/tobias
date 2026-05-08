@@ -1989,6 +1989,26 @@
         }
       ],
       "summary": "Day 2026-05-07 commit — 1 bets totalling €192.57. 1 cancelled. Bankroll: €1283.81 → €1091.24."
+    },
+    {
+      "entry_id": "nba_entry_20260508",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-05-08T22:19:18.178882+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1455.2,
+      "total_staked": 0.0,
+      "bankroll_after": 1455.2,
+      "cancelled_picks": [
+        {
+          "id": "nba_draft_20260508_001",
+          "match": "Philadelphia 76ers vs New York Knicks",
+          "pick": "New York Knicks ML",
+          "reason": "Anchor player OG Anunoby confirmed OUT at commit time (upgraded from Questionable to OUT per NBA official injury report). Additionally, current odds 2.52 exceed ML ceiling of 2.50, placing them outside valid range. Two independent cancellation triggers: (1) Anchor [OG Anunoby] OUT confirmed at commit time; (2) Odds out of valid range at commit time (2.52 > 2.50 ceiling)."
+        }
+      ],
+      "bets": [],
+      "summary": "Day 2026-05-08 commit — 0 bets totalling €0.00. 1 cancelled. Bankroll: €1455.20 → €1455.20."
     }
   ]
 }
