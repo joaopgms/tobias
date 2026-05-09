@@ -1,7 +1,7 @@
 ---
-version: 52
-updated_at: 2026-05-06T12:26:21.749533+00:00
-updated_by: analyst_2026-05-06
+version: 53
+updated_at: 2026-05-09T11:50:02.329898+00:00
+updated_by: analyst_2026-05-09
 llm: claude-sonnet-4-6
 ---
 
@@ -96,26 +96,26 @@ NOTE — PLAYOFF PHASE: All remaining teams are fully motivated. Roster-only fla
 Oklahoma City Thunder:
 - Thomas Sorber (C): OUT [roster-only]
 - Jalen Williams (G): OUT [roster-only] — FRANCHISE PLAYER.
-NOTE: OKC leads Round 2 West Semifinals 1-0. Re-verify Shai Gilgeous-Alexander, Chet Holmgren active before any OKC Round 2 pick. MANDATORY.
+NOTE: OKC leads Round 2 West Semifinals 2-0 (Game 4 next — verify venue). Re-verify Shai Gilgeous-Alexander, Chet Holmgren active before any OKC pick. MANDATORY.
 
 San Antonio Spurs:
 - David Jones Garcia (F): OUT [roster-only]
-NOTE: SAS leads Round 2 West Semifinals — verify series status from ESPN. Re-verify Victor Wembanyama active before any SAS pick. MANDATORY.
+NOTE: SAS leads or trails Round 2 West Semifinals 2-1 (Game 4 next). Re-verify Victor Wembanyama active before any SAS pick. MANDATORY.
 
 Detroit Pistons:
 - Kevin Huerter (G): OUT [roster-only]
-NOTE: DET leads East Semifinals 1-0 (Game 2 next). Re-verify Cade Cunningham, Isaiah Stewart, Jalen Duren before any DET pick. MANDATORY.
+NOTE: DET leads East Semifinals 2-0 (Game 4 next). Re-verify Cade Cunningham, Isaiah Stewart, Jalen Duren before any DET pick. MANDATORY.
 
 Boston Celtics:
 - Jayson Tatum (F): OUT [roster-only] — FRANCHISE PLAYER. STATUS CRITICAL.
-NOTE: ESPN shows BOS in East Semifinals — verify if BOS advanced or PHI advanced past BOS. If BOS is still active: Tatum OUT collapses BOS offensive engine. Do NOT draft BOS ML without Tatum confirmed active via NBA official PDF. Re-verify Jaylen Brown.
+NOTE: PHI eliminated BOS (PHI in East Semifinals). BOS CONFIRMED ELIMINATED — no further picks.
 
 New York Knicks:
-NOTE: NYK leads East Semifinals 1-0 (Game 3 next). No players in current verified absence feed. Re-verify Jalen Brunson, Karl-Anthony Towns status before any Round 2 pick. MANDATORY.
+NOTE: NYK leads East Semifinals 3-0 (Game 4 next). No players in current verified absence feed. Re-verify Jalen Brunson, Karl-Anthony Towns status before any Round 2 pick. MANDATORY.
 
 Los Angeles Lakers:
 - Luka Doncic (G): OUT [roster-only] — FRANCHISE PLAYER.
-NOTE: LAL leads West Round 1 4-2 — Game 7 next. LAL competitive without Doncic across series. Do NOT bet LAL spread in Game 7 — garbage-time risk. Verify home court from ESPN.
+NOTE: LAL leads West Round 1 4-2 — Game 7 confirmed active. LAL competitive without Doncic across series. Do NOT bet LAL spread in Game 7 — garbage-time risk. Verify home court from ESPN.
 
 Houston Rockets:
 - Steven Adams (C): OUT [roster-only]
@@ -123,23 +123,20 @@ Houston Rockets:
 - Kevin Durant (F): OUT [roster-only] — FRANCHISE PLAYER. DATA FLAG: re-verify vs NBA official PDF before any HOU pick. CRITICAL. Do NOT draft HOU ML without Durant confirmed active.
 NOTE: HOU facing Game 7 vs LAL. Verify venue from ESPN. Re-verify Alperen Sengun.
 
-Cleveland Cavaliers:
-NOTE: No players in current verified absence feed. ESPN shows CLE leads East Round 1 — verify series status (4-3 with 'Game 8' anomaly may mean series complete). Re-verify Donovan Mitchell, Jarrett Allen, Evan Mobley before any CLE pick. MANDATORY.
-
 Minnesota Timberwolves:
 - Donte DiVincenzo (G): OUT [roster-only]
-NOTE: MIN leads West Semifinals 1-0 (Game 3 next). Re-verify Anthony Edwards active before any MIN pick — Edwards was roster-only OUT; if recovered and active for Round 2, this changes MIN outlook significantly. MANDATORY re-verify via NBA official PDF.
+NOTE: MIN leads West Semifinals 1-0 (Game 3 next). Re-verify Anthony Edwards active before any MIN pick — Edwards was roster-only OUT in Round 1; if recovered and active for Round 2, this changes MIN outlook significantly. MANDATORY re-verify via NBA official PDF.
 
 Atlanta Hawks:
 - Keshon Gilbert (G): OUT [roster-only]
 - Jock Landale (C): OUT [roster-only]
-NOTE: ATL ELIMINATED — NYK won 4-2 in Round 1. No further ATL picks.
+NOTE: ATL CONFIRMED ELIMINATED — NYK won 4-2 in Round 1. No further ATL picks.
 
 Toronto Raptors:
 - Chucky Hepburn (G): OUT [roster-only]
 - Brandon Ingram (F): OUT [roster-only]
 - Immanuel Quickley (G): OUT [roster-only] — key guard.
-NOTE: CLE leads 4-3 per ESPN (Game 8 anomaly). Treat as series likely complete — TOR LIKELY ELIMINATED. Verify from ESPN before any pick.
+NOTE: TOR CONFIRMED ELIMINATED — CLE won series. No further TOR picks.
 
 Washington Wizards:
 - Bilal Coulibaly (G): OUT [roster-only + injury landscape confirmed]
@@ -155,12 +152,9 @@ NOTE: Washington did not qualify for playoffs. Do NOT bet Washington to win unde
 
 Franchise players requiring mandatory NBA official PDF verification before ANY pick involving their team:
 - Shai Gilgeous-Alexander, Chet Holmgren (OKC) — re-verify each Round 2 session
-- Victor Wembanyama (SAS) — re-verify each session
-- Jayson Tatum (BOS) — roster-only OUT; CRITICAL — confirm BOS is still active in playoffs first
-- Jaylen Brown (BOS) — re-verify if BOS still active
+- Jayson Tatum (BOS) — CONFIRMED OUT; BOS ELIMINATED — no picks needed
 - Kevin Durant (HOU) — roster-only OUT; re-verify CRITICAL for Game 7 vs LAL
 - Luka Doncic (LAL) — roster-only OUT; LAL competing without him
-- Anthony Edwards (MIN) — roster-only OUT in Round 1; re-verify for Round 2 (may have recovered)
 - Anthony Davis, D'Angelo Russell, Alex Sarr (WAS) — confirmed OUT; team not in playoffs
 
 ## SECTION:tanking_teams
