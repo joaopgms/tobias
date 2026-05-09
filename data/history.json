@@ -26,7 +26,7 @@
           "wins": 22,
           "losses": 15,
           "peak_bankroll": 1917.57,
-          "total_bets": 37
+          "total_bets": 38
         }
       ]
     }
@@ -2009,6 +2009,43 @@
       ],
       "bets": [],
       "summary": "Day 2026-05-08 commit — 0 bets totalling €0.00. 1 cancelled. Bankroll: €1455.20 → €1455.20."
+    },
+    {
+      "entry_id": "nba_entry_20260509",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-05-09T19:02:15.972657+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1455.2,
+      "total_staked": 218.28,
+      "bankroll_after": 1236.92,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260509_001",
+          "match": "Los Angeles Lakers vs Oklahoma City Thunder",
+          "time": "2026-05-10T00:30:00Z",
+          "pick": "UNDER 211.5",
+          "odds": 1.96,
+          "stake": 218.28,
+          "potential_return": 427.83,
+          "reasoning": "Late scout pick. Both franchise players confirmed OUT via NBA Official: Luka Doncic (LAL, Left Hamstring) and Jalen Williams (OKC, Left Hamstring). Doncic is LAL's primary ball-handler and half-court creator — his absence significantly depresses LAL offense (estimated -8 to -10pts effective OffRtg). OKC DefRtg 107.9 (elite) will further suppress LAL scoring without their primary creator. OKC offense loses Williams but SGA remains active — however, OKC's scoring may also be moderated vs LAL home playoff atmosphere. OKC leads series 2-0, West Semifinals Game 3. Projected scoring: LAL ~99-104, OKC ~108-112, total ~207-216 — centered near or below 211.5. Books may not fully discount both stars being simultaneously absent at this level of combined offensive impact. EV = (0.60 × 1.96) - 1 = 0.176. Source: nba_official.",
+          "confidence": 60,
+          "anchor_players": [
+            "Luka Doncic (LAL) — OUT confirmed",
+            "Jalen Williams (OKC) — OUT confirmed",
+            "SGA (OKC) — active, no injury report",
+            "Chet Holmgren (OKC) — active, no injury report",
+            "Anthony Davis (LAL) — assumed active, no injury report"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-05-09T19:02:19Z"
+        }
+      ],
+      "summary": "Day 2026-05-09 commit — 1 bets totalling €218.28. 0 cancelled. Bankroll: €1455.20 → €1236.92."
     }
   ]
 }
