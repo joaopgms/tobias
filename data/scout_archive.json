@@ -1661,5 +1661,32 @@
     "tokens_in": 12596,
     "tokens_out": 1543,
     "cost_usd": 0.060933
+  },
+  {
+    "ts": "2026-05-09T14:56:30.239084+00:00",
+    "date": "2026-05-09",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_onexbet",
+    "draft_count": 0,
+    "picks": [],
+    "rejected": [
+      {
+        "match": "Los Angeles Lakers vs Oklahoma City Thunder",
+        "reason": "LINE ANOMALY: OKC ML 1.31 — massive favourite, below 1.60 floor. LAL ML 3.86 — above 2.50 ceiling. Neither side falls in 1.60-2.50 ML range. SERIES CONTEXT CONFLICT: Skills show OKC leads Round 2 West Semifinals 2-0 vs unverified opponent, but tonight's game shows OKC @ LAL (Crypto.com Arena) — this is LAL vs HOU Game 7 context per series data, yet OKC is listed as the away team. DATA CONFLICT: Series context lists LAL vs HOU as the active Round 2 Game 7, but tonight's slate shows OKC @ LAL. This is irreconcilable — OKC's Round 2 opponent is listed as unverified in skills, and LAL is in a confirmed Game 7 vs HOU. Cannot determine correct series context. CRITICAL ANOMALY: OKC priced at 1.31 as road team vs LAL — implied probability ~76%, but OKC is listed as the away team at Crypto.com (LAL home court). If this is OKC vs LAL in Round 2, OKC would be massive statistical favourite (+11.1 NetRtg) but road team at 1.31 is extreme pricing. Additionally, Jalen Williams (OKC franchise player) is confirmed OUT — this alone triggers the franchise player OUT rule: do NOT bet that team to win unless opponent also missing a star. LAL has Doncic OUT but LAL has been winning without him. The confluence of: (1) odds outside target range for both sides, (2) series context data conflict, (3) OKC franchise player (Jalen Williams) OUT, (4) mandatory SGA/Holmgren re-verification required — all combine to make this undraftable. Flagging as anomaly for Commit to investigate.",
+        "ml_home": 3.86,
+        "ml_away": 1.31,
+        "decision": "anomaly"
+      },
+      {
+        "match": "Cleveland Cavaliers vs Detroit Pistons",
+        "reason": "Post-filter: ml odds 2.65 outside [1.6–2.5] target range"
+      }
+    ],
+    "report": "Two-game playoff slate tonight. One pick drafted: DET ML in Game 4 at Cleveland. DET's L15 NetRtg of +25.4 vs CLE's -1.5 represents a 26.9pt gap — the strongest short-term signal on the slate. Series context (DET leads 2-0), superior season NetRtg (+8.2 vs +4.0), and confirmed franchise player availability support the pick despite road elimination-game risk. EV of 0.72 is elite. The LAL vs OKC game was rejected due to: odds outside target range (both sides), data conflict between series context and tonight's listed matchup, OKC franchise player Jalen Williams confirmed OUT, and mandatory re-verification requirements that cannot be satisfied at draft time — flagged as anomaly for Commit investigation. Injury feed confirmed from NBA Official PDF covering all 4 active teams tonight — full data quality standard met.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 12257,
+    "tokens_out": 2479,
+    "cost_usd": 0.073956
   }
 ]
