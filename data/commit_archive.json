@@ -1632,5 +1632,69 @@
     "tokens_in": 11490,
     "tokens_out": 5365,
     "cost_usd": 0.114945
+  },
+  {
+    "ts": "2026-05-09T19:02:15.972657+00:00",
+    "date": "2026-05-09",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 1,
+    "cancelled_count": 0,
+    "total_staked": 218.28,
+    "bankroll_before": 1455.2,
+    "bankroll_after": 1236.92,
+    "bets": [
+      {
+        "id": "nba_bet_20260509_001",
+        "match": "Los Angeles Lakers vs Oklahoma City Thunder",
+        "time": "2026-05-10T00:30:00Z",
+        "pick": "UNDER 211.5",
+        "odds": 1.96,
+        "stake": 218.28,
+        "potential_return": 427.83,
+        "reasoning": "Late scout pick. Both franchise players confirmed OUT via NBA Official: Luka Doncic (LAL, Left Hamstring) and Jalen Williams (OKC, Left Hamstring). Doncic is LAL's primary ball-handler and half-court creator — his absence significantly depresses LAL offense (estimated -8 to -10pts effective OffRtg). OKC DefRtg 107.9 (elite) will further suppress LAL scoring without their primary creator. OKC offense loses Williams but SGA remains active — however, OKC's scoring may also be moderated vs LAL home playoff atmosphere. OKC leads series 2-0, West Semifinals Game 3. Projected scoring: LAL ~99-104, OKC ~108-112, total ~207-216 — centered near or below 211.5. Books may not fully discount both stars being simultaneously absent at this level of combined offensive impact. EV = (0.60 × 1.96) - 1 = 0.176. Source: nba_official.",
+        "confidence": 60,
+        "anchor_players": [
+          "Luka Doncic (LAL) — OUT confirmed",
+          "Jalen Williams (OKC) — OUT confirmed",
+          "SGA (OKC) — active, no injury report",
+          "Chet Holmgren (OKC) — active, no injury report",
+          "Anthony Davis (LAL) — assumed active, no injury report"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null,
+        "committed_at": "2026-05-09T19:02:19Z"
+      }
+    ],
+    "cancelled": [],
+    "late_rejections": [
+      {
+        "match": "Cleveland Cavaliers vs Detroit Pistons",
+        "reason": "TIME GATE FAILED — Game tips at 19:00 UTC, current time is 19:02:19 UTC. Game already in progress. Cannot add any pick. Additionally, CLE ML 1.50 below 1.65 floor and DET ML 2.60 above 2.50 ceiling. Spread DET +5.0 at 1.89 showed potential value (EV 0.077, DET +8.2 NetRtg leads 2-0) but time gate failure eliminates any consideration."
+      },
+      {
+        "match": "Los Angeles Lakers vs Oklahoma City Thunder — LAL +8.5 spread",
+        "reason": "Confidence assessed at 58 — below the 60 minimum required for late scout picks. OKC dominance (leads 2-0, +11.1 NetRtg, L15 +31.6) too clear to confidently back 8.5pt home spread for LAL despite home court and both franchise players being OUT. Spread at 2.00 is within valid range but confidence gate not met."
+      },
+      {
+        "match": "Los Angeles Lakers vs Oklahoma City Thunder — OKC -8.5 spread",
+        "reason": "Road team giving 8.5 points with franchise player (Jalen Williams) OUT against a motivated LAL team at home trailing 0-2. Confidence insufficient (estimated 47) — below 55 minimum even before late scout gate. LAL home court and desperation make road-team spread too risky."
+      },
+      {
+        "match": "Los Angeles Lakers vs Oklahoma City Thunder — OKC ML 1.29",
+        "reason": "Below ML floor of 1.65. Cannot confirm regardless of edge assessment."
+      },
+      {
+        "match": "Los Angeles Lakers vs Oklahoma City Thunder — LAL ML 4.12",
+        "reason": "Above ML ceiling of 2.50. Cannot confirm regardless of edge assessment."
+      }
+    ],
+    "report": "## COMMIT REPORT — 2026-05-09T19:02:19Z | Bankroll: €1,455.20\n\n---\n\n### DRAFT PICKS REVIEWED\n**No draft picks from Scout phase** — zero picks were drafted at 14:00 Scout. No reviews required.\n\n---\n\n### LATE SCOUT ANALYSIS\n\n#### GAME 1: Cleveland Cavaliers vs Detroit Pistons (19:00 UTC — IN PROGRESS)\n\n**Time gate FAILED.** Game tipped at 19:00 UTC; current time is 19:02:19 UTC. No picks possible regardless of odds/edge.\n\nPre-time-gate findings (for record only):\n- CLE ML 1.50: below 1.65 floor ❌\n- DET ML 2.60: above 2.50 ceiling ❌\n- DET +5.0 at 1.89: in valid spread range. DET leads series 2-0, NetRtg +8.2 vs CLE +4.0. EV 0.077 at confidence 57. Confidence below 60 late scout minimum AND game already in progress — double disqualification.\n- Anchor player checks: Cade Cunningham, Isaiah Stewart, Jalen Duren (DET) — no injuries on NBA Official report. Donovan Mitchell, Jarrett Allen, Evan Mobley (CLE) — not listed. Kevin Huerter (DET) confirmed OUT but not an anchor.\n- **All CLE vs DET picks rejected: time gate failure.**\n\n---\n\n#### GAME 2: Los Angeles Lakers vs Oklahoma City Thunder (00:30 UTC)\n\n**Series conflict resolved:** Live slate confirms OKC @ LAL at Crypto.com Arena. This is the West Semifinals, with OKC leading 2-0 (Game 3). The \"LAL vs HOU Game 7\" reference in skills was either resolved (LAL won) or superseded by the live slate data. OKC's previously unverified Round 2 opponent is confirmed as LAL.\n\n**Injury update (NBA Official — critical):**\n- Luka Doncic (LAL): OUT — Left Hamstring Strain. LAL franchise player absent.\n- Jalen Williams (OKC): OUT — Left Hamstring Strain. OKC franchise player absent (was known, now reconfirmed).\n- Thomas Sorber (OKC): OUT — Recovery (minor).\n- Jarred Vanderbilt (LAL): Questionable (not a primary bet thesis player).\n- SGA (OKC): Not listed → active ✓\n- Chet Holmgren (OKC): Not listed → active ✓\n\n**ML odds analysis:**\n- OKC ML 1.29: below 1.65 floor → **REJECTED**\n- LAL ML 4.12: above 2.50 ceiling → **REJECTED**\n\n**Spread analysis:**\n- LAL +8.5 at 2.00: Confidence 58 — below 60 late scout minimum → **REJECTED**\n- OKC -8.5 at 1.92: Confidence ~47 — below 55 minimum → **REJECTED**\n\n---\n\n### CONFIRMED — UNDER 211.5 (LAL vs OKC)\n\n- **Match:** Los Angeles Lakers vs Oklahoma City Thunder | **Tip:** 2026-05-10T00:30:00Z\n- **Pick:** UNDER 211.5 | **Scout odds:** N/A (new pick) | **Commit odds:** 1.96 | **Move:** N/A\n- **ML:** LAL 4.12 / OKC 1.29 | **ATS:** LAL +8.5 (2.00/1.92) | **O/U:** 211.5 (O:1.96/U:1.96)\n- **Stake:** €218.28 (15% of €1,455.20) | **Pot:** €427.83 | **Conf:** 60/100 | **EV:** 0.176\n- **Decision:** Both franchise players confirmed OUT via NBA Official (Doncic — LAL, Williams — OKC). Doncic's absence is the primary driver: he runs essentially all of LAL's half-court offense at elite usage rate. Without him, LAL's effective OffRtg drops an estimated 8-10pts. OKC's elite defense (DefRtg 107.9) further suppresses LAL scoring. OKC's own offense loses Williams but retains SGA (active) — however, OKC scoring with SGA vs a playoff-motivated LAL defense at home should also be moderated. Projected game total: LAL ~99-104, OKC ~107-112, sum ~207-216, centered below 211.5. Books set this total with both absences priced in, but Doncic's outsized offensive role (primary creator/ball-handler) may be underweighted at this total level. Odds 1.96 within valid O/U range (1.75-2.05). EV 0.176. Source: nba_official (full quality). Quantity gate: 1 new pick (maximum reached).\n\n---\n\n### EXPOSURE SUMMARY\n- Total staked tonight: €218.28\n- % of bankroll: 15.0%\n- 70% bankroll cap: €1,018.64 — well within limits ✓\n- Remaining bankroll after commitment: €1,236.92\n\n---\n\n### SLATE SUMMARY\nThe Scout phase correctly identified both tonight's games as having issues — CLE vs DET ML odds outside valid range, and OKC vs LAL suffering a series context conflict alongside odds outside range. At commit time, CLE vs DET was already in progress (time gate failure), eliminating any action. For OKC vs LAL, the series conflict was resolved (OKC @ LAL confirmed as West Semifinals Game 3), and the key late development is the dual franchise player confirmation: both Doncic (LAL) and Williams (OKC) OUT via NBA Official. The only viable edge found is UNDER 211.5 — driven primarily by Doncic's absence cratering LAL's half-court offense against OKC's elite defense, with 1 late pick committed at minimum confidence threshold (60) and 15% stake.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 10632,
+    "tokens_out": 8467,
+    "cost_usd": 0.158901
   }
 ]
