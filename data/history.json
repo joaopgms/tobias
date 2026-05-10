@@ -26,7 +26,7 @@
           "wins": 22,
           "losses": 16,
           "peak_bankroll": 1917.57,
-          "total_bets": 38
+          "total_bets": 39
         }
       ]
     }
@@ -2046,6 +2046,40 @@
         }
       ],
       "summary": "Day 2026-05-09 commit — 1 bets totalling €218.28. 0 cancelled. Bankroll: €1455.20 → €1236.92."
+    },
+    {
+      "entry_id": "nba_entry_20260510",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-05-10T19:02:20.321799+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1236.92,
+      "total_staked": 247.0,
+      "bankroll_after": 989.92,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260510_001",
+          "match": "Philadelphia 76ers vs New York Knicks",
+          "time": "2026-05-10T19:30:00Z",
+          "pick": "New York Knicks ML",
+          "odds": 1.83,
+          "stake": 247.0,
+          "potential_return": 452.01,
+          "confidence": 71,
+          "reasoning": "COMMIT CONFIRMATION: NYK ML @ 1.83 — zero line movement since Scout (1.83 → 1.83). Odds within valid ML range [1.65–2.50] ✓. EV = (0.71 × 1.83) - 1 = +0.2993 ✓ (well above 0.05 floor). Anchor players re-verified: Jalen Brunson NOT in injury report (active ✓), Karl-Anthony Towns NOT in injury report (active ✓), OG Anunoby confirmed OUT (already priced into confidence -5 at Scout). PHI: no new injuries in NBA official report. Confidence 71 maintained (Scout applied -5 for Anunoby OUT; no further adjustments warranted). Series context: NYK leads 3-0, one win from ECF — commanding dominance. PHI faces elimination but 0-3 teams win series ~2% historically; desperation does NOT create betting edge. NetRtg gap: NYK +6.5 vs PHI -0.2 = 6.7pt gap, fully validated across 3 series games. L15 gap: NYK +20.4 vs PHI -9.3 = enormous directional confirmation. PHI home court worth 3-4pts but NYK's statistical dominance + 3-0 in-series record overrides. Injury source: nba_official — full rules apply. No anomaly (road favourite fully explained by series dominance + NetRtg gap). Stake: 20% of €1236.92 = €247 (High confidence tier, 20-25% range). Original Scout stake preserved — no odds drift to trigger adjustment.",
+          "anchor_players": [
+            "Jalen Brunson",
+            "Karl-Anthony Towns",
+            "OG Anunoby (OUT)"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null
+        }
+      ],
+      "summary": "Day 2026-05-10 commit — 1 bets totalling €247.00. 0 cancelled. Bankroll: €1236.92 → €989.92."
     }
   ]
 }
