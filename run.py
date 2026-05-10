@@ -2,10 +2,10 @@
 run.py — Tobias entry point
 
 Usage:
-  python run.py settle           → Settler agent (10:00 UTC)
-  python run.py analyst          → Analyst agent (11:00 UTC)
-  python run.py scout            → Scout agent   (14:00 UTC)
-  python run.py commit_if_ready  → Commit agent  (every 30 min, fires once at first_game_time - 45min)
+  python run.py settle           → Settler agent (08:00 UTC)
+  python run.py analyst          → Analyst agent (10:00 UTC)
+  python run.py scout            → Scout agent   (13:00 UTC)
+  python run.py commit_if_ready  → Commit agent  (every 30 min, fires once at first_game_time - 75min)
   python run.py commit           → Force commit  (manual override)
 """
 
@@ -74,7 +74,7 @@ def run_commit_if_ready():
         log.info("commit_if_ready: already committed today — skipping")
         return
 
-    # Wait until 45 min before first game
+    # Wait until 75 min before first game
     fgt = state.get("first_game_time")
     if not fgt:
         log.info("commit_if_ready: no first_game_time yet (Scout hasn't run) — skipping")
@@ -86,8 +86,8 @@ def run_commit_if_ready():
         log.info(f"commit_if_ready: could not parse first_game_time '{fgt}' — skipping")
         return
 
-    if now < t - timedelta(minutes=45):
-        remaining = int((t - timedelta(minutes=45) - now).total_seconds() / 60)
+    if now < t - timedelta(minutes=75):
+        remaining = int((t - timedelta(minutes=75) - now).total_seconds() / 60)
         log.info(f"commit_if_ready: {remaining}min until commit window — skipping")
         return
 

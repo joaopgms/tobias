@@ -2,8 +2,8 @@ name: Tobias — Commit Check (every 30 min)
 
 on:
   schedule:
-    # Every 30 min from 14:00–02:00 UTC — covers all NBA tip-off windows
-    - cron: '*/30 14-23 * * *'
+    # Every 30 min from 13:00–02:00 UTC — covers all NBA tip-off windows
+    - cron: '*/30 13-23 * * *'
     - cron: '*/30 0-2 * * *'
   workflow_dispatch:
 

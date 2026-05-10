@@ -1,8 +1,8 @@
-name: Tobias — Settler (10:00 UTC)
+name: Tobias — Settler (08:00 UTC)
 
 on:
   schedule:
-    - cron: '0 10 * * *'   # 10:00 UTC daily — settle yesterday's bets
+    - cron: '0 8 * * *'   # 08:00 UTC daily — settle yesterday's bets
   workflow_dispatch:         # allow manual trigger
 
 jobs:
