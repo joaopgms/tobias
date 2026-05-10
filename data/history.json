@@ -24,7 +24,7 @@
           "started_at": "2026-04-05T10:44:07.102344+00:00",
           "bankroll_start": 1000.0,
           "wins": 22,
-          "losses": 15,
+          "losses": 16,
           "peak_bankroll": 1917.57,
           "total_bets": 38
         }
@@ -2038,10 +2038,10 @@
             "Chet Holmgren (OKC) — active, no injury report",
             "Anthony Davis (LAL) — assumed active, no injury report"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -218.28,
+          "settled_at": "2026-05-10T11:00:56.106926+00:00",
           "committed_at": "2026-05-09T19:02:19Z"
         }
       ],
