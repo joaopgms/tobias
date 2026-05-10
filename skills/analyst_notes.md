@@ -1,41 +1,42 @@
 ---
-date: 2026-05-09
+date: 2026-05-10
 llm: claude-sonnet-4-6
 scout_patches: 1
 commit_patches: 0
-milestone: daily (36 bets)
+milestone: daily (37 bets)
 ---
 
-## Today's Analysis — 2026-05-09
+## Today's Analysis — 2026-05-10
 
-ESPN live feed confirms four Round 2 series with updated scores: NYK leads PHI 3-0 (PHI facing elimination), DET leads 2-0 (opponent likely CLE — verify), OKC leads 2-0 (opponent verify), and SAS leads MIN 2-1 — the only truly competitive series with a clear variable (Edwards status). The LAL-HOU Game 7 remains the most analytically interesting pick, where Durant's confirmed absence/presence is the sole determinant of whether HOU has a legitimate case. Performance data shows ML bets are deeply negative (9W/13L, €-930) while spreads are profitable (14W/12L, €+274) and Medium confidence is significantly outperforming High confidence — this pattern suggests Scout should continue favouring spread markets and avoid high-stakes ML plays, particularly at the 1.70-1.89 odds range which shows the worst ROI (8W/10L, €-1023).
+Primary update today is factual: OKC has advanced to 3-0 in their West Semifinals series (opponent identity needs ESPN verification — likely Memphis or another West seed; DEN confirmed eliminated), and DET-CLE is confirmed at 2-1 making that series competitive again with CLE facing must-win urgency. Performance data shows a clear and actionable pattern: Medium confidence (55-69) is profitable at 58.3% WR / +€739.80 while High confidence (70-84) is deeply underwater at 35.3% / -€1,099.81 — this is now 17 bets of evidence and the most important signal in the dataset. The ML market continues to underperform (40.9%, -€930.10) versus spreads (53.8%, +€274.33), reinforcing that Scout should prioritise spread evaluation in every session where advanced stats and injury data are available.
 
 ## Performance Stats
-ALL-TIME: 27W / 27L | Win rate: 50.0% | P&L: €-283.04 | Avg odds: 1.94 | Avg conf: 65.7/100
-RECENT 20: 10W / 10L | 50.0% WR | P&L: €-462.37
-By market:      ML 22bets 9W/13L 40.9% €-930.10  |  SPREAD 26bets 14W/12L 53.8% €+274.33  |  TOTAL 6bets 4W/2L 66.7% €+372.73
-By confidence:  High 17bets 6W/11L 35.3% €-1099.81  |  Medium 35bets 21W/14L 60.0% €+958.08  |  Speculative 2bets 0W/2L 0.0% €-141.31
-By odds range:  1.70-1.89 18bets 8W/10L 44.4% €-1023.06  |  1.90-2.09 32bets 18W/14L 56.2% €+682.03  |  2.10-2.50 4bets 1W/3L 25.0% €+57.99
+ALL-TIME: 27W / 28L | Win rate: 49.1% | P&L: €-501.32 | Avg odds: 1.94 | Avg conf: 65.6/100
+RECENT 20: 9W / 11L | 45.0% WR | P&L: €-939.53
+By market:      ML 22bets 9W/13L 40.9% €-930.10  |  SPREAD 26bets 14W/12L 53.8% €+274.33  |  TOTAL 7bets 4W/3L 57.1% €+154.45
+By confidence:  High 17bets 6W/11L 35.3% €-1099.81  |  Medium 36bets 21W/15L 58.3% €+739.80  |  Speculative 2bets 0W/2L 0.0% €-141.31
+By odds range:  1.70-1.89 18bets 8W/10L 44.4% €-1023.06  |  1.90-2.09 33bets 18W/15L 54.5% €+463.75  |  2.10-2.50 4bets 1W/3L 25.0% €+57.99
 
 
 
 ## Scout patches applied
-- [franchise_player_rules] Updated series scores from ESPN live feed (DET 2-0, OKC 2-0, NYK 3-0, SAS 2-1 in Round 2), confirmed BOS and TOR eliminations, and aligned all franchise player notes with current verified absence list.
+- [franchise_player_rules] Updated OKC series lead to 3-0 (from 2-0) per ESPN live feed; all other statuses aligned to current verified injury list with no new additions.
 
 ## Commit patches applied
 None
 
 ## Playoff context patches applied
-- [phase] Updated to reflect current ESPN series scores: NYK 3-0, DET 2-0, OKC 2-0, SAS 2-1; LAL-HOU Game 7 remains the only active Round 1 game.
-- [series_context] Updated series scores to ESPN live ground truth: NYK 3-0, DET 2-0, OKC 2-0, SAS 2-1; confirmed all Round 1 series complete; identified NYK vs PHI and SAS vs MIN as the active Round 2 matchups.
-- [elimination_flags] All Round 1 series now confirmed complete per ESPN; updated Round 2 elimination pressure (PHI faces 0-3 deficit; HOU in Game 7) and series leaders.
-- [h2h_playoff] Updated all in-series records to current ESPN scores; added PHI vs NYK as confirmed East Semifinals matchup; incorporated SAS vs MIN West Semifinals data and relevant in-series lessons.
-- [playoff_rest] Updated to reflect Round 2 is now at Game 3/4 stage — rust from Round 1 transition is fully dissipated; added elimination game rest override rule.
-- [playoff_motivation] Updated motivation hierarchy to reflect current series scores (PHI facing 0-3 elimination, Game 7 LAL-HOU, SAS 2-1 vs MIN) and added elimination game confidence rules.
-- [l15_caveat] Updated hierarchy to reflect Game 3/4 stage where in-series data (2-3 games) now outweighs season NetRtg; incorporated confirmed Round 1 lessons including PHI over BOS.
-- [no_tanking] Updated with all confirmed Round 1 eliminations (BOS, TOR, DEN, ORL, POR confirmed) and current active teams in Round 2.
+- [phase] Updated OKC series lead to 3-0 per ESPN live feed; DET confirmed opponent is CLE per series_context data.
+- [series_context] Updated OKC series to 3-0, DET series to 2-1, confirmed DET opponent as CLE per ESPN live bracket feed.
+- [elimination_flags] Updated OKC to 3-0 lead, DET to 2-1 lead, CLE confirmed as DET opponent; added OKC opponent elimination flag.
+- [playoff_rest] Updated to reflect OKC 3-0 lead (opponent now also facing elimination), DET 2-1 series with CLE confirmed.
+- [playoff_motivation] Updated to reflect OKC 3-0 lead, DET 2-1 with CLE confirmed, added nuance on PHI 0-3 desperation vs statistical reality.
+- [h2h_playoff] Updated OKC to 3-0, DET to 2-1 with CLE confirmed as opponent, refreshed all in-series lesson tags.
+- [l15_caveat] Updated OKC series to 3-0, DET-CLE to 2-1 with 3 games of in-series data; added CLE desperation context and strengthened OKC lesson with cumulative 7-game evidence.
+- [no_tanking] Updated eliminated teams list to reflect all confirmed Round 1 completions; aligned active teams list with current ESPN bracket.
 
 ## Intelligence gaps identified
-- **High confidence bets (17 bets, 35.3% WR, €-1099) are massively underperforming medium confidence (60% WR, €+958) — the confidence calibration appears systematically off, over-rating certainty.** — High confidence picks are losing at a rate suggesting the model is over-confident on its strongest signals; the EV calculation uses confidence as a key input and inflated confidence produces inflated EV on losing picks. → Consider tightening high-confidence threshold from 70-84 to 75-84 range, or adding a 'high confidence handicap' of -5 confidence for playoff picks where franchise player verification is roster-only rather than NBA official PDF confirmed.
-- **ML bets at 1.70-1.89 odds range are the worst performing segment (8W/10L, €-1023) — this is the range where most strong-favourite playoff picks cluster.** — At these odds, books already heavily price in the favourite — the market is efficient and our edge is thinnest, yet Scout may be drafting these based on NetRtg gaps that books have already incorporated. → Add a rule in market_rules: for ML picks in the 1.70-1.89 range, require NetRtg gap > 8pts OR in-series lead of 2+ games, not just the standard EV threshold; this would filter out marginal favourites where our edge is already priced out.
-- **OKC opponent in Round 2 West Semifinals is unclear — the four confirmed Round 2 participants are NYK, DET, MIN, OKC, but OKC's opponent is not explicitly identified in ESPN feed while SAS is separately listed in West Semifinals.** — If SAS is in West Semifinals vs OKC (Series B) and MIN is in West Semifinals vs [someone], there may be a bracket discrepancy — picking OKC or SAS without confirmed opponent creates an analytical blind spot for home court and in-series context. → ESPN bracket data needs explicit opponent mapping for each Round 2 series slot — the live feed should be queried with 'West Semifinals Series B: OKC vs [verify opponent]' before any OKC or remaining West team picks are drafted.
+- **High-confidence picks (70-84 tier) are losing at 35.3% across 17 bets — far worse than Medium-confidence picks at 58.3%, suggesting the confidence calibration is systematically over-confident in that tier** — The staking rules assign 20-25% of bankroll to High confidence picks; if these are losing at 35.3%, the system is betting largest on its worst-performing tier, which explains the -€1,099.81 loss concentration → After 20 bets at High confidence, this warrants a strategic review of what signals are driving High confidence inflation — likely NetRtg-heavy analysis without sufficient in-series or injury weighting in playoff context; consider raising the High tier floor to 75 or adding a playoff-specific confidence cap
+- **ML market is 40.9% win rate over 22 bets (-€930.10) while spreads are 53.8% over 26 bets (+€274.33) — a consistent and large divergence across the full sample** — Scout currently treats ML and spread as equal alternatives; if spreads are systematically outperforming ML by ~13 percentage points across a significant sample, the market_rules selectivity for ML should be raised or spreads should be default-preferred when both markets are available → Add a preference rule to market_rules: when both ML and spread show EV ≥ 0.05 on the same game, default to the spread market unless ML odds are ≥ 2.10 (where ML-specific value exists); also consider raising ML confidence floor from 50 to 55
+- **OKC's Round 2 opponent identity is unconfirmed in current data — the skills file references an unknown opponent at 0-3 down** — Scout cannot evaluate OKC games without knowing the opponent's NetRtg, injury status, home court, and series context; a pick drafted with 'unknown opponent' risks using wrong franchise player rules or rest data → Mandatory ESPN bracket verification before any OKC pick is already flagged; no patch needed — infrastructure/data fetch issue, not a rules gap
+- **Anthony Edwards (MIN) status is unknown for Round 2 — he was roster-only OUT in Round 1 but MIN advanced to Round 2, suggesting possible return, and this is the decisive variable in SAS vs MIN series odds** — If Edwards is active, MIN's effective NetRtg rises significantly (from ~+1.5 to closer to +3.1 or higher), which would change any SAS vs MIN pick thesis materially; current rules flag re-verification but don't provide a fallback confidence adjustment if Edwards status cannot be confirmed → Add to franchise_player_rules a specific note: if Edwards status cannot be confirmed via NBA official PDF, apply confidence -20 to ALL MIN picks (not just -10) given he is the franchise player and was recently OUT; this is stronger than the standard GTD adjustment given the recent injury history
