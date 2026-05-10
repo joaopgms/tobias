@@ -1,25 +1,25 @@
 ---
-version: 26
-updated_at: 2026-05-09T11:50:02.329898+00:00
-updated_by: analyst_2026-05-09
+version: 27
+updated_at: 2026-05-10T11:49:57.265729+00:00
+updated_by: analyst_2026-05-10
 llm: claude-sonnet-4-6
 ---
 
 ## SECTION:phase
 NBA Playoffs — Round 2 (Semifinals) Underway + Round 1 Final Game Active
 
-Play-In Tournament is OVER. Round 1 is complete except for one confirmed active Game 7 (LAL vs HOU). Round 2 (Semifinals) has four active series with Game 4 or Game 3 next.
+Play-In Tournament is OVER. Round 1 is complete except for one confirmed active Game 7 (LAL vs HOU). Round 2 (Semifinals) has four active series.
 Apply series context, elimination urgency, and rest rules — NOT play-in rules.
 playin_rules section is INACTIVE this phase — ignore it entirely.
 
 Round 2 series active (per ESPN live feed):
-- East Semifinals: New York Knicks leads 3-0 (Game 4 next)
-- East Semifinals: Detroit Pistons leads 2-0 (Game 4 next)
-- West Semifinals: San Antonio Spurs leads 2-1 (Game 4 next)
-- West Semifinals: Oklahoma City Thunder leads 2-0 (Game 4 next)
+- East Semifinals: New York Knicks leads Philadelphia 76ers 3-0 (Game 4 next)
+- East Semifinals: Detroit Pistons leads Cleveland Cavaliers 2-1 (Game 4 next)
+- West Semifinals: San Antonio Spurs leads Minnesota Timberwolves 2-1 (Game 4/5 next — verify from ESPN)
+- West Semifinals: Oklahoma City Thunder leads opponent 3-0 (Game 4 next — verify opponent identity)
 
 Round 1 still active (confirmed by ESPN):
-- Los Angeles Lakers leads Houston Rockets 4-2 (Game 7 — CONFIRM venue)
+- Los Angeles Lakers leads Houston Rockets 4-2 (Game 7 — CONFIRM venue from ESPN)
 
 All other Round 1 series are CONFIRMED COMPLETE per ESPN Semifinals feed.
 
@@ -34,20 +34,22 @@ EAST Semifinals — Series A:
   PHI (NetRtg -0.2, 45-37) eliminated BOS 4-3 in Round 1 — massive upset over Tatum-led BOS.
   NYK holds commanding 3-0 lead — near-elimination territory for PHI.
   PHI faces elimination in Game 4 — maximum desperation motivation applies.
+  History: 0-3 teams win series ~2% of the time — do NOT over-weight PHI desperation.
   Re-verify Jalen Brunson, Karl-Anthony Towns (NYK) before any pick. MANDATORY.
   NetRtg gap: NYK +6.7 pts over PHI — statistical edge clear; in-series 3-0 confirms.
 
 EAST Semifinals — Series B:
-- Detroit Pistons leads opponent 2-0 (Game 4 next)
-  DET (NetRtg +8.2, 60-22). VERIFY opponent from ESPN — likely CLE based on bracket.
+- Detroit Pistons leads Cleveland Cavaliers 2-1 (Game 4 next)
+  DET (NetRtg +8.2, 60-22). CLE confirmed as opponent per bracket.
   Kevin Huerter (DET): OUT [roster-only]. Re-verify Cade Cunningham, Isaiah Stewart, Jalen Duren. MANDATORY.
-  If DET vs CLE: DET (+8.2) vs CLE (+4.0) — DET statistical edge; 2-0 in-series confirms.
+  DET (+8.2) vs CLE (+4.0) — DET statistical edge; 2-1 in-series directionally confirms.
+  CLE trails 1-2 — desperation motivation in Game 4 (potential elimination-adjacent). Home court check critical.
   Re-verify Donovan Mitchell, Jarrett Allen, Evan Mobley (CLE) before any pick.
 
 WEST Semifinals — Series A:
-- San Antonio Spurs leads Minnesota Timberwolves 2-1 (Game 4 next)
+- San Antonio Spurs leads Minnesota Timberwolves 2-1 (Game 4/5 next — verify from ESPN)
   SAS (NetRtg +8.3, 62-20) beat POR 4-1 in Round 1.
-  MIN (NetRtg +3.1, 49-33) beat DEN 4-2 in Round 1 (likely).
+  MIN (NetRtg +3.1, 49-33) beat DEN 4-2 in Round 1.
   SAS leads 2-1 — MIN facing must-win context in Game 4.
   CRITICAL: Anthony Edwards (MIN) — re-verify status for Round 2 via NBA official PDF. MANDATORY.
   Donte DiVincenzo (G/MIN): OUT [roster-only].
@@ -56,12 +58,12 @@ WEST Semifinals — Series A:
   NetRtg gap: SAS +5.2 pts over MIN — significant edge; in-series 2-1 directionally confirms.
 
 WEST Semifinals — Series B:
-- Oklahoma City Thunder leads opponent 2-0 (Game 4 next)
-  OKC (NetRtg +11.1, 64-18) — strongest statistical team in playoffs. Swept PHX 4-0 in Round 1.
+- Oklahoma City Thunder leads opponent 3-0 (Game 4 next)
+  OKC (NetRtg +11.1, 64-18) — strongest statistical team in playoffs. Swept Round 1 4-0.
   Jalen Williams (G): OUT [roster-only] — FRANCHISE PLAYER. Re-verify SGA, Chet Holmgren. MANDATORY.
   Thomas Sorber (C): OUT [roster-only].
-  VERIFY opponent from ESPN — likely SAS, but SAS is in West Series A vs MIN. VERIFY bracket — OKC opponent may be DEN or another West team depending on bracket structure.
-  Re-verify opponent identity from ESPN. MANDATORY.
+  VERIFY opponent from ESPN — bracket indicates likely DEN or another West seed; DEN eliminated by MIN, so verify. OKC opponent must be confirmed from ESPN before any pick.
+  Leading 3-0 — opponent faces elimination in Game 4.
 
 --- ROUND 1 FINAL ---
 
@@ -77,13 +79,13 @@ WEST Round 1 — GAME 7:
 
 - OKC 4-0 PHX: CONFIRMED COMPLETE. PHX eliminated.
 - NYK 4-2 ATL: CONFIRMED COMPLETE. ATL eliminated.
-- MIN 4-x DEN: CONFIRMED COMPLETE (MIN in Semifinals). DEN eliminated.
+- MIN 4-2 DEN: CONFIRMED COMPLETE (MIN in Semifinals). DEN eliminated.
 - DET 4-3 ORL: CONFIRMED COMPLETE (DET in Semifinals). ORL eliminated.
 - CLE 4-3 TOR: CONFIRMED COMPLETE. TOR eliminated. CLE in East Semifinals.
 - PHI 4-3 BOS: CONFIRMED COMPLETE. BOS eliminated (Tatum OUT decisive). PHI in East Semifinals.
 - SAS 4-1 POR: CONFIRMED COMPLETE (SAS in West Semifinals). POR eliminated.
 
-KEY DATA NOTE: ESPN confirms four Round 2 series active. NYK vs PHI confirmed (NYK leads 3-0). DET vs CLE is the other East Semifinals series (DET leads 2-0). OKC vs [verify opponent] and SAS vs MIN are the West Semifinals series.
+KEY DATA NOTE: ESPN confirms four Round 2 series active. NYK vs PHI confirmed (NYK leads 3-0). DET vs CLE confirmed East Semifinals (DET leads 2-1). OKC leads West Semifinals 3-0 (opponent TBD — verify from ESPN). SAS vs MIN West Semifinals (SAS leads 2-1).
 
 ## SECTION:elimination_flags
 PLAYOFFS ELIMINATION FLAGS (updated from ESPN live feed)
@@ -98,17 +100,19 @@ Teams CONFIRMED ELIMINATED:
 - Denver Nuggets: MIN won Round 1. CONFIRMED ELIMINATED. No further picks.
 
 Teams FACING ELIMINATION (Round 2 — in severe deficit):
-- Philadelphia 76ers: trails NYK 0-3 — FACING ELIMINATION in Game 4. Maximum desperation motivation. PHI NetRtg -0.2; odds likely high vs NYK.
+- Philadelphia 76ers: trails NYK 0-3 — FACING ELIMINATION in Game 4. Maximum desperation motivation. PHI NetRtg -0.2; 0-3 teams win series ~2% historically — do NOT over-weight desperation as edge.
 - Houston Rockets: trails LAL 2-4 — Game 7 survival game. Kevin Durant OUT is season-defining variable.
+- OKC Opponent (TBD — verify from ESPN): trails OKC 0-3 — facing elimination in Game 4.
 
 Teams with series lead (may close out):
 - New York Knicks: leads PHI 3-0. One win from Round 3 (ECF).
-- Detroit Pistons: leads CLE 2-0. Strong position — verify if CLE is the confirmed opponent.
-- Oklahoma City Thunder: leads opponent 2-0. Strong position — verify opponent identity.
+- Oklahoma City Thunder: leads opponent 3-0. One win from ECF/WCF.
+- Detroit Pistons: leads CLE 2-1. Strong position.
 
 Teams in competitive series:
-- San Antonio Spurs: leads MIN 2-1. Not locked in — MIN will push back.
-- Minnesota Timberwolves: trails SAS 1-2. Must win Game 4 to stay alive at full force.
+- San Antonio Spurs: leads MIN 2-1. Not locked in — MIN will push back with must-win urgency.
+- Minnesota Timberwolves: trails SAS 1-2. Must win Game 4 to stay alive.
+- Cleveland Cavaliers: trails DET 1-2. Must avoid 1-3 deficit.
 
 Teams in Round 1 final:
 - Los Angeles Lakers: leads HOU 4-2. Game 7 — advances if they win.
@@ -124,36 +128,38 @@ PLAYOFF REST RULES (active — Round 2 Semifinals, Games 3-4 range):
 - 3+ rest days: extended rest — slight rust risk for hot teams; confidence -5.
 - Home court advantage in playoffs worth ~3-4 points (stronger than regular season ~2-3pts).
 
-ROUND 2 REST NOTE (updated — Game 3/4 stage):
-- Teams are now 2-3 games into Round 2. Any Round 1-to-Round 2 rust is FULLY DISSIPATED by Game 3.
+ROUND 2 REST NOTE (updated — Game 3-4 stage):
+- Teams are now 2-3 games into Round 2. Any Round 1-to-Round 2 rust is FULLY DISSIPATED.
 - Remove the -5 rust adjustment for all teams that have played 2+ Round 2 games.
 - Focus on inter-game rest days within the current Round 2 series.
 - Game 7 teams (LAL, HOU): will have shorter rest entering Round 2 than teams who closed Round 1 early — flag in Round 2 Game 1 if either team advances.
 
 CURRENT REST CONTEXT (approximate — verify from ESPN):
 - NYK/PHI: Game 4 next. Track rest days between Game 3 and Game 4 from ESPN.
-- DET/CLE: Game 4 next. Track inter-game rest.
-- SAS/MIN: Game 4 next. Track inter-game rest — MIN lost Game 3, may have home court for Game 4 (verify).
-- OKC/opponent: Game 4 next. Track inter-game rest.
+- DET/CLE: Game 4 next. Track inter-game rest — CLE trails 1-2, motivation overrides mild rest disadvantage.
+- SAS/MIN: Game 4/5 next. Track inter-game rest — MIN lost Game 3, may have home court for Game 4 (verify).
+- OKC/opponent: Game 4 next. Opponent faces elimination — motivation overrides any rest differential.
 - LAL/HOU: Game 7 — identical rest. Home court is decisive.
 
 ELIMINATION GAME REST RULES:
-- Team facing elimination (PHI at 0-3, HOU at 2-4) will play with maximum urgency regardless of rest.
+- Team facing elimination (PHI at 0-3, HOU at 2-4, OKC opponent at 0-3) will play with maximum urgency regardless of rest.
 - Do NOT apply rust adjustments to elimination-game teams — motivation overrides rest fatigue.
 
 ## SECTION:playoff_motivation
 PLAYOFF MOTIVATION HIERARCHY (Round 2 Semifinals — Games 3-4 Stage)
 
 1. ELIMINATION GAME URGENCY (highest motivation tier):
-   Philadelphia 76ers (trails NYK 0-3): maximum desperation — season ends with Game 4 loss.
+   Philadelphia 76ers (trails NYK 0-3): maximum desperation — season ends with Game 4 loss. NOTE: 0-3 teams win series ~2% historically — desperation alone does NOT create betting edge.
    Houston Rockets (trails LAL 2-4 — Game 7): win-or-go-home maximum urgency.
+   OKC Opponent (trails OKC 0-3): facing elimination Game 4 — maximum motivation, but likely price reflects this.
    → Apply confidence +5 to the TRAILING team in elimination scenarios on their home court.
    → Trailing team on road in elimination game: books over-price upset — require odds ≥ 2.00 to bet trailing team.
+   → PHI specifically: 0-3 deficit is near-insurmountable; do NOT fade NYK based on PHI desperation alone.
 
 2. SERIES LEADER CLOSE-OUT MOTIVATION:
-   NYK (3-0): one win from ECF — high motivation to close; but NYK may see marginal complacency risk.
-   DET (2-0): strong position; CLE desperation may make Game 3/4 competitive — do not over-lean DET.
-   OKC (2-0): dominant — but verify opponent is correct before drafting.
+   NYK (3-0): one win from ECF — high motivation to close.
+   OKC (3-0): dominant — one win from conference finals.
+   DET (2-1): momentum is contested — CLE desperation makes Game 4 competitive.
    → Series leader close-out games: home court + NetRtg remain primary; do not over-penalise trailing team.
 
 3. GAME 7 (maximum desperation — LAL vs HOU):
@@ -164,11 +170,12 @@ PLAYOFF MOTIVATION HIERARCHY (Round 2 Semifinals — Games 3-4 Stage)
    → In-series result + home court are primary inputs.
    → DURANT WILDCARD: Do NOT draft HOU ML without Durant confirmed active via NBA official PDF.
 
-4. COMPETITIVE SERIES (2-1 leads — SAS vs MIN):
+4. COMPETITIVE SERIES (2-1 leads — SAS vs MIN, DET vs CLE):
    SAS leads 2-1 — the trailing team (MIN) has home urgency in Game 4.
    → MIN at home in Game 4: desperation + crowd = meaningful factor; Edwards status CRITICAL.
-   → SAS road team trailing-series energy: check rest days from ESPN.
-   → Require franchise player re-verification before any pick in SAS vs MIN.
+   → SAS road team: check rest days from ESPN.
+   DET leads 2-1 — CLE not yet eliminated; must-win Game 4 context.
+   → Require franchise player re-verification before any pick in SAS vs MIN or DET vs CLE.
 
 5. HOME COURT (all games):
    → Playoff home court worth 3-4 points — decisive in close matchups.
@@ -183,7 +190,7 @@ PLAYOFF MOTIVATION HIERARCHY (Round 2 Semifinals — Games 3-4 Stage)
 
 7. OKC DOMINANCE SIGNAL:
    → OKC (NetRtg +11.1) remains statistical leader. Jalen Williams OUT but SGA + depth holds.
-   → Leading Round 2 2-0. Home court + NetRtg gap make OKC ML a reliable lean at odds ≥ 1.60.
+   → Leading Round 2 3-0. One win from conference finals. Home court + NetRtg gap make OKC ML a reliable lean.
    → Re-verify SGA, Chet Holmgren active before any OKC pick. MANDATORY.
 
 ## SECTION:playin_rules
@@ -200,33 +207,33 @@ Round 2 Game 3/4: growing in-series signal. Season NetRtg still relevant but in-
 --- ROUND 2 IN-SERIES STATUS ---
 
 East Semifinals — NYK leads PHI 3-0 (Game 4 next):
-- 3 games of in-series data — strong signal. NYK dominant at home and on road.
-- NYK (+6.5 NetRtg) vs PHI (-0.2 NetRtg) — statistical gap fully reflected in 3-0 series.
-- PHI eliminated BOS 4-3 — resilience established, but NYK class gap is real.
-- PHI faces elimination in Game 4 — desperation factor adds motivation but NYK's lead is commanding.
-- Verify home court for Game 4 from ESPN (if PHI hosting, their desperation + home factor worth noting).
+- 3 games of in-series data — STRONG signal. NYK dominant.
+- NYK (+6.5 NetRtg) vs PHI (-0.2 NetRtg) — 6.7pt gap fully validated in series result.
+- PHI's playoff resilience (beat BOS 4-3) did not overcome class gap at this level.
+- PHI faces elimination — desperation is real but history (0-3 wins series ~2%) does not support fade of NYK.
+- Verify home court for Game 4 from ESPN.
 
-East Semifinals — DET leads CLE 2-0 (Game 4 next — verify opponent):
-- 2 games of in-series data — directional. DET winning on statistical edge and depth.
-- DET (+8.2 NetRtg) vs CLE (+4.0 NetRtg) — 4.2pt gap materialising in series results.
+East Semifinals — DET leads CLE 2-1 (Game 4 next):
+- 3 games of in-series data — meaningful. DET holds edge but CLE competitive.
+- DET (+8.2 NetRtg) vs CLE (+4.0 NetRtg) — 4.2pt gap; DET advantage confirmed.
+- CLE trails 1-2 — must-win context. Donovan Mitchell desperation factor at home (verify venue).
 - Kevin Huerter (DET) OUT. Re-verify Cade Cunningham, Isaiah Stewart, Jalen Duren. MANDATORY.
 - Re-verify Donovan Mitchell, Jarrett Allen, Evan Mobley (CLE) before any pick.
-- CLE trails 0-2 — desperation motivation in Game 3/4. Home court check critical.
 
-West Semifinals — SAS leads MIN 2-1 (Game 4 next):
+West Semifinals — SAS leads MIN 2-1 (Game 4/5 next):
 - 3 games of in-series data — meaningful. SAS leads but MIN won one game — competitive series.
 - SAS (+8.3 NetRtg) vs MIN (+3.1 NetRtg) — SAS statistical edge; series reflecting this.
 - Edwards (MIN) re-verification CRITICAL — if active, MIN effective NetRtg higher.
-- Aaron Gordon (DEN) OUT irrelevant — DEN eliminated. MIN faces SAS without DiVincenzo.
+- Donte DiVincenzo (G/MIN): OUT [roster-only].
 - Re-verify Victor Wembanyama active for SAS. MANDATORY.
-- MIN trails 1-2 — must-win urgency in Game 4.
+- MIN trails 1-2 — must-win urgency.
 
-West Semifinals — OKC leads opponent 2-0 (Game 4 next):
-- 2 games of in-series data — strong early signal. OKC dominant.
+West Semifinals — OKC leads opponent 3-0 (Game 4 next):
+- 3 games of in-series data — STRONG signal. OKC dominant.
 - OKC (+11.1 NetRtg, 64-18) — statistical juggernaut. Jalen Williams OUT but depth covers.
-- VERIFY opponent identity from ESPN — bracket may show OKC vs DEN or another West team.
+- VERIFY opponent identity from ESPN before drafting any pick.
+- Opponent faces elimination — desperation motivation unlikely to overcome OKC's gap.
 - Re-verify SGA, Chet Holmgren active. MANDATORY.
-- Opponent trails 0-2 — desperation motivation.
 
 --- ROUND 1 FINAL ---
 
@@ -238,16 +245,17 @@ LAL vs HOU (Game 7 — LAL leads 4-2):
 
 KEY LESSONS UPDATED:
 1. PHI over BOS (4-3): confirms franchise player absence (Tatum OUT) can negate 8.4pt NetRtg gap.
-2. OKC +11.1 NetRtg: most reliable predictor this postseason — gap too large for scheme to override.
+2. OKC +11.1 NetRtg: most reliable predictor this postseason — gap too large for scheme to override (3-0 confirms).
 3. SAS 2-1 vs MIN: shows competitive Round 2 matchups require monitoring — don't auto-favourite.
-4. NYK 3-0 vs PHI: books likely pricing PHI at long odds — desperation fade of NYK picks may not be warranted; NYK class is real.
-5. Round 2 Game 3+: in-series data now meaningful — weight it alongside season NetRtg.
+4. NYK 3-0 vs PHI: 0-3 teams win series ~2% — do NOT over-weight PHI desperation as betting edge.
+5. DET 2-1 vs CLE: DET's statistical advantage is real but CLE showing fight — do not assume close-out is easy.
+6. Round 2 Game 3+: in-series data now meaningful — weight it alongside season NetRtg.
 
 ## SECTION:l15_caveat
 L15 NetRtg CAVEAT FOR PLAYOFFS (Round 2 Semifinals — Games 3-4 Stage)
 
 CRITICAL HIERARCHY:
-1. In-series result (3 games of data): PRIMARY signal — overrides season NetRtg.
+1. In-series result (2-3 games of data): PRIMARY signal — overrides season NetRtg.
 2. Franchise player availability: SECONDARY — a key absence can negate any NetRtg gap.
 3. Home court: TERTIARY — worth 3-4pts in playoffs; decisive in elimination games.
 4. Season NetRtg: CONTEXT — useful for series where in-series data is thin (1-2 games).
@@ -255,8 +263,7 @@ CRITICAL HIERARCHY:
 
 ROUND 2 SPECIAL RULE (updated to Game 3/4 stage):
 → For Game 3/4 of Round 2: 2-3 games of in-series signal now available.
-→ Weight in-series results ABOVE season NetRtg for series with 3+ games played (NYK-PHI, SAS-MIN).
-→ For series with 2 games played (DET, OKC): in-series directional but season NetRtg still relevant.
+→ Weight in-series results ABOVE season NetRtg for ALL active series (3 games played: NYK-PHI, SAS-MIN, OKC-opponent; 3 games played: DET-CLE).
 → Home court (higher seed) remains decisive tiebreaker in close matchups.
 → Do NOT over-weight single-game swings — tactical adjustments happen every game.
 
@@ -264,16 +271,16 @@ Key NetRtg vs in-series divergences (updated):
 
 - NYK (+6.5) vs PHI (-0.2): NYK leads 3-0 — NetRtg gap (6.7pts) fully validated in series.
   PHI's playoff resilience (beat BOS 4-3) did not overcome statistical disadvantage at this level.
-  KEY LESSON: 6.7pt NetRtg gap is large enough to override resilience factors.
+  KEY LESSON: 6.7pt NetRtg gap is large enough to override resilience factors. 0-3 deficit = near-insurmountable.
 
-- DET (+8.2) vs CLE (+4.0): DET leads 2-0 — consistent with 4.2pt NetRtg gap.
+- DET (+8.2) vs CLE (+4.0): DET leads 2-1 — consistent with 4.2pt NetRtg gap, but CLE competitive.
   CLE (Donovan Mitchell) facing deficit; re-verify CLE roster before any pick.
 
 - SAS (+8.3) vs MIN (+3.1): SAS leads 2-1 — 5.2pt gap creating in-series edge but MIN won one game.
   Edwards OUT (if confirmed) lowers MIN effective NetRtg further — this is a key variable.
   LESSON: Competitive series can still emerge despite 5pt gap when key players are absent/present.
 
-- OKC (+11.1) vs opponent: OKC leads 2-0 — gap too large for scheme to override (validated in Round 1 sweep).
+- OKC (+11.1) vs opponent: OKC leads 3-0 — gap too large for scheme to override (validated across 7 games total: 4-game Round 1 sweep + 3 games Round 2).
   Most reliable NetRtg predictor this postseason.
 
 - LAL (+1.7) vs HOU (+5.4): LAL leads 4-2 despite inferior NetRtg — Durant OUT amplified LAL advantage.
@@ -291,15 +298,16 @@ Round 2 effective NetRtg (adjusted for known absences):
 - DEN: ELIMINATED
 - CLE: +4.0 (Mitchell — verify active)
 - MIN: +3.1 (Edwards OUT → effective ~1.5–2.0; or higher if Edwards active)
-- PHI: -0.2 (extreme playoff resilience — but 0-3 deficit is definitive)
+- PHI: -0.2 (extreme playoff resilience — but 0-3 deficit is near-insurmountable; ~2% series comeback rate)
 - LAL: +1.7 (Doncic OUT — in-series execution compensates)
 
 KEY LESSONS UPDATED:
 1. Franchise player absence > NetRtg gap: PHI over BOS confirms; Durant OUT vs HOU confirms.
-2. OKC +11.1 is the most reliable signal this postseason — gap too large for scheme to override.
-3. Round 2 Game 3/4: in-series data now meaningful — weight it at LEAST equally with season NetRtg.
+2. OKC +11.1 is the most reliable signal this postseason — gap too large for scheme to override (now 7 games of evidence).
+3. Round 2 Game 3/4: in-series data is now meaningful for ALL four active series — weight it at LEAST equally with season NetRtg.
 4. PHI desperation in Game 4 (facing 0-3): history shows 0-3 teams win ~2% of series — do NOT over-weight PHI motivation.
-5. SAS vs MIN at 2-1: tightest meaningful Round 2 matchup — both teams capable of winning; Edwards status is the decisive variable.
+5. SAS vs MIN at 2-1: tightest meaningful Round 2 matchup — Edwards status is the decisive variable.
+6. DET vs CLE at 2-1: not a foregone conclusion — CLE desperation at home is a real factor.
 
 ## SECTION:no_tanking
 Tanking does not exist in playoffs. All remaining teams are fully motivated.
@@ -308,7 +316,7 @@ Ignore the regular-season tanking_teams section entirely.
 
 Teams CONFIRMED ELIMINATED (no further picks):
 - Phoenix Suns: OKC won 4-0. CONFIRMED. No further picks.
-- Atlanta Hawks: NYK won 4-2 in Round 1. CONFIRMED. No further picks.
+- Atlanta Hawks: NYK won 4-2. CONFIRMED. No further picks.
 - Portland Trail Blazers: SAS won 4-1. CONFIRMED. No further picks.
 - Orlando Magic: DET won 4-3. CONFIRMED. No further picks.
 - Toronto Raptors: CLE won 4-3. CONFIRMED. No further picks.
@@ -316,6 +324,6 @@ Teams CONFIRMED ELIMINATED (no further picks):
 - Denver Nuggets: MIN won Round 1. CONFIRMED. No further picks.
 
 Teams STILL ACTIVE:
-- Round 2 (confirmed in Semifinals): NYK, DET, OKC, SAS, MIN, PHI, CLE + DET opponent
+- Round 2 (confirmed in Semifinals): NYK, DET, OKC, SAS, MIN, PHI, CLE
 - Round 1 Game 7: LAL (leads 4-2), HOU (trails 4-2)
-- Note: PHI is active but facing elimination at 0-3 vs NYK — still requires full pick protocol.
+- Note: PHI is active but facing elimination at 0-3 vs NYK — still requires full pick protocol. 0-3 teams win series ~2% historically.
