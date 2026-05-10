@@ -9,14 +9,14 @@
   "net_pnl": 377.56,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-05-10T11:00:56.106926+00:00",
-  "first_game_time": "2026-05-09T19:00:00Z",
+  "last_updated": "2026-05-10T18:54:40.468596+00:00",
+  "first_game_time": "2026-05-10T19:30:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
-  "scout_updated_at": "2026-05-09T14:56:30.239084+00:00",
+  "scout_updated_at": "2026-05-10T18:54:40.468596+00:00",
   "scout_odds_source": "theodds_onexbet",
-  "commit_status": "done",
+  "commit_status": "pending",
   "commit_updated_at": "2026-05-09T19:02:15.972657+00:00",
   "commit_date": "2026-05-09",
   "analyst_updated_at": "2026-05-10T11:49:57.265729+00:00",
@@ -27,8 +27,27 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "## COMMIT REPORT — 2026-05-09T19:02:19Z | Bankroll: €1,455.20\n\n---\n\n### DRAFT PICKS REVIEWED\n**No draft picks from Scout phase** — zero picks were drafted at 14:00 Scout. No reviews required.\n\n---\n\n### LATE SCOUT ANALYSIS\n\n#### GAME 1: Cleveland Cavaliers vs Detroit Pistons (19:00 UTC — IN PROGRESS)\n\n**Time gate FAILED.** Game tipped at 19:00 UTC; current time is 19:02:19 UTC. No picks possible regardless of odds/edge.\n\nPre-time-gate findings (for record only):\n- CLE ML 1.50: below 1.65 floor ❌\n- DET ML 2.60: above 2.50 ceiling ❌\n- DET +5.0 at 1.89: in valid spread range. DET leads series 2-0, NetRtg +8.2 vs CLE +4.0. EV 0.077 at confidence 57. Confidence below 60 late scout minimum AND game already in progress — double disqualification.\n- Anchor player checks: Cade Cunningham, Isaiah Stewart, Jalen Duren (DET) — no injuries on NBA Official report. Donovan Mitchell, Jarrett Allen, Evan Mobley (CLE) — not listed. Kevin Huerter (DET) confirmed OUT but not an anchor.\n- **All CLE vs DET picks rejected: time gate failure.**\n\n---\n\n#### GAME 2: Los Angeles Lakers vs Oklahoma City Thunder (00:30 UTC)\n\n**Series conflict resolved:** Live slate confirms OKC @ LAL at Crypto.com Arena. This is the West Semifinals, with OKC leading 2-0 (Game 3). The \"LAL vs HOU Game 7\" reference in skills was either resolved (LAL won) or superseded by the live slate data. OKC's previously unverified Round 2 opponent is confirmed as LAL.\n\n**Injury update (NBA Official — critical):**\n- Luka Doncic (LAL): OUT — Left Hamstring Strain. LAL franchise player absent.\n- Jalen Williams (OKC): OUT — Left Hamstring Strain. OKC franchise player absent (was known, now reconfirmed).\n- Thomas Sorber (OKC): OUT — Recovery (minor).\n- Jarred Vanderbilt (LAL): Questionable (not a primary bet thesis player).\n- SGA (OKC): Not listed → active ✓\n- Chet Holmgren (OKC): Not listed → active ✓\n\n**ML odds analysis:**\n- OKC ML 1.29: below 1.65 floor → **REJECTED**\n- LAL ML 4.12: above 2.50 ceiling → **REJECTED**\n\n**Spread analysis:**\n- LAL +8.5 at 2.00: Confidence 58 — below 60 late scout minimum → **REJECTED**\n- OKC -8.5 at 1.92: Confidence ~47 — below 55 minimum → **REJECTED**\n\n---\n\n### CONFIRMED — UNDER 211.5 (LAL vs OKC)\n\n- **Match:** Los Angeles Lakers vs Oklahoma City Thunder | **Tip:** 2026-05-10T00:30:00Z\n- **Pick:** UNDER 211.5 | **Scout odds:** N/A (new pick) | **Commit odds:** 1.96 | **Move:** N/A\n- **ML:** LAL 4.12 / OKC 1.29 | **ATS:** LAL +8.5 (2.00/1.92) | **O/U:** 211.5 (O:1.96/U:1.96)\n- **Stake:** €218.28 (15% of €1,455.20) | **Pot:** €427.83 | **Conf:** 60/100 | **EV:** 0.176\n- **Decision:** Both franchise players confirmed OUT via NBA Official (Doncic — LAL, Williams — OKC). Doncic's absence is the primary driver: he runs essentially all of LAL's half-court offense at elite usage rate. Without him, LAL's effective OffRtg drops an estimated 8-10pts. OKC's elite defense (DefRtg 107.9) further suppresses LAL scoring. OKC's own offense loses Williams but retains SGA (active) — however, OKC scoring with SGA vs a playoff-motivated LAL defense at home should also be moderated. Projected game total: LAL ~99-104, OKC ~107-112, sum ~207-216, centered below 211.5. Books set this total with both absences priced in, but Doncic's outsized offensive role (primary creator/ball-handler) may be underweighted at this total level. Odds 1.96 within valid O/U range (1.75-2.05). EV 0.176. Source: nba_official (full quality). Quantity gate: 1 new pick (maximum reached).\n\n---\n\n### EXPOSURE SUMMARY\n- Total staked tonight: €218.28\n- % of bankroll: 15.0%\n- 70% bankroll cap: €1,018.64 — well within limits ✓\n- Remaining bankroll after commitment: €1,236.92\n\n---\n\n### SLATE SUMMARY\nThe Scout phase correctly identified both tonight's games as having issues — CLE vs DET ML odds outside valid range, and OKC vs LAL suffering a series context conflict alongside odds outside range. At commit time, CLE vs DET was already in progress (time gate failure), eliminating any action. For OKC vs LAL, the series conflict was resolved (OKC @ LAL confirmed as West Semifinals Game 3), and the key late development is the dual franchise player confirmation: both Doncic (LAL) and Williams (OKC) OUT via NBA Official. The only viable edge found is UNDER 211.5 — driven primarily by Doncic's absence cratering LAL's half-court offense against OKC's elite defense, with 1 late pick committed at minimum confidence threshold (60) and 15% stake.",
-  "draft_picks": [],
+  "last_report": "Two-game playoff slate tonight. One pick drafted: NYK ML at 1.83 (EV +0.30, confidence 71) backed by 3-0 series lead, 6.7pt NetRtg gap, dominant L15 differential (+20.4 vs -9.3), and nba_official injury source. Anunoby OUT for NYK applied -5 confidence adjustment. PHI desperation (0-3) historically irrelevant (~2% series comeback rate). SAS/MIN game yielded no valid pick — SAS ML priced below 1.60 floor, MIN ML negative EV, spread confidence below 60 floor. Pace data available but totals not evaluated (pace signals mixed; O/U odds in range but totals floor 65 not reached for PHI/NYK). Clean, selective session with 1 high-confidence ML pick.",
+  "draft_picks": [
+    {
+      "id": "nba_draft_20260510_001",
+      "match": "Philadelphia 76ers vs New York Knicks",
+      "time": "2026-05-10T19:30:00Z",
+      "pick": "New York Knicks ML",
+      "odds": 1.83,
+      "stake": 247.0,
+      "potential_return": 452.0,
+      "confidence": 76,
+      "reasoning": "LINE ANOMALY CHECK: No anomaly. NYK priced as road favourite at 1.83 — PHI 2.11. In-series: NYK leads 3-0, one win from ECF. NetRtg gap: NYK +6.5 vs PHI -0.2 = 6.7pt gap, fully validated across 3 series games. L15 NetRtg: NYK +20.4 vs PHI -9.3 — enormous directional gap. Franchise players: Jalen Brunson and Karl-Anthony Towns not listed in injury report (NYK: only OG Anunoby OUT). PHI: no additional absences noted. Anunoby OUT is meaningful (key defender/forward) — apply confidence -5. Adjusted confidence: 71. INJURY SOURCE: nba_official — full rules apply, no caps. PHI desperation factor: 0-3 teams win series ~2% historically — desperation does NOT create a betting edge for PHI. OG Anunoby (NYK): Out. Confidence -5 applied. Final confidence: 71. Home court: PHI is home, worth 3-4pts — reduces edge slightly. However, NYK's NetRtg dominance (+6.7pt gap) and 3-0 series lead override home court value. Odds in range: 1.83 is within ML target 1.60-2.50 ✓. EV calculation: (0.71 × 1.83) - 1 = 1.2993 - 1 = 0.2993 — EV = +0.30 (STRONG, well above 0.05 floor). Confidence 71 ≥ 50 ML floor ✓. Stake: 71 confidence = High tier (20-25% of €1236.92) = €247.38, rounded to €247. No B2B concerns — standard 2-day rest between playoff games.",
+      "anchor_players": [
+        "Jalen Brunson",
+        "Karl-Anthony Towns",
+        "OG Anunoby (OUT)"
+      ],
+      "drafted_at": "2026-05-10T18:54:45Z",
+      "market_type": "ml"
+    }
+  ],
   "pending_bets": [],
   "settled_bets": [
     {
@@ -795,15 +814,11 @@
   ],
   "rejected_games": [
     {
-      "match": "Los Angeles Lakers vs Oklahoma City Thunder",
-      "reason": "LINE ANOMALY: OKC ML 1.31 — massive favourite, below 1.60 floor. LAL ML 3.86 — above 2.50 ceiling. Neither side falls in 1.60-2.50 ML range. SERIES CONTEXT CONFLICT: Skills show OKC leads Round 2 West Semifinals 2-0 vs unverified opponent, but tonight's game shows OKC @ LAL (Crypto.com Arena) — this is LAL vs HOU Game 7 context per series data, yet OKC is listed as the away team. DATA CONFLICT: Series context lists LAL vs HOU as the active Round 2 Game 7, but tonight's slate shows OKC @ LAL. This is irreconcilable — OKC's Round 2 opponent is listed as unverified in skills, and LAL is in a confirmed Game 7 vs HOU. Cannot determine correct series context. CRITICAL ANOMALY: OKC priced at 1.31 as road team vs LAL — implied probability ~76%, but OKC is listed as the away team at Crypto.com (LAL home court). If this is OKC vs LAL in Round 2, OKC would be massive statistical favourite (+11.1 NetRtg) but road team at 1.31 is extreme pricing. Additionally, Jalen Williams (OKC franchise player) is confirmed OUT — this alone triggers the franchise player OUT rule: do NOT bet that team to win unless opponent also missing a star. LAL has Doncic OUT but LAL has been winning without him. The confluence of: (1) odds outside target range for both sides, (2) series context data conflict, (3) OKC franchise player (Jalen Williams) OUT, (4) mandatory SGA/Holmgren re-verification required — all combine to make this undraftable. Flagging as anomaly for Commit to investigate.",
-      "ml_home": 3.86,
-      "ml_away": 1.31,
-      "decision": "anomaly"
-    },
-    {
-      "match": "Cleveland Cavaliers vs Detroit Pistons",
-      "reason": "Post-filter: ml odds 2.65 outside [1.6–2.5] target range"
+      "match": "Minnesota Timberwolves vs San Antonio Spurs",
+      "reason": "SAS ML odds 1.55 below minimum 1.60 target range. MIN ML EV negative at confidence ~37% (EV = -0.02). Spread confidence 55 below 60 floor for spread market. No valid market found.",
+      "ml_home": 2.65,
+      "ml_away": 1.55,
+      "decision": "no_edge"
     }
   ],
   "late_scout_rejections": [
@@ -891,13 +906,13 @@
     "Sacramento Kings": -29.4,
     "New York Knicks": 20.4,
     "New Orleans Pelicans": -29.6,
-    "Cleveland Cavaliers": -1.5,
+    "Cleveland Cavaliers": 0.0,
     "Orlando Magic": 2.9,
     "Phoenix Suns": 6.4,
     "Denver Nuggets": 23.5,
     "Miami Heat": 9.5,
     "Dallas Mavericks": -21.4,
-    "Detroit Pistons": 25.4,
+    "Detroit Pistons": 22.2,
     "Atlanta Hawks": 13.7,
     "Indiana Pacers": -4.6,
     "Los Angeles Lakers": 7.7,
@@ -1426,30 +1441,49 @@
     "Oklahoma City Thunder@LA Clippers"
   ],
   "cached_context": {
-    "cached_at": "2026-05-09",
-    "games_str": "Cleveland Cavaliers vs Detroit Pistons  |  2026-05-09T19:00 UTC  |  Rocket Arena\nLos Angeles Lakers vs Oklahoma City Thunder  |  2026-05-10T00:30 UTC  |  crypto.com Arena",
-    "standings_str": "Oklahoma City Thunder: 64-18  L10:7-3\nSan Antonio Spurs: 62-20  L10:8-2\nDetroit Pistons: 60-22  L10:8-2\nBoston Celtics: 56-26  L10:8-2\nDenver Nuggets: 54-28  L10:10-0\nLos Angeles Lakers: 53-29  L10:7-3\nCleveland Cavaliers: 52-30  L10:7-3\nUtah Jazz: 22-60  L10:1-9\nUTAH: 22-60  L10:1-9\nBrooklyn Nets: 20-62  L10:3-7\nIndiana Pacers: 19-63  L10:3-7\nWashington Wizards: 17-65  L10:0-10",
-    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nCleveland Cavaliers: OffRtg 119.3 | DefRtg 115.2 | NetRtg +4.0 | Pace 99.9 | L15:-1.5\nDetroit Pistons: OffRtg 118.0 | DefRtg 109.8 | NetRtg +8.2 | Pace 99.3 | L15:+25.4\nLos Angeles Lakers: OffRtg 118.2 | DefRtg 116.5 | NetRtg +1.7 | Pace 98.3 | L15:+7.7\nOklahoma City Thunder: OffRtg 118.9 | DefRtg 107.9 | NetRtg +11.1 | Pace 99.3 | L15:+31.6"
+    "cached_at": "2026-05-10",
+    "games_str": "Philadelphia 76ers vs New York Knicks  |  2026-05-10T19:30 UTC  |  Xfinity Mobile Arena\nMinnesota Timberwolves vs San Antonio Spurs  |  2026-05-10T23:30 UTC  |  Target Center",
+    "standings_str": "Oklahoma City Thunder: 64-18  L10:7-3\nSan Antonio Spurs: 62-20  L10:8-2\nDetroit Pistons: 60-22  L10:8-2\nBoston Celtics: 56-26  L10:8-2\nDenver Nuggets: 54-28  L10:10-0\nNew York Knicks: 53-29  L10:6-4\nMinnesota Timberwolves: 49-33  L10:5-5\nPhiladelphia 76ers: 45-37  L10:6-4\nUtah Jazz: 22-60  L10:1-9\nUTAH: 22-60  L10:1-9\nBrooklyn Nets: 20-62  L10:3-7\nIndiana Pacers: 19-63  L10:3-7\nWashington Wizards: 17-65  L10:0-10",
+    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nPhiladelphia 76ers: OffRtg 115.4 | DefRtg 115.6 | NetRtg -0.2 | Pace 99.4 | L15:-9.3\nNew York Knicks: OffRtg 119.9 | DefRtg 113.4 | NetRtg +6.5 | Pace 96.8 | L15:+20.4\nMinnesota Timberwolves: OffRtg 116.8 | DefRtg 113.7 | NetRtg +3.1 | Pace 100.5 | L15:-0.4\nSan Antonio Spurs: OffRtg 119.7 | DefRtg 111.4 | NetRtg +8.3 | Pace 99.9 | L15:+33.5"
   },
   "scout_report_data": {
-    "date": "2026-05-09",
-    "updated_at": "2026-05-09T14:56:30.239084+00:00",
-    "picks": [],
-    "rejected": [
+    "date": "2026-05-10",
+    "updated_at": "2026-05-10T18:54:40.468596+00:00",
+    "picks": [
       {
-        "match": "Los Angeles Lakers vs Oklahoma City Thunder",
-        "reason": "LINE ANOMALY: OKC ML 1.31 — massive favourite, below 1.60 floor. LAL ML 3.86 — above 2.50 ceiling. Neither side falls in 1.60-2.50 ML range. SERIES CONTEXT CONFLICT: Skills show OKC leads Round 2 West Semifinals 2-0 vs unverified opponent, but tonight's game shows OKC @ LAL (Crypto.com Arena) — this is LAL vs HOU Game 7 context per series data, yet OKC is listed as the away team. DATA CONFLICT: Series context lists LAL vs HOU as the active Round 2 Game 7, but tonight's slate shows OKC @ LAL. This is irreconcilable — OKC's Round 2 opponent is listed as unverified in skills, and LAL is in a confirmed Game 7 vs HOU. Cannot determine correct series context. CRITICAL ANOMALY: OKC priced at 1.31 as road team vs LAL — implied probability ~76%, but OKC is listed as the away team at Crypto.com (LAL home court). If this is OKC vs LAL in Round 2, OKC would be massive statistical favourite (+11.1 NetRtg) but road team at 1.31 is extreme pricing. Additionally, Jalen Williams (OKC franchise player) is confirmed OUT — this alone triggers the franchise player OUT rule: do NOT bet that team to win unless opponent also missing a star. LAL has Doncic OUT but LAL has been winning without him. The confluence of: (1) odds outside target range for both sides, (2) series context data conflict, (3) OKC franchise player (Jalen Williams) OUT, (4) mandatory SGA/Holmgren re-verification required — all combine to make this undraftable. Flagging as anomaly for Commit to investigate.",
-        "ml_home": 3.86,
-        "ml_away": 1.31,
-        "decision": "anomaly"
+        "id": "nba_draft_20260510_001",
+        "match": "Philadelphia 76ers vs New York Knicks",
+        "time": "2026-05-10T19:30:00Z",
+        "pick": "New York Knicks ML",
+        "odds": 1.83,
+        "stake": 247.0,
+        "potential_return": 452.0,
+        "confidence": 76,
+        "reasoning": "LINE ANOMALY CHECK: No anomaly. NYK priced as road favourite at 1.83 — PHI 2.11. In-series: NYK leads 3-0, one win from ECF. NetRtg gap: NYK +6.5 vs PHI -0.2 = 6.7pt gap, fully validated across 3 series games. L15 NetRtg: NYK +20.4 vs PHI -9.3 — enormous directional gap. Franchise players: Jalen Brunson and Karl-Anthony Towns not listed in injury report (NYK: only OG Anunoby OUT). PHI: no additional absences noted. Anunoby OUT is meaningful (key defender/forward) — apply confidence -5. Adjusted confidence: 71. INJURY SOURCE: nba_official — full rules apply, no caps. PHI desperation factor: 0-3 teams win series ~2% historically — desperation does NOT create a betting edge for PHI. OG Anunoby (NYK): Out. Confidence -5 applied. Final confidence: 71. Home court: PHI is home, worth 3-4pts — reduces edge slightly. However, NYK's NetRtg dominance (+6.7pt gap) and 3-0 series lead override home court value. Odds in range: 1.83 is within ML target 1.60-2.50 ✓. EV calculation: (0.71 × 1.83) - 1 = 1.2993 - 1 = 0.2993 — EV = +0.30 (STRONG, well above 0.05 floor). Confidence 71 ≥ 50 ML floor ✓. Stake: 71 confidence = High tier (20-25% of €1236.92) = €247.38, rounded to €247. No B2B concerns — standard 2-day rest between playoff games.",
+        "anchor_players": [
+          "Jalen Brunson",
+          "Karl-Anthony Towns",
+          "OG Anunoby (OUT)"
+        ],
+        "drafted_at": "2026-05-10T18:54:45Z",
+        "market_type": "ml"
       }
     ],
-    "report": "Two-game playoff slate tonight. One pick drafted: DET ML in Game 4 at Cleveland. DET's L15 NetRtg of +25.4 vs CLE's -1.5 represents a 26.9pt gap — the strongest short-term signal on the slate. Series context (DET leads 2-0), superior season NetRtg (+8.2 vs +4.0), and confirmed franchise player availability support the pick despite road elimination-game risk. EV of 0.72 is elite. The LAL vs OKC game was rejected due to: odds outside target range (both sides), data conflict between series context and tonight's listed matchup, OKC franchise player Jalen Williams confirmed OUT, and mandatory re-verification requirements that cannot be satisfied at draft time — flagged as anomaly for Commit investigation. Injury feed confirmed from NBA Official PDF covering all 4 active teams tonight — full data quality standard met.",
+    "rejected": [
+      {
+        "match": "Minnesota Timberwolves vs San Antonio Spurs",
+        "reason": "SAS ML odds 1.55 below minimum 1.60 target range. MIN ML EV negative at confidence ~37% (EV = -0.02). Spread confidence 55 below 60 floor for spread market. No valid market found.",
+        "ml_home": 2.65,
+        "ml_away": 1.55,
+        "decision": "no_edge"
+      }
+    ],
+    "report": "Two-game playoff slate tonight. One pick drafted: NYK ML at 1.83 (EV +0.30, confidence 71) backed by 3-0 series lead, 6.7pt NetRtg gap, dominant L15 differential (+20.4 vs -9.3), and nba_official injury source. Anunoby OUT for NYK applied -5 confidence adjustment. PHI desperation (0-3) historically irrelevant (~2% series comeback rate). SAS/MIN game yielded no valid pick — SAS ML priced below 1.60 floor, MIN ML negative EV, spread confidence below 60 floor. Pace data available but totals not evaluated (pace signals mixed; O/U odds in range but totals floor 65 not reached for PHI/NYK). Clean, selective session with 1 high-confidence ML pick.",
     "odds_source": "theodds_onexbet",
     "injuries_source": "nba_official",
-    "tokens_in": 12257,
-    "tokens_out": 2479,
-    "cost_usd": 0.073956
+    "tokens_in": 12550,
+    "tokens_out": 1701,
+    "cost_usd": 0.063165
   },
   "analyst_checkpoint_done": true,
   "slate_game_times": [
