@@ -1688,5 +1688,47 @@
     "tokens_in": 12257,
     "tokens_out": 2479,
     "cost_usd": 0.073956
+  },
+  {
+    "ts": "2026-05-10T18:54:40.468596+00:00",
+    "date": "2026-05-10",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_onexbet",
+    "draft_count": 1,
+    "picks": [
+      {
+        "id": "nba_draft_20260510_001",
+        "match": "Philadelphia 76ers vs New York Knicks",
+        "time": "2026-05-10T19:30:00Z",
+        "pick": "New York Knicks ML",
+        "odds": 1.83,
+        "stake": 247.0,
+        "potential_return": 452.0,
+        "confidence": 76,
+        "reasoning": "LINE ANOMALY CHECK: No anomaly. NYK priced as road favourite at 1.83 — PHI 2.11. In-series: NYK leads 3-0, one win from ECF. NetRtg gap: NYK +6.5 vs PHI -0.2 = 6.7pt gap, fully validated across 3 series games. L15 NetRtg: NYK +20.4 vs PHI -9.3 — enormous directional gap. Franchise players: Jalen Brunson and Karl-Anthony Towns not listed in injury report (NYK: only OG Anunoby OUT). PHI: no additional absences noted. Anunoby OUT is meaningful (key defender/forward) — apply confidence -5. Adjusted confidence: 71. INJURY SOURCE: nba_official — full rules apply, no caps. PHI desperation factor: 0-3 teams win series ~2% historically — desperation does NOT create a betting edge for PHI. OG Anunoby (NYK): Out. Confidence -5 applied. Final confidence: 71. Home court: PHI is home, worth 3-4pts — reduces edge slightly. However, NYK's NetRtg dominance (+6.7pt gap) and 3-0 series lead override home court value. Odds in range: 1.83 is within ML target 1.60-2.50 ✓. EV calculation: (0.71 × 1.83) - 1 = 1.2993 - 1 = 0.2993 — EV = +0.30 (STRONG, well above 0.05 floor). Confidence 71 ≥ 50 ML floor ✓. Stake: 71 confidence = High tier (20-25% of €1236.92) = €247.38, rounded to €247. No B2B concerns — standard 2-day rest between playoff games.",
+        "anchor_players": [
+          "Jalen Brunson",
+          "Karl-Anthony Towns",
+          "OG Anunoby (OUT)"
+        ],
+        "drafted_at": "2026-05-10T18:54:45Z",
+        "market_type": "ml"
+      }
+    ],
+    "rejected": [
+      {
+        "match": "Minnesota Timberwolves vs San Antonio Spurs",
+        "reason": "SAS ML odds 1.55 below minimum 1.60 target range. MIN ML EV negative at confidence ~37% (EV = -0.02). Spread confidence 55 below 60 floor for spread market. No valid market found.",
+        "ml_home": 2.65,
+        "ml_away": 1.55,
+        "decision": "no_edge"
+      }
+    ],
+    "report": "Two-game playoff slate tonight. One pick drafted: NYK ML at 1.83 (EV +0.30, confidence 71) backed by 3-0 series lead, 6.7pt NetRtg gap, dominant L15 differential (+20.4 vs -9.3), and nba_official injury source. Anunoby OUT for NYK applied -5 confidence adjustment. PHI desperation (0-3) historically irrelevant (~2% series comeback rate). SAS/MIN game yielded no valid pick — SAS ML priced below 1.60 floor, MIN ML negative EV, spread confidence below 60 floor. Pace data available but totals not evaluated (pace signals mixed; O/U odds in range but totals floor 65 not reached for PHI/NYK). Clean, selective session with 1 high-confidence ML pick.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 12550,
+    "tokens_out": 1701,
+    "cost_usd": 0.063165
   }
 ]
