@@ -439,7 +439,7 @@
     <div class="score-card sc-cyan"><div class="score-label">⏳ Placed</div><div class="score-value" id="statPending" style="color:var(--cyan)">-</div><div class="score-sub" id="statPendingSub">-</div></div>
     <div class="score-card"><div class="score-label">📊 Total Staked</div><div class="score-value" id="statStaked">-</div><div class="score-sub" id="statROI">ROI: -</div></div>
     <div class="score-card"><div class="score-label">🏀 First Game</div><div class="score-value" id="boardFirstGame" style="font-size:1.1rem">-</div><div class="score-sub" id="boardFirstGameSub">Tip-off time</div></div>
-    <div class="score-card"><div class="score-label">🎯 Commit By</div><div class="score-value" id="boardCommitBy" style="font-size:1.1rem">-</div><div class="score-sub" id="boardCommitBySub">45 min before tip</div></div>
+    <div class="score-card"><div class="score-label">🎯 Commit By</div><div class="score-value" id="boardCommitBy" style="font-size:1.1rem">-</div><div class="score-sub" id="boardCommitBySub">75 min before tip</div></div>
   </div>
   <div class="report-nav-bar" id="reportNavBar" style="display:none;margin:0 32px 4px;display:flex;gap:8px;flex-wrap:wrap"></div>
   <div class="chart-section">
@@ -546,7 +546,7 @@
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:16px">
         <div class="agent-model-card">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
-            <div class="amc-label" style="margin-bottom:0">🧠 Analyst <span class="amc-sub">11:00 UTC daily</span></div>
+            <div class="amc-label" style="margin-bottom:0">🧠 Analyst <span class="amc-sub">10:00 UTC daily</span></div>
             <span class="agent-pill done" id="analystPill"><span class="agent-dot done" id="analystDot"></span><span id="analystStatus">-</span></span>
           </div>
           <select class="amc-select" id="sel-analyst">
@@ -564,7 +564,7 @@
         </div>
         <div class="agent-model-card">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
-            <div class="amc-label" style="margin-bottom:0">🔍 Scout <span class="amc-sub">14:00 UTC daily</span></div>
+            <div class="amc-label" style="margin-bottom:0">🔍 Scout <span class="amc-sub">13:00 UTC daily</span></div>
             <span class="agent-pill pending" id="scoutPill"><span class="agent-dot pending" id="scoutDot"></span><span id="scoutStatus">-</span></span>
           </div>
           <select class="amc-select" id="sel-scout">
@@ -582,7 +582,7 @@
         </div>
         <div class="agent-model-card">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
-            <div class="amc-label" style="margin-bottom:0">🎯 Commit <span class="amc-sub">15min before tip-off</span></div>
+            <div class="amc-label" style="margin-bottom:0">🎯 Commit <span class="amc-sub">75min before tip-off</span></div>
             <span class="agent-pill pending" id="commitPill"><span class="agent-dot pending" id="commitDot"></span><span id="commitStatus">-</span></span>
           </div>
           <select class="amc-select" id="sel-commit">
@@ -601,7 +601,7 @@
         </div>
         <div class="agent-model-card">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px">
-            <div class="amc-label" style="margin-bottom:0">✅ Settler <span class="amc-sub">10:00 UTC daily</span></div>
+            <div class="amc-label" style="margin-bottom:0">✅ Settler <span class="amc-sub">08:00 UTC daily</span></div>
             <span class="agent-pill done" id="settlerPill"><span class="agent-dot done" id="settlerDot"></span><span id="settlerStatus">-</span></span>
           </div>
           <select class="amc-select" id="sel-settler">
@@ -704,7 +704,7 @@
               <div class="step-num step-num-info">!</div>
               <div class="step-content">
                 <div class="step-title">When does the change take effect?</div>
-                <div class="step-desc">Immediately on save - the next agent run will read <code class="step-code">data/config.json</code> from the repo and use the new models. The Analyst runs at 11:00 UTC, Scout at 14:00 UTC.</div>
+                <div class="step-desc">Immediately on save - the next agent run will read <code class="step-code">data/config.json</code> from the repo and use the new models. The Analyst runs at 10:00 UTC, Scout at 13:00 UTC.</div>
               </div>
             </div>
 
@@ -732,10 +732,10 @@
     <div class="settings-card">
       <div class="settings-title">Agent Schedule (UTC)</div>
       <div style="font-size:.78rem;line-height:2.2;color:var(--text)">
-        <div>✅ <strong>Setter</strong> - 10:00 daily</div>
-        <div>🧠 <strong>Analyst</strong> - 11:00 daily</div>
-        <div>🔍 <strong>Scout</strong> - 14:00 daily</div>
-        <div>🎯 <strong>Commit</strong> - every 30min, self-gating<br/><span style="font-size:.68rem;color:var(--muted)">Fires 15min before first tip-off</span></div>
+        <div>✅ <strong>Settler</strong> - 08:00 daily</div>
+        <div>🧠 <strong>Analyst</strong> - 10:00 daily</div>
+        <div>🔍 <strong>Scout</strong> - 13:00 daily</div>
+        <div>🎯 <strong>Commit</strong> - every 30min, self-gating<br/><span style="font-size:.68rem;color:var(--muted)">Fires 75min before first tip-off</span></div>
       </div>
     </div>
     <div class="settings-card" style="grid-column:1/-1">
@@ -904,14 +904,14 @@ function buildTicker(){
       `Record: <span class="win">${s.won.length}W</span> / <span class="loss">${s.lost.length}L</span>`,
       `Season ${activeSeason}`,
       ...allBets.slice(-4).map(b=>`${b.match} - ${b.pick} <span class="${b.result?(b.result==='WON'?'win':'loss'):'pend'}">${b.result||'PENDING'}</span>`),
-      `Scout 14:00 UTC · Commit 15min before tip-off`,
+      `Scout 13:00 UTC · Commit 75min before tip-off`,
       `Odds: Betano.pt via OddsPapi`,
     ];
   } else {
     items=[
       `🏀 <span class="pend">TOBIAS</span> - Autonomous NBA Betting Simulation`,
-      `Waiting for first agent run · Scout fires at 14:00 UTC`,
-      `Analyst 11:00 · Scout 14:00 · Commit 15min before tip-off · Setter 10:00`,
+      `Waiting for first agent run · Scout fires at 13:00 UTC`,
+      `Analyst 10:00 · Scout 13:00 · Commit 75min before tip-off · Settler 08:00`,
       `Odds via <span class="pend">Betano.pt</span> · Powered by Claude Sonnet 4.6`,
       `Starting bankroll: <span class="pend">€${(ST.bankroll_initial||1000).toLocaleString('pt-PT')}</span>`,
       `Season <span class="pend">${activeSeason}</span> · Game <span class="pend">${ST.game||1}</span>`,
@@ -990,13 +990,13 @@ function renderAgents(){
   // First game time
   const fgt=ST.first_game_time;
   document.getElementById('firstGameTime').textContent = fgt ? fmt(fgt) : '-';
-  const commitAtDt = fgt ? new Date(new Date(fgt).getTime() - 30*60*1000) : null;
+  const commitAtDt = fgt ? new Date(new Date(fgt).getTime() - 75*60*1000) : null;
   const commitAtEl = document.getElementById('commitAtTime');
   if(commitAtEl) commitAtEl.textContent = commitAtDt ? fmt(commitAtDt.toISOString()) : '-';
   // Next run timestamps
-  const elAN=document.getElementById('analystNextRun'); if(elAN) elAN.textContent=nextRunAt(11);
-  const elSC=document.getElementById('scoutNextRun');   if(elSC) elSC.textContent=nextRunAt(14);
-  const elSE=document.getElementById('settlerNextRun'); if(elSE) elSE.textContent=nextRunAt(10);
+  const elAN=document.getElementById('analystNextRun'); if(elAN) elAN.textContent=nextRunAt(10);
+  const elSC=document.getElementById('scoutNextRun');   if(elSC) elSC.textContent=nextRunAt(13);
+  const elSE=document.getElementById('settlerNextRun'); if(elSE) elSE.textContent=nextRunAt(8);
 }
 
 // -- MAIN RENDER ------------------------------------------------------------
@@ -1017,7 +1017,7 @@ function renderStats(){
   const commitSubEl=document.getElementById('boardCommitBySub');
   if(fgt){
     fgtEl.textContent=fmt(fgt);
-    const commitDt=new Date(new Date(fgt).getTime()-45*60*1000);
+    const commitDt=new Date(new Date(fgt).getTime()-75*60*1000);
     const now=new Date();
     commitEl.textContent=fmt(commitDt.toISOString());
     const diffMs=commitDt-now;
