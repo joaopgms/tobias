@@ -1696,5 +1696,50 @@
     "tokens_in": 10632,
     "tokens_out": 8467,
     "cost_usd": 0.158901
+  },
+  {
+    "ts": "2026-05-10T19:02:20.321799+00:00",
+    "date": "2026-05-10",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 1,
+    "cancelled_count": 0,
+    "total_staked": 247.0,
+    "bankroll_before": 1236.92,
+    "bankroll_after": 989.92,
+    "bets": [
+      {
+        "id": "nba_bet_20260510_001",
+        "match": "Philadelphia 76ers vs New York Knicks",
+        "time": "2026-05-10T19:30:00Z",
+        "pick": "New York Knicks ML",
+        "odds": 1.83,
+        "stake": 247.0,
+        "potential_return": 452.01,
+        "confidence": 71,
+        "reasoning": "COMMIT CONFIRMATION: NYK ML @ 1.83 — zero line movement since Scout (1.83 → 1.83). Odds within valid ML range [1.65–2.50] ✓. EV = (0.71 × 1.83) - 1 = +0.2993 ✓ (well above 0.05 floor). Anchor players re-verified: Jalen Brunson NOT in injury report (active ✓), Karl-Anthony Towns NOT in injury report (active ✓), OG Anunoby confirmed OUT (already priced into confidence -5 at Scout). PHI: no new injuries in NBA official report. Confidence 71 maintained (Scout applied -5 for Anunoby OUT; no further adjustments warranted). Series context: NYK leads 3-0, one win from ECF — commanding dominance. PHI faces elimination but 0-3 teams win series ~2% historically; desperation does NOT create betting edge. NetRtg gap: NYK +6.5 vs PHI -0.2 = 6.7pt gap, fully validated across 3 series games. L15 gap: NYK +20.4 vs PHI -9.3 = enormous directional confirmation. PHI home court worth 3-4pts but NYK's statistical dominance + 3-0 in-series record overrides. Injury source: nba_official — full rules apply. No anomaly (road favourite fully explained by series dominance + NetRtg gap). Stake: 20% of €1236.92 = €247 (High confidence tier, 20-25% range). Original Scout stake preserved — no odds drift to trigger adjustment.",
+        "anchor_players": [
+          "Jalen Brunson",
+          "Karl-Anthony Towns",
+          "OG Anunoby (OUT)"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null
+      }
+    ],
+    "cancelled": [],
+    "late_rejections": [
+      {
+        "match": "Minnesota Timberwolves vs San Antonio Spurs",
+        "reason": "No valid market found at commit time. SAS ML 1.55 remains below ML floor of 1.65 — cannot confirm. MIN ML 2.65 exceeds ML ceiling of 2.50 — outside valid range. MIN Spread +4.5 @ 1.96 is odds-valid but confidence assessment reaches only ~40 (SAS leads 2-1 in-series, L15 NetRtg gap SAS +33.5 vs MIN -0.4 massive, 5.2pt season NetRtg gap); falls below late-scout confidence floor of 60 and EV is deeply negative at that confidence level. O/U 217.5 has no clear directional edge with confidence ≥ 60 to meet EV ≥ 0.05 requirement. Note: Anthony Edwards not listed in injury report (presumed active for Round 2, an upgrade from Round 1 OUT status), but even with Edwards active, SAS statistical dominance and in-series lead prevent MIN spread from reaching required confidence threshold."
+      }
+    ],
+    "report": "### CONFIRMED — New York Knicks ML\n\n- **Match:** Philadelphia 76ers vs New York Knicks (PHI home) | **Tip:** 2026-05-10T19:30 UTC\n- **Pick:** New York Knicks ML | **Scout odds:** 1.83 | **Commit odds:** 1.83 | **Move:** 0.00 (no movement)\n- **ML:** PHI 2.11 / NYK 1.83 | **ATS:** PHI +1.5 (1.98/1.94) | **O/U:** 214.5 (O:1.97/U:1.95)\n- **Stake:** €247.00 | **Pot:** €452.01 | **Conf:** 71/100 | **EV:** +0.2993\n\n**Decision:** Full confirmation. Zero line movement since Scout — no re-evaluation required beyond standard checks. Both anchor players (Brunson, KAT) confirmed active per NBA official injury report. OG Anunoby remains OUT (already incorporated as -5 confidence at Scout). No new PHI injuries. NYK leads series 3-0 with a 6.7pt NetRtg gap validated across three games; L15 gap (NYK +20.4 vs PHI -9.3) further confirms structural dominance. PHI's home court advantage (3-4pts) is insufficient to bridge the statistical and series-result gap. PHI elimination game desperation is real but historically irrelevant — 0-3 teams win series ~2% of the time. EV of +0.30 is well above the 0.05 floor. Stake at 20% of bankroll (€247) is within High confidence tier and total exposure (20%) is well inside the 70% bankroll cap.\n\n---\n\n### LATE SCOUT — Minnesota Timberwolves vs San Antonio Spurs\n\n**No new pick added.** SAS ML (1.55) remains below the 1.65 ML floor. MIN ML (2.65) is above the 2.50 ceiling. MIN Spread +4.5 at 1.96 is the only odds-valid market but confidence reaches only ~40 given SAS's in-series 2-1 lead, L15 dominance (+33.5 vs -0.4), and 5.2pt season NetRtg gap — far below the 60-confidence floor required for late-scout additions. Notably, Anthony Edwards is not listed in the NBA official injury report tonight, suggesting he may be active for Round 2 (an upgrade from his Round 1 OUT status), but even with Edwards presumed active this does not generate sufficient confidence to overcome SAS's multi-layered edge in this series.\n\n---\n\n**Slate Summary:** One bet committed for tonight's two-game playoff slate — NYK ML at 1.83 for €247 (20% bankroll exposure, EV +0.30). NYK's commanding 3-0 series lead, elite NetRtg gap, and both franchise players confirmed active make this a high-conviction close-out game pick despite PHI's home court. The MIN vs SAS game offered no viable market: SAS ML is priced too short (1.55), MIN ML is above the ceiling (2.65), and the spread lacks sufficient confidence to meet late-scout standards. Total committed exposure: €247 of €1236.92 (20%).",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 11185,
+    "tokens_out": 3833,
+    "cost_usd": 0.09105
   }
 ]
