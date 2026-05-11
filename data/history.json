@@ -2080,6 +2080,26 @@
         }
       ],
       "summary": "Day 2026-05-10 commit — 1 bets totalling €247.00. 0 cancelled. Bankroll: €1236.92 → €989.92."
+    },
+    {
+      "entry_id": "nba_entry_20260511",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-05-11T23:39:50.149585+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1441.93,
+      "total_staked": 0.0,
+      "bankroll_after": 1441.93,
+      "cancelled_picks": [
+        {
+          "id": "nba_draft_20260511_002",
+          "match": "Cleveland Cavaliers vs Detroit Pistons",
+          "pick": "Detroit Pistons -3.5",
+          "reason": "Market spread direction mismatch: Scout drafted 'DET -3.5' (DET favored by 3.5) but available market has CLE -3.5 / DET +3.5 — DET is the road team and CLE is the home favorite. The drafted pick does not exist in the available market. Additionally, even re-evaluating DET +3.5 at 1.97 or DET ML at 2.46, confidence after mandatory adjustments (Huerter Questionable -10, LeVert Questionable -5, CLE home must-win urgency -10, road team spread -5) falls to approximately 35, well below the 60 confidence floor required for any spread pick at commit time."
+        }
+      ],
+      "bets": [],
+      "summary": "Day 2026-05-11 commit — 0 bets totalling €0.00. 1 cancelled. Bankroll: €1441.93 → €1441.93."
     }
   ]
 }
