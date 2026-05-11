@@ -1,7 +1,7 @@
 ---
-version: 54
-updated_at: 2026-05-10T11:49:57.265729+00:00
-updated_by: analyst_2026-05-10
+version: 55
+updated_at: 2026-05-11T12:37:01.689045+00:00
+updated_by: analyst_2026-05-11
 llm: claude-sonnet-4-6
 ---
 
@@ -96,32 +96,31 @@ NOTE — PLAYOFF PHASE: All remaining teams are fully motivated. Roster-only fla
 Oklahoma City Thunder:
 - Thomas Sorber (C): OUT [roster-only]
 - Jalen Williams (G): OUT [roster-only] — FRANCHISE PLAYER.
-NOTE: OKC leads Round 2 West Semifinals 3-0 (Game 4 next). Re-verify Shai Gilgeous-Alexander, Chet Holmgren active before any OKC pick. MANDATORY.
+NOTE: OKC leads Round 2 West Semifinals 3-0 (Game 4 next — potential series sweep). Re-verify Shai Gilgeous-Alexander, Chet Holmgren active before any OKC pick. MANDATORY.
 
 San Antonio Spurs:
 - David Jones Garcia (F): OUT [roster-only]
-NOTE: SAS leads Round 2 West Semifinals 2-1 (Game 4/5 next — verify from ESPN). Re-verify Victor Wembanyama active before any SAS pick. MANDATORY.
+NOTE: SAS leads Round 2 West Semifinals 2-1 (Game 4 next — MIN must-win). Re-verify Victor Wembanyama active before any SAS pick. MANDATORY.
 
 Detroit Pistons:
 - Kevin Huerter (G): OUT [roster-only]
-NOTE: DET leads East Semifinals 2-1 (Game 4 next). Re-verify Cade Cunningham, Isaiah Stewart, Jalen Duren before any DET pick. MANDATORY.
+NOTE: DET leads East Semifinals 2-1 (Game 5 per ESPN — updated). Re-verify Cade Cunningham, Isaiah Stewart, Jalen Duren before any DET pick. MANDATORY.
 
 Boston Celtics:
 - Jayson Tatum (F): OUT [roster-only] — FRANCHISE PLAYER. STATUS CRITICAL.
 NOTE: BOS CONFIRMED ELIMINATED (PHI won 4-3). No further BOS picks.
 
 New York Knicks:
-NOTE: NYK leads East Semifinals 3-0 (Game 4 next). No players in current verified absence feed. Re-verify Jalen Brunson, Karl-Anthony Towns status before any Round 2 pick. MANDATORY.
+NOTE: NYK leads East Semifinals 4-0 — SERIES COMPLETE per ESPN feed. No further NYK vs PHI picks needed. Re-verify Jalen Brunson, Karl-Anthony Towns status before any potential ECF pick. MANDATORY.
 
 Los Angeles Lakers:
 - Luka Doncic (G): OUT [roster-only] — FRANCHISE PLAYER.
-NOTE: LAL leads West Round 1 4-2 — Game 7. LAL competitive without Doncic across series. Do NOT bet LAL spread in Game 7 — garbage-time risk. Verify home court from ESPN.
+NOTE: LAL won Game 7 vs HOU (confirmed by ESPN series feed showing LAL leads 4-2 COMPLETE). LAL advances to Round 2. Verify Round 2 opponent and home court from ESPN before any Round 2 LAL pick.
 
 Houston Rockets:
 - Steven Adams (C): OUT [roster-only]
 - Fred VanVleet (G): OUT [roster-only]
-- Kevin Durant (F): OUT [roster-only] — FRANCHISE PLAYER. DATA FLAG: re-verify vs NBA official PDF before any HOU pick. CRITICAL. Do NOT draft HOU ML without Durant confirmed active.
-NOTE: HOU facing Game 7 vs LAL. Verify venue from ESPN. Re-verify Alperen Sengun.
+- Kevin Durant (F): OUT [roster-only] — FRANCHISE PLAYER. HOU ELIMINATED (LAL won 4-2 COMPLETE). No further HOU picks.
 
 Minnesota Timberwolves:
 - Donte DiVincenzo (G): OUT [roster-only]
@@ -152,8 +151,7 @@ NOTE: Washington did not qualify for playoffs. Do NOT bet Washington to win unde
 
 Franchise players requiring mandatory NBA official PDF verification before ANY pick involving their team:
 - Shai Gilgeous-Alexander, Chet Holmgren (OKC) — re-verify each Round 2 session
-- Kevin Durant (HOU) — roster-only OUT; re-verify CRITICAL for Game 7 vs LAL
-- Luka Doncic (LAL) — roster-only OUT; LAL competing without him
+- Luka Doncic (LAL) — roster-only OUT; LAL competing without him in Round 2
 - Anthony Davis, D'Angelo Russell, Alex Sarr (WAS) — confirmed OUT; team not in playoffs
 
 ## SECTION:tanking_teams
