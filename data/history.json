@@ -23,7 +23,7 @@
           "game": 2,
           "started_at": "2026-04-05T10:44:07.102344+00:00",
           "bankroll_start": 1000.0,
-          "wins": 22,
+          "wins": 23,
           "losses": 16,
           "peak_bankroll": 1917.57,
           "total_bets": 39
@@ -2073,10 +2073,10 @@
             "Karl-Anthony Towns",
             "OG Anunoby (OUT)"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null
+          "result": "WON",
+          "returned": 452.01,
+          "pnl": 205.01,
+          "settled_at": "2026-05-11T11:24:55.016266+00:00"
         }
       ],
       "summary": "Day 2026-05-10 commit — 1 bets totalling €247.00. 0 cancelled. Bankroll: €1236.92 → €989.92."
