@@ -1741,5 +1741,40 @@
     "tokens_in": 11185,
     "tokens_out": 3833,
     "cost_usd": 0.09105
+  },
+  {
+    "ts": "2026-05-11T23:39:50.149585+00:00",
+    "date": "2026-05-11",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 0,
+    "cancelled_count": 1,
+    "total_staked": 0.0,
+    "bankroll_before": 1441.93,
+    "bankroll_after": 1441.93,
+    "bets": [],
+    "cancelled": [
+      {
+        "id": "nba_draft_20260511_002",
+        "match": "Cleveland Cavaliers vs Detroit Pistons",
+        "pick": "Detroit Pistons -3.5",
+        "reason": "Market spread direction mismatch: Scout drafted 'DET -3.5' (DET favored by 3.5) but available market has CLE -3.5 / DET +3.5 — DET is the road team and CLE is the home favorite. The drafted pick does not exist in the available market. Additionally, even re-evaluating DET +3.5 at 1.97 or DET ML at 2.46, confidence after mandatory adjustments (Huerter Questionable -10, LeVert Questionable -5, CLE home must-win urgency -10, road team spread -5) falls to approximately 35, well below the 60 confidence floor required for any spread pick at commit time."
+      }
+    ],
+    "late_rejections": [
+      {
+        "match": "Cleveland Cavaliers vs Detroit Pistons",
+        "reason": "Re-evaluated all three markets at commit time. CLE ML 1.63 below 1.65 floor. DET ML 2.46 within range but post-adjustment confidence ~35 (Huerter/LeVert Questionable -15 combined, CLE home must-win environment -10, road team penalty -5) — well below 60 new-pick confidence gate. DET +3.5 at 1.97: same confidence issues with Questionable players and home court factor; net confidence ~35, below 60 floor. O/U 212.5 at 1.96: within range but confidence ~58, just below 60 gate — insufficient for new pick commitment. No viable edge."
+      },
+      {
+        "match": "Los Angeles Lakers vs Oklahoma City Thunder",
+        "reason": "Previously Scout-rejected. Line moved from LAL +11.5 to LAL +12.5 (1.0pt improvement for LAL) but insufficient to change edge assessment. LAL ML 6.5 above 2.50 ceiling. OKC ML 1.15 below 1.65 floor. LAL +12.5 at 1.96 within range but Luka Doncic confirmed OUT (franchise player, Left Hamstring) reduces base confidence to ~30 post-adjustment (Doncic OUT -20, OKC dominance signal -10, partial recovery from elimination urgency +5) — far below 60 gate. O/U 214.5 at 1.98 within range but confidence ~50-55 — below 60 gate. No viable edge."
+      }
+    ],
+    "report": "### CANCELLED — Detroit Pistons -3.5 (nba_draft_20260511_002)\n- **Reason**: Market spread direction mismatch. The Scout drafted \"DET -3.5\" implying DET is favored by 3.5 points, but CLE is the home team at Rocket Arena and the market correctly prices CLE as the -3.5 favorite. The available market is CLE -3.5 @ 1.95 / DET +3.5 @ 1.97. \"DET -3.5\" as written does not exist. Even pivoting to evaluate the closest available position (DET +3.5 @ 1.97), confidence collapses after mandatory adjustments: Huerter Questionable (-10), LeVert Questionable (-5), CLE home court must-win environment (-10), road team spread adjustment (-5) → net confidence ~35, far below the 60 confidence floor for spread picks. Cannot confirm.\n- **Odds at cancel**: DET +3.5 @ 1.97 available (DET -3.5 @ 2.00 as drafted: non-existent)\n\n---\n\n### LATE SCOUT — Cleveland Cavaliers vs Detroit Pistons\n**Evaluated but not added.** All three markets (CLE ML 1.63, DET ML 2.46, DET +3.5 1.97, O/U 212.5) were assessed. CLE ML falls below the 1.65 floor. DET ML within range but post-adjustment confidence ~35 (Questionable players gutting DET rotation depth, CLE home elimination urgency). O/U at 1.96 technically within range but confidence ~58 — just short of the 60 gate required for new picks at Commit phase. No viable edge identified.\n\n### LATE SCOUT — Los Angeles Lakers vs Oklahoma City Thunder\n**Evaluated but not added.** Line moved from LAL +11.5 to LAL +12.5 since Scout (1pt improvement for LAL), but this is insufficient to unlock a viable pick. Luka Doncic is **confirmed OUT** via NBA official report (Left Hamstring Strain) — a franchise player absence applying a mandatory -20 confidence penalty. OKC ML (1.15) and LAL ML (6.5) both outside valid ranges. LAL +12.5 at 1.96 is within spread range but post-adjustment confidence is ~30 (base 50, Doncic OUT -20, OKC 7-win dominance signal -10, partial offsets from LAL home elimination urgency +5 and rust dissipated at Game 4) — far below the 60 gate. No viable edge.\n\n---\n\n### SLATE SUMMARY\nTonight's two-game playoff slate offered no confirmable edges at commit time. The sole draft pick (DET -3.5) was cancelled due to a spread direction error — DET is the road team and the market correctly has CLE as the -3.5 home favorite, and the corrected available market (DET +3.5) doesn't meet the 60 confidence threshold after Questionable player adjustments. Late scouting of both games found no new edges: the LAL/OKC game remains unplayable with Doncic confirmed OUT and odds well outside valid ranges, while the CLE/DET markets are either below odds floors or below confidence gates. Bankroll of €1,441.93 is preserved in full.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 11151,
+    "tokens_out": 5165,
+    "cost_usd": 0.110928
   }
 ]
