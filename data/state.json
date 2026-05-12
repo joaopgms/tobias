@@ -9,16 +9,16 @@
   "net_pnl": 582.57,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-05-12T15:41:41.249891+00:00",
+  "last_updated": "2026-05-12T23:04:45.413110+00:00",
   "first_game_time": "2026-05-13T00:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
   "scout_updated_at": "2026-05-12T15:41:41.249891+00:00",
   "scout_odds_source": "theodds_onexbet",
-  "commit_status": "pending",
-  "commit_updated_at": "2026-05-11T23:39:50.149585+00:00",
-  "commit_date": "2026-05-11",
+  "commit_status": "done",
+  "commit_updated_at": "2026-05-12T23:04:45.413110+00:00",
+  "commit_date": "2026-05-12",
   "analyst_updated_at": "2026-05-11T12:37:01.689045+00:00",
   "settler_updated_at": "2026-05-12T10:33:18.951954+00:00",
   "agent_models": {
@@ -27,27 +27,8 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "Single-game slate: SAS vs MIN, West Semifinals Game 4. NBA Official injury feed active — full coverage. One spread pick drafted: SAS -9.5 (1.94). Key signals: extraordinary L15 gap (SAS +33.5 vs MIN -0.4 = 33.9pt differential), SAS home court, series momentum (leads 2-1), MIN without DiVincenzo. Fox Questionable applied (-10 confidence, -20% stake). ML markets outside odds target range; O/U lacks strong directional signal. Stake adjusted to ~€173 post Fox-Questionable reduction. EV = 0.20 (strong edge).",
-  "draft_picks": [
-    {
-      "id": "nba_draft_20260512_001",
-      "match": "San Antonio Spurs vs Minnesota Timberwolves",
-      "time": "2026-05-13T00:00:00Z",
-      "pick": "San Antonio Spurs -9.5",
-      "odds": 1.94,
-      "stake": 216.0,
-      "potential_return": 419.04,
-      "confidence": 62,
-      "reasoning": "LINE ANOMALY CHECK: No anomaly — SAS favored at 1.27 ML is extremely low but consistent with dominant home team (62-20, NetRtg +8.3) vs weaker opponent (49-33, +3.1); not anomalous given series context. PRIORITY CHECK: (0) No line anomaly. (1) L15 NetRtg: SAS +33.5 vs MIN -0.4 — massive gap, most powerful short-term signal available. Season NetRtg gap: SAS +8.3 vs MIN +3.1 = 5.2pt gap. L15 gap is extraordinary (33.9 pts), indicating SAS in dominant form while MIN in poor form. (2) Rest: playoff context, no true B2B; standard inter-game rest for both teams — no adjustment. (3) Franchise players: De'Aaron Fox (SAS) Questionable (right ankle soreness) — confidence -10, stake -20%. Victor Wembanyama assumed active (not listed on injury report — MANDATORY verification confirmed: Wembanyama not on injury report). Anthony Edwards (MIN): NOT on injury report, confirmed active for Round 2. Donte DiVincenzo (MIN): OUT. (4) Series context: SAS leads 2-1, MIN in must-win context but facing elimination urgency. SAS at home (Frost Bank Center) — playoff home court worth 3-4 pts. (5) L10: SAS 8-2, MIN 5-5 — significant edge. (6) Home court advantage: decisive for spread. (8) DefRtg gap: SAS 111.4 vs MIN 113.7 — SAS better defense by 2.3pts, not a massive gap. SPREAD EVALUATION: SAS -9.5 at 1.94. With Fox Questionable: base confidence 70 → -10 (Fox Questionable) = 60. Spread floor is 60 — barely meets threshold. L15 gap of +33.9 strongly supports SAS cover. SAS at home in must-close-out scenario, MIN without DiVincenzo, MIN's negative L15 (-0.4) suggests poor recent form. The 9.5pt spread is large but SAS's L15 dominance justifies it. INJURY FEED: NBA Official — full coverage, normal confidence rules apply. EV = (0.62 × 1.94) - 1 = 1.2028 - 1 = 0.2028. EV = 0.20 — strong edge. Stake: confidence 62 = medium tier (55-69), 15-20% of bankroll. With Fox Questionable applying -20% stake reduction: 15% × €1441.93 = €216.29 × 0.80 = €173 → rounding to €216 at base 15% pre-reduction = €216.29 × 0.80 ≈ €173. Wait — recalculating: Medium tier 15% = €216.29. Apply Fox Questionable -20% stake reduction: €216.29 × 0.80 = €173.03. Using €173.",
-      "anchor_players": [
-        "Victor Wembanyama",
-        "De'Aaron Fox",
-        "Anthony Edwards"
-      ],
-      "drafted_at": "2026-05-12T15:41:52Z",
-      "market_type": "spread"
-    }
-  ],
+  "last_report": "### CANCELLED — San Antonio Spurs -9.5 @ 1.94\n- **Odds at cancel**: 1.91 on SAS -10.5 (was 1.94 on SAS -9.5 at Scout time)\n- **Line movement**: Spread shifted from -9.5 to -10.5 (1 full point against); odds moved 1.94 → 1.91 (-0.03)\n- **New injury**: Dylan Harper (SAS) listed Questionable (left knee soreness) — discovered at commit time, not in Scout's anchor players list. Requires confidence adjustment.\n- **Confidence recalculation**: 70 (base) -10 (Fox Questionable, anchor player) -5 (Harper Questionable, new rotation player) -10 (line moved against: harder spread point + slightly worse odds) = **45** — below minimum threshold of 50.\n- **EV at adjusted confidence**: (0.45 × 1.91) - 1 = **-0.14** — deeply negative. Cannot confirm under any scenario.\n- **Reason**: Multiple compounding negatives — line moved against by a full spread point, two SAS key contributors Questionable at commit time (Fox ankle, Harper knee), bringing adjusted confidence to 45 and EV to -0.14. All cancellation criteria met.\n\n---\n\n### LATE SCOUT SUMMARY — SAS vs MIN (only game tonight)\nAll late scout opportunities were evaluated but none qualified:\n- SAS -10.5 @ 1.91: confidence 55 fails late-scout 60-minimum gate\n- MIN +10.5 @ 2.01: evidence overwhelmingly against; confidence sub-50\n- O/U 218.5 @ 1.96: Under thesis plausible but confidence drops to 45 after injury adjustments\n- ML markets (SAS 1.26, MIN 4.36): both outside valid odds range\n\n---\n\n### SLATE SUMMARY\nTonight's single game (SAS vs MIN, Game 4) offered only one drafted pick and zero qualifying late-scout opportunities. The draft pick on SAS -9.5 was cancelled due to a 1-point adverse spread movement (to -10.5), a newly discovered Dylan Harper Questionable status, and persistent De'Aaron Fox Questionable — collectively driving adjusted confidence to 45 with a -0.14 EV. No bets are committed tonight; bankroll of €1,441.93 remains fully intact for future playoff action.",
+  "draft_picks": [],
   "pending_bets": [],
   "settled_bets": [
     {
@@ -843,42 +824,34 @@
   ],
   "late_scout_rejections": [
     {
-      "match": "Cleveland Cavaliers vs Detroit Pistons",
-      "reason": "Re-evaluated all three markets at commit time. CLE ML 1.63 below 1.65 floor. DET ML 2.46 within range but post-adjustment confidence ~35 (Huerter/LeVert Questionable -15 combined, CLE home must-win environment -10, road team penalty -5) — well below 60 new-pick confidence gate. DET +3.5 at 1.97: same confidence issues with Questionable players and home court factor; net confidence ~35, below 60 floor. O/U 212.5 at 1.96: within range but confidence ~58, just below 60 gate — insufficient for new pick commitment. No viable edge."
-    },
-    {
-      "match": "Los Angeles Lakers vs Oklahoma City Thunder",
-      "reason": "Previously Scout-rejected. Line moved from LAL +11.5 to LAL +12.5 (1.0pt improvement for LAL) but insufficient to change edge assessment. LAL ML 6.5 above 2.50 ceiling. OKC ML 1.15 below 1.65 floor. LAL +12.5 at 1.96 within range but Luka Doncic confirmed OUT (franchise player, Left Hamstring) reduces base confidence to ~30 post-adjustment (Doncic OUT -20, OKC dominance signal -10, partial recovery from elimination urgency +5) — far below 60 gate. O/U 214.5 at 1.98 within range but confidence ~50-55 — below 60 gate. No viable edge."
+      "match": "San Antonio Spurs vs Minnesota Timberwolves",
+      "reason": "SAS -10.5 @ 1.91: Adjusted confidence 55 (70 base -10 Fox Questionable -5 Harper Questionable new) fails late-scout confidence gate of 60. EV = (0.55 × 1.91) - 1 = +0.05 barely meets EV gate but confidence gate failure disqualifies. MIN +10.5 @ 2.01: Statistical evidence (SAS L15 +33.5, home court, series lead 2-1) overwhelmingly against MIN cover on road; confidence well below threshold. O/U 218.5 @ 1.96: Under thesis with Fox/Harper Questionable and MIN poor L15 gives adjusted confidence 45 (60 base -10 Fox -5 Harper) — below 50 threshold. SAS ML 1.26 and MIN ML 4.36 both outside valid ML range (1.65–2.50). No qualifying late picks found."
     }
   ],
   "commit_report_data": {
-    "date": "2026-05-11",
-    "ts": "2026-05-11T23:39:50.149585+00:00",
+    "date": "2026-05-12",
+    "ts": "2026-05-12T23:04:45.413110+00:00",
     "bets": [],
     "cancelled": [
       {
-        "id": "nba_draft_20260511_002",
-        "match": "Cleveland Cavaliers vs Detroit Pistons",
-        "pick": "Detroit Pistons -3.5",
-        "reason": "Market spread direction mismatch: Scout drafted 'DET -3.5' (DET favored by 3.5) but available market has CLE -3.5 / DET +3.5 — DET is the road team and CLE is the home favorite. The drafted pick does not exist in the available market. Additionally, even re-evaluating DET +3.5 at 1.97 or DET ML at 2.46, confidence after mandatory adjustments (Huerter Questionable -10, LeVert Questionable -5, CLE home must-win urgency -10, road team spread -5) falls to approximately 35, well below the 60 confidence floor required for any spread pick at commit time."
+        "id": "nba_draft_20260512_001",
+        "match": "San Antonio Spurs vs Minnesota Timberwolves",
+        "pick": "San Antonio Spurs -9.5",
+        "reason": "Line moved against: spread shifted from -9.5 to -10.5 (1 full point harder to cover) and odds worsened from 1.94 to 1.91. New injury discovered at commit time: Dylan Harper (SAS) listed Questionable (left knee soreness) — not in Scout's anchor players, requires re-evaluation. Applying all adjustments: base 70 -10 (Fox Questionable) -5 (Harper Questionable new) -10 (line moved against, spread+odds) = confidence 45, below minimum threshold of 50. EV = (0.45 × 1.91) - 1 = -0.14 — deeply negative. Cannot confirm."
       }
     ],
     "late_rejections": [
       {
-        "match": "Cleveland Cavaliers vs Detroit Pistons",
-        "reason": "Re-evaluated all three markets at commit time. CLE ML 1.63 below 1.65 floor. DET ML 2.46 within range but post-adjustment confidence ~35 (Huerter/LeVert Questionable -15 combined, CLE home must-win environment -10, road team penalty -5) — well below 60 new-pick confidence gate. DET +3.5 at 1.97: same confidence issues with Questionable players and home court factor; net confidence ~35, below 60 floor. O/U 212.5 at 1.96: within range but confidence ~58, just below 60 gate — insufficient for new pick commitment. No viable edge."
-      },
-      {
-        "match": "Los Angeles Lakers vs Oklahoma City Thunder",
-        "reason": "Previously Scout-rejected. Line moved from LAL +11.5 to LAL +12.5 (1.0pt improvement for LAL) but insufficient to change edge assessment. LAL ML 6.5 above 2.50 ceiling. OKC ML 1.15 below 1.65 floor. LAL +12.5 at 1.96 within range but Luka Doncic confirmed OUT (franchise player, Left Hamstring) reduces base confidence to ~30 post-adjustment (Doncic OUT -20, OKC dominance signal -10, partial recovery from elimination urgency +5) — far below 60 gate. O/U 214.5 at 1.98 within range but confidence ~50-55 — below 60 gate. No viable edge."
+        "match": "San Antonio Spurs vs Minnesota Timberwolves",
+        "reason": "SAS -10.5 @ 1.91: Adjusted confidence 55 (70 base -10 Fox Questionable -5 Harper Questionable new) fails late-scout confidence gate of 60. EV = (0.55 × 1.91) - 1 = +0.05 barely meets EV gate but confidence gate failure disqualifies. MIN +10.5 @ 2.01: Statistical evidence (SAS L15 +33.5, home court, series lead 2-1) overwhelmingly against MIN cover on road; confidence well below threshold. O/U 218.5 @ 1.96: Under thesis with Fox/Harper Questionable and MIN poor L15 gives adjusted confidence 45 (60 base -10 Fox -5 Harper) — below 50 threshold. SAS ML 1.26 and MIN ML 4.36 both outside valid ML range (1.65–2.50). No qualifying late picks found."
       }
     ],
     "total_staked": 0.0,
     "bankroll_before": 1441.93,
-    "report": "### CANCELLED — Detroit Pistons -3.5 (nba_draft_20260511_002)\n- **Reason**: Market spread direction mismatch. The Scout drafted \"DET -3.5\" implying DET is favored by 3.5 points, but CLE is the home team at Rocket Arena and the market correctly prices CLE as the -3.5 favorite. The available market is CLE -3.5 @ 1.95 / DET +3.5 @ 1.97. \"DET -3.5\" as written does not exist. Even pivoting to evaluate the closest available position (DET +3.5 @ 1.97), confidence collapses after mandatory adjustments: Huerter Questionable (-10), LeVert Questionable (-5), CLE home court must-win environment (-10), road team spread adjustment (-5) → net confidence ~35, far below the 60 confidence floor for spread picks. Cannot confirm.\n- **Odds at cancel**: DET +3.5 @ 1.97 available (DET -3.5 @ 2.00 as drafted: non-existent)\n\n---\n\n### LATE SCOUT — Cleveland Cavaliers vs Detroit Pistons\n**Evaluated but not added.** All three markets (CLE ML 1.63, DET ML 2.46, DET +3.5 1.97, O/U 212.5) were assessed. CLE ML falls below the 1.65 floor. DET ML within range but post-adjustment confidence ~35 (Questionable players gutting DET rotation depth, CLE home elimination urgency). O/U at 1.96 technically within range but confidence ~58 — just short of the 60 gate required for new picks at Commit phase. No viable edge identified.\n\n### LATE SCOUT — Los Angeles Lakers vs Oklahoma City Thunder\n**Evaluated but not added.** Line moved from LAL +11.5 to LAL +12.5 since Scout (1pt improvement for LAL), but this is insufficient to unlock a viable pick. Luka Doncic is **confirmed OUT** via NBA official report (Left Hamstring Strain) — a franchise player absence applying a mandatory -20 confidence penalty. OKC ML (1.15) and LAL ML (6.5) both outside valid ranges. LAL +12.5 at 1.96 is within spread range but post-adjustment confidence is ~30 (base 50, Doncic OUT -20, OKC 7-win dominance signal -10, partial offsets from LAL home elimination urgency +5 and rust dissipated at Game 4) — far below the 60 gate. No viable edge.\n\n---\n\n### SLATE SUMMARY\nTonight's two-game playoff slate offered no confirmable edges at commit time. The sole draft pick (DET -3.5) was cancelled due to a spread direction error — DET is the road team and the market correctly has CLE as the -3.5 home favorite, and the corrected available market (DET +3.5) doesn't meet the 60 confidence threshold after Questionable player adjustments. Late scouting of both games found no new edges: the LAL/OKC game remains unplayable with Doncic confirmed OUT and odds well outside valid ranges, while the CLE/DET markets are either below odds floors or below confidence gates. Bankroll of €1,441.93 is preserved in full.",
-    "tokens_in": 11151,
-    "tokens_out": 5165,
-    "cost_usd": 0.110928
+    "report": "### CANCELLED — San Antonio Spurs -9.5 @ 1.94\n- **Odds at cancel**: 1.91 on SAS -10.5 (was 1.94 on SAS -9.5 at Scout time)\n- **Line movement**: Spread shifted from -9.5 to -10.5 (1 full point against); odds moved 1.94 → 1.91 (-0.03)\n- **New injury**: Dylan Harper (SAS) listed Questionable (left knee soreness) — discovered at commit time, not in Scout's anchor players list. Requires confidence adjustment.\n- **Confidence recalculation**: 70 (base) -10 (Fox Questionable, anchor player) -5 (Harper Questionable, new rotation player) -10 (line moved against: harder spread point + slightly worse odds) = **45** — below minimum threshold of 50.\n- **EV at adjusted confidence**: (0.45 × 1.91) - 1 = **-0.14** — deeply negative. Cannot confirm under any scenario.\n- **Reason**: Multiple compounding negatives — line moved against by a full spread point, two SAS key contributors Questionable at commit time (Fox ankle, Harper knee), bringing adjusted confidence to 45 and EV to -0.14. All cancellation criteria met.\n\n---\n\n### LATE SCOUT SUMMARY — SAS vs MIN (only game tonight)\nAll late scout opportunities were evaluated but none qualified:\n- SAS -10.5 @ 1.91: confidence 55 fails late-scout 60-minimum gate\n- MIN +10.5 @ 2.01: evidence overwhelmingly against; confidence sub-50\n- O/U 218.5 @ 1.96: Under thesis plausible but confidence drops to 45 after injury adjustments\n- ML markets (SAS 1.26, MIN 4.36): both outside valid odds range\n\n---\n\n### SLATE SUMMARY\nTonight's single game (SAS vs MIN, Game 4) offered only one drafted pick and zero qualifying late-scout opportunities. The draft pick on SAS -9.5 was cancelled due to a 1-point adverse spread movement (to -10.5), a newly discovered Dylan Harper Questionable status, and persistent De'Aaron Fox Questionable — collectively driving adjusted confidence to 45 with a -0.14 EV. No bets are committed tonight; bankroll of €1,441.93 remains fully intact for future playoff action.",
+    "tokens_in": 10867,
+    "tokens_out": 3601,
+    "cost_usd": 0.086616
   },
   "netrtg_l15": {
     "Charlotte Hornets": 16.9,
