@@ -2100,6 +2100,26 @@
       ],
       "bets": [],
       "summary": "Day 2026-05-11 commit — 0 bets totalling €0.00. 1 cancelled. Bankroll: €1441.93 → €1441.93."
+    },
+    {
+      "entry_id": "nba_entry_20260512",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-05-12T23:04:45.413110+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1441.93,
+      "total_staked": 0.0,
+      "bankroll_after": 1441.93,
+      "cancelled_picks": [
+        {
+          "id": "nba_draft_20260512_001",
+          "match": "San Antonio Spurs vs Minnesota Timberwolves",
+          "pick": "San Antonio Spurs -9.5",
+          "reason": "Line moved against: spread shifted from -9.5 to -10.5 (1 full point harder to cover) and odds worsened from 1.94 to 1.91. New injury discovered at commit time: Dylan Harper (SAS) listed Questionable (left knee soreness) — not in Scout's anchor players, requires re-evaluation. Applying all adjustments: base 70 -10 (Fox Questionable) -5 (Harper Questionable new) -10 (line moved against, spread+odds) = confidence 45, below minimum threshold of 50. EV = (0.45 × 1.91) - 1 = -0.14 — deeply negative. Cannot confirm."
+        }
+      ],
+      "bets": [],
+      "summary": "Day 2026-05-12 commit — 0 bets totalling €0.00. 1 cancelled. Bankroll: €1441.93 → €1441.93."
     }
   ]
 }
