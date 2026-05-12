@@ -1776,5 +1776,36 @@
     "tokens_in": 11151,
     "tokens_out": 5165,
     "cost_usd": 0.110928
+  },
+  {
+    "ts": "2026-05-12T23:04:45.413110+00:00",
+    "date": "2026-05-12",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 0,
+    "cancelled_count": 1,
+    "total_staked": 0.0,
+    "bankroll_before": 1441.93,
+    "bankroll_after": 1441.93,
+    "bets": [],
+    "cancelled": [
+      {
+        "id": "nba_draft_20260512_001",
+        "match": "San Antonio Spurs vs Minnesota Timberwolves",
+        "pick": "San Antonio Spurs -9.5",
+        "reason": "Line moved against: spread shifted from -9.5 to -10.5 (1 full point harder to cover) and odds worsened from 1.94 to 1.91. New injury discovered at commit time: Dylan Harper (SAS) listed Questionable (left knee soreness) — not in Scout's anchor players, requires re-evaluation. Applying all adjustments: base 70 -10 (Fox Questionable) -5 (Harper Questionable new) -10 (line moved against, spread+odds) = confidence 45, below minimum threshold of 50. EV = (0.45 × 1.91) - 1 = -0.14 — deeply negative. Cannot confirm."
+      }
+    ],
+    "late_rejections": [
+      {
+        "match": "San Antonio Spurs vs Minnesota Timberwolves",
+        "reason": "SAS -10.5 @ 1.91: Adjusted confidence 55 (70 base -10 Fox Questionable -5 Harper Questionable new) fails late-scout confidence gate of 60. EV = (0.55 × 1.91) - 1 = +0.05 barely meets EV gate but confidence gate failure disqualifies. MIN +10.5 @ 2.01: Statistical evidence (SAS L15 +33.5, home court, series lead 2-1) overwhelmingly against MIN cover on road; confidence well below threshold. O/U 218.5 @ 1.96: Under thesis with Fox/Harper Questionable and MIN poor L15 gives adjusted confidence 45 (60 base -10 Fox -5 Harper) — below 50 threshold. SAS ML 1.26 and MIN ML 4.36 both outside valid ML range (1.65–2.50). No qualifying late picks found."
+      }
+    ],
+    "report": "### CANCELLED — San Antonio Spurs -9.5 @ 1.94\n- **Odds at cancel**: 1.91 on SAS -10.5 (was 1.94 on SAS -9.5 at Scout time)\n- **Line movement**: Spread shifted from -9.5 to -10.5 (1 full point against); odds moved 1.94 → 1.91 (-0.03)\n- **New injury**: Dylan Harper (SAS) listed Questionable (left knee soreness) — discovered at commit time, not in Scout's anchor players list. Requires confidence adjustment.\n- **Confidence recalculation**: 70 (base) -10 (Fox Questionable, anchor player) -5 (Harper Questionable, new rotation player) -10 (line moved against: harder spread point + slightly worse odds) = **45** — below minimum threshold of 50.\n- **EV at adjusted confidence**: (0.45 × 1.91) - 1 = **-0.14** — deeply negative. Cannot confirm under any scenario.\n- **Reason**: Multiple compounding negatives — line moved against by a full spread point, two SAS key contributors Questionable at commit time (Fox ankle, Harper knee), bringing adjusted confidence to 45 and EV to -0.14. All cancellation criteria met.\n\n---\n\n### LATE SCOUT SUMMARY — SAS vs MIN (only game tonight)\nAll late scout opportunities were evaluated but none qualified:\n- SAS -10.5 @ 1.91: confidence 55 fails late-scout 60-minimum gate\n- MIN +10.5 @ 2.01: evidence overwhelmingly against; confidence sub-50\n- O/U 218.5 @ 1.96: Under thesis plausible but confidence drops to 45 after injury adjustments\n- ML markets (SAS 1.26, MIN 4.36): both outside valid odds range\n\n---\n\n### SLATE SUMMARY\nTonight's single game (SAS vs MIN, Game 4) offered only one drafted pick and zero qualifying late-scout opportunities. The draft pick on SAS -9.5 was cancelled due to a 1-point adverse spread movement (to -10.5), a newly discovered Dylan Harper Questionable status, and persistent De'Aaron Fox Questionable — collectively driving adjusted confidence to 45 with a -0.14 EV. No bets are committed tonight; bankroll of €1,441.93 remains fully intact for future playoff action.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 10867,
+    "tokens_out": 3601,
+    "cost_usd": 0.086616
   }
 ]
