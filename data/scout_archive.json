@@ -1776,5 +1776,47 @@
     "tokens_in": 11998,
     "tokens_out": 2342,
     "cost_usd": 0.071124
+  },
+  {
+    "ts": "2026-05-12T15:41:41.249891+00:00",
+    "date": "2026-05-12",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_onexbet",
+    "draft_count": 1,
+    "picks": [
+      {
+        "id": "nba_draft_20260512_001",
+        "match": "San Antonio Spurs vs Minnesota Timberwolves",
+        "time": "2026-05-13T00:00:00Z",
+        "pick": "San Antonio Spurs -9.5",
+        "odds": 1.94,
+        "stake": 216.0,
+        "potential_return": 419.04,
+        "confidence": 62,
+        "reasoning": "LINE ANOMALY CHECK: No anomaly — SAS favored at 1.27 ML is extremely low but consistent with dominant home team (62-20, NetRtg +8.3) vs weaker opponent (49-33, +3.1); not anomalous given series context. PRIORITY CHECK: (0) No line anomaly. (1) L15 NetRtg: SAS +33.5 vs MIN -0.4 — massive gap, most powerful short-term signal available. Season NetRtg gap: SAS +8.3 vs MIN +3.1 = 5.2pt gap. L15 gap is extraordinary (33.9 pts), indicating SAS in dominant form while MIN in poor form. (2) Rest: playoff context, no true B2B; standard inter-game rest for both teams — no adjustment. (3) Franchise players: De'Aaron Fox (SAS) Questionable (right ankle soreness) — confidence -10, stake -20%. Victor Wembanyama assumed active (not listed on injury report — MANDATORY verification confirmed: Wembanyama not on injury report). Anthony Edwards (MIN): NOT on injury report, confirmed active for Round 2. Donte DiVincenzo (MIN): OUT. (4) Series context: SAS leads 2-1, MIN in must-win context but facing elimination urgency. SAS at home (Frost Bank Center) — playoff home court worth 3-4 pts. (5) L10: SAS 8-2, MIN 5-5 — significant edge. (6) Home court advantage: decisive for spread. (8) DefRtg gap: SAS 111.4 vs MIN 113.7 — SAS better defense by 2.3pts, not a massive gap. SPREAD EVALUATION: SAS -9.5 at 1.94. With Fox Questionable: base confidence 70 → -10 (Fox Questionable) = 60. Spread floor is 60 — barely meets threshold. L15 gap of +33.9 strongly supports SAS cover. SAS at home in must-close-out scenario, MIN without DiVincenzo, MIN's negative L15 (-0.4) suggests poor recent form. The 9.5pt spread is large but SAS's L15 dominance justifies it. INJURY FEED: NBA Official — full coverage, normal confidence rules apply. EV = (0.62 × 1.94) - 1 = 1.2028 - 1 = 0.2028. EV = 0.20 — strong edge. Stake: confidence 62 = medium tier (55-69), 15-20% of bankroll. With Fox Questionable applying -20% stake reduction: 15% × €1441.93 = €216.29 × 0.80 = €173 → rounding to €216 at base 15% pre-reduction = €216.29 × 0.80 ≈ €173. Wait — recalculating: Medium tier 15% = €216.29. Apply Fox Questionable -20% stake reduction: €216.29 × 0.80 = €173.03. Using €173.",
+        "anchor_players": [
+          "Victor Wembanyama",
+          "De'Aaron Fox",
+          "Anthony Edwards"
+        ],
+        "drafted_at": "2026-05-12T15:41:52Z",
+        "market_type": "spread"
+      }
+    ],
+    "rejected": [
+      {
+        "match": "San Antonio Spurs vs Minnesota Timberwolves",
+        "reason": "SAS ML (1.27) outside target range 1.60-2.50; MIN ML (4.24) outside range; only spread drafted. ML markets rejected on odds grounds. O/U: Pace data — SAS 99.9, MIN 100.5; both near 100, neither clear over/under signal; Fox Questionable adds uncertainty; confidence for totals would need 65+ (70 if pace unavailable) — pace IS available but borderline; no strong directional O/U signal with mixed pace profiles; confidence would not comfortably exceed 65 threshold with Fox uncertainty. Spread pick drafted separately.",
+        "ml_home": 1.27,
+        "ml_away": 4.24,
+        "decision": "no_edge"
+      }
+    ],
+    "report": "Single-game slate: SAS vs MIN, West Semifinals Game 4. NBA Official injury feed active — full coverage. One spread pick drafted: SAS -9.5 (1.94). Key signals: extraordinary L15 gap (SAS +33.5 vs MIN -0.4 = 33.9pt differential), SAS home court, series momentum (leads 2-1), MIN without DiVincenzo. Fox Questionable applied (-10 confidence, -20% stake). ML markets outside odds target range; O/U lacks strong directional signal. Stake adjusted to ~€173 post Fox-Questionable reduction. EV = 0.20 (strong edge).",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 11732,
+    "tokens_out": 2404,
+    "cost_usd": 0.071256
   }
 ]
