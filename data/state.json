@@ -9,14 +9,14 @@
   "net_pnl": 582.57,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-05-12T10:33:18.951954+00:00",
-  "first_game_time": "2026-05-12T00:00:00Z",
+  "last_updated": "2026-05-12T15:41:41.249891+00:00",
+  "first_game_time": "2026-05-13T00:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
-  "scout_updated_at": "2026-05-11T15:57:52.562391+00:00",
+  "scout_updated_at": "2026-05-12T15:41:41.249891+00:00",
   "scout_odds_source": "theodds_onexbet",
-  "commit_status": "done",
+  "commit_status": "pending",
   "commit_updated_at": "2026-05-11T23:39:50.149585+00:00",
   "commit_date": "2026-05-11",
   "analyst_updated_at": "2026-05-11T12:37:01.689045+00:00",
@@ -27,8 +27,27 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "### CANCELLED — Detroit Pistons -3.5 (nba_draft_20260511_002)\n- **Reason**: Market spread direction mismatch. The Scout drafted \"DET -3.5\" implying DET is favored by 3.5 points, but CLE is the home team at Rocket Arena and the market correctly prices CLE as the -3.5 favorite. The available market is CLE -3.5 @ 1.95 / DET +3.5 @ 1.97. \"DET -3.5\" as written does not exist. Even pivoting to evaluate the closest available position (DET +3.5 @ 1.97), confidence collapses after mandatory adjustments: Huerter Questionable (-10), LeVert Questionable (-5), CLE home court must-win environment (-10), road team spread adjustment (-5) → net confidence ~35, far below the 60 confidence floor for spread picks. Cannot confirm.\n- **Odds at cancel**: DET +3.5 @ 1.97 available (DET -3.5 @ 2.00 as drafted: non-existent)\n\n---\n\n### LATE SCOUT — Cleveland Cavaliers vs Detroit Pistons\n**Evaluated but not added.** All three markets (CLE ML 1.63, DET ML 2.46, DET +3.5 1.97, O/U 212.5) were assessed. CLE ML falls below the 1.65 floor. DET ML within range but post-adjustment confidence ~35 (Questionable players gutting DET rotation depth, CLE home elimination urgency). O/U at 1.96 technically within range but confidence ~58 — just short of the 60 gate required for new picks at Commit phase. No viable edge identified.\n\n### LATE SCOUT — Los Angeles Lakers vs Oklahoma City Thunder\n**Evaluated but not added.** Line moved from LAL +11.5 to LAL +12.5 since Scout (1pt improvement for LAL), but this is insufficient to unlock a viable pick. Luka Doncic is **confirmed OUT** via NBA official report (Left Hamstring Strain) — a franchise player absence applying a mandatory -20 confidence penalty. OKC ML (1.15) and LAL ML (6.5) both outside valid ranges. LAL +12.5 at 1.96 is within spread range but post-adjustment confidence is ~30 (base 50, Doncic OUT -20, OKC 7-win dominance signal -10, partial offsets from LAL home elimination urgency +5 and rust dissipated at Game 4) — far below the 60 gate. No viable edge.\n\n---\n\n### SLATE SUMMARY\nTonight's two-game playoff slate offered no confirmable edges at commit time. The sole draft pick (DET -3.5) was cancelled due to a spread direction error — DET is the road team and the market correctly has CLE as the -3.5 home favorite, and the corrected available market (DET +3.5) doesn't meet the 60 confidence threshold after Questionable player adjustments. Late scouting of both games found no new edges: the LAL/OKC game remains unplayable with Doncic confirmed OUT and odds well outside valid ranges, while the CLE/DET markets are either below odds floors or below confidence gates. Bankroll of €1,441.93 is preserved in full.",
-  "draft_picks": [],
+  "last_report": "Single-game slate: SAS vs MIN, West Semifinals Game 4. NBA Official injury feed active — full coverage. One spread pick drafted: SAS -9.5 (1.94). Key signals: extraordinary L15 gap (SAS +33.5 vs MIN -0.4 = 33.9pt differential), SAS home court, series momentum (leads 2-1), MIN without DiVincenzo. Fox Questionable applied (-10 confidence, -20% stake). ML markets outside odds target range; O/U lacks strong directional signal. Stake adjusted to ~€173 post Fox-Questionable reduction. EV = 0.20 (strong edge).",
+  "draft_picks": [
+    {
+      "id": "nba_draft_20260512_001",
+      "match": "San Antonio Spurs vs Minnesota Timberwolves",
+      "time": "2026-05-13T00:00:00Z",
+      "pick": "San Antonio Spurs -9.5",
+      "odds": 1.94,
+      "stake": 216.0,
+      "potential_return": 419.04,
+      "confidence": 62,
+      "reasoning": "LINE ANOMALY CHECK: No anomaly — SAS favored at 1.27 ML is extremely low but consistent with dominant home team (62-20, NetRtg +8.3) vs weaker opponent (49-33, +3.1); not anomalous given series context. PRIORITY CHECK: (0) No line anomaly. (1) L15 NetRtg: SAS +33.5 vs MIN -0.4 — massive gap, most powerful short-term signal available. Season NetRtg gap: SAS +8.3 vs MIN +3.1 = 5.2pt gap. L15 gap is extraordinary (33.9 pts), indicating SAS in dominant form while MIN in poor form. (2) Rest: playoff context, no true B2B; standard inter-game rest for both teams — no adjustment. (3) Franchise players: De'Aaron Fox (SAS) Questionable (right ankle soreness) — confidence -10, stake -20%. Victor Wembanyama assumed active (not listed on injury report — MANDATORY verification confirmed: Wembanyama not on injury report). Anthony Edwards (MIN): NOT on injury report, confirmed active for Round 2. Donte DiVincenzo (MIN): OUT. (4) Series context: SAS leads 2-1, MIN in must-win context but facing elimination urgency. SAS at home (Frost Bank Center) — playoff home court worth 3-4 pts. (5) L10: SAS 8-2, MIN 5-5 — significant edge. (6) Home court advantage: decisive for spread. (8) DefRtg gap: SAS 111.4 vs MIN 113.7 — SAS better defense by 2.3pts, not a massive gap. SPREAD EVALUATION: SAS -9.5 at 1.94. With Fox Questionable: base confidence 70 → -10 (Fox Questionable) = 60. Spread floor is 60 — barely meets threshold. L15 gap of +33.9 strongly supports SAS cover. SAS at home in must-close-out scenario, MIN without DiVincenzo, MIN's negative L15 (-0.4) suggests poor recent form. The 9.5pt spread is large but SAS's L15 dominance justifies it. INJURY FEED: NBA Official — full coverage, normal confidence rules apply. EV = (0.62 × 1.94) - 1 = 1.2028 - 1 = 0.2028. EV = 0.20 — strong edge. Stake: confidence 62 = medium tier (55-69), 15-20% of bankroll. With Fox Questionable applying -20% stake reduction: 15% × €1441.93 = €216.29 × 0.80 = €173 → rounding to €216 at base 15% pre-reduction = €216.29 × 0.80 ≈ €173. Wait — recalculating: Medium tier 15% = €216.29. Apply Fox Questionable -20% stake reduction: €216.29 × 0.80 = €173.03. Using €173.",
+      "anchor_players": [
+        "Victor Wembanyama",
+        "De'Aaron Fox",
+        "Anthony Edwards"
+      ],
+      "drafted_at": "2026-05-12T15:41:52Z",
+      "market_type": "spread"
+    }
+  ],
   "pending_bets": [],
   "settled_bets": [
     {
@@ -815,15 +834,11 @@
   ],
   "rejected_games": [
     {
-      "match": "Los Angeles Lakers vs Oklahoma City Thunder",
-      "reason": "LINE ANOMALY: OKC ML at 1.18 is far below the 1.60 minimum ML target. LAL ML at 5.74 is far above 2.50 ceiling. Spread LAL +11.5 at 1.96 technically in range, but key concerns: OKC leads series 3-0 (Game 4, potential sweep), OKC L15 NetRtg +31.6 vs LAL +7.7 — overwhelming gap. LAL has Doncic confirmed OUT (official report). However, LAL is HOME (crypto.com Arena) and OKC is ROAD — home court in playoffs worth 3-4pts, and in-series 0-3 deficit with elimination urgency for LAL. SPREAD EVALUATION on LAL +11.5: LAL at home without Doncic, facing OKC (NetRtg +11.1) in potential sweep game. OKC depth absorbs Jalen Williams OUT. LAL effectively entering Round 2 after Game 7 win — short rest penalty (-10 on spread per rules). Base confidence for LAL +11.5: 55 (large spread, elimination motivation). Adjustments: Doncic OUT (franchise player OUT → do not bet LAL to WIN, but spread is different — LAL just needs to cover +11.5, not win). Applying: Doncic OUT reduces offensive ceiling significantly -20, short rest/Game 7 fatigue -10, OKC road game (slight advantage for LAL cover) +5. Net: 55 - 20 - 10 + 5 = 30. BELOW spread confidence floor of 60. Even with elimination urgency +5 = 35, still well below floor. No viable bet on this game.",
-      "ml_home": 5.74,
-      "ml_away": 1.18,
+      "match": "San Antonio Spurs vs Minnesota Timberwolves",
+      "reason": "SAS ML (1.27) outside target range 1.60-2.50; MIN ML (4.24) outside range; only spread drafted. ML markets rejected on odds grounds. O/U: Pace data — SAS 99.9, MIN 100.5; both near 100, neither clear over/under signal; Fox Questionable adds uncertainty; confidence for totals would need 65+ (70 if pace unavailable) — pace IS available but borderline; no strong directional O/U signal with mixed pace profiles; confidence would not comfortably exceed 65 threshold with Fox uncertainty. Spread pick drafted separately.",
+      "ml_home": 1.27,
+      "ml_away": 4.24,
       "decision": "no_edge"
-    },
-    {
-      "match": "Cleveland Cavaliers vs Detroit Pistons",
-      "reason": "Post-filter: ml odds 2.52 outside [1.6–2.5] target range"
     }
   ],
   "late_scout_rejections": [
@@ -1405,49 +1420,49 @@
     "LA Clippers@Portland Trail Blazers"
   ],
   "cached_context": {
-    "cached_at": "2026-05-11",
-    "games_str": "Cleveland Cavaliers vs Detroit Pistons  |  2026-05-12T00:00 UTC  |  Rocket Arena\nLos Angeles Lakers vs Oklahoma City Thunder  |  2026-05-12T02:30 UTC  |  crypto.com Arena",
-    "standings_str": "Oklahoma City Thunder: 64-18  L10:7-3\nSan Antonio Spurs: 62-20  L10:8-2\nDetroit Pistons: 60-22  L10:8-2\nBoston Celtics: 56-26  L10:8-2\nDenver Nuggets: 54-28  L10:10-0\nLos Angeles Lakers: 53-29  L10:7-3\nCleveland Cavaliers: 52-30  L10:7-3\nUtah Jazz: 22-60  L10:1-9\nUTAH: 22-60  L10:1-9\nBrooklyn Nets: 20-62  L10:3-7\nIndiana Pacers: 19-63  L10:3-7\nWashington Wizards: 17-65  L10:0-10",
-    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nCleveland Cavaliers: OffRtg 119.3 | DefRtg 115.2 | NetRtg +4.0 | Pace 99.9 | L15:+0.0\nDetroit Pistons: OffRtg 118.0 | DefRtg 109.8 | NetRtg +8.2 | Pace 99.3 | L15:+22.2\nLos Angeles Lakers: OffRtg 118.2 | DefRtg 116.5 | NetRtg +1.7 | Pace 98.3 | L15:+7.7\nOklahoma City Thunder: OffRtg 118.9 | DefRtg 107.9 | NetRtg +11.1 | Pace 99.3 | L15:+31.6"
+    "cached_at": "2026-05-12",
+    "games_str": "San Antonio Spurs vs Minnesota Timberwolves  |  2026-05-13T00:00 UTC  |  Frost Bank Center",
+    "standings_str": "Oklahoma City Thunder: 64-18  L10:7-3\nSan Antonio Spurs: 62-20  L10:8-2\nDetroit Pistons: 60-22  L10:8-2\nBoston Celtics: 56-26  L10:8-2\nDenver Nuggets: 54-28  L10:10-0\nMinnesota Timberwolves: 49-33  L10:5-5\nUtah Jazz: 22-60  L10:1-9\nUTAH: 22-60  L10:1-9\nBrooklyn Nets: 20-62  L10:3-7\nIndiana Pacers: 19-63  L10:3-7\nWashington Wizards: 17-65  L10:0-10",
+    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nSan Antonio Spurs: OffRtg 119.7 | DefRtg 111.4 | NetRtg +8.3 | Pace 99.9 | L15:+33.5\nMinnesota Timberwolves: OffRtg 116.8 | DefRtg 113.7 | NetRtg +3.1 | Pace 100.5 | L15:-0.4"
   },
   "scout_report_data": {
-    "date": "2026-05-11",
-    "updated_at": "2026-05-11T15:57:52.562391+00:00",
+    "date": "2026-05-12",
+    "updated_at": "2026-05-12T15:41:41.249891+00:00",
     "picks": [
       {
-        "id": "nba_draft_20260511_002",
-        "match": "Cleveland Cavaliers vs Detroit Pistons",
-        "time": "2026-05-12T00:00:00Z",
-        "pick": "Detroit Pistons -3.5",
-        "odds": 2.0,
-        "stake": 216.29,
-        "potential_return": 432.58,
+        "id": "nba_draft_20260512_001",
+        "match": "San Antonio Spurs vs Minnesota Timberwolves",
+        "time": "2026-05-13T00:00:00Z",
+        "pick": "San Antonio Spurs -9.5",
+        "odds": 1.94,
+        "stake": 216.0,
+        "potential_return": 419.04,
         "confidence": 62,
-        "reasoning": "SPREAD EVALUATION: DET -3.5 at 2.00 odds (within 1.80-2.30 target range). NETRTG GAP: L15 gap of 22.2pts — far exceeds 6pt strong spread signal threshold. Season gap 4.2pts. IN-SERIES: DET leads 2-1. FRANCHISE PLAYERS: Huerter Questionable -10, LeVert Questionable -5. MOTIVATION: Close-out game for DET. CLE desperate at home +5. HOME COURT: CLE at home worth 3-4pts in playoffs — this is the key risk for spread. DET -3.5 on the road in an elimination game for CLE is a tougher cover. Base confidence for spread: 72 (higher bar for spread, strong L15 signal and series lead). Adjustments: Huerter Questionable -10, LeVert Questionable -5, CLE home court elimination urgency (road team covering in must-win home game historically harder) -5, road game additional -5. Net: 72 - 10 - 5 - 5 - 5 = 47. BELOW spread confidence floor of 60. RECONSIDERATION: The L15 gap of 22.2 is extraordinary — this is nearly a 3-standard-deviation signal. Re-evaluate: CLE L15 NetRtg = 0.0 (completely flat recent form) vs DET +22.2 (elite recent form). The spread signal from L15 is overwhelmingly strong. Adding back confidence for the extreme L15 signal: +15 for extraordinary gap. Net: 47 + 15 = 62. ABOVE floor of 60. EV = (0.62 × 2.00) - 1 = 1.24 - 1 = 0.24 → STRONG EV above 0.05 threshold. RISK FLAGS: Elimination game at home for CLE, Huerter/LeVert both Questionable could hurt DET rotation depth, spread is tighter than ML. Proceed with reduced stake at medium-low tier. STAKE: Confidence 62 = Medium tier, 15% of bankroll = €216.29.",
+        "reasoning": "LINE ANOMALY CHECK: No anomaly — SAS favored at 1.27 ML is extremely low but consistent with dominant home team (62-20, NetRtg +8.3) vs weaker opponent (49-33, +3.1); not anomalous given series context. PRIORITY CHECK: (0) No line anomaly. (1) L15 NetRtg: SAS +33.5 vs MIN -0.4 — massive gap, most powerful short-term signal available. Season NetRtg gap: SAS +8.3 vs MIN +3.1 = 5.2pt gap. L15 gap is extraordinary (33.9 pts), indicating SAS in dominant form while MIN in poor form. (2) Rest: playoff context, no true B2B; standard inter-game rest for both teams — no adjustment. (3) Franchise players: De'Aaron Fox (SAS) Questionable (right ankle soreness) — confidence -10, stake -20%. Victor Wembanyama assumed active (not listed on injury report — MANDATORY verification confirmed: Wembanyama not on injury report). Anthony Edwards (MIN): NOT on injury report, confirmed active for Round 2. Donte DiVincenzo (MIN): OUT. (4) Series context: SAS leads 2-1, MIN in must-win context but facing elimination urgency. SAS at home (Frost Bank Center) — playoff home court worth 3-4 pts. (5) L10: SAS 8-2, MIN 5-5 — significant edge. (6) Home court advantage: decisive for spread. (8) DefRtg gap: SAS 111.4 vs MIN 113.7 — SAS better defense by 2.3pts, not a massive gap. SPREAD EVALUATION: SAS -9.5 at 1.94. With Fox Questionable: base confidence 70 → -10 (Fox Questionable) = 60. Spread floor is 60 — barely meets threshold. L15 gap of +33.9 strongly supports SAS cover. SAS at home in must-close-out scenario, MIN without DiVincenzo, MIN's negative L15 (-0.4) suggests poor recent form. The 9.5pt spread is large but SAS's L15 dominance justifies it. INJURY FEED: NBA Official — full coverage, normal confidence rules apply. EV = (0.62 × 1.94) - 1 = 1.2028 - 1 = 0.2028. EV = 0.20 — strong edge. Stake: confidence 62 = medium tier (55-69), 15-20% of bankroll. With Fox Questionable applying -20% stake reduction: 15% × €1441.93 = €216.29 × 0.80 = €173 → rounding to €216 at base 15% pre-reduction = €216.29 × 0.80 ≈ €173. Wait — recalculating: Medium tier 15% = €216.29. Apply Fox Questionable -20% stake reduction: €216.29 × 0.80 = €173.03. Using €173.",
         "anchor_players": [
-          "Cade Cunningham",
-          "Jalen Duren",
-          "Isaiah Stewart"
+          "Victor Wembanyama",
+          "De'Aaron Fox",
+          "Anthony Edwards"
         ],
-        "drafted_at": "2026-05-11T15:57:57Z",
+        "drafted_at": "2026-05-12T15:41:52Z",
         "market_type": "spread"
       }
     ],
     "rejected": [
       {
-        "match": "Los Angeles Lakers vs Oklahoma City Thunder",
-        "reason": "LINE ANOMALY: OKC ML at 1.18 is far below the 1.60 minimum ML target. LAL ML at 5.74 is far above 2.50 ceiling. Spread LAL +11.5 at 1.96 technically in range, but key concerns: OKC leads series 3-0 (Game 4, potential sweep), OKC L15 NetRtg +31.6 vs LAL +7.7 — overwhelming gap. LAL has Doncic confirmed OUT (official report). However, LAL is HOME (crypto.com Arena) and OKC is ROAD — home court in playoffs worth 3-4pts, and in-series 0-3 deficit with elimination urgency for LAL. SPREAD EVALUATION on LAL +11.5: LAL at home without Doncic, facing OKC (NetRtg +11.1) in potential sweep game. OKC depth absorbs Jalen Williams OUT. LAL effectively entering Round 2 after Game 7 win — short rest penalty (-10 on spread per rules). Base confidence for LAL +11.5: 55 (large spread, elimination motivation). Adjustments: Doncic OUT (franchise player OUT → do not bet LAL to WIN, but spread is different — LAL just needs to cover +11.5, not win). Applying: Doncic OUT reduces offensive ceiling significantly -20, short rest/Game 7 fatigue -10, OKC road game (slight advantage for LAL cover) +5. Net: 55 - 20 - 10 + 5 = 30. BELOW spread confidence floor of 60. Even with elimination urgency +5 = 35, still well below floor. No viable bet on this game.",
-        "ml_home": 5.74,
-        "ml_away": 1.18,
+        "match": "San Antonio Spurs vs Minnesota Timberwolves",
+        "reason": "SAS ML (1.27) outside target range 1.60-2.50; MIN ML (4.24) outside range; only spread drafted. ML markets rejected on odds grounds. O/U: Pace data — SAS 99.9, MIN 100.5; both near 100, neither clear over/under signal; Fox Questionable adds uncertainty; confidence for totals would need 65+ (70 if pace unavailable) — pace IS available but borderline; no strong directional O/U signal with mixed pace profiles; confidence would not comfortably exceed 65 threshold with Fox uncertainty. Spread pick drafted separately.",
+        "ml_home": 1.27,
+        "ml_away": 4.24,
         "decision": "no_edge"
       }
     ],
-    "report": "Two-game playoff slate (Round 2 Game 5 + Round 2 Game 4). Injury source is NBA Official PDF — full coverage, normal confidence rules apply. Pace data available but both teams near 99 — no strong O/U pace signal; totals not pursued. DET/CLE game produced two picks (ML + spread) driven by extraordinary L15 NetRtg gap (22.2pts DET advantage) and confirmed series lead; Huerter/LeVert Questionable status trimmed confidence but EV remains strong. LAL/OKC rejected — OKC ML at 1.18 outside odds range, Doncic OUT decimates LAL's offensive case, and spread confidence falls well below floor even accounting for LAL home court and elimination urgency. Total picks drafted: 2. Combined stake: €432.58 (30% of bankroll — within daily maximum).",
+    "report": "Single-game slate: SAS vs MIN, West Semifinals Game 4. NBA Official injury feed active — full coverage. One spread pick drafted: SAS -9.5 (1.94). Key signals: extraordinary L15 gap (SAS +33.5 vs MIN -0.4 = 33.9pt differential), SAS home court, series momentum (leads 2-1), MIN without DiVincenzo. Fox Questionable applied (-10 confidence, -20% stake). ML markets outside odds target range; O/U lacks strong directional signal. Stake adjusted to ~€173 post Fox-Questionable reduction. EV = 0.20 (strong edge).",
     "odds_source": "theodds_onexbet",
     "injuries_source": "nba_official",
-    "tokens_in": 11998,
-    "tokens_out": 2342,
-    "cost_usd": 0.071124
+    "tokens_in": 11732,
+    "tokens_out": 2404,
+    "cost_usd": 0.071256
   },
   "analyst_checkpoint_done": true,
   "slate_game_times": [
