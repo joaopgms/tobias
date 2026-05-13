@@ -1807,5 +1807,57 @@
     "tokens_in": 10867,
     "tokens_out": 3601,
     "cost_usd": 0.086616
+  },
+  {
+    "ts": "2026-05-13T23:06:24.782184+00:00",
+    "date": "2026-05-13",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 1,
+    "cancelled_count": 1,
+    "total_staked": 108.0,
+    "bankroll_before": 1441.93,
+    "bankroll_after": 1333.93,
+    "bets": [
+      {
+        "id": "nba_bet_20260513_001",
+        "match": "Detroit Pistons vs Cleveland Cavaliers",
+        "time": "2026-05-14T00:00:00Z",
+        "pick": "Detroit Pistons -4.5",
+        "odds": 2.0,
+        "stake": 108.0,
+        "potential_return": 216.0,
+        "confidence": 62,
+        "reasoning": "COMMIT REVIEW: DET -4.5 @ 2.00 confirmed. Odds validation: spread target 1.80–2.30, floor 1.75 — 2.00 passes ✓. No line movement since Scout (2.00 unchanged). Anchor players: Cade Cunningham, Isaiah Stewart, Jalen Duren — all ACTIVE (none listed on NBA official injury report). Injury adjustments maintained from Scout: Huerter Q (-10), LeVert Q (-5), Robinson Q (-3) = -18 total. Confidence 62 confirmed (≥ 60 spread floor). EV = (0.62 × 2.00) - 1 = 0.24 ✓. EDGE BASIS: DET L15 NetRtg +22.2 vs CLE L15 +0.0 — exceptional 22.2pt gap. DET season NetRtg +8.2 vs CLE +4.0 (4.2pt gap). DET hosting Game 5 at Little Caesars Arena as higher seed — home court worth 3-4pts in playoffs, decisive in tied series. Series tied 2-2 — neither team facing elimination yet; CLE urgency building but not elimination desperation. Pace 99.3 vs 99.9 — near-identical, no pace mismatch concern. Three Questionable players (Huerter, LeVert, Robinson) represent compounded uncertainty — stake conservatively set at 7.5% of bankroll (€108) after -20% Questionable penalty. CLE roster treated as healthy (NBA official feed covers DET only, no CLE flags). Injury source: nba_official — spreads permitted ✓. Total exposure: €108/€1441.93 = 7.5% — well within 70% daily limit. COMMITTED_AT: 2026-05-13T23:06:26Z.",
+        "anchor_players": [
+          "Cade Cunningham",
+          "Isaiah Stewart",
+          "Jalen Duren"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null
+      }
+    ],
+    "cancelled": [
+      {
+        "id": "nba_draft_20260513_001",
+        "match": "Detroit Pistons vs Cleveland Cavaliers",
+        "pick": "Detroit Pistons ML",
+        "reason": "Odds out of valid range at commit time. Current odds 1.60 fall below the ML confirmation floor of 1.65 (Scout floor 1.70 minus 0.05 drift allowance = 1.65 minimum). Skills section odds_validation is unambiguous: cancel if current odds fall outside valid range."
+      }
+    ],
+    "late_rejections": [
+      {
+        "match": "Detroit Pistons vs Cleveland Cavaliers",
+        "reason": "O/U 211.5 @ 1.96/1.96: Scout correctly rejected on confidence floor (~58, below 65 floor for totals without strong pace signal). No change in odds or conditions since 14:00 Scout — both teams at Pace ~99, below 100 threshold for strong Over signal, neither triggers pace-based edge. No new injuries or line movement to create a fresh angle. Confidence still fails totals floor. No new pick added."
+      }
+    ],
+    "report": "### CANCELLED — Detroit Pistons ML @ 1.60\n\n- **Reason:** Odds out of valid range at commit time. The ML confirmation floor per skills is 1.65 (Scout's 1.70 floor minus the permitted 0.05 drift allowance). Current odds of 1.60 sit 0.05 below the floor. Per `odds_validation`: \"If current odds fall outside valid range → do NOT confirm.\" No drift allowance remains to absorb further movement. The underlying thesis (DET home court, L15 dominance, series edge) remains valid, but at 1.60 the EV structure is compromised relative to the risk-adjusted confidence of 72 when factoring in three simultaneous Questionable players.\n- **Odds at cancel:** 1.60 (was 1.60 at Scout — no movement; floor breach existed at Scout time as well; Scout used a 1.60 floor which does not match current skills v5 which mandates 1.65)\n\n---\n\n### CONFIRMED — Detroit Pistons -4.5 @ 2.00\n\n- **Match:** Detroit Pistons vs Cleveland Cavaliers | Tip: 2026-05-14T00:00 UTC\n- **Pick:** DET -4.5 | Scout odds: 2.00 | Commit odds: 2.00 | Move: 0.00 (no movement)\n- **ML:** 1.60 / 2.54 | **ATS:** -4.5 (2.00 / 1.92) | **O/U:** 211.5 (O: 1.96 / U: 1.96)\n- **Stake:** €108.00 | **Pot:** €216.00 | **Conf:** 62/100 | **EV:** 0.24\n- **Decision:** Confirmed. Odds 2.00 within spread target range (1.80–2.30, floor 1.75) ✓. No line movement ✓. Anchor players Cunningham, Stewart, Duren all ACTIVE per NBA official feed ✓. Three Questionable players (Huerter, LeVert, Robinson) already incorporated into confidence (-18 total) and stake (-20% penalty). EV 0.24 is strong. Core thesis intact: DET hosts Game 5 as higher seed with L15 NetRtg gap of +22.2 over CLE (who sits at +0.0 L15 — flat/poor recent form). Season NetRtg gap 4.2pts reinforces home court advantage of 3–4 pts in playoffs. Stake conservatively set at 7.5% (€108) to account for compounded Questionable uncertainty. Total exposure €108 = 7.5% of bankroll — well within 70% daily limit.\n\n---\n\n### LATE SCOUT — No new picks added\n\nThe only game on tonight's slate is DET vs CLE, already covered by draft picks. The O/U market was re-evaluated: odds unchanged at 1.96/1.96, both within the 1.80–2.05 target, but confidence for this total cannot exceed ~58 (below the 65 floor required for totals without a strong pace signal). Both teams pace at ~99, below the 100 threshold. No new late-breaking injuries, no significant line movement, and no new information emerged since 14:00 Scout. Quantity gate (max 1 new pick) is moot as no qualifying edge exists.\n\n---\n\n### Slate Summary\n\nTonight's single-game playoff slate (DET vs CLE Game 5, tied series 2-2) yields one confirmed bet: DET -4.5 at 2.00 odds (€108, EV 0.24). The DET ML was cancelled because current odds of 1.60 breach the commit-time floor of 1.65 — a rules-compliant cancellation despite a sound underlying thesis. Total bankroll exposure tonight is €108 (7.5%), leaving €1,333.93 protected; the conservative stake reflects three simultaneous Questionable players on DET's roster whose game-time status remains unresolved heading into tip-off.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 12229,
+    "tokens_out": 3242,
+    "cost_usd": 0.085317
   }
 ]
