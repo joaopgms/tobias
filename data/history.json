@@ -26,7 +26,7 @@
           "wins": 23,
           "losses": 16,
           "peak_bankroll": 1917.57,
-          "total_bets": 39
+          "total_bets": 40
         }
       ]
     }
@@ -2120,6 +2120,47 @@
       ],
       "bets": [],
       "summary": "Day 2026-05-12 commit — 0 bets totalling €0.00. 1 cancelled. Bankroll: €1441.93 → €1441.93."
+    },
+    {
+      "entry_id": "nba_entry_20260513",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-05-13T23:06:24.782184+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1441.93,
+      "total_staked": 108.0,
+      "bankroll_after": 1333.93,
+      "cancelled_picks": [
+        {
+          "id": "nba_draft_20260513_001",
+          "match": "Detroit Pistons vs Cleveland Cavaliers",
+          "pick": "Detroit Pistons ML",
+          "reason": "Odds out of valid range at commit time. Current odds 1.60 fall below the ML confirmation floor of 1.65 (Scout floor 1.70 minus 0.05 drift allowance = 1.65 minimum). Skills section odds_validation is unambiguous: cancel if current odds fall outside valid range."
+        }
+      ],
+      "bets": [
+        {
+          "id": "nba_bet_20260513_001",
+          "match": "Detroit Pistons vs Cleveland Cavaliers",
+          "time": "2026-05-14T00:00:00Z",
+          "pick": "Detroit Pistons -4.5",
+          "odds": 2.0,
+          "stake": 108.0,
+          "potential_return": 216.0,
+          "confidence": 62,
+          "reasoning": "COMMIT REVIEW: DET -4.5 @ 2.00 confirmed. Odds validation: spread target 1.80–2.30, floor 1.75 — 2.00 passes ✓. No line movement since Scout (2.00 unchanged). Anchor players: Cade Cunningham, Isaiah Stewart, Jalen Duren — all ACTIVE (none listed on NBA official injury report). Injury adjustments maintained from Scout: Huerter Q (-10), LeVert Q (-5), Robinson Q (-3) = -18 total. Confidence 62 confirmed (≥ 60 spread floor). EV = (0.62 × 2.00) - 1 = 0.24 ✓. EDGE BASIS: DET L15 NetRtg +22.2 vs CLE L15 +0.0 — exceptional 22.2pt gap. DET season NetRtg +8.2 vs CLE +4.0 (4.2pt gap). DET hosting Game 5 at Little Caesars Arena as higher seed — home court worth 3-4pts in playoffs, decisive in tied series. Series tied 2-2 — neither team facing elimination yet; CLE urgency building but not elimination desperation. Pace 99.3 vs 99.9 — near-identical, no pace mismatch concern. Three Questionable players (Huerter, LeVert, Robinson) represent compounded uncertainty — stake conservatively set at 7.5% of bankroll (€108) after -20% Questionable penalty. CLE roster treated as healthy (NBA official feed covers DET only, no CLE flags). Injury source: nba_official — spreads permitted ✓. Total exposure: €108/€1441.93 = 7.5% — well within 70% daily limit. COMMITTED_AT: 2026-05-13T23:06:26Z.",
+          "anchor_players": [
+            "Cade Cunningham",
+            "Isaiah Stewart",
+            "Jalen Duren"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null
+        }
+      ],
+      "summary": "Day 2026-05-13 commit — 1 bets totalling €108.00. 1 cancelled. Bankroll: €1441.93 → €1333.93."
     }
   ]
 }
