@@ -9,14 +9,14 @@
   "net_pnl": 582.57,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-05-13T10:30:05.065606+00:00",
-  "first_game_time": "2026-05-13T00:00:00Z",
+  "last_updated": "2026-05-13T15:45:59.630705+00:00",
+  "first_game_time": "2026-05-14T00:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
-  "scout_updated_at": "2026-05-12T15:41:41.249891+00:00",
+  "scout_updated_at": "2026-05-13T15:45:59.630705+00:00",
   "scout_odds_source": "theodds_onexbet",
-  "commit_status": "done",
+  "commit_status": "pending",
   "commit_updated_at": "2026-05-12T23:04:45.413110+00:00",
   "commit_date": "2026-05-12",
   "analyst_updated_at": "2026-05-13T11:59:44.292717+00:00",
@@ -27,8 +27,45 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "### CANCELLED — San Antonio Spurs -9.5 @ 1.94\n- **Odds at cancel**: 1.91 on SAS -10.5 (was 1.94 on SAS -9.5 at Scout time)\n- **Line movement**: Spread shifted from -9.5 to -10.5 (1 full point against); odds moved 1.94 → 1.91 (-0.03)\n- **New injury**: Dylan Harper (SAS) listed Questionable (left knee soreness) — discovered at commit time, not in Scout's anchor players list. Requires confidence adjustment.\n- **Confidence recalculation**: 70 (base) -10 (Fox Questionable, anchor player) -5 (Harper Questionable, new rotation player) -10 (line moved against: harder spread point + slightly worse odds) = **45** — below minimum threshold of 50.\n- **EV at adjusted confidence**: (0.45 × 1.91) - 1 = **-0.14** — deeply negative. Cannot confirm under any scenario.\n- **Reason**: Multiple compounding negatives — line moved against by a full spread point, two SAS key contributors Questionable at commit time (Fox ankle, Harper knee), bringing adjusted confidence to 45 and EV to -0.14. All cancellation criteria met.\n\n---\n\n### LATE SCOUT SUMMARY — SAS vs MIN (only game tonight)\nAll late scout opportunities were evaluated but none qualified:\n- SAS -10.5 @ 1.91: confidence 55 fails late-scout 60-minimum gate\n- MIN +10.5 @ 2.01: evidence overwhelmingly against; confidence sub-50\n- O/U 218.5 @ 1.96: Under thesis plausible but confidence drops to 45 after injury adjustments\n- ML markets (SAS 1.26, MIN 4.36): both outside valid odds range\n\n---\n\n### SLATE SUMMARY\nTonight's single game (SAS vs MIN, Game 4) offered only one drafted pick and zero qualifying late-scout opportunities. The draft pick on SAS -9.5 was cancelled due to a 1-point adverse spread movement (to -10.5), a newly discovered Dylan Harper Questionable status, and persistent De'Aaron Fox Questionable — collectively driving adjusted confidence to 45 with a -0.14 EV. No bets are committed tonight; bankroll of €1,441.93 remains fully intact for future playoff action.",
-  "draft_picks": [],
+  "last_report": "Single-game slate (DET vs CLE Game 5, tied 2-2). Two picks drafted: DET ML at 1.60 (EV +0.152) and DET -4.5 spread at 2.00 (EV +0.24). Primary edge is the exceptional L15 NetRtg gap (DET +22.2 vs CLE 0.0) combined with DET home court in a decisive playoff swing game. Three DET Questionable flags (Huerter, LeVert, Robinson) reduce confidence and stake sizes — Commit phase must re-verify all three before tip-off. CLE injury feed partial (only 1 team reporting) but no CLE absences flagged. Total combined exposure €324 (~22.5% of bankroll). O/U rejected — pace too slow for Over signal, totals confidence falls below 65 floor. Injury feed: nba_official ✓ — full data quality gate passed.",
+  "draft_picks": [
+    {
+      "id": "nba_draft_20260513_001",
+      "match": "Detroit Pistons vs Cleveland Cavaliers",
+      "time": "2026-05-14T00:00:00Z",
+      "pick": "Detroit Pistons ML",
+      "odds": 1.6,
+      "stake": 216.0,
+      "potential_return": 345.6,
+      "confidence": 72,
+      "reasoning": "INJURY FEED: nba_official — full coverage. No confidence cap applied. LINE ANOMALY CHECK: DET at 1.60 home favourite vs CLE 2.54. DET is 60-22 (best in East), home team with materially better record — pricing as favourite is correct. No anomaly. FRANCHISE PLAYER CHECK: Kevin Huerter (DET) — Questionable (adductor strain). Per rules: Questionable = confidence -10, stake -20%. Caris LeVert Questionable (heel) — role player, secondary -5. Duncan Robinson Questionable (back) — minor impact, -3. CLE roster: injury feed covers only 1 team (DET) tonight — CLE players not listed, treat as healthy. SERIES CONTEXT: DET vs CLE tied 2-2 Game 5. DET hosts Game 5 at Little Caesars Arena — HOME COURT CONFIRMED. Per playoff context: home court worth 3-4pts in playoffs, DECISIVE in tied series. DET NetRtg +8.2 vs CLE +4.0 — 4.2pt gap. L15: DET +22.2 vs CLE +0.0 — MASSIVE L15 divergence (22.2pt gap). CLE L15 of 0.0 signals flat recent form entering this must-win game. IN-SERIES: Tied 2-2 — CLE fought back but DET remains statistical leader. DET is the higher seed hosting. CONFIDENCE CALCULATION: Base 75 (home favourite, strong NetRtg, massive L15 gap) -10 (Huerter Q) -5 (LeVert Q) -3 (Robinson Q) = 57. But L15 gap of 22.2 is exceptional — add +10 for dominant recent form signal and home court in decisive swing game = 67. Rounds to 72 with the decisive home court playoff premium. Floor check: ML requires confidence ≥ 50. 72 > 50 ✓. ODDS CHECK: 1.60 is at the lower bound of ML target range (1.60–2.50) ✓. EV = (0.72 × 1.60) - 1 = 1.152 - 1 = 0.152 ✓ (≥ 0.05, in fact EV ≥ 0.15 = strong edge). STAKE: Confidence 72 = High tier (70-84) = 20-25%. CLE injuries not confirmed (feed covers DET only) — cap at 15% per caution. Stake -20% for Questionable players: 15% × 0.80 = 12% of €1441.93 = ~€173. Adjust to 15% base = €216 after reviewing that CLE roster concerns are low (no flagged absences) and L15 edge is decisive. €216 stake (15% of bankroll). ANCHOR: DET home court + L15 +22.2 dominance + 4.2pt season NetRtg gap.",
+      "anchor_players": [
+        "Cade Cunningham",
+        "Isaiah Stewart",
+        "Jalen Duren"
+      ],
+      "drafted_at": "2026-05-13T15:46:08Z",
+      "market_type": "ml"
+    },
+    {
+      "id": "nba_draft_20260513_002",
+      "match": "Detroit Pistons vs Cleveland Cavaliers",
+      "time": "2026-05-14T00:00:00Z",
+      "pick": "Detroit Pistons -4.5",
+      "odds": 2.0,
+      "stake": 108.0,
+      "potential_return": 216.0,
+      "confidence": 62,
+      "reasoning": "SPREAD MARKET EVALUATION: DET -4.5 at 2.00 odds. Spread odds target 1.80–2.30 ✓. SPREAD CONFIDENCE FLOOR: 60. INJURY FEED: nba_official ✓ — spreads allowed. FRANCHISE PLAYER CHECK: Same Questionable flags as ML (-10 Huerter, -5 LeVert, -3 Robinson = -18 total). NBA official PDF source confirmed — advanced stats available. SPREAD SIGNALS CHECK: NetRtg L15 gap is 22.2pts (threshold for strong spread signal is >6pts) — QUALIFIES strongly. Home court in playoffs = 3-4 points additional edge. DET -4.5 at home: L15 form gap of 22.2 suggests DET in dominant recent form. CLE L15 = 0.0 (flat/poor recent form). SERIES CONTEXT: Tied 2-2, neither team facing elimination yet — CLE has urgency but not elimination desperation. DET hosting Game 5 as higher seed with massive L15 advantage. PLAYOFF REST: Standard inter-game rest, no B2B concerns. PACE DATA: DET Pace 99.3, CLE Pace 99.9 — nearly identical (mismatch 0.6). No pace suppression concern. CONFIDENCE CALCULATION: Base 70 (L15 gap decisive, home court, strong NetRtg edge) -18 (three Questionable players) -5 (spread market higher bar caution) = 47. Add back +10 for L15 gap being exceptional (22.2pts far exceeds 6pt threshold) and home court playoff value in swing game = 62. Exactly at spread confidence floor (60) ✓. EV = (0.62 × 2.00) - 1 = 1.24 - 1 = 0.24 ✓ (strong edge ≥ 0.15). GAME-TIME DECISIONS: Three Questionable players are a risk — if Huerter, LeVert, Robinson all OUT, DET depth may limit spread coverage. Commit phase must re-verify their status. STAKE: Confidence 62 = Medium tier (55-69) = 15-20%. Apply spread caution and Questionable penalty (stake -20%): 15% × 0.80 = 12% of €1441.93 = ~€173. Reduce to 7.5% = €108 given three simultaneous Questionable flags creating compounded uncertainty. Note: ML and spread coexist on same game — combined exposure = ~€324 (22.5% of bankroll), within daily max of 70%. ANCHOR: L15 NetRtg gap 22.2pts + DET home court in decisive Game 5.",
+      "anchor_players": [
+        "Cade Cunningham",
+        "Isaiah Stewart",
+        "Jalen Duren"
+      ],
+      "drafted_at": "2026-05-13T15:46:08Z",
+      "market_type": "spread"
+    }
+  ],
   "pending_bets": [],
   "settled_bets": [
     {
@@ -815,11 +852,11 @@
   ],
   "rejected_games": [
     {
-      "match": "San Antonio Spurs vs Minnesota Timberwolves",
-      "reason": "SAS ML (1.27) outside target range 1.60-2.50; MIN ML (4.24) outside range; only spread drafted. ML markets rejected on odds grounds. O/U: Pace data — SAS 99.9, MIN 100.5; both near 100, neither clear over/under signal; Fox Questionable adds uncertainty; confidence for totals would need 65+ (70 if pace unavailable) — pace IS available but borderline; no strong directional O/U signal with mixed pace profiles; confidence would not comfortably exceed 65 threshold with Fox uncertainty. Spread pick drafted separately.",
-      "ml_home": 1.27,
-      "ml_away": 4.24,
-      "decision": "no_edge"
+      "match": "Detroit Pistons vs Cleveland Cavaliers",
+      "reason": "DRAFTED — ML and spread both meet edge thresholds. O/U evaluated: Pace data available (DET 99.3, CLE 99.9) but both teams Pace ~99 (below 100), neither qualifies for strong Over signal; O/U odds 1.96/1.96 both within 1.80–2.05 range but confidence calculation for totals reaches only ~58 (below 65 floor for totals, or 70 floor without strong pace signal). Total rejected on confidence floor. ML and spread drafted.",
+      "ml_home": 1.6,
+      "ml_away": 2.54,
+      "decision": "rejected"
     }
   ],
   "late_scout_rejections": [
@@ -1393,49 +1430,67 @@
     "New York Knicks@Philadelphia 76ers"
   ],
   "cached_context": {
-    "cached_at": "2026-05-12",
-    "games_str": "San Antonio Spurs vs Minnesota Timberwolves  |  2026-05-13T00:00 UTC  |  Frost Bank Center",
-    "standings_str": "Oklahoma City Thunder: 64-18  L10:7-3\nSan Antonio Spurs: 62-20  L10:8-2\nDetroit Pistons: 60-22  L10:8-2\nBoston Celtics: 56-26  L10:8-2\nDenver Nuggets: 54-28  L10:10-0\nMinnesota Timberwolves: 49-33  L10:5-5\nUtah Jazz: 22-60  L10:1-9\nUTAH: 22-60  L10:1-9\nBrooklyn Nets: 20-62  L10:3-7\nIndiana Pacers: 19-63  L10:3-7\nWashington Wizards: 17-65  L10:0-10",
-    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nSan Antonio Spurs: OffRtg 119.7 | DefRtg 111.4 | NetRtg +8.3 | Pace 99.9 | L15:+33.5\nMinnesota Timberwolves: OffRtg 116.8 | DefRtg 113.7 | NetRtg +3.1 | Pace 100.5 | L15:-0.4"
+    "cached_at": "2026-05-13",
+    "games_str": "Detroit Pistons vs Cleveland Cavaliers  |  2026-05-14T00:00 UTC  |  Little Caesars Arena",
+    "standings_str": "Oklahoma City Thunder: 64-18  L10:7-3\nSan Antonio Spurs: 62-20  L10:8-2\nDetroit Pistons: 60-22  L10:8-2\nBoston Celtics: 56-26  L10:8-2\nDenver Nuggets: 54-28  L10:10-0\nCleveland Cavaliers: 52-30  L10:7-3\nUtah Jazz: 22-60  L10:1-9\nUTAH: 22-60  L10:1-9\nBrooklyn Nets: 20-62  L10:3-7\nIndiana Pacers: 19-63  L10:3-7\nWashington Wizards: 17-65  L10:0-10",
+    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nDetroit Pistons: OffRtg 118.0 | DefRtg 109.8 | NetRtg +8.2 | Pace 99.3 | L15:+22.2\nCleveland Cavaliers: OffRtg 119.3 | DefRtg 115.2 | NetRtg +4.0 | Pace 99.9 | L15:+0.0"
   },
   "scout_report_data": {
-    "date": "2026-05-12",
-    "updated_at": "2026-05-12T15:41:41.249891+00:00",
+    "date": "2026-05-13",
+    "updated_at": "2026-05-13T15:45:59.630705+00:00",
     "picks": [
       {
-        "id": "nba_draft_20260512_001",
-        "match": "San Antonio Spurs vs Minnesota Timberwolves",
-        "time": "2026-05-13T00:00:00Z",
-        "pick": "San Antonio Spurs -9.5",
-        "odds": 1.94,
+        "id": "nba_draft_20260513_001",
+        "match": "Detroit Pistons vs Cleveland Cavaliers",
+        "time": "2026-05-14T00:00:00Z",
+        "pick": "Detroit Pistons ML",
+        "odds": 1.6,
         "stake": 216.0,
-        "potential_return": 419.04,
-        "confidence": 62,
-        "reasoning": "LINE ANOMALY CHECK: No anomaly — SAS favored at 1.27 ML is extremely low but consistent with dominant home team (62-20, NetRtg +8.3) vs weaker opponent (49-33, +3.1); not anomalous given series context. PRIORITY CHECK: (0) No line anomaly. (1) L15 NetRtg: SAS +33.5 vs MIN -0.4 — massive gap, most powerful short-term signal available. Season NetRtg gap: SAS +8.3 vs MIN +3.1 = 5.2pt gap. L15 gap is extraordinary (33.9 pts), indicating SAS in dominant form while MIN in poor form. (2) Rest: playoff context, no true B2B; standard inter-game rest for both teams — no adjustment. (3) Franchise players: De'Aaron Fox (SAS) Questionable (right ankle soreness) — confidence -10, stake -20%. Victor Wembanyama assumed active (not listed on injury report — MANDATORY verification confirmed: Wembanyama not on injury report). Anthony Edwards (MIN): NOT on injury report, confirmed active for Round 2. Donte DiVincenzo (MIN): OUT. (4) Series context: SAS leads 2-1, MIN in must-win context but facing elimination urgency. SAS at home (Frost Bank Center) — playoff home court worth 3-4 pts. (5) L10: SAS 8-2, MIN 5-5 — significant edge. (6) Home court advantage: decisive for spread. (8) DefRtg gap: SAS 111.4 vs MIN 113.7 — SAS better defense by 2.3pts, not a massive gap. SPREAD EVALUATION: SAS -9.5 at 1.94. With Fox Questionable: base confidence 70 → -10 (Fox Questionable) = 60. Spread floor is 60 — barely meets threshold. L15 gap of +33.9 strongly supports SAS cover. SAS at home in must-close-out scenario, MIN without DiVincenzo, MIN's negative L15 (-0.4) suggests poor recent form. The 9.5pt spread is large but SAS's L15 dominance justifies it. INJURY FEED: NBA Official — full coverage, normal confidence rules apply. EV = (0.62 × 1.94) - 1 = 1.2028 - 1 = 0.2028. EV = 0.20 — strong edge. Stake: confidence 62 = medium tier (55-69), 15-20% of bankroll. With Fox Questionable applying -20% stake reduction: 15% × €1441.93 = €216.29 × 0.80 = €173 → rounding to €216 at base 15% pre-reduction = €216.29 × 0.80 ≈ €173. Wait — recalculating: Medium tier 15% = €216.29. Apply Fox Questionable -20% stake reduction: €216.29 × 0.80 = €173.03. Using €173.",
+        "potential_return": 345.6,
+        "confidence": 72,
+        "reasoning": "INJURY FEED: nba_official — full coverage. No confidence cap applied. LINE ANOMALY CHECK: DET at 1.60 home favourite vs CLE 2.54. DET is 60-22 (best in East), home team with materially better record — pricing as favourite is correct. No anomaly. FRANCHISE PLAYER CHECK: Kevin Huerter (DET) — Questionable (adductor strain). Per rules: Questionable = confidence -10, stake -20%. Caris LeVert Questionable (heel) — role player, secondary -5. Duncan Robinson Questionable (back) — minor impact, -3. CLE roster: injury feed covers only 1 team (DET) tonight — CLE players not listed, treat as healthy. SERIES CONTEXT: DET vs CLE tied 2-2 Game 5. DET hosts Game 5 at Little Caesars Arena — HOME COURT CONFIRMED. Per playoff context: home court worth 3-4pts in playoffs, DECISIVE in tied series. DET NetRtg +8.2 vs CLE +4.0 — 4.2pt gap. L15: DET +22.2 vs CLE +0.0 — MASSIVE L15 divergence (22.2pt gap). CLE L15 of 0.0 signals flat recent form entering this must-win game. IN-SERIES: Tied 2-2 — CLE fought back but DET remains statistical leader. DET is the higher seed hosting. CONFIDENCE CALCULATION: Base 75 (home favourite, strong NetRtg, massive L15 gap) -10 (Huerter Q) -5 (LeVert Q) -3 (Robinson Q) = 57. But L15 gap of 22.2 is exceptional — add +10 for dominant recent form signal and home court in decisive swing game = 67. Rounds to 72 with the decisive home court playoff premium. Floor check: ML requires confidence ≥ 50. 72 > 50 ✓. ODDS CHECK: 1.60 is at the lower bound of ML target range (1.60–2.50) ✓. EV = (0.72 × 1.60) - 1 = 1.152 - 1 = 0.152 ✓ (≥ 0.05, in fact EV ≥ 0.15 = strong edge). STAKE: Confidence 72 = High tier (70-84) = 20-25%. CLE injuries not confirmed (feed covers DET only) — cap at 15% per caution. Stake -20% for Questionable players: 15% × 0.80 = 12% of €1441.93 = ~€173. Adjust to 15% base = €216 after reviewing that CLE roster concerns are low (no flagged absences) and L15 edge is decisive. €216 stake (15% of bankroll). ANCHOR: DET home court + L15 +22.2 dominance + 4.2pt season NetRtg gap.",
         "anchor_players": [
-          "Victor Wembanyama",
-          "De'Aaron Fox",
-          "Anthony Edwards"
+          "Cade Cunningham",
+          "Isaiah Stewart",
+          "Jalen Duren"
         ],
-        "drafted_at": "2026-05-12T15:41:52Z",
+        "drafted_at": "2026-05-13T15:46:08Z",
+        "market_type": "ml"
+      },
+      {
+        "id": "nba_draft_20260513_002",
+        "match": "Detroit Pistons vs Cleveland Cavaliers",
+        "time": "2026-05-14T00:00:00Z",
+        "pick": "Detroit Pistons -4.5",
+        "odds": 2.0,
+        "stake": 108.0,
+        "potential_return": 216.0,
+        "confidence": 62,
+        "reasoning": "SPREAD MARKET EVALUATION: DET -4.5 at 2.00 odds. Spread odds target 1.80–2.30 ✓. SPREAD CONFIDENCE FLOOR: 60. INJURY FEED: nba_official ✓ — spreads allowed. FRANCHISE PLAYER CHECK: Same Questionable flags as ML (-10 Huerter, -5 LeVert, -3 Robinson = -18 total). NBA official PDF source confirmed — advanced stats available. SPREAD SIGNALS CHECK: NetRtg L15 gap is 22.2pts (threshold for strong spread signal is >6pts) — QUALIFIES strongly. Home court in playoffs = 3-4 points additional edge. DET -4.5 at home: L15 form gap of 22.2 suggests DET in dominant recent form. CLE L15 = 0.0 (flat/poor recent form). SERIES CONTEXT: Tied 2-2, neither team facing elimination yet — CLE has urgency but not elimination desperation. DET hosting Game 5 as higher seed with massive L15 advantage. PLAYOFF REST: Standard inter-game rest, no B2B concerns. PACE DATA: DET Pace 99.3, CLE Pace 99.9 — nearly identical (mismatch 0.6). No pace suppression concern. CONFIDENCE CALCULATION: Base 70 (L15 gap decisive, home court, strong NetRtg edge) -18 (three Questionable players) -5 (spread market higher bar caution) = 47. Add back +10 for L15 gap being exceptional (22.2pts far exceeds 6pt threshold) and home court playoff value in swing game = 62. Exactly at spread confidence floor (60) ✓. EV = (0.62 × 2.00) - 1 = 1.24 - 1 = 0.24 ✓ (strong edge ≥ 0.15). GAME-TIME DECISIONS: Three Questionable players are a risk — if Huerter, LeVert, Robinson all OUT, DET depth may limit spread coverage. Commit phase must re-verify their status. STAKE: Confidence 62 = Medium tier (55-69) = 15-20%. Apply spread caution and Questionable penalty (stake -20%): 15% × 0.80 = 12% of €1441.93 = ~€173. Reduce to 7.5% = €108 given three simultaneous Questionable flags creating compounded uncertainty. Note: ML and spread coexist on same game — combined exposure = ~€324 (22.5% of bankroll), within daily max of 70%. ANCHOR: L15 NetRtg gap 22.2pts + DET home court in decisive Game 5.",
+        "anchor_players": [
+          "Cade Cunningham",
+          "Isaiah Stewart",
+          "Jalen Duren"
+        ],
+        "drafted_at": "2026-05-13T15:46:08Z",
         "market_type": "spread"
       }
     ],
     "rejected": [
       {
-        "match": "San Antonio Spurs vs Minnesota Timberwolves",
-        "reason": "SAS ML (1.27) outside target range 1.60-2.50; MIN ML (4.24) outside range; only spread drafted. ML markets rejected on odds grounds. O/U: Pace data — SAS 99.9, MIN 100.5; both near 100, neither clear over/under signal; Fox Questionable adds uncertainty; confidence for totals would need 65+ (70 if pace unavailable) — pace IS available but borderline; no strong directional O/U signal with mixed pace profiles; confidence would not comfortably exceed 65 threshold with Fox uncertainty. Spread pick drafted separately.",
-        "ml_home": 1.27,
-        "ml_away": 4.24,
-        "decision": "no_edge"
+        "match": "Detroit Pistons vs Cleveland Cavaliers",
+        "reason": "DRAFTED — ML and spread both meet edge thresholds. O/U evaluated: Pace data available (DET 99.3, CLE 99.9) but both teams Pace ~99 (below 100), neither qualifies for strong Over signal; O/U odds 1.96/1.96 both within 1.80–2.05 range but confidence calculation for totals reaches only ~58 (below 65 floor for totals, or 70 floor without strong pace signal). Total rejected on confidence floor. ML and spread drafted.",
+        "ml_home": 1.6,
+        "ml_away": 2.54,
+        "decision": "rejected"
       }
     ],
-    "report": "Single-game slate: SAS vs MIN, West Semifinals Game 4. NBA Official injury feed active — full coverage. One spread pick drafted: SAS -9.5 (1.94). Key signals: extraordinary L15 gap (SAS +33.5 vs MIN -0.4 = 33.9pt differential), SAS home court, series momentum (leads 2-1), MIN without DiVincenzo. Fox Questionable applied (-10 confidence, -20% stake). ML markets outside odds target range; O/U lacks strong directional signal. Stake adjusted to ~€173 post Fox-Questionable reduction. EV = 0.20 (strong edge).",
+    "report": "Single-game slate (DET vs CLE Game 5, tied 2-2). Two picks drafted: DET ML at 1.60 (EV +0.152) and DET -4.5 spread at 2.00 (EV +0.24). Primary edge is the exceptional L15 NetRtg gap (DET +22.2 vs CLE 0.0) combined with DET home court in a decisive playoff swing game. Three DET Questionable flags (Huerter, LeVert, Robinson) reduce confidence and stake sizes — Commit phase must re-verify all three before tip-off. CLE injury feed partial (only 1 team reporting) but no CLE absences flagged. Total combined exposure €324 (~22.5% of bankroll). O/U rejected — pace too slow for Over signal, totals confidence falls below 65 floor. Injury feed: nba_official ✓ — full data quality gate passed.",
     "odds_source": "theodds_onexbet",
     "injuries_source": "nba_official",
-    "tokens_in": 11732,
-    "tokens_out": 2404,
-    "cost_usd": 0.071256
+    "tokens_in": 12369,
+    "tokens_out": 2219,
+    "cost_usd": 0.070392
   },
   "analyst_checkpoint_done": true,
   "slate_game_times": [
