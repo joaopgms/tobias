@@ -24,7 +24,7 @@
           "started_at": "2026-04-05T10:44:07.102344+00:00",
           "bankroll_start": 1000.0,
           "wins": 23,
-          "losses": 16,
+          "losses": 17,
           "peak_bankroll": 1917.57,
           "total_bets": 40
         }
@@ -2154,10 +2154,10 @@
             "Isaiah Stewart",
             "Jalen Duren"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -108.0,
+          "settled_at": "2026-05-14T10:20:29.864334+00:00"
         }
       ],
       "summary": "Day 2026-05-13 commit — 1 bets totalling €108.00. 1 cancelled. Bankroll: €1441.93 → €1333.93."
