@@ -1859,5 +1859,33 @@
     "tokens_in": 12229,
     "tokens_out": 3242,
     "cost_usd": 0.085317
+  },
+  {
+    "ts": "2026-05-15T22:01:35.232998+00:00",
+    "date": "2026-05-15",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 0,
+    "cancelled_count": 0,
+    "total_staked": 0.0,
+    "bankroll_before": 1333.93,
+    "bankroll_after": 1333.93,
+    "bets": [],
+    "cancelled": [],
+    "late_rejections": [
+      {
+        "match": "Cleveland Cavaliers vs Detroit Pistons",
+        "reason": "CLE ML 1.55 below ML floor of 1.65 — invalid. DET ML 2.65 above ML ceiling of 2.50 — invalid. Spread (CLE -4.5 at 1.97 / DET +4.5 at 1.95) within odds range but confidence cannot reach 60 floor for either side: DET L15 +22.2 vs CLE L15 +0.0 creates a large recent-form gap favoring DET, but series is tied 2-2 with CLE at home, three DET players Questionable (Huerter, LeVert, Robinson), and neither team has dominated in-series. CLE -4.5 confidence ~47, DET +4.5 confidence ~51 — both below the 60 spread floor. O/U 209.5: no directional signal with confidence ≥ 65 in a tight defensive playoff series. No valid pick."
+      },
+      {
+        "match": "Minnesota Timberwolves vs San Antonio Spurs",
+        "reason": "MIN ML 3.10 above ML ceiling of 2.50 — invalid. SAS ML 1.43 below ML floor of 1.65 — invalid. Spread line moved MIN +5.5 → +6.5 (positive for MIN bettors), odds 1.95/1.97 within range. Edwards confirmed ACTIVE (not on injury report) — positive signal for MIN. But SAS dominant L15 (+33.5 vs MIN -0.4, a massive 33.9pt gap) and season NetRtg advantage (+8.3 vs +3.1) drag spread confidence below threshold. MIN +6.5 confidence ~54 (elimination urgency +5, Edwards active +10, home court — offset by SAS overwhelming L15 gap -10, NetRtg gap -5, DiVincenzo OUT -5, Shannon Jr. Q -2). SAS -6.5 confidence ~46. Neither side reaches the 60 spread confidence floor. O/U 218.5 shows no strong directional signal at confidence ≥ 65. DiVincenzo confirmed OUT for MIN. No valid pick."
+      }
+    ],
+    "report": "## Commit Report — 2026-05-15T22:01:38Z\n\n### Bankroll: €1333.93 | Phase: NBA Playoffs Round 2 | Games Tonight: 2\n\n---\n\n### No Draft Picks to Review\nScout phase produced zero draft picks. No confirmations or cancellations required.\n\n---\n\n### Late Scout — Game 1: Cleveland Cavaliers vs Detroit Pistons (23:00 UTC, Rocket Arena)\n\n**Odds at commit:** CLE ML 1.55 / DET ML 2.65 | Spread CLE -4.5 (1.97/1.95) | O/U 209.5 (O:1.97/U:1.95)\n\n**ML markets:** Both outside valid range. CLE ML 1.55 < floor 1.65; DET ML 2.65 > ceiling 2.50. No ML picks possible.\n\n**Spread:** CLE -4.5 / DET +4.5 at 1.97/1.95 — odds in valid range. Spread line shifted from ~-3.5 to -4.5 for CLE (books extending the number). Three DET players listed Questionable (Kevin Huerter — adductor strain, Caris LeVert — heel, Duncan Robinson — back). All still Questionable, not OUT — cannot treat as absent per CRITICAL GTD rule unless thesis depends on absence. In-series: Tied 2-2, both teams competitive. DET L15 NetRtg +22.2 vs CLE L15 0.0 — large recent-form gap favoring DET, which prevents reaching confidence 60 on CLE -4.5. DET +4.5 faces the obstacle of a superior L15 record but three questionable players and road status. Confidence: CLE -4.5 ~47, DET +4.5 ~51 — both below 60 spread floor. **No valid pick.**\n\n**Totals:** O/U 209.5 — playoff game, both teams moderate pace (~99-100). CLE defense weak (DefRtg 115.2), DET defense stronger (109.8). No directional conviction at confidence ≥ 65. **No valid pick.**\n\n---\n\n### Late Scout — Game 2: Minnesota Timberwolves vs San Antonio Spurs (01:30 UTC, Target Center)\n\n**Odds at commit:** MIN ML 3.10 / SAS ML 1.43 | Spread MIN +6.5 (1.95/1.97) | O/U 218.5 (O:1.94/U:1.98)\n\n**ML markets:** Both outside valid range. MIN ML 3.10 > ceiling 2.50; SAS ML 1.43 < floor 1.65. No ML picks possible.\n\n**Key late development:** Anthony Edwards NOT on NBA official injury report → confirmed ACTIVE. Per skills: \"ELIMINATION GAME + Edwards active = MIN is a live underdog.\" This is a meaningful positive signal for MIN. Spread line also moved MIN +5.5 → +6.5, giving MIN bettors an extra point.\n\n**Spread:** MIN +6.5 (1.95) / SAS -6.5 (1.97) — both within valid odds range (1.75–2.30). Edwards active adds +10 to MIN confidence; elimination home game adds +5. However, SAS L15 NetRtg +33.5 vs MIN L15 -0.4 — a staggering 33.9pt gap in recent form — and SAS season NetRtg advantage (+8.3 vs +3.1) impose significant deductions. DiVincenzo confirmed OUT (-5), Shannon Jr. Questionable (-2). MIN +6.5 confidence: ~54. SAS -6.5 confidence: ~46. Neither reaches the 60 spread confidence floor required per skills. The SAS L15 dominance is the decisive obstacle — backing MIN to cover even with 6.5 points against the hottest team in the league by L15 metrics cannot reach threshold confidence.\n\n**Totals:** O/U 218.5 — Edwards active could elevate MIN's offense, but playoff games typically trend lower. Both teams moderate pace. No directional signal with confidence ≥ 65. **No valid pick.**\n\n---\n\n### Slate Summary\n\nTonight's two playoff games (CLE vs DET — Game 5 of tied series; MIN vs SAS — MIN elimination Game 6) both presented structural issues preventing any committed bets. ML odds on all four teams were outside valid ranges (too short for favorites, too long for underdogs given ceiling constraints). Spread confidence for both games fell short of the 60-confidence floor required: DET's dominant L15 (+22.2) prevented confidence in CLE -4.5, while SAS's extraordinary L15 (+33.5) prevented confidence in MIN +6.5 despite Edwards' active confirmation and elimination urgency. Edwards being active is noted as a meaningful development for MIN's chances in Game 6, but at insufficient confidence to commit capital. Bankroll of €1333.93 remains fully intact.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 11462,
+    "tokens_out": 4932,
+    "cost_usd": 0.108366
   }
 ]
