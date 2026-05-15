@@ -726,7 +726,7 @@ def run(store) -> None:
                                     playoff_series_str=playoff_series_str)
     state["agent_models"] = state.get("agent_models", {})
     state["agent_models"]["analyst"] = llm
-    llm_result = call_llm_full(system, user, max_tokens=10000, agent="analyst")
+    llm_result = call_llm_full(system, user, max_tokens=16000, agent="analyst")
     raw = llm_result.text
 
     # ── 6. Parse LLM response ─────────────────────────────────────────────────
