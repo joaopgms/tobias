@@ -1887,5 +1887,29 @@
     "tokens_in": 11462,
     "tokens_out": 4932,
     "cost_usd": 0.108366
+  },
+  {
+    "ts": "2026-05-17T23:01:02.942605+00:00",
+    "date": "2026-05-17",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 0,
+    "cancelled_count": 0,
+    "total_staked": 0.0,
+    "bankroll_before": 1333.93,
+    "bankroll_after": 1333.93,
+    "bets": [],
+    "cancelled": [],
+    "late_rejections": [
+      {
+        "match": "Detroit Pistons vs Cleveland Cavaliers",
+        "reason": "All four markets evaluated and rejected: (1) DET ML 1.56 — below ML floor of 1.65, odds out of valid range; (2) DET Spread -3.5 @ 1.86 — line improved from Scout's -4.5 but confidence capped at ~53 after adjusting for series 2-2 tie context and 3 Questionable DET rotation players (Huerter, LeVert, Robinson), yielding negative EV of -0.014; (3) CLE ML 2.44 — CLE L15 NetRtg = 0.0 vs DET L15 +22.2 is a 22.2pt gap strongly against CLE on road in Game 5, cannot reach required confidence ≥ 60 for new late picks; (4) O/U 204.5 Under 1.91 — solid playoff defensive thesis but confidence reaches ~57, below the 60 confidence gate required for new late-phase picks. No valid commitment possible."
+      }
+    ],
+    "report": "## Commit Report — 2026-05-17T23:01:05Z\n### Bankroll: €1333.93 | Phase: NBA Playoffs Round 2\n\n---\n\n### No Draft Picks to Review\nThe Scout phase produced no draft picks. No confirmations or cancellations required from the draft queue.\n\n---\n\n### Late Scout — Detroit Pistons vs Cleveland Cavaliers (Game 5, Series 2-2)\n**Tip:** 2026-05-18T00:00 UTC | Little Caesars Arena (DET home)\n**Current odds:** DET ML 1.56 | CLE ML 2.44 | DET Spread -3.5 (1.86/1.94) | O/U 204.5 (O:1.89/U:1.91)\n**Changes since Scout 14:00:** DET ML improved 1.50→1.56 (still below floor); CLE ML tightened 2.60→2.44; Spread improved 0.5pt to -3.5 @ 1.86; O/U introduced in valid range.\n**Injury update (nba_official):** DET — Huerter/LeVert/Robinson all Questionable (unchanged from Scout). CLE — Nance OUT (Illness, non-franchise). Cade Cunningham (DET) ACTIVE ✅. Donovan Mitchell (CLE) ACTIVE ✅.\n\n**LATE PICK REJECTED — DET ML 1.56:** Odds below ML floor of 1.65. Not confirmable.\n\n**LATE PICK REJECTED — DET Spread -3.5 @ 1.86:** Line moved favourably (half point better than Scout's -4.5), odds within valid spread range (1.86 in 1.75–2.30). However, confidence assessment yields ~53 after applying: series tied 2-2 context (-5), three non-franchise Questionable DET players collectively (-10), CLE Game 5 desperation factor (-2). EV = 0.53 × 1.86 − 1 = **−0.014** — fails EV gate of ≥ 0.05. Rejected.\n\n**LATE PICK REJECTED — CLE ML 2.44:** Odds valid (within 1.65–2.50). However, CLE L15 NetRtg = 0.0 vs DET L15 +22.2 represents a 22.2-point gap — extraordinary signal against CLE winning outright on DET's home court in a playoff Game 5. CLE's road underdog status at this L15 differential means realistic win probability sits at ~33–38%. Cannot reach required confidence gate of ≥ 60 for new late picks. EV negative below confidence 40. Rejected.\n\n**LATE PICK REJECTED — O/U 204.5 Under 1.91:** Valid odds (1.91 in 1.75–2.05). Playoff Game 5 defensive intensity, CLE recent offensive struggles (L15 flat), and DET's solid DefRtg 109.8 support the Under thesis. Confidence reaches ~57 — solid but falls short of the 60 confidence gate required for new late-phase picks. EV at 57 would be +0.089 (above floor) but confidence gate is a hard requirement. Rejected.\n\n---\n\n### Slate Summary\nTonight's single game (DET vs CLE, Game 5 of tied 2-2 series) offered no committable edge at commit time. The extraordinary DET L15 advantage (+22.2 vs CLE's flat 0.0) was offset by three Questionable rotation players, the proven 2-2 series competitiveness of CLE, and the fact that the DET ML price (1.56) remains well below the 1.65 floor even after moving from Scout's 1.50. No stakes are committed tonight; bankroll of €1333.93 remains fully intact.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 11249,
+    "tokens_out": 3995,
+    "cost_usd": 0.093672
   }
 ]
