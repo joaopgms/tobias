@@ -1,71 +1,68 @@
 ---
-version: 29
-updated_at: 2026-05-13T11:59:44.292717+00:00
-updated_by: analyst_2026-05-13
+version: 30
+updated_at: 2026-05-18T13:41:25.743230+00:00
+updated_by: analyst_2026-05-18
 llm: claude-sonnet-4-6
 ---
 
 ## SECTION:phase
-NBA Playoffs — Round 2 (Semifinals) Active + Round 1 Fully Complete
+NBA Playoffs — Conference Finals (Round 3) Imminent; Round 2 Fully Complete
 
-Play-In Tournament is OVER. Round 1 is FULLY COMPLETE per ESPN live feed. Round 2 (Semifinals) has two active series, one COMPLETE series (OKC sweep), and NYK advancing to ECF.
-Apply series context, elimination urgency, and rest rules — NOT play-in rules.
+Round 2 (Semifinals) is FULLY COMPLETE per ESPN live feed. All four series resolved.
+Conference Finals (ECF and WCF) are the next stage. Apply series context, elimination urgency, and rest rules.
 playin_rules section is INACTIVE this phase — ignore it entirely.
 
-Round 2 series status (per ESPN live feed):
-- East Semifinals: COMPLETE — New York Knicks swept Philadelphia 76ers 4-0. PHI ELIMINATED. NYK advances to ECF.
-- East Semifinals: Detroit Pistons vs Cleveland Cavaliers — TIED 2-2 (Game 5 next — verify from ESPN)
-- West Semifinals: San Antonio Spurs leads Minnesota Timberwolves 3-2 (Game 6 next — MIN elimination game)
-- West Semifinals: COMPLETE — Oklahoma City Thunder swept opponent 4-0. OKC advances to WCF. Verify WCF opponent from ESPN bracket.
+Round 2 final results (per ESPN live feed):
+- East Semifinals A: New York Knicks swept Philadelphia 76ers 4-0. NYK advances to ECF.
+- East Semifinals B: Cleveland Cavaliers defeated Detroit Pistons 4-3. DET ELIMINATED. CLE advances to ECF.
+- West Semifinals A: San Antonio Spurs defeated Minnesota Timberwolves 4-2. MIN ELIMINATED. SAS advances to WCF.
+- West Semifinals B: Oklahoma City Thunder swept opponent 4-0. OKC advances to WCF.
 
-Round 1 fully complete:
-- Los Angeles Lakers won Game 7 vs Houston Rockets (LAL leads 4-2 COMPLETE). LAL advances to Round 2. Verify Round 2 matchup from ESPN.
+Conference Finals matchups (verify schedule from ESPN):
+- ECF: New York Knicks vs Cleveland Cavaliers — Tied 0-0 (Game 1 schedule: verify from ESPN)
+- WCF: Oklahoma City Thunder vs San Antonio Spurs — Tied 0-0 per ESPN live feed (Game 2 next per ESPN)
+
+REST ADVANTAGE (approximate — verify exact dates from ESPN):
+- NYK: extended rest after sweeping PHI — rust risk in ECF Game 1.
+- CLE: just finished 7-game series vs DET — shorter rest entering ECF.
+- OKC: extended rest after Round 2 sweep — rust risk in WCF Game 1.
+- SAS: just finished 6-game series vs MIN — shorter rest entering WCF.
 
 ## SECTION:series_context
 NBA PLAYOFFS — Active Series (updated from ESPN live feed)
 
---- ROUND 2 (SEMIFINALS) ---
+--- CONFERENCE FINALS ---
 
-EAST Semifinals — Series A:
-- New York Knicks defeated Philadelphia 76ers 4-0 — SERIES COMPLETE. PHI ELIMINATED.
-  NYK (NetRtg +6.5, 53-29) sweeps PHI. NYK advances to East Conference Finals (ECF).
-  ECF opponent and schedule: verify from ESPN.
-  No further NYK vs PHI picks. Re-verify Jalen Brunson, Karl-Anthony Towns before any ECF pick.
+EAST Conference Finals (ECF):
+- New York Knicks vs Cleveland Cavaliers — Tied 0-0 (Game 1 schedule: verify from ESPN)
+  NYK (NetRtg +6.5, 53-29) swept PHI 4-0 in Round 2 — extended rest.
+  CLE (NetRtg +4.0, 52-30) defeated DET 4-3 in Round 2 — shorter rest, battle-tested.
+  NYK NetRtg edge: +2.5pts over CLE. Series brand new — no in-series data yet. Season NetRtg is primary signal.
+  Re-verify Jalen Brunson, Karl-Anthony Towns (NYK) active before any ECF pick. MANDATORY.
+  Re-verify Donovan Mitchell, Jarrett Allen, Evan Mobley (CLE) active before any ECF pick. MANDATORY.
+  REST GAP: NYK has been idle longer (swept earlier) — apply -5 rust confidence for NYK in ECF Game 1.
+  CLE comes in battle-tested from 7 games vs DET — momentum may favour CLE early.
+  HOME COURT: NYK higher seed — NYK hosts Games 1, 2, 5, 7. Verify from ESPN.
 
-EAST Semifinals — Series B:
-- Detroit Pistons vs Cleveland Cavaliers — TIED 2-2 (Game 5 next — verify venue from ESPN)
-  DET (NetRtg +8.2, 60-22). CLE confirmed as opponent per bracket.
-  Kevin Huerter (DET): OUT [roster-only]. Re-verify Cade Cunningham, Isaiah Stewart, Jalen Duren. MANDATORY.
-  DET (+8.2) vs CLE (+4.0) — DET statistical edge; but series tied 2-2 — CLE has fought back.
-  CLE tied 2-2 — motivation high; home court now critical (verify Game 5 venue from ESPN).
-  Re-verify Donovan Mitchell, Jarrett Allen, Evan Mobley (CLE) before any pick.
-  SERIES CONTEXT: Tied series entering Game 5 — treat as nearly even with statistical edge to DET. Home court decisive.
+WEST Conference Finals (WCF):
+- Oklahoma City Thunder vs San Antonio Spurs — Tied 0-0 (Game 2 next per ESPN live feed)
+  OKC (NetRtg +11.1, 64-18) swept Rounds 1 and 2 — 8 consecutive playoff wins. Extended rest.
+  SAS (NetRtg +8.3, 62-20) defeated MIN 4-2 in Round 2. Less rest than OKC.
+  OKC NetRtg edge: +2.8pts over SAS. Both elite teams — smallest gap in any active series.
+  Re-verify Shai Gilgeous-Alexander, Chet Holmgren (OKC) active before any WCF pick. MANDATORY.
+  Re-verify Victor Wembanyama (SAS) active before any WCF pick. MANDATORY.
+  Thomas Sorber (C/OKC): OUT [roster-only].
+  David Jones Garcia (F/SAS): OUT [roster-only].
+  REST GAP: OKC has had longer rest (swept Round 2 earlier) — apply -5 rust confidence for OKC in WCF Game 1.
+  SAS comes in with momentum from closing out MIN — potential edge in WCF Game 1.
+  HOME COURT: OKC higher seed — OKC hosts Games 1, 2, 5, 7. Verify from ESPN.
+  NOTE: Game 2 is next per ESPN — if Game 1 already occurred, use in-series result as PRIMARY signal.
 
-WEST Semifinals — Series A:
-- San Antonio Spurs leads Minnesota Timberwolves 3-2 (Game 6 next — MIN ELIMINATION GAME)
-  SAS (NetRtg +8.3, 62-20) beat POR 4-1 in Round 1.
-  MIN (NetRtg +3.1, 49-33) beat DEN 4-2 in Round 1.
-  SAS leads 3-2 — MIN facing ELIMINATION in Game 6. MAX motivation for MIN.
-  CRITICAL: Anthony Edwards (MIN) — re-verify status for Round 2 via NBA official PDF. MANDATORY.
-  Donte DiVincenzo (G/MIN): OUT [roster-only].
-  Re-verify Victor Wembanyama active for SAS. MANDATORY.
-  David Jones Garcia (SAS): OUT [roster-only].
-  NetRtg gap: SAS +5.2 pts over MIN — significant; but MIN won Game 5 to force Game 6.
-  ELIMINATION GAME RULE: MIN at home in elimination game — apply +5 confidence to MIN on home court. Require odds ≥ 2.00 to bet SAS to close out on MIN's home court.
-
-WEST Semifinals — Series B:
-- Oklahoma City Thunder defeated opponent 4-0 — SERIES COMPLETE. OKC advances to WCF.
-  OKC (NetRtg +11.1, 64-18) — strongest statistical team in playoffs. Swept Round 1 AND Round 2.
-  Jalen Williams (G): OUT [roster-only] — FRANCHISE PLAYER. Re-verify SGA, Chet Holmgren for WCF. MANDATORY.
-  Thomas Sorber (C): OUT [roster-only].
-  VERIFY WCF opponent identity and schedule from ESPN before any OKC WCF pick.
-  OKC has won 8 consecutive playoff games (Round 1 sweep + Round 2 sweep).
-
---- ROUND 1 FULLY COMPLETE ---
-
-- LAL won Game 7 vs HOU (LAL leads 4-2 COMPLETE — per ESPN). LAL advances to Round 2. HOU ELIMINATED.
-  Round 2 matchup for LAL: verify from ESPN bracket.
-  Luka Doncic (LAL): OUT [roster-only]. Kevin Durant (HOU): OUT — HOU eliminated, no further picks.
+--- ROUND 2 FULLY COMPLETE ---
+- NYK swept PHI 4-0 (East Semifinals). PHI ELIMINATED.
+- CLE defeated DET 4-3 (East Semifinals). DET ELIMINATED.
+- SAS defeated MIN 4-2 (West Semifinals). MIN ELIMINATED.
+- OKC swept Round 2 opponent 4-0 (West Semifinals). Opponent ELIMINATED.
 
 ## SECTION:elimination_flags
 PLAYOFFS ELIMINATION FLAGS (updated from ESPN live feed)
@@ -80,100 +77,92 @@ Teams CONFIRMED ELIMINATED:
 - Denver Nuggets: MIN won Round 1. CONFIRMED ELIMINATED. No further picks.
 - Philadelphia 76ers: NYK won 4-0 (swept). CONFIRMED ELIMINATED. No further picks.
 - Houston Rockets: LAL won Game 7 (series 4-2 COMPLETE). CONFIRMED ELIMINATED. No further picks.
-- OKC Round 2 Opponent (TBD — verify from ESPN): OKC won 4-0 sweep. CONFIRMED ELIMINATED. Verify team identity from ESPN for records.
+- OKC Round 2 Opponent: OKC swept 4-0. CONFIRMED ELIMINATED.
+- Minnesota Timberwolves: SAS won 4-2 (West Semifinals). CONFIRMED ELIMINATED. No further picks.
+- Detroit Pistons: CLE won 4-3 (East Semifinals). CONFIRMED ELIMINATED. No further picks.
 
-Teams FACING ELIMINATION (Round 2 — active elimination games):
-- Minnesota Timberwolves: trails SAS 2-3 — ELIMINATION GAME 6 NEXT (away or home — verify venue from ESPN). MAX motivation. Edwards status CRITICAL.
+Teams FACING ELIMINATION: None currently — Conference Finals series brand new (Tied 0-0 / Game 2 next for WCF).
 
-Teams in close series (momentum uncertain):
-- Cleveland Cavaliers: tied DET 2-2 — Game 5 next. Not facing elimination yet, but trailing in home court if DET holds top seed. Mitchell desperation factor real.
-- Detroit Pistons: tied CLE 2-2 — Game 5 next. Lost home court advantage if tied on road. Verify venue from ESPN.
-
-Teams with series leads:
-- New York Knicks: ADVANCED to ECF (swept PHI 4-0). ECF schedule: verify from ESPN.
-- Oklahoma City Thunder: ADVANCED to WCF (swept Round 2 opponent 4-0). WCF schedule: verify from ESPN.
-- San Antonio Spurs: leads MIN 3-2. One win from WCF. Close-out motivation high.
-
-Teams still in it (advanced):
-- Los Angeles Lakers: ADVANCED from Round 1 (won Game 7 vs HOU). Round 2 matchup: verify from ESPN bracket.
+Teams STILL ACTIVE (Conference Finals):
+- New York Knicks: ECF vs CLE (Tied 0-0 — Game 1 next, verify schedule from ESPN).
+- Cleveland Cavaliers: ECF vs NYK (Tied 0-0 — Game 1 next, verify schedule from ESPN).
+- Oklahoma City Thunder: WCF vs SAS (Tied 0-0, Game 2 next per ESPN).
+- San Antonio Spurs: WCF vs OKC (Tied 0-0, Game 2 next per ESPN).
+- Los Angeles Lakers: Round 2 active — verify opponent and schedule from ESPN bracket.
 
 Do NOT bet on any confirmed eliminated team.
 
 ## SECTION:playoff_rest
-PLAYOFF REST RULES (active — Round 2 Semifinals, Games 5-6 range):
+PLAYOFF REST RULES (active — Conference Finals, Games 1-2):
 - True B2B does NOT exist in playoffs — NBA mandates minimum 1 day off between games.
 - 1 rest day (minimum): short rest — confidence -10 on spread picks for road team.
 - 2 rest days: standard rest — no adjustment.
 - 3+ rest days: extended rest — slight rust risk for hot teams; confidence -5.
 - Home court advantage in playoffs worth ~3-4 points (stronger than regular season ~2-3pts).
 
-ROUND 2 REST NOTE (updated — Game 5-6 stage):
-- Teams are 4-5 games into Round 2. All Round 1-to-Round 2 rust is FULLY DISSIPATED.
-- Remove all rust adjustments for teams that have played 4+ Round 2 games.
-- Focus on inter-game rest days within the current Round 2 series.
-- OKC: Series complete (swept). Track WCF schedule — OKC may have extended rest advantage vs opponent who had longer series. Apply -5 confidence to WCF Game 1 OKC (rust from 4+ days off).
-- LAL: just finished Round 1 Game 7. Entering Round 2. Apply -10 on spread for LAL in Round 2 Game 1 regardless of home/away.
+CONFERENCE FINALS REST CONTEXT (approximate — verify exact dates from ESPN):
 
-CURRENT REST CONTEXT (approximate — verify from ESPN):
-- NYK: ADVANCED to ECF. Extended rest since series ended — verify ECF Game 1 date from ESPN. If ECF opponent has recent game activity, NYK rust risk is real: apply -5 confidence.
-- DET/CLE: Tied 2-2, Game 5 next. Standard inter-game rest. Verify days between games from ESPN. Home court for Game 5 likely with lower seed (verify).
-- SAS/MIN: SAS leads 3-2, Game 6 next (MIN elimination game). MIN at home in elimination — maximum motivation overrides any rest disadvantage.
-- OKC: Series complete. WCF rest TBD — verify Game 1 date from ESPN. Extended rest possible.
-- LAL: entering Round 2 after Game 7. Short rest entering Round 2 Game 1 — apply -10 spread confidence.
+ECF — NYK vs CLE:
+- NYK: swept PHI 4-0 in Round 2 — likely 5-7 days of rest entering ECF. RUST RISK.
+  Apply -5 confidence to NYK in ECF Game 1 (extended rest after sweep).
+- CLE: just finished 7-game series vs DET — minimal rest. Battle-tested and sharp.
+  No rust adjustment for CLE. If CLE had only 1-2 days off, apply -5 on spread for CLE road games.
+- NET: CLE likely enters ECF more match-sharp than NYK despite statistical disadvantage.
+
+WCF — OKC vs SAS:
+- OKC: swept Round 2 opponent 4-0 (8 consecutive playoff wins) — extended rest (5-7 days likely).
+  Apply -5 confidence to OKC in WCF Game 1 (rust from extended rest).
+  NOTE: Game 2 is next per ESPN — if Game 1 already played, use in-series result as primary signal.
+- SAS: finished MIN series in 6 games — shorter rest than OKC but not exhausted.
+  No rust adjustment for SAS in Game 1-2 range.
+- NET: SAS may have slight sharpness edge vs OKC in early WCF games despite smaller NetRtg.
+
+LAL Round 2 rest:
+- LAL entered Round 2 after Game 7 vs HOU. Verify current rest days from ESPN for Round 2 games.
+- Apply -10 spread confidence for LAL in Round 2 Game 1 regardless of home/away.
 
 ELIMINATION GAME REST RULES:
-- Team facing elimination will play with maximum urgency regardless of rest.
-- Do NOT apply rust adjustments to elimination-game teams — motivation overrides rest fatigue.
-- MIN (elimination Game 6): treat rest factor as nullified by elimination motivation.
+- No teams currently facing elimination (Conference Finals just starting).
+- If a team falls behind 0-3 or 1-3 in Conference Finals — reapply elimination urgency rules.
 
 ## SECTION:playoff_motivation
-PLAYOFF MOTIVATION HIERARCHY (Round 2 Semifinals — Games 5-6 Stage; WCF/ECF approaching)
+PLAYOFF MOTIVATION HIERARCHY (Conference Finals — Games 1-2; Series Fresh)
 
-1. ELIMINATION GAME URGENCY (highest motivation tier):
-   Minnesota Timberwolves (trails SAS 2-3): ELIMINATION GAME 6 — maximum motivation. All other factors secondary.
-   → Apply confidence +5 to MIN in elimination Game 6 on home court.
-   → Require odds ≥ 2.00 to bet SAS to close out on MIN's home court (verify venue from ESPN).
-   → Edwards status (if active): MIN offensive ceiling rises significantly — DECISIVE variable.
+1. CONFERENCE FINALS STAKES (all four teams at maximum motivation):
+   All remaining teams are one series from the NBA Finals. No motivation gap between opponents.
+   Differentiate using: home court, rest advantage, franchise player health, statistical edge.
 
-2. TIGHTLY CONTESTED SERIES (Game 5 — swing game):
-   Detroit Pistons vs Cleveland Cavaliers (tied 2-2): Game 5 is the critical swing game.
-   → Neither team facing elimination, but momentum shifts carry into Game 6.
-   → CLE desperation factor real; DET statistical edge (+4.2pts NetRtg) still applies.
-   → Home court for Game 5: DECISIVE (verify venue from ESPN — higher seed likely hosts).
-   → Donovan Mitchell (CLE) elimination urgency starting to build.
+2. REST ADVANTAGE / MATCH SHARPNESS:
+   CLE over NYK (ECF): CLE just finished 7-game series — more match-sharp. NYK extended rest = rust risk.
+   → Apply -5 confidence to NYK Game 1. Monitor if NYK rust clears by Game 2.
+   SAS over OKC (WCF): SAS just finished 6-game series — more match-sharp. OKC extended rest = rust risk.
+   → Apply -5 confidence to OKC Game 1. NOTE: Game 2 next per ESPN — if Game 1 data exists, use it.
 
-3. SERIES LEADER CLOSE-OUT MOTIVATION:
-   San Antonio Spurs (leads 3-2): attempting close-out in Game 6 — but on MIN's home court risk.
-   → Wembanyama active (verify MANDATORY) + NetRtg edge make SAS formidable even on road.
-   → Do NOT assume close-out is automatic — MIN elimination motivation historically strong.
+3. STATISTICAL EDGES (season NetRtg — primary signal for new series, no in-series data yet):
+   ECF: NYK +6.5 vs CLE +4.0 — NYK has +2.5pt edge. Moderate; not decisive alone.
+   WCF: OKC +11.1 vs SAS +8.3 — OKC has +2.8pt edge. Both elite — smallest gap of any active matchup.
+   NOTE: OKC +11.1 remains the best statistical team in the playoffs. Even with rust, the gap is real.
 
-4. WCF-BOUND TEAMS (OKC, NYK — ADVANCED):
-   OKC swept Round 2 opponent 4-0 — 8 consecutive playoff wins. Awaiting WCF opponent/schedule.
-   → OKC rest advantage: may have 5-7 days off while WCF opponent finishes their series. Apply -5 for rust in WCF Game 1.
-   NYK swept PHI 4-0 in ECF quarters. Extended rest possible before ECF Game 1.
-   → NYK rust risk if ECF opponent finishes later — monitor days-off gap.
+4. HOME COURT (all Conference Finals games):
+   ECF: NYK hosts Games 1, 2, 5, 7 (higher seed). Verify from ESPN.
+   WCF: OKC hosts Games 1, 2, 5, 7 (higher seed). Verify from ESPN.
+   Home court in Conference Finals worth 3-4 points — decisive in close matchups.
+   CLE on road in ECF: apply road rust and home court to NYK; but NYK extended rest partially offsets.
 
-5. LAL ROUND 2 ENTRY (just won Game 7):
-   LAL enters Round 2 fresh off Game 7 vs HOU — shorter rest than Round 2 opponents who closed early.
-   → Apply -10 spread confidence for LAL in Round 2 Game 1 regardless of home/away.
-   → LAL without Doncic — in-series execution vs HOU was elite; Round 2 is new challenge.
-   → Verify Round 2 opponent and home court from ESPN.
+5. FRANCHISE PLAYER AVAILABILITY (MANDATORY verification):
+   OKC: Re-verify SGA, Chet Holmgren active. MANDATORY before every WCF pick.
+   SAS: Re-verify Victor Wembanyama active. MANDATORY before every WCF pick.
+   NYK: Re-verify Jalen Brunson, Karl-Anthony Towns active. MANDATORY before every ECF pick.
+   CLE: Re-verify Donovan Mitchell, Jarrett Allen, Evan Mobley active. MANDATORY before every ECF pick.
 
-6. HOME COURT (all games):
-   → Playoff home court worth 3-4 points — decisive in close matchups.
-   → Game 5 (DET/CLE), Game 6 (SAS/MIN): home court is the primary tiebreaker.
-   → Verify home court for EVERY pick before drafting.
+6. LAL ROUND 2 MOTIVATION:
+   LAL in Round 2 without Doncic — proven execution vs HOU. Verify Round 2 opponent from ESPN.
+   Apply -10 spread confidence for LAL in Round 2 Game 1.
 
-7. EDWARDS STATUS — MIN Round 2:
-   → Anthony Edwards (MIN): was roster-only OUT in Round 1. Re-verify for Round 2.
-   → If Edwards confirmed active: MIN offensive ceiling significantly higher — recalibrate MIN confidence.
-   → If still OUT: MIN trails SAS 2-3 — deeper hole without their franchise player in elimination game.
-   → ELIMINATION GAME + Edwards active = MIN is a live underdog.
-
-8. OKC DOMINANCE SIGNAL:
-   → OKC (NetRtg +11.1) has won 8 consecutive playoff games (Round 1 + Round 2 sweeps).
-   → ADVANCED to WCF. Extended rest advantage entering WCF Game 1.
-   → Re-verify SGA, Chet Holmgren active before any OKC WCF pick. MANDATORY.
+7. OKC DOMINANCE SIGNAL:
+   OKC (NetRtg +11.1) has won 8 consecutive playoff games. Depth absorbs Jalen Williams OUT.
+   But rust risk (-5) and SAS's match sharpness mean WCF is not a foregone conclusion early.
+   Do not back OKC shorter than 1.55 in WCF Game 1 without SGA confirmation.
 
 ## SECTION:playin_rules
 INACTIVE — Play-In Tournament is over. Do NOT apply any play-in rules.
@@ -182,115 +171,101 @@ All series are now best-of-7 Round 1. Use playoff_motivation and playoff_rest se
 ## SECTION:h2h_playoff
 PLAYOFF H2H AND IN-SERIES SIGNALS (updated from ESPN live feed)
 
-CRITICAL CAVEAT: In-series results are the PRIMARY signal in playoff analysis.
-Regular season H2H is a last-resort tiebreaker only — heavily discounted.
-Round 2 Game 5-6: strong in-series signal available. Season NetRtg still relevant as context.
+CRITICAL CAVEAT: In-series result is the PRIMARY signal. Regular season H2H is a last-resort tiebreaker only.
+Conference Finals: NO in-series data yet (series just starting). Season NetRtg is primary signal.
 
---- ROUND 2 IN-SERIES STATUS ---
+--- CONFERENCE FINALS ---
 
-East Semifinals — NYK defeated PHI 4-0 — COMPLETE:
-- 4 games of in-series data — DEFINITIVE. NYK swept PHI convincingly.
-- NYK (+6.5 NetRtg) vs PHI (-0.2 NetRtg) — 6.7pt gap fully validated.
-- NYK advances to ECF. No further picks on this series.
+ECF — New York Knicks vs Cleveland Cavaliers (Tied 0-0, Game 1 next):
+- In-series data: NONE YET. Season NetRtg is primary signal.
+- NYK (+6.5 NetRtg, 53-29) vs CLE (+4.0 NetRtg, 52-30) — NYK +2.5pt edge.
+- Regular season H2H: verify from ESPN (NYK vs CLE this season).
+- NYK swept PHI 4-0 in Round 2 — momentum strong but rust from extended rest.
+- CLE defeated DET 4-3 in Round 2 — battle-tested, Donovan Mitchell sharp.
+- KEY VARIABLE: NYK rust vs CLE match sharpness. Monitor Game 1 carefully.
+- Re-verify Jalen Brunson, Karl-Anthony Towns (NYK). Re-verify Mitchell, Allen, Mobley (CLE). MANDATORY.
 
-East Semifinals — DET vs CLE TIED 2-2 (Game 5 next):
-- 4 games of in-series data — MEANINGFUL. Series is genuinely contested — CLE fought back from 1-2 deficit to force Game 5.
-- DET (+8.2 NetRtg) vs CLE (+4.0 NetRtg) — 4.2pt gap exists but CLE competitive.
-- DET statistical edge remains but in-series shows CLE can compete. Game 5 is the swing game.
-- Home court for Game 5 DECISIVE — verify venue from ESPN.
-- Kevin Huerter (DET) OUT. Re-verify Cade Cunningham, Isaiah Stewart, Jalen Duren. MANDATORY.
-- Re-verify Donovan Mitchell, Jarrett Allen, Evan Mobley (CLE). MANDATORY.
-- KEY: Series tied 2-2 is a NEUTRAL signal — both teams capable. Statistical edge (DET) plus home court are the tiebreakers.
+WCF — Oklahoma City Thunder vs San Antonio Spurs (Tied 0-0, Game 2 next per ESPN):
+- In-series data: Game 1 may have been played — if so, use that result as primary signal immediately.
+  Verify Game 1 result from ESPN before any WCF pick.
+- OKC (+11.1 NetRtg, 64-18) vs SAS (+8.3 NetRtg, 62-20) — OKC +2.8pt edge.
+- Regular season H2H: verify from ESPN (OKC vs SAS this season).
+- OKC swept Round 2 opponent 4-0 (8 consecutive playoff wins). Extended rest entering WCF.
+- SAS defeated MIN 4-2 in Round 2 — Wembanyama dominant. Less rest than OKC.
+- KEY VARIABLE: OKC +11.1 is the most reliable signal this postseason; SAS match-sharpness is the counterweight.
+- Both teams have elite NetRtg (top 2 in playoffs) — this is the closest matchup on paper.
+- Re-verify SGA, Chet Holmgren (OKC). Re-verify Victor Wembanyama (SAS). MANDATORY.
 
-West Semifinals — SAS leads MIN 3-2 (Game 6 next — MIN elimination):
-- 5 games of in-series data — STRONG signal. MIN won Game 5 to force Game 6 — resilient.
-- SAS (+8.3 NetRtg) vs MIN (+3.1 NetRtg) — SAS statistical edge; but MIN extending series shows resilience.
-- Edwards (MIN) re-verification CRITICAL — if active, MIN effective NetRtg higher.
-- Donte DiVincenzo (G/MIN): OUT [roster-only].
-- Re-verify Victor Wembanyama active for SAS. MANDATORY.
-- MIN won Game 5 to survive — elimination game home urgency is real. Do not blindly back SAS as -1.50 or shorter.
+--- ROUND 2 COMPLETED ---
 
-West Semifinals — OKC swept opponent 4-0 — SERIES COMPLETE:
-- 4 games of in-series data — DEFINITIVE sweep (plus 4-game Round 1 sweep = 8 wins total).
-- OKC (+11.1 NetRtg, 64-18) — statistical juggernaut. Depth absorbs Jalen Williams OUT.
-- OKC advances to WCF. VERIFY WCF opponent and schedule from ESPN before any OKC pick.
-- Re-verify SGA, Chet Holmgren active for WCF. MANDATORY.
+ECF feed series (Round 2):
+- NYK swept PHI 4-0: +6.7pt NetRtg gap + home court = dominant sweep. Validates NetRtg gap as predictor.
+- CLE defeated DET 4-3: 4.2pt NetRtg gap did NOT produce easy series — DET depth made it contested.
+  KEY LESSON: 4-7pt NetRtg gaps in playoff Round 2 do not guarantee series control.
 
---- ROUND 1 COMPLETED ---
-
-LAL vs HOU (LAL won 4-2 — COMPLETE):
-- LAL won Game 7. Tactical dominance with Doncic OUT was the definitive signal.
-- HOU eliminated. Kevin Durant OUT was the decisive variable.
-- LAL advances to Round 2. Verify LAL Round 2 matchup from ESPN bracket.
+WCF feed series (Round 2):
+- OKC swept opponent 4-0: +11.1pt NetRtg gap was insurmountable (8 total wins).
+- SAS defeated MIN 4-2: SAS NetRtg edge (+5.2pts) held despite MIN elimination urgency in Game 6.
+  KEY LESSON: MIN won Game 6 to force Game 7? Verify from ESPN — if SAS won Game 6, elimination urgency did NOT save MIN at home.
+  NOTE: ESPN feed shows SAS leads 4-2 COMPLETE. SAS DID close out on the road or MIN home — verify venue of final game.
 
 KEY LESSONS UPDATED:
-1. OKC 8-game sweep run: +11.1 NetRtg gap made both opponents uncompetitive. WCF opponent will face same challenge.
-2. DET/CLE tied 2-2: 4.2pt NetRtg gap does NOT guarantee dominance when both teams are healthy. In-series is now equal to statistical edge — home court is the tiebreaker.
-3. MIN won Game 5 vs SAS (3-2): Elimination urgency is real. MIN surviving shows that SAS road close-out is not automatic at any price below 2.00.
-4. NYK 4-0 sweep of PHI: large NetRtg gap (6.7pts) + motivation = dominant outcome. Validates using NetRtg gap as primary series predictor.
-5. PHI over BOS (4-3): franchise player absence (Tatum OUT) can negate 8.4pt gap. But PHI couldn't replicate vs NYK.
-6. LAL over HOU (Game 7): in-series dominance overrides NetRtg; Durant OUT was the season-ending variable.
+1. OKC +11.1 is the most reliable single signal this postseason — 8-0 record validates it.
+2. NetRtg gaps of 2-4pts (NYK/CLE, OKC/SAS) require home court and health as tiebreakers.
+3. CLE defeated DET in 7 games — CLE is tougher than regular-season NetRtg suggests; Mitchell is a series-altering performer.
+4. SAS closed out MIN 4-2 despite road elimination game — Wembanyama's dominance is the key variable for WCF.
+5. Battle-tested teams (CLE, SAS) may have early sharpness edge vs rested teams (NYK, OKC) in Conf Finals Game 1.
+6. Franchise player absence > NetRtg gap: confirmed by Tatum OUT (BOS), Durant OUT (HOU), Doncic OUT (LAL).
 
 ## SECTION:l15_caveat
-L15 NetRtg CAVEAT FOR PLAYOFFS (Round 2 Semifinals — Games 5-6 Stage; WCF/ECF approaching)
+L15 NetRtg CAVEAT FOR PLAYOFFS (Conference Finals — Games 1-2; New Series)
 
 CRITICAL HIERARCHY:
-1. In-series result (4-5 games of data now available for all active series): PRIMARY signal — overrides season NetRtg.
+1. In-series result: PRIMARY signal — but NO in-series data yet for ECF/WCF (series brand new).
+   Once Game 1 result is available: immediately elevate to primary signal above all season stats.
 2. Franchise player availability: SECONDARY — a key absence can negate any NetRtg gap.
-3. Home court: TERTIARY — worth 3-4pts in playoffs; decisive in elimination/swing games.
-4. Season NetRtg: CONTEXT — useful where in-series data is thin (new series).
-5. L15 NetRtg: directional only — weight less than in-series or home court.
+3. Home court: TERTIARY — worth 3-4pts in playoffs; decisive in even matchups.
+4. Season NetRtg: PRIMARY for Game 1 predictions (no in-series yet). Shifts to secondary after Game 1.
+5. L15 NetRtg: directional only — weight less than home court or franchise player health.
 
-ROUND 2 SPECIAL RULE (updated to Game 5-6 stage):
-→ For Game 5-6 of Round 2: 4-5 games of in-series signal now available for all active series.
-→ Weight in-series results DECISIVELY ABOVE season NetRtg for ALL active series.
-→ Home court (higher seed) is the decisive tiebreaker in close matchups (tied series especially).
-→ Do NOT over-weight single-game swings — tactical adjustments happen every game.
-→ EXCEPTION: If a team won Game 5 in an elimination context, that is a motivational data point, not just a tactical one.
+CONFERENCE FINALS SPECIAL RULE:
+→ For ECF/WCF Game 1: Season NetRtg is the PRIMARY signal (no in-series data available).
+→ From Game 2 onwards: In-series momentum is decisive. Do not ignore a 1-0 series lead.
+→ Rest gap matters most in Game 1: rested teams (NYK, OKC) have rust risk vs battle-tested teams (CLE, SAS).
+→ Do NOT over-weight regular season H2H — Conference Finals opponents have elite coaching; they will adapt.
 
-Key NetRtg vs in-series divergences (updated):
+Active series NetRtg comparison:
 
-- NYK (+6.5) vs PHI (-0.2): NYK swept PHI 4-0 — SERIES COMPLETE. 6.7pt gap validated completely.
-  KEY LESSON: Large NetRtg gap + playoff motivation = sweep is possible even vs resilient opponents.
+ECF — NYK (+6.5) vs CLE (+4.0):
+- NYK has +2.5pt advantage. Moderate edge — home court and franchise player health are the tiebreakers.
+- CLE match-sharpness (7-game series) partially offsets NYK statistical edge in Game 1.
+- Do NOT back CLE at odds shorter than 2.00 on the road in ECF Game 1 without clear Mitchell dominance signal.
+- Minimum odds to bet NYK at home in ECF Game 1: only if EV ≥ 0.05 after rust adjustment (-5 conf).
 
-- DET (+8.2) vs CLE (+4.0): TIED 2-2 — in-series shows CLE is competitive despite 4.2pt gap.
-  DET statistical edge is real but NOT overwhelming in practice. Home court for Game 5 is the PRIMARY edge.
-  CLE (Donovan Mitchell) must-win building; re-verify CLE roster before any pick.
+WCF — OKC (+11.1) vs SAS (+8.3):
+- OKC has +2.8pt edge. Both elite — this is the tightest NetRtg matchup left in the bracket.
+- OKC's 8-game winning streak is a strong momentum signal; but extended rest = rust risk in Game 1.
+- SAS match-sharpness (6-game series) + Wembanyama factor make SAS a live underdog in Game 1-2.
+- Minimum odds to bet SAS in WCF: ≥ 1.85 (avoid backing SAS shorter given OKC's dominance signal).
+- If Game 1 already played (Game 2 next per ESPN): use that result as primary signal IMMEDIATELY.
 
-- SAS (+8.3) vs MIN (+3.1): SAS leads 3-2 — MIN won Game 5 showing elimination urgency is real.
-  5.2pt gap exists but MIN's survival to Game 6 suggests Edwards may be active (or MIN depth compensating).
-  Edwards OUT (if confirmed) lowers MIN effective NetRtg further — DECISIVE variable.
-  MIN elimination home game: do NOT back SAS at odds shorter than 1.90 without clear Edwards OUT confirmation.
-
-- OKC (+11.1) vs opponent: OKC swept 4-0 (8 consecutive playoff wins) — gap was insurmountable.
-  Most reliable NetRtg predictor this postseason. WCF opponent faces same +11.1 challenge.
-  Verify WCF opponent identity from ESPN.
-
-- LAL (+1.7) vs HOU (+5.4): LAL won Game 7 with Doncic OUT — Durant OUT nullified HOU's NetRtg advantage.
-  LAL advances to Round 2. In-series was the only valid metric; result confirmed.
-
-- PHI (-0.2) vs BOS (+8.2): PHI won 4-3 — Tatum OUT negated 8.4pt BOS advantage completely.
-  KEY LESSON: Franchise player absence CAN completely negate even large NetRtg gaps.
-
-Round 2 effective NetRtg (adjusted for known absences):
-- OKC: +11.1 (best; Jalen Williams OUT but depth absorbs — ADVANCED to WCF)
-- SAS: +8.3 (Wembanyama active — verify MANDATORY)
-- DET: +8.2 (strong depth; Huerter OUT minimal impact)
+Round 2 effective NetRtg (final standings — all series complete):
+- OKC: +11.1 (ADVANCED to WCF; Jalen Williams OUT — depth absorbed)
+- SAS: +8.3 (ADVANCED to WCF; Wembanyama active — verify MANDATORY)
+- DET: +8.2 (ELIMINATED — CLE won 4-3)
 - NYK: +6.5 (ADVANCED to ECF; Brunson/KAT — verify active)
-- CLE: +4.0 (Mitchell — verify active; competitive in 2-2 series)
-- MIN: +3.1 (Edwards OUT → effective ~1.5–2.0; or higher if Edwards active — VERIFY)
-- LAL: +1.7 (Doncic OUT — advancing to Round 2; in-series execution compensates)
+- CLE: +4.0 (ADVANCED to ECF; Mitchell — verify active; won 7-game series showing real playoff toughness)
+- MIN: +3.1 (ELIMINATED — SAS won 4-2)
+- LAL: +1.7 (Active Round 2; Doncic OUT — in-series execution carries)
 - PHI: ELIMINATED (swept 0-4 by NYK)
-- HOU: ELIMINATED (lost Game 7 to LAL; Durant OUT decisive)
+- HOU: ELIMINATED (lost Game 7 to LAL)
 
-KEY LESSONS UPDATED:
-1. Franchise player absence > NetRtg gap: PHI over BOS confirms; Durant OUT vs HOU confirms; LAL beat HOU without Doncic.
-2. OKC +11.1 is the most reliable signal this postseason — 8 consecutive wins across Round 1 and 2.
-3. NYK sweep of PHI (4-0): large NetRtg gap + strong in-series start → sweep momentum is real. NYK advancing to ECF.
-4. Round 2 Game 5-6: in-series data is DECISIVE for ALL active series — weight it above season NetRtg.
-5. SAS vs MIN at 3-2: MIN won Game 5 — elimination urgency is the critical override factor. Edwards ACTIVE = MIN is a live underdog.
-6. DET vs CLE tied 2-2: 4.2pt NetRtg gap has NOT produced series control — both teams competitive. Home court is the edge.
-7. LAL Round 2 entry: short rest after Game 7 — apply spread confidence penalty in Round 2 Game 1.
+KEY LESSONS FOR CONFERENCE FINALS:
+1. OKC +11.1 has been the most reliable signal all postseason (8-0 record). WCF opponents face same gap.
+2. CLE proved a 4.2pt NetRtg deficit does NOT equal easy series — DET couldn't close it out in 7 games.
+3. Battle-tested teams (CLE 7 games, SAS 6 games) enter Conference Finals sharper than rested sweepers (NYK, OKC).
+4. Franchise player absence remains the single biggest override: Tatum (BOS), Durant (HOU), Doncic (LAL) all decisive.
+5. For any Conference Finals pick: MANDATORY franchise player health check before drafting.
 
 ## SECTION:no_tanking
 Tanking does not exist in playoffs. All remaining teams are fully motivated.
@@ -307,10 +282,11 @@ Teams CONFIRMED ELIMINATED (no further picks):
 - Denver Nuggets: MIN won Round 1. CONFIRMED ELIMINATED. No further picks.
 - Philadelphia 76ers: NYK won 4-0 (swept). CONFIRMED ELIMINATED. No further picks.
 - Houston Rockets: LAL won Game 7 (series 4-2 COMPLETE). CONFIRMED ELIMINATED. No further picks.
-- OKC Round 2 Opponent: OKC swept 4-0. CONFIRMED ELIMINATED. Verify team identity from ESPN.
+- OKC Round 2 Opponent (verify team identity from ESPN): OKC swept 4-0. CONFIRMED ELIMINATED.
+- Minnesota Timberwolves: SAS won 4-2 (West Semifinals). CONFIRMED ELIMINATED. No further picks.
+- Detroit Pistons: CLE won 4-3 (East Semifinals). CONFIRMED ELIMINATED. No further picks.
 
 Teams STILL ACTIVE:
-- Round 2 active: DET, CLE (tied 2-2, Game 5 next); SAS, MIN (SAS leads 3-2, Game 6 next)
-- WCF-bound: Oklahoma City Thunder (swept Round 2 4-0) — awaiting WCF schedule from ESPN
-- ECF-bound: New York Knicks (swept PHI 4-0) — awaiting ECF schedule from ESPN
-- Round 2 entering: Los Angeles Lakers (won Game 7 vs HOU) — verify Round 2 matchup from ESPN
+- ECF: New York Knicks vs Cleveland Cavaliers (Tied 0-0, Game 1 next)
+- WCF: Oklahoma City Thunder vs San Antonio Spurs (Tied 0-0, Game 2 next per ESPN)
+- Round 2: Los Angeles Lakers — verify current Round 2 opponent and schedule from ESPN.
