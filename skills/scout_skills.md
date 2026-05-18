@@ -1,7 +1,7 @@
 ---
-version: 56
-updated_at: 2026-05-13T11:59:44.292717+00:00
-updated_by: analyst_2026-05-13
+version: 57
+updated_at: 2026-05-18T13:41:25.743230+00:00
+updated_by: analyst_2026-05-18
 llm: claude-sonnet-4-6
 ---
 
@@ -95,19 +95,17 @@ NOTE — PLAYOFF PHASE: All remaining teams are fully motivated. Roster-only fla
 
 Oklahoma City Thunder:
 - Thomas Sorber (C): OUT [roster-only]
-- Jalen Williams (G): OUT [roster-only] — FRANCHISE PLAYER.
-NOTE: OKC leads West Semifinals 4-0 — SERIES COMPLETE per ESPN. OKC advances to WCF. Verify WCF opponent and schedule from ESPN. Re-verify Shai Gilgeous-Alexander, Chet Holmgren active before any OKC WCF pick. MANDATORY.
+NOTE: OKC is WCF-bound (swept Round 2 4-0 — 8 consecutive playoff wins). Verify WCF opponent and schedule from ESPN. Re-verify Shai Gilgeous-Alexander, Chet Holmgren active before any OKC WCF pick. MANDATORY.
 
 San Antonio Spurs:
 - David Jones Garcia (F): OUT [roster-only]
-NOTE: SAS leads West Semifinals 3-2 (Game 6 next). Re-verify Victor Wembanyama active before any SAS pick. MANDATORY.
+NOTE: SAS leads West Semifinals 4-2 — SERIES COMPLETE per ESPN live feed. SAS advances to WCF. Verify WCF opponent and schedule from ESPN. Re-verify Victor Wembanyama active before any SAS WCF pick. MANDATORY.
 
 Detroit Pistons:
-- Kevin Huerter (G): OUT [roster-only]
-NOTE: DET leads East Semifinals — series tied 2-2 per ESPN (Game 5 next — verify game number from ESPN). Re-verify Cade Cunningham, Isaiah Stewart, Jalen Duren before any DET pick. MANDATORY.
+NOTE: DET vs CLE — Cleveland Cavaliers leads 4-3 SERIES COMPLETE per ESPN live feed. DET ELIMINATED. No further DET picks.
 
 Boston Celtics:
-- Jayson Tatum (F): OUT [roster-only] — FRANCHISE PLAYER. STATUS CRITICAL.
+- Jayson Tatum (F): OUT [roster-only] — FRANCHISE PLAYER.
 NOTE: BOS CONFIRMED ELIMINATED (PHI won 4-3). No further BOS picks.
 
 New York Knicks:
@@ -115,16 +113,17 @@ NOTE: NYK leads East Semifinals 4-0 — SERIES COMPLETE per ESPN feed. NYK advan
 
 Los Angeles Lakers:
 - Luka Doncic (G): OUT [roster-only] — FRANCHISE PLAYER.
-NOTE: LAL won Game 7 vs HOU (LAL leads 4-2 COMPLETE). LAL advances to Round 2. Verify Round 2 opponent and schedule from ESPN before any Round 2 LAL pick. Re-verify all active LAL roster before drafting.
+NOTE: LAL in Round 2 — verify Round 2 opponent and schedule from ESPN. Re-verify all active LAL roster before drafting.
 
 Houston Rockets:
 - Steven Adams (C): OUT [roster-only]
 - Fred VanVleet (G): OUT [roster-only]
-- Kevin Durant (F): OUT [roster-only] — FRANCHISE PLAYER. HOU ELIMINATED (LAL won 4-2 COMPLETE). No further HOU picks.
+- Kevin Durant (F): OUT [roster-only] — FRANCHISE PLAYER.
+NOTE: HOU ELIMINATED (LAL won 4-2 COMPLETE). No further HOU picks.
 
 Minnesota Timberwolves:
 - Donte DiVincenzo (G): OUT [roster-only]
-NOTE: MIN trails West Semifinals 2-3 (Game 6 next — must-win/elimination context). Re-verify Anthony Edwards active before any MIN pick — Edwards was roster-only OUT in Round 1; confirm Round 2 status via NBA official PDF. MANDATORY.
+NOTE: MIN trails West Semifinals — SAS leads 4-2 SERIES COMPLETE per ESPN live feed. MIN ELIMINATED. No further MIN picks.
 
 Atlanta Hawks:
 - Keshon Gilbert (G): OUT [roster-only]
