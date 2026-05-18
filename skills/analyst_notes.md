@@ -1,41 +1,41 @@
 ---
-date: 2026-05-13
+date: 2026-05-18
 llm: claude-sonnet-4-6
 scout_patches: 1
 commit_patches: 0
-milestone: daily (38 bets)
+milestone: daily (39 bets)
 ---
 
-## Today's Analysis — 2026-05-13
+## Today's Analysis — 2026-05-18
 
-ESPN confirms OKC completed an 8-game sweep run (Round 1 + Round 2) making them the dominant WCF favourite at NetRtg +11.1 — their WCF opponent will face the same statistical wall regardless of who emerges. The DET/CLE tied 2-2 series is the session's key betting opportunity: CLE fighting back from 1-2 shows Mitchell and their core can compete despite the 4.2pt NetRtg gap, making Game 5 home court the decisive variable — verify venue from ESPN before any pick. SAS leads MIN 3-2 but MIN won Game 5 survival, which is a significant signal that elimination urgency overrides statistical disadvantage and Edwards may be active — do not back SAS at short odds in Game 6 without Edwards OUT confirmation; performance data shows ML market is -€725 overall (10W/13L, 43.5%) while SPREAD is strongly positive (14W/12L, €+274) suggesting pivot toward spread picks in remaining series.
+Round 2 is fully complete with Conference Finals matchups set: NYK vs CLE (ECF) and OKC vs SAS (WCF) with LAL still active in Round 2. The WCF is the marquee statistical matchup — OKC (+11.1 NetRtg, 8-0 playoff record) vs SAS (+8.3, Wembanyama dominant) is the tightest top-line comparison of any series this postseason, and SAS enters with match-sharpness advantage after 6 games vs MIN. Performance data continues to confirm SPREAD and TOTALS are the profitable markets (€+166, €+154) while ML bets are deeply underwater (€-725), and critically, High-confidence bets are performing below Medium-confidence (38.9% vs 56.8% win rate) — the evidence for maintaining the current medium-confidence staking discipline is strong. WCF Game 2 is next per ESPN live feed, suggesting Game 1 may have already occurred; Scout must verify that result before drafting any OKC or SAS pick.
 
 ## Performance Stats
-ALL-TIME: 28W / 28L | Win rate: 50.0% | P&L: €-296.31 | Avg odds: 1.94 | Avg conf: 65.7/100
-RECENT 20: 10W / 10L | 50.0% WR | P&L: €-351.01
-By market:      ML 23bets 10W/13L 43.5% €-725.09  |  SPREAD 26bets 14W/12L 53.8% €+274.33  |  TOTAL 7bets 4W/3L 57.1% €+154.45
-By confidence:  High 18bets 7W/11L 38.9% €-894.80  |  Medium 36bets 21W/15L 58.3% €+739.80  |  Speculative 2bets 0W/2L 0.0% €-141.31
-By odds range:  1.70-1.89 19bets 9W/10L 47.4% €-818.05  |  1.90-2.09 33bets 18W/15L 54.5% €+463.75  |  2.10-2.50 4bets 1W/3L 25.0% €+57.99
+ALL-TIME: 28W / 29L | Win rate: 49.1% | P&L: €-404.31 | Avg odds: 1.94 | Avg conf: 65.6/100
+RECENT 20: 10W / 10L | 50.0% WR | P&L: €-190.01
+By market:      ML 23bets 10W/13L 43.5% €-725.09  |  SPREAD 27bets 14W/13L 51.9% €+166.33  |  TOTAL 7bets 4W/3L 57.1% €+154.45
+By confidence:  High 18bets 7W/11L 38.9% €-894.80  |  Medium 37bets 21W/16L 56.8% €+631.80  |  Speculative 2bets 0W/2L 0.0% €-141.31
+By odds range:  1.70-1.89 19bets 9W/10L 47.4% €-818.05  |  1.90-2.09 34bets 18W/16L 52.9% €+355.75  |  2.10-2.50 4bets 1W/3L 25.0% €+57.99
 
 
 
 ## Scout patches applied
-- [franchise_player_rules] ESPN live feed confirms OKC leads 4-0 (COMPLETE sweeping WCF), DET/CLE now Tied 2-2 (Game 5/6 next), SAS leads 3-2 (Game 6 next), MIN trails 2-3 (must-win/elimination context) — all series scores updated to match verified ESPN data.
+- [franchise_player_rules] ESPN live feed confirms SAS leads 4-2 COMPLETE (series over) and CLE leads DET 4-3 COMPLETE — DET and MIN both eliminated; franchise_player_rules must reflect current playoff bracket with no further picks on eliminated teams.
 
 ## Commit patches applied
 None
 
 ## Playoff context patches applied
-- [phase] ESPN live feed confirms OKC 4-0 sweep (COMPLETE), DET/CLE tied 2-2, SAS leads MIN 3-2 with Game 6 as a MIN elimination game — all phase descriptions updated to match current bracket reality.
-- [series_context] ESPN live feed confirms OKC sweep complete (4-0), DET/CLE tied 2-2, SAS leads MIN 3-2 with Game 6 as MIN elimination game — series contexts updated with correct scores and appropriate elimination game rules applied.
-- [elimination_flags] OKC sweep complete (Round 2 opponent eliminated), DET/CLE series now tied 2-2 (neither team facing elimination but CLE motivation context changes), MIN now trailing 2-3 and facing elimination in Game 6 — all flags updated to match verified ESPN standings.
-- [playoff_rest] Series scores have advanced to Game 5-6 range — rest context updated for OKC sweep completion (extended rest entering WCF), DET/CLE tied series (Game 5 next), and MIN facing elimination in Game 6.
-- [playoff_motivation] Series scores updated to reflect OKC sweep complete, DET/CLE tied 2-2 (swing game context), and MIN facing elimination in Game 6 — motivation hierarchy restructured to reflect current series states.
-- [h2h_playoff] Series scores updated — DET/CLE now tied 2-2 (key series shift showing CLE resilience), SAS leads MIN 3-2 with MIN winning Game 5 (shows elimination urgency effectiveness), OKC sweep complete — all in-series signals and lessons updated to reflect current data.
-- [l15_caveat] Series updated to reflect DET/CLE tied 2-2, SAS leads MIN 3-2 (MIN won Game 5 survival), OKC sweep complete (8 consecutive wins) — all NetRtg vs in-series analysis updated to reflect current Game 5-6 stage dynamics.
-- [no_tanking] OKC Round 2 sweep complete adds another eliminated team, teams still active updated to reflect current bracket state with DET/CLE tied and SAS/MIN at 3-2.
+- [phase] ESPN live feed confirms Round 2 fully complete with SAS defeating MIN 4-2 and CLE defeating DET 4-3; Conference Finals matchups are now the active stage with WCF listed as Tied 0-0 Game 2 next.
+- [series_context] Round 2 fully complete per ESPN live feed; Conference Finals matchups (NYK vs CLE, OKC vs SAS) are the active stage requiring updated series context, rest gap analysis, and mandatory verification requirements.
+- [elimination_flags] SAS defeated MIN 4-2 and CLE defeated DET 4-3 per ESPN live feed, eliminating MIN and DET and advancing both SAS and CLE to Conference Finals stage.
+- [playoff_rest] Round 2 complete; rest context must shift to Conference Finals stage with OKC and NYK having extended rest (sweep finishers) vs SAS and CLE having less rest (longer series), creating early-series sharpness edges.
+- [playoff_motivation] Conference Finals stage requires motivation hierarchy update — all teams maximally motivated, key differentiators shift to rest/sharpness gaps and franchise player health rather than elimination urgency.
+- [h2h_playoff] Conference Finals stage with new matchups (NYK vs CLE, OKC vs SAS) requires complete h2h_playoff reset with Round 2 lessons integrated and no in-series data yet for new series.
+- [no_tanking] MIN and DET confirmed eliminated per ESPN live feed (SAS 4-2, CLE 4-3); no_tanking elimination list must be updated to reflect current Conference Finals bracket.
+- [l15_caveat] Conference Finals requires updated l15_caveat with new series context, no in-series data available, and rest/sharpness gap as the key early-series differentiator replacing elimination urgency rules from Round 2.
 
 ## Intelligence gaps identified
-- **Edwards (MIN) Round 2 active/inactive status is unknown — the verified list shows him absent from the franchise_player_rules verified feed but he was listed as roster-only OUT in Round 1** — If Edwards is active for MIN in Games 5-6, MIN's effective NetRtg rises from ~1.5-2.0 to ~3.1+, making SAS vs MIN a more competitive betting proposition and potentially creating value on MIN in the elimination game at home → Fetch NBA official injury PDF for MIN Round 2 roster before any SAS/MIN pick — flag Edwards as mandatory re-verification with binary outcome impact on MIN confidence (±15 confidence swing depending on status)
-- **OKC's WCF opponent identity is unconfirmed in the current data feed — the bracket shows OKC swept their Round 2 opponent 4-0 but the opponent's identity is listed as TBD** — Without knowing the WCF opponent, Scout cannot evaluate NetRtg gaps, home court assignments, franchise player statuses, or series context for any OKC WCF pick → Fetch ESPN bracket data to confirm OKC's WCF opponent — likely LAL (who won Round 1 and is listed as entering Round 2) but must be confirmed before any WCF pick is drafted
-- **ML market is deeply negative at -€725 (10W/13L, 43.5%) while SPREAD market is strongly positive at +€274 (14W/12L, 53.8%) — this systematic divergence suggests ML picks are consistently being placed at marginal or negative EV odds** — At average odds 1.94 and confidence ~65.7, many ML picks require 52%+ true probability to break even — the 43.5% win rate suggests the EV calculation is not adequately penalising ML bets at shorter odds where the confidence floor of 50 creates false positive picks → Consider raising ML confidence floor from 50 to 55 and requiring EV ≥ 0.08 for ML picks in the 1.70-1.89 odds range (which shows 9W/10L, -€818 — the worst bucket) — the spread market outperformance at 53.8% with the existing rules suggests spread confidence floors are calibrated correctly
+- **WCF Game 1 result is unknown — ESPN live feed shows Game 2 is next, implying Game 1 has been played, but no score or in-series data was provided in this session's feed** — In-series results are the PRIMARY signal for Conference Finals from Game 2 onwards per the l15_caveat hierarchy; drafting any OKC or SAS WCF pick without knowing the Game 1 result would force reliance on season NetRtg alone, which is materially weaker than having even one game of in-series data → Fetch live ESPN scoreboard/series scores for WCF Game 1 before Scout drafts any WCF pick; add a mandatory gate in scout_skills franchise_player_rules SAS/OKC notes: 'If Game 2 next — verify Game 1 result from ESPN BEFORE drafting'
+- **LAL Round 2 opponent identity is still unconfirmed in the ESPN live feed — listed as 'verify from ESPN bracket' across multiple sections without resolution** — Without knowing LAL's Round 2 opponent, Scout cannot assess the matchup NetRtg gap, home court, or franchise player health for either team — making any LAL Round 2 pick essentially a blind bet → Fetch ESPN bracket to confirm LAL Round 2 opponent; update series_context, elimination_flags, and franchise_player_rules with confirmed opponent name and current series score before any LAL pick is drafted
+- **High-confidence bets (conf 70-84+) are performing significantly worse than Medium-confidence bets (38.9% WR / €-894 vs 56.8% WR / €+631) over the full 57-bet sample — suggesting the current High tier staking (20-25% bankroll) may be overcapitalising on overcalibrated picks** — If High-confidence picks are win-rate negative (38.9%) over 18 bets, the staking allocation of 20-25% bankroll to these picks is the primary driver of total P&L loss (€-894 from 18 bets); reducing staking or tightening the confidence gate for High tier could improve overall P&L materially → After 5 more High-tier settled bets (reaching ~23), if WR remains below 45%, replace confidence_staking High tier to 15-20% (from 20-25%) and raise the effective High tier floor from 70 to 73 confidence; flag for next milestone review
