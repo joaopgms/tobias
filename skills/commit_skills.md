@@ -1,7 +1,7 @@
 ---
-version: 5
-updated_at: 2026-03-22T14:14:46.407021+00:00
-updated_by: analyst_2026-03-22
+version: 6
+updated_at: 2026-05-19T12:36:32.327089+00:00
+updated_by: analyst_2026-05-19
 llm: claude-sonnet-4-6
 ---
 
@@ -98,3 +98,8 @@ If a pick's confidence was adjusted (injury news, line movement) → recalculate
 55–69 Medium: 15–20%
 50–54 Speculative: 10%
 0–49: Do not confirm
+
+PERFORMANCE NOTE (synced from scout):
+- High confidence (70–84): underperforming at 38.9%. Extra scrutiny — if odds 1.70–1.89 and ML market, require EV ≥ 0.08 before confirming.
+- Medium confidence (55–69): outperforming at 56.8%. These are core picks — do not over-cancel at commit time without clear cause.
+- ML at 1.70–1.89: highest-loss band (-€818). Raise EV floor to 0.08 for ML confirms in this range.
