@@ -1,23 +1,23 @@
 {
   "season": "2024-25",
   "game": 2,
-  "bankroll": 1333.93,
+  "bankroll": 1133.84,
   "bankroll_initial": 1000.0,
   "bankroll_peak": 1917.57,
-  "total_staked": 8259.96,
+  "total_staked": 8460.05,
   "total_returned": 8734.53,
   "net_pnl": 474.57,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-05-19T16:24:42.759007+00:00",
+  "last_updated": "2026-05-19T23:04:19.292044+00:00",
   "first_game_time": "2026-05-20T00:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
   "scout_updated_at": "2026-05-19T16:24:42.759007+00:00",
   "scout_odds_source": "theodds_onexbet",
-  "commit_status": "pending",
-  "commit_updated_at": "2026-05-19T01:30:17.385685+00:00",
+  "commit_status": "done",
+  "commit_updated_at": "2026-05-19T23:04:19.292044+00:00",
   "commit_date": "2026-05-19",
   "analyst_updated_at": "2026-05-19T12:36:32.327089+00:00",
   "settler_updated_at": "2026-05-19T11:20:47.438646+00:00",
@@ -27,28 +27,31 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "Single-game ECF slate: NYK vs CLE, Game 1 at MSG. Injury feed from nba_official (full 2-team coverage) — no franchise player concerns on either side; only Nance Jr. (Questionable/illness, bench player). One spread pick drafted: NYK -6.5 at 1.94. Primary driver is the extraordinary L15 NetRtg gap (+20.4 NYK vs +0.0 CLE), which overwhelms the mild rust concern from NYK's extended rest. EV = 0.164 (strong edge). NYK ML (1.41) outside odds target range and cannot be drafted. No O/U pick — no dominant directional pace/style signal. Total picks: 1.",
-  "draft_picks": [
+  "last_report": "### CONFIRMED — New York Knicks -5.5\n\n- **Match:** New York Knicks vs Cleveland Cavaliers | Tip: 2026-05-20T00:00 UTC\n- **Pick:** NYK -5.5 | Scout odds: NYK -6.5 @ 1.94 | Commit odds: NYK -5.5 @ 1.92 | Move: spread eased 1pt (NYK favour), odds -0.02 (minimal)\n- **ML:** NYK 1.46 / CLE 2.97 | **ATS:** -5.5 (1.92/2.00) | **O/U:** 217.5 (O:1.96 / U:1.96)\n- **Stake:** €200.09 | **Pot:** €384.17 | **Conf:** 62/100 | **EV:** 0.190\n- **Decision:** All confirmation criteria met. Line shifted from -6.5 to -5.5, making the spread 1 point easier for NYK to cover while odds moved only minimally (1.94 → 1.92, within 0.05 drift allowance). Treated as net movement in NYK's favour. All anchor players confirmed active: Brunson, KAT (NYK), Mitchell, Allen, Mobley (CLE). Only injury is Larry Nance Jr. (CLE) Questionable/Illness — bench player, not franchise player, pick thesis independent of his status. Core thesis unchanged: NYK L15 +20.4 vs CLE L15 +0.0 is an extraordinary gap, NYK home court at MSG (+3-4pt playoff value), superior NYK defence (DefRtg 113.4 vs 115.2), and all franchise players healthy. -5 rust confidence adjustment applied for NYK extended rest, absorbed by the L15 dominance signal. Medium confidence tier (55-69) is outperforming at 56.8% per skills performance note — confirmed with no over-cancellation. EV 0.190 is a strong edge well above all required floors. Total exposure 15% of bankroll — well within 70% cap.\n\n---\n\n### Late Scout Summary\n\nOnly one game on tonight's slate (NYK vs CLE). All ML markets remain outside valid odds ranges (NYK 1.46, CLE 2.97). O/U 217.5 @ 1.96 was re-evaluated but directional confidence for totals reaches only ~55, falling below the late-scout 60-confidence gate — no new pick added. The only notable new information is Larry Nance Jr. (CLE) Questionable/Illness, which does not materially affect any available market thesis.\n\n---\n\n**Slate summary:** One pick committed for tonight's ECF Game 1 at Madison Square Garden — NYK -5.5 @ 1.92 at €200.09 (15% of bankroll). The structural case is strong: an exceptional L15 NetRtg gap of 20.4 points in NYK's favour, home court advantage, elite NYK defence, and all franchise players confirmed active. The line movement from -6.5 to -5.5 marginally improved the pick's coverability while EV remains robust at 0.190. CLE's match-sharpness from their 7-game DET series is the primary counterargument, but their L15 flatlining at +0.0 suggests the grind may have taken a toll rather than providing a momentum edge.",
+  "draft_picks": [],
+  "pending_bets": [
     {
-      "id": "nba_draft_20260519_001",
+      "id": "nba_bet_20260519_001",
       "match": "New York Knicks vs Cleveland Cavaliers",
       "time": "2026-05-20T00:00:00Z",
-      "pick": "New York Knicks -6.5",
-      "odds": 1.94,
+      "pick": "New York Knicks -5.5",
+      "odds": 1.92,
       "stake": 200.09,
-      "potential_return": 388.17,
+      "potential_return": 384.17,
       "confidence": 62,
-      "reasoning": "STEP 0 — LINE ANOMALY: NYK -6.5 favoured at home in ECF Game 1. Home team with better record (53-29 vs 52-30) is the favourite. No anomaly. MANDATORY VERIFICATION: NYK (Brunson, KAT) and CLE (Mitchell, Allen, Mobley) — injury report source is nba_official (2 teams playing tonight, full coverage). Only CLE injury listed: Larry Nance Jr. Questionable (Illness). Nance Jr. is NOT a franchise player — no major confidence hit. All franchise players on both sides appear active per the official report. STEP 1 — NetRtg L15: NYK L15 +20.4 vs CLE L15 +0.0. This is an ENORMOUS gap — 20.4 points differential. NYK is in historically elite form over the last 15 games. CLE L15 at +0.0 is essentially flat, suggesting they've been grinding through a difficult DET series with little margin. L15 gap = 20.4 points >> 4.0 threshold = STRONG signal in NYK's favour. STEP 2 — REST/B2B: NYK has extended rest (swept PHI earlier) — apply -5 rust confidence. CLE has shorter rest (just finished 7-game DET series) but is match-sharp. These partially offset — CLE sharpness vs NYK rust, but the L15 gap is so wide it overwhelms this concern. STEP 4 — Motivation: Both teams at maximum Conference Finals motivation. No edge here. STEP 5 — L10: NYK 6-4 vs CLE 7-3. CLE slightly better L10 but irrelevant vs the L15 dominance gap. STEP 6 — Home court: NYK hosts Game 1. ECF home court worth 3-4 pts. NYK at MSG is a significant advantage. STEP 8 — DefRtg gap: NYK DefRtg 113.4 vs CLE DefRtg 115.2. NYK is the better defensive team. OffRtg essentially even (119.9 vs 119.3). SPREAD EVALUATION: NYK -6.5 at 1.94. The L15 gap (+20.4 vs +0.0) strongly supports NYK covering in a dominant performance. NYK's season NetRtg edge (+2.5) is moderate, but the L15 form gap is decisive. Home court adds ~3-4 pts. NYK has every structural advantage: better form, home court, better defence, and franchise players confirmed healthy. CLE's only edge is match-sharpness — but after 7 grinding games vs DET, they may be worn down rather than sharp. RUST CONCERN: NYK rust is real (-5 conf applied), but the L15 gap is so extreme (+20.4 vs +0.0) that even accounting for rust, NYK appears the dominant team right now. PACE: CLE Pace 99.9, NYK Pace 96.8 — slight mismatch of ~3 pts, not extreme. Pace data available so no flag. INJURY: Nance Jr. Questionable (illness) — bench player, not franchise player. Minimal impact. CONFIDENCE BASE: 70 (high NetRtg L15 gap, home court, better defence). Adjustments: -5 rust (extended rest for NYK in Game 1), -5 spread market caution (GTD for Nance not material but acknowledging some uncertainty). Final confidence: 60. Meets spread floor of 60. EV = (0.60 × 1.94) - 1 = 1.164 - 1 = 0.164. EV = 0.164 ≥ 0.05. STRONG EDGE (≥ 0.15). ML MARKET CHECK: NYK ML at 1.41 — outside target range (1.60-2.50). Cannot draft NYK ML. Spread is the correct market. STAKE: Confidence 60 = Medium tier (55-69) = 15% of bankroll = 0.15 × €1333.93 = €200.09.",
+      "reasoning": "COMMIT REVIEW — Line moved from NYK -6.5 @ 1.94 (Scout) to NYK -5.5 @ 1.92 (commit). Spread shifted 1 point in NYK's favour (easier to cover -5.5 vs -6.5); odds worsened marginally by 0.02 — within acceptable drift. Movement treated as net neutral-to-positive for NYK side. DATA QUALITY: nba_official source confirmed (2 teams, full coverage). Pace data available. No ESPN fallback concern. ANCHOR PLAYER CHECK (MANDATORY): Jalen Brunson, Karl-Anthony Towns (NYK) — no injury listing, confirmed active. Donovan Mitchell, Jarrett Allen, Evan Mobley (CLE) — no injury listing, confirmed active. Larry Nance Jr. (CLE) Questionable/Illness — bench player, NOT a franchise player, pick thesis does NOT depend on his absence, minimal impact. LINE ANOMALY CHECK: NYK -5.5 at home as ECF favourite — NYK has better record (53-29 vs 52-30), home court advantage. No anomaly. CORE THESIS UNCHANGED: NYK L15 NetRtg +20.4 vs CLE L15 +0.0 — an enormous 20.4-point differential. NYK is in historically elite form. CLE grinding through 7-game DET series, L15 flatlined at +0.0. NYK superior defence (DefRtg 113.4 vs 115.2). NYK home court at MSG worth 3-4 points in playoffs. All franchise players active both sides. RUST ADJUSTMENT: -5 confidence applied for NYK extended rest (swept PHI earlier). NYK rust is real but L15 gap (+20.4 vs +0.0) is overwhelming. CLE match-sharpness from 7 games may be offset by physical toll of a gruelling DET series. PERFORMANCE NOTE: Medium confidence tier (55-69) outperforming at 56.8% — core pick, do not over-cancel without clear cause. EV RECALCULATION at commit odds: EV = (0.62 × 1.92) - 1 = 1.1904 - 1 = 0.1904. Strong edge (≥ 0.15). Well above 0.05 floor. Spread target range 1.80-2.30: 1.92 confirmed in range. STAKE: Confidence 62 = Medium tier = 15% × €1333.93 = €200.09. Original stake maintained per line_movement_rules (movement in favour). Total exposure 15% — well under 70% cap.",
       "anchor_players": [
         "Jalen Brunson",
         "Karl-Anthony Towns",
         "Donovan Mitchell"
       ],
-      "drafted_at": "2026-05-19T16:24:47Z",
-      "market_type": "spread"
+      "result": null,
+      "returned": null,
+      "pnl": null,
+      "settled_at": null,
+      "committed_at": "2026-05-19T23:04:21Z"
     }
   ],
-  "pending_bets": [],
   "settled_bets": [
     {
       "id": "nba_bet_20260406_001",
@@ -864,33 +867,48 @@
   "late_scout_rejections": [
     {
       "match": "New York Knicks vs Cleveland Cavaliers",
-      "reason": "Game tipped off at 00:00 UTC — current time is 01:30 UTC, meaning the game is already 90 minutes in progress. Time gate requires first_game_time - now > 20 minutes. Cannot add any live-game picks. Pre-game analysis: NYK ML 1.36 is below 1.65 floor; CLE ML 3.50 is above 2.50 ceiling. CLE +7.5 @ 1.91 was within spread range and franchise players (Mitchell, Allen, Mobley, Brunson, KAT) showed no OUT flags, but pick cannot be placed on a game already in progress. Larry Nance Jr. (CLE, Questionable — illness) is not an anchor player and would not have changed the thesis."
+      "reason": "NYK ML now 1.46 — still outside valid ML floor of 1.65. CLE ML now 2.97 — above ML ceiling of 2.50. Both ML markets remain outside valid odds range. O/U 217.5 @ 1.96/1.96 re-evaluated: odds in range (1.75-2.05 floor), but confidence for any directional call reaches only ~55 at best — below the late-scout confidence gate of 60. Slight Under lean from NYK elite DefRtg (113.4) and CLE grind style (L15 +0.0) does not overcome the high OffRtg on both sides (119.9/119.3) and the absence of a dominant pace outlier. Larry Nance Jr. Questionable (Illness) is a bench-level change, insufficient to shift totals thesis to confidence 60+. No new late pick added."
     }
   ],
   "commit_report_data": {
     "date": "2026-05-19",
-    "ts": "2026-05-19T01:30:17.385685+00:00",
-    "bets": [],
-    "cancelled": [
+    "ts": "2026-05-19T23:04:19.292044+00:00",
+    "bets": [
       {
-        "id": "nba_draft_20260518_001",
-        "match": "Oklahoma City Thunder vs San Antonio Spurs",
-        "pick": "San Antonio Spurs +6.5",
-        "reason": "Scout correctly rejected at draft phase: De'Aaron Fox Questionable penalty reduced confidence from 67 to 57, which is below the 60 confidence floor for spread market. Additionally, OKC vs SAS is not listed in tonight's active slate (only NYK vs CLE plays tonight per system). Pick cannot be confirmed."
+        "id": "nba_bet_20260519_001",
+        "match": "New York Knicks vs Cleveland Cavaliers",
+        "time": "2026-05-20T00:00:00Z",
+        "pick": "New York Knicks -5.5",
+        "odds": 1.92,
+        "stake": 200.09,
+        "potential_return": 384.17,
+        "confidence": 62,
+        "reasoning": "COMMIT REVIEW — Line moved from NYK -6.5 @ 1.94 (Scout) to NYK -5.5 @ 1.92 (commit). Spread shifted 1 point in NYK's favour (easier to cover -5.5 vs -6.5); odds worsened marginally by 0.02 — within acceptable drift. Movement treated as net neutral-to-positive for NYK side. DATA QUALITY: nba_official source confirmed (2 teams, full coverage). Pace data available. No ESPN fallback concern. ANCHOR PLAYER CHECK (MANDATORY): Jalen Brunson, Karl-Anthony Towns (NYK) — no injury listing, confirmed active. Donovan Mitchell, Jarrett Allen, Evan Mobley (CLE) — no injury listing, confirmed active. Larry Nance Jr. (CLE) Questionable/Illness — bench player, NOT a franchise player, pick thesis does NOT depend on his absence, minimal impact. LINE ANOMALY CHECK: NYK -5.5 at home as ECF favourite — NYK has better record (53-29 vs 52-30), home court advantage. No anomaly. CORE THESIS UNCHANGED: NYK L15 NetRtg +20.4 vs CLE L15 +0.0 — an enormous 20.4-point differential. NYK is in historically elite form. CLE grinding through 7-game DET series, L15 flatlined at +0.0. NYK superior defence (DefRtg 113.4 vs 115.2). NYK home court at MSG worth 3-4 points in playoffs. All franchise players active both sides. RUST ADJUSTMENT: -5 confidence applied for NYK extended rest (swept PHI earlier). NYK rust is real but L15 gap (+20.4 vs +0.0) is overwhelming. CLE match-sharpness from 7 games may be offset by physical toll of a gruelling DET series. PERFORMANCE NOTE: Medium confidence tier (55-69) outperforming at 56.8% — core pick, do not over-cancel without clear cause. EV RECALCULATION at commit odds: EV = (0.62 × 1.92) - 1 = 1.1904 - 1 = 0.1904. Strong edge (≥ 0.15). Well above 0.05 floor. Spread target range 1.80-2.30: 1.92 confirmed in range. STAKE: Confidence 62 = Medium tier = 15% × €1333.93 = €200.09. Original stake maintained per line_movement_rules (movement in favour). Total exposure 15% — well under 70% cap.",
+        "anchor_players": [
+          "Jalen Brunson",
+          "Karl-Anthony Towns",
+          "Donovan Mitchell"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null,
+        "committed_at": "2026-05-19T23:04:21Z"
       }
     ],
+    "cancelled": [],
     "late_rejections": [
       {
         "match": "New York Knicks vs Cleveland Cavaliers",
-        "reason": "Game tipped off at 00:00 UTC — current time is 01:30 UTC, meaning the game is already 90 minutes in progress. Time gate requires first_game_time - now > 20 minutes. Cannot add any live-game picks. Pre-game analysis: NYK ML 1.36 is below 1.65 floor; CLE ML 3.50 is above 2.50 ceiling. CLE +7.5 @ 1.91 was within spread range and franchise players (Mitchell, Allen, Mobley, Brunson, KAT) showed no OUT flags, but pick cannot be placed on a game already in progress. Larry Nance Jr. (CLE, Questionable — illness) is not an anchor player and would not have changed the thesis."
+        "reason": "NYK ML now 1.46 — still outside valid ML floor of 1.65. CLE ML now 2.97 — above ML ceiling of 2.50. Both ML markets remain outside valid odds range. O/U 217.5 @ 1.96/1.96 re-evaluated: odds in range (1.75-2.05 floor), but confidence for any directional call reaches only ~55 at best — below the late-scout confidence gate of 60. Slight Under lean from NYK elite DefRtg (113.4) and CLE grind style (L15 +0.0) does not overcome the high OffRtg on both sides (119.9/119.3) and the absence of a dominant pace outlier. Larry Nance Jr. Questionable (Illness) is a bench-level change, insufficient to shift totals thesis to confidence 60+. No new late pick added."
       }
     ],
-    "total_staked": 0.0,
+    "total_staked": 200.09,
     "bankroll_before": 1333.93,
-    "report": "## Commit Report — 2026-05-19T01:30:19Z | Bankroll: €1333.93\n\n---\n\n### CANCELLED — San Antonio Spurs +6.5 (Draft ID: nba_draft_20260518_001)\n- **Reason:** Scout correctly rejected this pick at draft time. De'Aaron Fox (SAS, Questionable — right ankle soreness) triggered a mandatory -10 confidence adjustment per QUESTIONABLE/GTD rules, reducing starting confidence from 67 → 57. The spread market requires a minimum confidence of 60. At 57, the pick falls below the floor and cannot be confirmed. Additionally, OKC vs SAS does not appear in tonight's active game slate (only NYK vs CLE listed for 2026-05-19), making this pick unplaceable regardless.\n- **Odds at cancel:** 1.96 (same as scout odds — no drift noted)\n\n---\n\n### LATE SCOUT — New York Knicks vs Cleveland Cavaliers (REJECTED)\n- **Reason:** Game already in progress. Current time is 01:30 UTC; game tipped at 00:00 UTC (90 minutes ago). Time gate rule requires >20 minutes before tip-off. No pre-game pick is possible on a live game.\n- **Pre-game assessment (academic):** NYK ML 1.36 is below the 1.65 floor (no pick). CLE ML 3.50 is above the 2.50 ceiling (no pick). CLE +7.5 @ 1.91 was within spread range; franchise player verification showed no OUT flags (Mitchell, Allen, Mobley, Brunson, KAT all presumed active per injury report showing only Nance Jr. Questionable). NYK L15 NetRtg +20.4 vs CLE +0.0 is a massive gap — but season NetRtg shows only +2.5pt difference (+6.5 vs +4.0). The L15 CLE figure of 0.0 is unusual and may reflect data quality issues. NYK home court (-7.5 line) is aggressive. CLE's battle-tested edge from 7 games vs DET was a meaningful factor. Had the pick been available pre-game, CLE +7.5 @ 1.91 warranted investigation, but timing prevented action.\n\n---\n\n### SLATE SUMMARY\nTonight's commit phase results in zero confirmed bets. The sole draft pick (SAS +6.5) was correctly rejected by Scout due to confidence falling below the spread floor after the De'Aaron Fox Questionable adjustment, and OKC vs SAS is not in tonight's active slate. The only available game (NYK vs CLE) had already tipped off by the time of this Commit review (01:30 UTC vs 00:00 UTC game time), precluding any late scout additions. Bankroll remains at €1333.93 with no exposure tonight.",
-    "tokens_in": 12496,
-    "tokens_out": 2050,
-    "cost_usd": 0.068238
+    "report": "### CONFIRMED — New York Knicks -5.5\n\n- **Match:** New York Knicks vs Cleveland Cavaliers | Tip: 2026-05-20T00:00 UTC\n- **Pick:** NYK -5.5 | Scout odds: NYK -6.5 @ 1.94 | Commit odds: NYK -5.5 @ 1.92 | Move: spread eased 1pt (NYK favour), odds -0.02 (minimal)\n- **ML:** NYK 1.46 / CLE 2.97 | **ATS:** -5.5 (1.92/2.00) | **O/U:** 217.5 (O:1.96 / U:1.96)\n- **Stake:** €200.09 | **Pot:** €384.17 | **Conf:** 62/100 | **EV:** 0.190\n- **Decision:** All confirmation criteria met. Line shifted from -6.5 to -5.5, making the spread 1 point easier for NYK to cover while odds moved only minimally (1.94 → 1.92, within 0.05 drift allowance). Treated as net movement in NYK's favour. All anchor players confirmed active: Brunson, KAT (NYK), Mitchell, Allen, Mobley (CLE). Only injury is Larry Nance Jr. (CLE) Questionable/Illness — bench player, not franchise player, pick thesis independent of his status. Core thesis unchanged: NYK L15 +20.4 vs CLE L15 +0.0 is an extraordinary gap, NYK home court at MSG (+3-4pt playoff value), superior NYK defence (DefRtg 113.4 vs 115.2), and all franchise players healthy. -5 rust confidence adjustment applied for NYK extended rest, absorbed by the L15 dominance signal. Medium confidence tier (55-69) is outperforming at 56.8% per skills performance note — confirmed with no over-cancellation. EV 0.190 is a strong edge well above all required floors. Total exposure 15% of bankroll — well within 70% cap.\n\n---\n\n### Late Scout Summary\n\nOnly one game on tonight's slate (NYK vs CLE). All ML markets remain outside valid odds ranges (NYK 1.46, CLE 2.97). O/U 217.5 @ 1.96 was re-evaluated but directional confidence for totals reaches only ~55, falling below the late-scout 60-confidence gate — no new pick added. The only notable new information is Larry Nance Jr. (CLE) Questionable/Illness, which does not materially affect any available market thesis.\n\n---\n\n**Slate summary:** One pick committed for tonight's ECF Game 1 at Madison Square Garden — NYK -5.5 @ 1.92 at €200.09 (15% of bankroll). The structural case is strong: an exceptional L15 NetRtg gap of 20.4 points in NYK's favour, home court advantage, elite NYK defence, and all franchise players confirmed active. The line movement from -6.5 to -5.5 marginally improved the pick's coverability while EV remains robust at 0.190. CLE's match-sharpness from their 7-game DET series is the primary counterargument, but their L15 flatlining at +0.0 suggests the grind may have taken a toll rather than providing a momentum edge.",
+    "tokens_in": 11644,
+    "tokens_out": 4442,
+    "cost_usd": 0.101562
   },
   "netrtg_l15": {
     "Charlotte Hornets": 16.9,
