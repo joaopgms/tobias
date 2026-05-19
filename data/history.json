@@ -2187,6 +2187,26 @@
       "cancelled_picks": [],
       "bets": [],
       "summary": "Day 2026-05-17 commit — 0 bets totalling €0.00. 0 cancelled. Bankroll: €1333.93 → €1333.93."
+    },
+    {
+      "entry_id": "nba_entry_20260519",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-05-19T01:30:17.385685+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1333.93,
+      "total_staked": 0.0,
+      "bankroll_after": 1333.93,
+      "cancelled_picks": [
+        {
+          "id": "nba_draft_20260518_001",
+          "match": "Oklahoma City Thunder vs San Antonio Spurs",
+          "pick": "San Antonio Spurs +6.5",
+          "reason": "Scout correctly rejected at draft phase: De'Aaron Fox Questionable penalty reduced confidence from 67 to 57, which is below the 60 confidence floor for spread market. Additionally, OKC vs SAS is not listed in tonight's active slate (only NYK vs CLE plays tonight per system). Pick cannot be confirmed."
+        }
+      ],
+      "bets": [],
+      "summary": "Day 2026-05-19 commit — 0 bets totalling €0.00. 1 cancelled. Bankroll: €1333.93 → €1333.93."
     }
   ]
 }
