@@ -1,14 +1,14 @@
 ---
-date: 2026-05-18
+date: 2026-05-19
 llm: claude-sonnet-4-6
-scout_patches: 1
-commit_patches: 0
+scout_patches: 2
+commit_patches: 1
 milestone: daily (39 bets)
 ---
 
-## Today's Analysis — 2026-05-18
+## Today's Analysis — 2026-05-19
 
-Round 2 is fully complete with Conference Finals matchups set: NYK vs CLE (ECF) and OKC vs SAS (WCF) with LAL still active in Round 2. The WCF is the marquee statistical matchup — OKC (+11.1 NetRtg, 8-0 playoff record) vs SAS (+8.3, Wembanyama dominant) is the tightest top-line comparison of any series this postseason, and SAS enters with match-sharpness advantage after 6 games vs MIN. Performance data continues to confirm SPREAD and TOTALS are the profitable markets (€+166, €+154) while ML bets are deeply underwater (€-725), and critically, High-confidence bets are performing below Medium-confidence (38.9% vs 56.8% win rate) — the evidence for maintaining the current medium-confidence staking discipline is strong. WCF Game 2 is next per ESPN live feed, suggesting Game 1 may have already occurred; Scout must verify that result before drafting any OKC or SAS pick.
+The WCF Game 1 result (SAS wins at OKC) is the dominant signal today — OKC's extended rest rust has been confirmed empirically, and SAS now holds both the in-series lead and the match-sharpness advantage entering Game 2. The performance data (57 bets) reveals a critical structural pattern: High-confidence picks are losing at 38.9% (-€895) while Medium-confidence picks win at 56.8% (+€632), suggesting our confidence calibration is systematically overconfident in the 70-84 range — today's patches add extra scrutiny criteria before staking 20%+ on any pick. The ML market in the 1.70-1.89 odds band is our single biggest loss source (-€818 across 19 bets), and the EV floor for that specific market/odds combination has been raised to 0.08 to address this.
 
 ## Performance Stats
 ALL-TIME: 28W / 29L | Win rate: 49.1% | P&L: €-404.31 | Avg odds: 1.94 | Avg conf: 65.6/100
@@ -20,22 +20,24 @@ By odds range:  1.70-1.89 19bets 9W/10L 47.4% €-818.05  |  1.90-2.09 34bets 18
 
 
 ## Scout patches applied
-- [franchise_player_rules] ESPN live feed confirms SAS leads 4-2 COMPLETE (series over) and CLE leads DET 4-3 COMPLETE — DET and MIN both eliminated; franchise_player_rules must reflect current playoff bracket with no further picks on eliminated teams.
+- [franchise_player_rules] Updating franchise_player_rules to reflect current Conference Finals matchups (ECF: NYK vs CLE; WCF: OKC vs SAS) and removing stale series references; verified player statuses from ESPN roster + NBA injury feed.
+- [confidence_staking] Performance data (57 bets) shows High confidence tier losing at 38.9% (-€895) while Medium tier wins at 56.8% (+€632); tightening High-conf criteria and raising ML EV floor in the worst-performing odds band.
 
 ## Commit patches applied
-None
+- [commit_staking] Syncing commit_staking with updated scout confidence_staking to reflect performance evidence from 57 settled bets showing High-conf ML picks in low-odds range are the primary loss source.
 
 ## Playoff context patches applied
-- [phase] ESPN live feed confirms Round 2 fully complete with SAS defeating MIN 4-2 and CLE defeating DET 4-3; Conference Finals matchups are now the active stage with WCF listed as Tied 0-0 Game 2 next.
-- [series_context] Round 2 fully complete per ESPN live feed; Conference Finals matchups (NYK vs CLE, OKC vs SAS) are the active stage requiring updated series context, rest gap analysis, and mandatory verification requirements.
-- [elimination_flags] SAS defeated MIN 4-2 and CLE defeated DET 4-3 per ESPN live feed, eliminating MIN and DET and advancing both SAS and CLE to Conference Finals stage.
-- [playoff_rest] Round 2 complete; rest context must shift to Conference Finals stage with OKC and NYK having extended rest (sweep finishers) vs SAS and CLE having less rest (longer series), creating early-series sharpness edges.
-- [playoff_motivation] Conference Finals stage requires motivation hierarchy update — all teams maximally motivated, key differentiators shift to rest/sharpness gaps and franchise player health rather than elimination urgency.
-- [h2h_playoff] Conference Finals stage with new matchups (NYK vs CLE, OKC vs SAS) requires complete h2h_playoff reset with Round 2 lessons integrated and no in-series data yet for new series.
-- [no_tanking] MIN and DET confirmed eliminated per ESPN live feed (SAS 4-2, CLE 4-3); no_tanking elimination list must be updated to reflect current Conference Finals bracket.
-- [l15_caveat] Conference Finals requires updated l15_caveat with new series context, no in-series data available, and rest/sharpness gap as the key early-series differentiator replacing elimination urgency rules from Round 2.
+- [phase] ESPN live feed shows WCF is SAS leads 1-0 (Game 2 next) and ECF is Tied 0-0 (Game 1 next); updating phase section to reflect Game 1 WCF result and its implications.
+- [series_context] ESPN live feed shows WCF SAS leads 1-0 (Game 2 next); updating series_context to elevate SAS in-series lead as primary WCF signal and recalibrate OKC rust/home court narrative.
+- [elimination_flags] Updating elimination flags to reflect WCF SAS leads 1-0 and OKC now trails; ECF remains Tied 0-0 with Game 1 pending.
+- [playoff_rest] WCF Game 1 has been played (SAS leads 1-0), confirming OKC rust thesis; updating rest section to reflect this result and calibrate Game 2 confidence adjustments.
+- [playoff_motivation] WCF Game 1 result (SAS leads 1-0) fundamentally changes the WCF motivation and statistical hierarchy; updating to elevate in-series result as primary WCF signal and recalibrate OKC expectations.
+- [h2h_playoff] WCF Game 1 result (SAS leads 1-0) is now available and must be elevated as primary WCF signal per the l15_caveat hierarchy; updating h2h_playoff to reflect this in-series data.
+- [l15_caveat] WCF Game 1 result (SAS leads 1-0) activates the in-series PRIMARY signal rule; updating l15_caveat to apply this hierarchy immediately to WCF Game 2 analysis.
+- [no_tanking] Updating no_tanking section to reflect current playoff bracket state including WCF SAS leads 1-0.
 
 ## Intelligence gaps identified
-- **WCF Game 1 result is unknown — ESPN live feed shows Game 2 is next, implying Game 1 has been played, but no score or in-series data was provided in this session's feed** — In-series results are the PRIMARY signal for Conference Finals from Game 2 onwards per the l15_caveat hierarchy; drafting any OKC or SAS WCF pick without knowing the Game 1 result would force reliance on season NetRtg alone, which is materially weaker than having even one game of in-series data → Fetch live ESPN scoreboard/series scores for WCF Game 1 before Scout drafts any WCF pick; add a mandatory gate in scout_skills franchise_player_rules SAS/OKC notes: 'If Game 2 next — verify Game 1 result from ESPN BEFORE drafting'
-- **LAL Round 2 opponent identity is still unconfirmed in the ESPN live feed — listed as 'verify from ESPN bracket' across multiple sections without resolution** — Without knowing LAL's Round 2 opponent, Scout cannot assess the matchup NetRtg gap, home court, or franchise player health for either team — making any LAL Round 2 pick essentially a blind bet → Fetch ESPN bracket to confirm LAL Round 2 opponent; update series_context, elimination_flags, and franchise_player_rules with confirmed opponent name and current series score before any LAL pick is drafted
-- **High-confidence bets (conf 70-84+) are performing significantly worse than Medium-confidence bets (38.9% WR / €-894 vs 56.8% WR / €+631) over the full 57-bet sample — suggesting the current High tier staking (20-25% bankroll) may be overcapitalising on overcalibrated picks** — If High-confidence picks are win-rate negative (38.9%) over 18 bets, the staking allocation of 20-25% bankroll to these picks is the primary driver of total P&L loss (€-894 from 18 bets); reducing staking or tightening the confidence gate for High tier could improve overall P&L materially → After 5 more High-tier settled bets (reaching ~23), if WR remains below 45%, replace confidence_staking High tier to 15-20% (from 20-25%) and raise the effective High tier floor from 70 to 73 confidence; flag for next milestone review
+- **WCF Game 1 score and box-score details (margin, Wembanyama stats, SGA performance) are not available in the current feed — only the series score (SAS leads 1-0) is confirmed.** — Knowing whether SAS won Game 1 by 5 or 25 points, and whether SGA was impacted by rust vs Wembanyama dominating, would materially change WCF Game 2 confidence calibration and which team to back. → Fetch ESPN box score for WCF Game 1 before drafting any WCF Game 2 pick — game margin and key player performance are decisive inputs for in-series momentum assessment.
+- **LAL Round 2 opponent identity and current series score are unverified — the feed only confirms LAL is active in Round 2 without naming the opponent or score.** — Without knowing who LAL faces, their seed, home court situation, and any relevant injuries, Scout cannot responsibly draft any LAL Round 2 pick — the pick would be based on incomplete information. → Mandatory ESPN verification of LAL Round 2 opponent and series state before any LAL pick is drafted; add explicit 'verify LAL Round 2 opponent from ESPN — MANDATORY' note to franchise_player_rules LAL entry (already present, but verify it's enforced by Scout).
+- **High-confidence pick losses (7W/11L, -€895) lack granular breakdown by signal type — we know the loss pattern but cannot identify whether losses came from NetRtg-based picks, B2B picks, or home court picks specifically.** — Without signal-level attribution for High-conf losses, the patch (adding NetRtg gap ≥ 5.0 AND home court/health requirement before 20%+ stake) is directionally correct but may not target the actual root cause. → Add signal_type field to bet log output so future Analyst sessions can cross-reference High-conf losses by the specific priority_stats signal that drove the pick (e.g. NetRtg gap, B2B, franchise player absence).
+- **ECF regular-season H2H record (NYK vs CLE this season) is not available in the current feed, leaving only NetRtg and rest as differentiators for ECF Game 1.** — Regular season H2H is listed as a tiebreaker in priority_stats, and for a tight matchup (NYK +2.5pt NetRtg gap only), H2H results in 2025-26 could be a meaningful tiebreaker signal. → Fetch ESPN regular-season H2H for NYK vs CLE and OKC vs SAS before any Conference Finals pick is drafted; flag if either team went 0-2 or 2-0 in the regular-season matchup.
