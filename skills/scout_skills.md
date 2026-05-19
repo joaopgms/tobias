@@ -1,7 +1,7 @@
 ---
-version: 57
-updated_at: 2026-05-18T13:41:25.743230+00:00
-updated_by: analyst_2026-05-18
+version: 58
+updated_at: 2026-05-19T12:36:32.327089+00:00
+updated_by: analyst_2026-05-19
 llm: claude-sonnet-4-6
 ---
 
@@ -80,8 +80,8 @@ Only bet totals when advanced stats (Pace, OffRtg, DefRtg) are available.
 ## SECTION:franchise_player_rules
 CRITICAL RULE: Only apply injury information to the TWO TEAMS in the specific game being evaluated.
 NEVER mention or apply injuries from teams not playing in that game.
-Example: If evaluating Rockets vs Lakers, ONLY consider Rockets and Lakers injuries.
-Wizards/Pistons/any other team injuries are IRRELEVANT and must NOT be mentioned.
+Example: If evaluating OKC vs SAS, ONLY consider OKC and SAS injuries.
+Wizards/Lakers/any other team injuries are IRRELEVANT and must NOT be mentioned.
 
 Franchise player OUT → do NOT bet that team to win unless opponent also missing a star or confirmed tanking.
 Franchise player Doubtful → confidence -15, stake -30%. Only proceed if EV still ≥ 0.05.
@@ -95,35 +95,38 @@ NOTE — PLAYOFF PHASE: All remaining teams are fully motivated. Roster-only fla
 
 Oklahoma City Thunder:
 - Thomas Sorber (C): OUT [roster-only]
-NOTE: OKC is WCF-bound (swept Round 2 4-0 — 8 consecutive playoff wins). Verify WCF opponent and schedule from ESPN. Re-verify Shai Gilgeous-Alexander, Chet Holmgren active before any OKC WCF pick. MANDATORY.
+NOTE: OKC in WCF vs SAS (Game 2 next per ESPN). Re-verify Shai Gilgeous-Alexander, Chet Holmgren active before ANY OKC WCF pick. MANDATORY.
 
 San Antonio Spurs:
 - David Jones Garcia (F): OUT [roster-only]
-NOTE: SAS leads West Semifinals 4-2 — SERIES COMPLETE per ESPN live feed. SAS advances to WCF. Verify WCF opponent and schedule from ESPN. Re-verify Victor Wembanyama active before any SAS WCF pick. MANDATORY.
+NOTE: SAS in WCF vs OKC (Game 2 next per ESPN). Re-verify Victor Wembanyama active before ANY SAS WCF pick. MANDATORY.
+
+New York Knicks:
+NOTE: NYK in ECF vs CLE (Tied 0-0, Game 1 next). Re-verify Jalen Brunson, Karl-Anthony Towns active before any ECF pick. MANDATORY.
+
+Cleveland Cavaliers:
+NOTE: CLE in ECF vs NYK (Tied 0-0, Game 1 next). Re-verify Donovan Mitchell, Jarrett Allen, Evan Mobley active before any ECF pick. MANDATORY.
+
+Los Angeles Lakers:
+- Luka Doncic (G): OUT [roster-only] — FRANCHISE PLAYER.
+NOTE: LAL in Round 2 — verify Round 2 opponent and current series score from ESPN. Re-verify all active LAL roster before drafting.
 
 Detroit Pistons:
-NOTE: DET vs CLE — Cleveland Cavaliers leads 4-3 SERIES COMPLETE per ESPN live feed. DET ELIMINATED. No further DET picks.
+NOTE: DET ELIMINATED — CLE won East Semifinals 4-3. No further DET picks.
 
 Boston Celtics:
 - Jayson Tatum (F): OUT [roster-only] — FRANCHISE PLAYER.
 NOTE: BOS CONFIRMED ELIMINATED (PHI won 4-3). No further BOS picks.
 
-New York Knicks:
-NOTE: NYK leads East Semifinals 4-0 — SERIES COMPLETE per ESPN feed. NYK advances to ECF. Re-verify Jalen Brunson, Karl-Anthony Towns status before any ECF pick. MANDATORY.
-
-Los Angeles Lakers:
-- Luka Doncic (G): OUT [roster-only] — FRANCHISE PLAYER.
-NOTE: LAL in Round 2 — verify Round 2 opponent and schedule from ESPN. Re-verify all active LAL roster before drafting.
-
 Houston Rockets:
 - Steven Adams (C): OUT [roster-only]
 - Fred VanVleet (G): OUT [roster-only]
 - Kevin Durant (F): OUT [roster-only] — FRANCHISE PLAYER.
-NOTE: HOU ELIMINATED (LAL won 4-2 COMPLETE). No further HOU picks.
+NOTE: HOU ELIMINATED (LAL won series 4-2). No further HOU picks.
 
 Minnesota Timberwolves:
 - Donte DiVincenzo (G): OUT [roster-only]
-NOTE: MIN trails West Semifinals — SAS leads 4-2 SERIES COMPLETE per ESPN live feed. MIN ELIMINATED. No further MIN picks.
+NOTE: MIN ELIMINATED — SAS won West Semifinals 4-2. No further MIN picks.
 
 Atlanta Hawks:
 - Keshon Gilbert (G): OUT [roster-only]
@@ -150,8 +153,9 @@ NOTE: Washington did not qualify for playoffs. Do NOT bet Washington to win unde
 
 Franchise players requiring mandatory NBA official PDF verification before ANY pick involving their team:
 - Shai Gilgeous-Alexander, Chet Holmgren (OKC) — re-verify each WCF session
+- Jalen Brunson, Karl-Anthony Towns (NYK) — re-verify each ECF session
+- Donovan Mitchell, Jarrett Allen, Evan Mobley (CLE) — re-verify each ECF session
 - Luka Doncic (LAL) — roster-only OUT; LAL competing without him in Round 2
-- Anthony Davis, D'Angelo Russell, Alex Sarr (WAS) — confirmed OUT; team not in playoffs
 
 ## SECTION:tanking_teams
 NOTE — PLAYOFF PHASE ACTIVE: See playoff_context.md no_tanking section. Tanking logic does NOT apply to any remaining play-in or playoff team. All remaining teams are motivated. Only apply tank logic to fully eliminated non-playoff teams.
@@ -202,6 +206,12 @@ B2B edge is most reliable for spread bets (cover rate impact is measurable).
 0–49: Do not draft
 Max 70% of bankroll across all picks per day. Always keep 30% in reserve.
 EV requirement overrides confidence tier — EV < 0.05 means no bet regardless.
+
+PERFORMANCE NOTE (57 bets settled):
+- High confidence (70–84): 7W/11L 38.9% at -€894.80 — UNDERPERFORMING. Apply extra scrutiny to high-conf picks; require NetRtg gap ≥ 5.0 AND home court or health advantage before staking 20%+.
+- Medium confidence (55–69): 21W/16L 56.8% at +€631.80 — OUTPERFORMING. This tier is producing the majority of profit.
+- Spread market: 14W/13L 51.9% +€166.33 — viable; keep evaluating.
+- ML market: 10W/13L 43.5% -€725.09 — underperforming. Require EV ≥ 0.08 (not 0.05) on ML picks in odds range 1.70–1.89 (9W/10L -€818.05).
 
 ## SECTION:selectivity
 Draft picks with genuine edge (confidence ≥ floor for market type AND EV ≥ 0.05).
