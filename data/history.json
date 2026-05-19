@@ -26,7 +26,7 @@
           "wins": 23,
           "losses": 17,
           "peak_bankroll": 1917.57,
-          "total_bets": 40
+          "total_bets": 41
         }
       ]
     }
@@ -2207,6 +2207,41 @@
       ],
       "bets": [],
       "summary": "Day 2026-05-19 commit — 0 bets totalling €0.00. 1 cancelled. Bankroll: €1333.93 → €1333.93."
+    },
+    {
+      "entry_id": "nba_entry_20260519",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-05-19T23:04:19.292044+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1333.93,
+      "total_staked": 200.09,
+      "bankroll_after": 1133.84,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260519_001",
+          "match": "New York Knicks vs Cleveland Cavaliers",
+          "time": "2026-05-20T00:00:00Z",
+          "pick": "New York Knicks -5.5",
+          "odds": 1.92,
+          "stake": 200.09,
+          "potential_return": 384.17,
+          "confidence": 62,
+          "reasoning": "COMMIT REVIEW — Line moved from NYK -6.5 @ 1.94 (Scout) to NYK -5.5 @ 1.92 (commit). Spread shifted 1 point in NYK's favour (easier to cover -5.5 vs -6.5); odds worsened marginally by 0.02 — within acceptable drift. Movement treated as net neutral-to-positive for NYK side. DATA QUALITY: nba_official source confirmed (2 teams, full coverage). Pace data available. No ESPN fallback concern. ANCHOR PLAYER CHECK (MANDATORY): Jalen Brunson, Karl-Anthony Towns (NYK) — no injury listing, confirmed active. Donovan Mitchell, Jarrett Allen, Evan Mobley (CLE) — no injury listing, confirmed active. Larry Nance Jr. (CLE) Questionable/Illness — bench player, NOT a franchise player, pick thesis does NOT depend on his absence, minimal impact. LINE ANOMALY CHECK: NYK -5.5 at home as ECF favourite — NYK has better record (53-29 vs 52-30), home court advantage. No anomaly. CORE THESIS UNCHANGED: NYK L15 NetRtg +20.4 vs CLE L15 +0.0 — an enormous 20.4-point differential. NYK is in historically elite form. CLE grinding through 7-game DET series, L15 flatlined at +0.0. NYK superior defence (DefRtg 113.4 vs 115.2). NYK home court at MSG worth 3-4 points in playoffs. All franchise players active both sides. RUST ADJUSTMENT: -5 confidence applied for NYK extended rest (swept PHI earlier). NYK rust is real but L15 gap (+20.4 vs +0.0) is overwhelming. CLE match-sharpness from 7 games may be offset by physical toll of a gruelling DET series. PERFORMANCE NOTE: Medium confidence tier (55-69) outperforming at 56.8% — core pick, do not over-cancel without clear cause. EV RECALCULATION at commit odds: EV = (0.62 × 1.92) - 1 = 1.1904 - 1 = 0.1904. Strong edge (≥ 0.15). Well above 0.05 floor. Spread target range 1.80-2.30: 1.92 confirmed in range. STAKE: Confidence 62 = Medium tier = 15% × €1333.93 = €200.09. Original stake maintained per line_movement_rules (movement in favour). Total exposure 15% — well under 70% cap.",
+          "anchor_players": [
+            "Jalen Brunson",
+            "Karl-Anthony Towns",
+            "Donovan Mitchell"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-05-19T23:04:21Z"
+        }
+      ],
+      "summary": "Day 2026-05-19 commit — 1 bets totalling €200.09. 0 cancelled. Bankroll: €1333.93 → €1133.84."
     }
   ]
 }
