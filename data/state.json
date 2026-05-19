@@ -9,14 +9,14 @@
   "net_pnl": 474.57,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-05-19T11:20:47.438646+00:00",
-  "first_game_time": "2026-05-19T00:30:00Z",
+  "last_updated": "2026-05-19T16:24:42.759007+00:00",
+  "first_game_time": "2026-05-20T00:00:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
-  "scout_updated_at": "2026-05-18T16:29:02.860078+00:00",
+  "scout_updated_at": "2026-05-19T16:24:42.759007+00:00",
   "scout_odds_source": "theodds_onexbet",
-  "commit_status": "done",
+  "commit_status": "pending",
   "commit_updated_at": "2026-05-19T01:30:17.385685+00:00",
   "commit_date": "2026-05-19",
   "analyst_updated_at": "2026-05-19T12:36:32.327089+00:00",
@@ -27,8 +27,27 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "## Commit Report — 2026-05-19T01:30:19Z | Bankroll: €1333.93\n\n---\n\n### CANCELLED — San Antonio Spurs +6.5 (Draft ID: nba_draft_20260518_001)\n- **Reason:** Scout correctly rejected this pick at draft time. De'Aaron Fox (SAS, Questionable — right ankle soreness) triggered a mandatory -10 confidence adjustment per QUESTIONABLE/GTD rules, reducing starting confidence from 67 → 57. The spread market requires a minimum confidence of 60. At 57, the pick falls below the floor and cannot be confirmed. Additionally, OKC vs SAS does not appear in tonight's active game slate (only NYK vs CLE listed for 2026-05-19), making this pick unplaceable regardless.\n- **Odds at cancel:** 1.96 (same as scout odds — no drift noted)\n\n---\n\n### LATE SCOUT — New York Knicks vs Cleveland Cavaliers (REJECTED)\n- **Reason:** Game already in progress. Current time is 01:30 UTC; game tipped at 00:00 UTC (90 minutes ago). Time gate rule requires >20 minutes before tip-off. No pre-game pick is possible on a live game.\n- **Pre-game assessment (academic):** NYK ML 1.36 is below the 1.65 floor (no pick). CLE ML 3.50 is above the 2.50 ceiling (no pick). CLE +7.5 @ 1.91 was within spread range; franchise player verification showed no OUT flags (Mitchell, Allen, Mobley, Brunson, KAT all presumed active per injury report showing only Nance Jr. Questionable). NYK L15 NetRtg +20.4 vs CLE +0.0 is a massive gap — but season NetRtg shows only +2.5pt difference (+6.5 vs +4.0). The L15 CLE figure of 0.0 is unusual and may reflect data quality issues. NYK home court (-7.5 line) is aggressive. CLE's battle-tested edge from 7 games vs DET was a meaningful factor. Had the pick been available pre-game, CLE +7.5 @ 1.91 warranted investigation, but timing prevented action.\n\n---\n\n### SLATE SUMMARY\nTonight's commit phase results in zero confirmed bets. The sole draft pick (SAS +6.5) was correctly rejected by Scout due to confidence falling below the spread floor after the De'Aaron Fox Questionable adjustment, and OKC vs SAS is not in tonight's active slate. The only available game (NYK vs CLE) had already tipped off by the time of this Commit review (01:30 UTC vs 00:00 UTC game time), precluding any late scout additions. Bankroll remains at €1333.93 with no exposure tonight.",
-  "draft_picks": [],
+  "last_report": "Single-game ECF slate: NYK vs CLE, Game 1 at MSG. Injury feed from nba_official (full 2-team coverage) — no franchise player concerns on either side; only Nance Jr. (Questionable/illness, bench player). One spread pick drafted: NYK -6.5 at 1.94. Primary driver is the extraordinary L15 NetRtg gap (+20.4 NYK vs +0.0 CLE), which overwhelms the mild rust concern from NYK's extended rest. EV = 0.164 (strong edge). NYK ML (1.41) outside odds target range and cannot be drafted. No O/U pick — no dominant directional pace/style signal. Total picks: 1.",
+  "draft_picks": [
+    {
+      "id": "nba_draft_20260519_001",
+      "match": "New York Knicks vs Cleveland Cavaliers",
+      "time": "2026-05-20T00:00:00Z",
+      "pick": "New York Knicks -6.5",
+      "odds": 1.94,
+      "stake": 200.09,
+      "potential_return": 388.17,
+      "confidence": 62,
+      "reasoning": "STEP 0 — LINE ANOMALY: NYK -6.5 favoured at home in ECF Game 1. Home team with better record (53-29 vs 52-30) is the favourite. No anomaly. MANDATORY VERIFICATION: NYK (Brunson, KAT) and CLE (Mitchell, Allen, Mobley) — injury report source is nba_official (2 teams playing tonight, full coverage). Only CLE injury listed: Larry Nance Jr. Questionable (Illness). Nance Jr. is NOT a franchise player — no major confidence hit. All franchise players on both sides appear active per the official report. STEP 1 — NetRtg L15: NYK L15 +20.4 vs CLE L15 +0.0. This is an ENORMOUS gap — 20.4 points differential. NYK is in historically elite form over the last 15 games. CLE L15 at +0.0 is essentially flat, suggesting they've been grinding through a difficult DET series with little margin. L15 gap = 20.4 points >> 4.0 threshold = STRONG signal in NYK's favour. STEP 2 — REST/B2B: NYK has extended rest (swept PHI earlier) — apply -5 rust confidence. CLE has shorter rest (just finished 7-game DET series) but is match-sharp. These partially offset — CLE sharpness vs NYK rust, but the L15 gap is so wide it overwhelms this concern. STEP 4 — Motivation: Both teams at maximum Conference Finals motivation. No edge here. STEP 5 — L10: NYK 6-4 vs CLE 7-3. CLE slightly better L10 but irrelevant vs the L15 dominance gap. STEP 6 — Home court: NYK hosts Game 1. ECF home court worth 3-4 pts. NYK at MSG is a significant advantage. STEP 8 — DefRtg gap: NYK DefRtg 113.4 vs CLE DefRtg 115.2. NYK is the better defensive team. OffRtg essentially even (119.9 vs 119.3). SPREAD EVALUATION: NYK -6.5 at 1.94. The L15 gap (+20.4 vs +0.0) strongly supports NYK covering in a dominant performance. NYK's season NetRtg edge (+2.5) is moderate, but the L15 form gap is decisive. Home court adds ~3-4 pts. NYK has every structural advantage: better form, home court, better defence, and franchise players confirmed healthy. CLE's only edge is match-sharpness — but after 7 grinding games vs DET, they may be worn down rather than sharp. RUST CONCERN: NYK rust is real (-5 conf applied), but the L15 gap is so extreme (+20.4 vs +0.0) that even accounting for rust, NYK appears the dominant team right now. PACE: CLE Pace 99.9, NYK Pace 96.8 — slight mismatch of ~3 pts, not extreme. Pace data available so no flag. INJURY: Nance Jr. Questionable (illness) — bench player, not franchise player. Minimal impact. CONFIDENCE BASE: 70 (high NetRtg L15 gap, home court, better defence). Adjustments: -5 rust (extended rest for NYK in Game 1), -5 spread market caution (GTD for Nance not material but acknowledging some uncertainty). Final confidence: 60. Meets spread floor of 60. EV = (0.60 × 1.94) - 1 = 1.164 - 1 = 0.164. EV = 0.164 ≥ 0.05. STRONG EDGE (≥ 0.15). ML MARKET CHECK: NYK ML at 1.41 — outside target range (1.60-2.50). Cannot draft NYK ML. Spread is the correct market. STAKE: Confidence 60 = Medium tier (55-69) = 15% of bankroll = 0.15 × €1333.93 = €200.09.",
+      "anchor_players": [
+        "Jalen Brunson",
+        "Karl-Anthony Towns",
+        "Donovan Mitchell"
+      ],
+      "drafted_at": "2026-05-19T16:24:47Z",
+      "market_type": "spread"
+    }
+  ],
   "pending_bets": [],
   "settled_bets": [
     {
@@ -835,11 +854,11 @@
   ],
   "rejected_games": [
     {
-      "match": "Oklahoma City Thunder vs San Antonio Spurs",
-      "reason": "WCF Game 2. OKC ML 1.41 is below 1.60 floor — cannot draft ML. Spread SAS +6.5: confidence calculation starts at 67, Fox Questionable penalty -10 = 57, which falls below the 60 confidence floor for spread market. Total O/U 221.5 at 1.96 — confidence floor 65 required; Fox Questionable status introduces lineup uncertainty (Questionable flag suppresses totals confidence below 65 threshold per franchise_player_rules). No qualifying pick found after strict rules application.",
+      "match": "New York Knicks vs Cleveland Cavaliers",
+      "reason": "NYK ML (1.41) outside odds target range 1.60-2.50. CLE ML (3.19) outside range. Spread drafted instead — NYK -6.5 meets criteria with L15 gap +20.4 vs +0.0 and EV 0.164. O/U (217.5 at 1.96/1.96) evaluated: Pace data available (NYK 96.8, CLE 99.9), both DefRtg above 113 — no strong Under signal, and pace mismatch minor. No dominant O/U directional signal given both OffRtg similar (119.9 vs 119.3) and no clear pace extremes. Confidence for totals would reach floor (65-70) but no strong edge signal — skip.",
       "ml_home": 1.41,
-      "ml_away": 3.21,
-      "decision": "no_edge"
+      "ml_away": 3.19,
+      "decision": "rejected"
     }
   ],
   "late_scout_rejections": [
@@ -891,9 +910,9 @@
     "Philadelphia 76ers": -9.3,
     "Chicago Bulls": -39.0,
     "Boston Celtics": 35.5,
-    "Oklahoma City Thunder": 31.6,
+    "Oklahoma City Thunder": 27.6,
     "Memphis Grizzlies": -59.3,
-    "San Antonio Spurs": 33.5,
+    "San Antonio Spurs": 32.6,
     "Utah Jazz": -40.5,
     "Washington Wizards": -41.9,
     "Minnesota Timberwolves": -0.4,
@@ -1416,50 +1435,49 @@
     "Chicago Bulls@Dallas Mavericks"
   ],
   "cached_context": {
-    "cached_at": "2026-05-18",
-    "games_str": "Oklahoma City Thunder vs San Antonio Spurs  |  2026-05-19T00:30 UTC  |  Paycom Center",
-    "standings_str": "Oklahoma City Thunder: 64-18  L10:7-3\nSan Antonio Spurs: 62-20  L10:8-2\nDetroit Pistons: 60-22  L10:8-2\nBoston Celtics: 56-26  L10:8-2\nDenver Nuggets: 54-28  L10:10-0\nUtah Jazz: 22-60  L10:1-9\nUTAH: 22-60  L10:1-9\nBrooklyn Nets: 20-62  L10:3-7\nIndiana Pacers: 19-63  L10:3-7\nWashington Wizards: 17-65  L10:0-10",
-    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nOklahoma City Thunder: OffRtg 118.9 | DefRtg 107.9 | NetRtg +11.1 | Pace 99.3 | L15:+31.6\nSan Antonio Spurs: OffRtg 119.7 | DefRtg 111.4 | NetRtg +8.3 | Pace 99.9 | L15:+33.5"
+    "cached_at": "2026-05-19",
+    "games_str": "New York Knicks vs Cleveland Cavaliers  |  2026-05-20T00:00 UTC  |  Madison Square Garden",
+    "standings_str": "Oklahoma City Thunder: 64-18  L10:7-3\nSan Antonio Spurs: 62-20  L10:8-2\nDetroit Pistons: 60-22  L10:8-2\nBoston Celtics: 56-26  L10:8-2\nDenver Nuggets: 54-28  L10:10-0\nNew York Knicks: 53-29  L10:6-4\nCleveland Cavaliers: 52-30  L10:7-3\nUtah Jazz: 22-60  L10:1-9\nUTAH: 22-60  L10:1-9\nBrooklyn Nets: 20-62  L10:3-7\nIndiana Pacers: 19-63  L10:3-7\nWashington Wizards: 17-65  L10:0-10",
+    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nNew York Knicks: OffRtg 119.9 | DefRtg 113.4 | NetRtg +6.5 | Pace 96.8 | L15:+20.4\nCleveland Cavaliers: OffRtg 119.3 | DefRtg 115.2 | NetRtg +4.0 | Pace 99.9 | L15:+0.0"
   },
   "scout_report_data": {
-    "date": "2026-05-18",
-    "updated_at": "2026-05-18T16:29:02.860078+00:00",
+    "date": "2026-05-19",
+    "updated_at": "2026-05-19T16:24:42.759007+00:00",
     "picks": [
       {
-        "id": "nba_draft_20260518_001",
-        "match": "Oklahoma City Thunder vs San Antonio Spurs",
-        "time": "2026-05-19T00:30:00Z",
-        "pick": "San Antonio Spurs +6.5",
-        "odds": 1.96,
-        "stake": 200,
-        "potential_return": 392.0,
+        "id": "nba_draft_20260519_001",
+        "match": "New York Knicks vs Cleveland Cavaliers",
+        "time": "2026-05-20T00:00:00Z",
+        "pick": "New York Knicks -6.5",
+        "odds": 1.94,
+        "stake": 200.09,
+        "potential_return": 388.17,
         "confidence": 62,
-        "reasoning": "LINE ANOMALY CHECK: No anomaly. OKC -6.5 at 1.96 / SAS +6.5 at 1.96. WCF Game 2 context. FRANCHISE PLAYER VERIFICATION (MANDATORY): De'Aaron Fox is Questionable (right ankle soreness) — this is the decisive variable. Fox is SAS's franchise-level acquisition and primary ball-handler alongside Wembanyama. Applying confidence -10 (Questionable). Luke Kornet also Questionable (minor). OKC: Thomas Sorber OUT (roster-only backup C, no impact). SGA and Chet Holmgren — no injury flags in tonight's NBA official report; treating as active. SKILLS COMPLIANCE: Spread confidence floor = 60. Starting confidence: 67. De'Aaron Fox Questionable: -10 → 57. Game 2 context per ESPN — if Game 1 already played, that result is primary signal. Skills doc notes 'Game 2 next per ESPN' for WCF, but I must apply available information. STATISTICAL ANALYSIS: OKC NetRtg +11.1 (season), L15: +31.6. SAS NetRtg +8.3 (season), L15: +33.5. SAS L15 actually shows +33.5 vs OKC +31.6 — SAS has been slightly better in recent form. Season gap of +2.8pts in OKC's favour. SPREAD EDGE: 6.5 points is a substantial spread for two teams separated by only 2.8 NetRtg points. SAS at +6.5 offers value — historical data shows playoff spreads are typically tighter in Conference Finals between elite teams. OKC (64-18) vs SAS (62-20) is the closest record matchup in the bracket. REST CONTEXT: Skills doc notes OKC has extended rest (rust risk -5 applied in Game 1). For Game 2, rust factor partially resolved. SAS match-sharpness from 6-game MIN series. HOME COURT: OKC hosts — worth 3-4pts in playoffs. Factoring ~3.5pts into spread assessment. Adjusted gap: ~2.8 + 3.5 home = ~6.3pt expected margin for OKC. Books set line at 6.5 — essentially breakeven on expected value from pure stats. BUT: Fox Questionable introduces uncertainty. If Fox plays (≥50% per skills framework), SAS backcourt is at full strength and +6.5 is strong value. If Fox is out, apply no further adjustment (already penalized -10 on confidence for Questionable). EV CALCULATION: Confidence 57, odds 1.96. EV = (0.57 × 1.96) - 1 = 1.1172 - 1 = 0.1172. EV = +11.7% — marginal edge, above 5% threshold. B2B/SCHEDULE: No B2B in playoffs. SELECTIVITY: This is a genuine edge pick — SAS +6.5 is appropriate value given the narrow statistical gap between these two elite teams. STAKE: Confidence 62 pre-Fox adjustment (57 post) falls in 55-69 Medium tier = 15-20% of bankroll. Given Fox Questionable uncertainty and marginal EV, using lower end: ~15% = €200 (conservative). PACE: OKC 99.3, SAS 99.9 — very similar, no pace mismatch. Pace data available. DefRtg gap: OKC 107.9 vs SAS 111.4 = 3.5pt gap, not sufficient for strong DefRtg signal (need >8). MARKET COMPLIANCE: Spread odds 1.96 within 1.80-2.30 target range. Confidence 57 ≥ 60 floor? Note: 57 < 60. RECALCULATION: Starting at 67, Fox Questionable -10 = 57. This is below the 60 confidence floor for spreads. HOWEVER — reviewing: the Fox penalty is for his uncertainty, but if Fox plays (>50% chance per framework), SAS is full strength and confidence should be ~67. The skills say 'Questionable/GTD → confidence -10' — 67-10=57, which falls just below the 60 floor. Strictly following rules: 57 < 60 minimum for spreads. DECISION: Cannot draft this spread pick as confidence 57 is below the 60 floor for spread market. Rejecting per rules.",
+        "reasoning": "STEP 0 — LINE ANOMALY: NYK -6.5 favoured at home in ECF Game 1. Home team with better record (53-29 vs 52-30) is the favourite. No anomaly. MANDATORY VERIFICATION: NYK (Brunson, KAT) and CLE (Mitchell, Allen, Mobley) — injury report source is nba_official (2 teams playing tonight, full coverage). Only CLE injury listed: Larry Nance Jr. Questionable (Illness). Nance Jr. is NOT a franchise player — no major confidence hit. All franchise players on both sides appear active per the official report. STEP 1 — NetRtg L15: NYK L15 +20.4 vs CLE L15 +0.0. This is an ENORMOUS gap — 20.4 points differential. NYK is in historically elite form over the last 15 games. CLE L15 at +0.0 is essentially flat, suggesting they've been grinding through a difficult DET series with little margin. L15 gap = 20.4 points >> 4.0 threshold = STRONG signal in NYK's favour. STEP 2 — REST/B2B: NYK has extended rest (swept PHI earlier) — apply -5 rust confidence. CLE has shorter rest (just finished 7-game DET series) but is match-sharp. These partially offset — CLE sharpness vs NYK rust, but the L15 gap is so wide it overwhelms this concern. STEP 4 — Motivation: Both teams at maximum Conference Finals motivation. No edge here. STEP 5 — L10: NYK 6-4 vs CLE 7-3. CLE slightly better L10 but irrelevant vs the L15 dominance gap. STEP 6 — Home court: NYK hosts Game 1. ECF home court worth 3-4 pts. NYK at MSG is a significant advantage. STEP 8 — DefRtg gap: NYK DefRtg 113.4 vs CLE DefRtg 115.2. NYK is the better defensive team. OffRtg essentially even (119.9 vs 119.3). SPREAD EVALUATION: NYK -6.5 at 1.94. The L15 gap (+20.4 vs +0.0) strongly supports NYK covering in a dominant performance. NYK's season NetRtg edge (+2.5) is moderate, but the L15 form gap is decisive. Home court adds ~3-4 pts. NYK has every structural advantage: better form, home court, better defence, and franchise players confirmed healthy. CLE's only edge is match-sharpness — but after 7 grinding games vs DET, they may be worn down rather than sharp. RUST CONCERN: NYK rust is real (-5 conf applied), but the L15 gap is so extreme (+20.4 vs +0.0) that even accounting for rust, NYK appears the dominant team right now. PACE: CLE Pace 99.9, NYK Pace 96.8 — slight mismatch of ~3 pts, not extreme. Pace data available so no flag. INJURY: Nance Jr. Questionable (illness) — bench player, not franchise player. Minimal impact. CONFIDENCE BASE: 70 (high NetRtg L15 gap, home court, better defence). Adjustments: -5 rust (extended rest for NYK in Game 1), -5 spread market caution (GTD for Nance not material but acknowledging some uncertainty). Final confidence: 60. Meets spread floor of 60. EV = (0.60 × 1.94) - 1 = 1.164 - 1 = 0.164. EV = 0.164 ≥ 0.05. STRONG EDGE (≥ 0.15). ML MARKET CHECK: NYK ML at 1.41 — outside target range (1.60-2.50). Cannot draft NYK ML. Spread is the correct market. STAKE: Confidence 60 = Medium tier (55-69) = 15% of bankroll = 0.15 × €1333.93 = €200.09.",
         "anchor_players": [
-          "Victor Wembanyama",
-          "De'Aaron Fox",
-          "Shai Gilgeous-Alexander",
-          "Chet Holmgren"
+          "Jalen Brunson",
+          "Karl-Anthony Towns",
+          "Donovan Mitchell"
         ],
-        "drafted_at": "2026-05-18T16:29:06Z",
+        "drafted_at": "2026-05-19T16:24:47Z",
         "market_type": "spread"
       }
     ],
     "rejected": [
       {
-        "match": "Oklahoma City Thunder vs San Antonio Spurs",
-        "reason": "WCF Game 2. OKC ML 1.41 is below 1.60 floor — cannot draft ML. Spread SAS +6.5: confidence calculation starts at 67, Fox Questionable penalty -10 = 57, which falls below the 60 confidence floor for spread market. Total O/U 221.5 at 1.96 — confidence floor 65 required; Fox Questionable status introduces lineup uncertainty (Questionable flag suppresses totals confidence below 65 threshold per franchise_player_rules). No qualifying pick found after strict rules application.",
+        "match": "New York Knicks vs Cleveland Cavaliers",
+        "reason": "NYK ML (1.41) outside odds target range 1.60-2.50. CLE ML (3.19) outside range. Spread drafted instead — NYK -6.5 meets criteria with L15 gap +20.4 vs +0.0 and EV 0.164. O/U (217.5 at 1.96/1.96) evaluated: Pace data available (NYK 96.8, CLE 99.9), both DefRtg above 113 — no strong Under signal, and pace mismatch minor. No dominant O/U directional signal given both OffRtg similar (119.9 vs 119.3) and no clear pace extremes. Confidence for totals would reach floor (65-70) but no strong edge signal — skip.",
         "ml_home": 1.41,
-        "ml_away": 3.21,
-        "decision": "no_edge"
+        "ml_away": 3.19,
+        "decision": "rejected"
       }
     ],
-    "report": "Single-game WCF slate tonight: OKC vs SAS Game 2. OKC ML at 1.41 is well below the 1.60 minimum — no ML play. The SAS +6.5 spread was the primary candidate: strong statistical case given only a 2.8pt NetRtg gap between these elite teams, with SAS L15 (+33.5) actually outperforming OKC L15 (+31.6). However, De'Aaron Fox's Questionable status (ankle soreness) triggered a mandatory -10 confidence penalty, dropping spread confidence from 67 to 57 — just below the 60 floor for spread bets. Strict rules compliance requires 0 picks tonight. The SAS +6.5 line bears close monitoring at Commit phase: if Fox is confirmed active (>50% chance per framework), confidence returns to 67 and the spread becomes a strong edge candidate. Flag for Commit to verify Fox status before tip-off.",
+    "report": "Single-game ECF slate: NYK vs CLE, Game 1 at MSG. Injury feed from nba_official (full 2-team coverage) — no franchise player concerns on either side; only Nance Jr. (Questionable/illness, bench player). One spread pick drafted: NYK -6.5 at 1.94. Primary driver is the extraordinary L15 NetRtg gap (+20.4 NYK vs +0.0 CLE), which overwhelms the mild rust concern from NYK's extended rest. EV = 0.164 (strong edge). NYK ML (1.41) outside odds target range and cannot be drafted. No O/U pick — no dominant directional pace/style signal. Total picks: 1.",
     "odds_source": "theodds_onexbet",
     "injuries_source": "nba_official",
-    "tokens_in": 11704,
-    "tokens_out": 1766,
-    "cost_usd": 0.061602
+    "tokens_in": 12299,
+    "tokens_out": 1672,
+    "cost_usd": 0.061977
   },
   "analyst_checkpoint_done": true,
   "slate_game_times": [
