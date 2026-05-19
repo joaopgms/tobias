@@ -1911,5 +1911,36 @@
     "tokens_in": 11249,
     "tokens_out": 3995,
     "cost_usd": 0.093672
+  },
+  {
+    "ts": "2026-05-19T01:30:17.385685+00:00",
+    "date": "2026-05-19",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 0,
+    "cancelled_count": 1,
+    "total_staked": 0.0,
+    "bankroll_before": 1333.93,
+    "bankroll_after": 1333.93,
+    "bets": [],
+    "cancelled": [
+      {
+        "id": "nba_draft_20260518_001",
+        "match": "Oklahoma City Thunder vs San Antonio Spurs",
+        "pick": "San Antonio Spurs +6.5",
+        "reason": "Scout correctly rejected at draft phase: De'Aaron Fox Questionable penalty reduced confidence from 67 to 57, which is below the 60 confidence floor for spread market. Additionally, OKC vs SAS is not listed in tonight's active slate (only NYK vs CLE plays tonight per system). Pick cannot be confirmed."
+      }
+    ],
+    "late_rejections": [
+      {
+        "match": "New York Knicks vs Cleveland Cavaliers",
+        "reason": "Game tipped off at 00:00 UTC — current time is 01:30 UTC, meaning the game is already 90 minutes in progress. Time gate requires first_game_time - now > 20 minutes. Cannot add any live-game picks. Pre-game analysis: NYK ML 1.36 is below 1.65 floor; CLE ML 3.50 is above 2.50 ceiling. CLE +7.5 @ 1.91 was within spread range and franchise players (Mitchell, Allen, Mobley, Brunson, KAT) showed no OUT flags, but pick cannot be placed on a game already in progress. Larry Nance Jr. (CLE, Questionable — illness) is not an anchor player and would not have changed the thesis."
+      }
+    ],
+    "report": "## Commit Report — 2026-05-19T01:30:19Z | Bankroll: €1333.93\n\n---\n\n### CANCELLED — San Antonio Spurs +6.5 (Draft ID: nba_draft_20260518_001)\n- **Reason:** Scout correctly rejected this pick at draft time. De'Aaron Fox (SAS, Questionable — right ankle soreness) triggered a mandatory -10 confidence adjustment per QUESTIONABLE/GTD rules, reducing starting confidence from 67 → 57. The spread market requires a minimum confidence of 60. At 57, the pick falls below the floor and cannot be confirmed. Additionally, OKC vs SAS does not appear in tonight's active game slate (only NYK vs CLE listed for 2026-05-19), making this pick unplaceable regardless.\n- **Odds at cancel:** 1.96 (same as scout odds — no drift noted)\n\n---\n\n### LATE SCOUT — New York Knicks vs Cleveland Cavaliers (REJECTED)\n- **Reason:** Game already in progress. Current time is 01:30 UTC; game tipped at 00:00 UTC (90 minutes ago). Time gate rule requires >20 minutes before tip-off. No pre-game pick is possible on a live game.\n- **Pre-game assessment (academic):** NYK ML 1.36 is below the 1.65 floor (no pick). CLE ML 3.50 is above the 2.50 ceiling (no pick). CLE +7.5 @ 1.91 was within spread range; franchise player verification showed no OUT flags (Mitchell, Allen, Mobley, Brunson, KAT all presumed active per injury report showing only Nance Jr. Questionable). NYK L15 NetRtg +20.4 vs CLE +0.0 is a massive gap — but season NetRtg shows only +2.5pt difference (+6.5 vs +4.0). The L15 CLE figure of 0.0 is unusual and may reflect data quality issues. NYK home court (-7.5 line) is aggressive. CLE's battle-tested edge from 7 games vs DET was a meaningful factor. Had the pick been available pre-game, CLE +7.5 @ 1.91 warranted investigation, but timing prevented action.\n\n---\n\n### SLATE SUMMARY\nTonight's commit phase results in zero confirmed bets. The sole draft pick (SAS +6.5) was correctly rejected by Scout due to confidence falling below the spread floor after the De'Aaron Fox Questionable adjustment, and OKC vs SAS is not in tonight's active slate. The only available game (NYK vs CLE) had already tipped off by the time of this Commit review (01:30 UTC vs 00:00 UTC game time), precluding any late scout additions. Bankroll remains at €1333.93 with no exposure tonight.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 12496,
+    "tokens_out": 2050,
+    "cost_usd": 0.068238
   }
 ]
