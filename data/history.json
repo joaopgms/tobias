@@ -23,7 +23,7 @@
           "game": 2,
           "started_at": "2026-04-05T10:44:07.102344+00:00",
           "bankroll_start": 1000.0,
-          "wins": 23,
+          "wins": 24,
           "losses": 17,
           "peak_bankroll": 1917.57,
           "total_bets": 41
@@ -2234,10 +2234,10 @@
             "Karl-Anthony Towns",
             "Donovan Mitchell"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "WON",
+          "returned": 384.17,
+          "pnl": 184.08,
+          "settled_at": "2026-05-20T10:52:22.808831+00:00",
           "committed_at": "2026-05-19T23:04:21Z"
         }
       ],
