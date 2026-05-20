@@ -1,7 +1,7 @@
 ---
-version: 31
-updated_at: 2026-05-19T12:36:32.327089+00:00
-updated_by: analyst_2026-05-19
+version: 32
+updated_at: 2026-05-20T12:18:53.812084+00:00
+updated_by: analyst_2026-05-20
 llm: claude-sonnet-4-6
 ---
 
@@ -19,15 +19,18 @@ Round 2 final results (per ESPN live feed):
 - West Semifinals B: Oklahoma City Thunder swept Round 2 opponent 4-0. OKC advances to WCF.
 
 Conference Finals current state (from ESPN live feed):
-- ECF: New York Knicks vs Cleveland Cavaliers — Tied 0-0 (Game 1 next; verify schedule from ESPN)
+- ECF: New York Knicks vs Cleveland Cavaliers — NYK leads 1-0 (Game 2 next; verify schedule from ESPN)
 - WCF: Oklahoma City Thunder vs San Antonio Spurs — SAS leads 1-0 (Game 2 next per ESPN)
 
-WCF CRITICAL UPDATE: SAS leads WCF 1-0. This means Game 1 has been played. Use this in-series result as PRIMARY signal for WCF Game 2.
+ECF UPDATE: NYK leads ECF 1-0. Game 1 has been played. Use this in-series result as PRIMARY signal for ECF Game 2.
+NYK winning Game 1 (whether home or away) is now the dominant signal — do not fade NYK in ECF Game 2 without clear evidence CLE has adjusted.
+
+WCF CRITICAL UPDATE: SAS leads WCF 1-0. Game 1 has been played at OKC. Use this in-series result as PRIMARY signal for WCF Game 2.
 SAS winning Game 1 on the road (OKC home court) is a significant upset signal — re-evaluate OKC rust thesis.
 
 REST ADVANTAGE (approximate — verify exact dates from ESPN):
-- NYK: extended rest after sweeping PHI — rust risk in ECF Game 1.
-- CLE: just finished 7-game series vs DET — shorter rest entering ECF.
+- NYK: won ECF Game 1 — now in-series lead holder; rust concern may be easing.
+- CLE: lost ECF Game 1 — must respond in Game 2 (at NYK); battle-tested from 7-game DET series but now trails.
 - OKC: extended rest after Round 2 sweep — rust risk manifested in WCF Game 1 (lost to SAS).
 - SAS: just finished 6-game series vs MIN — less rest but match-sharp; WON Game 1 at OKC.
 
@@ -37,18 +40,20 @@ NBA PLAYOFFS — Active Series (updated from ESPN live feed)
 --- CONFERENCE FINALS ---
 
 EAST Conference Finals (ECF):
-- New York Knicks vs Cleveland Cavaliers — Tied 0-0 (Game 1 next; verify schedule from ESPN)
-  NYK (NetRtg +6.5, 53-29) swept PHI 4-0 in Round 2 — extended rest.
-  CLE (NetRtg +4.0, 52-30) defeated DET 4-3 in Round 2 — shorter rest, battle-tested.
-  NYK NetRtg edge: +2.5pts over CLE. Series brand new — no in-series data yet. Season NetRtg is primary signal.
+- New York Knicks vs Cleveland Cavaliers — NYK leads 1-0 (Game 2 next at NYK; verify schedule from ESPN)
+  NYK (NetRtg +6.5, 53-29) swept PHI 4-0 in Round 2 then WON ECF Game 1 — in-series lead confirmed.
+  CLE (NetRtg +4.0, 52-30) defeated DET 4-3 in Round 2 — shorter rest, battle-tested, now trails ECF 0-1.
+  NYK NetRtg edge: +2.5pts over CLE. NYK now holds IN-SERIES LEAD — primary signal for Game 2.
+  IN-SERIES SIGNAL (Game 2+): NYK Game 1 win is NOW primary signal. Season NetRtg is secondary.
   Re-verify Jalen Brunson, Karl-Anthony Towns (NYK) active before any ECF pick. MANDATORY.
   Re-verify Donovan Mitchell, Jarrett Allen, Evan Mobley (CLE) active before any ECF pick. MANDATORY.
-  REST GAP: NYK has been idle longer (swept earlier) — apply -5 rust confidence for NYK in ECF Game 1.
-  CLE comes in battle-tested from 7 games vs DET — momentum may favour CLE early.
+  REST GAP: NYK extended rest from sweep may be easing after Game 1 win — reduce rust penalty.
+  CLE battle-tested but now facing 0-1 deficit on the road — elimination pressure still distant but series momentum with NYK.
   HOME COURT: NYK higher seed — NYK hosts Games 1, 2, 5, 7. Verify from ESPN.
+  GAME 2 FRAMING: Do NOT back CLE at odds shorter than 2.00 on the road in ECF Game 2 without clear statistical evidence of CLE adjustment.
 
 WEST Conference Finals (WCF):
-- Oklahoma City Thunder vs San Antonio Spurs — SAS leads 1-0 (Game 2 next per ESPN live feed)
+- Oklahoma City Thunder vs San Antonio Spurs — SAS leads 1-0 (Game 2 next at OKC per ESPN live feed)
   OKC (NetRtg +11.1, 64-18) lost Game 1 at home despite home court advantage. Extended rest = CONFIRMED rust impact.
   SAS (NetRtg +8.3, 62-20) WON Game 1 at OKC — match-sharpness advantage validated by result.
   OKC NetRtg edge: +2.8pts over SAS (season). But SAS in-series lead (1-0) now PRIMARY signal.
@@ -83,12 +88,13 @@ Teams CONFIRMED ELIMINATED:
 - Minnesota Timberwolves: SAS won 4-2 (West Semifinals). CONFIRMED ELIMINATED. No further picks.
 - Detroit Pistons: CLE won 4-3 (East Semifinals). CONFIRMED ELIMINATED. No further picks.
 
-Teams FACING ELIMINATION: None — both Conference Finals series are early (ECF 0-0, WCF 1-0).
+Teams FACING ELIMINATION: None — both Conference Finals series are early (ECF NYK leads 1-0, WCF SAS leads 1-0).
 OKC trails WCF 0-1 — not elimination pressure yet, but monitor closely.
+CLE trails ECF 0-1 — not elimination pressure yet, but monitor momentum shift.
 
 Teams STILL ACTIVE (Conference Finals):
-- New York Knicks: ECF vs CLE (Tied 0-0 — Game 1 next, verify schedule from ESPN).
-- Cleveland Cavaliers: ECF vs NYK (Tied 0-0 — Game 1 next, verify schedule from ESPN).
+- New York Knicks: ECF vs CLE (leads 1-0 — Game 2 next at NYK, verify schedule from ESPN).
+- Cleveland Cavaliers: ECF vs NYK (trails 0-1 — Game 2 next at NYK, verify schedule from ESPN).
 - Oklahoma City Thunder: WCF vs SAS (trails 0-1, Game 2 next — at OKC home).
 - San Antonio Spurs: WCF vs OKC (leads 1-0, Game 2 next — at OKC).
 - Los Angeles Lakers: Round 2 active — verify opponent and current series score from ESPN bracket.
@@ -96,7 +102,7 @@ Teams STILL ACTIVE (Conference Finals):
 Do NOT bet on any confirmed eliminated team.
 
 ## SECTION:playoff_rest
-PLAYOFF REST RULES (active — Conference Finals, Games 1-2):
+PLAYOFF REST RULES (active — Conference Finals, Games 2+):
 - True B2B does NOT exist in playoffs — NBA mandates minimum 1 day off between games.
 - 1 rest day (minimum): short rest — confidence -10 on spread picks for road team.
 - 2 rest days: standard rest — no adjustment.
@@ -105,14 +111,16 @@ PLAYOFF REST RULES (active — Conference Finals, Games 1-2):
 
 CONFERENCE FINALS REST CONTEXT (approximate — verify exact dates from ESPN):
 
-ECF — NYK vs CLE:
-- NYK: swept PHI 4-0 in Round 2 — likely 5-7 days of rest entering ECF. RUST RISK.
-  Apply -5 confidence to NYK in ECF Game 1 (extended rest after sweep).
-- CLE: just finished 7-game series vs DET — minimal rest. Battle-tested and sharp.
-  No rust adjustment for CLE. If CLE had only 1-2 days off, apply -5 on spread for CLE road games.
-- NET: CLE likely enters ECF more match-sharp than NYK despite statistical disadvantage.
+ECF — NYK vs CLE (NYK leads 1-0, Game 2 next at NYK):
+- NYK: Won ECF Game 1 — rust concern diminished after active game. Standard rest rules apply for Game 2.
+  Extended rest penalty reduced: NYK demonstrated match readiness in Game 1 win.
+- CLE: Lost ECF Game 1 on the road — must travel back to NYK for Game 2. Short turnaround possible.
+  If CLE had only 1-2 days between Game 1 and Game 2: apply -5 confidence on CLE spread picks.
+  CLE is battle-tested (7-game DET series) but now psychologically under pressure trailing 0-1.
+- NET: NYK in-series lead + home court + statistical edge = NYK is the clear ECF favourite for Game 2.
+  CLE must show tactical adjustment in Game 2 or risk falling behind 0-2.
 
-WCF — OKC vs SAS:
+WCF — OKC vs SAS (SAS leads 1-0, Game 2 next at OKC):
 - OKC: swept Round 2 opponent 4-0 — extended rest entering WCF. RUST CONFIRMED: OKC LOST Game 1 at home.
   Apply -5 confidence to OKC in WCF Game 2 (rust may persist; SAS riding momentum).
   WATCH: If SAS wins Game 2 as well, rust concern escalates to -10 for OKC in Game 3.
@@ -126,7 +134,7 @@ LAL Round 2 rest:
 - Apply -10 spread confidence for LAL in Round 2 Game 1 regardless of home/away.
 
 ELIMINATION GAME REST RULES:
-- No teams currently facing elimination (ECF 0-0, WCF 1-0).
+- No teams currently facing elimination (ECF NYK leads 1-0, WCF SAS leads 1-0).
 - If a team falls behind 0-3 in Conference Finals — reapply elimination urgency rules.
 
 ## SECTION:playoff_motivation
@@ -136,28 +144,30 @@ PLAYOFF MOTIVATION HIERARCHY (Conference Finals — Active)
    All remaining teams are one series from the NBA Finals. No motivation gap between opponents.
    Differentiate using: home court, rest advantage, franchise player health, statistical edge, and IN-SERIES data.
 
-2. IN-SERIES LEAD (now available for WCF):
+2. IN-SERIES LEAD (now available for BOTH ECF and WCF):
+   ECF: NYK leads CLE 1-0 — NYK WON GAME 1. This is now the PRIMARY signal for ECF Game 2.
+   → NYK momentum + home court + statistical edge = NYK clear ECF favourite for Game 2.
+   → CLE must show tactical adjustment; do NOT back CLE at odds shorter than 2.00 on the road in ECF Game 2.
    WCF: SAS leads OKC 1-0 — SAS WON GAME 1 AT OKC. This is the PRIMARY signal for WCF Game 2.
    → SAS momentum + match-sharpness + in-series lead = live WCF favourite for Game 2 narrative.
    → OKC rust confirmed by Game 1 loss. Do NOT back OKC shorter than 1.65 in WCF Game 2 without SGA health confirmation and evidence rust has cleared.
-   ECF: No in-series data yet (Tied 0-0). Season NetRtg is primary signal for ECF Game 1.
 
 3. REST ADVANTAGE / MATCH SHARPNESS:
-   CLE over NYK (ECF): CLE just finished 7-game series — more match-sharp. NYK extended rest = rust risk.
-   → Apply -5 confidence to NYK Game 1. Monitor if NYK rust clears by Game 2.
+   NYK over CLE (ECF): NYK won Game 1 — rust cleared. NYK home court advantage reinforced.
+   CLE: 7-game DET series = battle-tested, but now trails 0-1 and must adjust tactically.
    SAS over OKC (WCF): SAS match-sharpness VALIDATED by Game 1 win at OKC.
    → Apply -5 confidence to OKC Game 2. In-series lead is now the dominant narrative signal.
 
 4. STATISTICAL EDGES (season NetRtg):
-   ECF: NYK +6.5 vs CLE +4.0 — NYK has +2.5pt edge. Moderate; not decisive alone.
+   ECF: NYK +6.5 vs CLE +4.0 — NYK has +2.5pt edge. Now reinforced by Game 1 in-series win.
    WCF: OKC +11.1 vs SAS +8.3 — OKC has +2.8pt season edge, BUT SAS leads 1-0 in-series.
    RULE: Once in-series data exists, season NetRtg is SECONDARY to in-series result.
-   SAS winning Game 1 means they have demonstrated ability to beat OKC at OKC — real signal.
+   NYK winning Game 1 and SAS winning Game 1 both confirm real signal over season stats.
 
 5. HOME COURT (all Conference Finals games):
    ECF: NYK hosts Games 1, 2, 5, 7 (higher seed). Verify from ESPN.
    WCF: OKC hosts Games 1, 2, 5, 7 (higher seed) — but SAS already won Game 1 at OKC.
-   Home court in Conference Finals worth 3-4 points — but SAS proved OKC home court is not impenetrable.
+   Home court in Conference Finals is not automatic — SAS proved OKC home court is not impenetrable.
 
 6. FRANCHISE PLAYER AVAILABILITY (MANDATORY verification):
    OKC: Re-verify SGA, Chet Holmgren active. MANDATORY before every WCF pick.
@@ -175,6 +185,11 @@ PLAYOFF MOTIVATION HIERARCHY (Conference Finals — Active)
    Do NOT apply OKC 'dominant favourite' framing to WCF Game 2 without verifying rust has cleared.
    If SAS wins Game 2 → OKC faces serious adversity for first time this postseason.
 
+9. ECF RECALIBRATION:
+   NYK won ECF Game 1 — rust from extended rest was NOT a decisive factor.
+   CLE battle-tested from 7-game DET series but fell behind early. Adjust CLE confidence down for Game 2.
+   NYK is now the validated ECF leader with home court, statistical edge, AND in-series advantage.
+
 ## SECTION:playin_rules
 INACTIVE — Play-In Tournament is over. Do NOT apply any play-in rules.
 All series are now best-of-7 Round 1. Use playoff_motivation and playoff_rest sections only.
@@ -186,15 +201,17 @@ CRITICAL CAVEAT: In-series result is the PRIMARY signal. Regular season H2H is a
 
 --- CONFERENCE FINALS ---
 
-ECF — New York Knicks vs Cleveland Cavaliers (Tied 0-0, Game 1 next):
-- In-series data: NONE YET. Season NetRtg is primary signal.
-- NYK (+6.5 NetRtg, 53-29) vs CLE (+4.0 NetRtg, 52-30) — NYK +2.5pt edge.
+ECF — New York Knicks vs Cleveland Cavaliers (NYK leads 1-0, Game 2 next at NYK):
+- In-series data: NYK WON GAME 1. This is now the PRIMARY signal for ECF Game 2.
+- NYK (+6.5 NetRtg, 53-29) vs CLE (+4.0 NetRtg, 52-30) — NYK +2.5pt edge, now reinforced by in-series lead.
 - Regular season H2H: verify from ESPN (NYK vs CLE this season).
-- NYK swept PHI 4-0 in Round 2 — momentum strong but rust from extended rest.
-- CLE defeated DET 4-3 in Round 2 — battle-tested, Donovan Mitchell sharp through 7 games.
-- KEY VARIABLE: NYK rust vs CLE match sharpness. Monitor Game 1 carefully.
+- NYK won ECF Game 1 — rust from extended rest post-sweep was NOT a decisive factor.
+- CLE defeated DET 4-3 in Round 2 — battle-tested, but now trails 0-1 and must adjust.
+- KEY VARIABLE: Can CLE show tactical adjustment in Game 2, or does NYK extend series lead?
 - Re-verify Jalen Brunson, Karl-Anthony Towns (NYK). Re-verify Mitchell, Allen, Mobley (CLE). MANDATORY.
-- Do NOT back CLE at odds shorter than 2.00 on the road in ECF Game 1 without clear statistical justification.
+- Do NOT back CLE at odds shorter than 2.00 on the road in ECF Game 2 without clear statistical justification.
+- Minimum odds to bet NYK at home in ECF Game 2: only if EV ≥ 0.05 after adjustments.
+  CAUTION: NYK may open at short odds (1.50-1.65 range) as home favourite with in-series lead — check EV carefully.
 
 WCF — Oklahoma City Thunder vs San Antonio Spurs (SAS leads 1-0, Game 2 next at OKC):
 - IN-SERIES DATA AVAILABLE: SAS WON GAME 1 AT OKC. This is now the PRIMARY signal.
@@ -217,39 +234,41 @@ WCF — Oklahoma City Thunder vs San Antonio Spurs (SAS leads 1-0, Game 2 next a
 - SAS defeated MIN 4-2: SAS NetRtg edge held despite MIN elimination urgency.
 
 KEY LESSONS UPDATED:
-1. SAS won WCF Game 1 at OKC — OKC rust is real and impactful. SAS is the live WCF leader.
-2. NetRtg gaps of 2-4pts (NYK/CLE) require home court and health as tiebreakers.
-3. In-series lead overrides season NetRtg from Game 2 onwards — apply this immediately to WCF.
-4. CLE defeated DET in 7 games — battle-tested teams enter Conference Finals sharper.
-5. Franchise player absence > NetRtg gap: confirmed by Tatum OUT (BOS), Durant OUT (HOU), Doncic OUT (LAL).
-6. OKC's 8-game winning streak entering WCF did NOT prevent a home Game 1 loss — rust > streak momentum.
+1. NYK won ECF Game 1 — extended rest rust was manageable; NYK is the validated ECF leader.
+2. SAS won WCF Game 1 at OKC — OKC rust is real and impactful. SAS is the live WCF leader.
+3. NetRtg gaps of 2-4pts (NYK/CLE) require home court and health as tiebreakers — but in-series wins are decisive.
+4. In-series lead overrides season NetRtg from Game 2 onwards — apply this immediately to BOTH ECF and WCF.
+5. CLE defeated DET in 7 games — battle-tested teams enter Conference Finals sharper, but trailing 0-1 is a real obstacle.
+6. Franchise player absence > NetRtg gap: confirmed by Tatum OUT (BOS), Durant OUT (HOU), Doncic OUT (LAL).
+7. OKC's 8-game winning streak entering WCF did NOT prevent a home Game 1 loss — rust > streak momentum.
 
 ## SECTION:l15_caveat
 L15 NetRtg CAVEAT FOR PLAYOFFS (Conference Finals — Active)
 
 CRITICAL HIERARCHY:
-1. In-series result: PRIMARY signal — WCF in-series data NOW AVAILABLE (SAS leads 1-0).
+1. In-series result: PRIMARY signal — BOTH series now have in-series data.
+   ECF: NYK leads CLE 1-0. NYK winning Game 1 is now the primary ECF signal.
+   WCF: SAS leads OKC 1-0. SAS winning Game 1 at OKC is the primary WCF signal.
    Once Game 1 result is available: immediately elevate to primary signal above all season stats.
-   APPLY NOW: WCF — SAS leads OKC 1-0. SAS in-series result overrides OKC season NetRtg advantage.
 2. Franchise player availability: SECONDARY — a key absence can negate any NetRtg gap.
 3. Home court: TERTIARY — worth 3-4pts in playoffs; decisive in even matchups.
    NOTE: OKC home court did NOT prevent SAS from winning Game 1 — downgrade OKC home court premium slightly.
-4. Season NetRtg: PRIMARY only for games with NO in-series data (ECF Game 1). Shifts to secondary once in-series data exists.
+   NYK home court CONFIRMED relevant (home team won Game 1 in ECF).
+4. Season NetRtg: SECONDARY to in-series data for all remaining Conference Finals games.
 5. L15 NetRtg: directional only — weight less than home court or franchise player health.
 
 CONFERENCE FINALS SPECIAL RULE:
-→ ECF Game 1: Season NetRtg is the PRIMARY signal (no in-series data yet). NYK +6.5 vs CLE +4.0.
-→ WCF Game 2: In-series momentum is PRIMARY. SAS leads 1-0 — back SAS unless strong evidence OKC has reset.
-→ From Game 2 (ECF) / Game 3 (WCF) onwards: In-series momentum is fully decisive.
+→ ECF Game 2+: In-series momentum is FULLY PRIMARY. NYK leads 1-0 — back NYK unless strong CLE adjustment evidence.
+→ WCF Game 2+: In-series momentum is FULLY PRIMARY. SAS leads 1-0 — back SAS unless strong OKC reset evidence.
 → Do NOT over-weight regular season H2H — Conference Finals opponents have elite coaching; they will adapt.
 
 Active series NetRtg comparison:
 
-ECF — NYK (+6.5) vs CLE (+4.0):
-- NYK has +2.5pt advantage. Moderate edge — home court and franchise player health are the tiebreakers.
-- CLE match-sharpness (7-game series) partially offsets NYK statistical edge in Game 1.
-- Do NOT back CLE at odds shorter than 2.00 on the road in ECF Game 1 without clear statistical justification.
-- Minimum odds to bet NYK at home in ECF Game 1: only if EV ≥ 0.05 after rust adjustment (-5 conf).
+ECF — NYK (+6.5) vs CLE (+4.0) — NYK LEADS 1-0:
+- NYK has +2.5pt advantage. Now reinforced by in-series lead from Game 1 win.
+- CLE match-sharpness (7-game series) partially offset, but NYK in-series win overrides.
+- Do NOT back CLE at odds shorter than 2.00 on the road in ECF Game 2 without clear statistical justification.
+- CAUTION: NYK may be priced at 1.50-1.65 at home with in-series lead — verify EV carefully before backing.
 
 WCF — OKC (+11.1) vs SAS (+8.3) — SAS LEADS 1-0:
 - OKC season NetRtg edge (+2.8pts) is SECONDARY to SAS in-series lead.
@@ -263,17 +282,18 @@ WCF — OKC (+11.1) vs SAS (+8.3) — SAS LEADS 1-0:
 Round 2 effective NetRtg (final standings — all series complete):
 - OKC: +11.1 (WCF active — trails SAS 0-1; rust confirmed)
 - SAS: +8.3 (WCF active — leads OKC 1-0; Wembanyama active — verify MANDATORY)
-- NYK: +6.5 (ECF active; Brunson/KAT — verify active)
-- CLE: +4.0 (ECF active; Mitchell — verify active; won 7-game series showing real playoff toughness)
+- NYK: +6.5 (ECF active — leads CLE 1-0; Brunson/KAT — verify active)
+- CLE: +4.0 (ECF active — trails NYK 0-1; Mitchell — verify active; battle-tested from 7-game series)
 - LAL: +1.7 (Active Round 2; Doncic OUT — in-series execution carries)
 
 KEY LESSONS FOR CONFERENCE FINALS:
-1. SAS winning WCF Game 1 at OKC is the biggest result signal this postseason. In-series lead > season NetRtg.
-2. OKC +11.1 season dominance did NOT overcome extended rust — rust penalty is REAL at Conference Finals level.
-3. CLE proved a 4.2pt NetRtg deficit does NOT equal easy series — battle-tested teams are underrated.
-4. SAS match-sharpness (from 6-game MIN series) + Wembanyama = credible WCF threat even vs elite OKC.
-5. For any Conference Finals pick: MANDATORY franchise player health check before drafting.
-6. Home court in Conference Finals is not automatic — SAS already won Game 1 at OKC. Factor this in.
+1. NYK won ECF Game 1 — in-series lead now primary signal; rust from extended rest was not decisive.
+2. SAS winning WCF Game 1 at OKC is the biggest result signal this postseason. In-series lead > season NetRtg.
+3. OKC +11.1 season dominance did NOT overcome extended rust — rust penalty is REAL at Conference Finals level.
+4. CLE proved a 4.2pt NetRtg deficit does NOT equal easy series — battle-tested teams are underrated.
+5. SAS match-sharpness (from 6-game MIN series) + Wembanyama = credible WCF threat even vs elite OKC.
+6. For any Conference Finals pick: MANDATORY franchise player health check before drafting.
+7. Home court in Conference Finals: NYK home court was relevant (won Game 1). OKC home court was breached by SAS.
 
 ## SECTION:no_tanking
 Tanking does not exist in playoffs. All remaining teams are fully motivated.
@@ -295,6 +315,6 @@ Teams CONFIRMED ELIMINATED (no further picks):
 - Detroit Pistons: CLE won 4-3 (East Semifinals). CONFIRMED ELIMINATED. No further picks.
 
 Teams STILL ACTIVE:
-- ECF: New York Knicks vs Cleveland Cavaliers (Tied 0-0, Game 1 next)
+- ECF: New York Knicks leads Cleveland Cavaliers 1-0 (Game 2 next at NYK)
 - WCF: San Antonio Spurs leads Oklahoma City Thunder 1-0 (Game 2 next at OKC)
 - Round 2: Los Angeles Lakers — verify current Round 2 opponent and score from ESPN.
