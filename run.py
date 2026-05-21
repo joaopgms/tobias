@@ -5,7 +5,7 @@ Usage:
   python run.py settle           → Settler agent (08:00 UTC)
   python run.py analyst          → Analyst agent (10:00 UTC)
   python run.py scout            → Scout agent   (13:00 UTC)
-  python run.py commit_if_ready  → Commit agent  (every 30 min, fires once at first_game_time - 75min)
+  python run.py commit_if_ready  → Commit agent  (every 30 min, fires once at first_game_time - 105min)
   python run.py commit           → Force commit  (manual override)
 """
 
@@ -86,8 +86,8 @@ def run_commit_if_ready():
         log.info(f"commit_if_ready: could not parse first_game_time '{fgt}' — skipping")
         return
 
-    if now < t - timedelta(minutes=75):
-        remaining = int((t - timedelta(minutes=75) - now).total_seconds() / 60)
+    if now < t - timedelta(minutes=105):
+        remaining = int((t - timedelta(minutes=105) - now).total_seconds() / 60)
         log.info(f"commit_if_ready: {remaining}min until commit window — skipping")
         return
 
