@@ -2055,5 +2055,28 @@
     "tokens_in": 12977,
     "tokens_out": 3315,
     "cost_usd": 0.088656
+  },
+  {
+    "ts": "2026-05-21T16:18:08.346013+00:00",
+    "date": "2026-05-21",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_onexbet",
+    "draft_count": 0,
+    "picks": [],
+    "rejected": [
+      {
+        "match": "New York Knicks vs Cleveland Cavaliers",
+        "reason": "ESPN fallback injury source — spreads/totals BANNED. NYK ML (1.46) below 1.60 target floor. CLE ML (2.97) above 2.50 ceiling and true confidence ~32% yields negative EV: (0.32×2.97)-1 = -0.05. NYK L15 +21.2 vs CLE L15 -2.1 (massive gap) further confirms NYK strong favourite; CLE true win probability ~30-35%. Both ML sides outside target range or negative EV. Mandatory franchise player checks (Brunson/KAT, Mitchell/Allen/Mobley) unverifiable from ESPN fallback — cannot confirm health. No market meets thresholds.",
+        "ml_home": 1.46,
+        "ml_away": 2.97,
+        "decision": "rejected"
+      }
+    ],
+    "report": "Single-game slate: ECF Game 2, NYK vs CLE at Madison Square Garden. ESPN fallback injury source in effect — spreads and totals banned per data_quality_rules; confidence capped at 50 on all picks. NYK ML (1.46) falls below the 1.60 ML target floor and cannot be drafted. CLE ML (2.97) exceeds the 2.50 ceiling; true win probability estimated at ~30-35% given NYK's dominant L15 advantage (+21.2 vs -2.1), home court, and 1-0 in-series lead — yielding negative EV. Mandatory franchise player health checks (Brunson, KAT, Mitchell, Allen, Mobley) unverifiable from ESPN fallback. 0 picks drafted — no market meets combined odds range, EV, and data quality requirements.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 13520,
+    "tokens_out": 1690,
+    "cost_usd": 0.06591
   }
 ]
