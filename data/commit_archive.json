@@ -1988,5 +1988,36 @@
     "tokens_in": 11644,
     "tokens_out": 4442,
     "cost_usd": 0.101562
+  },
+  {
+    "ts": "2026-05-21T00:09:06.352646+00:00",
+    "date": "2026-05-21",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 0,
+    "cancelled_count": 1,
+    "total_staked": 0.0,
+    "bankroll_before": 1518.01,
+    "bankroll_after": 1518.01,
+    "bets": [],
+    "cancelled": [
+      {
+        "id": "nba_draft_20260520_002",
+        "match": "Oklahoma City Thunder vs San Antonio Spurs",
+        "pick": "San Antonio Spurs +7.5",
+        "reason": "Commit-time odds unavailable — live odds feed contains no data for OKC vs SAS. Mandatory odds re-validation cannot be completed without current odds. Cannot confirm spread is within valid range (1.75–2.30) or that line has not moved adversely. Cancelling per odds_validation rules: must re-validate odds before confirming any pick."
+      }
+    ],
+    "late_rejections": [
+      {
+        "match": "New York Knicks vs Cleveland Cavaliers",
+        "reason": "Game tipped off at 00:00 UTC — 9 minutes before commit time (00:09 UTC). Game is already in progress. No pre-game bets can be placed. Additionally, NYK ML (1.45) is below the ML floor of 1.65 and CLE ML (3.02) exceeds the ML ceiling of 2.50, making both ML markets invalid regardless of game status."
+      }
+    ],
+    "report": "## Commit Report — 2026-05-21T00:09:08Z | Bankroll: €1518.01\n\n---\n\n### CANCELLED — San Antonio Spurs +7.5 (WCF Game 2)\n\n- **Match:** Oklahoma City Thunder vs San Antonio Spurs | **Tip:** 00:30 UTC\n- **Pick:** SAS +7.5 | **Scout odds:** 1.92 | **Commit odds:** NOT AVAILABLE | **Move:** Unknown\n- **Stake:** €228 (15% bankroll) | **Conf:** 60/100 | **EV at scout:** 0.152\n- **Reason:** The live odds feed (theodds_onexbet) contains only NYK vs CLE odds at commit time. No OKC vs SAS spread data is present in the feed. Per `odds_validation` rules, odds MUST be re-validated before confirming any pick — spread must be confirmed within 1.75–2.30 at commit time. Without verifiable current odds, this mandatory check cannot be completed. The underlying thesis (SAS in-series lead 1-0, OKC rust confirmed, L15 NetRtg gap of +5.0 favouring SAS, OKC home court reduced premium) remains valid in principle, but the inability to verify odds integrity at commit time is a hard cancellation trigger. De'Aaron Fox's Questionable status (ankle) also remained unresolved at commit time, with no official upgrade or downgrade from `nba_official` source — the GTD concern flagged at Scout persists.\n\n---\n\n### LATE SCOUT — New York Knicks vs Cleveland Cavaliers (REJECTED)\n\n- **Match:** NYK vs CLE | **Tip:** 00:00 UTC (ALREADY IN PROGRESS)\n- **Reason:** Game tipped 9 minutes before commit time. All pre-game markets closed. No action possible.\n- **Odds check (academic):** NYK ML 1.45 (below 1.65 floor ❌), CLE ML 3.02 (above 2.50 ceiling ❌), NYK -6.5 spread at 2.0/CLE +6.5 at 1.92 (within range ✅), O/U 215.5 at 1.96 both sides (within range ✅). Spread and totals markets were technically within valid range but the game was already live — no bet possible regardless.\n\n---\n\n### SLATE SUMMARY\n\nTonight's commit session results in zero confirmed bets. The sole draft pick (SAS +7.5 WCF Game 2) was cancelled due to absence of commit-time odds in the live feed — a mandatory validation requirement that could not be waived. The only other game on the slate (NYK vs CLE ECF Game 2) had already commenced by 00:09 UTC, making any late scout bet impossible. Total stake committed: €0. Bankroll remains at €1518.01. Both Conference Finals games are now in progress; the next betting window opens at the Scout phase prior to Games 3.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 13582,
+    "tokens_out": 2167,
+    "cost_usd": 0.073251
   }
 ]
