@@ -2019,5 +2019,53 @@
     "tokens_in": 13582,
     "tokens_out": 2167,
     "cost_usd": 0.073251
+  },
+  {
+    "ts": "2026-05-21T23:11:25.012438+00:00",
+    "date": "2026-05-21",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 1,
+    "cancelled_count": 0,
+    "total_staked": 227.7,
+    "bankroll_before": 1518.01,
+    "bankroll_after": 1290.31,
+    "bets": [
+      {
+        "id": "nba_bet_20260521_001",
+        "match": "New York Knicks vs Cleveland Cavaliers",
+        "time": "2026-05-22T00:00:00Z",
+        "pick": "New York Knicks -4.5 (spread)",
+        "odds": 1.88,
+        "stake": 227.7,
+        "potential_return": 428.08,
+        "reasoning": "Late scout pick. Injury source upgraded to nba_official at commit time (was ESPN fallback at Scout — spreads now permitted). No injury reports for any anchor players (Brunson, KAT, Mitchell, Allen, Mobley all presumed active). NYK is home team at MSG with in-series lead 1-0 in ECF. NYK season NetRtg +6.5 vs CLE +4.0 (+2.5 edge), amplified by L15 gap of +23.3pts (NYK +21.2 vs CLE -2.1). NYK home court in playoffs worth +3-4pts, giving effective edge of ~5.5-6.5pts vs spread of -4.5. Medium confidence tier (55-69) is outperforming at 56.8% per performance notes. EV = (0.65 × 1.88) - 1 = 0.222. Both ML markets remain out of valid range (NYK 1.52 < 1.65 floor; CLE 2.76 > 2.50 ceiling). Spread is the only viable market meeting all validation criteria.",
+        "confidence": 65,
+        "anchor_players": [
+          "Jalen Brunson",
+          "Karl-Anthony Towns",
+          "Donovan Mitchell",
+          "Jarrett Allen",
+          "Evan Mobley"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null,
+        "committed_at": "2026-05-21T23:11:26Z"
+      }
+    ],
+    "cancelled": [],
+    "late_rejections": [
+      {
+        "match": "New York Knicks vs Cleveland Cavaliers",
+        "reason": "NYK ML @ 1.52 rejected — below 1.65 floor (odds out of valid range). CLE ML @ 2.76 rejected — above 2.50 ceiling (odds out of valid range). O/U 215.5 evaluated but quantity gate already consumed by spread pick (max 1 new pick at commit phase). Spread NYK -4.5 @ 1.88 selected as the single late pick — only market meeting all validation criteria with nba_official injury source now active."
+      }
+    ],
+    "report": "## Commit Report — 2026-05-21T23:11:26Z\n\n### No Draft Picks to Review\nScout submitted 0 draft picks. Proceeding directly to late scout evaluation.\n\n---\n\n### CONFIRMED — New York Knicks -4.5 (Spread)\n\n- **Match:** New York Knicks vs Cleveland Cavaliers | **Tip:** 2026-05-22T00:00 UTC\n- **Pick:** NYK -4.5 | **Scout odds:** N/A (late pick) | **Commit odds:** 1.88 | **Move:** N/A\n- **ML:** NYK 1.52 / CLE 2.76 | **ATS:** -4.5 (1.88 / 2.04) | **O/U:** 215.5 (O:2.04 / U:1.88)\n- **Stake:** €227.70 | **Pot:** €428.08 | **Conf:** 65/100 | **EV:** 0.222\n\n**Key trigger for late pick:** At Scout time (14:00), injury source was ESPN fallback — spreads/totals were BANNED per data_quality_rules. At commit time (23:11), injury source has upgraded to **nba_official**, lifting the spread ban. This is the material change that creates the late pick opportunity.\n\n**Edge validation:**\n- All anchor players presumed active (no injury reports filed for NYK or CLE tonight)\n- NYK home at MSG (in-series lead 1-0 ECF), L15 NetRtg gap is +23.3pts (NYK +21.2 vs CLE -2.1) — largest signal\n- Season NetRtg edge: +2.5pts NYK, compounded by home court +3-4pts in playoffs → effective edge ~5.5-6.5pts vs spread of 4.5\n- Odds valid: 1.88 within 1.80-2.30 spread target range ✅\n- EV: 0.222 — well above 0.05 minimum ✅\n- Medium confidence tier (55-69) currently outperforming at 56.8% — no reason to over-cancel\n- Total exposure: €227.70 = 15.0% of bankroll — within 70% cap ✅\n\n---\n\n### CANCELLED — NYK ML (late scout evaluated)\n- **Reason:** Odds 1.52 below 1.65 ML floor — out of valid range\n- **Odds at cancel:** 1.52\n\n### CANCELLED — CLE ML (late scout evaluated)\n- **Reason:** Odds 2.76 above 2.50 ML ceiling — out of valid range. EV also negative: (0.32 × 2.76) - 1 = -0.12\n- **Odds at cancel:** 2.76\n\n### CANCELLED — O/U 215.5 (late scout evaluated, not added)\n- **Reason:** Quantity gate — max 1 new pick at commit phase already consumed by NYK spread pick. O/U was not prioritised over the higher-conviction spread opportunity.\n\n---\n\n### Slate Summary\n\nTonight's single action is a late pick on NYK -4.5 at home in ECF Game 2 (or Game 3), triggered by the injury source upgrading from ESPN fallback to nba_official at commit time, which lifted the spread ban that Scout correctly applied. The NYK spread at 1.88 is the only market within valid range — both ML lines are outside the valid window (NYK too short at 1.52, CLE too high at 2.76). With no injury reports filed, a +23.3pt L15 NetRtg gap, in-series lead, and home court advantage, NYK covering -4.5 at MSG represents genuine medium-confidence value (EV 0.222) at a controlled 15% bankroll stake of €227.70.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 11603,
+    "tokens_out": 3619,
+    "cost_usd": 0.089094
   }
 ]
