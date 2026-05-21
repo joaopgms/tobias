@@ -26,7 +26,7 @@
           "wins": 24,
           "losses": 17,
           "peak_bankroll": 1917.57,
-          "total_bets": 41
+          "total_bets": 42
         }
       ]
     }
@@ -2262,6 +2262,43 @@
       ],
       "bets": [],
       "summary": "Day 2026-05-21 commit — 0 bets totalling €0.00. 1 cancelled. Bankroll: €1518.01 → €1518.01."
+    },
+    {
+      "entry_id": "nba_entry_20260521",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-05-21T23:11:25.012438+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1518.01,
+      "total_staked": 227.7,
+      "bankroll_after": 1290.31,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260521_001",
+          "match": "New York Knicks vs Cleveland Cavaliers",
+          "time": "2026-05-22T00:00:00Z",
+          "pick": "New York Knicks -4.5 (spread)",
+          "odds": 1.88,
+          "stake": 227.7,
+          "potential_return": 428.08,
+          "reasoning": "Late scout pick. Injury source upgraded to nba_official at commit time (was ESPN fallback at Scout — spreads now permitted). No injury reports for any anchor players (Brunson, KAT, Mitchell, Allen, Mobley all presumed active). NYK is home team at MSG with in-series lead 1-0 in ECF. NYK season NetRtg +6.5 vs CLE +4.0 (+2.5 edge), amplified by L15 gap of +23.3pts (NYK +21.2 vs CLE -2.1). NYK home court in playoffs worth +3-4pts, giving effective edge of ~5.5-6.5pts vs spread of -4.5. Medium confidence tier (55-69) is outperforming at 56.8% per performance notes. EV = (0.65 × 1.88) - 1 = 0.222. Both ML markets remain out of valid range (NYK 1.52 < 1.65 floor; CLE 2.76 > 2.50 ceiling). Spread is the only viable market meeting all validation criteria.",
+          "confidence": 65,
+          "anchor_players": [
+            "Jalen Brunson",
+            "Karl-Anthony Towns",
+            "Donovan Mitchell",
+            "Jarrett Allen",
+            "Evan Mobley"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-05-21T23:11:26Z"
+        }
+      ],
+      "summary": "Day 2026-05-21 commit — 1 bets totalling €227.70. 0 cancelled. Bankroll: €1518.01 → €1290.31."
     }
   ]
 }
