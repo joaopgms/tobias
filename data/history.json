@@ -2242,6 +2242,26 @@
         }
       ],
       "summary": "Day 2026-05-19 commit — 1 bets totalling €200.09. 0 cancelled. Bankroll: €1333.93 → €1133.84."
+    },
+    {
+      "entry_id": "nba_entry_20260521",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-05-21T00:09:06.352646+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1518.01,
+      "total_staked": 0.0,
+      "bankroll_after": 1518.01,
+      "cancelled_picks": [
+        {
+          "id": "nba_draft_20260520_002",
+          "match": "Oklahoma City Thunder vs San Antonio Spurs",
+          "pick": "San Antonio Spurs +7.5",
+          "reason": "Commit-time odds unavailable — live odds feed contains no data for OKC vs SAS. Mandatory odds re-validation cannot be completed without current odds. Cannot confirm spread is within valid range (1.75–2.30) or that line has not moved adversely. Cancelling per odds_validation rules: must re-validate odds before confirming any pick."
+        }
+      ],
+      "bets": [],
+      "summary": "Day 2026-05-21 commit — 0 bets totalling €0.00. 1 cancelled. Bankroll: €1518.01 → €1518.01."
     }
   ]
 }
