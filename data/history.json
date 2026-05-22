@@ -23,7 +23,7 @@
           "game": 2,
           "started_at": "2026-04-05T10:44:07.102344+00:00",
           "bankroll_start": 1000.0,
-          "wins": 24,
+          "wins": 25,
           "losses": 17,
           "peak_bankroll": 1917.57,
           "total_bets": 42
@@ -2291,10 +2291,10 @@
             "Jarrett Allen",
             "Evan Mobley"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "WON",
+          "returned": 428.08,
+          "pnl": 200.38,
+          "settled_at": "2026-05-22T10:52:38.106055+00:00",
           "committed_at": "2026-05-21T23:11:26Z"
         }
       ],
