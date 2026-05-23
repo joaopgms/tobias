@@ -2299,6 +2299,26 @@
         }
       ],
       "summary": "Day 2026-05-21 commit — 1 bets totalling €227.70. 0 cancelled. Bankroll: €1518.01 → €1290.31."
+    },
+    {
+      "entry_id": "nba_entry_20260523",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-05-23T00:08:50.455458+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1718.39,
+      "total_staked": 0.0,
+      "bankroll_after": 1718.39,
+      "cancelled_picks": [
+        {
+          "id": "nba_draft_20260522_001",
+          "match": "San Antonio Spurs vs Oklahoma City Thunder",
+          "pick": "San Antonio Spurs ML",
+          "reason": "Game not present in tonight's live slate (slate shows only CLE vs NYK at 00:00 UTC) and no SAS/OKC odds appear in the live Betano feed at commit time. Cannot verify commit-time odds are within valid range — odds validation is impossible without live data. Additionally, anchor players De'Aaron Fox (SAS) and Jalen Williams (OKC) remain Questionable/GTD with no official status resolution from the NBA injury feed. Cancelling: commit-time odds unavailable and game unconfirmed on tonight's slate."
+        }
+      ],
+      "bets": [],
+      "summary": "Day 2026-05-23 commit — 0 bets totalling €0.00. 1 cancelled. Bankroll: €1718.39 → €1718.39."
     }
   ]
 }
