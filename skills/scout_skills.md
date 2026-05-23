@@ -1,7 +1,7 @@
 ---
-version: 61
-updated_at: 2026-05-22T12:14:56.867635+00:00
-updated_by: analyst_2026-05-22
+version: 62
+updated_at: 2026-05-23T11:06:27.377072+00:00
+updated_by: analyst_2026-05-23
 llm: claude-sonnet-4-6
 ---
 
@@ -95,17 +95,17 @@ NOTE — PLAYOFF PHASE: All remaining teams are fully motivated. Roster-only fla
 
 Oklahoma City Thunder:
 - Thomas Sorber (C): OUT [roster-only]
-NOTE: OKC in WCF vs SAS (TIED 1-1, Game 4 next). Re-verify Shai Gilgeous-Alexander, Chet Holmgren active before ANY OKC WCF pick. MANDATORY.
+NOTE: OKC in WCF vs SAS (leads 2-1, Game 4 next). Re-verify Shai Gilgeous-Alexander, Chet Holmgren active before ANY OKC WCF pick. MANDATORY.
 
 San Antonio Spurs:
 - David Jones Garcia (F): OUT [roster-only]
-NOTE: SAS in WCF vs OKC (TIED 1-1, Game 4 next). Re-verify Victor Wembanyama active before ANY SAS WCF pick. MANDATORY.
+NOTE: SAS in WCF vs OKC (trails 1-2, Game 4 next). Re-verify Victor Wembanyama active before ANY SAS WCF pick. MANDATORY.
 
 New York Knicks:
-NOTE: NYK in ECF vs CLE (leads 2-0, Game 3 next at CLE). Re-verify Jalen Brunson, Karl-Anthony Towns active before any ECF pick. MANDATORY.
+NOTE: NYK in ECF vs CLE (leads 3-0, Game 4 next at NYK if CLE won Game 3, or series over if NYK won Game 3). Re-verify Jalen Brunson, Karl-Anthony Towns active before any ECF pick. MANDATORY.
 
 Cleveland Cavaliers:
-NOTE: CLE in ECF vs NYK (trails 0-2, Game 3 next at CLE home — must-win). Re-verify Donovan Mitchell, Jarrett Allen, Evan Mobley active before any ECF pick. MANDATORY.
+NOTE: CLE in ECF vs NYK (trails 0-3 if NYK won Game 3, or 1-2 if CLE won Game 3 at home). Re-verify Donovan Mitchell, Jarrett Allen, Evan Mobley active before any ECF pick. MANDATORY.
 
 Los Angeles Lakers:
 - Luka Doncic (G): OUT [roster-only] — FRANCHISE PLAYER.
