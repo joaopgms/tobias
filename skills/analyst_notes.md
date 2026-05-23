@@ -1,14 +1,14 @@
 ---
-date: 2026-05-22
+date: 2026-05-23
 llm: claude-sonnet-4-6
 scout_patches: 1
 commit_patches: 0
 milestone: daily (41 bets)
 ---
 
-## Today's Analysis — 2026-05-22
+## Today's Analysis — 2026-05-23
 
-ECF has shifted decisively — NYK leads 2-0 and CLE now faces near-elimination entering Game 3 at home; CLE's desperation at home (historically ~60-65% win rate when down 0-2 in a series) makes them a credible live underdog worth evaluating at appropriate odds, but NYK's dominant in-series lead remains the primary signal. WCF remains live at 1-1 but Game 3 result (SAS hosting) is critical context that must be verified from ESPN before any Game 4 pick is drafted — whoever leads 2-1 will carry a strong series advantage. The ML market continues to underperform (-€524.71, 45.8%) while spreads (+€350.41, 53.6%) and medium confidence picks (+€1,016.26, 59.0%) are the profit drivers; Scout should continue prioritising spread evaluation in Conference Finals and maintain the EV ≥ 0.08 filter for ML picks in the 1.70-1.89 odds range.
+WCF has shifted decisively: OKC leads SAS 2-1 per ESPN live feed, making OKC the clear series favourite with both in-series lead and superior NetRtg (+11.1 vs +8.3). Game 4 is likely at SAS home (standard bracket Games 3-4 at higher seed's opponent for road games) — Wembanyama's health and SAS home court desperation are the key swing factors to monitor before drafting. ECF Game 3 result must be verified from ESPN before any Game 4 drafting; if NYK leads 3-0, CLE faces near-elimination at home and the historical ~3% comeback rate means NYK should be backed with confidence even on the road, while a 2-1 NYK lead would keep the series more open with CLE home motivation still meaningful. Performance data continues to show ML at 1.70-1.89 as the weakest market segment (9W/10L, -€818) — Scout should default to spread evaluation first in Conference Finals where advanced stats are fully available for both teams.
 
 ## Performance Stats
 ALL-TIME: 30W / 29L | Win rate: 50.8% | P&L: €-19.85 | Avg odds: 1.94 | Avg conf: 65.6/100
@@ -20,22 +20,22 @@ By odds range:  1.70-1.89 20bets 10W/10L 50.0% €-617.67  |  1.90-2.09 35bets 1
 
 
 ## Scout patches applied
-- [franchise_player_rules] Updating WCF series state to TIED 1-1 with Game 4 next (from Game 3), and ECF to NYK leads 2-0 with Game 3 at CLE next, based on live ESPN playoff feed.
+- [franchise_player_rules] Updating WCF series state to OKC leads 2-1 per ESPN live feed and ECF to reflect Game 3 has passed (NYK led 2-0 entering Game 3); all other verified absences unchanged from injury feed.
 
 ## Commit patches applied
 None
 
 ## Playoff context patches applied
-- [phase] Updating ECF to NYK leads 2-0 (Game 3 next at CLE) and WCF to TIED 1-1 (Game 4 next) per ESPN live playoff feed.
-- [series_context] Updating ECF to NYK leads 2-0 with Game 3 at CLE (elimination pressure on CLE), and flagging WCF Game 4 contingency on Game 3 result which must be verified from ESPN.
-- [elimination_flags] CLE now trails ECF 0-2 and faces near-elimination pressure entering Game 3 at home; WCF Game 4 location depends on Game 3 outcome which must be verified.
-- [playoff_rest] Updating ECF rest context to reflect NYK 2-0 lead and CLE maximum desperation at home in Game 3; flagging WCF Game 4 rest assessment contingent on Game 3 result.
-- [playoff_motivation] Updating ECF to NYK 2-0 with CLE facing near-elimination at home Game 3, and flagging WCF Game 4 as contingent on Game 3 verification from ESPN.
-- [h2h_playoff] Updating ECF in-series data to NYK 2-0 with CLE facing near-elimination, and flagging WCF Game 4 as fully contingent on Game 3 result verification from ESPN.
-- [l15_caveat] Updating ECF to NYK 2-0 dominant lead with CLE near-elimination context for Game 3, and establishing hard gate on WCF Game 4 requiring Game 3 result verification from ESPN.
-- [no_tanking] Updating CLE near-elimination status (trails 0-2, must win Game 3) and WCF Game 4 contingency status requiring ESPN verification of Game 3 result.
+- [phase] Updating WCF to OKC leads 2-1 per ESPN live feed and clarifying ECF Game 3 status requires ESPN verification before Game 4 drafting.
+- [series_context] Updating WCF to OKC leads 2-1 per ESPN live feed and adding conditional ECF Game 3 outcome framing since Game 3 result requires ESPN verification before any ECF Game 4 drafting.
+- [elimination_flags] Updating WCF elimination flags to reflect OKC leads 2-1 (SAS under must-win pressure) and adding conditional ECF flags based on Game 3 outcome pending ESPN verification.
+- [playoff_rest] Updating WCF rest context to reflect OKC leads 2-1 with Game 4 likely at SAS home, and flagging ECF rest context is contingent on Game 3 result verification from ESPN.
+- [playoff_motivation] Updating WCF motivation to reflect OKC leads 2-1 (primary in-series signal now established) and restructuring ECF framing to be conditional on Game 3 result pending ESPN verification.
+- [h2h_playoff] Updating WCF h2h_playoff section to reflect OKC leads 2-1 as confirmed by ESPN live feed and restructuring ECF h2h framing to be conditional on Game 3 outcome requiring ESPN verification.
+- [l15_caveat] Updating WCF l15_caveat to reflect OKC leads 2-1 as confirmed by ESPN live feed, adding SAS-trailing-1-2 home game framing, and making ECF guidance conditional on Game 3 result verification.
+- [no_tanking] Updating no_tanking section to reflect OKC leads WCF 2-1 (SAS near-elimination pressure added) and making ECF near-elimination flags conditional on Game 3 result pending ESPN verification.
 
 ## Intelligence gaps identified
-- **ECF Game 3 odds for CLE at home (trailing 0-2) are unknown — historical 0-2 series desperation data suggests CLE ~60-65% to win Game 3 at home, but no rule currently encodes this pattern.** — If CLE opens at 1.70-1.85 as home underdog trailing 0-2, the desperation + home court edge may represent genuine value that Scout would currently underprice without a specific near-elimination home game rule. → Add a playoff_motivation sub-rule: 'Team trailing 0-2 in Conference Finals hosting Game 3 → apply +8 confidence bonus (desperation + home court compound effect, historical ~62% win rate). Only override if franchise player confirmed absent or opponent NetRtg gap > 5pts.'
-- **WCF Game 4 pick cannot be drafted this session without Game 3 result — the system has no hard gate preventing Scout from drafting a WCF pick based on stale 1-1 series data.** — If Scout drafts a WCF Game 4 pick using the pre-Game 3 tied-series framing but Game 3 has already been played, the pick thesis would be built on incorrect series state — a systematic error. → Add a data_quality_rules entry: 'When drafting any playoff pick for Game N+1, verify the Game N result from ESPN as a mandatory pre-draft gate. If Game N result is unavailable, do NOT draft Game N+1 pick.' This is already partially in playoff_context notes but should be a hard rule in data_quality_rules.
-- **No tracking of NYK road performance metrics in ECF — NYK has played both ECF games at home (Games 1 and 2) and Game 3 at CLE is their first road game; Scout lacks a framework for evaluating a team's first road game in a series.** — First road game in a playoff series carries a specific psychological and tactical adjustment cost — teams that dominated at home sometimes struggle in their first road environment. Without this signal, Scout may over-weight NYK's in-series lead for a road game. → Add to h2h_playoff or selectivity: 'First road game in a series for the leading team → apply confidence -5 (road environment adjustment, especially if all prior series wins were at home). Offset if NetRtg gap > 5pts or opponent franchise player absent.'
+- **WCF Game 3 specific result details (score, Wembanyama performance/minutes, SGA performance) are not in the current data feed — only the series score update is confirmed.** — Wembanyama's Game 3 performance would materially affect Game 4 confidence — if he was limited or injured in Game 3, SAS Game 4 backing becomes riskier even at home. → Fetch ESPN box score for WCF Game 3 before Scout runs; add Wembanyama minutes/performance gate to WCF game-day verification protocol.
+- **LAL Round 2 opponent identity and current series score are not confirmed in the current data feed despite LAL being listed as active.** — Scout cannot draft any LAL Round 2 pick without knowing the opponent, series score, and whether Doncic-free LAL has a viable edge in context. → Add mandatory ESPN bracket lookup for LAL Round 2 opponent and series score as a hard gate in franchise_player_rules LAL note — already partially present but the opponent is still unidentified.
+- **No L15 NetRtg data is available for WCF or ECF teams in the current advanced stats feed — only season NetRtg is provided.** — L15 NetRtg is the primary short-term directional signal per priority_stats; without it for Conference Finals teams, Scout is relying entirely on season NetRtg which may not reflect current form (e.g. CLE's form entering playoffs vs their season average). → Add a Conference Finals L15 flag to priority_stats: if L15 NetRtg is unavailable for either Conference Finals team, apply confidence -5 on any pick where L15 would be decisive, and escalate in-series data to full primary signal.
