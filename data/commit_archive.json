@@ -2067,5 +2067,36 @@
     "tokens_in": 11603,
     "tokens_out": 3619,
     "cost_usd": 0.089094
+  },
+  {
+    "ts": "2026-05-23T00:08:50.455458+00:00",
+    "date": "2026-05-23",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 0,
+    "cancelled_count": 1,
+    "total_staked": 0.0,
+    "bankroll_before": 1718.39,
+    "bankroll_after": 1718.39,
+    "bets": [],
+    "cancelled": [
+      {
+        "id": "nba_draft_20260522_001",
+        "match": "San Antonio Spurs vs Oklahoma City Thunder",
+        "pick": "San Antonio Spurs ML",
+        "reason": "Game not present in tonight's live slate (slate shows only CLE vs NYK at 00:00 UTC) and no SAS/OKC odds appear in the live Betano feed at commit time. Cannot verify commit-time odds are within valid range — odds validation is impossible without live data. Additionally, anchor players De'Aaron Fox (SAS) and Jalen Williams (OKC) remain Questionable/GTD with no official status resolution from the NBA injury feed. Cancelling: commit-time odds unavailable and game unconfirmed on tonight's slate."
+      }
+    ],
+    "late_rejections": [
+      {
+        "match": "Cleveland Cavaliers vs New York Knicks",
+        "reason": "Game tipped off at 00:00 UTC. Current time is 00:08:52 UTC — game is already in progress. Time gate requires first_game_time - now > 20 minutes. Gate fails by approximately 8+ minutes. No new picks can be added for a game already underway. Secondary evaluation: CLE ML at 1.77 would have failed confidence gate (estimated confidence ~52, below 60 minimum for late scout picks) due to CLE's poor L15 NetRtg of -2.1 vs NYK's dominant L15 of +21.2, despite home court and desperation motivation. NYK ML at 2.19 would have had confidence considerations but game in-progress renders moot. All CLE/NYK markets rejected: game already started."
+      }
+    ],
+    "report": "## Commit Report — 2026-05-23T00:08:52Z | Bankroll: €1,718.39\n\n---\n\n### CANCELLED — San Antonio Spurs ML\n\n- **Match:** San Antonio Spurs vs Oklahoma City Thunder | Tip: 2026-05-23T00:30:00Z\n- **Pick:** SAS ML | Scout odds: 1.80 | Commit odds: N/A (not in live feed) | Move: Unknown\n- **Odds at cancel:** Not available in live feed (was 1.80 at Scout)\n- **Reason:**\n\n**Primary Cancel Trigger — Commit-Time Odds Unavailable:**\nThe live Betano odds feed (source: theodds_onexbet) contains only the Cleveland Cavaliers vs New York Knicks game. SAS vs OKC does not appear anywhere in the live odds feed, and tonight's full slate explicitly lists only \"Cleveland Cavaliers vs New York Knicks — 00:00 UTC.\" Without live commit-time odds, it is impossible to validate whether the 1.80 ML line has moved within or outside the valid range (floor 1.65, ceiling 2.50). Odds validation is a hard gate — cannot confirm without it.\n\n**Secondary Factor — Anchor Players Unresolved:**\nNo NBA official injury report was available for SAS/OKC at commit time (the injury feed states \"No injury reports for tonight's teams,\" and SAS/OKC is not tonight's slate team). De'Aaron Fox (SAS, Right Ankle, Questionable) and Jalen Williams (OKC, Soreness, Questionable) remain unresolved. The draft's confidence adjustment (-10 for Fox QTD, +5 for Williams QTD) was based on game-time uncertainty that has not been resolved.\n\n**Tertiary Factor — Game Scheduling Ambiguity:**\nThe drafted game time (00:30 UTC) does not appear in tonight's confirmed slate. While the WCF Game 4 was expected at SAS home (Frost Bank Center), it cannot be confirmed from available data sources.\n\n---\n\n### LATE SCOUT — Cleveland Cavaliers vs New York Knicks\n\n**ECF Game 3 | CLE at home | NYK leads series 2-0**\n\n**Time gate: FAILED.** Game tipped at 00:00 UTC; commit time is 00:08:52 UTC. Game is approximately 8-9 minutes into the first quarter. No picks can be added for an in-progress game.\n\n**Pre-start evaluation (for record):**\n- CLE ML 1.77: Estimated confidence ~52 (home court +5, desperation +5, but CLE L15 -2.1 is very weak vs NYK L15 +21.2 which represents a -13pt directional swing). Below the 60 confidence gate for late scout picks. Would not have qualified.\n- NYK ML 2.19: In valid odds range. NYK L15 +21.2 strong, 2-0 in-series lead dominant. Confidence would be ~63-65 with no injury data. EV = (0.64 × 2.19) - 1 = 0.40 — well above 0.05. This would have been the most viable late pick, but game in progress renders it moot.\n- CLE Spread -2.5 at 1.96: No injury data for anchor players; Mitchell/Allen/Mobley status not confirmed active. Combined with game-in-progress, rejected.\n- Total 213.5 at 1.96: Pace signals don't meet strong Over/Under threshold criteria. Rejected regardless.\n\n---\n\n### Slate Summary\n\nTonight's committed slate is empty (€0 of €1,718.39 bankroll deployed). The sole draft pick — SAS ML at 1.80 — was cancelled because the game does not appear in the live odds feed and commit-time odds validation is impossible. The only confirmed game on tonight's slate (CLE vs NYK, ECF Game 3) had already tipped off by the time of commit review, making all CLE/NYK markets ineligible under the time gate rule. Bankroll remains fully intact at €1,718.39 for tomorrow's session.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 14744,
+    "tokens_out": 3321,
+    "cost_usd": 0.094047
   }
 ]
