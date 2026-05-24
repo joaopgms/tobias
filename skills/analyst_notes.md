@@ -1,14 +1,14 @@
 ---
-date: 2026-05-23
+date: 2026-05-24
 llm: claude-sonnet-4-6
 scout_patches: 1
 commit_patches: 0
 milestone: daily (41 bets)
 ---
 
-## Today's Analysis — 2026-05-23
+## Today's Analysis — 2026-05-24
 
-WCF has shifted decisively: OKC leads SAS 2-1 per ESPN live feed, making OKC the clear series favourite with both in-series lead and superior NetRtg (+11.1 vs +8.3). Game 4 is likely at SAS home (standard bracket Games 3-4 at higher seed's opponent for road games) — Wembanyama's health and SAS home court desperation are the key swing factors to monitor before drafting. ECF Game 3 result must be verified from ESPN before any Game 4 drafting; if NYK leads 3-0, CLE faces near-elimination at home and the historical ~3% comeback rate means NYK should be backed with confidence even on the road, while a 2-1 NYK lead would keep the series more open with CLE home motivation still meaningful. Performance data continues to show ML at 1.70-1.89 as the weakest market segment (9W/10L, -€818) — Scout should default to spread evaluation first in Conference Finals where advanced stats are fully available for both teams.
+NYK leads ECF 3-0 with CLE facing near-elimination at home for Game 4 — the 0-3 historical comeback rate (~3%) makes NYK the dominant series favourite, but CLE's home court + maximum desperation creates real single-game value at 2.10+. OKC leads WCF 2-1 with Game 5 likely at OKC home, giving OKC a three-way compound advantage (in-series lead, superior NetRtg +11.1, home court) — SAS must win on the road to avoid a near-fatal 1-3 deficit, making Wembanyama's health the swing variable. Performance data continues to show Medium confidence (55-69) outperforming at 59.0% WR +€1016, while High confidence (70-84) remains a loss leader at 38.9% -€894 — Conference Finals picks should stay in the Medium tier unless multiple confirming signals converge. Ajay Mitchell (OKC, G) is newly confirmed OUT per verified feed and has been added to franchise_player_rules.
 
 ## Performance Stats
 ALL-TIME: 30W / 29L | Win rate: 50.8% | P&L: €-19.85 | Avg odds: 1.94 | Avg conf: 65.6/100
@@ -20,22 +20,22 @@ By odds range:  1.70-1.89 20bets 10W/10L 50.0% €-617.67  |  1.90-2.09 35bets 1
 
 
 ## Scout patches applied
-- [franchise_player_rules] Updating WCF series state to OKC leads 2-1 per ESPN live feed and ECF to reflect Game 3 has passed (NYK led 2-0 entering Game 3); all other verified absences unchanged from injury feed.
+- [franchise_player_rules] ESPN live feed confirms OKC leads WCF 2-1 with Game 5 next (series now at Game 5, not Game 4), NYK leads ECF 3-0 with CLE facing near-elimination; also adding Ajay Mitchell (OKC) now confirmed OUT per verified feed.
 
 ## Commit patches applied
 None
 
 ## Playoff context patches applied
-- [phase] Updating WCF to OKC leads 2-1 per ESPN live feed and clarifying ECF Game 3 status requires ESPN verification before Game 4 drafting.
-- [series_context] Updating WCF to OKC leads 2-1 per ESPN live feed and adding conditional ECF Game 3 outcome framing since Game 3 result requires ESPN verification before any ECF Game 4 drafting.
-- [elimination_flags] Updating WCF elimination flags to reflect OKC leads 2-1 (SAS under must-win pressure) and adding conditional ECF flags based on Game 3 outcome pending ESPN verification.
-- [playoff_rest] Updating WCF rest context to reflect OKC leads 2-1 with Game 4 likely at SAS home, and flagging ECF rest context is contingent on Game 3 result verification from ESPN.
-- [playoff_motivation] Updating WCF motivation to reflect OKC leads 2-1 (primary in-series signal now established) and restructuring ECF framing to be conditional on Game 3 result pending ESPN verification.
-- [h2h_playoff] Updating WCF h2h_playoff section to reflect OKC leads 2-1 as confirmed by ESPN live feed and restructuring ECF h2h framing to be conditional on Game 3 outcome requiring ESPN verification.
-- [l15_caveat] Updating WCF l15_caveat to reflect OKC leads 2-1 as confirmed by ESPN live feed, adding SAS-trailing-1-2 home game framing, and making ECF guidance conditional on Game 3 result verification.
-- [no_tanking] Updating no_tanking section to reflect OKC leads WCF 2-1 (SAS near-elimination pressure added) and making ECF near-elimination flags conditional on Game 3 result pending ESPN verification.
+- [phase] ESPN live feed confirms NYK leads ECF 3-0 and OKC leads WCF 2-1 with Game 5 (not Game 4) now next for WCF; ECF framing must reflect confirmed 3-0 series state with near-elimination context for CLE.
+- [series_context] ESPN live feed confirms NYK leads ECF 3-0 (Game 4 at CLE next) and OKC leads WCF 2-1 with Game 5 next; series framing must reflect confirmed 3-0 state for ECF and advance WCF from Game 4 to Game 5 context.
+- [elimination_flags] ESPN live feed confirms NYK leads ECF 3-0 placing CLE in near-elimination at home for Game 4, and WCF advances to Game 5 (not Game 4) context with SAS facing must-win on road at OKC.
+- [playoff_rest] Series has advanced — ECF is now Game 4 (NYK leads 3-0) and WCF is now Game 5 (OKC leads 2-1); rest context must reflect confirmed series scores and correct game number framing.
+- [playoff_motivation] ECF confirmed at 3-0 NYK lead and WCF at Game 5 (not Game 4) context; motivation framing must be updated to reflect correct series scores, near-elimination status for CLE, and WCF Game 5 location shift to OKC home.
+- [h2h_playoff] ECF confirmed 3-0 NYK lead and WCF shifts to Game 5 context at OKC home; H2H and in-series signals must reflect updated series scores and correct game location framing.
+- [l15_caveat] ECF confirmed 3-0 NYK lead and WCF advances to Game 5 context (likely at OKC home); L15 caveat hierarchy must reflect updated in-series data and correct near-elimination framing for CLE.
+- [no_tanking] ESPN live feed confirms NYK leads ECF 3-0 (CLE in near-elimination) and WCF Game 5 is next (likely at OKC home after SAS hosted Games 3-4); elimination flags and active team status must reflect confirmed series scores.
 
 ## Intelligence gaps identified
-- **WCF Game 3 specific result details (score, Wembanyama performance/minutes, SGA performance) are not in the current data feed — only the series score update is confirmed.** — Wembanyama's Game 3 performance would materially affect Game 4 confidence — if he was limited or injured in Game 3, SAS Game 4 backing becomes riskier even at home. → Fetch ESPN box score for WCF Game 3 before Scout runs; add Wembanyama minutes/performance gate to WCF game-day verification protocol.
-- **LAL Round 2 opponent identity and current series score are not confirmed in the current data feed despite LAL being listed as active.** — Scout cannot draft any LAL Round 2 pick without knowing the opponent, series score, and whether Doncic-free LAL has a viable edge in context. → Add mandatory ESPN bracket lookup for LAL Round 2 opponent and series score as a hard gate in franchise_player_rules LAL note — already partially present but the opponent is still unidentified.
-- **No L15 NetRtg data is available for WCF or ECF teams in the current advanced stats feed — only season NetRtg is provided.** — L15 NetRtg is the primary short-term directional signal per priority_stats; without it for Conference Finals teams, Scout is relying entirely on season NetRtg which may not reflect current form (e.g. CLE's form entering playoffs vs their season average). → Add a Conference Finals L15 flag to priority_stats: if L15 NetRtg is unavailable for either Conference Finals team, apply confidence -5 on any pick where L15 would be decisive, and escalate in-series data to full primary signal.
+- **WCF Game 5 location (OKC vs SAS) is inferred from standard bracket but not explicitly confirmed from ESPN — it is listed as 'verify from ESPN' throughout the context.** — If Game 5 is at SAS (due to a schedule anomaly or make-up game), the home court framing entirely flips — backing OKC at shorter odds on the road would be a significant error. → Add a hard gate in series_context: 'MANDATORY: Verify WCF Game 5 location from ESPN bracket before any pick is drafted — do NOT assume OKC home.' This is already present but should be elevated to a blocking gate similar to franchise player checks.
+- **LAL Round 2 opponent and current series score remain unconfirmed — the context consistently says 'verify from ESPN' but the opponent identity and series state are never populated.** — If LAL is in a close series (e.g. trailing or facing elimination), the staking and confidence framing changes materially — a LAL team without Doncic in a must-win game is a very different risk profile than a comfortable series lead. → Fetch LAL Round 2 opponent and current series score from ESPN bracket and populate it explicitly in series_context and franchise_player_rules at next session — this is a data pipeline fetch, not a rule change.
+- **No in-series performance tracking for how well our confidence calibration performs specifically in elimination games (0-3 trailing, 1-3 trailing contexts).** — Elimination games historically skew toward the trailing team winning at home (~55-65% for 0-3 teams winning Game 4) — if we are consistently backing the series leader in elimination contexts, we may be leaving value on the trailing team. → After Conference Finals conclude, audit settled bets tagged as 'elimination game' context and measure win rate vs our confidence vs actual outcome — flag in next session if 3+ elimination game bets exist.
