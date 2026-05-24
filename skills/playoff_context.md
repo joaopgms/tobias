@@ -1,7 +1,7 @@
 ---
-version: 35
-updated_at: 2026-05-23T11:06:27.377072+00:00
-updated_by: analyst_2026-05-23
+version: 36
+updated_at: 2026-05-24T11:11:43.813696+00:00
+updated_by: analyst_2026-05-24
 llm: claude-sonnet-4-6
 ---
 
@@ -19,11 +19,11 @@ Round 2 final results (per ESPN live feed):
 - West Semifinals B: Oklahoma City Thunder swept Round 2 opponent 4-0. OKC advances to WCF.
 
 Conference Finals current state (from ESPN live feed):
-- ECF: New York Knicks vs Cleveland Cavaliers — NYK leads 2-0 entering Game 3; Game 3 result must be verified from ESPN. If NYK won Game 3 at CLE, NYK leads 3-0 and CLE faces elimination. If CLE won Game 3 at home, CLE trails 1-2 and Game 4 is next at CLE.
-- WCF: Oklahoma City Thunder vs San Antonio Spurs — OKC leads 2-1 per ESPN live feed. Game 4 next; verify location from ESPN (standard bracket: Game 4 at SAS if SAS hosted Game 3, or at OKC if rotation differs — confirm from ESPN).
+- ECF: New York Knicks vs Cleveland Cavaliers — NYK leads 3-0. CLE faces near-elimination at home for Game 4. Historically ~3% comeback from 0-3 deficit. CLE maximum desperation. Do NOT back CLE at odds shorter than 2.00.
+- WCF: Oklahoma City Thunder vs San Antonio Spurs — OKC leads 2-1 per ESPN live feed. Game 5 next (verify location from ESPN — standard bracket: Game 5 at OKC if SAS hosted Games 3-4; confirm from ESPN).
 
-WCF CRITICAL UPDATE: OKC leads WCF 2-1. OKC has in-series edge. SAS faces must-win pressure in Game 4 to avoid 1-3 deficit.
-ECF CRITICAL: Verify Game 3 result from ESPN before drafting any ECF Game 4+ pick.
+WCF CRITICAL UPDATE: OKC leads WCF 2-1. Game 5 is next — verify location (likely OKC home per standard bracket). OKC holds series control; SAS must win Game 5 on road to even series or faces 1-3 deficit historically fatal (~20% recovery).
+ECF CRITICAL: NYK leads 3-0. CLE faces near-elimination at home for Game 4. Do NOT back CLE at shorter than 2.00. Back NYK if odds ≥ 1.65 even on road — 3-0 leaders close out at ~80% historical rate.
 
 ## SECTION:series_context
 NBA PLAYOFFS — Active Series (updated from ESPN live feed)
@@ -31,31 +31,31 @@ NBA PLAYOFFS — Active Series (updated from ESPN live feed)
 --- CONFERENCE FINALS ---
 
 EAST Conference Finals (ECF):
-- New York Knicks vs Cleveland Cavaliers — NYK led 2-0 entering Game 3 at CLE. VERIFY Game 3 result from ESPN before drafting any ECF pick.
-  IF NYK won Game 3 at CLE: NYK leads 3-0. CLE faces near-elimination (0-3 is historically fatal — ~3% comeback rate). Game 4 at CLE home — CLE maximum desperation. Do NOT confirm any ECF pick without verifying Game 3 result.
-  IF CLE won Game 3 at home (historically ~60-65% likely when down 0-2): CLE trails 1-2. Game 4 at CLE — CLE still has meaningful home court motivation.
-  NYK (NetRtg +6.5, 53-29) vs CLE (NetRtg +4.0, 52-30). NYK +2.5pt NetRtg edge.
-  IN-SERIES SIGNAL: NYK leads 2-0 minimum (possibly 3-0 — verify). In-series dominance is PRIMARY ECF signal.
+- New York Knicks vs Cleveland Cavaliers — NYK leads 3-0. CLE faces near-elimination at home for Game 4.
+  NYK WON Games 1, 2, and 3. NYK in-series dominance is PRIMARY signal — historical 3-0 comeback rate ~3%.
+  GAME 4 at CLE home: CLE maximum desperation. Home court (+3-4pts) + elimination urgency = real CLE threat, but NYK is overwhelming series favourite.
+  NYK (NetRtg +6.5, 53-29) vs CLE (NetRtg +4.0, 52-30). NYK +2.5pt NetRtg edge reinforced by 3-0 in-series lead.
+  IN-SERIES SIGNAL: NYK leads 3-0 — NYK is the definitive primary pick signal in this series.
+  Do NOT back CLE at odds shorter than 2.00 even at home — 0-3 comeback historically ~3%.
+  Back NYK if odds ≥ 1.65 even on road — 3-0 leaders close out at ~80% historical rate.
   Re-verify Jalen Brunson, Karl-Anthony Towns (NYK) active before any ECF pick. MANDATORY.
   Re-verify Donovan Mitchell, Jarrett Allen, Evan Mobley (CLE) active before any ECF pick. MANDATORY.
-  HOME COURT: NYK hosts Games 1, 2, 5, 7. CLE hosts Games 3, 4, 6. Verify from ESPN.
-  If CLE trails 0-3: do NOT back CLE at odds shorter than 2.00 — 0-3 comeback has ~3% historical rate.
-  If CLE trails 1-2: CLE at home for Game 4 = credible threat; evaluate motivation + home court.
+  HOME COURT: NYK hosts Games 1, 2, 5, 7. CLE hosts Games 3, 4, 6. Game 4 is at CLE.
 
 WEST Conference Finals (WCF):
-- Oklahoma City Thunder vs San Antonio Spurs — OKC leads 2-1 (Game 4 next; verify location from ESPN).
+- Oklahoma City Thunder vs San Antonio Spurs — OKC leads 2-1 (Game 5 next; verify location from ESPN).
   OKC (NetRtg +11.1, 64-18): In-series leader 2-1. SGA and Holmgren — verify active. MANDATORY.
-  SAS (NetRtg +8.3, 62-20): Trails 1-2. SAS faces must-win pressure in Game 4 to avoid 1-3 deficit.
+  SAS (NetRtg +8.3, 62-20): Trails 1-2. SAS faces must-win pressure to avoid 1-3 deficit (historically ~20% recovery from 1-3).
   OKC NetRtg edge: +2.8pts over SAS (season). Reinforced by 2-1 in-series lead.
   IN-SERIES SIGNAL: OKC 2-1 lead is primary. Season NetRtg confirms OKC superiority.
-  GAME 4 LOCATION: Verify from ESPN. Standard bracket: Game 4 at SAS home (Games 3 and 4 both at SAS).
-  GAME 4 FRAMING: SAS at home, trailing 1-2, facing must-win pressure. SAS home court partially offsets OKC's series lead. Wembanyama health is critical — mandatory verification.
+  GAME 5 LOCATION: Verify from ESPN. Standard bracket: Game 5 at OKC (OKC hosted Games 1-2, SAS hosted Games 3-4, OKC hosts Game 5).
+  GAME 5 FRAMING: If at OKC home, OKC home court + in-series lead = strong backing signal. SAS on road trailing 1-2 facing near-must-win. Wembanyama health is critical — mandatory verification.
   Re-verify Shai Gilgeous-Alexander, Chet Holmgren (OKC) active before any WCF pick. MANDATORY.
   Re-verify Victor Wembanyama (SAS) active before any WCF pick. MANDATORY.
-  Thomas Sorber (C/OKC): OUT [roster-only].
+  Thomas Sorber (C/OKC): OUT [roster-only]. Ajay Mitchell (G/OKC): OUT [roster-only].
   David Jones Garcia (F/SAS): OUT [roster-only].
-  SAS trailing 1-2: do NOT back SAS at odds shorter than 1.70 at home in Game 4 without confirming Wembanyama active.
-  OKC holds series advantage — back OKC with standard confidence if odds ≥ 1.80 on the road at SAS.
+  SAS trailing 1-2: do NOT back SAS at odds shorter than 1.70 in Game 5 (likely on road at OKC) without confirming Wembanyama active.
+  Back OKC if odds ≥ 1.70 at home for Game 5 — in-series lead + NetRtg edge + home court all align.
 
 --- ROUND 2 FULLY COMPLETE ---
 - NYK swept PHI 4-0 (East Semifinals). PHI ELIMINATED.
@@ -80,26 +80,22 @@ Teams CONFIRMED ELIMINATED:
 - Minnesota Timberwolves: SAS won 4-2 (West Semifinals). CONFIRMED ELIMINATED. No further picks.
 - Detroit Pistons: CLE won 4-3 (East Semifinals). CONFIRMED ELIMINATED. No further picks.
 
-Teams FACING NEAR-ELIMINATION OR HIGH PRESSURE:
-- Cleveland Cavaliers: Verify ECF Game 3 result from ESPN.
-  IF NYK won Game 3: CLE trails 0-3. Near-elimination (historically ~3% comeback rate). Maximum desperation at home for Game 4. Do NOT back CLE at odds shorter than 2.00.
-  IF CLE won Game 3 at home: CLE trails 1-2. Still significant elimination pressure. Game 4 at CLE home — credible must-win motivation.
-- San Antonio Spurs: Trails WCF 1-2. Must win Game 4 to avoid 1-3 deficit. Playing at home (verify from ESPN). Maximum motivation signal for SAS Game 4 at home.
-
-WCF elimination status:
-- OKC leads 2-1 — SAS faces must-win pressure in Game 4. Not yet near-elimination but significant pressure.
+Teams FACING NEAR-ELIMINATION:
+- Cleveland Cavaliers: Trails ECF 0-3 (NYK leads 3-0 per ESPN). NEAR-ELIMINATION.
+  Historical 0-3 comeback rate ~3%. Maximum desperation at home for Game 4. Do NOT back CLE at odds shorter than 2.00.
+  CLE has home court for Game 4 — meaningful but insufficient to overcome 3-0 series deficit statistically.
+- San Antonio Spurs: Trails WCF 1-2. Must win Game 5 (likely on road at OKC) to avoid 1-3 deficit (historically ~20% recovery).
+  Not yet near-elimination but facing compounding pressure on the road.
 
 Teams STILL ACTIVE (Conference Finals):
-- New York Knicks: ECF vs CLE (leads 2-0 minimum — verify Game 3 result from ESPN).
-- Cleveland Cavaliers: ECF vs NYK (trails 0-2 minimum — verify Game 3 result from ESPN; Game 4 at CLE home).
-- Oklahoma City Thunder: WCF vs SAS (leads 2-1 — Game 4 next; verify location from ESPN).
-- San Antonio Spurs: WCF vs OKC (trails 1-2 — Game 4 next; Wembanyama health MANDATORY verify; likely at SAS home).
+- New York Knicks: ECF vs CLE (leads 3-0 — one win from Finals). Game 4 at CLE.
+- Cleveland Cavaliers: ECF vs NYK (trails 0-3 — near-elimination at home for Game 4).
+- Oklahoma City Thunder: WCF vs SAS (leads 2-1 — Game 5 next; verify location from ESPN).
+- San Antonio Spurs: WCF vs OKC (trails 1-2 — Game 5 next; Wembanyama health MANDATORY verify; likely at OKC home).
 - Los Angeles Lakers: Round 2 active — verify opponent and current series score from ESPN bracket.
 
-Do NOT bet on any confirmed eliminated team.
-
 ## SECTION:playoff_rest
-PLAYOFF REST RULES (active — Conference Finals, Games 3+):
+PLAYOFF REST RULES (active — Conference Finals, Games 4+):
 - True B2B does NOT exist in playoffs — NBA mandates minimum 1 day off between games.
 - 1 rest day (minimum): short rest — confidence -10 on spread picks for road team.
 - 2 rest days: standard rest — no adjustment.
@@ -108,20 +104,20 @@ PLAYOFF REST RULES (active — Conference Finals, Games 3+):
 
 CONFERENCE FINALS REST CONTEXT (approximate — verify exact dates from ESPN):
 
-ECF — NYK vs CLE (NYK leads 2-0 minimum, Game 3/4 next — verify from ESPN):
-- NYK: Match-sharp across 2+ games. Standard rest rules apply for road team.
-- CLE: At home for Games 3 and 4. Home crowd + desperation boost.
-  CLE home court for remaining games is significant — apply +3-4pt home advantage.
-  CLE trailing series = maximum desperation motivation.
-- NET: NYK in-series dominance vs CLE home court + desperation.
-  If standard rest (2 days): no rest adjustment. Focus on home court, motivation, and in-series edge.
-  MANDATORY: Verify Game 3 result before assessing rest context for Game 4.
+ECF — NYK vs CLE (NYK leads 3-0, Game 4 at CLE home next):
+- NYK: Battle-tested across 3 games. Standard rest rules apply for road team.
+- CLE: At home for Game 4. Home crowd + maximum desperation boost (facing near-elimination).
+  CLE home court (+3-4pts) + elimination urgency = credible CLE single-game threat.
+  However: 0-3 comeback historically ~3% — do NOT over-weight CLE desperation for series picks.
+- NET: NYK in-series dominance (3-0) vs CLE home court + near-elimination desperation.
+  If standard rest (2 days): no rest adjustment. Focus on home court, motivation, and in-series lead.
+  NYK closes out at ~80% rate when leading 3-0 — back NYK at ≥ 1.65 even on road.
 
-WCF — OKC vs SAS (OKC leads 2-1, Game 4 next — verify location from ESPN):
-- Standard bracket: Game 4 at SAS home (Games 3 and 4 both at SAS before returning to OKC for Game 5).
-- OKC on road at SAS for Game 4: apply -5 road confidence adjustment if spread pick.
-- SAS at home trailing 1-2: maximum motivation boost offsets any rest concerns.
-- If standard rest (2 days) between Game 3 and Game 4: no rest adjustment beyond road/home.
+WCF — OKC vs SAS (OKC leads 2-1, Game 5 next — verify location from ESPN):
+- Standard bracket: Game 5 at OKC home (after SAS hosted Games 3-4). Verify from ESPN.
+- OKC at home for Game 5: home court advantage (+3-4pts) adds to in-series lead.
+- SAS on road for Game 5 trailing 1-2: must-win desperation on road is challenging historically.
+- If standard rest (2 days) between Game 4 and Game 5: no rest adjustment beyond road/home.
 - SAS Wembanyama minutes/health: monitor closely each game regardless of rest.
 
 LAL Round 2 rest:
@@ -129,42 +125,42 @@ LAL Round 2 rest:
 - Apply -10 spread confidence for LAL in Round 2 Game 1 regardless of home/away.
 
 ELIMINATION GAME REST RULES:
-- SAS trailing 1-2 in WCF at home — must-win motivation overrides minor rest concerns.
-- CLE trailing ECF (0-2 or worse) at home — maximum motivation overrides any rest penalty.
-- If any team falls behind 0-3 in Conference Finals — apply elimination urgency rules immediately.
+- CLE trailing 0-3 in ECF at home — maximum motivation overrides any rest penalty. Single-game threat is real but series context overwhelmingly NYK.
+- SAS trailing 1-2 in WCF — must-win motivation on road; does not override home court disadvantage.
 
 ## SECTION:playoff_motivation
-PLAYOFF MOTIVATION HIERARCHY (Conference Finals — Active, Games 3+)
+PLAYOFF MOTIVATION HIERARCHY (Conference Finals — Active, Games 4+)
 
 1. CONFERENCE FINALS STAKES (all four teams at maximum motivation):
    All remaining teams are one series from the NBA Finals. Differentiate using: home court, rest, franchise player health, statistical edge, and IN-SERIES data.
 
-2. IN-SERIES STATUS (updated for both ECF and WCF):
-   ECF: NYK led CLE 2-0 entering Game 3. VERIFY Game 3 result from ESPN before any ECF Game 4 drafting.
-   → IF NYK leads 3-0: NYK dominant in-series signal is primary. CLE facing near-elimination at home for Game 4 — maximum desperation but 0-3 comeback historically ~3%. Do NOT back CLE at odds shorter than 2.00.
-   → IF NYK leads 2-1: CLE won Game 3 at home. CLE has life; series more open. Game 4 at CLE — CLE home + must-win urgency still applies.
-   WCF: OKC leads SAS 2-1. In-series lead is PRIMARY WCF signal for Game 4.
-   → OKC 2-1 lead + season NetRtg +11.1 = strong OKC backing signal from Game 4.
-   → SAS at home (likely) for Game 4, trailing 1-2 — must-win motivation is maximum for SAS.
-   → Do NOT dismiss SAS home court + desperation in Game 4 even trailing 1-2.
+2. IN-SERIES STATUS (confirmed from ESPN live feed):
+   ECF: NYK leads CLE 3-0. CLE faces near-elimination at home for Game 4.
+   → NYK leads 3-0: NYK in-series dominance is PRIMARY and overwhelming. CLE facing elimination — maximum desperation but 0-3 comeback historically ~3%.
+   → Do NOT back CLE at odds shorter than 2.00 even at home (Game 4).
+   → Back NYK at ≥ 1.65 on road — 3-0 leaders close out at ~80% historical rate.
+   WCF: OKC leads SAS 2-1. In-series lead is PRIMARY WCF signal for Game 5.
+   → OKC 2-1 lead + season NetRtg +11.1 = strong OKC backing signal.
+   → Game 5 likely at OKC home (verify ESPN) — OKC home court + in-series lead compounds.
+   → SAS on road trailing 1-2 = must-win desperation on the road; historically difficult.
 
 3. REST ADVANTAGE / MATCH SHARPNESS:
-   NYK (ECF): Match-sharp across 2+ games. In-series lead fully established.
-   CLE: Battle-tested (7-game DET series), at home with desperation.
-   OKC (WCF): In-series leader; verify Game 3 performance sharpness.
-   SAS: At home, must-win Game 4 — desperation motivation is maximum.
+   NYK (ECF): Match-sharp across 3 games. In-series dominance fully established.
+   CLE: Battle-tested (7-game DET series), at home with maximum desperation.
+   OKC (WCF): In-series leader; 3 games of sharpness. Home Game 5 advantage.
+   SAS: On road, must-win Game 5 — desperation motivation on road is real but disadvantaged.
 
 4. STATISTICAL EDGES (season NetRtg):
-   ECF: NYK +6.5 vs CLE +4.0 — NYK has +2.5pt edge. Reinforced by in-series lead.
+   ECF: NYK +6.5 vs CLE +4.0 — NYK has +2.5pt edge. Reinforced by 3-0 in-series lead.
    WCF: OKC +11.1 vs SAS +8.3 — OKC has +2.8pt season edge + 2-1 in-series lead.
    RULE: In-series lead is PRIMARY when one team leads. NetRtg confirms direction.
 
 5. HOME COURT (Conference Finals):
-   ECF: NYK hosts Games 1, 2, 5, 7. CLE hosts Games 3, 4, 6. Verify from ESPN.
-   WCF: OKC hosts Games 1, 2, 5, 7. SAS hosts Games 3, 4, 6. Verify from ESPN.
-   → ECF Game 4 at CLE: home court advantage (+3-4pts) PLUS desperation motivation = CLE credible threat.
-   → WCF Game 4 at SAS: home court advantage (+3-4pts) PLUS must-win urgency = SAS is a real threat despite trailing 1-2.
-   → Verify exact Game 4 locations from ESPN before drafting.
+   ECF: NYK hosts Games 1, 2, 5, 7. CLE hosts Games 3, 4, 6. Game 4 at CLE.
+   WCF: OKC hosts Games 1, 2, 5, 7. SAS hosts Games 3, 4, 6. Game 5 at OKC (verify ESPN).
+   → ECF Game 4 at CLE: home court advantage (+3-4pts) PLUS maximum desperation = CLE credible single-game threat. But 0-3 context means NYK is still strong road favourite.
+   → WCF Game 5 at OKC: home court advantage + in-series lead = OKC dual advantage. SAS on road facing compounding deficit if they lose.
+   → Verify exact Game 5 (WCF) location from ESPN before drafting.
 
 6. FRANCHISE PLAYER AVAILABILITY (MANDATORY verification):
    OKC: Re-verify SGA, Chet Holmgren active. MANDATORY before every WCF pick.
@@ -176,21 +172,23 @@ PLAYOFF MOTIVATION HIERARCHY (Conference Finals — Active, Games 3+)
    LAL in Round 2 without Doncic — proven execution vs HOU. Verify Round 2 opponent from ESPN.
    Apply -10 spread confidence for LAL in Round 2 Game 1.
 
-8. WCF GAME 4 FRAMING (OKC leads 2-1 — SAS at home, verify location from ESPN):
+8. WCF GAME 5 FRAMING (OKC leads 2-1 — Game 5 likely at OKC home, verify ESPN):
    OKC leads 2-1 — in-series lead is primary WCF signal.
-   SAS at home (Games 3 and 4 both at SAS per standard bracket) — home court partially offsets series deficit.
-   SAS trailing 1-2 at home = must-win desperation; historically ~55-60% home win rate when down 1-2.
-   Do NOT back SAS at odds shorter than 1.65 at home in WCF Game 4 without confirming Wembanyama active.
-   Back OKC if odds ≥ 1.85 on road at SAS — in-series lead + NetRtg edge justifies road backing.
+   OKC at home (likely) for Game 5: home court + in-series lead = strongest dual signal in WCF.
+   SAS on road trailing 1-2 = must-win desperation on road; historically challenging.
+   Back OKC if odds ≥ 1.65 at home — in-series lead + NetRtg edge + home court all align.
+   Do NOT back SAS at odds shorter than 1.90 on road in WCF Game 5 without confirming Wembanyama active.
 
-9. ECF GAME 4 FRAMING (verify Game 3 result from ESPN first — MANDATORY):
-   IF NYK leads 3-0 (NYK won Game 3): CLE facing near-elimination at home. Maximum desperation (Game 4 at CLE). Historically ~3% comeback from 0-3. Back CLE only if odds ≥ 2.10+ (elimination game value). Do NOT back NYK below 1.75 on road in elimination game — CLE desperation is maximum.
-   IF NYK leads 2-1 (CLE won Game 3): CLE has life. Game 4 at CLE home — credible must-win urgency. Back CLE with standard motivation discount. NYK remains series favourite but CLE home + desperation is meaningful.
+9. ECF GAME 4 FRAMING (NYK leads 3-0 — Game 4 at CLE home):
+   CLE facing near-elimination at home. Maximum desperation (Game 4 at CLE). Historically ~3% comeback from 0-3.
+   Back CLE only if odds ≥ 2.10 (elimination game value with desperation premium).
+   Do NOT back NYK below 1.65 on road — 3-0 leader's road close-out rate ~80%; NYK is still the value pick.
+   CLE home court + desperation = real single-game threat, but NOT series reversal threat.
 
-10. ECF GAME 3 OUTCOME NOTE:
-    Teams down 0-2 win Game 3 at home ~60-65% historically — CLE desperation at home was real.
-    Verify actual outcome from ESPN before applying any Game 4 framing.
-    Do NOT assume CLE won or lost Game 3 — verify first.
+10. ECF SERIES TRAJECTORY:
+    NYK won Games 1, 2, and 3. In-series dominance is confirmed and primary.
+    CLE has shown no in-series answers — NYK +2.5pt NetRtg edge has translated to series dominance.
+    Do NOT over-weight CLE desperation for multi-game series betting — 0-3 comeback is historically near-impossible.
 
 ## SECTION:playin_rules
 INACTIVE — Play-In Tournament is over. Do NOT apply any play-in rules.
@@ -203,29 +201,26 @@ CRITICAL CAVEAT: In-series result is the PRIMARY signal when one team leads. In 
 
 --- CONFERENCE FINALS ---
 
-ECF — New York Knicks vs Cleveland Cavaliers (NYK led 2-0 entering Game 3; verify Game 3 result from ESPN):
-- Pre-Game 3 in-series: NYK WON GAMES 1 AND 2 at home. NYK in-series dominant.
-- GAME 3 RESULT: VERIFY FROM ESPN before drafting any ECF Game 4 pick. MANDATORY hard gate.
-- IF NYK leads 3-0: NYK is overwhelming series favourite. In-series dominance + NetRtg gap primary.
-  CLE facing elimination at home for Game 4 — do NOT back CLE at odds shorter than 2.00.
-  Back NYK if odds ≥ 1.65 even on road — 3-0 leader closes out at high historical rate (~80%).
-- IF NYK leads 2-1 (CLE won Game 3): CLE has demonstrated home court value. Game 4 at CLE — apply home + must-win urgency.
-  Series more open. Back CLE if odds ≥ 1.70 at home in Game 4 — credible with desperation.
-  Do NOT back NYK below 1.80 on road if CLE won Game 3 — momentum shift is real.
+ECF — New York Knicks vs Cleveland Cavaliers (NYK leads 3-0 — CLE faces near-elimination at home for Game 4):
+- IN-SERIES DATA: NYK WON Games 1, 2, and 3. NYK in-series dominant — 3-0 is overwhelming primary signal.
+- GAME 4: At CLE home. CLE maximum desperation. Home court (+3-4pts) partially offsets but 0-3 deficit historically near-insurmountable.
+- NYK 3-0 leader closes out at ~80% historical rate. Back NYK at ≥ 1.65 on road.
+- Do NOT back CLE at odds shorter than 2.00 — 0-3 comeback ~3% historically. Require value.
+- CLE single-game threat at home is REAL — do not short CLE below 2.00 either (value exists for CLE at 2.10+).
 - NYK (+6.5 NetRtg, 53-29) vs CLE (+4.0 NetRtg, 52-30) — NYK +2.5pt season edge.
 - Regular season H2H: verify from ESPN (NYK vs CLE this season).
 - Re-verify Jalen Brunson, Karl-Anthony Towns (NYK). Re-verify Mitchell, Allen, Mobley (CLE). MANDATORY.
 
-WCF — Oklahoma City Thunder vs San Antonio Spurs (OKC leads 2-1, Game 4 next — verify location from ESPN):
-- IN-SERIES DATA: SAS won Game 1 at OKC. OKC won Game 2 at OKC. OKC leads 2-1 after Game 3.
-- GAME 3 RESULT: OKC leads 2-1 per ESPN live feed. Game 3 won by OKC (verify details from ESPN).
-- OKC in-series lead (2-1) is now PRIMARY WCF signal.
-  Back OKC with conviction from Game 4 — NetRtg +11.1 + 2-1 series lead = strong backing signal.
-  SAS at home (Game 4 likely at SAS per standard bracket Games 3-4 both away) — home court partially offsets.
-  Do NOT back SAS at odds shorter than 1.65 at home in WCF Game 4 without Wembanyama confirmed active.
-  Back OKC if odds ≥ 1.85 on road at SAS — in-series lead + dominant NetRtg justifies road pick.
-- OKC season NetRtg edge (+2.8pts over SAS) is now secondary confirmation of in-series lead.
-- SAS trailing 1-2: must-win Game 4 to avoid 1-3 deficit (historically ~20% comeback rate from 1-3).
+WCF — Oklahoma City Thunder vs San Antonio Spurs (OKC leads 2-1, Game 5 next — verify location from ESPN):
+- IN-SERIES DATA: SAS won Game 1 at OKC. OKC won Games 2 and 3. OKC leads 2-1.
+- GAME 5 LIKELY AT OKC HOME (standard bracket — verify ESPN): OKC home court + in-series lead = strong dual signal.
+- OKC in-series lead (2-1) + home court (if at OKC) = primary WCF backing signal.
+  Back OKC with conviction in Game 5 — NetRtg +11.1 + 2-1 series lead + likely home court.
+  SAS on road trailing 1-2 facing 1-3 deficit risk (historically ~20% recovery from 1-3).
+  Do NOT back SAS at odds shorter than 1.90 on road in WCF Game 5 without Wembanyama confirmed active.
+  Back OKC if odds ≥ 1.65 at home for Game 5 — three-way advantage (series, stats, home).
+- OKC season NetRtg edge (+2.8pts over SAS) is secondary confirmation of in-series lead.
+- SAS trailing 1-2: must-win Game 5 to avoid 1-3 deficit (historically ~20% comeback rate from 1-3).
 - Re-verify SGA, Chet Holmgren (OKC). Re-verify Victor Wembanyama (SAS). MANDATORY.
 
 --- ROUND 2 COMPLETED ---
@@ -237,65 +232,65 @@ WCF — Oklahoma City Thunder vs San Antonio Spurs (OKC leads 2-1, Game 4 next �
 - SAS defeated MIN 4-2: SAS NetRtg edge held despite MIN elimination urgency.
 
 KEY LESSONS UPDATED:
-1. OKC leads WCF 2-1 — in-series dominance is primary; OKC is validated series favourite.
-2. WCF Game 4 at SAS home — SAS home court + must-win desperation is meaningful offset. Do not dismiss.
-3. ECF Game 3 result requires ESPN verification — conditional framing applies to Game 4.
-4. IN-SERIES LEAD RULE: 2-1 leader wins series ~75-80% historically. OKC is strong series favourite.
-5. SAS Game 1 win at OKC proved SAS can win on road — OKC home court not automatic.
-6. WCF Game 4: Wembanyama health is decisive for SAS — mandatory verification each game.
-7. Franchise player absence > NetRtg gap: confirmed by Tatum OUT (BOS), Durant OUT (HOU), Doncic OUT (LAL).
+1. NYK leads ECF 3-0 — in-series dominance is primary; NYK is validated near-series-closer.
+2. OKC leads WCF 2-1 — in-series dominance is primary; OKC is validated series favourite.
+3. WCF Game 5 likely at OKC home — OKC home court + in-series lead is strongest compound signal.
+4. ECF Game 4 at CLE home — CLE desperation is real single-game factor; value exists at 2.10+ but 0-3 comeback ~3%.
+5. IN-SERIES LEAD RULE: 3-0 leader wins series ~97-100% historically. 2-1 leader wins ~75-80%. Both favour leaders.
+6. SAS Game 1 win at OKC proved SAS can win on road — but 2-1 OKC lead overrides that single data point.
+7. WCF Game 5: Wembanyama health is decisive for SAS — mandatory verification each game.
+8. Franchise player absence > NetRtg gap: confirmed by Tatum OUT (BOS), Durant OUT (HOU), Doncic OUT (LAL).
 
 ## SECTION:l15_caveat
-L15 NetRtg CAVEAT FOR PLAYOFFS (Conference Finals — Active, Games 3+)
+L15 NetRtg CAVEAT FOR PLAYOFFS (Conference Finals — Active, Games 4+)
 
 CRITICAL HIERARCHY:
 1. In-series result (when one team leads): PRIMARY signal.
-   ECF: NYK led CLE 2-0 entering Game 3. Verify Game 3 result from ESPN — if NYK leads 3-0, in-series dominance is overwhelming primary. If NYK leads 2-1, still primary but CLE home momentum is meaningful.
-   WCF: OKC leads SAS 2-1. OKC in-series lead is the primary WCF signal for Game 4.
+   ECF: NYK leads CLE 3-0 (confirmed ESPN). In-series dominance is overwhelming primary. Do NOT back CLE at shorter than 2.00.
+   WCF: OKC leads SAS 2-1. OKC in-series lead is the primary WCF signal for Game 5.
 2. Franchise player availability: SECONDARY — a key absence can negate any NetRtg gap.
 3. Home court: TERTIARY normally, but elevated in near-elimination games or tied series.
-   NOTE: WCF Game 4 at SAS home — home court + must-win desperation = meaningful SAS uplift even trailing 1-2.
-   ECF: verify Game 3 result; home court at CLE for remaining home games is significant regardless of series score.
-4. Season NetRtg: SECONDARY to in-series data in both ECF and WCF (both series have a leader now).
+   NOTE: ECF Game 4 at CLE home — desperation + home court = credible single-game threat from CLE despite 0-3 deficit.
+   WCF Game 5 likely at OKC home — home court + in-series lead = compound OKC advantage.
+4. Season NetRtg: SECONDARY to in-series data in both ECF and WCF (both series have a clear leader).
 5. L15 NetRtg: directional only — weight less than home court or franchise player health.
 
 CONFERENCE FINALS SPECIAL RULES:
-→ WCF Game 4: OKC 2-1 in-series lead is dominant primary. Do not over-weight SAS home advantage alone — OKC's series lead and NetRtg edge are both pointing the same direction.
-→ ECF Game 4+: Verify Game 3 result from ESPN FIRST. If NYK leads 3-0, apply near-elimination framing to CLE. If NYK leads 2-1, series is more competitive — revert to in-series lead as primary but respect CLE home momentum.
+→ ECF Game 4: NYK 3-0 in-series lead is overwhelming primary. CLE home + desperation creates single-game threat but not series reversal threat. Back NYK at ≥ 1.65 on road. Back CLE only at 2.10+ (elimination game value).
+→ WCF Game 5: OKC 2-1 in-series lead + likely home court = strongest compound signal remaining. Do not over-weight SAS desperation on the road — road must-win desperation has historically lower success rate than home desperation.
 → Do NOT over-weight regular season H2H — Conference Finals opponents have elite coaching; they will adapt.
 
 Active series NetRtg comparison:
 
-ECF — NYK (+6.5) vs CLE (+4.0) — NYK leads 2-0 minimum (verify Game 3 from ESPN):
-- NYK has +2.5pt advantage. Reinforced by in-series lead.
-- CLE home court for remaining games (+3-4pts) is meaningful but does NOT override NYK's series lead.
-- If CLE trails 0-3: back NYK even on road at odds ≥ 1.65 (3-0 leaders close out at ~80% rate).
-- If CLE trails 1-2: CLE at home for Game 4 is credible; back CLE if odds ≥ 1.70. Do NOT back NYK below 1.80 on road.
-- Do NOT back CLE at odds shorter than 2.00 if trailing 0-3.
+ECF — NYK (+6.5) vs CLE (+4.0) — NYK leads 3-0 (Game 4 at CLE home):
+- NYK has +2.5pt advantage. Reinforced by 3-0 in-series lead.
+- CLE home court for Game 4 (+3-4pts) is meaningful but does NOT override NYK's 3-0 series lead.
+- NYK 3-0 leader closes out at ~80% rate — back NYK at ≥ 1.65 even on road.
+- Do NOT back CLE at odds shorter than 2.00 (0-3 comeback ~3% historically).
+- CLE at 2.10+ has elimination game value — evaluate if odds support it.
 
-WCF — OKC (+11.1) vs SAS (+8.3) — OKC leads 2-1 (Game 4 next — verify location from ESPN):
-- OKC 2-1 in-series lead + NetRtg +11.1 = strong OKC backing signal from Game 4.
-- SAS at home (Game 4 likely at SAS per standard bracket — verify ESPN) — home court partially offsets series deficit.
-- SAS trailing 1-2 at home: must-win desperation; historically ~55-60% home win rate when down 1-2.
-- Back OKC if odds ≥ 1.85 on road at SAS — in-series lead + season NetRtg edge justifies road backing.
-- Do NOT back SAS at odds shorter than 1.65 at home in WCF Game 4 without Wembanyama confirmed active.
+WCF — OKC (+11.1) vs SAS (+8.3) — OKC leads 2-1 (Game 5 next — verify location from ESPN):
+- OKC 2-1 in-series lead + NetRtg +11.1 = strong OKC backing signal.
+- Game 5 likely at OKC home (verify ESPN) — adds home court compound advantage.
+- SAS on road trailing 1-2: must avoid 1-3 deficit; road desperation historically difficult.
+- Back OKC if odds ≥ 1.65 at home for Game 5 — three-way advantage (series, stats, home).
+- Do NOT back SAS at odds shorter than 1.90 on road in WCF Game 5 without Wembanyama confirmed active.
 - Wembanyama health remains the critical swing factor for SAS — mandatory verification each game.
 
 Round 2 effective NetRtg (final standings — all series complete):
 - OKC: +11.1 (WCF active — leads SAS 2-1; SGA/Holmgren active — verify MANDATORY)
-- SAS: +8.3 (WCF active — trails OKC 1-2; hosting Game 4; Wembanyama active — verify MANDATORY)
-- NYK: +6.5 (ECF active — leads CLE 2-0 minimum; verify Game 3 result; Brunson/KAT — verify active)
-- CLE: +4.0 (ECF active — trails NYK 0-2 minimum; verify Game 3 result; Mitchell — verify active)
+- SAS: +8.3 (WCF active — trails OKC 1-2; Game 5 likely at OKC; Wembanyama active — verify MANDATORY)
+- NYK: +6.5 (ECF active — leads CLE 3-0; Game 4 at CLE; Brunson/KAT — verify active)
+- CLE: +4.0 (ECF active — trails NYK 0-3; Game 4 at CLE home; Mitchell — verify active)
 - LAL: +1.7 (Active Round 2; Doncic OUT — in-series execution carries)
 
-KEY LESSONS FOR CONFERENCE FINALS (Games 3+):
-1. OKC leads WCF 2-1 — dominant in-series lead primary; OKC is validated series favourite.
-2. ECF Game 3 result requires ESPN verification before Game 4 drafting — conditional framing applies.
-3. Teams trailing 1-2 win Game 4 at home ~55-60% of time historically — SAS desperation factor is real.
-4. Teams trailing 0-3 in series recover ~3% of the time — near-elimination framing applies if CLE trails 0-3.
-5. WCF Game 4 at SAS is first real test of OKC's ability to close on the road — assess with standard road discount.
-6. For any Conference Finals pick: MANDATORY franchise player health check before drafting.
-7. OKC's +2.8pt NetRtg edge over SAS + 2-1 series lead = strongest backing signal in remaining playoff games.
+KEY LESSONS FOR CONFERENCE FINALS (Games 4+):
+1. NYK leads ECF 3-0 — overwhelming in-series dominance primary; NYK is near-series-closer.
+2. OKC leads WCF 2-1 — dominant in-series lead primary; OKC is validated series favourite.
+3. 3-0 leaders win series ~97-100% of time — apply this framing to ECF Game 4 NYK picks.
+4. Teams trailing 1-2 win on road ~40-45% — SAS road Game 5 desperation is real but disadvantaged.
+5. For any Conference Finals pick: MANDATORY franchise player health check before drafting.
+6. OKC's +2.8pt NetRtg edge over SAS + 2-1 series lead + likely Game 5 home = strongest compound signal in remaining playoff games.
 
 ## SECTION:no_tanking
 Tanking does not exist in playoffs. All remaining teams are fully motivated.
@@ -317,14 +312,14 @@ Teams CONFIRMED ELIMINATED (no further picks):
 - Detroit Pistons: CLE won 4-3 (East Semifinals). CONFIRMED ELIMINATED. No further picks.
 
 Teams NEAR ELIMINATION:
-- Cleveland Cavaliers: Trails ECF (0-2 minimum — verify Game 3 result from ESPN).
-  IF trailing 0-3: Near-elimination (historically ~3% comeback rate). Apply maximum desperation but do NOT back CLE at odds shorter than 2.00.
-  IF trailing 1-2: Still facing elimination pressure. Game 4 at CLE home — apply must-win motivation boost.
-- San Antonio Spurs: Trails WCF 1-2. Must win Game 4 (likely at SAS home) to avoid 1-3 deficit (historically ~20% recovery). Apply maximum home desperation motivation.
+- Cleveland Cavaliers: Trails ECF 0-3 (NYK leads 3-0 per ESPN). NEAR-ELIMINATION.
+  Historical 0-3 comeback rate ~3%. Maximum desperation at home for Game 4.
+  Do NOT back CLE at odds shorter than 2.00. CLE at 2.10+ = elimination game value.
+- San Antonio Spurs: Trails WCF 1-2. Must win Game 5 (likely on road at OKC) to avoid 1-3 deficit (historically ~20% recovery from 1-3).
 
 Teams STILL ACTIVE (Conference Finals):
-- New York Knicks: ECF vs CLE (leads 2-0 minimum — verify Game 3 result from ESPN).
-- Cleveland Cavaliers: ECF vs NYK (trails 0-2 minimum — verify Game 3 result from ESPN).
-- Oklahoma City Thunder: WCF vs SAS (leads 2-1 — Game 4 next; verify location from ESPN).
-- San Antonio Spurs: WCF vs OKC (trails 1-2 — Game 4 next; Wembanyama health MANDATORY verify; likely at SAS home).
+- New York Knicks: ECF vs CLE (leads 3-0 — one win from Finals). Game 4 at CLE.
+- Cleveland Cavaliers: ECF vs NYK (trails 0-3 — near-elimination at home for Game 4).
+- Oklahoma City Thunder: WCF vs SAS (leads 2-1 — Game 5 next; likely at OKC home — verify ESPN).
+- San Antonio Spurs: WCF vs OKC (trails 1-2 — Game 5 next; Wembanyama health MANDATORY verify; likely at OKC on road).
 - Los Angeles Lakers: Round 2 active — verify opponent and current series score from ESPN bracket.
