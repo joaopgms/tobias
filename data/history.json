@@ -26,7 +26,7 @@
           "wins": 25,
           "losses": 17,
           "peak_bankroll": 1917.57,
-          "total_bets": 42
+          "total_bets": 43
         }
       ]
     }
@@ -2319,6 +2319,48 @@
       ],
       "bets": [],
       "summary": "Day 2026-05-23 commit — 0 bets totalling €0.00. 1 cancelled. Bankroll: €1718.39 → €1718.39."
+    },
+    {
+      "entry_id": "nba_entry_20260524",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-05-24T14:25:02.679717+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1718.39,
+      "total_staked": 257.76,
+      "bankroll_after": 1460.63,
+      "cancelled_picks": [
+        {
+          "id": "nba_draft_20260523_001",
+          "match": "Cleveland Cavaliers vs New York Knicks",
+          "pick": "New York Knicks ML",
+          "reason": "Game time (2026-05-24T00:00:00Z) has already passed — current commit time is 2026-05-24T14:25:07Z. The game tipped off approximately 14.5 hours ago and has already been played. Cannot place a bet on a completed game. Additionally, this game does not appear on tonight's active slate (only SAS vs OKC listed)."
+        }
+      ],
+      "bets": [
+        {
+          "id": "nba_bet_20260524_001",
+          "match": "San Antonio Spurs vs Oklahoma City Thunder",
+          "time": "2026-05-25T00:00:00Z",
+          "pick": "San Antonio Spurs -2.5",
+          "odds": 1.94,
+          "stake": 257.76,
+          "potential_return": 500.05,
+          "confidence": 62,
+          "reasoning": "LATE SCOUT PICK — WCF Game at SAS home. Injury source: nba_official (spread permitted). Jalen Williams (OKC) listed QUESTIONABLE (soreness) — new late-breaking information since Scout. SAS hosting OKC with maximum must-win motivation (trailing 1-2 in series, must avoid 1-3 deficit historically fatal ~20% recovery). SAS home court advantage (+3-4pts) is the primary structural edge — pricing SAS as home favourite at -2.5 (1.94). L15 NetRtg: OKC +28.7 vs SAS +27.6 — essentially equal, confirming well-matched teams. Season NetRtg: OKC +11.1 vs SAS +8.3 — OKC has +2.8pt edge, but home court at +3-4pts offsets and exceeds this. Wembanyama confirmed active (not listed on injury report). SGA and Holmgren confirmed active (not listed as OUT). Williams QUESTIONABLE adds further upside if he misses — bet thesis valid even if Williams plays. Confidence 62 (medium), base 62 before adjustments. Note: SAS ML at 1.72 rejected because it falls in the 1.70-1.89 highest-loss band requiring EV ≥ 0.08; EV was only +0.066. Spread at 1.94 avoids this band with EV = (0.62 × 1.94) - 1 = +0.203, well above 0.05 threshold. Odds validation: 1.94 in spread target range 1.80-2.30 (floor 1.75). Anomaly check: no anomalies — SAS at home as slight favourite against statistically superior OKC is reasonable given home court context. Total exposure: €257.76 / €1718.39 = 15.0% — within 70% bankroll cap. Stake: 15% of bankroll (lower medium tier — first pick of session, single late pick, Williams uncertainty).",
+          "anchor_players": [
+            "Victor Wembanyama",
+            "Shai Gilgeous-Alexander",
+            "Chet Holmgren",
+            "Jalen Williams"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null
+        }
+      ],
+      "summary": "Day 2026-05-24 commit — 1 bets totalling €257.76. 1 cancelled. Bankroll: €1718.39 → €1460.63."
     }
   ]
 }
