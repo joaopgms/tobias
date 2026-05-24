@@ -59,20 +59,34 @@ class GitHubStore:
         """Create or update a file on GitHub."""
         sha = self._shas.get(path)
         if sha is None:
-            # Try to fetch SHA if we haven't cached it yet
             try:
                 _, sha = self._get_file(path)
             except FileNotFoundError:
                 sha = None
 
-        if sha:
-            self._repo.update_file(path, message, content, sha)
-            log.info(f"  ↑ updated {path}")
-        else:
-            self._repo.create_file(path, message, content)
-            log.info(f"  ↑ created {path}")
+        try:
+            if sha:
+                self._repo.update_file(path, message, content, sha)
+                log.info(f"  ↑ updated {path}")
+            else:
+                self._repo.create_file(path, message, content)
+                log.info(f"  ↑ created {path}")
+        except GithubException as e:
+            if e.status != 409:
+                raise
+            # SHA stale (another agent wrote the file concurrently) — retry once
+            log.warning(f"  409 conflict on {path}, re-fetching SHA and retrying")
+            try:
+                _, sha = self._get_file(path)
+            except FileNotFoundError:
+                sha = None
+            if sha:
+                self._repo.update_file(path, message, content, sha)
+                log.info(f"  ↑ updated {path} (retry)")
+            else:
+                self._repo.create_file(path, message, content)
+                log.info(f"  ↑ created {path} (retry)")
 
-        # Invalidate SHA cache so next write re-fetches
         self._shas.pop(path, None)
 
     # ── JSON helpers ───────────────────────────────────────────────────────────
