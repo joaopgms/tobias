@@ -26,7 +26,7 @@
           "wins": 26,
           "losses": 17,
           "peak_bankroll": 1960.68,
-          "total_bets": 43
+          "total_bets": 44
         }
       ]
     }
@@ -2361,6 +2361,43 @@
         }
       ],
       "summary": "Day 2026-05-24 commit — 1 bets totalling €257.76. 1 cancelled. Bankroll: €1718.39 → €1460.63."
+    },
+    {
+      "entry_id": "nba_entry_20260525",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-05-25T22:34:50.286652+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1960.68,
+      "total_staked": 294.1,
+      "bankroll_after": 1666.58,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260525_001",
+          "match": "Cleveland Cavaliers vs New York Knicks",
+          "time": "2026-05-26T00:00:00Z",
+          "pick": "New York Knicks ML",
+          "odds": 1.8,
+          "stake": 294.1,
+          "potential_return": 529.38,
+          "confidence": 72,
+          "reasoning": "CONFIRMED at commit time. Injury source upgraded to nba_official — ESPN fallback cap no longer applies. All mandatory anchor players verified active: Jalen Brunson (NYK), Karl-Anthony Towns (NYK), Donovan Mitchell (CLE), Jarrett Allen (CLE), Evan Mobley (CLE) — none listed OUT or Questionable. Dennis Schroder (CLE) Questionable/Illness — not an anchor, negligible impact on pick. LINE MOVEMENT: NYK ML moved 1.74 → 1.80 (+0.06 in our favour). Per skills rules, confirm at original stake. Odds improved so potential return increases. ODDS VALIDATION: 1.80 within ML range (floor 1.65, ceiling 2.50). High-loss band (1.70–1.89 + ML): EV floor elevated to 0.08. EV at commit odds 1.80, confidence 72: EV = (0.72 × 1.80) - 1 = 0.296 — far exceeds 0.08 elevated floor. PRIMARY SIGNALS: (1) IN-SERIES DOMINANCE: NYK leads ECF 3-0 — historical 3-0 leaders win series ~97-100%, close out single game ~80%. This is the PRIMARY and overwhelming signal. (2) L15 NetRtg: NYK +22.2 vs CLE -5.5 — gap of +27.7pts, extraordinary form advantage for NYK. (3) Season NetRtg: NYK +6.5 vs CLE +4.0 — NYK +2.5pt edge. (4) Skills file explicitly: 'Back NYK if odds ≥ 1.65 even on road — 3-0 leaders close out at ~80% historical rate.' NYK at 1.80 > 1.65 floor. (5) CLE home court (+3-4pts) and maximum desperation acknowledged — real single-game threat — but overwhelmed by 3-0 in-series lead and massive L15 gap. STAKE: Maintained at Scout's 15% (€294.10) per line_movement_rules (do not increase stake even when odds improve). High confidence tier (70-84) validated. Total exposure: 15.0% of bankroll — well within 70% limit.",
+          "anchor_players": [
+            "Jalen Brunson",
+            "Karl-Anthony Towns",
+            "Donovan Mitchell",
+            "Jarrett Allen",
+            "Evan Mobley"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-05-25T22:34:52Z"
+        }
+      ],
+      "summary": "Day 2026-05-25 commit — 1 bets totalling €294.10. 0 cancelled. Bankroll: €1960.68 → €1666.58."
     }
   ]
 }
