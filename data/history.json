@@ -23,9 +23,9 @@
           "game": 2,
           "started_at": "2026-04-05T10:44:07.102344+00:00",
           "bankroll_start": 1000.0,
-          "wins": 25,
+          "wins": 26,
           "losses": 17,
-          "peak_bankroll": 1917.57,
+          "peak_bankroll": 1960.68,
           "total_bets": 43
         }
       ]
@@ -2354,10 +2354,10 @@
             "Chet Holmgren",
             "Jalen Williams"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null
+          "result": "WON",
+          "returned": 500.05,
+          "pnl": 242.29,
+          "settled_at": "2026-05-25T11:54:23.456323+00:00"
         }
       ],
       "summary": "Day 2026-05-24 commit — 1 bets totalling €257.76. 1 cancelled. Bankroll: €1718.39 → €1460.63."
