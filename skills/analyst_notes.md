@@ -1,41 +1,41 @@
 ---
-date: 2026-05-24
+date: 2026-05-25
 llm: claude-sonnet-4-6
 scout_patches: 1
 commit_patches: 0
-milestone: daily (41 bets)
+milestone: daily (42 bets)
 ---
 
-## Today's Analysis — 2026-05-24
+## Today's Analysis — 2026-05-25
 
-NYK leads ECF 3-0 with CLE facing near-elimination at home for Game 4 — the 0-3 historical comeback rate (~3%) makes NYK the dominant series favourite, but CLE's home court + maximum desperation creates real single-game value at 2.10+. OKC leads WCF 2-1 with Game 5 likely at OKC home, giving OKC a three-way compound advantage (in-series lead, superior NetRtg +11.1, home court) — SAS must win on the road to avoid a near-fatal 1-3 deficit, making Wembanyama's health the swing variable. Performance data continues to show Medium confidence (55-69) outperforming at 59.0% WR +€1016, while High confidence (70-84) remains a loss leader at 38.9% -€894 — Conference Finals picks should stay in the Medium tier unless multiple confirming signals converge. Ajay Mitchell (OKC, G) is newly confirmed OUT per verified feed and has been added to franchise_player_rules.
+Critical WCF update: SAS won Game 4 to even the series at 2-2, which fundamentally shifts the WCF signal framework — OKC's in-series lead advantage is gone and the series reverts to home court + NetRtg as primary signals for Game 5 (likely at OKC). ECF remains firmly in NYK's control at 3-0, and NYK has an ~80% historical close-out rate making them the value pick even on CLE's home floor for Game 4. Performance data continues to validate the medium confidence tier (60% WR, +€1,258) as the core profit engine while high confidence picks (38.9% WR) remain a concern — maintain the extra scrutiny gate requiring NetRtg gap ≥ 5.0 plus a secondary advantage before committing 20%+ stakes.
 
 ## Performance Stats
-ALL-TIME: 30W / 29L | Win rate: 50.8% | P&L: €-19.85 | Avg odds: 1.94 | Avg conf: 65.6/100
-RECENT 20: 11W / 9L | 55.0% WR | P&L: €+245.95
-By market:      ML 24bets 11W/13L 45.8% €-524.71  |  SPREAD 28bets 15W/13L 53.6% €+350.41  |  TOTAL 7bets 4W/3L 57.1% €+154.45
-By confidence:  High 18bets 7W/11L 38.9% €-894.80  |  Medium 39bets 23W/16L 59.0% €+1016.26  |  Speculative 2bets 0W/2L 0.0% €-141.31
-By odds range:  1.70-1.89 20bets 10W/10L 50.0% €-617.67  |  1.90-2.09 35bets 19W/16L 54.3% €+539.83  |  2.10-2.50 4bets 1W/3L 25.0% €+57.99
+ALL-TIME: 31W / 29L | Win rate: 51.7% | P&L: €+222.44 | Avg odds: 1.94 | Avg conf: 65.5/100
+RECENT 20: 12W / 8L | 60.0% WR | P&L: €+708.24
+By market:      ML 24bets 11W/13L 45.8% €-524.71  |  SPREAD 29bets 16W/13L 55.2% €+592.70  |  TOTAL 7bets 4W/3L 57.1% €+154.45
+By confidence:  High 18bets 7W/11L 38.9% €-894.80  |  Medium 40bets 24W/16L 60.0% €+1258.55  |  Speculative 2bets 0W/2L 0.0% €-141.31
+By odds range:  1.70-1.89 20bets 10W/10L 50.0% €-617.67  |  1.90-2.09 36bets 20W/16L 55.6% €+782.12  |  2.10-2.50 4bets 1W/3L 25.0% €+57.99
 
 
 
 ## Scout patches applied
-- [franchise_player_rules] ESPN live feed confirms OKC leads WCF 2-1 with Game 5 next (series now at Game 5, not Game 4), NYK leads ECF 3-0 with CLE facing near-elimination; also adding Ajay Mitchell (OKC) now confirmed OUT per verified feed.
+- [franchise_player_rules] Removing Ajay Mitchell (not in verified list this session) and syncing WCF series state to Game 5 (OKC leads 2-1) while preserving all verified player entries exactly as provided.
 
 ## Commit patches applied
 None
 
 ## Playoff context patches applied
-- [phase] ESPN live feed confirms NYK leads ECF 3-0 and OKC leads WCF 2-1 with Game 5 (not Game 4) now next for WCF; ECF framing must reflect confirmed 3-0 series state with near-elimination context for CLE.
-- [series_context] ESPN live feed confirms NYK leads ECF 3-0 (Game 4 at CLE next) and OKC leads WCF 2-1 with Game 5 next; series framing must reflect confirmed 3-0 state for ECF and advance WCF from Game 4 to Game 5 context.
-- [elimination_flags] ESPN live feed confirms NYK leads ECF 3-0 placing CLE in near-elimination at home for Game 4, and WCF advances to Game 5 (not Game 4) context with SAS facing must-win on road at OKC.
-- [playoff_rest] Series has advanced — ECF is now Game 4 (NYK leads 3-0) and WCF is now Game 5 (OKC leads 2-1); rest context must reflect confirmed series scores and correct game number framing.
-- [playoff_motivation] ECF confirmed at 3-0 NYK lead and WCF at Game 5 (not Game 4) context; motivation framing must be updated to reflect correct series scores, near-elimination status for CLE, and WCF Game 5 location shift to OKC home.
-- [h2h_playoff] ECF confirmed 3-0 NYK lead and WCF shifts to Game 5 context at OKC home; H2H and in-series signals must reflect updated series scores and correct game location framing.
-- [l15_caveat] ECF confirmed 3-0 NYK lead and WCF advances to Game 5 context (likely at OKC home); L15 caveat hierarchy must reflect updated in-series data and correct near-elimination framing for CLE.
-- [no_tanking] ESPN live feed confirms NYK leads ECF 3-0 (CLE in near-elimination) and WCF Game 5 is next (likely at OKC home after SAS hosted Games 3-4); elimination flags and active team status must reflect confirmed series scores.
+- [phase] ESPN live feed shows WCF is now Tied 2-2 (Game 5 next), not OKC leads 2-1 as previously recorded — series_context must reflect current ground truth.
+- [series_context] WCF is now Tied 2-2 per ESPN live feed; updating series_context to remove OKC in-series lead advantage, apply tied-series rules (home court + NetRtg become primary), and adjust SAS backing threshold accordingly.
+- [elimination_flags] SAS is no longer near-elimination after tying WCF 2-2; updating elimination flags to reflect live contested status and removing misleading near-elimination framing for SAS.
+- [playoff_rest] WCF is now tied 2-2; updating rest section to remove 'trailing 1-2' framing for SAS and replace with tied-series home court emphasis for Game 5.
+- [playoff_motivation] WCF is now Tied 2-2 per ESPN live feed; removing OKC in-series leader framing and replacing with tied-series rules where NetRtg + home court are primary, and SAS road viability is acknowledged.
+- [h2h_playoff] WCF is tied 2-2; updating h2h_playoff to remove OKC in-series lead framing, apply tied-series rules, and acknowledge SAS Game 4 win as evidence of genuine series parity.
+- [l15_caveat] WCF is now tied 2-2; updating l15_caveat to replace in-series OKC lead framing with tied-series rule where season NetRtg becomes primary and home court is elevated in significance.
+- [no_tanking] WCF is tied 2-2; removing SAS near-elimination status and updating to reflect live contested series with no near-elimination flag for SAS.
 
 ## Intelligence gaps identified
-- **WCF Game 5 location (OKC vs SAS) is inferred from standard bracket but not explicitly confirmed from ESPN — it is listed as 'verify from ESPN' throughout the context.** — If Game 5 is at SAS (due to a schedule anomaly or make-up game), the home court framing entirely flips — backing OKC at shorter odds on the road would be a significant error. → Add a hard gate in series_context: 'MANDATORY: Verify WCF Game 5 location from ESPN bracket before any pick is drafted — do NOT assume OKC home.' This is already present but should be elevated to a blocking gate similar to franchise player checks.
-- **LAL Round 2 opponent and current series score remain unconfirmed — the context consistently says 'verify from ESPN' but the opponent identity and series state are never populated.** — If LAL is in a close series (e.g. trailing or facing elimination), the staking and confidence framing changes materially — a LAL team without Doncic in a must-win game is a very different risk profile than a comfortable series lead. → Fetch LAL Round 2 opponent and current series score from ESPN bracket and populate it explicitly in series_context and franchise_player_rules at next session — this is a data pipeline fetch, not a rule change.
-- **No in-series performance tracking for how well our confidence calibration performs specifically in elimination games (0-3 trailing, 1-3 trailing contexts).** — Elimination games historically skew toward the trailing team winning at home (~55-65% for 0-3 teams winning Game 4) — if we are consistently backing the series leader in elimination contexts, we may be leaving value on the trailing team. → After Conference Finals conclude, audit settled bets tagged as 'elimination game' context and measure win rate vs our confidence vs actual outcome — flag in next session if 3+ elimination game bets exist.
+- **WCF in-series game-level splits (who won on home vs road) are not tracked in series_context, making it unclear whether SAS's Game 4 win came at home or on the road.** — If SAS won Game 4 at OKC (on the road), that is a stronger competitiveness signal for Game 5 at OKC than if they won at home in San Antonio — the road win threshold for backing SAS would shift from 1.80 to potentially 1.70. → Add a game-by-game score log (e.g. 'SAS W at OKC, OKC W at SAS, OKC W at SAS, SAS W at SAS') to series_context for each active WCF game so Scout can correctly assess road-win evidence when setting thresholds.
+- **LAL Round 2 series state (opponent identity, current score, game location) is unverified — the skills files acknowledge this gap but no current data resolves it.** — Without knowing LAL's Round 2 opponent and series score, Scout cannot apply correct in-series signal, home court rules, or B2B rest adjustments if a LAL game appears on the slate today. → ESPN live bracket data should be pulled at the prompt level to populate LAL Round 2 opponent and series score before Scout runs — add a mandatory LAL bracket verification step to analyst checklist.
+- **No tracking of SAS Wembanyama minutes-per-game or foul trouble trends across WCF games, which would indicate physical fatigue risk heading into a tied Game 5.** — If Wembanyama's minutes are declining or foul burden is increasing across the series, OKC's edge in Game 5 increases beyond what NetRtg alone shows — this could justify tighter SAS backing thresholds. → Add a Wembanyama L3-game minutes and foul count monitor to the WCF series context note, flagging if minutes drop below 32/game or fouls exceed 4/game as a supplementary SAS confidence deduction.
