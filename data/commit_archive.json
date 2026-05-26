@@ -2199,5 +2199,37 @@
     "tokens_in": 13367,
     "tokens_out": 4456,
     "cost_usd": 0.106941
+  },
+  {
+    "ts": "2026-05-26T22:49:24.569072+00:00",
+    "date": "2026-05-26",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 0,
+    "cancelled_count": 0,
+    "total_staked": 0.0,
+    "bankroll_before": 2195.96,
+    "bankroll_after": 2195.96,
+    "bets": [],
+    "cancelled": [],
+    "late_rejections": [
+      {
+        "match": "Oklahoma City Thunder vs San Antonio Spurs",
+        "reason": "All markets evaluated and rejected: OKC ML 1.65 — confidence 52 after Williams GTD -10 adjustment yields EV -0.142 (negative, fail). SAS ML 2.42 — road team confidence ~45 (below 50 minimum floor). OKC -3.5 (1.94) — confidence 50 after Williams GTD -10 yields EV -0.03 (negative, fail). SAS +3.5 (1.98) — confidence 48 before adjustment, spread thesis partially dependent on Williams unconfirmed absence, fails confidence floor. O/U 217.5 Under (1.99) — base confidence 55, Williams GTD -10 = 45, below 50 minimum. No market clears all three gates: confidence ≥ 50, EV ≥ 0.05, odds in valid range."
+      },
+      {
+        "match": "Oklahoma City Thunder vs New York Knicks",
+        "reason": "Confirmed futures/NBA Finals matchup odds erroneously listed. NYK not playing tonight. OKC ML 1.13 and NYK ML 1.01 are pre-Finals futures lines. No bet."
+      },
+      {
+        "match": "San Antonio Spurs vs New York Knicks",
+        "reason": "Confirmed futures/NBA Finals matchup odds erroneously listed. NYK not playing tonight. SAS ML 1.15 and NYK ML 1.01 are pre-Finals futures lines. No bet."
+      }
+    ],
+    "report": "## Commit Report — 2026-05-26T22:49:26Z\n\n### Bankroll: €2195.96 | Total Staked: €0.00 | Exposure: 0%\n\n---\n\n### DRAFT PICK REVIEW\nNo draft picks were submitted from the Scout phase (empty array). Nothing to review or cancel.\n\n---\n\n### LATE SCOUT — OKC Thunder vs San Antonio Spurs (WCF Game 6, 00:30 UTC)\n\n**Context updated since 14:00 Scout:**\n- Game location confirmed: Paycom Center (OKC home) — Scout's \"critical location reversal\" stands confirmed.\n- Jalen Williams: Still QUESTIONABLE (no upgrade to OUT, no upgrade to Active).\n- Wembanyama: NOT on injury report = active. ✅\n- SGA, Holmgren: NOT on injury report = active. ✅\n- Odds moved: OKC ML 1.60 → 1.65 (+0.05 improved), SAS ML 2.52 → 2.42 (-0.10 worsened for SAS). SAS ML now inside 2.50 ceiling. Spread moved to OKC -3.5 (from implied -4.5 at Scout).\n\n**Market-by-market evaluation:**\n\n**OKC ML 1.65**: Base confidence ~62 (home court + NetRtg +2.8pt edge + series tied 2-2). Williams Questionable → -10 (his absence hurts OKC) → confidence **52**. EV = (0.52 × 1.65) − 1 = **−0.142**. NEGATIVE EV. **REJECTED.**\n\n**SAS ML 2.42**: Road team facing OKC home court advantage (+3-4pts) and NetRtg deficit. Base confidence ~42-45. Does not reach minimum confidence threshold of 50. Technically EV = (0.45 × 2.42) − 1 = +0.089 but confidence gate (50) FAILED. **REJECTED.**\n\n**OKC -3.5 at 1.94**: Base confidence ~60 (home court + NetRtg edge support covering 3.5). Williams Questionable → -10 → **50**. EV = (0.50 × 1.94) − 1 = **−0.03**. NEGATIVE EV. **REJECTED.**\n\n**SAS +3.5 at 1.98**: Base confidence ~48 (road team vs OKC at home). Below confidence floor of 50. Additionally, spread thesis meaningfully dependent on Williams being OUT (OKC with Williams at home likely covers 3.5 comfortably; without Williams, margin tighter) → \"Pick depends on unconfirmed absence\" rule partially applicable. **REJECTED.**\n\n**O/U 217.5 Under at 1.99**: Both teams sub-100 pace (OKC 99.3, SAS 99.9), playoff defensive intensity, elimination-game scenario all support Under directionally. Base confidence ~55. Williams GTD → -10 (standard non-thesis-dependent adjustment) → **45**. Below 50 minimum floor. **REJECTED.**\n\n**NYK/OKC and NYK/SAS futures lines**: Confirmed anomaly — pre-Finals futures pricing, not real tonight's games. No bet.\n\n---\n\n### Slate Summary\n\nTonight's only real game is WCF Game 6 at OKC (Paycom Center), with both OKC and SAS confirmed active for their franchise players. The single decisive uncertainty — Jalen Williams' Questionable status — critically degrades confidence across all OKC-related markets, and the -10 confidence adjustment mandated by skills rules pushes every market below EV or confidence floors. No pick on tonight's slate clears all three mandatory gates simultaneously (confidence ≥ 50, EV ≥ 0.05, odds in valid range). Bankroll of €2195.96 is preserved entirely pending tomorrow's action.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 11029,
+    "tokens_out": 3593,
+    "cost_usd": 0.086982
   }
 ]
