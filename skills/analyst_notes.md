@@ -1,14 +1,14 @@
 ---
-date: 2026-05-25
+date: 2026-05-26
 llm: claude-sonnet-4-6
 scout_patches: 1
 commit_patches: 0
 milestone: daily (42 bets)
 ---
 
-## Today's Analysis — 2026-05-25
+## Today's Analysis — 2026-05-26
 
-Critical WCF update: SAS won Game 4 to even the series at 2-2, which fundamentally shifts the WCF signal framework — OKC's in-series lead advantage is gone and the series reverts to home court + NetRtg as primary signals for Game 5 (likely at OKC). ECF remains firmly in NYK's control at 3-0, and NYK has an ~80% historical close-out rate making them the value pick even on CLE's home floor for Game 4. Performance data continues to validate the medium confidence tier (60% WR, +€1,258) as the core profit engine while high confidence picks (38.9% WR) remain a concern — maintain the extra scrutiny gate requiring NetRtg gap ≥ 5.0 plus a secondary advantage before committing 20%+ stakes.
+The ECF is complete — NYK swept CLE 4-0, confirming that in-series dominance + NetRtg gap (+2.5pts) is the most reliable compound signal in playoff series analysis. The WCF is now tied 2-2 heading into Game 6 at SAS home (standard bracket), with newly confirmed Jalen Williams (OKC, G) OUT adding a meaningful depth concern for OKC on the road — this shifts the Game 6 framing toward SAS if odds support it (≥1.65 at home). For NBA Finals planning: NYK will carry 5-10+ days of rest advantage before Game 1 regardless of WCF outcome — this rest asymmetry should be flagged as a strong Finals Game 1 signal when the series resolves.
 
 ## Performance Stats
 ALL-TIME: 31W / 29L | Win rate: 51.7% | P&L: €+222.44 | Avg odds: 1.94 | Avg conf: 65.5/100
@@ -20,22 +20,22 @@ By odds range:  1.70-1.89 20bets 10W/10L 50.0% €-617.67  |  1.90-2.09 36bets 2
 
 
 ## Scout patches applied
-- [franchise_player_rules] Removing Ajay Mitchell (not in verified list this session) and syncing WCF series state to Game 5 (OKC leads 2-1) while preserving all verified player entries exactly as provided.
+- [franchise_player_rules] ESPN live feed confirms NYK leads ECF 4-0 (series complete) and WCF is now tied 2-2 (Game 6 next); also adding newly verified absences: Jalen Williams (OKC) OUT and Dennis Schroder (CLE) OUT per verified franchise player list, and removing OKC's Ajay Mitchell which was missing from prior patch.
 
 ## Commit patches applied
 None
 
 ## Playoff context patches applied
-- [phase] ESPN live feed shows WCF is now Tied 2-2 (Game 5 next), not OKC leads 2-1 as previously recorded — series_context must reflect current ground truth.
-- [series_context] WCF is now Tied 2-2 per ESPN live feed; updating series_context to remove OKC in-series lead advantage, apply tied-series rules (home court + NetRtg become primary), and adjust SAS backing threshold accordingly.
-- [elimination_flags] SAS is no longer near-elimination after tying WCF 2-2; updating elimination flags to reflect live contested status and removing misleading near-elimination framing for SAS.
-- [playoff_rest] WCF is now tied 2-2; updating rest section to remove 'trailing 1-2' framing for SAS and replace with tied-series home court emphasis for Game 5.
-- [playoff_motivation] WCF is now Tied 2-2 per ESPN live feed; removing OKC in-series leader framing and replacing with tied-series rules where NetRtg + home court are primary, and SAS road viability is acknowledged.
-- [h2h_playoff] WCF is tied 2-2; updating h2h_playoff to remove OKC in-series lead framing, apply tied-series rules, and acknowledge SAS Game 4 win as evidence of genuine series parity.
-- [l15_caveat] WCF is now tied 2-2; updating l15_caveat to replace in-series OKC lead framing with tied-series rule where season NetRtg becomes primary and home court is elevated in significance.
-- [no_tanking] WCF is tied 2-2; removing SAS near-elimination status and updating to reflect live contested series with no near-elimination flag for SAS.
+- [phase] ESPN live feed confirms NYK swept CLE 4-0 (ECF complete) and WCF remains tied 2-2 with Game 6 next.
+- [series_context] ECF is complete (NYK swept CLE 4-0); WCF is tied 2-2 with Game 6 at SAS home (standard bracket); Jalen Williams (OKC) newly confirmed OUT requiring series framing update.
+- [elimination_flags] CLE is now confirmed eliminated (NYK swept 4-0), ECF is complete, and NYK advances to NBA Finals awaiting WCF winner.
+- [h2h_playoff] ECF is complete (NYK swept 4-0); WCF Game 6 is at SAS home per standard bracket; Jalen Williams (OKC) OUT requires updated series framing for Game 6 and beyond.
+- [playoff_rest] ECF is complete; updating rest context to reflect NYK awaiting WCF winner for Finals, SAS hosting Game 6 per standard bracket, and flagging potential Finals rest asymmetry.
+- [playoff_motivation] ECF is complete (NYK swept CLE 4-0); WCF Game 6 is at SAS home per standard bracket; Jalen Williams (OKC) OUT requires motivation hierarchy update; NBA Finals preview context added.
+- [l15_caveat] ECF complete (NYK swept CLE 4-0); WCF Game 6 at SAS home per standard bracket; Jalen Williams (OKC) OUT creates new compounding risk factor for OKC road game assessment.
+- [no_tanking] CLE confirmed eliminated (NYK swept 4-0); NYK confirmed as NBA Finals representative; WCF still live at 2-2 with Game 6 at SAS home.
 
 ## Intelligence gaps identified
-- **WCF in-series game-level splits (who won on home vs road) are not tracked in series_context, making it unclear whether SAS's Game 4 win came at home or on the road.** — If SAS won Game 4 at OKC (on the road), that is a stronger competitiveness signal for Game 5 at OKC than if they won at home in San Antonio — the road win threshold for backing SAS would shift from 1.80 to potentially 1.70. → Add a game-by-game score log (e.g. 'SAS W at OKC, OKC W at SAS, OKC W at SAS, SAS W at SAS') to series_context for each active WCF game so Scout can correctly assess road-win evidence when setting thresholds.
-- **LAL Round 2 series state (opponent identity, current score, game location) is unverified — the skills files acknowledge this gap but no current data resolves it.** — Without knowing LAL's Round 2 opponent and series score, Scout cannot apply correct in-series signal, home court rules, or B2B rest adjustments if a LAL game appears on the slate today. → ESPN live bracket data should be pulled at the prompt level to populate LAL Round 2 opponent and series score before Scout runs — add a mandatory LAL bracket verification step to analyst checklist.
-- **No tracking of SAS Wembanyama minutes-per-game or foul trouble trends across WCF games, which would indicate physical fatigue risk heading into a tied Game 5.** — If Wembanyama's minutes are declining or foul burden is increasing across the series, OKC's edge in Game 5 increases beyond what NetRtg alone shows — this could justify tighter SAS backing thresholds. → Add a Wembanyama L3-game minutes and foul count monitor to the WCF series context note, flagging if minutes drop below 32/game or fouls exceed 4/game as a supplementary SAS confidence deduction.
+- **Jalen Williams (OKC) OUT impact on OKC's offensive system and spread line movement has not been quantified — no rule currently accounts for a secondary star-level absence in a tied playoff series.** — Williams is OKC's second scoring option alongside SGA; his absence in a tied series on the road (Game 6 at SAS) materially changes OKC's offensive ceiling, yet no threshold rule exists to adjust spread confidence beyond the standard franchise player rules. → Add a rule to franchise_player_rules or market_rules: when a team's second-tier star (25+ min/game regular season) is OUT and the team is playing a road game in a tied playoff series, apply confidence -10 on spread picks for that team (compounding with road modifier).
+- **No rule exists to account for NBA Finals rest asymmetry when one conference finalist completes their series significantly earlier than the other.** — NYK will have 5-10+ rest days before Finals Game 1 while the WCF winner may have 1-2 days rest; historically, the team with more rest in Finals Game 1 covers at a higher rate — this could create a systematic edge for NYK in Game 1 regardless of NetRtg matchup. → Add a playoff_rest note: when Finals rest differential exceeds 5 days, apply confidence +10 on the rested team's spread for Game 1 only (not Game 2+, as adjustment effect diminishes).
+- **OKC's advance stats do not reflect the true post-Williams impact — the current NetRtg +11.1 was computed with Williams active; no adjusted NetRtg estimate exists for OKC without him.** — Backing or fading OKC in remaining WCF games uses a NetRtg figure that overstates their current strength; the +2.8pt edge over SAS may be reduced to near-parity without Williams, which would change spread and ML confidence calculations. → Infrastructure request: compute OKC's NetRtg in games without Jalen Williams this season and surface as an adjusted figure; alternatively, apply a flat -2 to -3 NetRtg adjustment for OKC picks when Williams is OUT until game-specific data is available.
