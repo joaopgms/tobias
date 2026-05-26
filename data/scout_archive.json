@@ -2219,5 +2219,42 @@
     "tokens_in": 14173,
     "tokens_out": 1632,
     "cost_usd": 0.066999
+  },
+  {
+    "ts": "2026-05-26T16:44:22.504003+00:00",
+    "date": "2026-05-26",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_onexbet",
+    "draft_count": 0,
+    "picks": [],
+    "rejected": [
+      {
+        "match": "Oklahoma City Thunder vs San Antonio Spurs",
+        "reason": "CRITICAL LOCATION REVERSAL: Odds data shows OKC as home team (Paycom Center), not SAS. Game 6 is at OKC home — reverses series_context framing. OKC ML at 1.60 is at odds floor, below minimum for value. SAS ML at 2.52 is above 2.50 ceiling. More critically: SAS ML confidence calculation yields ~42 (road team vs home favourite with NetRtg edge + Williams Questionable at ~50% chance playing) — below ML floor of 50. OKC ML at 1.60 fails EV: confidence ~58 × 1.60 - 1 = -0.07 (negative EV). Spread OKC -4.5 at 1.99: OKC home + NetRtg edge + Williams likely playing = directional case, but Williams Questionable means game-time uncertainty; confidence ~58 - 10 (Williams GTD) = 48, below spread floor of 60. O/U 217.5 at 1.96: Both teams Pace ~99.3-99.9 (below 100, no strong Over signal); Pace data available but both below 100 threshold. Confidence for total ~55, below raised floor of 70 (with pace data borderline). No pick meets all three gates: confidence floor + EV + odds range.",
+        "ml_home": 1.6,
+        "ml_away": 2.52,
+        "decision": "no_edge"
+      },
+      {
+        "match": "Oklahoma City Thunder vs New York Knicks",
+        "reason": "ANOMALY FLAGGED: NYK ML listed at 1.01 — this is a futures/Finals matchup odds line, not a tonight's game. NYK is not playing tonight. This appears to be a pre-series futures line erroneously included in tonight's slate. Do not bet. No game exists tonight between OKC and NYK.",
+        "ml_home": 1.13,
+        "ml_away": 1.01,
+        "decision": "anomaly"
+      },
+      {
+        "match": "San Antonio Spurs vs New York Knicks",
+        "reason": "ANOMALY FLAGGED: NYK ML listed at 1.01 and SAS at 1.15 — this is a futures/NBA Finals matchup odds line, not a tonight's game. NYK is not playing tonight; SAS is playing OKC. This appears to be pre-Finals futures pricing. Do not bet.",
+        "ml_home": 1.15,
+        "ml_away": 1.01,
+        "decision": "anomaly"
+      }
+    ],
+    "report": "Single real game tonight: OKC vs SAS Game 6 WCF at Paycom Center (OKC home — confirmed from odds data, overriding series_context which assumed SAS hosts Game 6). Zero picks drafted. OKC ML at 1.60 yields negative EV; SAS ML at 2.52 (above ceiling) with estimated confidence ~42 falls below the ML floor of 50 — road team in tied series vs home favourite with NetRtg edge and Williams Questionable (50% chance of playing). Spread OKC -4.5 directionally sound but Williams GTD uncertainty drops confidence below spread floor of 60. Two additional lines (OKC vs NYK, SAS vs NYK) flagged as anomalies — apparent futures/Finals pricing, not tonight's games. ESPN fallback injury coverage noted: only OKC listed on NBA Official report; SAS injury status unconfirmed but no report filed suggests healthy roster. Jalen Williams upgraded to Questionable (not confirmed OUT) — significant update from roster-only flag.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 12474,
+    "tokens_out": 2116,
+    "cost_usd": 0.069162
   }
 ]
