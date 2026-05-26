@@ -9,16 +9,16 @@
   "net_pnl": 1336.6,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-05-26T16:44:22.504003+00:00",
+  "last_updated": "2026-05-26T22:49:24.569072+00:00",
   "first_game_time": "2026-05-27T00:30:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
   "scout_updated_at": "2026-05-26T16:44:22.504003+00:00",
   "scout_odds_source": "theodds_onexbet",
-  "commit_status": "pending",
-  "commit_updated_at": "2026-05-25T22:34:50.286652+00:00",
-  "commit_date": "2026-05-25",
+  "commit_status": "done",
+  "commit_updated_at": "2026-05-26T22:49:24.569072+00:00",
+  "commit_date": "2026-05-26",
   "analyst_updated_at": "2026-05-26T12:37:12.142063+00:00",
   "settler_updated_at": "2026-05-26T15:36:49.434926+00:00",
   "agent_models": {
@@ -27,7 +27,7 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "Single real game tonight: OKC vs SAS Game 6 WCF at Paycom Center (OKC home — confirmed from odds data, overriding series_context which assumed SAS hosts Game 6). Zero picks drafted. OKC ML at 1.60 yields negative EV; SAS ML at 2.52 (above ceiling) with estimated confidence ~42 falls below the ML floor of 50 — road team in tied series vs home favourite with NetRtg edge and Williams Questionable (50% chance of playing). Spread OKC -4.5 directionally sound but Williams GTD uncertainty drops confidence below spread floor of 60. Two additional lines (OKC vs NYK, SAS vs NYK) flagged as anomalies — apparent futures/Finals pricing, not tonight's games. ESPN fallback injury coverage noted: only OKC listed on NBA Official report; SAS injury status unconfirmed but no report filed suggests healthy roster. Jalen Williams upgraded to Questionable (not confirmed OUT) — significant update from roster-only flag.",
+  "last_report": "## Commit Report — 2026-05-26T22:49:26Z\n\n### Bankroll: €2195.96 | Total Staked: €0.00 | Exposure: 0%\n\n---\n\n### DRAFT PICK REVIEW\nNo draft picks were submitted from the Scout phase (empty array). Nothing to review or cancel.\n\n---\n\n### LATE SCOUT — OKC Thunder vs San Antonio Spurs (WCF Game 6, 00:30 UTC)\n\n**Context updated since 14:00 Scout:**\n- Game location confirmed: Paycom Center (OKC home) — Scout's \"critical location reversal\" stands confirmed.\n- Jalen Williams: Still QUESTIONABLE (no upgrade to OUT, no upgrade to Active).\n- Wembanyama: NOT on injury report = active. ✅\n- SGA, Holmgren: NOT on injury report = active. ✅\n- Odds moved: OKC ML 1.60 → 1.65 (+0.05 improved), SAS ML 2.52 → 2.42 (-0.10 worsened for SAS). SAS ML now inside 2.50 ceiling. Spread moved to OKC -3.5 (from implied -4.5 at Scout).\n\n**Market-by-market evaluation:**\n\n**OKC ML 1.65**: Base confidence ~62 (home court + NetRtg +2.8pt edge + series tied 2-2). Williams Questionable → -10 (his absence hurts OKC) → confidence **52**. EV = (0.52 × 1.65) − 1 = **−0.142**. NEGATIVE EV. **REJECTED.**\n\n**SAS ML 2.42**: Road team facing OKC home court advantage (+3-4pts) and NetRtg deficit. Base confidence ~42-45. Does not reach minimum confidence threshold of 50. Technically EV = (0.45 × 2.42) − 1 = +0.089 but confidence gate (50) FAILED. **REJECTED.**\n\n**OKC -3.5 at 1.94**: Base confidence ~60 (home court + NetRtg edge support covering 3.5). Williams Questionable → -10 → **50**. EV = (0.50 × 1.94) − 1 = **−0.03**. NEGATIVE EV. **REJECTED.**\n\n**SAS +3.5 at 1.98**: Base confidence ~48 (road team vs OKC at home). Below confidence floor of 50. Additionally, spread thesis meaningfully dependent on Williams being OUT (OKC with Williams at home likely covers 3.5 comfortably; without Williams, margin tighter) → \"Pick depends on unconfirmed absence\" rule partially applicable. **REJECTED.**\n\n**O/U 217.5 Under at 1.99**: Both teams sub-100 pace (OKC 99.3, SAS 99.9), playoff defensive intensity, elimination-game scenario all support Under directionally. Base confidence ~55. Williams GTD → -10 (standard non-thesis-dependent adjustment) → **45**. Below 50 minimum floor. **REJECTED.**\n\n**NYK/OKC and NYK/SAS futures lines**: Confirmed anomaly — pre-Finals futures pricing, not real tonight's games. No bet.\n\n---\n\n### Slate Summary\n\nTonight's only real game is WCF Game 6 at OKC (Paycom Center), with both OKC and SAS confirmed active for their franchise players. The single decisive uncertainty — Jalen Williams' Questionable status — critically degrades confidence across all OKC-related markets, and the -10 confidence adjustment mandated by skills rules pushes every market below EV or confidence floors. No pick on tonight's slate clears all three mandatory gates simultaneously (confidence ≥ 50, EV ≥ 0.05, odds in valid range). Bankroll of €2195.96 is preserved entirely pending tomorrow's action.",
   "draft_picks": [],
   "pending_bets": [],
   "settled_bets": [
@@ -946,51 +946,43 @@
   ],
   "late_scout_rejections": [
     {
-      "match": "Cleveland Cavaliers vs New York Knicks",
-      "reason": "CLE ML at 2.14 evaluated: moves toward floor (was 2.24 at Scout, now 2.14 — line moved against CLE, suggesting sharp NYK money). Skills file requires CLE ≥ 2.10 for elimination game value — 2.14 marginally meets threshold but L15 gap of -27.7pts (CLE -5.5 vs NYK +22.2) provides no independent edge. 0-3 comeback historically ~3%. No new information creates informational asymmetry. Rejected. CLE +1.5 spread at 2.02 evaluated: nba_official source unlocks spread eligibility. However, no genuine independent edge beyond base desperation — NYK's L15 dominance and 3-0 in-series lead suggest NYK covers comfortably at high rate. Hedging primary NYK ML pick with CLE spread is contradictory. Rejected. O/U 218.5 at 1.96 evaluated: Odds in valid range. No pace data quality flag (NYK 96.8, CLE 99.9 — both valid). However, no late-breaking informational edge on totals — both teams have solid offenses and defenses, elimination game context creates unpredictable pace dynamics, no clear directional signal. Rejected."
+      "match": "Oklahoma City Thunder vs San Antonio Spurs",
+      "reason": "All markets evaluated and rejected: OKC ML 1.65 — confidence 52 after Williams GTD -10 adjustment yields EV -0.142 (negative, fail). SAS ML 2.42 — road team confidence ~45 (below 50 minimum floor). OKC -3.5 (1.94) — confidence 50 after Williams GTD -10 yields EV -0.03 (negative, fail). SAS +3.5 (1.98) — confidence 48 before adjustment, spread thesis partially dependent on Williams unconfirmed absence, fails confidence floor. O/U 217.5 Under (1.99) — base confidence 55, Williams GTD -10 = 45, below 50 minimum. No market clears all three gates: confidence ≥ 50, EV ≥ 0.05, odds in valid range."
+    },
+    {
+      "match": "Oklahoma City Thunder vs New York Knicks",
+      "reason": "Confirmed futures/NBA Finals matchup odds erroneously listed. NYK not playing tonight. OKC ML 1.13 and NYK ML 1.01 are pre-Finals futures lines. No bet."
+    },
+    {
+      "match": "San Antonio Spurs vs New York Knicks",
+      "reason": "Confirmed futures/NBA Finals matchup odds erroneously listed. NYK not playing tonight. SAS ML 1.15 and NYK ML 1.01 are pre-Finals futures lines. No bet."
     }
   ],
   "commit_report_data": {
-    "date": "2026-05-25",
-    "ts": "2026-05-25T22:34:50.286652+00:00",
-    "bets": [
-      {
-        "id": "nba_bet_20260525_001",
-        "match": "Cleveland Cavaliers vs New York Knicks",
-        "time": "2026-05-26T00:00:00Z",
-        "pick": "New York Knicks ML",
-        "odds": 1.8,
-        "stake": 294.1,
-        "potential_return": 529.38,
-        "confidence": 72,
-        "reasoning": "CONFIRMED at commit time. Injury source upgraded to nba_official — ESPN fallback cap no longer applies. All mandatory anchor players verified active: Jalen Brunson (NYK), Karl-Anthony Towns (NYK), Donovan Mitchell (CLE), Jarrett Allen (CLE), Evan Mobley (CLE) — none listed OUT or Questionable. Dennis Schroder (CLE) Questionable/Illness — not an anchor, negligible impact on pick. LINE MOVEMENT: NYK ML moved 1.74 → 1.80 (+0.06 in our favour). Per skills rules, confirm at original stake. Odds improved so potential return increases. ODDS VALIDATION: 1.80 within ML range (floor 1.65, ceiling 2.50). High-loss band (1.70–1.89 + ML): EV floor elevated to 0.08. EV at commit odds 1.80, confidence 72: EV = (0.72 × 1.80) - 1 = 0.296 — far exceeds 0.08 elevated floor. PRIMARY SIGNALS: (1) IN-SERIES DOMINANCE: NYK leads ECF 3-0 — historical 3-0 leaders win series ~97-100%, close out single game ~80%. This is the PRIMARY and overwhelming signal. (2) L15 NetRtg: NYK +22.2 vs CLE -5.5 — gap of +27.7pts, extraordinary form advantage for NYK. (3) Season NetRtg: NYK +6.5 vs CLE +4.0 — NYK +2.5pt edge. (4) Skills file explicitly: 'Back NYK if odds ≥ 1.65 even on road — 3-0 leaders close out at ~80% historical rate.' NYK at 1.80 > 1.65 floor. (5) CLE home court (+3-4pts) and maximum desperation acknowledged — real single-game threat — but overwhelmed by 3-0 in-series lead and massive L15 gap. STAKE: Maintained at Scout's 15% (€294.10) per line_movement_rules (do not increase stake even when odds improve). High confidence tier (70-84) validated. Total exposure: 15.0% of bankroll — well within 70% limit.",
-        "anchor_players": [
-          "Jalen Brunson",
-          "Karl-Anthony Towns",
-          "Donovan Mitchell",
-          "Jarrett Allen",
-          "Evan Mobley"
-        ],
-        "result": null,
-        "returned": null,
-        "pnl": null,
-        "settled_at": null,
-        "committed_at": "2026-05-25T22:34:52Z"
-      }
-    ],
+    "date": "2026-05-26",
+    "ts": "2026-05-26T22:49:24.569072+00:00",
+    "bets": [],
     "cancelled": [],
     "late_rejections": [
       {
-        "match": "Cleveland Cavaliers vs New York Knicks",
-        "reason": "CLE ML at 2.14 evaluated: moves toward floor (was 2.24 at Scout, now 2.14 — line moved against CLE, suggesting sharp NYK money). Skills file requires CLE ≥ 2.10 for elimination game value — 2.14 marginally meets threshold but L15 gap of -27.7pts (CLE -5.5 vs NYK +22.2) provides no independent edge. 0-3 comeback historically ~3%. No new information creates informational asymmetry. Rejected. CLE +1.5 spread at 2.02 evaluated: nba_official source unlocks spread eligibility. However, no genuine independent edge beyond base desperation — NYK's L15 dominance and 3-0 in-series lead suggest NYK covers comfortably at high rate. Hedging primary NYK ML pick with CLE spread is contradictory. Rejected. O/U 218.5 at 1.96 evaluated: Odds in valid range. No pace data quality flag (NYK 96.8, CLE 99.9 — both valid). However, no late-breaking informational edge on totals — both teams have solid offenses and defenses, elimination game context creates unpredictable pace dynamics, no clear directional signal. Rejected."
+        "match": "Oklahoma City Thunder vs San Antonio Spurs",
+        "reason": "All markets evaluated and rejected: OKC ML 1.65 — confidence 52 after Williams GTD -10 adjustment yields EV -0.142 (negative, fail). SAS ML 2.42 — road team confidence ~45 (below 50 minimum floor). OKC -3.5 (1.94) — confidence 50 after Williams GTD -10 yields EV -0.03 (negative, fail). SAS +3.5 (1.98) — confidence 48 before adjustment, spread thesis partially dependent on Williams unconfirmed absence, fails confidence floor. O/U 217.5 Under (1.99) — base confidence 55, Williams GTD -10 = 45, below 50 minimum. No market clears all three gates: confidence ≥ 50, EV ≥ 0.05, odds in valid range."
+      },
+      {
+        "match": "Oklahoma City Thunder vs New York Knicks",
+        "reason": "Confirmed futures/NBA Finals matchup odds erroneously listed. NYK not playing tonight. OKC ML 1.13 and NYK ML 1.01 are pre-Finals futures lines. No bet."
+      },
+      {
+        "match": "San Antonio Spurs vs New York Knicks",
+        "reason": "Confirmed futures/NBA Finals matchup odds erroneously listed. NYK not playing tonight. SAS ML 1.15 and NYK ML 1.01 are pre-Finals futures lines. No bet."
       }
     ],
-    "total_staked": 294.1,
-    "bankroll_before": 1960.68,
-    "report": "### CONFIRMED — New York Knicks ML\n\n- **Match:** Cleveland Cavaliers vs New York Knicks | **Tip:** 2026-05-26T00:00:00Z (Rocket Arena, Cleveland)\n- **Pick:** NYK ML | **Scout odds:** 1.74 | **Commit odds:** 1.80 | **Move:** +0.06 ✅ (in our favour)\n- **ML:** CLE 2.14 / NYK 1.80 | **ATS:** CLE +1.5 (2.02/1.90) | **O/U:** 218.5 (O:1.96/U:1.96)\n- **Stake:** €294.10 (15% bankroll, maintained at Scout level per no-increase-on-improvement rule) | **Pot:** €529.38 | **Conf:** 72/100 | **EV:** 0.296\n\n**Decision:** Confirmed. Data quality upgraded at commit time — nba_official source confirmed, ESPN fallback cap no longer applies. All five mandatory anchor players verified active (Brunson, KAT, Mitchell, Allen, Mobley). Dennis Schroder (CLE) is Questionable with illness but is not an anchor player and his absence would marginally help NYK if anything. Line moved 1.74 → 1.80 in our favour (+0.06), improving EV from 0.253 to 0.296 — comfortably above the elevated 0.08 floor required for ML picks in the 1.70–1.89 odds band. Primary thesis intact: NYK leads ECF 3-0 (close-out rate ~80%), supported by a +27.7pt L15 NetRtg gap and skills file explicit instruction to back NYK at ≥ 1.65 on road. CLE home court and elimination desperation are real single-game factors but are overwhelmed by in-series dominance and extraordinary recent form differential.\n\n---\n\n**Slate Summary:** One game tonight (ECF Game 4: CLE vs NYK). Single confirmed bet: NYK ML at 1.80 for €294.10 (15% bankroll, EV 0.296). Late scout examined all available markets — CLE ML (2.14), CLE +1.5 spread (2.02), and O/U 218.5 (1.96) — and rejected all three: CLE ML shows unfavourable line movement with no independent edge, CLE spread would hedge the primary pick without genuine informational basis, and totals lack any late-breaking asymmetric information. Total exposure is €294.10 (15.0% of €1,960.68 bankroll), comfortably within the 70% limit.",
-    "tokens_in": 13367,
-    "tokens_out": 4456,
-    "cost_usd": 0.106941
+    "total_staked": 0.0,
+    "bankroll_before": 2195.96,
+    "report": "## Commit Report — 2026-05-26T22:49:26Z\n\n### Bankroll: €2195.96 | Total Staked: €0.00 | Exposure: 0%\n\n---\n\n### DRAFT PICK REVIEW\nNo draft picks were submitted from the Scout phase (empty array). Nothing to review or cancel.\n\n---\n\n### LATE SCOUT — OKC Thunder vs San Antonio Spurs (WCF Game 6, 00:30 UTC)\n\n**Context updated since 14:00 Scout:**\n- Game location confirmed: Paycom Center (OKC home) — Scout's \"critical location reversal\" stands confirmed.\n- Jalen Williams: Still QUESTIONABLE (no upgrade to OUT, no upgrade to Active).\n- Wembanyama: NOT on injury report = active. ✅\n- SGA, Holmgren: NOT on injury report = active. ✅\n- Odds moved: OKC ML 1.60 → 1.65 (+0.05 improved), SAS ML 2.52 → 2.42 (-0.10 worsened for SAS). SAS ML now inside 2.50 ceiling. Spread moved to OKC -3.5 (from implied -4.5 at Scout).\n\n**Market-by-market evaluation:**\n\n**OKC ML 1.65**: Base confidence ~62 (home court + NetRtg +2.8pt edge + series tied 2-2). Williams Questionable → -10 (his absence hurts OKC) → confidence **52**. EV = (0.52 × 1.65) − 1 = **−0.142**. NEGATIVE EV. **REJECTED.**\n\n**SAS ML 2.42**: Road team facing OKC home court advantage (+3-4pts) and NetRtg deficit. Base confidence ~42-45. Does not reach minimum confidence threshold of 50. Technically EV = (0.45 × 2.42) − 1 = +0.089 but confidence gate (50) FAILED. **REJECTED.**\n\n**OKC -3.5 at 1.94**: Base confidence ~60 (home court + NetRtg edge support covering 3.5). Williams Questionable → -10 → **50**. EV = (0.50 × 1.94) − 1 = **−0.03**. NEGATIVE EV. **REJECTED.**\n\n**SAS +3.5 at 1.98**: Base confidence ~48 (road team vs OKC at home). Below confidence floor of 50. Additionally, spread thesis meaningfully dependent on Williams being OUT (OKC with Williams at home likely covers 3.5 comfortably; without Williams, margin tighter) → \"Pick depends on unconfirmed absence\" rule partially applicable. **REJECTED.**\n\n**O/U 217.5 Under at 1.99**: Both teams sub-100 pace (OKC 99.3, SAS 99.9), playoff defensive intensity, elimination-game scenario all support Under directionally. Base confidence ~55. Williams GTD → -10 (standard non-thesis-dependent adjustment) → **45**. Below 50 minimum floor. **REJECTED.**\n\n**NYK/OKC and NYK/SAS futures lines**: Confirmed anomaly — pre-Finals futures pricing, not real tonight's games. No bet.\n\n---\n\n### Slate Summary\n\nTonight's only real game is WCF Game 6 at OKC (Paycom Center), with both OKC and SAS confirmed active for their franchise players. The single decisive uncertainty — Jalen Williams' Questionable status — critically degrades confidence across all OKC-related markets, and the -10 confidence adjustment mandated by skills rules pushes every market below EV or confidence floors. No pick on tonight's slate clears all three mandatory gates simultaneously (confidence ≥ 50, EV ≥ 0.05, odds in valid range). Bankroll of €2195.96 is preserved entirely pending tomorrow's action.",
+    "tokens_in": 11029,
+    "tokens_out": 3593,
+    "cost_usd": 0.086982
   },
   "netrtg_l15": {
     "Charlotte Hornets": 16.9,
