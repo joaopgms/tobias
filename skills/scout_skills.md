@@ -1,7 +1,7 @@
 ---
-version: 64
-updated_at: 2026-05-25T12:58:11.434729+00:00
-updated_by: analyst_2026-05-25
+version: 65
+updated_at: 2026-05-26T12:37:12.142063+00:00
+updated_by: analyst_2026-05-26
 llm: claude-sonnet-4-6
 ---
 
@@ -94,25 +94,14 @@ If BOTH teams have franchise player uncertainty → evaluate net impact.
 NOTE — PLAYOFF PHASE: All remaining teams are fully motivated. Roster-only flags MUST be re-verified against NBA official PDF each session before any pick.
 
 Oklahoma City Thunder:
+- Ajay Mitchell (G): OUT [roster-only]
 - Thomas Sorber (C): OUT [roster-only]
-NOTE: OKC in WCF vs SAS (leads 2-1, Game 5 next — verify location ESPN). Re-verify Shai Gilgeous-Alexander, Chet Holmgren active before ANY OKC WCF pick. MANDATORY.
+- Jalen Williams (G): OUT [roster-only] — KEY GUARD ABSENCE. Significant depth impact.
+NOTE: OKC in WCF vs SAS (TIED 2-2, Game 6 next — verify location from ESPN; standard bracket: Game 6 at SAS home if SAS is lower seed; confirm). Jalen Williams OUT is a meaningful absence alongside Mitchell. Re-verify Shai Gilgeous-Alexander, Chet Holmgren active before ANY OKC WCF pick. MANDATORY.
 
 San Antonio Spurs:
 - David Jones Garcia (F): OUT [roster-only]
-NOTE: SAS in WCF vs OKC (trails 1-2, Game 5 next — likely at OKC home per standard bracket; verify ESPN). Re-verify Victor Wembanyama active before ANY SAS WCF pick. MANDATORY.
-
-New York Knicks:
-NOTE: NYK in ECF vs CLE (leads 3-0 — one win from Finals; Game 4 at CLE next). Re-verify Jalen Brunson, Karl-Anthony Towns active before any ECF pick. MANDATORY.
-
-Cleveland Cavaliers:
-NOTE: CLE in ECF vs NYK (trails 0-3 — facing near-elimination at home for Game 4). Re-verify Donovan Mitchell, Jarrett Allen, Evan Mobley active before any ECF pick. MANDATORY.
-
-Los Angeles Lakers:
-- Luka Doncic (G): OUT [roster-only] — FRANCHISE PLAYER.
-NOTE: LAL in Round 2 — verify Round 2 opponent and current series score from ESPN. Re-verify all active LAL roster before drafting.
-
-Detroit Pistons:
-NOTE: DET ELIMINATED — CLE won East Semifinals 4-3. No further DET picks.
+NOTE: SAS in WCF vs OKC (TIED 2-2, Game 6 next — verify location from ESPN). Re-verify Victor Wembanyama active before ANY SAS WCF pick. MANDATORY.
 
 Boston Celtics:
 - Jayson Tatum (F): OUT [roster-only] — FRANCHISE PLAYER.
@@ -139,6 +128,14 @@ Toronto Raptors:
 - Immanuel Quickley (G): OUT [roster-only] — key guard.
 NOTE: TOR CONFIRMED ELIMINATED — CLE won series. No further TOR picks.
 
+Cleveland Cavaliers:
+- Dennis Schroder (G): OUT [roster-only]
+NOTE: CLE CONFIRMED ELIMINATED — NYK won ECF 4-0. No further CLE picks.
+
+Los Angeles Lakers:
+- Luka Doncic (G): OUT [roster-only] — FRANCHISE PLAYER.
+NOTE: LAL in active Round 2 — verify opponent and current series score from ESPN. Re-verify all active LAL roster before drafting.
+
 Washington Wizards:
 - Bilal Coulibaly (G): OUT [roster-only + injury landscape confirmed]
 - Anthony Davis (F): OUT [roster-only] — FRANCHISE PLAYER
@@ -148,14 +145,14 @@ Washington Wizards:
 - Alex Sarr (C): OUT [roster-only + injury landscape confirmed] — FRANCHISE PLAYER
 - Tristan Vukcevic (F): OUT [roster-only + injury landscape confirmed]
 - Cam Whitmore (F): OUT [roster-only]
-- Trae Young (G): OUT [roster-only] — FRANCHISE PLAYER (DATA CONFLICT: verify team affiliation)
+- Trae Young (G): OUT [roster-only] — FRANCHISE PLAYER
 NOTE: Washington did not qualify for playoffs. Do NOT bet Washington to win under any circumstances.
 
 Franchise players requiring mandatory NBA official PDF verification before ANY pick involving their team:
 - Shai Gilgeous-Alexander, Chet Holmgren (OKC) — re-verify each WCF session
-- Jalen Brunson, Karl-Anthony Towns (NYK) — re-verify each ECF session
-- Donovan Mitchell, Jarrett Allen, Evan Mobley (CLE) — re-verify each ECF session
 - Luka Doncic (LAL) — roster-only OUT; LAL competing without him in Round 2
+
+NYK and CLE ECF: SERIES COMPLETE — NYK won 4-0. No further NYK vs CLE picks.
 
 ## SECTION:tanking_teams
 NOTE — PLAYOFF PHASE ACTIVE: See playoff_context.md no_tanking section. Tanking logic does NOT apply to any remaining play-in or playoff team. All remaining teams are motivated. Only apply tank logic to fully eliminated non-playoff teams.
