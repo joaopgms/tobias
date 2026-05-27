@@ -1,7 +1,7 @@
 ---
-version: 65
-updated_at: 2026-05-26T12:37:12.142063+00:00
-updated_by: analyst_2026-05-26
+version: 66
+updated_at: 2026-05-27T12:50:26.710225+00:00
+updated_by: analyst_2026-05-27
 llm: claude-sonnet-4-6
 ---
 
@@ -97,11 +97,11 @@ Oklahoma City Thunder:
 - Ajay Mitchell (G): OUT [roster-only]
 - Thomas Sorber (C): OUT [roster-only]
 - Jalen Williams (G): OUT [roster-only] — KEY GUARD ABSENCE. Significant depth impact.
-NOTE: OKC in WCF vs SAS (TIED 2-2, Game 6 next — verify location from ESPN; standard bracket: Game 6 at SAS home if SAS is lower seed; confirm). Jalen Williams OUT is a meaningful absence alongside Mitchell. Re-verify Shai Gilgeous-Alexander, Chet Holmgren active before ANY OKC WCF pick. MANDATORY.
+NOTE: OKC in WCF vs SAS — OKC leads 3-2, Game 6 next at SAS home (standard bracket: SAS hosts Games 3,4,6 — verify ESPN). Jalen Williams OUT compounds road risk for Game 6. Re-verify Shai Gilgeous-Alexander, Chet Holmgren active before ANY OKC WCF pick. MANDATORY.
 
 San Antonio Spurs:
 - David Jones Garcia (F): OUT [roster-only]
-NOTE: SAS in WCF vs OKC (TIED 2-2, Game 6 next — verify location from ESPN). Re-verify Victor Wembanyama active before ANY SAS WCF pick. MANDATORY.
+NOTE: SAS in WCF vs OKC — SAS trails 2-3, must win Game 6 at home to stay alive. Re-verify Victor Wembanyama active before ANY SAS WCF pick. MANDATORY.
 
 Boston Celtics:
 - Jayson Tatum (F): OUT [roster-only] — FRANCHISE PLAYER.
@@ -153,6 +153,7 @@ Franchise players requiring mandatory NBA official PDF verification before ANY p
 - Luka Doncic (LAL) — roster-only OUT; LAL competing without him in Round 2
 
 NYK and CLE ECF: SERIES COMPLETE — NYK won 4-0. No further NYK vs CLE picks.
+OKC vs SAS WCF: OKC leads 3-2. Game 6 at SAS home (verify ESPN). SAS must win or eliminated.
 
 ## SECTION:tanking_teams
 NOTE — PLAYOFF PHASE ACTIVE: See playoff_context.md no_tanking section. Tanking logic does NOT apply to any remaining play-in or playoff team. All remaining teams are motivated. Only apply tank logic to fully eliminated non-playoff teams.
