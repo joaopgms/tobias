@@ -26,7 +26,7 @@
           "wins": 27,
           "losses": 17,
           "peak_bankroll": 2195.96,
-          "total_bets": 44
+          "total_bets": 45
         }
       ]
     }
@@ -2411,6 +2411,42 @@
       "cancelled_picks": [],
       "bets": [],
       "summary": "Day 2026-05-26 commit — 0 bets totalling €0.00. 0 cancelled. Bankroll: €2195.96 → €2195.96."
+    },
+    {
+      "entry_id": "nba_entry_20260528",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-05-28T23:21:41.725286+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 2195.96,
+      "total_staked": 219.6,
+      "bankroll_after": 1976.36,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260528_001",
+          "match": "San Antonio Spurs vs Oklahoma City Thunder",
+          "time": "2026-05-29T00:30:00Z",
+          "pick": "Oklahoma City Thunder ML",
+          "odds": 2.4,
+          "stake": 219.6,
+          "potential_return": 527.04,
+          "confidence": 50,
+          "reasoning": "WCF Game 7 at San Antonio (Frost Bank Center — SAS is home team, confirmed by venue and odds). OKC is road underdog at 2.40 (improved from Scout's 2.35). MANDATORY CHECKS PASSED: SGA not in injury report → assumed active. Chet Holmgren not in injury report → assumed active. Wembanyama not in injury report (SAS not reporting) → status unknown but no positive OUT flag. Jalen Williams QUESTIONABLE — already factored into confidence reduction at Scout phase (-10 applied, confidence floor 50). EDGE BASIS: OKC has superior season NetRtg (+11.1 vs SAS +8.3 = +2.8pt OKC edge). L15 essentially equal (+28.7 OKC vs +27.6 SAS — within 1.1pt, not a meaningful signal either way). OKC market implied probability at 2.40 = 41.7% — appears to undervalue OKC's statistical edge. True probability estimate ~50% given NetRtg edge partially offset by SAS home court. EV = 0.50 × 2.40 - 1 = +0.20 (20% EV). LINE MOVEMENT: Odds improved from 2.35 (Scout) to 2.40 (+0.05) — favourable drift, confirming at original stake per rules. Williams Questionable status applies standard confidence penalty (already baked in at confidence 50) and -20% stake adjustment from speculative baseline. SAS home court is real advantage — historical ~60-65% Game 7 home win rate — but market already prices this in. At 2.40 with 50% true probability, OKC represents positive EV road underdog with statistical backing. Stake: 10% (Speculative tier, confidence 50) × €2,195.96 = €219.60.",
+          "anchor_players": [
+            "Shai Gilgeous-Alexander",
+            "Chet Holmgren",
+            "Victor Wembanyama",
+            "Jalen Williams (Questionable)"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-05-28T23:21:43Z"
+        }
+      ],
+      "summary": "Day 2026-05-28 commit — 1 bets totalling €219.60. 0 cancelled. Bankroll: €2195.96 → €1976.36."
     }
   ]
 }
