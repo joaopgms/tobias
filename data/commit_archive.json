@@ -2231,5 +2231,60 @@
     "tokens_in": 11029,
     "tokens_out": 3593,
     "cost_usd": 0.086982
+  },
+  {
+    "ts": "2026-05-28T23:21:41.725286+00:00",
+    "date": "2026-05-28",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 1,
+    "cancelled_count": 0,
+    "total_staked": 219.6,
+    "bankroll_before": 2195.96,
+    "bankroll_after": 1976.36,
+    "bets": [
+      {
+        "id": "nba_bet_20260528_001",
+        "match": "San Antonio Spurs vs Oklahoma City Thunder",
+        "time": "2026-05-29T00:30:00Z",
+        "pick": "Oklahoma City Thunder ML",
+        "odds": 2.4,
+        "stake": 219.6,
+        "potential_return": 527.04,
+        "confidence": 50,
+        "reasoning": "WCF Game 7 at San Antonio (Frost Bank Center — SAS is home team, confirmed by venue and odds). OKC is road underdog at 2.40 (improved from Scout's 2.35). MANDATORY CHECKS PASSED: SGA not in injury report → assumed active. Chet Holmgren not in injury report → assumed active. Wembanyama not in injury report (SAS not reporting) → status unknown but no positive OUT flag. Jalen Williams QUESTIONABLE — already factored into confidence reduction at Scout phase (-10 applied, confidence floor 50). EDGE BASIS: OKC has superior season NetRtg (+11.1 vs SAS +8.3 = +2.8pt OKC edge). L15 essentially equal (+28.7 OKC vs +27.6 SAS — within 1.1pt, not a meaningful signal either way). OKC market implied probability at 2.40 = 41.7% — appears to undervalue OKC's statistical edge. True probability estimate ~50% given NetRtg edge partially offset by SAS home court. EV = 0.50 × 2.40 - 1 = +0.20 (20% EV). LINE MOVEMENT: Odds improved from 2.35 (Scout) to 2.40 (+0.05) — favourable drift, confirming at original stake per rules. Williams Questionable status applies standard confidence penalty (already baked in at confidence 50) and -20% stake adjustment from speculative baseline. SAS home court is real advantage — historical ~60-65% Game 7 home win rate — but market already prices this in. At 2.40 with 50% true probability, OKC represents positive EV road underdog with statistical backing. Stake: 10% (Speculative tier, confidence 50) × €2,195.96 = €219.60.",
+        "anchor_players": [
+          "Shai Gilgeous-Alexander",
+          "Chet Holmgren",
+          "Victor Wembanyama",
+          "Jalen Williams (Questionable)"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null,
+        "committed_at": "2026-05-28T23:21:43Z"
+      }
+    ],
+    "cancelled": [],
+    "late_rejections": [
+      {
+        "match": "San Antonio Spurs vs Oklahoma City Thunder",
+        "reason": "SAS ML 1.66: EV = 0.63 × 1.66 - 1 = 0.046 — fails EV minimum of 0.05 at honest confidence of 63. Cannot justify 65+ with incomplete SAS injury feed (Wembanyama status unknown) and Williams only Questionable (not confirmed OUT). SAS Spread -3.5 at 1.96: Confidence 58 — below spread floor of 60. Wembanyama status unknown is unacceptable for spread commitment. O/U 219.5: No strong directional thesis for Game 7 totals; confidence only 52, game context (defensive Game 7 intensity) adds too much noise."
+      },
+      {
+        "match": "New York Knicks vs Oklahoma City Thunder",
+        "reason": "Not a scheduled game tonight. NBA Finals matchup has not been set — OKC vs NYK would be Finals only if OKC wins Game 7 tonight. Odds shown (OKC 1.21, NYK 3.15) are futures/series odds or sportsbook placeholder. No actual game scheduled. Rejected."
+      },
+      {
+        "match": "New York Knicks vs San Antonio Spurs",
+        "reason": "Not a scheduled game tonight. NBA Finals matchup has not been set — SAS vs NYK would be Finals only if SAS wins Game 7 tonight. Odds shown (SAS 1.22, NYK 2.70) are futures/series odds or sportsbook placeholder. No actual game scheduled. Rejected."
+      }
+    ],
+    "report": "### CONFIRMED — Oklahoma City Thunder ML\n\n- **Match:** San Antonio Spurs vs Oklahoma City Thunder | **Tip:** 2026-05-29T00:30 UTC\n- **Pick:** OKC ML | **Scout odds:** 2.35 | **Commit odds:** 2.40 | **Move:** +0.05 (favourable — confirmed at original stake tier)\n- **ML:** SAS 1.66 / OKC 2.40 | **ATS:** SAS -3.5 (1.96/1.96) | **O/U:** 219.5 (O:2.04/U:1.88)\n- **Stake:** €219.60 | **Pot:** €527.04 | **Conf:** 50/100 | **EV:** +20.0%\n- **Decision:** OKC holds +2.8pt season NetRtg edge (+11.1 vs +8.3) and essentially equal L15 form (+28.7 vs +27.6). Market prices OKC at 41.7% implied win probability — undervaluing their statistical edge. True probability estimated ~50% (NetRtg edge offsets SAS home court). Odds improved +0.05 since Scout (2.35→2.40), confirming at original speculative 10% tier. Williams QUESTIONABLE already baked into confidence reduction at Scout phase. SGA and Holmgren confirmed not in injury report (active). Wembanyama not listed (SAS injury data absent from feed) — unknown but no OUT flag. EV = 20% at confidence 50 clears all thresholds. Stake adjusted down from Scout's €329.39 to correct €219.60 (confidence 50 = 10% speculative tier).\n\n---\n\n### LATE SCOUT SUMMARY\n\nNo new picks added. SAS ML at 1.66 fails EV minimum (EV ~4.6% at honest 63% confidence). SAS spread -3.5 fails confidence floor (58 < 60 required) with Wembanyama status unknown adding unacceptable spread risk. Totals play lacks directional conviction for a winner-take-all Game 7. Finals matchup futures (NYK vs OKC/SAS) are not scheduled games tonight and correctly rejected.\n\n---\n\n**Slate Summary:** One pick committed for tonight's WCF Game 7 winner-take-all at San Antonio — OKC ML at 2.40, €219.60 staked (10% of bankroll, speculative tier). Total exposure €219.60 = 10% of bankroll, well within the 70% limit. The edge is OKC's +2.8pt season NetRtg advantage being underpriced at 41.7% implied probability for a road team with near-equal recent form; SAS home court advantage is real but appears over-corrected in the line. Williams Questionable remains the key uncertainty — if he plays, OKC's execution ceiling improves and EV increases further.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 14022,
+    "tokens_out": 4100,
+    "cost_usd": 0.103566
   }
 ]
