@@ -1,7 +1,7 @@
 ---
-version: 67
-updated_at: 2026-05-28T13:44:24.235789+00:00
-updated_by: analyst_2026-05-28
+version: 68
+updated_at: 2026-05-29T12:45:34.997811+00:00
+updated_by: analyst_2026-05-29
 llm: claude-sonnet-4-6
 ---
 
@@ -96,41 +96,40 @@ NOTE — PLAYOFF PHASE: All remaining teams are fully motivated. Roster-only fla
 Oklahoma City Thunder:
 - Ajay Mitchell (G): OUT [roster-only]
 - Thomas Sorber (C): OUT [roster-only]
-- Jalen Williams (G): OUT [roster-only] — KEY GUARD ABSENCE. Significant depth impact.
-NOTE: OKC in WCF vs SAS — OKC leads 3-2, Game 7 next (ESPN shows Game 7). Re-verify Shai Gilgeous-Alexander, Chet Holmgren active before ANY OKC WCF pick. MANDATORY.
+NOTE: OKC in WCF Game 7 vs SAS — WINNER TAKE ALL. Re-verify Shai Gilgeous-Alexander, Chet Holmgren active before ANY OKC WCF pick. MANDATORY. Jalen Williams (G) OUT [was in prior version — NOT in current verified list; remove]. Do NOT carry forward Williams unless re-confirmed in verified feed.
 
 San Antonio Spurs:
 - David Jones Garcia (F): OUT [roster-only]
-NOTE: SAS in WCF vs OKC — SAS forced Game 7 by winning Game 6. Series tied 3-3. Re-verify Victor Wembanyama active before ANY SAS WCF pick. MANDATORY.
+NOTE: SAS in WCF Game 7 vs OKC — road Game 7 at OKC. Re-verify Victor Wembanyama active before ANY SAS WCF pick. MANDATORY.
 
 Boston Celtics:
 - Jayson Tatum (F): OUT [roster-only] — FRANCHISE PLAYER.
-NOTE: BOS CONFIRMED ELIMINATED (PHI won 4-3). No further BOS picks.
+NOTE: BOS CONFIRMED ELIMINATED. No further BOS picks.
 
 Houston Rockets:
 - Steven Adams (C): OUT [roster-only]
 - Fred VanVleet (G): OUT [roster-only]
 - Kevin Durant (F): OUT [roster-only] — FRANCHISE PLAYER.
-NOTE: HOU ELIMINATED (LAL won series 4-2). No further HOU picks.
+NOTE: HOU ELIMINATED. No further HOU picks.
 
 Minnesota Timberwolves:
 - Donte DiVincenzo (G): OUT [roster-only]
-NOTE: MIN ELIMINATED — SAS won West Semifinals 4-2. No further MIN picks.
+NOTE: MIN ELIMINATED. No further MIN picks.
 
 Atlanta Hawks:
 - Keshon Gilbert (G): OUT [roster-only]
 - Jock Landale (C): OUT [roster-only]
-NOTE: ATL CONFIRMED ELIMINATED — NYK won 4-2 in Round 1. No further ATL picks.
+NOTE: ATL CONFIRMED ELIMINATED. No further ATL picks.
 
 Toronto Raptors:
 - Chucky Hepburn (G): OUT [roster-only]
 - Brandon Ingram (F): OUT [roster-only]
 - Immanuel Quickley (G): OUT [roster-only] — key guard.
-NOTE: TOR CONFIRMED ELIMINATED — CLE won series. No further TOR picks.
+NOTE: TOR CONFIRMED ELIMINATED. No further TOR picks.
 
 Cleveland Cavaliers:
 - Dennis Schroder (G): OUT [roster-only]
-NOTE: CLE CONFIRMED ELIMINATED — NYK won ECF 4-0. No further CLE picks.
+NOTE: CLE CONFIRMED ELIMINATED. No further CLE picks.
 
 Los Angeles Lakers:
 - Luka Doncic (G): OUT [roster-only] — FRANCHISE PLAYER.
@@ -151,10 +150,11 @@ NOTE: Washington did not qualify for playoffs. Do NOT bet Washington to win unde
 Franchise players requiring mandatory NBA official PDF verification before ANY pick involving their team:
 - Shai Gilgeous-Alexander, Chet Holmgren (OKC) — re-verify each WCF session
 - Luka Doncic (LAL) — roster-only OUT; LAL competing without him in Round 2
+- Jalen Brunson, Karl-Anthony Towns (NYK) — re-verify before any Finals pick
 
-WCF: Series now TIED 3-3. Game 7 is next (verify location from ESPN — standard bracket: Game 7 at OKC home, OKC hosts Games 1,2,5,7). VERIFY MANDATORY.
-OKC: Williams OUT remains confirmed — depth concern for Game 7 at home.
-SAS: Wembanyama health is decisive swing factor — mandatory verification before every WCF pick.
+WCF Game 7: WINNER TAKE ALL at OKC (verify ESPN). Both teams face elimination.
+OKC: SGA/Holmgren mandatory verify. Superior NetRtg (+11.1) + home court = compound edge.
+SAS: Wembanyama health is decisive — mandatory verification before every WCF pick.
 
 ## SECTION:tanking_teams
 NOTE — PLAYOFF PHASE ACTIVE: See playoff_context.md no_tanking section. Tanking logic does NOT apply to any remaining play-in or playoff team. All remaining teams are motivated. Only apply tank logic to fully eliminated non-playoff teams.
