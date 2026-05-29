@@ -1,41 +1,40 @@
 ---
-date: 2026-05-28
+date: 2026-05-29
 llm: claude-sonnet-4-6
 scout_patches: 1
 commit_patches: 0
-milestone: daily (43 bets)
+milestone: daily (44 bets)
 ---
 
-## Today's Analysis — 2026-05-28
+## Today's Analysis — 2026-05-29
 
-The WCF has been forced to a winner-take-all Game 7 after SAS won Game 6 at home, fundamentally shifting the series framing — the key analytical update is that no in-series lead exists, so OKC home court (if confirmed) + NetRtg edge (+2.8pts) become the co-primary signals, and historical Game 7 home win rates (~60-65%) give OKC a structural edge that should be evaluated for both ML and spread value. NYK's rest advantage for Finals Game 1 is now at maximum (7-10+ days) regardless of WCF outcome, creating a strong structural edge for Finals Game 1 that Scout should flag immediately. Jalen Williams (OKC) remaining OUT in a home Game 7 is the key swing factor to monitor — his absence modestly compresses OKC's spread line, potentially opening value if the market over-prices the absence.
+WCF Game 7 at OKC is the sole active game — OKC holds compound edge via home court (+3-4pts), superior season NetRtg (+2.8pts over SAS), and historical Conference Finals home win rate (~60-65%); the primary structural bet remains OKC ML at odds ≥ 1.55 or spread if accessible near -5/-6. Key integrity flag this session: Jalen Williams does NOT appear in the current verified injury feed, meaning his OUT status must be re-confirmed from the NBA official PDF before Scout drafts — if he is now active, OKC's ceiling rises and the spread line will likely tighten. NYK's extended rest advantage (6-10 days before Finals Game 1) is building into the strongest structural edge on the horizon, and should be front-loaded into Finals Game 1 analysis regardless of which WCF team advances.
 
 ## Performance Stats
-ALL-TIME: 32W / 29L | Win rate: 52.5% | P&L: €+457.72 | Avg odds: 1.93 | Avg conf: 65.6/100
-RECENT 20: 12W / 8L | 60.0% WR | P&L: €+656.22
-By market:      ML 25bets 12W/13L 48.0% €-289.43  |  SPREAD 29bets 16W/13L 55.2% €+592.70  |  TOTAL 7bets 4W/3L 57.1% €+154.45
-By confidence:  High 19bets 8W/11L 42.1% €-659.52  |  Medium 40bets 24W/16L 60.0% €+1258.55  |  Speculative 2bets 0W/2L 0.0% €-141.31
-By odds range:  1.70-1.89 21bets 11W/10L 52.4% €-382.39  |  1.90-2.09 36bets 20W/16L 55.6% €+782.12  |  2.10-2.50 4bets 1W/3L 25.0% €+57.99
+ALL-TIME: 32W / 30L | Win rate: 51.6% | P&L: €+238.12 | Avg odds: 1.94 | Avg conf: 65.4/100
+RECENT 20: 12W / 8L | 60.0% WR | P&L: €+730.62
+By market:      ML 25bets 12W/13L 48.0% €-289.43  |  SPREAD 29bets 16W/13L 55.2% €+592.70  |  TOTAL 8bets 4W/4L 50.0% €-65.15
+By confidence:  High 19bets 8W/11L 42.1% €-659.52  |  Medium 40bets 24W/16L 60.0% €+1258.55  |  Speculative 3bets 0W/3L 0.0% €-360.91
+By odds range:  1.70-1.89 21bets 11W/10L 52.4% €-382.39  |  1.90-2.09 36bets 20W/16L 55.6% €+782.12  |  2.10-2.50 5bets 1W/4L 20.0% €-161.61
 
 
 
 ## Scout patches applied
-- [franchise_player_rules] ESPN live feed shows OKC leads 3-2 with Game 7 next, meaning SAS won Game 6 to force Game 7 — all WCF series_context references must be updated to reflect the tied 3-3 status and upcoming Game 7.
+- [franchise_player_rules] Current verified list does NOT include Jalen Williams — removing him from OKC entry to comply with HARD CONSTRAINT; all other player entries remain consistent with verified feed, and playoff phase notes updated to reflect Game 7 winner-take-all status.
 
 ## Commit patches applied
 None
 
 ## Playoff context patches applied
-- [phase] ESPN live feed shows OKC leads 3-2 with Game 7 next, confirming SAS won Game 6 to force a deciding Game 7.
-- [series_context] ESPN live feed confirms Game 7 is next in WCF (OKC leads 3-2 becomes series tied 3-3 after SAS won Game 6), requiring full reframe from elimination game to winner-take-all Game 7 context.
-- [elimination_flags] With SAS winning Game 6 to force Game 7, neither team faces elimination alone — both face a winner-take-all Game 7, requiring removal of the directional elimination framing.
-- [playoff_rest] Series forced to Game 7 requires updated rest framing — neither team is at elimination disadvantage now, but Game 7 home court and NYK rest advantage for Finals are the key new factors.
-- [playoff_motivation] SAS winning Game 6 to force Game 7 fundamentally changes the motivation framing — no team has series lead, both face elimination, and OKC home court + NetRtg replace the elimination-game edge as primary signals.
-- [h2h_playoff] SAS won Game 6 to force Game 7, making the series tied 3-3 and requiring the signal hierarchy to shift from in-series lead to home court + NetRtg as co-primary indicators.
-- [l15_caveat] Series tied 3-3 requires reframing the signal hierarchy — no team has in-series lead, so home court and NetRtg must become the primary predictors for Game 7 analysis.
-- [no_tanking] SAS won Game 6 to force Game 7, meaning neither team faces unilateral elimination — both OKC and SAS are in a winner-take-all Game 7 requiring updated elimination flag framing.
+- [phase] Removing Jalen Williams reference from phase section as he is not in the current verified injury feed — agents must not carry forward unverified absences.
+- [series_context] Removing unverified Jalen Williams OUT reference from authoritative series_context and flagging need for re-verification per current session's verified injury feed.
+- [elimination_flags] No structural changes to elimination flags required; kept current and consistent with verified feed data.
+- [playoff_rest] No changes to rest logic required this session; content remains accurate for Game 7 context.
+- [h2h_playoff] Updating h2h_playoff to flag Jalen Williams OUT status as needing re-verification since he is absent from current verified feed, while preserving all other accurate series intelligence.
+- [l15_caveat] Correcting all Jalen Williams references to flag re-verification requirement since he does not appear in current verified injury feed, preserving all other accurate playoff framing.
+- [playoff_motivation] Updating all Jalen Williams references to require re-verification rather than stating confirmed OUT status, as he is not present in the current session's verified injury feed.
 
 ## Intelligence gaps identified
-- **Game 7 home win rate by NetRtg gap is not currently tracked in playoff_context rules — we know historical home win rate is ~60-65% in WCF Game 7s but don't have a NetRtg-stratified version** — With OKC at home + NetRtg +2.8pt edge, knowing whether the home win rate increases to ~70%+ when the home team also has a NetRtg advantage would sharpen the OKC confidence tier and spread analysis for Game 7 → Flag for data enrichment: research Conference Finals Game 7 home win rates split by whether home team had a positive season NetRtg differential vs the visitor; update l15_caveat or h2h_playoff with the finding
-- **Los Angeles Lakers Round 2 series score and opponent remain unverified — the current skills files consistently say 'verify from ESPN' but no confirmation has been received** — If LAL is in an active series, Luka Doncic being OUT is a franchise player absence that should be driving specific confidence adjustments for LAL picks, but without series context we cannot frame the LAL angle correctly → Prioritise ESPN bracket fetch for LAL Round 2 status at next session; if LAL is eliminated, update elimination_flags immediately; if active, update series_context with opponent and score
-- **High confidence bets (70-84) continue to underperform significantly (38.9% WR, -€894.80) but the current rule only adds 'extra scrutiny' without a hard structural gate — a soft scrutiny note may be insufficient** — If high confidence picks are systematically losing, the gap between 'extra scrutiny required' and a hard confidence cap or odds floor may be costing real money; a more structural rule (e.g. require NetRtg gap ≥ 6.0 for high confidence ML, not just ≥ 5.0) could reduce the loss rate → After 5 more high-confidence settled bets, evaluate whether to raise NetRtg gap requirement for high-confidence ML picks from ≥ 5.0 to ≥ 6.0, or add a hard EV floor of 0.10 (not 0.08) for high-confidence ML picks at 1.70-1.89
+- **Jalen Williams (OKC) was listed as OUT [roster-only] in prior sessions but does NOT appear in today's verified injury feed — his current status is unconfirmed** — If Williams is now active, OKC's execution ceiling rises meaningfully for Game 7, the spread line tightens, and any spread pick drafted at current prices could be at stale odds; if still OUT, the existing framing holds → Scout MUST query NBA official PDF immediately before drafting any WCF Game 7 pick and explicitly confirm Williams status — if active, adjust OKC spread confidence upward by +5 and note in pick reasoning
+- **Los Angeles Lakers Round 2 series status, opponent, and current score are unverified in today's data feed** — Without knowing LAL's series score and opponent, Scout cannot evaluate rest days, elimination urgency, or home court advantage for any potential LAL pick → Add explicit LAL Round 2 series data to the ESPN live feed input — or instruct Scout to skip LAL picks entirely until series_context is confirmed from ESPN bracket
+- **No performance data exists yet for Game 7 playoff picks specifically — the system has never bet a Conference Finals Game 7** — Game 7s have unique dynamics (maximum motivation both sides, home court amplified, elimination stress) that may not be fully captured by regular-season or earlier-round patterns in current rules → After Game 7 settles, tag the pick with a 'game7_conf_finals' label and track separately — if 3+ Game 7 bets settle, analyse whether home-court edge is being correctly priced relative to current 1.55 OKC floor
