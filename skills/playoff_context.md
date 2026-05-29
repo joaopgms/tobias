@@ -1,20 +1,21 @@
 ---
-version: 40
-updated_at: 2026-05-28T13:44:24.235789+00:00
-updated_by: analyst_2026-05-28
+version: 41
+updated_at: 2026-05-29T12:45:34.997811+00:00
+updated_by: analyst_2026-05-29
 llm: claude-sonnet-4-6
 ---
 
 ## SECTION:phase
-NBA Playoffs — Conference Finals (Round 3) Active
+NBA Playoffs — Conference Finals (Round 3) Active — GAME 7 IMMINENT
 
 Round 2 (Semifinals) is FULLY COMPLETE per ESPN live feed. All four series resolved.
-Conference Finals (ECF and WCF) are now in progress.
+Conference Finals (ECF and WCF) status:
 
-ECF STATUS: New York Knicks SWEEP Cleveland Cavaliers 4-0. NYK ADVANCES TO NBA FINALS. CLE ELIMINATED.
-WCF STATUS: Series TIED 3-3. Oklahoma City Thunder vs San Antonio Spurs. Game 7 is next.
+ECF STATUS: New York Knicks SWEPT Cleveland Cavaliers 4-0. NYK ADVANCES TO NBA FINALS. CLE ELIMINATED.
+WCF STATUS: Series TIED 3-3. Oklahoma City Thunder vs San Antonio Spurs. GAME 7 IS NEXT — WINNER TAKE ALL.
   GAME 7 LOCATION: Standard bracket — OKC hosts Games 1, 2, 5, 7. Game 7 at OKC home. VERIFY FROM ESPN MANDATORY.
   Winner-take-all Game 7. Both teams at maximum motivation. Wembanyama health decisive for SAS.
+  NOTE: Jalen Williams (OKC, G) OUT status — verify current roster from NBA official PDF before drafting.
 
 playin_rules section is INACTIVE this phase — ignore it entirely.
 
@@ -31,10 +32,10 @@ EAST Conference Finals (ECF): COMPLETE
 WEST Conference Finals (WCF):
 - SERIES TIED 3-3. Oklahoma City Thunder vs San Antonio Spurs. GAME 7 IS NEXT — WINNER-TAKE-ALL.
   GAME 7 LOCATION: OKC home (standard bracket: OKC hosts Games 1,2,5,7). VERIFY from ESPN before drafting. MANDATORY.
-  OKC (NetRtg +11.1, 64-18): Leads series 3-3 (tied). SGA and Holmgren — verify active. MANDATORY.
+  OKC (NetRtg +11.1, 64-18): Tied 3-3. SGA and Holmgren — verify active. MANDATORY.
   SAS (NetRtg +8.3, 62-20): Forced Game 7 by winning Game 6 at home. Wembanyama health critical — verify active. MANDATORY.
-  KEY ABSENCE: Jalen Williams (OKC, G) OUT [roster-only] — meaningful depth loss in Game 7.
-  IN-SERIES SIGNAL: Series is TIED 3-3 — no team has in-series lead. Stats + home court become PRIMARY signals.
+  NOTE: Jalen Williams (OKC) OUT status from prior sessions — NOT in current verified injury feed. Re-verify from NBA official PDF before treating as confirmed OUT.
+  IN-SERIES SIGNAL: Series TIED 3-3 — no team has in-series lead. Home court + NetRtg become PRIMARY signals.
   OKC season NetRtg edge (+2.8pts over SAS) + home court advantage (Game 7 at OKC if bracket confirmed) = OKC dual edge.
   GAME 7 FRAMING (at OKC home, verify ESPN): OKC home court (+3-4pts in playoffs) + superior NetRtg = OKC elevated edge.
   SAS WON Game 6 at home demonstrating genuine competitiveness — do not dismiss SAS as pushover.
@@ -43,8 +44,8 @@ WEST Conference Finals (WCF):
   SERIES TIED RULE: When series is tied 3-3, home court + NetRtg become CO-PRIMARY signals. No in-series lead exists.
   Do NOT back SAS at odds shorter than 2.00 on road in WCF Game 7 — OKC at home with NetRtg edge favours OKC.
   OKC at home: if odds ≥ 1.55, situational edge exists (home + NetRtg + Game 7 historical home advantage).
-  CRITICAL: Wembanyama health status is decisive swing factor for SAS — mandatory verification before every WCF pick.
-  Thomas Sorber (C/OKC): OUT. Ajay Mitchell (G/OKC): OUT. Jalen Williams (G/OKC): OUT. David Jones Garcia (F/SAS): OUT.
+  CRITICAL: Wembanyama health status is decisive swing factor for SAS — mandatory verification before drafting.
+  Thomas Sorber (C/OKC): OUT [verified]. Ajay Mitchell (G/OKC): OUT [verified]. David Jones Garcia (F/SAS): OUT [verified].
   Re-verify Shai Gilgeous-Alexander, Chet Holmgren (OKC) active before any WCF pick. MANDATORY.
   Re-verify Victor Wembanyama (SAS) active before any WCF pick. MANDATORY.
 
@@ -53,6 +54,13 @@ WEST Conference Finals (WCF):
 - CLE defeated DET 4-3 (East Semifinals). DET ELIMINATED.
 - SAS defeated MIN 4-2 (West Semifinals). MIN ELIMINATED.
 - OKC swept Round 2 opponent 4-0 (West Semifinals). Opponent ELIMINATED.
+
+NBA FINALS PREVIEW:
+- NYK confirmed East representative. WCF winner (OKC or SAS) meets NYK.
+- If OKC advances: OKC (+11.1) vs NYK (+6.5) — OKC +4.6pt NetRtg edge. OKC would be clear Finals favourite.
+- If SAS advances: SAS (+8.3) vs NYK (+6.5) — SAS +1.8pt NetRtg edge. Competitive Finals.
+- NYK rest advantage for Finals Game 1 is MAXIMUM — WCF going to Game 7 means NYK gets 6-10 days rest.
+- Both WCF teams face 7-game fatigue vs NYK's full reset.
 
 ## SECTION:elimination_flags
 PLAYOFFS ELIMINATION FLAGS (updated from ESPN live feed)
@@ -98,11 +106,10 @@ NYK now awaits WCF winner for NBA Finals. Monitor NYK rest days (series ended) v
 
 WCF — SERIES TIED 3-3 (Game 7 next — WINNER TAKE ALL — at OKC home if standard bracket confirmed):
 - Game 7 follows Game 6 — verify exact date and rest days from ESPN.
-- Standard playoff scheduling: 2 days off between games in Conference Finals = standard rest, no adjustment.
+- Standard playoff scheduling: 2 days off between Conference Finals games = standard rest, no adjustment.
 - GAME 7 CONTEXT: Both teams at MAXIMUM motivation — winner-take-all stakes override any rest consideration.
-- OKC at home for Game 7 (if confirmed): home court advantage (+3-4pts) + NetRtg edge = compound OKC edge.
+- OKC at home for Game 7 (if confirmed): home court advantage (+3-4pts) + historical ~60-65% home win rate = compound OKC edge.
 - SAS on road for Game 7: Wembanyama minutes/health critical — road Game 7 is enormous challenge.
-- Jalen Williams (OKC) OUT — meaningful OKC depth loss even at home.
 - GAME 7 HISTORY: Home teams win Conference Finals Game 7 at ~60-65% historically.
 
 NBA FINALS REST ADVANTAGE TRACKING:
@@ -131,12 +138,12 @@ PLAYOFF MOTIVATION HIERARCHY (Conference Finals — Game 7, Winner-Take-All)
    → Series TIED: no in-series lead signal. Home court + NetRtg become CO-PRIMARY signals.
    → OKC home court (Game 7 at OKC if bracket confirmed) + NetRtg +11.1 vs SAS +8.3 = compound OKC edge.
    → SAS WON Game 6 at home — demonstrated resilience and competitive parity in series.
-   → Jalen Williams (OKC, G) OUT — meaningful OKC depth loss even in home Game 7.
+   → NOTE: Jalen Williams (OKC, G) — prior sessions listed as OUT; NOT in current verified feed. Re-verify before treating as confirmed OUT.
    → SAS has proven road AND home viability — serious Game 7 threat despite road disadvantage.
 
 3. REST ADVANTAGE / MATCH SHARPNESS:
    NYK (Finals-bound): Fully rested (7+ days by Game 7 end), awaiting WCF winner. Maximum rest advantage for Finals.
-   OKC (WCF): Home court advantage. Williams OUT. NetRtg edge. 7-game war cumulative fatigue.
+   OKC (WCF): Home court advantage. NetRtg edge. 7-game war cumulative fatigue.
    SAS: On road for Game 7. Wembanyama health is decisive — monitor closely.
 
 4. STATISTICAL EDGES (season NetRtg):
@@ -150,14 +157,14 @@ PLAYOFF MOTIVATION HIERARCHY (Conference Finals — Game 7, Winner-Take-All)
    → WCF Game 7 at OKC (if confirmed): home court advantage (+3-4pts) + NetRtg edge + historical ~60-65% home win rate in Game 7 = OKC clear edge.
    → SAS on road for Game 7: road Game 7 in Conference Finals is historically very difficult.
    → Do NOT back SAS at odds shorter than 2.00 on road in WCF Game 7 — OKC home + NetRtg + history favours OKC.
-   → OKC at home if odds ≥ 1.55 — home Game 7 + NetRtg + Williams OUT factored in — evaluate spread too.
+   → OKC at home if odds ≥ 1.55 — home Game 7 + NetRtg — evaluate spread too.
    → Verify exact Game 7 (WCF) location from ESPN before drafting.
 
 6. FRANCHISE PLAYER AVAILABILITY (MANDATORY verification):
    OKC: Re-verify SGA, Chet Holmgren active. MANDATORY before every WCF pick.
    SAS: Re-verify Victor Wembanyama active. MANDATORY before every WCF pick.
    NYK: Re-verify Jalen Brunson, Karl-Anthony Towns active. MANDATORY before any Finals pick.
-   NOTE: Jalen Williams (OKC, G) confirmed OUT — factor into OKC depth assessment for home Game 7.
+   NOTE: Jalen Williams (OKC) — was listed OUT in prior sessions; not in current verified feed. Re-verify from NBA official PDF. Do not assume status.
 
 7. LAL ROUND 2 MOTIVATION:
    LAL in Round 2 without Doncic — verify opponent and series score from ESPN. Apply -10 spread confidence for LAL in early Round 2 games.
@@ -167,8 +174,7 @@ PLAYOFF MOTIVATION HIERARCHY (Conference Finals — Game 7, Winner-Take-All)
    OKC at home: historical ~60-65% home win rate in Conference Finals Game 7s.
    OKC NetRtg +11.1 vs SAS +8.3 = +2.8pt OKC edge. Home + stats = compound OKC edge.
    SAS forced Game 7 — demonstrated they belong. Road Game 7 is their challenge.
-   Williams OUT (OKC) reduces OKC's execution ceiling — watch SGA/Holmgren workload.
-   Back OKC at home if odds ≥ 1.55 — evaluate spread; -7 or -8 may be accessible.
+   Back OKC at home if odds ≥ 1.55 — evaluate spread; -5 to -7 range likely depending on Williams status.
    Do NOT back SAS at odds shorter than 2.00 on road in WCF Game 7.
    CRITICAL: Wembanyama health status is decisive for SAS — mandatory verification before drafting.
 
@@ -206,9 +212,8 @@ CRITICAL CAVEAT: In-series result is the PRIMARY signal when one team leads. Whe
 
 ECF — New York Knicks vs Cleveland Cavaliers: COMPLETE — NYK swept CLE 4-0.
 - NYK advances to NBA Finals. No further ECF picks. CLE ELIMINATED.
-- IN-SERIES FINAL: NYK WON Games 1, 2, 3, and 4. Complete dominance.
 - NYK (+6.5 NetRtg) vs CLE (+4.0 NetRtg) — NYK +2.5pt season edge translated to series sweep.
-- KEY LESSON: +2.5pt NetRtg edge + in-series lead = sweep. In-series dominance signal was decisive.
+- KEY LESSON: +2.5pt NetRtg edge + in-series dominance = sweep. In-series dominance signal was decisive.
 
 WCF — Oklahoma City Thunder vs San Antonio Spurs: SERIES TIED 3-3 (Game 7 next — WINNER TAKE ALL — at OKC home verify ESPN):
 - IN-SERIES DATA: Series TIED 3-3. No in-series lead. Home court + NetRtg are PRIMARY signals.
@@ -217,7 +222,7 @@ WCF — Oklahoma City Thunder vs San Antonio Spurs: SERIES TIED 3-3 (Game 7 next
   OKC at home for Game 7: historical ~60-65% home win rate in Conference Finals Game 7s.
   OKC NetRtg +2.8pt edge over SAS + home court = compound OKC advantage.
   SAS RESILIENCE: Won Game 6 on road to force Game 7 — proven road and home viability in series.
-  Williams (OKC) OUT — depth reduction. SGA/Holmgren workload critical.
+  NOTE: Jalen Williams (OKC) OUT status — verify from NBA official PDF each session; not in current verified feed.
   SAS on road for Game 7: very difficult historically. Wembanyama health decisive.
   Back OKC at home if odds ≥ 1.55 — evaluate spread for home Game 7 value.
   Do NOT back SAS at odds shorter than 2.00 on road in WCF Game 7.
@@ -238,7 +243,7 @@ KEY LESSONS UPDATED:
 1. NYK swept ECF 4-0 — validates in-series dominance + NetRtg gap as primary predictors.
 2. WCF TIED 3-3 — series is competitive despite OKC's statistical edge. SAS forced Game 7 from 2-3 deficit.
 3. WCF Game 7 at OKC home — home court + NetRtg edge = OKC is the favourite but SAS is proven competitor.
-4. Jalen Williams (OKC) OUT is confirmed — factor into OKC depth execution risk even at home.
+4. Jalen Williams (OKC) OUT was a prior confirmed signal — re-verify each session from NBA official PDF.
 5. SERIES TIED RULE: When tied 3-3, home court + NetRtg replace in-series lead as PRIMARY signal.
 6. SAS proven home AND road competitor — do not dismiss them as pushover in road Game 7.
 7. Franchise player absence > NetRtg gap: confirmed by Tatum OUT (BOS), Durant OUT (HOU), Doncic OUT (LAL).
@@ -252,7 +257,7 @@ CRITICAL HIERARCHY:
    WCF: TIED 3-3 — Game 7 next at OKC home (verify ESPN). No in-series lead signal available.
 2. Home court: PRIMARY in Game 7. OKC at home (if confirmed) = +3-4pts + historical ~60-65% home win rate in Game 7s.
 3. Franchise player availability: SECONDARY — a key absence can negate any NetRtg gap.
-   Jalen Williams (OKC, G) OUT — meaningful OKC depth reduction even in home Game 7.
+   NOTE: Jalen Williams (OKC, G) OUT — was prior session confirmed; NOT in current verified feed. Re-verify from NBA official PDF before treating as confirmed OUT.
 4. Season NetRtg: PRIMARY confirming signal when series is tied. OKC +11.1 vs SAS +8.3 = +2.8pt OKC edge reinforces home court advantage.
 5. L15 NetRtg: directional only — weight less than home court or franchise player health in Game 7.
 
@@ -284,9 +289,9 @@ KEY LESSONS FOR CONFERENCE FINALS (Game 7 winner-take-all):
 1. NYK swept ECF 4-0 — validates in-series dominance + NetRtg gap as primary predictors. Lesson confirmed.
 2. WCF TIED 3-3 — SAS resilience demonstrated; forced Game 7 from 2-3 deficit.
 3. Game 7 at home (OKC) — home court + NetRtg edge + historical home win rates = OKC clear favourite.
-4. Jalen Williams (OKC) OUT is confirmed — depth reduction; monitor SGA/Holmgren workload.
+4. Jalen Williams (OKC) — verify status from NBA official PDF each session; not in current verified injury feed.
 5. For any Conference Finals pick: MANDATORY franchise player health check before drafting.
-6. OKC spread at home in Game 7 — home court + NetRtg + Williams OUT (reduces line to ~-5/-6?) = evaluate spread value.
+6. OKC spread at home in Game 7 — home court + NetRtg (+ depth reduction if Williams confirmed OUT) = evaluate spread value.
 7. NBA Finals rest asymmetry: NYK will have 7-10 days rest before Game 1 — MAXIMUM rest advantage. Factor into Finals Game 1 analysis.
 8. SERIES TIED RULE: 3-3 → home court + NetRtg replace in-series lead as primary signal. Critical rule for Game 7 framing.
 
