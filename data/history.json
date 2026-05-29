@@ -24,7 +24,7 @@
           "started_at": "2026-04-05T10:44:07.102344+00:00",
           "bankroll_start": 1000.0,
           "wins": 27,
-          "losses": 17,
+          "losses": 18,
           "peak_bankroll": 2195.96,
           "total_bets": 45
         }
@@ -2439,10 +2439,10 @@
             "Victor Wembanyama",
             "Jalen Williams (Questionable)"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -219.6,
+          "settled_at": "2026-05-29T11:31:38.619704+00:00",
           "committed_at": "2026-05-28T23:21:43Z"
         }
       ],
