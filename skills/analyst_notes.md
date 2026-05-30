@@ -1,14 +1,14 @@
 ---
-date: 2026-05-29
+date: 2026-05-30
 llm: claude-sonnet-4-6
 scout_patches: 1
 commit_patches: 0
 milestone: daily (44 bets)
 ---
 
-## Today's Analysis — 2026-05-29
+## Today's Analysis — 2026-05-30
 
-WCF Game 7 at OKC is the sole active game — OKC holds compound edge via home court (+3-4pts), superior season NetRtg (+2.8pts over SAS), and historical Conference Finals home win rate (~60-65%); the primary structural bet remains OKC ML at odds ≥ 1.55 or spread if accessible near -5/-6. Key integrity flag this session: Jalen Williams does NOT appear in the current verified injury feed, meaning his OUT status must be re-confirmed from the NBA official PDF before Scout drafts — if he is now active, OKC's ceiling rises and the spread line will likely tighten. NYK's extended rest advantage (6-10 days before Finals Game 1) is building into the strongest structural edge on the horizon, and should be front-loaded into Finals Game 1 analysis regardless of which WCF team advances.
+WCF Game 7 is the sole actionable game — OKC at home holds a compound edge via NetRtg +2.8pt, historical ~60-65% home win rate in Conference Finals Game 7s, and Jalen Williams OUT (now confirmed in verified feed) which reduces SAS's primary matchup threat and may shift the spread from -5 toward -6/-7. The primary risk variable remains Wembanyama's health: if he is limited or scratched, SAS's path to a road Game 7 win collapses entirely and OKC spread value increases further. NYK's rest advantage for Finals Game 1 is now locked in at approximately 7-10 days — this is the single strongest structural edge on the board heading into the Finals and should be flagged prominently for Scout when Games 1-2 odds are posted.
 
 ## Performance Stats
 ALL-TIME: 32W / 30L | Win rate: 51.6% | P&L: €+238.12 | Avg odds: 1.94 | Avg conf: 65.4/100
@@ -20,21 +20,22 @@ By odds range:  1.70-1.89 21bets 11W/10L 52.4% €-382.39  |  1.90-2.09 36bets 2
 
 
 ## Scout patches applied
-- [franchise_player_rules] Current verified list does NOT include Jalen Williams — removing him from OKC entry to comply with HARD CONSTRAINT; all other player entries remain consistent with verified feed, and playoff phase notes updated to reflect Game 7 winner-take-all status.
+- [franchise_player_rules] Jalen Williams (G/OKC) is present in the current verified feed as OUT [roster-only] — restoring the entry that was incorrectly flagged for removal in the prior version.
 
 ## Commit patches applied
 None
 
 ## Playoff context patches applied
-- [phase] Removing Jalen Williams reference from phase section as he is not in the current verified injury feed — agents must not carry forward unverified absences.
-- [series_context] Removing unverified Jalen Williams OUT reference from authoritative series_context and flagging need for re-verification per current session's verified injury feed.
-- [elimination_flags] No structural changes to elimination flags required; kept current and consistent with verified feed data.
-- [playoff_rest] No changes to rest logic required this session; content remains accurate for Game 7 context.
-- [h2h_playoff] Updating h2h_playoff to flag Jalen Williams OUT status as needing re-verification since he is absent from current verified feed, while preserving all other accurate series intelligence.
-- [l15_caveat] Correcting all Jalen Williams references to flag re-verification requirement since he does not appear in current verified injury feed, preserving all other accurate playoff framing.
-- [playoff_motivation] Updating all Jalen Williams references to require re-verification rather than stating confirmed OUT status, as he is not present in the current session's verified injury feed.
+- [phase] Jalen Williams OUT status is now confirmed in the current verified feed; correcting the prior ambiguity and noting NBA Finals is the next phase to prepare for.
+- [series_context] Jalen Williams OUT confirmed in current verified feed — updating from ambiguous prior language to confirmed status, and noting Finals rest advantage is now the next critical analytical frame.
+- [elimination_flags] Routine session update confirming elimination flags are current; Jalen Williams OUT status now confirmed in verified feed so noted explicitly.
+- [playoff_motivation] Jalen Williams OUT now confirmed in current verified feed — updating all references from ambiguous prior language and noting depth implications for OKC Game 7 spread analysis.
+- [h2h_playoff] Jalen Williams OUT confirmed in current verified feed — updating all prior ambiguous notes and clarifying implications for Game 7 spread analysis.
+- [l15_caveat] Jalen Williams OUT confirmed in current verified feed — correcting prior ambiguity across all playoff context sections and updating spread range estimate accordingly.
+- [playoff_rest] Routine session update noting Jalen Williams OUT confirmation and its fatigue/depth implications for OKC in Game 7 and potential Finals run.
+- [no_tanking] Session refresh confirming elimination flags and adding Jalen Williams OUT confirmation to OKC Game 7 entry.
 
 ## Intelligence gaps identified
-- **Jalen Williams (OKC) was listed as OUT [roster-only] in prior sessions but does NOT appear in today's verified injury feed — his current status is unconfirmed** — If Williams is now active, OKC's execution ceiling rises meaningfully for Game 7, the spread line tightens, and any spread pick drafted at current prices could be at stale odds; if still OUT, the existing framing holds → Scout MUST query NBA official PDF immediately before drafting any WCF Game 7 pick and explicitly confirm Williams status — if active, adjust OKC spread confidence upward by +5 and note in pick reasoning
-- **Los Angeles Lakers Round 2 series status, opponent, and current score are unverified in today's data feed** — Without knowing LAL's series score and opponent, Scout cannot evaluate rest days, elimination urgency, or home court advantage for any potential LAL pick → Add explicit LAL Round 2 series data to the ESPN live feed input — or instruct Scout to skip LAL picks entirely until series_context is confirmed from ESPN bracket
-- **No performance data exists yet for Game 7 playoff picks specifically — the system has never bet a Conference Finals Game 7** — Game 7s have unique dynamics (maximum motivation both sides, home court amplified, elimination stress) that may not be fully captured by regular-season or earlier-round patterns in current rules → After Game 7 settles, tag the pick with a 'game7_conf_finals' label and track separately — if 3+ Game 7 bets settle, analyse whether home-court edge is being correctly priced relative to current 1.55 OKC floor
+- **No rule exists to quantify the depth-reduction impact on spread when a team's starting-caliber guard (Jalen Williams) is confirmed OUT in a winner-take-all game with a thin roster.** — Williams OUT likely widens OKC's effective spread vs SAS by 1-2 points beyond the season NetRtg gap, but current rules have no mechanism to translate a depth-reduction absence (non-franchise player) into a spread adjustment — only franchise player absences trigger explicit confidence changes. → Add a sub-rule under franchise_player_rules (or market_rules spread section) for 'starter-level guard/forward OUT in playoff context': apply confidence +5 to the opponent's spread if the absent player averaged 15+ PPG and the team's NetRtg gap is already ≥ 2.0 in your favour.
+- **LAL Round 2 series status and opponent identity are unverified — the current feed shows LAL as 'still active' but provides no series score, opponent, or game number.** — If LAL is facing elimination or has already been eliminated, any LAL pick would be catastrophically wrong; conversely if LAL leads the series, the Luka Doncic OUT impact assessment changes materially. → Fetch ESPN bracket data for LAL Round 2 series before each session and patch elimination_flags and series_context with opponent name, current score, and next game date.
+- **No tracking of cumulative playoff minutes load for franchise players (SGA, Holmgren, Wembanyama) across a 7-game series to quantify fatigue-driven performance degradation risk in Finals Game 1.** — NYK's rest advantage for Finals Game 1 is the strongest structural edge on the board, but its magnitude depends on how taxed OKC or SAS franchise players are — a fatigued SGA in Games 1-2 of the Finals would meaningfully shift ML and spread value toward NYK. → Add a playoff_rest sub-rule: 'After a 7-game series, apply confidence -5 to the advancing team's spread picks for Finals Games 1-2, stacking with any existing rest asymmetry adjustment, when the opponent had 7+ days rest.'
