@@ -26,7 +26,7 @@
           "wins": 27,
           "losses": 18,
           "peak_bankroll": 2195.96,
-          "total_bets": 45
+          "total_bets": 47
         }
       ]
     }
@@ -2447,6 +2447,62 @@
         }
       ],
       "summary": "Day 2026-05-28 commit — 1 bets totalling €219.60. 0 cancelled. Bankroll: €2195.96 → €1976.36."
+    },
+    {
+      "entry_id": "nba_entry_20260530",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-05-30T23:34:04.174134+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1976.36,
+      "total_staked": 493.0,
+      "bankroll_after": 1483.36,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260530_001",
+          "match": "Oklahoma City Thunder vs San Antonio Spurs",
+          "time": "2026-05-31T00:00:00Z",
+          "pick": "Oklahoma City Thunder ML",
+          "odds": 1.71,
+          "stake": 296.0,
+          "potential_return": 506.16,
+          "confidence": 72,
+          "anchor_players": [
+            "Shai Gilgeous-Alexander",
+            "Chet Holmgren",
+            "Victor Wembanyama"
+          ],
+          "reasoning": "WCF Game 7 at OKC home (Paycom Center) — confirmed from skills file (OKC hosts Games 1,2,5,7). INJURY VERIFICATION AT COMMIT: SGA and Chet Holmgren not listed in NBA official injury report → ACTIVE. Jalen Williams OUT (Management-Strain) confirmed, already factored. SAS not filing injury report tonight → Wembanyama treated as ACTIVE (no OUT designation). ODDS CHECK: 1.71 within ML valid range (floor 1.65). No line movement from Scout (1.71 → 1.71). ML in 1.70–1.89 range requires EV ≥ 0.08 per performance note. EV = (0.72 × 1.71) - 1 = 0.2312 = 23.1% >> 0.08. STRUCTURAL EDGE: (1) OKC home court Game 7 worth +3-4pts in playoffs; (2) Historical ~60-65% home win rate in Conference Finals Game 7s; (3) OKC NetRtg +11.1 vs SAS +8.3 = +2.8pt season edge; (4) L15 NetRtg gap only 1.1pt — below 4.0pt threshold, so season NetRtg + home court are CO-PRIMARY signals per series tied 3-3 rule. SERIES TIED RULE applied: 3-3 → home court + NetRtg replace in-series lead as primary signal. Confidence 72 (high tier, applied -3 from 75 due to NetRtg gap < 5.0pt threshold). High confidence tier extra scrutiny applied — EV 23.1% far exceeds 0.08 floor. ANOMALY CHECK: OKC at 1.71 as home favourite in Game 7 — appropriate, no anomaly. STAKE: 15% of €1,976.36 = €296.45 → €296.00 (extra scrutiny = lower end of range). Total exposure after this pick: 15.0% of bankroll.",
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-05-30T23:34:06Z"
+        },
+        {
+          "id": "nba_bet_20260530_002",
+          "match": "Oklahoma City Thunder vs San Antonio Spurs",
+          "time": "2026-05-31T00:00:00Z",
+          "pick": "Oklahoma City Thunder -3.5",
+          "odds": 1.96,
+          "stake": 197.0,
+          "potential_return": 386.12,
+          "confidence": 63,
+          "anchor_players": [
+            "Shai Gilgeous-Alexander",
+            "Chet Holmgren",
+            "Victor Wembanyama"
+          ],
+          "reasoning": "WCF Game 7 at OKC home — spread evaluation on OKC -3.5 at 1.96. ODDS CHECK: 1.96 within spread valid range (1.80–2.30, floor 1.75 at commit). No line movement from Scout (1.96 → 1.96). EV = (0.63 × 1.96) - 1 = 0.2348 = 23.5% >> 0.05. INJURY VERIFICATION AT COMMIT: SGA and Holmgren ACTIVE (not in report). Jalen Williams OUT already factored at Scout (confidence 63, stake at lower end). Wembanyama ACTIVE (SAS not reporting injuries). STRUCTURAL EDGE: (1) Home court +3-4pts in playoffs ≈ covers -3.5 spread independently; (2) Season NetRtg +2.8pt edge confirms direction; (3) Game 7 home teams cover at ~60% per skills file; (4) L15 gap only 1.1pt — no strong recent form edge. HEADWINDS: Jalen Williams OUT (depth reduction), SAS L10 8-2 (hot form), SAS forced Game 7 from 2-3 deficit showing resilience. NET ASSESSMENT: Home court coverage of spread is the core thesis — OKC home advantage (+3-4pts) roughly covers -3.5, with NetRtg edge as confirming signal. Williams OUT is a known headwind already reflected in confidence (63). Medium confidence tier (55–69) — outperforming at 56.8% per performance note; do not over-cancel without clear cause. No clear cause to cancel — no new negative information. ANOMALY CHECK: None detected. STAKE: 10% of €1,976.36 = €197.64 → €197.00 (lower end of medium tier, extra caution for Williams OUT headwind). Combined ML + spread stake: €493.00 = 24.9% of bankroll — well within 70% cap.",
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-05-30T23:34:06Z"
+        }
+      ],
+      "summary": "Day 2026-05-30 commit — 2 bets totalling €493.00. 0 cancelled. Bankroll: €1976.36 → €1483.36."
     }
   ]
 }
