@@ -1,7 +1,7 @@
 ---
-version: 68
-updated_at: 2026-05-29T12:45:34.997811+00:00
-updated_by: analyst_2026-05-29
+version: 69
+updated_at: 2026-05-30T11:16:26.207170+00:00
+updated_by: analyst_2026-05-30
 llm: claude-sonnet-4-6
 ---
 
@@ -96,7 +96,8 @@ NOTE — PLAYOFF PHASE: All remaining teams are fully motivated. Roster-only fla
 Oklahoma City Thunder:
 - Ajay Mitchell (G): OUT [roster-only]
 - Thomas Sorber (C): OUT [roster-only]
-NOTE: OKC in WCF Game 7 vs SAS — WINNER TAKE ALL. Re-verify Shai Gilgeous-Alexander, Chet Holmgren active before ANY OKC WCF pick. MANDATORY. Jalen Williams (G) OUT [was in prior version — NOT in current verified list; remove]. Do NOT carry forward Williams unless re-confirmed in verified feed.
+- Jalen Williams (G): OUT [roster-only]
+NOTE: OKC in WCF Game 7 vs SAS — WINNER TAKE ALL. Re-verify Shai Gilgeous-Alexander, Chet Holmgren active before ANY OKC WCF pick. MANDATORY.
 
 San Antonio Spurs:
 - David Jones Garcia (F): OUT [roster-only]
