@@ -1,41 +1,41 @@
 ---
-date: 2026-05-30
+date: 2026-05-31
 llm: claude-sonnet-4-6
 scout_patches: 1
 commit_patches: 0
-milestone: daily (44 bets)
+milestone: daily (46 bets)
 ---
 
-## Today's Analysis — 2026-05-30
+## Today's Analysis — 2026-05-31
 
-WCF Game 7 is the sole actionable game — OKC at home holds a compound edge via NetRtg +2.8pt, historical ~60-65% home win rate in Conference Finals Game 7s, and Jalen Williams OUT (now confirmed in verified feed) which reduces SAS's primary matchup threat and may shift the spread from -5 toward -6/-7. The primary risk variable remains Wembanyama's health: if he is limited or scratched, SAS's path to a road Game 7 win collapses entirely and OKC spread value increases further. NYK's rest advantage for Finals Game 1 is now locked in at approximately 7-10 days — this is the single strongest structural edge on the board heading into the Finals and should be flagged prominently for Scout when Games 1-2 odds are posted.
+The WCF is now complete with San Antonio winning Game 7 on the road at OKC — a significant result that recalibrates our home court premium rule, as OKC had home court + superior NetRtg (+2.8pt) and still lost; this means in close-NetRtg Finals matchups, we should not treat home court as near-deterministic. The NBA Finals (SAS vs NYK) presents a genuinely competitive matchup: SAS has a +1.8pt NetRtg edge but NYK has maximum rest advantage (7-10 days) and home court for Games 1, 2, 5, 7 — the early series games strongly favour NYK situationally, but SAS's proven road resilience means we must require confluence of 2+ signals before backing NYK at short odds. Wembanyama's health and fatigue from the 7-game WCF grind is the single most important variable to monitor before any Finals pick is drafted.
 
 ## Performance Stats
-ALL-TIME: 32W / 30L | Win rate: 51.6% | P&L: €+238.12 | Avg odds: 1.94 | Avg conf: 65.4/100
-RECENT 20: 12W / 8L | 60.0% WR | P&L: €+730.62
-By market:      ML 25bets 12W/13L 48.0% €-289.43  |  SPREAD 29bets 16W/13L 55.2% €+592.70  |  TOTAL 8bets 4W/4L 50.0% €-65.15
-By confidence:  High 19bets 8W/11L 42.1% €-659.52  |  Medium 40bets 24W/16L 60.0% €+1258.55  |  Speculative 3bets 0W/3L 0.0% €-360.91
-By odds range:  1.70-1.89 21bets 11W/10L 52.4% €-382.39  |  1.90-2.09 36bets 20W/16L 55.6% €+782.12  |  2.10-2.50 5bets 1W/4L 20.0% €-161.61
+ALL-TIME: 32W / 32L | Win rate: 50.0% | P&L: €-254.88 | Avg odds: 1.94 | Avg conf: 65.4/100
+RECENT 20: 11W / 9L | 55.0% WR | P&L: €+221.62
+By market:      ML 25bets 12W/13L 48.0% €-289.43  |  SPREAD 29bets 16W/13L 55.2% €+592.70  |  TOTAL 10bets 4W/6L 40.0% €-558.15
+By confidence:  High 20bets 8W/12L 40.0% €-955.52  |  Medium 41bets 24W/17L 58.5% €+1061.55  |  Speculative 3bets 0W/3L 0.0% €-360.91
+By odds range:  1.70-1.89 22bets 11W/11L 50.0% €-678.39  |  1.90-2.09 37bets 20W/17L 54.1% €+585.12  |  2.10-2.50 5bets 1W/4L 20.0% €-161.61
 
 
 
 ## Scout patches applied
-- [franchise_player_rules] Jalen Williams (G/OKC) is present in the current verified feed as OUT [roster-only] — restoring the entry that was incorrectly flagged for removal in the prior version.
+- [franchise_player_rules] WCF is now COMPLETE per ESPN feed (SAS leads 4-3 marked COMPLETE), updating SAS to eliminated and OKC to NBA Finals participant; NYK already confirmed; franchise player rules must reflect Finals context.
 
 ## Commit patches applied
 None
 
 ## Playoff context patches applied
-- [phase] Jalen Williams OUT status is now confirmed in the current verified feed; correcting the prior ambiguity and noting NBA Finals is the next phase to prepare for.
-- [series_context] Jalen Williams OUT confirmed in current verified feed — updating from ambiguous prior language to confirmed status, and noting Finals rest advantage is now the next critical analytical frame.
-- [elimination_flags] Routine session update confirming elimination flags are current; Jalen Williams OUT status now confirmed in verified feed so noted explicitly.
-- [playoff_motivation] Jalen Williams OUT now confirmed in current verified feed — updating all references from ambiguous prior language and noting depth implications for OKC Game 7 spread analysis.
-- [h2h_playoff] Jalen Williams OUT confirmed in current verified feed — updating all prior ambiguous notes and clarifying implications for Game 7 spread analysis.
-- [l15_caveat] Jalen Williams OUT confirmed in current verified feed — correcting prior ambiguity across all playoff context sections and updating spread range estimate accordingly.
-- [playoff_rest] Routine session update noting Jalen Williams OUT confirmation and its fatigue/depth implications for OKC in Game 7 and potential Finals run.
-- [no_tanking] Session refresh confirming elimination flags and adding Jalen Williams OUT confirmation to OKC Game 7 entry.
+- [phase] ESPN live feed confirms SAS leads 4-3 [COMPLETE] in West Finals, meaning SAS won WCF and OKC is eliminated; phase must be updated to NBA Finals.
+- [series_context] ESPN confirms WCF complete with SAS winning 4-3; series_context must be updated to reflect NBA Finals (SAS vs NYK) and capture rest/NetRtg dynamics for Finals framing.
+- [elimination_flags] OKC is now eliminated (SAS won WCF 4-3 per ESPN); both Finals participants must be correctly flagged with mandatory verification requirements.
+- [playoff_rest] WCF complete; Finals rest dynamics (NYK maximum rest vs SAS 7-game fatigue) now govern this section and replace the Game 7 WCF rest framing.
+- [playoff_motivation] WCF is complete; motivation section must be updated to reflect NBA Finals (SAS vs NYK) with correct rest dynamics, home court structure, and motivational framing.
+- [h2h_playoff] WCF complete with SAS winning; h2h_playoff must clear WCF and establish NBA Finals H2H framing, including the key lesson that home court did not determine WCF Game 7.
+- [l15_caveat] WCF complete; l15_caveat must be updated to NBA Finals framing, incorporating the critical lesson that home court did not determine WCF Game 7 and calibrating the small SAS-NYK NetRtg gap correctly.
+- [no_tanking] OKC is now eliminated; both NBA Finals participants must be correctly identified with SAS replacing OKC as the WCF winner.
 
 ## Intelligence gaps identified
-- **No rule exists to quantify the depth-reduction impact on spread when a team's starting-caliber guard (Jalen Williams) is confirmed OUT in a winner-take-all game with a thin roster.** — Williams OUT likely widens OKC's effective spread vs SAS by 1-2 points beyond the season NetRtg gap, but current rules have no mechanism to translate a depth-reduction absence (non-franchise player) into a spread adjustment — only franchise player absences trigger explicit confidence changes. → Add a sub-rule under franchise_player_rules (or market_rules spread section) for 'starter-level guard/forward OUT in playoff context': apply confidence +5 to the opponent's spread if the absent player averaged 15+ PPG and the team's NetRtg gap is already ≥ 2.0 in your favour.
-- **LAL Round 2 series status and opponent identity are unverified — the current feed shows LAL as 'still active' but provides no series score, opponent, or game number.** — If LAL is facing elimination or has already been eliminated, any LAL pick would be catastrophically wrong; conversely if LAL leads the series, the Luka Doncic OUT impact assessment changes materially. → Fetch ESPN bracket data for LAL Round 2 series before each session and patch elimination_flags and series_context with opponent name, current score, and next game date.
-- **No tracking of cumulative playoff minutes load for franchise players (SGA, Holmgren, Wembanyama) across a 7-game series to quantify fatigue-driven performance degradation risk in Finals Game 1.** — NYK's rest advantage for Finals Game 1 is the strongest structural edge on the board, but its magnitude depends on how taxed OKC or SAS franchise players are — a fatigued SGA in Games 1-2 of the Finals would meaningfully shift ML and spread value toward NYK. → Add a playoff_rest sub-rule: 'After a 7-game series, apply confidence -5 to the advancing team's spread picks for Finals Games 1-2, stacking with any existing rest asymmetry adjustment, when the opponent had 7+ days rest.'
+- **No rule exists to quantify the expected accuracy of home court premium when series NetRtg gap is small (< 2.5 pts) — WCF Game 7 showed OKC's +2.8pt NetRtg edge + home court was insufficient to overcome SAS resilience.** — A rule treating home court + small NetRtg gap as 'compound OKC edge' likely inflated confidence on OKC WCF Game 7 picks; the correct framework should require NetRtg gap ≥ 4.0pts before home court becomes a 'compound' (rather than additive) edge signal. → Add a nuance to playoff_motivation and l15_caveat: when NetRtg gap < 3.0pts AND series is tied or one team has proven road wins in the series, treat home court as additive (+3-4pts) but NOT compounding — do not label it a 'compound edge'. Require NetRtg gap ≥ 4.0pts for compound edge framing.
+- **Wembanyama's actual minutes load and efficiency across WCF Games 5-7 is unknown — this is the #1 swing factor for SAS in Finals Games 1-3 but we have no quantitative fatigue signal.** — If Wembanyama played 40+ minutes in Games 5-7 under heavy defensive load, his Finals Game 1 efficiency is meaningfully lower — a pick on SAS in Games 1-2 without this data risks backing a fatigued franchise player. → Fetch Wembanyama minutes-per-game from WCF Games 5, 6, 7 from ESPN box scores before drafting any Finals SAS pick. Flag as mandatory pre-draft data requirement in franchise_player_rules for Finals.
+- **ML market at 1.70-1.89 odds range continues to be the worst-performing segment (-€818.05, 9W/10L) but no rule currently prohibits ML bets in this range for Games 1-2 of the Finals where SAS or NYK might be priced there.** — Finals Game 1-2 lines for NYK (home favourite) will likely fall in the 1.65-1.85 range — the exact danger zone where ML underperforms; backing NYK ML at 1.75 in Games 1-2 would repeat the pattern the confidence_staking section already flags. → The existing EV ≥ 0.08 rule for ML at 1.70-1.89 in confidence_staking already addresses this — ensure Scout applies it strictly for Finals early games. No additional patch needed; flag as active enforcement reminder.
