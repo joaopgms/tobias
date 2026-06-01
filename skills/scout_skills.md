@@ -1,7 +1,7 @@
 ---
-version: 70
-updated_at: 2026-05-31T11:39:36.601098+00:00
-updated_by: analyst_2026-05-31
+version: 71
+updated_at: 2026-06-01T15:52:14.167599+00:00
+updated_by: analyst_2026-06-01
 llm: claude-sonnet-4-6
 ---
 
@@ -80,7 +80,7 @@ Only bet totals when advanced stats (Pace, OffRtg, DefRtg) are available.
 ## SECTION:franchise_player_rules
 CRITICAL RULE: Only apply injury information to the TWO TEAMS in the specific game being evaluated.
 NEVER mention or apply injuries from teams not playing in that game.
-Example: If evaluating OKC vs SAS, ONLY consider OKC and SAS injuries.
+Example: If evaluating NYK vs SAS, ONLY consider NYK and SAS injuries.
 Wizards/Lakers/any other team injuries are IRRELEVANT and must NOT be mentioned.
 
 Franchise player OUT → do NOT bet that team to win unless opponent also missing a star or confirmed tanking.
@@ -93,29 +93,50 @@ If BOTH teams have franchise player uncertainty → evaluate net impact.
 
 NOTE — PLAYOFF PHASE: All remaining teams are fully motivated. Roster-only flags MUST be re-verified against NBA official PDF each session before any pick.
 
+NBA FINALS MANDATORY VERIFICATION:
+- Re-verify Jalen Brunson, Karl-Anthony Towns (NYK) active before ANY Finals pick. MANDATORY.
+- Re-verify Victor Wembanyama (SAS) active before ANY Finals pick. MANDATORY.
+
+New York Knicks:
+- No verified absences from confirmed injury feed.
+- Jalen Brunson and Karl-Anthony Towns: re-verify active status each session. MANDATORY.
+
+San Antonio Spurs:
+- David Jones Garcia (F): OUT [roster-only]
+- Victor Wembanyama: re-verify active status each session. Monitor fatigue from 7-game WCF. MANDATORY.
+
+Los Angeles Lakers:
+- Luka Doncic (G): OUT [roster-only] — FRANCHISE PLAYER.
+NOTE: LAL Round 2 still active — verify opponent and current series score from ESPN before drafting.
+
 Oklahoma City Thunder:
 - Ajay Mitchell (G): OUT [roster-only]
 - Thomas Sorber (C): OUT [roster-only]
 - Jalen Williams (G): OUT [roster-only]
-NOTE: OKC in NBA Finals vs NYK. Re-verify Shai Gilgeous-Alexander, Chet Holmgren active before ANY OKC Finals pick. MANDATORY.
-
-San Antonio Spurs:
-- David Jones Garcia (F): OUT [roster-only]
-NOTE: SAS ELIMINATED in WCF Game 7. No further SAS picks.
+NOTE: OKC ELIMINATED in WCF Game 7. No further OKC picks.
 
 Boston Celtics:
 - Jayson Tatum (F): OUT [roster-only] — FRANCHISE PLAYER.
 NOTE: BOS CONFIRMED ELIMINATED. No further BOS picks.
 
+Denver Nuggets:
+- Aaron Gordon (F): OUT [roster-only]
+- Peyton Watson (G): OUT [roster-only]
+NOTE: DEN CONFIRMED ELIMINATED. No further DEN picks.
+
 Houston Rockets:
 - Steven Adams (C): OUT [roster-only]
-- Fred VanVleet (G): OUT [roster-only]
 - Kevin Durant (F): OUT [roster-only] — FRANCHISE PLAYER.
+- Fred VanVleet (G): OUT [roster-only]
 NOTE: HOU ELIMINATED. No further HOU picks.
 
 Minnesota Timberwolves:
 - Donte DiVincenzo (G): OUT [roster-only]
 NOTE: MIN ELIMINATED. No further MIN picks.
+
+Cleveland Cavaliers:
+- Dennis Schroder (G): OUT [roster-only]
+NOTE: CLE CONFIRMED ELIMINATED. No further CLE picks.
 
 Atlanta Hawks:
 - Keshon Gilbert (G): OUT [roster-only]
@@ -128,14 +149,6 @@ Toronto Raptors:
 - Immanuel Quickley (G): OUT [roster-only] — key guard.
 NOTE: TOR CONFIRMED ELIMINATED. No further TOR picks.
 
-Cleveland Cavaliers:
-- Dennis Schroder (G): OUT [roster-only]
-NOTE: CLE CONFIRMED ELIMINATED. No further CLE picks.
-
-Los Angeles Lakers:
-- Luka Doncic (G): OUT [roster-only] — FRANCHISE PLAYER.
-NOTE: LAL Round 2 status — verify opponent and current series score from ESPN. Re-verify all active LAL roster before drafting.
-
 Washington Wizards:
 - Bilal Coulibaly (G): OUT [roster-only + injury landscape confirmed]
 - Anthony Davis (F): OUT [roster-only] — FRANCHISE PLAYER
@@ -147,17 +160,6 @@ Washington Wizards:
 - Cam Whitmore (F): OUT [roster-only]
 - Trae Young (G): OUT [roster-only] — FRANCHISE PLAYER
 NOTE: Washington did not qualify for playoffs. Do NOT bet Washington to win under any circumstances.
-
-NBA FINALS MANDATORY VERIFICATION:
-- Shai Gilgeous-Alexander, Chet Holmgren (OKC) — re-verify each Finals session. MANDATORY.
-- Jalen Brunson, Karl-Anthony Towns (NYK) — re-verify before any Finals pick. MANDATORY.
-- Jalen Williams (OKC, G): OUT [roster-only confirmed] — OKC playing without him in Finals.
-
-NBA FINALS FRAMING (OKC vs NYK):
-OKC: NetRtg +11.1 (best in league). Superior statistical team. Playing without Jalen Williams.
-NYK: NetRtg +6.5. Maximum rest advantage (7-10 days off watching WCF). Jalen Brunson health is decisive.
-NYK rest advantage in Finals Game 1 is MAXIMUM — OKC played 7-game WCF grind.
-NetRtg gap OKC +4.6 over NYK — OKC clear statistical favourite if healthy.
 
 ## SECTION:tanking_teams
 NOTE — PLAYOFF PHASE ACTIVE: See playoff_context.md no_tanking section. Tanking logic does NOT apply to any remaining play-in or playoff team. All remaining teams are motivated. Only apply tank logic to fully eliminated non-playoff teams.
