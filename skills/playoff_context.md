@@ -1,7 +1,7 @@
 ---
-version: 43
-updated_at: 2026-05-31T11:39:36.601098+00:00
-updated_by: analyst_2026-05-31
+version: 44
+updated_at: 2026-06-01T15:52:14.167599+00:00
+updated_by: analyst_2026-06-01
 llm: claude-sonnet-4-6
 ---
 
@@ -12,12 +12,12 @@ Round 3 (Conference Finals) is FULLY COMPLETE per ESPN live feed.
 
 ECF STATUS: New York Knicks SWEPT Cleveland Cavaliers 4-0. NYK ADVANCES TO NBA FINALS. CLE ELIMINATED.
 WCF STATUS: San Antonio Spurs defeated Oklahoma City Thunder 4-3. SAS ADVANCES TO NBA FINALS. OKC ELIMINATED.
-  CRITICAL NOTE: ESPN feed shows 'San Antonio Spurs leads 4-3 [COMPLETE] [West Finals]' — SAS WON WCF. OKC ELIMINATED.
+  CRITICAL NOTE: ESPN feed confirms 'San Antonio Spurs leads 4-3 [COMPLETE] [West Finals]' — SAS WON WCF. OKC ELIMINATED.
   SAS won Game 7 on the road at OKC — remarkable resilience from 2-3 series deficit.
 
-NBA FINALS: New York Knicks vs San Antonio Spurs — series not yet started. Monitor ESPN for Game 1 date and location.
-  NYK (NetRtg +6.5) hosts Game 1 (East team hosts Games 1, 2, 5, 7 in Finals).
-  SAS (NetRtg +8.3) — arrived in Finals via 7-game war. Fatigue factor critical.
+NBA FINALS: New York Knicks vs San Antonio Spurs — series not yet started. Verify Game 1 date, location, and tip-off from ESPN before drafting.
+  NYK (NetRtg +6.5) hosts Game 1 (East team hosts Games 1, 2, 5, 7 in Finals — standard bracket).
+  SAS (NetRtg +8.3) — arrived in Finals via 7-game war. Fatigue factor critical for Games 1-3.
   NYK rest advantage for Finals Game 1 is MAXIMUM — watched WCF from home for 7+ days.
   SAS NetRtg +8.3 vs NYK +6.5 = SAS +1.8pt statistical edge but NYK has home court (Games 1,2,5,7) and rest.
 
@@ -64,6 +64,9 @@ WCF: San Antonio Spurs defeated Oklahoma City Thunder 4-3. SAS advances. OKC ELI
 - SAS defeated MIN 4-2. MIN ELIMINATED.
 - OKC swept Round 2 opponent 4-0. Opponent ELIMINATED.
 
+LOS ANGELES LAKERS — ROUND 2 STILL ACTIVE:
+- LAL (53-29, NetRtg +1.7): Luka Doncic OUT [roster-only]. Verify opponent and current series score from ESPN before drafting any LAL pick.
+
 ## SECTION:elimination_flags
 PLAYOFFS ELIMINATION FLAGS (updated from ESPN live feed)
 
@@ -84,13 +87,14 @@ Teams CONFIRMED ELIMINATED:
 - Oklahoma City Thunder: SAS won WCF 4-3 (Game 7 on road). OKC ELIMINATED. No further picks.
 
 Teams ADVANCING TO NBA FINALS:
-- New York Knicks: ECF COMPLETE — swept CLE 4-0. NYK advances to NBA Finals. Home court for Games 1,2,5,7.
+- New York Knicks: ECF COMPLETE — swept CLE 4-0. NYK in NBA Finals. Home court for Games 1,2,5,7.
   Re-verify Jalen Brunson, Karl-Anthony Towns (NYK) active before any Finals pick. MANDATORY.
-- San Antonio Spurs: WCF COMPLETE — defeated OKC 4-3 (won road Game 7). SAS advances to NBA Finals.
+- San Antonio Spurs: WCF COMPLETE — defeated OKC 4-3 (won road Game 7). SAS in NBA Finals.
   Re-verify Victor Wembanyama (SAS) active before any Finals pick. MANDATORY. Monitor fatigue from 7-game WCF.
 
-Teams STILL ACTIVE (pending verification):
-- Los Angeles Lakers: Round 2 active — verify opponent and current series score from ESPN bracket.
+Teams STILL ACTIVE (pending full verification):
+- Los Angeles Lakers: Round 2 active — verify opponent and current series score from ESPN before any LAL pick.
+  Luka Doncic (G): OUT [roster-only]. Apply franchise player OUT rule for any LAL bet.
 
 ## SECTION:playoff_rest
 PLAYOFF REST RULES (active — NBA Finals):
@@ -106,7 +110,7 @@ NBA FINALS REST CONTEXT:
   Rust risk for NYK: monitor shooting efficiency and transition defense in Game 1 — extended rest can cause sharpness loss.
   Net assessment: NYK rest advantage is still strongly positive for Games 1-2 despite minor rust risk.
 
-- SAS FATIGUE: Played 7-game Conference Finals series including road Game 7. Cumulative fatigue is real.
+- SAS FATIGUE: Played 7-game Conference Finals including road Game 7. Cumulative fatigue is real.
   Wembanyama minutes from WCF are critical to monitor — heavy playoff load for a young player.
   SAS fatigue factor: apply confidence -5 on SAS spread picks in Finals Games 1-3 (fatigue taper window).
   Re-evaluate SAS fatigue after Game 3 — typically equalised by mid-series.
@@ -139,13 +143,13 @@ PLAYOFF MOTIVATION HIERARCHY (NBA Finals — Active)
    SAS +8.3 vs NYK +6.5 = SAS +1.8pt NetRtg edge.
    NYK home court (+3-4pts in playoffs) neutralises SAS NetRtg edge in home games.
    At SAS home (Games 3,4,6): SAS home court + NetRtg edge = SAS situational favourite.
-   Net Finals edge: genuinely competitive — home court and rest will drive early Games; NetRtg matters more in neutral-rest mid-series.
+   Net Finals edge: genuinely competitive — home court and rest will drive early games; NetRtg matters more in neutral-rest mid-series.
 
 5. HOME COURT (NBA Finals):
    NYK hosts Games 1, 2, 5, 7. SAS hosts Games 3, 4, 6.
    NYK home court + max rest = NYK clear situational edge in Games 1-2.
    SAS home court (Games 3-4) + NetRtg edge = SAS situational edge in Games 3-4.
-   Game 7 (if needed): at NYK. NYK home court = significant advantage.
+   Game 7 (if needed): at NYK. NYK home court = significant advantage (~60-65% historical win rate).
    Do NOT back SAS at odds shorter than 1.80 in Games 1-2 at NYK without clear injury news for NYK stars.
 
 6. FRANCHISE PLAYER AVAILABILITY (MANDATORY verification):
@@ -289,3 +293,4 @@ Teams ADVANCING TO NBA FINALS:
 
 Teams STILL ACTIVE (pending verification):
 - Los Angeles Lakers: Round 2 active — verify opponent and current series score from ESPN bracket.
+  Luka Doncic (G): OUT [roster-only]. Apply franchise player OUT rule for any LAL bet.
