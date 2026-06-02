@@ -1,14 +1,14 @@
 ---
-date: 2026-06-01
+date: 2026-06-02
 llm: claude-sonnet-4-6
 scout_patches: 1
 commit_patches: 0
 milestone: daily (46 bets)
 ---
 
-## Today's Analysis — 2026-06-01
+## Today's Analysis — 2026-06-02
 
-NBA Finals (NYK vs SAS) has not yet started — Scout should not draft any Finals picks until Game 1 date, location, and confirmed rosters are verified from ESPN. The most critical pre-series intelligence gap is Wembanyama's physical condition after a gruelling 7-game WCF including a road Game 7 win; his health is the #1 swing factor for SAS in Games 1-3. Performance data confirms Medium confidence (55-69) at +56.8% WR is the core profit engine — Scout should resist forcing High confidence labels in a genuinely competitive Finals where the NetRtg gap (+1.8pts) is too small to justify strong conviction without home court and rest alignment.
+The NBA Finals (NYK vs SAS) has not yet started per ESPN data, so today's session is a factual maintenance pass — franchise player statuses refreshed and playoff context sections verified for accuracy with no structural changes needed. The critical pre-series framing remains: NYK holds a compound situational edge in Games 1-2 (maximum rest + home court) despite SAS holding a +1.8pt NetRtg advantage, and Wembanyama fatigue from the 7-game WCF is the #1 swing variable for early series picks. Performance data shows Medium confidence (55-69) continues to outperform at 56.8% while High confidence (70-84) remains problematic at 38.9% — Scout should continue applying the tighter scrutiny gate (NetRtg gap ≥ 5.0 + situational advantage required) before committing to high-confidence stakes in the Finals.
 
 ## Performance Stats
 ALL-TIME: 32W / 32L | Win rate: 50.0% | P&L: €-254.88 | Avg odds: 1.94 | Avg conf: 65.4/100
@@ -20,22 +20,22 @@ By odds range:  1.70-1.89 22bets 11W/11L 50.0% €-678.39  |  1.90-2.09 37bets 2
 
 
 ## Scout patches applied
-- [franchise_player_rules] Mandatory franchise_player_rules refresh: updated to reflect NBA Finals (NYK vs SAS), removed OKC Finals framing (OKC eliminated), elevated NYK/SAS mandatory verification, and synced all roster-only OUT flags from verified feed.
+- [franchise_player_rules] Mandatory session refresh of franchise player statuses using verified ESPN/NBA injury feed cross-reference; no new additions or removals detected from prior version.
 
 ## Commit patches applied
 None
 
 ## Playoff context patches applied
-- [phase] No change required to phase section — current state accurately reflects Finals not yet started; retaining and reconfirming for continuity.
-- [series_context] Mandatory series_context refresh — confirmed Finals matchup (NYK vs SAS) unchanged, added explicit LAL Round 2 active note, and reinforced all mandatory verification requirements.
-- [elimination_flags] Elimination flags refreshed to confirm all eliminations current, reinforce Finals teams, and explicitly flag LAL Round 2 active status with Doncic OUT note.
-- [playoff_rest] Playoff rest section is current and accurate; retaining as-is with confirmed Finals rest asymmetry framing.
-- [h2h_playoff] H2H playoff section is current and accurate for NBA Finals not-yet-started status; retaining with all verified lessons from completed rounds.
-- [playoff_motivation] Playoff motivation section is current and accurate; retaining as confirmed Finals framing with no new information requiring change.
-- [l15_caveat] L15 caveat section is current and accurate for NBA Finals framing; retaining as confirmed with no new information requiring change.
-- [no_tanking] No_tanking section updated to add LAL explicit franchise player OUT note for Doncic and confirm all elimination flags are current.
+- [phase] No series score change detected from ESPN feed; phase section kept current with Finals not yet started and all Conference Finals confirmed complete.
+- [series_context] No new series score data from ESPN feed; series context maintained as current with Finals not yet started and all completed series preserved.
+- [elimination_flags] No new eliminations detected from ESPN feed; flags maintained current with all completed series and LAL Round 2 status still requiring ESPN verification.
+- [h2h_playoff] No in-series data exists yet for the Finals; H2H section maintained with all completed series lessons intact and pre-series framing preserved.
+- [playoff_rest] No inter-game rest data has changed since last session; section maintained current with Finals rest framing intact pending Game 1 date confirmation from ESPN.
+- [playoff_motivation] No motivation-relevant changes detected; section maintained current pending Game 1 tip-off data from ESPN.
+- [l15_caveat] No new L15 data or in-series results to integrate; section maintained current with Finals pre-series framing.
+- [no_tanking] No change to elimination or active team status; section maintained current with all confirmed eliminations and Finals participants.
 
 ## Intelligence gaps identified
-- **Victor Wembanyama WCF minutes/fatigue load is not quantified in any section — we have directional flags but no specific minutes threshold that would trigger a confidence penalty.** — SAS in Finals Games 1-3 with Wembanyama carrying heavy minutes could materially reduce SAS cover probability on spreads; without a threshold, Scout may under-penalise SAS in early Finals games. → Fetch Wembanyama's WCF per-game minutes (ESPN game logs) and add a rule: if minutes_l7 > 38/game, apply additional -5 confidence on SAS spread picks in Games 1-2 of next series.
-- **Los Angeles Lakers Round 2 series status, opponent identity, and current series score are unverified — the verified injury feed shows Luka Doncic OUT but no opponent context exists in the skills files.** — Scout could draft a LAL pick without knowing whether LAL leads or trails the series, faces elimination, or whether the opponent has key injuries — this is a material blind spot for an active playoff team. → Fetch LAL Round 2 series status from ESPN bracket before next Scout session and patch series_context with opponent, series score, and LAL home court games.
-- **No rule exists governing how to handle the NYK rust risk from 7-10 days of extended rest — the flag exists in playoff_rest but there is no confidence adjustment attached to it.** — Extended rest rust in Game 1 is a documented NBA playoff pattern; without a numeric adjustment, Scout may over-weight NYK situational edge in Game 1 and over-stake on NYK covers. → Add to playoff_rest: if rest gap > 7 days for home team, apply confidence -5 on NYK spread/ML picks in Game 1 only (rust risk partial offset to rest advantage).
+- **Victor Wembanyama's exact minutes load and shooting efficiency across the 7-game WCF is not available in the current data feed — only a qualitative 'fatigue' flag exists.** — Wembanyama fatigue is identified as the #1 swing factor for SAS in Finals Games 1-3; without his per-game minutes trend or efficiency decline data, the -5 confidence adjustment on SAS spread picks is an estimate rather than evidence-based calibration. → Fetch Wembanyama per-game minutes and TS% for Games 1-7 of the WCF from ESPN box scores before Game 1 of the Finals; if his minutes exceeded 38+ in Games 5-7 or TS% declined > 5pts from WCF Games 1-3 to Games 5-7, increase the SAS fatigue confidence penalty to -10.
+- **LAL Round 2 opponent and current series score are unknown — the feed does not confirm who LAL is playing or the series state.** — Any LAL bet drafted by Scout requires knowing opponent, series context, and whether LAL is facing elimination or is in a comfortable series position; drafting blind risks picking into a sweep or a must-win elimination game without proper framing. → Fetch LAL Round 2 series score and opponent from ESPN bracket before Scout drafts any LAL pick; update series_context and elimination_flags with the confirmed result before the 14:00 Scout run.
+- **No L15 NetRtg data is available for NYK or SAS in the current session feed — only season NetRtg is present.** — The priority_stats section designates L15 NetRtg as the PRIMARY directional signal; without it for the two Finals teams, Scout must rely solely on season NetRtg (+1.8pt SAS edge) which is explicitly flagged as a secondary signal in the Finals framing. → Confirm that L15 NetRtg computation covers playoff games as well as regular season games; if playoffs are excluded from the L15 window, flag this in data_quality_rules and note that playoff series picks should weight season NetRtg + in-series record + rest asymmetry as co-primary signals when L15 is unavailable.
