@@ -1,7 +1,7 @@
 ---
-version: 44
-updated_at: 2026-06-01T15:52:14.167599+00:00
-updated_by: analyst_2026-06-01
+version: 45
+updated_at: 2026-06-02T13:56:59.159898+00:00
+updated_by: analyst_2026-06-02
 llm: claude-sonnet-4-6
 ---
 
@@ -15,7 +15,7 @@ WCF STATUS: San Antonio Spurs defeated Oklahoma City Thunder 4-3. SAS ADVANCES T
   CRITICAL NOTE: ESPN feed confirms 'San Antonio Spurs leads 4-3 [COMPLETE] [West Finals]' — SAS WON WCF. OKC ELIMINATED.
   SAS won Game 7 on the road at OKC — remarkable resilience from 2-3 series deficit.
 
-NBA FINALS: New York Knicks vs San Antonio Spurs — series not yet started. Verify Game 1 date, location, and tip-off from ESPN before drafting.
+NBA FINALS: New York Knicks vs San Antonio Spurs — series not yet started per current ESPN data.
   NYK (NetRtg +6.5) hosts Game 1 (East team hosts Games 1, 2, 5, 7 in Finals — standard bracket).
   SAS (NetRtg +8.3) — arrived in Finals via 7-game war. Fatigue factor critical for Games 1-3.
   NYK rest advantage for Finals Game 1 is MAXIMUM — watched WCF from home for 7+ days.
@@ -29,7 +29,7 @@ NBA PLAYOFFS — Active Series (updated from ESPN live feed)
 --- NBA FINALS ---
 
 NBA Finals: New York Knicks vs San Antonio Spurs
-- STATUS: NOT YET STARTED — verify Game 1 date, location, and tip-off from ESPN before drafting.
+- STATUS: NOT YET STARTED — verify Game 1 date, location, and tip-off from ESPN before drafting. MANDATORY.
 - NYK (NetRtg +6.5, 53-29): Confirmed East representative. Swept ECF (CLE 4-0). MAXIMUM REST — 7-10+ days off watching WCF.
   Re-verify Jalen Brunson, Karl-Anthony Towns active before ANY Finals pick. MANDATORY.
   NYK hosts Games 1, 2, 5, 7 (East team has home court in Finals — standard bracket).
@@ -48,7 +48,6 @@ FINALS FRAMING:
 - Do NOT back SAS at odds shorter than 1.80 in Games 1-2 at NYK (home court + maximum rest disadvantage).
 - After Game 3 (at SAS home): re-evaluate rest asymmetry — should have equalised by Games 3-4.
 - Monitor SAS cumulative fatigue signals: Wembanyama minutes, shooting efficiency vs prior rounds.
-- OKC ELIMINATED in WCF Game 7. No further OKC picks.
 
 --- CONFERENCE FINALS (COMPLETE) ---
 
