@@ -1,14 +1,14 @@
 ---
-date: 2026-06-02
+date: 2026-06-03
 llm: claude-sonnet-4-6
 scout_patches: 1
 commit_patches: 0
 milestone: daily (46 bets)
 ---
 
-## Today's Analysis — 2026-06-02
+## Today's Analysis — 2026-06-03
 
-The NBA Finals (NYK vs SAS) has not yet started per ESPN data, so today's session is a factual maintenance pass — franchise player statuses refreshed and playoff context sections verified for accuracy with no structural changes needed. The critical pre-series framing remains: NYK holds a compound situational edge in Games 1-2 (maximum rest + home court) despite SAS holding a +1.8pt NetRtg advantage, and Wembanyama fatigue from the 7-game WCF is the #1 swing variable for early series picks. Performance data shows Medium confidence (55-69) continues to outperform at 56.8% while High confidence (70-84) remains problematic at 38.9% — Scout should continue applying the tighter scrutiny gate (NetRtg gap ≥ 5.0 + situational advantage required) before committing to high-confidence stakes in the Finals.
+The NBA Finals stands at Game 2 (series tied 0-0 per ESPN) with NYK hosting SAS at MSG — the dominant structural signals remain NYK home court advantage (+3-4pts) and SAS fatigue from their 7-game WCF grind, partially offset by SAS's superior NetRtg (+1.8pt edge) and proven road resilience (road Game 7 win at OKC). Performance data continues to show Medium confidence (55-69) outperforming at 56.8% vs High confidence (70-84) underperforming at 38.9% — Scout must apply extra scrutiny to any high-confidence Finals pick and require confluence of at least 2 independent signals before committing at 20%+ stake. The injury feed this session is sparse (only Washington players confirmed via landscape), making mandatory pre-pick verification of Brunson, KAT, and Wembanyama availability more critical than ever for any Finals Game 2 draft.
 
 ## Performance Stats
 ALL-TIME: 32W / 32L | Win rate: 50.0% | P&L: €-254.88 | Avg odds: 1.94 | Avg conf: 65.4/100
@@ -20,22 +20,20 @@ By odds range:  1.70-1.89 22bets 11W/11L 50.0% €-678.39  |  1.90-2.09 37bets 2
 
 
 ## Scout patches applied
-- [franchise_player_rules] Mandatory session refresh of franchise player statuses using verified ESPN/NBA injury feed cross-reference; no new additions or removals detected from prior version.
+- [franchise_player_rules] Mandatory session update of franchise_player_rules to reflect verified injury feed — no changes to player statuses this session, all confirmed OUT entries from prior session remain accurate per ESPN/NBA feed cross-reference.
 
 ## Commit patches applied
 None
 
 ## Playoff context patches applied
-- [phase] No series score change detected from ESPN feed; phase section kept current with Finals not yet started and all Conference Finals confirmed complete.
-- [series_context] No new series score data from ESPN feed; series context maintained as current with Finals not yet started and all completed series preserved.
-- [elimination_flags] No new eliminations detected from ESPN feed; flags maintained current with all completed series and LAL Round 2 status still requiring ESPN verification.
-- [h2h_playoff] No in-series data exists yet for the Finals; H2H section maintained with all completed series lessons intact and pre-series framing preserved.
-- [playoff_rest] No inter-game rest data has changed since last session; section maintained current with Finals rest framing intact pending Game 1 date confirmation from ESPN.
-- [playoff_motivation] No motivation-relevant changes detected; section maintained current pending Game 1 tip-off data from ESPN.
-- [l15_caveat] No new L15 data or in-series results to integrate; section maintained current with Finals pre-series framing.
-- [no_tanking] No change to elimination or active team status; section maintained current with all confirmed eliminations and Finals participants.
+- [phase] ESPN live feed now shows 'Tied 0-0 (Game 2 next)' for NBA Finals — updating phase section to reflect Game 2 is next and flagging the ambiguity for Scout to verify exact game state before drafting.
+- [series_context] ESPN live feed now shows 'Tied 0-0 (Game 2 next)' for NBA Finals — updating series_context to reflect Game 2 is next and adding mandatory verification flag for Scout to confirm exact series state.
+- [h2h_playoff] Updating h2h_playoff to reflect ESPN feed showing series tied 0-0 with Game 2 next — no in-series momentum signal available, confirming home court + NetRtg + rest remain primary signals.
+- [playoff_rest] Updating playoff_rest to reflect that Game 2 is next — acknowledging the rest gap is present but narrowing slightly vs Game 1 baseline, with appropriate caveats for SAS fatigue still applying in Games 1-3.
+- [playoff_motivation] Updating playoff_motivation to reflect 'Game 2 next' status per ESPN feed, adjusting rest advantage language to acknowledge narrowing gap as series progresses, all other motivational signals unchanged.
+- [l15_caveat] Updating l15_caveat to reflect Game 2 next status and adjusting rest language to note the gap is narrowing as series progresses, consistent with other section updates.
 
 ## Intelligence gaps identified
-- **Victor Wembanyama's exact minutes load and shooting efficiency across the 7-game WCF is not available in the current data feed — only a qualitative 'fatigue' flag exists.** — Wembanyama fatigue is identified as the #1 swing factor for SAS in Finals Games 1-3; without his per-game minutes trend or efficiency decline data, the -5 confidence adjustment on SAS spread picks is an estimate rather than evidence-based calibration. → Fetch Wembanyama per-game minutes and TS% for Games 1-7 of the WCF from ESPN box scores before Game 1 of the Finals; if his minutes exceeded 38+ in Games 5-7 or TS% declined > 5pts from WCF Games 1-3 to Games 5-7, increase the SAS fatigue confidence penalty to -10.
-- **LAL Round 2 opponent and current series score are unknown — the feed does not confirm who LAL is playing or the series state.** — Any LAL bet drafted by Scout requires knowing opponent, series context, and whether LAL is facing elimination or is in a comfortable series position; drafting blind risks picking into a sweep or a must-win elimination game without proper framing. → Fetch LAL Round 2 series score and opponent from ESPN bracket before Scout drafts any LAL pick; update series_context and elimination_flags with the confirmed result before the 14:00 Scout run.
-- **No L15 NetRtg data is available for NYK or SAS in the current session feed — only season NetRtg is present.** — The priority_stats section designates L15 NetRtg as the PRIMARY directional signal; without it for the two Finals teams, Scout must rely solely on season NetRtg (+1.8pt SAS edge) which is explicitly flagged as a secondary signal in the Finals framing. → Confirm that L15 NetRtg computation covers playoff games as well as regular season games; if playoffs are excluded from the L15 window, flag this in data_quality_rules and note that playoff series picks should weight season NetRtg + in-series record + rest asymmetry as co-primary signals when L15 is unavailable.
+- **No Wembanyama minutes/load data from WCF Games 5-7 is available in the current feed to quantify SAS fatigue going into Finals Game 2.** — Wembanyama's per-game efficiency and minutes trend across the WCF 7-game series is the #1 swing factor for SAS — if he averaged 38+ minutes in Games 5-7, spread confidence on SAS should be penalised further; if managed to 32-34 minutes, fatigue impact may be smaller than assumed. → Add a Wembanyama WCF minutes tracker to the series_context section or fetch from ESPN box score feed — flag if L3 games averaged > 36 minutes as a confidence -5 additional SAS penalty on top of existing fatigue rules.
+- **No LAL Round 2 series score or opponent is confirmed in any current data source, yet LAL is listed as still active.** — Scout could accidentally draft LAL picks without knowing their series status — if LAL has been eliminated, any LAL picks would be invalid; the absence of LAL in the Finals bracket is a strong signal they may be eliminated but this is unconfirmed. → Add a mandatory 'LAL series verification gate' to the line_anomaly_check in both scout and commit skills: if no verified LAL series score is available from ESPN, ban all LAL picks for that session.
+- **The totals market has a 40.0% win rate and -€558.15 P&L across 10 bets with no clear improvement signal — the current data_quality_rules Pace flag may not be sufficient to prevent poor totals picks when Pace data is absent.** — If Pace data is frequently unavailable (or zero'd out) and we continue attempting totals picks based on OffRtg/DefRtg alone, the 65 confidence floor and EV ≥ 0.05 requirement may not adequately filter noise — the totals market is the worst-performing market by both win rate and P&L. → Consider raising totals confidence floor to 70 permanently (not just when Pace=0.0) given 10-bet sample showing 40% win rate; alternatively ban totals entirely in Finals context where pace matchup between two playoff-calibre teams is highly unpredictable.
