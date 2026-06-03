@@ -1,7 +1,7 @@
 ---
-version: 72
-updated_at: 2026-06-02T13:56:59.159898+00:00
-updated_by: analyst_2026-06-02
+version: 73
+updated_at: 2026-06-03T14:24:48.424920+00:00
+updated_by: analyst_2026-06-03
 llm: claude-sonnet-4-6
 ---
 
