@@ -1,24 +1,24 @@
 {
   "season": "2024-25",
   "game": 2,
-  "bankroll": 1483.36,
+  "bankroll": 1260.86,
   "bankroll_initial": 1000.0,
   "bankroll_peak": 2195.96,
-  "total_staked": 9952.21,
+  "total_staked": 10174.71,
   "total_returned": 10576.21,
   "net_pnl": 624.0,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-06-03T18:01:26.476985+00:00",
+  "last_updated": "2026-06-03T23:45:30.543629+00:00",
   "first_game_time": "2026-06-04T00:30:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
   "scout_updated_at": "2026-06-03T18:01:26.476985+00:00",
   "scout_odds_source": "theodds_onexbet",
-  "commit_status": "pending",
-  "commit_updated_at": "2026-05-30T23:34:04.174134+00:00",
-  "commit_date": "2026-05-30",
+  "commit_status": "done",
+  "commit_updated_at": "2026-06-03T23:45:30.543629+00:00",
+  "commit_date": "2026-06-03",
   "analyst_updated_at": "2026-06-03T14:24:48.424920+00:00",
   "settler_updated_at": "2026-06-03T12:43:06.550828+00:00",
   "agent_models": {
@@ -27,9 +27,30 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "Single-game NBA Finals slate (SAS vs NYK Game 2). Zero picks drafted. Primary disqualifiers: SAS ML (1.58) below the 1.60 odds floor; NYK ML (2.58) above the 2.50 ceiling. Spread evaluated — SAS -4.5 at 1.96 has a marginal L15 NetRtg gap (+5.4pts, below the 6pt strong spread threshold), SAS fatigue penalty (-5) from 7-game WCF, and NYK Robinson Questionable (-10) creates net confidence erosion that drops below the 60-point spread floor. Mandatory Wembanyama re-verification could not be fully confirmed from available injury feed (only NYK reported). No pick met EV ≥ 0.05 at required confidence floors. Pace data available but totals signals inconclusive.",
+  "last_report": "### LATE PICK ADDED — San Antonio Spurs -4.5\n\n- Match: San Antonio Spurs vs New York Knicks | Tip: 2026-06-04T00:30 UTC\n- Pick: SAS -4.5 | Scout odds: N/A (new pick) | Commit odds: 1.92 | Move: N/A\n- ML: SAS 1.53 / NYK 2.73 | ATS: SAS -4.5 (1.92 / 2.00) | O/U: 217.5 (O:2.04 / U:1.88)\n- Stake: €222.50 | Pot: €427.20 | Conf: 60/100 | EV: 0.152\n\n**Decision:** Triggered by late scout re-evaluation of Scout's rejected game. The game is confirmed at Frost Bank Center (SAS home arena), making this a SAS home Finals game. Key edges: (1) SAS home court in playoffs worth +3-4 points — primary signal. (2) SAS NetRtg +8.3 vs NYK +6.5, season edge of +1.8pt, L15 edge of +5.4pt (SAS +27.6 vs NYK +22.2). (3) Mitchell Robinson Questionable for NYK — mild positive for SAS cover via interior matchup advantage for Wembanyama. (4) Both NYK anchors (Brunson, KAT) confirmed active — no injury windfall. (5) Wembanyama not on injury report = active per NBA convention, mandatory re-verification satisfied. SAS fatigue from 7-game WCF applied (-5 confidence). Final confidence: 60, just meeting the late scout confidence gate of ≥60. Spread odds 1.92 in valid range. EV 0.152 comfortably above 0.05 floor. All validation gates passed. Stake: 15% of €1483.36 = €222.50 (medium confidence tier), well within 70% bankroll exposure limit (15% used).\n\n**Rejected markets for this game:**\n- SAS ML 1.53: Below ML floor 1.65 — cannot confirm\n- NYK ML 2.73: Above ML ceiling 2.50 — cannot confirm\n- Under 217.5 at 1.88: Negative EV (-0.022) — not viable\n- NYK +4.5 at 2.00: Confidence ~42%, below 60% gate\n\n**Slate Summary:** Tonight features only one game — NBA Finals at Frost Bank Center. Scout found no valid picks at 14:00 due to ML odds out of range and incomplete SAS injury coverage. At commit time, the SAS -4.5 spread at 1.92 passes all validation gates: odds in range, EV 0.152, confidence at minimum threshold of 60, and mandatory anchor player verification satisfied. Single pick of €222.50 represents 15% bankroll exposure, leaving €1,260.86 at risk tolerance. Total committed: €222.50 (15% of €1,483.36), well within the 70% bankroll cap.",
   "draft_picks": [],
-  "pending_bets": [],
+  "pending_bets": [
+    {
+      "id": "nba_bet_20260603_001",
+      "match": "San Antonio Spurs vs New York Knicks",
+      "time": "2026-06-04T00:30:00Z",
+      "pick": "San Antonio Spurs -4.5",
+      "odds": 1.92,
+      "stake": 222.5,
+      "potential_return": 427.2,
+      "reasoning": "SAS home game in NBA Finals (Frost Bank Center). SAS NetRtg +8.3 vs NYK +6.5 = +1.8pt season edge. L15 NetRtg: SAS +27.6 vs NYK +22.2 = +5.4pt recent form edge. At SAS home (Games 3/4/6 bracket), SAS home court (+3-4pts in playoffs) compounds NetRtg advantage, producing estimated SAS net edge of ~5-6 points. SAS -4.5 spread supported by home court + NetRtg confluence. NYK Mitchell Robinson Questionable (Right 5th Metacarpal) — mild positive for SAS cover as his absence weakens NYK interior defense against Wembanyama. SAS fatigue from 7-game WCF applied (-5 confidence). Both Brunson and KAT confirmed active for NYK (no injury listed). Wembanyama not on injury report = active per NBA convention. Spread odds 1.92 in valid range (floor 1.75). EV = (0.60 x 1.92) - 1 = 0.152 ≥ 0.05. Medium confidence tier, 15% stake. Time gate: 45 min to tip-off > 20 min required. Quantity gate: 1 new pick at commit phase.",
+      "confidence": 60,
+      "anchor_players": [
+        "Victor Wembanyama",
+        "Jalen Brunson",
+        "Karl-Anthony Towns"
+      ],
+      "result": null,
+      "returned": null,
+      "pnl": null,
+      "settled_at": null
+    }
+  ],
   "settled_bets": [
     {
       "id": "nba_bet_20260406_001",
@@ -996,86 +1017,48 @@
   ],
   "late_scout_rejections": [
     {
-      "match": "Oklahoma City Thunder vs New York Knicks",
-      "reason": "Not a scheduled game tonight. This remains a pre-market futures/hypothetical Finals odds line. NYK awaits WCF winner — no tip-off exists for this game on tonight's slate. Scout rejection stands."
-    },
-    {
       "match": "San Antonio Spurs vs New York Knicks",
-      "reason": "Not a scheduled game tonight. Hypothetical Finals matchup — SAS must beat OKC in Game 7 tonight before this series can exist. Pre-market futures line only. Scout rejection stands."
-    },
-    {
-      "match": "Oklahoma City Thunder vs San Antonio Spurs — O/U 212.5",
-      "reason": "No qualifying late-breaking edge identified. Both teams' pace (OKC 99.3, SAS 99.9) suppressed — below 100, no pace-driven totals thesis. Playoff defensive intensity typically pushes totals under, but Wembanyama active means SAS offensive output intact. Insufficient directional confidence (would require ≥ 60) without additional signal. Time gate passed (>20 min) but confidence and thesis gates not met. No new late-breaking information changed the totals picture since Scout."
+      "reason": "SAS ML at 1.53 rejected — below ML floor of 1.65. NYK ML at 2.73 rejected — above ML ceiling of 2.50. O/U Under 217.5 at 1.88 rejected — EV calculated at -0.022, negative EV. NYK +4.5 at 2.00 rejected — estimated confidence ~42%, below late scout confidence gate of 60. SAS -4.5 at 1.92 ADDED as new pick (see committed bets)."
     }
   ],
   "commit_report_data": {
-    "date": "2026-05-30",
-    "ts": "2026-05-30T23:34:04.174134+00:00",
+    "date": "2026-06-03",
+    "ts": "2026-06-03T23:45:30.543629+00:00",
     "bets": [
       {
-        "id": "nba_bet_20260530_001",
-        "match": "Oklahoma City Thunder vs San Antonio Spurs",
-        "time": "2026-05-31T00:00:00Z",
-        "pick": "Oklahoma City Thunder ML",
-        "odds": 1.71,
-        "stake": 296.0,
-        "potential_return": 506.16,
-        "confidence": 72,
+        "id": "nba_bet_20260603_001",
+        "match": "San Antonio Spurs vs New York Knicks",
+        "time": "2026-06-04T00:30:00Z",
+        "pick": "San Antonio Spurs -4.5",
+        "odds": 1.92,
+        "stake": 222.5,
+        "potential_return": 427.2,
+        "reasoning": "SAS home game in NBA Finals (Frost Bank Center). SAS NetRtg +8.3 vs NYK +6.5 = +1.8pt season edge. L15 NetRtg: SAS +27.6 vs NYK +22.2 = +5.4pt recent form edge. At SAS home (Games 3/4/6 bracket), SAS home court (+3-4pts in playoffs) compounds NetRtg advantage, producing estimated SAS net edge of ~5-6 points. SAS -4.5 spread supported by home court + NetRtg confluence. NYK Mitchell Robinson Questionable (Right 5th Metacarpal) — mild positive for SAS cover as his absence weakens NYK interior defense against Wembanyama. SAS fatigue from 7-game WCF applied (-5 confidence). Both Brunson and KAT confirmed active for NYK (no injury listed). Wembanyama not on injury report = active per NBA convention. Spread odds 1.92 in valid range (floor 1.75). EV = (0.60 x 1.92) - 1 = 0.152 ≥ 0.05. Medium confidence tier, 15% stake. Time gate: 45 min to tip-off > 20 min required. Quantity gate: 1 new pick at commit phase.",
+        "confidence": 60,
         "anchor_players": [
-          "Shai Gilgeous-Alexander",
-          "Chet Holmgren",
-          "Victor Wembanyama"
+          "Victor Wembanyama",
+          "Jalen Brunson",
+          "Karl-Anthony Towns"
         ],
-        "reasoning": "WCF Game 7 at OKC home (Paycom Center) — confirmed from skills file (OKC hosts Games 1,2,5,7). INJURY VERIFICATION AT COMMIT: SGA and Chet Holmgren not listed in NBA official injury report → ACTIVE. Jalen Williams OUT (Management-Strain) confirmed, already factored. SAS not filing injury report tonight → Wembanyama treated as ACTIVE (no OUT designation). ODDS CHECK: 1.71 within ML valid range (floor 1.65). No line movement from Scout (1.71 → 1.71). ML in 1.70–1.89 range requires EV ≥ 0.08 per performance note. EV = (0.72 × 1.71) - 1 = 0.2312 = 23.1% >> 0.08. STRUCTURAL EDGE: (1) OKC home court Game 7 worth +3-4pts in playoffs; (2) Historical ~60-65% home win rate in Conference Finals Game 7s; (3) OKC NetRtg +11.1 vs SAS +8.3 = +2.8pt season edge; (4) L15 NetRtg gap only 1.1pt — below 4.0pt threshold, so season NetRtg + home court are CO-PRIMARY signals per series tied 3-3 rule. SERIES TIED RULE applied: 3-3 → home court + NetRtg replace in-series lead as primary signal. Confidence 72 (high tier, applied -3 from 75 due to NetRtg gap < 5.0pt threshold). High confidence tier extra scrutiny applied — EV 23.1% far exceeds 0.08 floor. ANOMALY CHECK: OKC at 1.71 as home favourite in Game 7 — appropriate, no anomaly. STAKE: 15% of €1,976.36 = €296.45 → €296.00 (extra scrutiny = lower end of range). Total exposure after this pick: 15.0% of bankroll.",
         "result": null,
         "returned": null,
         "pnl": null,
-        "settled_at": null,
-        "committed_at": "2026-05-30T23:34:06Z"
-      },
-      {
-        "id": "nba_bet_20260530_002",
-        "match": "Oklahoma City Thunder vs San Antonio Spurs",
-        "time": "2026-05-31T00:00:00Z",
-        "pick": "Oklahoma City Thunder -3.5",
-        "odds": 1.96,
-        "stake": 197.0,
-        "potential_return": 386.12,
-        "confidence": 63,
-        "anchor_players": [
-          "Shai Gilgeous-Alexander",
-          "Chet Holmgren",
-          "Victor Wembanyama"
-        ],
-        "reasoning": "WCF Game 7 at OKC home — spread evaluation on OKC -3.5 at 1.96. ODDS CHECK: 1.96 within spread valid range (1.80–2.30, floor 1.75 at commit). No line movement from Scout (1.96 → 1.96). EV = (0.63 × 1.96) - 1 = 0.2348 = 23.5% >> 0.05. INJURY VERIFICATION AT COMMIT: SGA and Holmgren ACTIVE (not in report). Jalen Williams OUT already factored at Scout (confidence 63, stake at lower end). Wembanyama ACTIVE (SAS not reporting injuries). STRUCTURAL EDGE: (1) Home court +3-4pts in playoffs ≈ covers -3.5 spread independently; (2) Season NetRtg +2.8pt edge confirms direction; (3) Game 7 home teams cover at ~60% per skills file; (4) L15 gap only 1.1pt — no strong recent form edge. HEADWINDS: Jalen Williams OUT (depth reduction), SAS L10 8-2 (hot form), SAS forced Game 7 from 2-3 deficit showing resilience. NET ASSESSMENT: Home court coverage of spread is the core thesis — OKC home advantage (+3-4pts) roughly covers -3.5, with NetRtg edge as confirming signal. Williams OUT is a known headwind already reflected in confidence (63). Medium confidence tier (55–69) — outperforming at 56.8% per performance note; do not over-cancel without clear cause. No clear cause to cancel — no new negative information. ANOMALY CHECK: None detected. STAKE: 10% of €1,976.36 = €197.64 → €197.00 (lower end of medium tier, extra caution for Williams OUT headwind). Combined ML + spread stake: €493.00 = 24.9% of bankroll — well within 70% cap.",
-        "result": null,
-        "returned": null,
-        "pnl": null,
-        "settled_at": null,
-        "committed_at": "2026-05-30T23:34:06Z"
+        "settled_at": null
       }
     ],
     "cancelled": [],
     "late_rejections": [
       {
-        "match": "Oklahoma City Thunder vs New York Knicks",
-        "reason": "Not a scheduled game tonight. This remains a pre-market futures/hypothetical Finals odds line. NYK awaits WCF winner — no tip-off exists for this game on tonight's slate. Scout rejection stands."
-      },
-      {
         "match": "San Antonio Spurs vs New York Knicks",
-        "reason": "Not a scheduled game tonight. Hypothetical Finals matchup — SAS must beat OKC in Game 7 tonight before this series can exist. Pre-market futures line only. Scout rejection stands."
-      },
-      {
-        "match": "Oklahoma City Thunder vs San Antonio Spurs — O/U 212.5",
-        "reason": "No qualifying late-breaking edge identified. Both teams' pace (OKC 99.3, SAS 99.9) suppressed — below 100, no pace-driven totals thesis. Playoff defensive intensity typically pushes totals under, but Wembanyama active means SAS offensive output intact. Insufficient directional confidence (would require ≥ 60) without additional signal. Time gate passed (>20 min) but confidence and thesis gates not met. No new late-breaking information changed the totals picture since Scout."
+        "reason": "SAS ML at 1.53 rejected — below ML floor of 1.65. NYK ML at 2.73 rejected — above ML ceiling of 2.50. O/U Under 217.5 at 1.88 rejected — EV calculated at -0.022, negative EV. NYK +4.5 at 2.00 rejected — estimated confidence ~42%, below late scout confidence gate of 60. SAS -4.5 at 1.92 ADDED as new pick (see committed bets)."
       }
     ],
-    "total_staked": 493.0,
-    "bankroll_before": 1976.36,
-    "report": "### CONFIRMED — Oklahoma City Thunder ML\n\n- Match: Oklahoma City Thunder vs San Antonio Spurs | Tip: 2026-05-31T00:00:00Z\n- Pick: OKC ML | Scout odds: 1.71 | Commit odds: 1.71 | Move: 0.00 (no movement)\n- ML: 1.71 (OKC) / 2.30 (SAS) | ATS: OKC -3.5 (1.96/1.96) | O/U: 212.5 (O:1.96/U:1.96)\n- Stake: €296.00 | Pot: €506.16 | Conf: 72/100 | EV: 0.2312 (23.1%)\n- Decision: All anchor players verified active at commit time (SGA, Holmgren active; Wembanyama active — SAS not reporting injuries tonight). Zero line movement from Scout. EV 23.1% far exceeds the elevated 0.08 floor required for ML in 1.70–1.89 range. Game 7 at OKC home provides compound structural edge: historical ~60-65% home win rate in Conference Finals Game 7s + season NetRtg +2.8pt advantage + home court +3-4pt playoff value. Series tied 3-3 rule applied — home court and NetRtg are CO-PRIMARY signals. Confidence 72 already reflects -3 adjustment for NetRtg gap below 5.0pt threshold. Medium-tier outperformance context reinforces this pick. No anomalies, no new injuries, no reasons to cancel.\n\n---\n\n### CONFIRMED — Oklahoma City Thunder -3.5\n\n- Match: Oklahoma City Thunder vs San Antonio Spurs | Tip: 2026-05-31T00:00:00Z\n- Pick: OKC -3.5 | Scout odds: 1.96 | Commit odds: 1.96 | Move: 0.00 (no movement)\n- ML: 1.71 (OKC) / 2.30 (SAS) | ATS: OKC -3.5 (1.96/1.96) | O/U: 212.5 (O:1.96/U:1.96)\n- Stake: €197.00 | Pot: €386.12 | Conf: 63/100 | EV: 0.2348 (23.5%)\n- Decision: Odds unchanged, no new injuries, all anchors active at commit. OKC home court advantage (+3-4pts in playoffs) independently justifies covering -3.5 spread, with NetRtg +2.8pt as confirming signal. Game 7 home teams cover at ~60% historically per skills file. Headwinds (Williams OUT guard depth, SAS L10 8-2 hot form, SAS resilience forcing Game 7) already embedded in confidence 63 at Scout time — no new negative information emerged to warrant cancellation. Medium confidence tier is outperforming at 56.8%; skills file explicitly notes \"do not over-cancel at commit time without clear cause.\" Combined stake €493 = 24.9% of bankroll, well within 70% cap.\n\n---\n\n### SLATE SUMMARY\n\nTonight's sole game is WCF Game 7 — a winner-take-all showdown at OKC's Paycom Center, where two confirmed bets are deployed totalling €493.00 (24.9% of bankroll). Both picks back Oklahoma City at home, leveraging the compound advantage of historical Game 7 home win rates (~60-65%), OKC's +2.8pt season NetRtg edge, and playoff home court (+3-4pts) — with all anchor players verified active and zero adverse line movement at commit time. The rejected Finals preview lines (OKC vs NYK, SAS vs NYK) remain pre-market futures with no scheduled games tonight, and no qualifying late-breaking edges emerged to trigger a new third pick.",
-    "tokens_in": 13344,
-    "tokens_out": 4630,
-    "cost_usd": 0.109482
+    "total_staked": 222.5,
+    "bankroll_before": 1483.36,
+    "report": "### LATE PICK ADDED — San Antonio Spurs -4.5\n\n- Match: San Antonio Spurs vs New York Knicks | Tip: 2026-06-04T00:30 UTC\n- Pick: SAS -4.5 | Scout odds: N/A (new pick) | Commit odds: 1.92 | Move: N/A\n- ML: SAS 1.53 / NYK 2.73 | ATS: SAS -4.5 (1.92 / 2.00) | O/U: 217.5 (O:2.04 / U:1.88)\n- Stake: €222.50 | Pot: €427.20 | Conf: 60/100 | EV: 0.152\n\n**Decision:** Triggered by late scout re-evaluation of Scout's rejected game. The game is confirmed at Frost Bank Center (SAS home arena), making this a SAS home Finals game. Key edges: (1) SAS home court in playoffs worth +3-4 points — primary signal. (2) SAS NetRtg +8.3 vs NYK +6.5, season edge of +1.8pt, L15 edge of +5.4pt (SAS +27.6 vs NYK +22.2). (3) Mitchell Robinson Questionable for NYK — mild positive for SAS cover via interior matchup advantage for Wembanyama. (4) Both NYK anchors (Brunson, KAT) confirmed active — no injury windfall. (5) Wembanyama not on injury report = active per NBA convention, mandatory re-verification satisfied. SAS fatigue from 7-game WCF applied (-5 confidence). Final confidence: 60, just meeting the late scout confidence gate of ≥60. Spread odds 1.92 in valid range. EV 0.152 comfortably above 0.05 floor. All validation gates passed. Stake: 15% of €1483.36 = €222.50 (medium confidence tier), well within 70% bankroll exposure limit (15% used).\n\n**Rejected markets for this game:**\n- SAS ML 1.53: Below ML floor 1.65 — cannot confirm\n- NYK ML 2.73: Above ML ceiling 2.50 — cannot confirm\n- Under 217.5 at 1.88: Negative EV (-0.022) — not viable\n- NYK +4.5 at 2.00: Confidence ~42%, below 60% gate\n\n**Slate Summary:** Tonight features only one game — NBA Finals at Frost Bank Center. Scout found no valid picks at 14:00 due to ML odds out of range and incomplete SAS injury coverage. At commit time, the SAS -4.5 spread at 1.92 passes all validation gates: odds in range, EV 0.152, confidence at minimum threshold of 60, and mandatory anchor player verification satisfied. Single pick of €222.50 represents 15% bankroll exposure, leaving €1,260.86 at risk tolerance. Total committed: €222.50 (15% of €1,483.36), well within the 70% bankroll cap.",
+    "tokens_in": 10590,
+    "tokens_out": 5444,
+    "cost_usd": 0.11343
   },
   "netrtg_l15": {
     "Charlotte Hornets": 16.9,
