@@ -9,14 +9,14 @@
   "net_pnl": 624.0,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-06-03T12:43:06.550828+00:00",
-  "first_game_time": "2026-05-31T00:00:00Z",
+  "last_updated": "2026-06-03T18:01:26.476985+00:00",
+  "first_game_time": "2026-06-04T00:30:00Z",
   "llm_provider": "claude",
-  "scout_status": "no_games",
+  "scout_status": "live",
   "scout_error": "",
-  "scout_updated_at": "2026-06-02T17:26:58.796043+00:00",
+  "scout_updated_at": "2026-06-03T18:01:26.476985+00:00",
   "scout_odds_source": "theodds_onexbet",
-  "commit_status": "done",
+  "commit_status": "pending",
   "commit_updated_at": "2026-05-30T23:34:04.174134+00:00",
   "commit_date": "2026-05-30",
   "analyst_updated_at": "2026-06-03T14:24:48.424920+00:00",
@@ -27,7 +27,7 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "### CONFIRMED — Oklahoma City Thunder ML\n\n- Match: Oklahoma City Thunder vs San Antonio Spurs | Tip: 2026-05-31T00:00:00Z\n- Pick: OKC ML | Scout odds: 1.71 | Commit odds: 1.71 | Move: 0.00 (no movement)\n- ML: 1.71 (OKC) / 2.30 (SAS) | ATS: OKC -3.5 (1.96/1.96) | O/U: 212.5 (O:1.96/U:1.96)\n- Stake: €296.00 | Pot: €506.16 | Conf: 72/100 | EV: 0.2312 (23.1%)\n- Decision: All anchor players verified active at commit time (SGA, Holmgren active; Wembanyama active — SAS not reporting injuries tonight). Zero line movement from Scout. EV 23.1% far exceeds the elevated 0.08 floor required for ML in 1.70–1.89 range. Game 7 at OKC home provides compound structural edge: historical ~60-65% home win rate in Conference Finals Game 7s + season NetRtg +2.8pt advantage + home court +3-4pt playoff value. Series tied 3-3 rule applied — home court and NetRtg are CO-PRIMARY signals. Confidence 72 already reflects -3 adjustment for NetRtg gap below 5.0pt threshold. Medium-tier outperformance context reinforces this pick. No anomalies, no new injuries, no reasons to cancel.\n\n---\n\n### CONFIRMED — Oklahoma City Thunder -3.5\n\n- Match: Oklahoma City Thunder vs San Antonio Spurs | Tip: 2026-05-31T00:00:00Z\n- Pick: OKC -3.5 | Scout odds: 1.96 | Commit odds: 1.96 | Move: 0.00 (no movement)\n- ML: 1.71 (OKC) / 2.30 (SAS) | ATS: OKC -3.5 (1.96/1.96) | O/U: 212.5 (O:1.96/U:1.96)\n- Stake: €197.00 | Pot: €386.12 | Conf: 63/100 | EV: 0.2348 (23.5%)\n- Decision: Odds unchanged, no new injuries, all anchors active at commit. OKC home court advantage (+3-4pts in playoffs) independently justifies covering -3.5 spread, with NetRtg +2.8pt as confirming signal. Game 7 home teams cover at ~60% historically per skills file. Headwinds (Williams OUT guard depth, SAS L10 8-2 hot form, SAS resilience forcing Game 7) already embedded in confidence 63 at Scout time — no new negative information emerged to warrant cancellation. Medium confidence tier is outperforming at 56.8%; skills file explicitly notes \"do not over-cancel at commit time without clear cause.\" Combined stake €493 = 24.9% of bankroll, well within 70% cap.\n\n---\n\n### SLATE SUMMARY\n\nTonight's sole game is WCF Game 7 — a winner-take-all showdown at OKC's Paycom Center, where two confirmed bets are deployed totalling €493.00 (24.9% of bankroll). Both picks back Oklahoma City at home, leveraging the compound advantage of historical Game 7 home win rates (~60-65%), OKC's +2.8pt season NetRtg edge, and playoff home court (+3-4pts) — with all anchor players verified active and zero adverse line movement at commit time. The rejected Finals preview lines (OKC vs NYK, SAS vs NYK) remain pre-market futures with no scheduled games tonight, and no qualifying late-breaking edges emerged to trigger a new third pick.",
+  "last_report": "Single-game NBA Finals slate (SAS vs NYK Game 2). Zero picks drafted. Primary disqualifiers: SAS ML (1.58) below the 1.60 odds floor; NYK ML (2.58) above the 2.50 ceiling. Spread evaluated — SAS -4.5 at 1.96 has a marginal L15 NetRtg gap (+5.4pts, below the 6pt strong spread threshold), SAS fatigue penalty (-5) from 7-game WCF, and NYK Robinson Questionable (-10) creates net confidence erosion that drops below the 60-point spread floor. Mandatory Wembanyama re-verification could not be fully confirmed from available injury feed (only NYK reported). No pick met EV ≥ 0.05 at required confidence floors. Pace data available but totals signals inconclusive.",
   "draft_picks": [],
   "pending_bets": [],
   "settled_bets": [
@@ -987,18 +987,11 @@
   ],
   "rejected_games": [
     {
-      "match": "Oklahoma City Thunder vs New York Knicks",
-      "reason": "Hypothetical Finals matchup odds listed but no game scheduled tonight — NYK awaits WCF winner, no tip-off exists for this game on tonight's slate. Odds appear pre-market futures lines, not a scheduled game.",
-      "ml_home": 1.27,
-      "ml_away": 3.25,
-      "decision": "rejected"
-    },
-    {
       "match": "San Antonio Spurs vs New York Knicks",
-      "reason": "Hypothetical Finals matchup odds listed but no game scheduled tonight — this game does not exist on tonight's slate. SAS would need to beat OKC first. Pre-market futures line only.",
-      "ml_home": 1.35,
-      "ml_away": 2.7,
-      "decision": "rejected"
+      "reason": "SAS ML at 1.58 is below the 1.60 minimum odds target. NYK ML at 2.58 is above the 2.50 maximum. Spread odds 1.96 are in range but injury feed only covers 1 of 2 teams (SAS injury status unconfirmed — no SAS entries in tonight's report, but mandatory Wembanyama re-verification cannot be completed from available data). Additionally, SAS ML below threshold AND NYK ML above threshold means no valid ML pick exists. Spread: SAS -4.5 at 1.96 — SAS L15 NetRtg +27.6 vs NYK +22.2 = +5.4pt gap favoring SAS, which meets the spread threshold (>6pt not quite met), but SAS fatigue from 7-game WCF applies (-5 confidence on SAS spread picks per playoff_rest rules). NYK Mitchell Robinson Questionable (-10 confidence). Net edge insufficient. O/U: Pace data — SAS 99.9, NYK 96.8, mismatch >2 but not >5; both OffRtg >114 but Pace mismatch and totals confidence floor of 65 not clearly met with available signals. No pick meets all required thresholds.",
+      "ml_home": 1.58,
+      "ml_away": 2.58,
+      "decision": "no_edge"
     }
   ],
   "late_scout_rejections": [
@@ -1636,74 +1629,30 @@
     "Charlotte Hornets@Boston Celtics"
   ],
   "cached_context": {
-    "cached_at": "2026-05-30",
-    "games_str": "Oklahoma City Thunder vs San Antonio Spurs  |  2026-05-31T00:00 UTC  |  Paycom Center",
-    "standings_str": "Oklahoma City Thunder: 64-18  L10:7-3\nSan Antonio Spurs: 62-20  L10:8-2\nDetroit Pistons: 60-22  L10:8-2\nBoston Celtics: 56-26  L10:8-2\nDenver Nuggets: 54-28  L10:10-0\nUtah Jazz: 22-60  L10:1-9\nUTAH: 22-60  L10:1-9\nBrooklyn Nets: 20-62  L10:3-7\nIndiana Pacers: 19-63  L10:3-7\nWashington Wizards: 17-65  L10:0-10",
-    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nOklahoma City Thunder: OffRtg 118.9 | DefRtg 107.9 | NetRtg +11.1 | Pace 99.3 | L15:+28.7\nSan Antonio Spurs: OffRtg 119.7 | DefRtg 111.4 | NetRtg +8.3 | Pace 99.9 | L15:+27.6"
+    "cached_at": "2026-06-03",
+    "games_str": "San Antonio Spurs vs New York Knicks  |  2026-06-04T00:30 UTC  |  Frost Bank Center",
+    "standings_str": "Oklahoma City Thunder: 64-18  L10:7-3\nSan Antonio Spurs: 62-20  L10:8-2\nDetroit Pistons: 60-22  L10:8-2\nBoston Celtics: 56-26  L10:8-2\nDenver Nuggets: 54-28  L10:10-0\nNew York Knicks: 53-29  L10:6-4\nUtah Jazz: 22-60  L10:1-9\nUTAH: 22-60  L10:1-9\nBrooklyn Nets: 20-62  L10:3-7\nIndiana Pacers: 19-63  L10:3-7\nWashington Wizards: 17-65  L10:0-10",
+    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nSan Antonio Spurs: OffRtg 119.7 | DefRtg 111.4 | NetRtg +8.3 | Pace 99.9 | L15:+27.6\nNew York Knicks: OffRtg 119.9 | DefRtg 113.4 | NetRtg +6.5 | Pace 96.8 | L15:+22.2"
   },
   "scout_report_data": {
-    "date": "2026-05-30",
-    "updated_at": "2026-05-30T14:42:27.658942+00:00",
-    "picks": [
-      {
-        "id": "nba_draft_20260530_001",
-        "match": "Oklahoma City Thunder vs San Antonio Spurs",
-        "time": "2026-05-31T00:00:00Z",
-        "pick": "Oklahoma City Thunder ML",
-        "odds": 1.71,
-        "stake": 296.0,
-        "potential_return": 506.16,
-        "confidence": 72,
-        "reasoning": "WCF Game 7 at OKC home — verified from skills file (OKC hosts Games 1,2,5,7). INJURY CHECK: SGA and Chet Holmgren NOT listed in tonight's injury report (only Mitchell, Sorber, Jalen Williams listed as OUT). Skills file mandates re-verification — proceeding as SGA/Holmgren active based on absence from report. Jalen Williams OUT confirmed. SAS injury report: SAS not in tonight's report (1 team listed = OKC only). Wembanyama status: skills file flags as mandatory verify — SAS not reporting injuries tonight per nba_official feed covering 1 team playing. Treating Wembanyama as active (no OUT designation in feed). SIGNALS: (1) OKC home court Game 7 +3-4pts advantage; (2) Historical ~60-65% home win rate in Conference Finals Game 7s; (3) OKC NetRtg +11.1 vs SAS +8.3 = +2.8pt season edge; (4) L15 NetRtg: OKC +28.7 vs SAS +27.6 — L15 gap is only 1.1pt, below the 4.0pt threshold, so season NetRtg becomes primary. Game 7 home court + historical rates = primary edge. SERIES TIED RULE: 3-3, no in-series lead — home court + NetRtg are CO-PRIMARY signals. ODDS CHECK: 1.71 falls in ML target range 1.60-2.50. ML underperformance note: ML odds 1.70-1.89 range requires EV ≥ 0.08. EV = (0.72 × 1.71) - 1 = 1.2312 - 1 = 0.2312. EV = 23.1% >> 0.08 threshold. STRONG edge. High confidence tier (70-84): requires NetRtg gap ≥ 5.0 AND home court or health advantage. NetRtg gap is 2.8pt — below 5.0pt threshold for high confidence. Applying caution: downgrading from 75 to 72. Still in high confidence tier. STAKE: High confidence (70-84) = 15% of bankroll (applying extra scrutiny per performance note — using lower end of 20-25% range due to NetRtg gap < 5.0). 15% × €1976.36 = €296.45 → €296.00. ANOMALY CHECK: OKC favoured at 1.71 (SAS at 2.30) — no anomaly. Line range appropriate for Game 7 at OKC.",
-        "anchor_players": [
-          "Shai Gilgeous-Alexander",
-          "Chet Holmgren",
-          "Victor Wembanyama"
-        ],
-        "drafted_at": "2026-05-30T14:42:36Z",
-        "market_type": "ml"
-      },
-      {
-        "id": "nba_draft_20260530_002",
-        "match": "Oklahoma City Thunder vs San Antonio Spurs",
-        "time": "2026-05-31T00:00:00Z",
-        "pick": "Oklahoma City Thunder -3.5",
-        "odds": 1.96,
-        "stake": 197.0,
-        "potential_return": 386.12,
-        "confidence": 63,
-        "reasoning": "SPREAD EVALUATION — OKC -3.5 at 1.96. Skills file: Spread odds target 1.80-2.30. 1.96 is squarely in range. CONFIDENCE FLOOR for spread: 60. SIGNALS FAVORING OKC COVER: (1) Home court Game 7 worth +3-4pts in playoffs — OKC -3.5 is essentially a coin flip on whether home court advantage alone covers; (2) Season NetRtg gap +2.8pts favours OKC; (3) Game 7 home teams cover at ~60% rate per skills file; (4) Jalen Williams OUT (OKC guard depth reduced) — this is a HEADWIND for OKC covering. HEADWINDS: (1) Williams OUT reduces depth; (2) L15 gap only 1.1pt — no strong recent form edge; (3) SAS proven road competitor (won Game 6, forced Game 7 from 2-3 down); (4) SAS L10 8-2 shows hot form. ASSESSMENT: Home court +3-4pts in playoffs roughly equals the -3.5 spread — this is essentially asking: does OKC's home advantage + NetRtg edge exceed the spread? Yes, but marginally. Williams OUT is a concern. Confidence set at 63 (above 60 floor but cautious). INJURY CHECK: No game-time decisions unresolved for players in tonight's report. SGA/Holmgren not listed as out. PACE: OKC 99.3, SAS 99.9 — both below 100, pace signal suppressed. ANOMALY CHECK: None detected. EV = (0.63 × 1.96) - 1 = 1.2348 - 1 = 0.2348 = 23.5% >> 0.05. Strong EV. STAKE: Medium confidence (55-69) = 10% of bankroll (lower end, given Williams OUT headwind and marginal confidence above floor). 10% × €1976.36 = €197.64 → €197.00. NOTE: ML and spread coexist on same game — both offer independent edges per skills file. Combined stakes: €296 + €197 = €493 = 24.9% of bankroll. Within 70% daily cap.",
-        "anchor_players": [
-          "Shai Gilgeous-Alexander",
-          "Chet Holmgren",
-          "Victor Wembanyama"
-        ],
-        "drafted_at": "2026-05-30T14:42:36Z",
-        "market_type": "spread"
-      }
-    ],
+    "date": "2026-06-03",
+    "updated_at": "2026-06-03T18:01:26.476985+00:00",
+    "picks": [],
     "rejected": [
       {
-        "match": "Oklahoma City Thunder vs New York Knicks",
-        "reason": "Hypothetical Finals matchup odds listed but no game scheduled tonight — NYK awaits WCF winner, no tip-off exists for this game on tonight's slate. Odds appear pre-market futures lines, not a scheduled game.",
-        "ml_home": 1.27,
-        "ml_away": 3.25,
-        "decision": "rejected"
-      },
-      {
         "match": "San Antonio Spurs vs New York Knicks",
-        "reason": "Hypothetical Finals matchup odds listed but no game scheduled tonight — this game does not exist on tonight's slate. SAS would need to beat OKC first. Pre-market futures line only.",
-        "ml_home": 1.35,
-        "ml_away": 2.7,
-        "decision": "rejected"
+        "reason": "SAS ML at 1.58 is below the 1.60 minimum odds target. NYK ML at 2.58 is above the 2.50 maximum. Spread odds 1.96 are in range but injury feed only covers 1 of 2 teams (SAS injury status unconfirmed — no SAS entries in tonight's report, but mandatory Wembanyama re-verification cannot be completed from available data). Additionally, SAS ML below threshold AND NYK ML above threshold means no valid ML pick exists. Spread: SAS -4.5 at 1.96 — SAS L15 NetRtg +27.6 vs NYK +22.2 = +5.4pt gap favoring SAS, which meets the spread threshold (>6pt not quite met), but SAS fatigue from 7-game WCF applies (-5 confidence on SAS spread picks per playoff_rest rules). NYK Mitchell Robinson Questionable (-10 confidence). Net edge insufficient. O/U: Pace data — SAS 99.9, NYK 96.8, mismatch >2 but not >5; both OffRtg >114 but Pace mismatch and totals confidence floor of 65 not clearly met with available signals. No pick meets all required thresholds.",
+        "ml_home": 1.58,
+        "ml_away": 2.58,
+        "decision": "no_edge"
       }
     ],
-    "report": "Single real game tonight: WCF Game 7 at OKC (Paycom Center), winner-take-all. Two additional odds lines (OKC vs NYK, SAS vs NYK) are pre-Finals futures with no scheduled tip-off — correctly rejected. Injury feed covers 1 team (OKC): Mitchell, Sorber, Jalen Williams all OUT confirmed; SGA and Holmgren absent from report = presumed active. SAS not in tonight's feed — Wembanyama treated as active (no OUT designation). Two picks drafted: OKC ML (1.71, conf 72, EV 23.1%) and OKC -3.5 spread (1.96, conf 63, EV 23.5%). Primary edge: home court Game 7 advantage (+3-4pts) + season NetRtg edge (+2.8pts) + historical ~60-65% home win rate in Conference Finals Game 7s. L15 gap (1.1pt) is below threshold so season NetRtg is primary. Combined stakes €493 = 24.9% of bankroll, well within 70% cap. Pace data available but both teams sub-100 — totals signal suppressed; O/U 213.5 at 2.04/1.88 not drafted (confidence floor 70 required, insufficient pace signal).",
+    "report": "Single-game NBA Finals slate (SAS vs NYK Game 2). Zero picks drafted. Primary disqualifiers: SAS ML (1.58) below the 1.60 odds floor; NYK ML (2.58) above the 2.50 ceiling. Spread evaluated — SAS -4.5 at 1.96 has a marginal L15 NetRtg gap (+5.4pts, below the 6pt strong spread threshold), SAS fatigue penalty (-5) from 7-game WCF, and NYK Robinson Questionable (-10) creates net confidence erosion that drops below the 60-point spread floor. Mandatory Wembanyama re-verification could not be fully confirmed from available injury feed (only NYK reported). No pick met EV ≥ 0.05 at required confidence floors. Pace data available but totals signals inconclusive.",
     "odds_source": "theodds_onexbet",
     "injuries_source": "nba_official",
-    "tokens_in": 13609,
-    "tokens_out": 2145,
-    "cost_usd": 0.073002
+    "tokens_in": 12160,
+    "tokens_out": 627,
+    "cost_usd": 0.045885
   },
   "analyst_checkpoint_done": true,
   "slate_game_times": [
