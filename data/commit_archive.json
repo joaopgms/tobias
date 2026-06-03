@@ -2361,5 +2361,50 @@
     "tokens_in": 13344,
     "tokens_out": 4630,
     "cost_usd": 0.109482
+  },
+  {
+    "ts": "2026-06-03T23:45:30.543629+00:00",
+    "date": "2026-06-03",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 1,
+    "cancelled_count": 0,
+    "total_staked": 222.5,
+    "bankroll_before": 1483.36,
+    "bankroll_after": 1260.86,
+    "bets": [
+      {
+        "id": "nba_bet_20260603_001",
+        "match": "San Antonio Spurs vs New York Knicks",
+        "time": "2026-06-04T00:30:00Z",
+        "pick": "San Antonio Spurs -4.5",
+        "odds": 1.92,
+        "stake": 222.5,
+        "potential_return": 427.2,
+        "reasoning": "SAS home game in NBA Finals (Frost Bank Center). SAS NetRtg +8.3 vs NYK +6.5 = +1.8pt season edge. L15 NetRtg: SAS +27.6 vs NYK +22.2 = +5.4pt recent form edge. At SAS home (Games 3/4/6 bracket), SAS home court (+3-4pts in playoffs) compounds NetRtg advantage, producing estimated SAS net edge of ~5-6 points. SAS -4.5 spread supported by home court + NetRtg confluence. NYK Mitchell Robinson Questionable (Right 5th Metacarpal) — mild positive for SAS cover as his absence weakens NYK interior defense against Wembanyama. SAS fatigue from 7-game WCF applied (-5 confidence). Both Brunson and KAT confirmed active for NYK (no injury listed). Wembanyama not on injury report = active per NBA convention. Spread odds 1.92 in valid range (floor 1.75). EV = (0.60 x 1.92) - 1 = 0.152 ≥ 0.05. Medium confidence tier, 15% stake. Time gate: 45 min to tip-off > 20 min required. Quantity gate: 1 new pick at commit phase.",
+        "confidence": 60,
+        "anchor_players": [
+          "Victor Wembanyama",
+          "Jalen Brunson",
+          "Karl-Anthony Towns"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null
+      }
+    ],
+    "cancelled": [],
+    "late_rejections": [
+      {
+        "match": "San Antonio Spurs vs New York Knicks",
+        "reason": "SAS ML at 1.53 rejected — below ML floor of 1.65. NYK ML at 2.73 rejected — above ML ceiling of 2.50. O/U Under 217.5 at 1.88 rejected — EV calculated at -0.022, negative EV. NYK +4.5 at 2.00 rejected — estimated confidence ~42%, below late scout confidence gate of 60. SAS -4.5 at 1.92 ADDED as new pick (see committed bets)."
+      }
+    ],
+    "report": "### LATE PICK ADDED — San Antonio Spurs -4.5\n\n- Match: San Antonio Spurs vs New York Knicks | Tip: 2026-06-04T00:30 UTC\n- Pick: SAS -4.5 | Scout odds: N/A (new pick) | Commit odds: 1.92 | Move: N/A\n- ML: SAS 1.53 / NYK 2.73 | ATS: SAS -4.5 (1.92 / 2.00) | O/U: 217.5 (O:2.04 / U:1.88)\n- Stake: €222.50 | Pot: €427.20 | Conf: 60/100 | EV: 0.152\n\n**Decision:** Triggered by late scout re-evaluation of Scout's rejected game. The game is confirmed at Frost Bank Center (SAS home arena), making this a SAS home Finals game. Key edges: (1) SAS home court in playoffs worth +3-4 points — primary signal. (2) SAS NetRtg +8.3 vs NYK +6.5, season edge of +1.8pt, L15 edge of +5.4pt (SAS +27.6 vs NYK +22.2). (3) Mitchell Robinson Questionable for NYK — mild positive for SAS cover via interior matchup advantage for Wembanyama. (4) Both NYK anchors (Brunson, KAT) confirmed active — no injury windfall. (5) Wembanyama not on injury report = active per NBA convention, mandatory re-verification satisfied. SAS fatigue from 7-game WCF applied (-5 confidence). Final confidence: 60, just meeting the late scout confidence gate of ≥60. Spread odds 1.92 in valid range. EV 0.152 comfortably above 0.05 floor. All validation gates passed. Stake: 15% of €1483.36 = €222.50 (medium confidence tier), well within 70% bankroll exposure limit (15% used).\n\n**Rejected markets for this game:**\n- SAS ML 1.53: Below ML floor 1.65 — cannot confirm\n- NYK ML 2.73: Above ML ceiling 2.50 — cannot confirm\n- Under 217.5 at 1.88: Negative EV (-0.022) — not viable\n- NYK +4.5 at 2.00: Confidence ~42%, below 60% gate\n\n**Slate Summary:** Tonight features only one game — NBA Finals at Frost Bank Center. Scout found no valid picks at 14:00 due to ML odds out of range and incomplete SAS injury coverage. At commit time, the SAS -4.5 spread at 1.92 passes all validation gates: odds in range, EV 0.152, confidence at minimum threshold of 60, and mandatory anchor player verification satisfied. Single pick of €222.50 represents 15% bankroll exposure, leaving €1,260.86 at risk tolerance. Total committed: €222.50 (15% of €1,483.36), well within the 70% bankroll cap.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 10590,
+    "tokens_out": 5444,
+    "cost_usd": 0.11343
   }
 ]
