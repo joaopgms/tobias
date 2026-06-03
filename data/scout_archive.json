@@ -2380,5 +2380,28 @@
     "tokens_in": 13609,
     "tokens_out": 2145,
     "cost_usd": 0.073002
+  },
+  {
+    "ts": "2026-06-03T18:01:26.476985+00:00",
+    "date": "2026-06-03",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_onexbet",
+    "draft_count": 0,
+    "picks": [],
+    "rejected": [
+      {
+        "match": "San Antonio Spurs vs New York Knicks",
+        "reason": "SAS ML at 1.58 is below the 1.60 minimum odds target. NYK ML at 2.58 is above the 2.50 maximum. Spread odds 1.96 are in range but injury feed only covers 1 of 2 teams (SAS injury status unconfirmed — no SAS entries in tonight's report, but mandatory Wembanyama re-verification cannot be completed from available data). Additionally, SAS ML below threshold AND NYK ML above threshold means no valid ML pick exists. Spread: SAS -4.5 at 1.96 — SAS L15 NetRtg +27.6 vs NYK +22.2 = +5.4pt gap favoring SAS, which meets the spread threshold (>6pt not quite met), but SAS fatigue from 7-game WCF applies (-5 confidence on SAS spread picks per playoff_rest rules). NYK Mitchell Robinson Questionable (-10 confidence). Net edge insufficient. O/U: Pace data — SAS 99.9, NYK 96.8, mismatch >2 but not >5; both OffRtg >114 but Pace mismatch and totals confidence floor of 65 not clearly met with available signals. No pick meets all required thresholds.",
+        "ml_home": 1.58,
+        "ml_away": 2.58,
+        "decision": "no_edge"
+      }
+    ],
+    "report": "Single-game NBA Finals slate (SAS vs NYK Game 2). Zero picks drafted. Primary disqualifiers: SAS ML (1.58) below the 1.60 odds floor; NYK ML (2.58) above the 2.50 ceiling. Spread evaluated — SAS -4.5 at 1.96 has a marginal L15 NetRtg gap (+5.4pts, below the 6pt strong spread threshold), SAS fatigue penalty (-5) from 7-game WCF, and NYK Robinson Questionable (-10) creates net confidence erosion that drops below the 60-point spread floor. Mandatory Wembanyama re-verification could not be fully confirmed from available injury feed (only NYK reported). No pick met EV ≥ 0.05 at required confidence floors. Pace data available but totals signals inconclusive.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 12160,
+    "tokens_out": 627,
+    "cost_usd": 0.045885
   }
 ]
