@@ -24,7 +24,7 @@
           "started_at": "2026-04-05T10:44:07.102344+00:00",
           "bankroll_start": 1000.0,
           "wins": 27,
-          "losses": 20,
+          "losses": 21,
           "peak_bankroll": 2195.96,
           "total_bets": 48
         }
@@ -2530,10 +2530,10 @@
             "Jalen Brunson",
             "Karl-Anthony Towns"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -222.5,
+          "settled_at": "2026-06-04T11:16:57.733223+00:00"
         }
       ],
       "summary": "Day 2026-06-03 commit — 1 bets totalling €222.50. 0 cancelled. Bankroll: €1483.36 → €1260.86."
