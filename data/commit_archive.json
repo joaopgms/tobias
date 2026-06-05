@@ -2406,5 +2406,29 @@
     "tokens_in": 10590,
     "tokens_out": 5444,
     "cost_usd": 0.11343
+  },
+  {
+    "ts": "2026-06-05T23:15:58.088786+00:00",
+    "date": "2026-06-05",
+    "llm": "claude-sonnet-4-6",
+    "committed_count": 0,
+    "cancelled_count": 0,
+    "total_staked": 0.0,
+    "bankroll_before": 1260.86,
+    "bankroll_after": 1260.86,
+    "bets": [],
+    "cancelled": [],
+    "late_rejections": [
+      {
+        "match": "San Antonio Spurs vs New York Knicks",
+        "reason": "All four markets fail validation at commit time. SAS ML 1.45: below ML floor of 1.65 — invalid. NYK ML 3.02: above ML ceiling of 2.50 — invalid. SAS -6.5 spread at 1.96: in valid odds range but confidence estimated at 49 (below the 60 gate required for new late-scout picks) after applying SAS fatigue -5, unknown Wembanyama Games 1-2 efficiency data -3, and NYK series momentum penalty -5 against large spread. EV = (0.49 × 1.96) - 1 = -0.04 — negative, fails EV ≥ 0.05 gate. O/U 216.5 at 1.95: in valid range but confidence ~52, below the 65 floor required for totals picks; pace mismatch only 3.1 (below 5-point threshold); Finals defensive intensity creates insufficient signal clarity; EV = (0.52 × 1.95) - 1 = 0.014 — below 0.05 gate. All markets rejected."
+      }
+    ],
+    "report": "## Commit Report — 2026-06-05T23:15:59Z\n**Bankroll: €1260.86 | Slate: 1 game (NBA Finals Game 3)**\n\n---\n\n### No Draft Picks to Review\nThe Scout phase produced no draft picks, so Task 1 yielded no confirmations or cancellations.\n\n---\n\n### LATE SCOUT — San Antonio Spurs vs New York Knicks (Game 3)\n- **Match**: San Antonio Spurs vs New York Knicks | Tip: 2026-06-06T00:30 UTC\n- **Current Odds**: SAS ML 1.45 / NYK ML 3.02 | Spread SAS -6.5 (1.96/1.96) | O/U 216.5 (O:1.95 / U:1.97)\n\n**Mandatory Verification**: All three anchor players confirmed Active per nba_official — Jalen Brunson ✅, Karl-Anthony Towns ✅, Victor Wembanyama ✅. Injury data source: nba_official (no cap or ban triggered).\n\n**Market-by-market analysis:**\n\n**SAS ML (1.45)**: Below the ML floor of 1.65. Cannot confirm under any circumstance. Rejected.\n\n**NYK ML (3.02)**: Above the ML ceiling of 2.50. Cannot confirm. Rejected.\n\n**SAS -6.5 (1.96)**: Odds in valid spread range (1.75–2.30). Structural analysis: SAS home court (+3-4pts) + NetRtg edge (+1.8pt) + maximum desperation (0-3 would be fatal, no team has ever recovered) = meaningful SAS edge. However: SAS fatigue penalty -5 (7-game WCF + Games 1-2 road travel), unknown Wembanyama efficiency from Games 1-2 -3, NYK series momentum (2-0, 95% Finals close rate) weighs against SAS covering a 6.5-point line -5. Net confidence: ~49 — below the 60 gate required for new late-scout picks. EV = (0.49 × 1.96) - 1 = **-0.04**. Negative EV. Rejected.\n\n**O/U 216.5 (1.95/1.97)**: Odds in valid O/U range. SAS OffRtg 119.7 / NYK OffRtg 119.9 both elite. However: pace mismatch only 3.1 (below 5-point threshold for clear signal), Finals defensive intensity extreme, NYK Pace 96.8 projects toward slower game, no Games 1-2 scoring data available to calibrate. Totals require confidence ≥ 65; net confidence ~52. EV = (0.52 × 1.95) - 1 = **0.014** — below 0.05 gate. Rejected.\n\n**Outcome**: No picks added from late scout. No bets committed tonight.\n\n---\n\n### Slate Summary\n\nTonight's sole game (NBA Finals Game 3 at San Antonio) presents no bettable market within the simulation's validated parameters. All franchise players are confirmed active, which is the correct outcome for mandatory verification — but it removes injury-based edges. The ML markets sit outside valid odds bounds entirely (SAS 1.45 too short, NYK 3.02 too long). The spread is structurally interesting given SAS home court + NetRtg + desperation, but confidence falls to ~49 after mandatory fatigue and momentum adjustments — below the 60-confidence gate and producing negative EV. The O/U similarly fails both the confidence floor and EV gate. Bankroll remains at €1,260.86 fully preserved heading into Game 3.",
+    "odds_failures": [],
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 11585,
+    "tokens_out": 3316,
+    "cost_usd": 0.084495
   }
 ]
