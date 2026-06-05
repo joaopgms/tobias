@@ -1,7 +1,7 @@
 ---
-version: 74
-updated_at: 2026-06-04T12:41:22.896758+00:00
-updated_by: analyst_2026-06-04
+version: 75
+updated_at: 2026-06-05T12:33:15.070087+00:00
+updated_by: analyst_2026-06-05
 llm: claude-sonnet-4-6
 ---
 
@@ -103,7 +103,7 @@ New York Knicks:
 
 San Antonio Spurs:
 - David Jones Garcia (F): OUT [roster-only]
-- Victor Wembanyama: re-verify active status each session. Monitor fatigue from 7-game WCF. MANDATORY.
+- Victor Wembanyama: re-verify active status each session. Monitor fatigue from 7-game WCF + Game 1 minutes. MANDATORY.
 
 Los Angeles Lakers:
 - Luka Doncic (G): OUT [roster-only] — FRANCHISE PLAYER.
