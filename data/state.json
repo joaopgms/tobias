@@ -9,14 +9,14 @@
   "net_pnl": 401.5,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-06-05T11:29:58.201109+00:00",
-  "first_game_time": "2026-06-04T00:30:00Z",
+  "last_updated": "2026-06-05T15:57:41.022560+00:00",
+  "first_game_time": "2026-06-06T00:30:00Z",
   "llm_provider": "claude",
-  "scout_status": "no_games",
+  "scout_status": "live",
   "scout_error": "",
-  "scout_updated_at": "2026-06-04T16:21:57.857061+00:00",
+  "scout_updated_at": "2026-06-05T15:57:41.022560+00:00",
   "scout_odds_source": "theodds_onexbet",
-  "commit_status": "done",
+  "commit_status": "pending",
   "commit_updated_at": "2026-06-03T23:45:30.543629+00:00",
   "commit_date": "2026-06-03",
   "analyst_updated_at": "2026-06-05T12:33:15.070087+00:00",
@@ -27,7 +27,7 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "### LATE PICK ADDED — San Antonio Spurs -4.5\n\n- Match: San Antonio Spurs vs New York Knicks | Tip: 2026-06-04T00:30 UTC\n- Pick: SAS -4.5 | Scout odds: N/A (new pick) | Commit odds: 1.92 | Move: N/A\n- ML: SAS 1.53 / NYK 2.73 | ATS: SAS -4.5 (1.92 / 2.00) | O/U: 217.5 (O:2.04 / U:1.88)\n- Stake: €222.50 | Pot: €427.20 | Conf: 60/100 | EV: 0.152\n\n**Decision:** Triggered by late scout re-evaluation of Scout's rejected game. The game is confirmed at Frost Bank Center (SAS home arena), making this a SAS home Finals game. Key edges: (1) SAS home court in playoffs worth +3-4 points — primary signal. (2) SAS NetRtg +8.3 vs NYK +6.5, season edge of +1.8pt, L15 edge of +5.4pt (SAS +27.6 vs NYK +22.2). (3) Mitchell Robinson Questionable for NYK — mild positive for SAS cover via interior matchup advantage for Wembanyama. (4) Both NYK anchors (Brunson, KAT) confirmed active — no injury windfall. (5) Wembanyama not on injury report = active per NBA convention, mandatory re-verification satisfied. SAS fatigue from 7-game WCF applied (-5 confidence). Final confidence: 60, just meeting the late scout confidence gate of ≥60. Spread odds 1.92 in valid range. EV 0.152 comfortably above 0.05 floor. All validation gates passed. Stake: 15% of €1483.36 = €222.50 (medium confidence tier), well within 70% bankroll exposure limit (15% used).\n\n**Rejected markets for this game:**\n- SAS ML 1.53: Below ML floor 1.65 — cannot confirm\n- NYK ML 2.73: Above ML ceiling 2.50 — cannot confirm\n- Under 217.5 at 1.88: Negative EV (-0.022) — not viable\n- NYK +4.5 at 2.00: Confidence ~42%, below 60% gate\n\n**Slate Summary:** Tonight features only one game — NBA Finals at Frost Bank Center. Scout found no valid picks at 14:00 due to ML odds out of range and incomplete SAS injury coverage. At commit time, the SAS -4.5 spread at 1.92 passes all validation gates: odds in range, EV 0.152, confidence at minimum threshold of 60, and mandatory anchor player verification satisfied. Single pick of €222.50 represents 15% bankroll exposure, leaving €1,260.86 at risk tolerance. Total committed: €222.50 (15% of €1,483.36), well within the 70% bankroll cap.",
+  "last_report": "Single-game Finals slate (SAS vs NYK, Game 3). Zero picks drafted. SAS ML at 1.47 falls below the 1.60 ML floor; NYK ML at 2.96 exceeds the 2.50 ML ceiling — both moneylines are outside valid ranges. Spread (SAS -6.5 at 1.96) is structurally supported by SAS home court + NetRtg edge + maximum desperation, but mandatory Wembanyama active status re-verification and Games 1-2 efficiency data are not confirmable from the available feed (\"no notable injuries reported\" ≠ confirmed active per skills rules). Fatigue confidence penalty (-5 spread) further compresses the margin. O/U lacks sufficient pace-based conviction at Finals defensive intensity. No pick meets the full criteria stack. Injury feed source is nba_official (full coverage), so no data-quality cap applies — the issue is odds range and verification gaps.",
   "draft_picks": [],
   "pending_bets": [],
   "settled_bets": [
@@ -1008,9 +1008,9 @@
   "rejected_games": [
     {
       "match": "San Antonio Spurs vs New York Knicks",
-      "reason": "SAS ML at 1.58 is below the 1.60 minimum odds target. NYK ML at 2.58 is above the 2.50 maximum. Spread odds 1.96 are in range but injury feed only covers 1 of 2 teams (SAS injury status unconfirmed — no SAS entries in tonight's report, but mandatory Wembanyama re-verification cannot be completed from available data). Additionally, SAS ML below threshold AND NYK ML above threshold means no valid ML pick exists. Spread: SAS -4.5 at 1.96 — SAS L15 NetRtg +27.6 vs NYK +22.2 = +5.4pt gap favoring SAS, which meets the spread threshold (>6pt not quite met), but SAS fatigue from 7-game WCF applies (-5 confidence on SAS spread picks per playoff_rest rules). NYK Mitchell Robinson Questionable (-10 confidence). Net edge insufficient. O/U: Pace data — SAS 99.9, NYK 96.8, mismatch >2 but not >5; both OffRtg >114 but Pace mismatch and totals confidence floor of 65 not clearly met with available signals. No pick meets all required thresholds.",
-      "ml_home": 1.58,
-      "ml_away": 2.58,
+      "reason": "SAS ML at 1.47 is BELOW the 1.60 minimum ML odds target — outside valid range. NYK ML at 2.96 exceeds the 2.50 ML ceiling. Spread at 1.96 (SAS -6.5) is within range but confidence insufficient: SAS holds home court + NetRtg edge + desperation, but mandatory franchise player re-verification cannot be confirmed from available data — no specific Games 1-2 efficiency data for Wembanyama provided, and 'No notable injuries reported' does not confirm active status per MANDATORY rules. NYK road + series dominance vs SAS home + desperation creates genuine uncertainty. Additionally, SAS -6.5 spread at 1.96 requires confidence ≥ 60 and EV ≥ 0.05: structural SAS edge (home +3-4pts, NetRtg +1.8pt, desperation) supports SAS covering, but NYK series momentum (2-0 lead, ~95% Finals close rate) and unknown Wembanyama fatigue load from WCF Game 7 + Games 1-2 create material uncertainty. SAS fatigue confidence penalty -5 on spread. Net confidence estimate ~58-62 — marginal. O/U 215.5 at 1.96: Pace data shows SAS 99.9 / NYK 96.8 — pace mismatch of 3.1 (below 5-point mismatch threshold); SAS OffRtg 119.7, NYK OffRtg 119.9 both high, but Pace data is available (not 0.0). However, totals confidence floor is 65 and the mismatch + Finals defensive intensity creates insufficient signal clarity. All markets fail to meet combined odds range + confidence + EV thresholds with mandatory verification gaps. Decision: no_edge / deferred.",
+      "ml_home": 1.47,
+      "ml_away": 2.96,
       "decision": "no_edge"
     }
   ],
@@ -1062,7 +1062,7 @@
   "netrtg_l15": {
     "Charlotte Hornets": 16.9,
     "Sacramento Kings": -29.4,
-    "New York Knicks": 22.2,
+    "New York Knicks": 23.2,
     "New Orleans Pelicans": -29.6,
     "Cleveland Cavaliers": -5.5,
     "Orlando Magic": 2.9,
@@ -1079,7 +1079,7 @@
     "Boston Celtics": 35.5,
     "Oklahoma City Thunder": 28.7,
     "Memphis Grizzlies": -59.3,
-    "San Antonio Spurs": 27.6,
+    "San Antonio Spurs": 20.9,
     "Utah Jazz": -40.5,
     "Washington Wizards": -41.9,
     "Minnesota Timberwolves": -0.4,
@@ -1614,30 +1614,30 @@
     "Cleveland Cavaliers@Detroit Pistons"
   ],
   "cached_context": {
-    "cached_at": "2026-06-03",
-    "games_str": "San Antonio Spurs vs New York Knicks  |  2026-06-04T00:30 UTC  |  Frost Bank Center",
+    "cached_at": "2026-06-05",
+    "games_str": "San Antonio Spurs vs New York Knicks  |  2026-06-06T00:30 UTC  |  Frost Bank Center",
     "standings_str": "Oklahoma City Thunder: 64-18  L10:7-3\nSan Antonio Spurs: 62-20  L10:8-2\nDetroit Pistons: 60-22  L10:8-2\nBoston Celtics: 56-26  L10:8-2\nDenver Nuggets: 54-28  L10:10-0\nNew York Knicks: 53-29  L10:6-4\nUtah Jazz: 22-60  L10:1-9\nUTAH: 22-60  L10:1-9\nBrooklyn Nets: 20-62  L10:3-7\nIndiana Pacers: 19-63  L10:3-7\nWashington Wizards: 17-65  L10:0-10",
-    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nSan Antonio Spurs: OffRtg 119.7 | DefRtg 111.4 | NetRtg +8.3 | Pace 99.9 | L15:+27.6\nNew York Knicks: OffRtg 119.9 | DefRtg 113.4 | NetRtg +6.5 | Pace 96.8 | L15:+22.2"
+    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nSan Antonio Spurs: OffRtg 119.7 | DefRtg 111.4 | NetRtg +8.3 | Pace 99.9 | L15:+20.9\nNew York Knicks: OffRtg 119.9 | DefRtg 113.4 | NetRtg +6.5 | Pace 96.8 | L15:+23.2"
   },
   "scout_report_data": {
-    "date": "2026-06-03",
-    "updated_at": "2026-06-03T18:01:26.476985+00:00",
+    "date": "2026-06-05",
+    "updated_at": "2026-06-05T15:57:41.022560+00:00",
     "picks": [],
     "rejected": [
       {
         "match": "San Antonio Spurs vs New York Knicks",
-        "reason": "SAS ML at 1.58 is below the 1.60 minimum odds target. NYK ML at 2.58 is above the 2.50 maximum. Spread odds 1.96 are in range but injury feed only covers 1 of 2 teams (SAS injury status unconfirmed — no SAS entries in tonight's report, but mandatory Wembanyama re-verification cannot be completed from available data). Additionally, SAS ML below threshold AND NYK ML above threshold means no valid ML pick exists. Spread: SAS -4.5 at 1.96 — SAS L15 NetRtg +27.6 vs NYK +22.2 = +5.4pt gap favoring SAS, which meets the spread threshold (>6pt not quite met), but SAS fatigue from 7-game WCF applies (-5 confidence on SAS spread picks per playoff_rest rules). NYK Mitchell Robinson Questionable (-10 confidence). Net edge insufficient. O/U: Pace data — SAS 99.9, NYK 96.8, mismatch >2 but not >5; both OffRtg >114 but Pace mismatch and totals confidence floor of 65 not clearly met with available signals. No pick meets all required thresholds.",
-        "ml_home": 1.58,
-        "ml_away": 2.58,
+        "reason": "SAS ML at 1.47 is BELOW the 1.60 minimum ML odds target — outside valid range. NYK ML at 2.96 exceeds the 2.50 ML ceiling. Spread at 1.96 (SAS -6.5) is within range but confidence insufficient: SAS holds home court + NetRtg edge + desperation, but mandatory franchise player re-verification cannot be confirmed from available data — no specific Games 1-2 efficiency data for Wembanyama provided, and 'No notable injuries reported' does not confirm active status per MANDATORY rules. NYK road + series dominance vs SAS home + desperation creates genuine uncertainty. Additionally, SAS -6.5 spread at 1.96 requires confidence ≥ 60 and EV ≥ 0.05: structural SAS edge (home +3-4pts, NetRtg +1.8pt, desperation) supports SAS covering, but NYK series momentum (2-0 lead, ~95% Finals close rate) and unknown Wembanyama fatigue load from WCF Game 7 + Games 1-2 create material uncertainty. SAS fatigue confidence penalty -5 on spread. Net confidence estimate ~58-62 — marginal. O/U 215.5 at 1.96: Pace data shows SAS 99.9 / NYK 96.8 — pace mismatch of 3.1 (below 5-point mismatch threshold); SAS OffRtg 119.7, NYK OffRtg 119.9 both high, but Pace data is available (not 0.0). However, totals confidence floor is 65 and the mismatch + Finals defensive intensity creates insufficient signal clarity. All markets fail to meet combined odds range + confidence + EV thresholds with mandatory verification gaps. Decision: no_edge / deferred.",
+        "ml_home": 1.47,
+        "ml_away": 2.96,
         "decision": "no_edge"
       }
     ],
-    "report": "Single-game NBA Finals slate (SAS vs NYK Game 2). Zero picks drafted. Primary disqualifiers: SAS ML (1.58) below the 1.60 odds floor; NYK ML (2.58) above the 2.50 ceiling. Spread evaluated — SAS -4.5 at 1.96 has a marginal L15 NetRtg gap (+5.4pts, below the 6pt strong spread threshold), SAS fatigue penalty (-5) from 7-game WCF, and NYK Robinson Questionable (-10) creates net confidence erosion that drops below the 60-point spread floor. Mandatory Wembanyama re-verification could not be fully confirmed from available injury feed (only NYK reported). No pick met EV ≥ 0.05 at required confidence floors. Pace data available but totals signals inconclusive.",
+    "report": "Single-game Finals slate (SAS vs NYK, Game 3). Zero picks drafted. SAS ML at 1.47 falls below the 1.60 ML floor; NYK ML at 2.96 exceeds the 2.50 ML ceiling — both moneylines are outside valid ranges. Spread (SAS -6.5 at 1.96) is structurally supported by SAS home court + NetRtg edge + maximum desperation, but mandatory Wembanyama active status re-verification and Games 1-2 efficiency data are not confirmable from the available feed (\"no notable injuries reported\" ≠ confirmed active per skills rules). Fatigue confidence penalty (-5 spread) further compresses the margin. O/U lacks sufficient pace-based conviction at Finals defensive intensity. No pick meets the full criteria stack. Injury feed source is nba_official (full coverage), so no data-quality cap applies — the issue is odds range and verification gaps.",
     "odds_source": "theodds_onexbet",
     "injuries_source": "nba_official",
-    "tokens_in": 12160,
-    "tokens_out": 627,
-    "cost_usd": 0.045885
+    "tokens_in": 13018,
+    "tokens_out": 1055,
+    "cost_usd": 0.054879
   },
   "analyst_checkpoint_done": true,
   "slate_game_times": [
