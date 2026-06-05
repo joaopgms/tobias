@@ -2403,5 +2403,28 @@
     "tokens_in": 12160,
     "tokens_out": 627,
     "cost_usd": 0.045885
+  },
+  {
+    "ts": "2026-06-05T15:57:41.022560+00:00",
+    "date": "2026-06-05",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_onexbet",
+    "draft_count": 0,
+    "picks": [],
+    "rejected": [
+      {
+        "match": "San Antonio Spurs vs New York Knicks",
+        "reason": "SAS ML at 1.47 is BELOW the 1.60 minimum ML odds target — outside valid range. NYK ML at 2.96 exceeds the 2.50 ML ceiling. Spread at 1.96 (SAS -6.5) is within range but confidence insufficient: SAS holds home court + NetRtg edge + desperation, but mandatory franchise player re-verification cannot be confirmed from available data — no specific Games 1-2 efficiency data for Wembanyama provided, and 'No notable injuries reported' does not confirm active status per MANDATORY rules. NYK road + series dominance vs SAS home + desperation creates genuine uncertainty. Additionally, SAS -6.5 spread at 1.96 requires confidence ≥ 60 and EV ≥ 0.05: structural SAS edge (home +3-4pts, NetRtg +1.8pt, desperation) supports SAS covering, but NYK series momentum (2-0 lead, ~95% Finals close rate) and unknown Wembanyama fatigue load from WCF Game 7 + Games 1-2 create material uncertainty. SAS fatigue confidence penalty -5 on spread. Net confidence estimate ~58-62 — marginal. O/U 215.5 at 1.96: Pace data shows SAS 99.9 / NYK 96.8 — pace mismatch of 3.1 (below 5-point mismatch threshold); SAS OffRtg 119.7, NYK OffRtg 119.9 both high, but Pace data is available (not 0.0). However, totals confidence floor is 65 and the mismatch + Finals defensive intensity creates insufficient signal clarity. All markets fail to meet combined odds range + confidence + EV thresholds with mandatory verification gaps. Decision: no_edge / deferred.",
+        "ml_home": 1.47,
+        "ml_away": 2.96,
+        "decision": "no_edge"
+      }
+    ],
+    "report": "Single-game Finals slate (SAS vs NYK, Game 3). Zero picks drafted. SAS ML at 1.47 falls below the 1.60 ML floor; NYK ML at 2.96 exceeds the 2.50 ML ceiling — both moneylines are outside valid ranges. Spread (SAS -6.5 at 1.96) is structurally supported by SAS home court + NetRtg edge + maximum desperation, but mandatory Wembanyama active status re-verification and Games 1-2 efficiency data are not confirmable from the available feed (\"no notable injuries reported\" ≠ confirmed active per skills rules). Fatigue confidence penalty (-5 spread) further compresses the margin. O/U lacks sufficient pace-based conviction at Finals defensive intensity. No pick meets the full criteria stack. Injury feed source is nba_official (full coverage), so no data-quality cap applies — the issue is odds range and verification gaps.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 13018,
+    "tokens_out": 1055,
+    "cost_usd": 0.054879
   }
 ]
