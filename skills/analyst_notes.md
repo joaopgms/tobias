@@ -1,14 +1,14 @@
 ---
-date: 2026-06-05
+date: 2026-06-06
 llm: claude-sonnet-4-6
 scout_patches: 1
 commit_patches: 0
 milestone: daily (47 bets)
 ---
 
-## Today's Analysis — 2026-06-05
+## Today's Analysis — 2026-06-06
 
-ESPN feed confirms NYK leads the NBA Finals 2-0 with Game 3 next at San Antonio — the series shifts to SAS home court for the first time, activating SAS's structural advantage (home +3-4pts stacked on +1.8pt NetRtg edge). The key reset for Scout and Commit is to evaluate Game 3 independently of the Games 1-2 NYK dominance: SAS at home with maximum 0-3 elimination urgency is a genuinely different contest. Wembanyama's minutes and efficiency from Games 1-2 is the critical data point to verify before any Game 3 pick — cumulative load from 7-game WCF plus two away Finals losses is the primary risk factor for SAS, while NYK playing its first road game of the series introduces a new dynamic worth monitoring via early line movement.
+NBA Finals stands at NYK 2-0 with Game 3 shifting to San Antonio — this is the most critical structural pivot of the series, as SAS home court (+3-4pts) stacks with their NetRtg edge (+1.8pt) to produce a genuine ~+5pt situational advantage that did not exist in Games 1-2. Performance data shows High confidence picks are underperforming (40% WR) while Medium confidence picks are outperforming (57.1% WR), reinforcing that Scout should resist over-confidence on any single signal and instead require confluence of 2+ factors before staking 20%+. The only game on today's playoff slate is NYK @ SAS Game 3 — Wembanyama minutes and efficiency from Games 1-2 combined with Brunson/Towns active verification are the mandatory pre-pick gates before any Finals position is taken.
 
 ## Performance Stats
 ALL-TIME: 32W / 33L | Win rate: 49.2% | P&L: €-477.38 | Avg odds: 1.94 | Avg conf: 65.4/100
@@ -20,22 +20,22 @@ By odds range:  1.70-1.89 22bets 11W/11L 50.0% €-678.39  |  1.90-2.09 38bets 2
 
 
 ## Scout patches applied
-- [franchise_player_rules] Routine session update to franchise_player_rules — verified list unchanged from prior session; added fatigue note for Wembanyama Game 1 minutes load per playoff_context rules.
+- [franchise_player_rules] Mandatory every-session update to franchise_player_rules; verified player list unchanged from prior session per injury feed — no additions or removals required, but section kept current.
 
 ## Commit patches applied
 None
 
 ## Playoff context patches applied
-- [phase] ESPN feed now shows 'Game 3 next' for NYK vs SAS, meaning NYK leads 2-0 and series shifts to San Antonio — updating phase to reflect correct series status.
-- [series_context] ESPN feed shows 'Game 3 next' confirming NYK won Game 2 and series is now 2-0 NYK — updating series context to reflect SAS home court activation for Games 3-4 and adjusting framing accordingly.
-- [elimination_flags] Series is now NYK 2-0 SAS with Game 3 next at San Antonio — updating elimination flags to reflect SAS 0-2 situation and near-elimination warning for Game 3.
-- [playoff_rest] Series now at 2-0 NYK with Game 3 shifting to San Antonio — updating rest context to reflect SAS home activation and revised fatigue/desperation framing for Games 3-4.
-- [playoff_motivation] NYK now leads 2-0 with Game 3 shifting to San Antonio — updating motivation hierarchy to reflect SAS home court activation, 0-3 elimination urgency, and recalibrated framing for Games 3-4.
-- [h2h_playoff] Series is 2-0 NYK with Game 3 shifting to San Antonio — updating H2H and in-series signals to reflect venue shift, SAS home court activation, and recalibrated game-level framing.
-- [l15_caveat] Series is now 2-0 NYK with Game 3 at San Antonio — updating L15 caveat to reflect SAS home court activation and the required independent game-level framing for Games 3-4.
-- [no_tanking] Series update from 1-0 to 2-0 NYK with SAS 0-3 fatal threshold context added for Game 3 home framing.
+- [phase] Phase section refreshed; no structural change to series status from prior session — NYK still leads 2-0, Game 3 next at SAS per ESPN feed.
+- [series_context] Series context refreshed with current ESPN data; NYK still leads 2-0 with Game 3 next at SAS — no structural change, section kept current and accurate.
+- [elimination_flags] Elimination flags refreshed; no new eliminations since prior session per ESPN feed — section kept current.
+- [playoff_rest] Rest section refreshed; no change to rest structure for Game 3 — section kept current with same structural framework.
+- [playoff_motivation] Motivation section refreshed; no structural changes required — series status unchanged at NYK 2-0 Game 3 next at SAS.
+- [h2h_playoff] H2H section refreshed with current series data; no structural change — NYK still leads 2-0 with Game 3 next at SAS.
+- [l15_caveat] L15 caveat section refreshed; no structural changes required — series status and framework unchanged at NYK 2-0.
+- [no_tanking] No_tanking section refreshed; no structural changes — elimination list and advancing teams unchanged from prior session.
 
 ## Intelligence gaps identified
-- **No Game 1 or Game 2 box score data (Wembanyama minutes, shooting efficiency, plus/minus) is available in the prompt to assess SAS fatigue signal accurately for Game 3.** — Wembanyama's efficiency and minutes load from Games 1-2 is flagged as the #1 swing factor for SAS in Game 3 — without this data, the fatigue confidence penalty (-5 on SAS spreads) is applied mechanically rather than evidentially, and could be under- or over-stated. → Fetch ESPN or NBA.com game box score for Finals Games 1 and 2 (Wembanyama minutes, FG%, plus/minus) and include in the daily prompt context. This would allow evidence-based fatigue adjustment rather than a fixed penalty.
-- **LAL Round 2 series opponent and current score are unverified — the prompt confirms LAL is active but does not identify opponent or series state.** — Any LAL pick requires knowing the opponent for franchise_player_rules application and series context framing — without this, LAL bets are unbettable even if odds are attractive. → Add LAL Round 2 opponent and current series score to the ESPN live feed section of the daily prompt, or explicitly confirm LAL series details in the playoff_context feed.
-- **ML market performance in odds range 1.70-1.89 continues to be the single largest loss driver (cumulative -€818 over the full sample) and no specific Game 3 odds for NYK vs SAS are available to assess whether this range applies.** — If Game 3 NYK road odds fall in the 1.70-1.89 range, the elevated EV floor (0.08) must be applied — but without seeing current market odds, Scout may miss this gate in drafting. → Include current morning odds for the active Finals game in the daily prompt so Analyst can flag EV floor applicability before Scout runs. This is a data availability issue, not a rule gap.
+- **Wembanyama in-series efficiency and minutes load from Finals Games 1-2 are not yet available in the data feed — only roster-level OUT/active status is provided.** — Wembanyama fatigue from 7-game WCF plus two Finals games is identified as the #1 swing factor for SAS in Game 3, but without his actual minutes and efficiency metrics from Games 1-2, Scout cannot quantify the fatigue penalty or apply it with precision. → Fetch Wembanyama game log from ESPN box scores for Finals Games 1-2 (minutes played, +/-, points, FG%) and pipe into playoff_context as a named data point before each SAS game pick.
+- **No in-series box score data (points, margin of victory, pace of play in actual Finals games) is available — only series score and series status are fed to agents.** — Games 1-2 margin of victory, quarter-by-quarter patterns, and pace-of-play would indicate whether NYK won comfortably or in close games, and whether SAS was competitive late — both are material signals for Game 3 pricing. → Add Finals game-by-game results (score, margin, overtime flag) to the series_context section as they accumulate — even a simple line like 'Game 1: NYK 112, SAS 104; Game 2: NYK 108, SAS 99' would materially improve SAS spread evaluation.
+- **ML market in the 1.70–1.89 odds band remains the worst-performing segment (9W/10L -€818.05 approximate) and no explicit gate currently exists in the line_anomaly_check to deprioritise this band in the Finals context where odds on the underdog road team may cluster here.** — NYK as road underdog at SAS in Game 3 could be priced 1.75–1.90, which is exactly the loss-heavy band; without an explicit gate, Scout may draft a ML pick in this range that the performance data argues against. → The ML EV floor was already raised to 0.08 for the 1.70–1.89 band — this is correctly implemented in confidence_staking and commit_staking. No additional patch needed but Scout should be reminded explicitly in selectivity to check this band gate before drafting any Finals ML.
