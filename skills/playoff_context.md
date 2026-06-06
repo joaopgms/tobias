@@ -1,7 +1,7 @@
 ---
-version: 48
-updated_at: 2026-06-05T12:33:15.070087+00:00
-updated_by: analyst_2026-06-05
+version: 49
+updated_at: 2026-06-06T11:21:22.239977+00:00
+updated_by: analyst_2026-06-06
 llm: claude-sonnet-4-6
 ---
 
@@ -16,7 +16,7 @@ WCF STATUS: San Antonio Spurs defeated Oklahoma City Thunder 4-3. SAS ADVANCES T
   SAS won Game 7 on the road at OKC — remarkable resilience from 2-3 series deficit.
 
 NBA FINALS: New York Knicks vs San Antonio Spurs.
-  ESPN feed shows 'New York Knicks leads 1-0 (Game 3 next)' — NYK WON GAMES 1 AND 2. Series: NYK 2-0 SAS. GAME 3 IS NEXT at SAS (San Antonio).
+  ESPN feed shows 'New York Knicks leads 2-0 (Game 3 next)' — NYK WON GAMES 1 AND 2. Series: NYK 2-0 SAS. GAME 3 IS NEXT at SAS (San Antonio).
   NYK (NetRtg +6.5) hosts Games 1, 2, 5, 7 (East team hosts — standard Finals bracket).
   SAS (NetRtg +8.3) — arrived in Finals via 7-game war. Lost Games 1 AND 2 at NYK. SAS now faces near-fatal 0-2 deficit heading home.
   NYK dominance at home confirmed: won Games 1 and 2 at MSG. Home court + rest edge fully validated in early series.
@@ -40,8 +40,8 @@ NBA Finals: New York Knicks vs San Antonio Spurs
 - SAS (NetRtg +8.3, 62-20): Won WCF 4-3 over OKC. Lost Games 1 and 2 on road at NYK.
   Re-verify Victor Wembanyama active before ANY Finals pick. MANDATORY. Monitor fatigue from 7-game WCF + Games 1-2 load.
   David Jones Garcia (F): OUT [roster-only].
-  SAS now faces near-fatal 0-2 deficit — historically ~80% of Finals 0-2 teams lose the series.
-  SAS HOME COURT ACTIVATED: Games 3 and 4 at San Antonio. SAS NetRtg edge + home court = SAS situational favourite in Games 3-4.
+  SAS faces near-fatal 0-2 deficit — historically ~80% of Finals 0-2 teams lose the series.
+  SAS HOME COURT ACTIVATED: Games 3 and 4 at San Antonio. SAS NetRtg edge (+1.8pt) + home court (+3-4pts) = SAS ~+5pt situational advantage in Games 3-4.
 
 FINALS FRAMING (Game 3 context — NYK leads 2-0, series shifts to SAS home):
 - NYK won Games 1 AND 2 at home — dominant performance. Series momentum overwhelmingly favours NYK.
@@ -51,11 +51,12 @@ FINALS FRAMING (Game 3 context — NYK leads 2-0, series shifts to SAS home):
   Must-win energy at SAS home is real — do NOT dismiss SAS as live underdog in Games 3-4.
 - SAS FATIGUE CONCERN: Wembanyama minutes from Games 1-2 on top of 7-game WCF are critical data point.
   Verify Wembanyama efficiency and minutes from Games 1-2 before any SAS pick. MANDATORY.
-- NYK ROAD CONTEXT (Game 3 away): NYK has been dominant but now plays in hostile SAS environment. Possible rust from series control mindset.
+- NYK ROAD CONTEXT (Game 3 away): NYK has been dominant but now plays in hostile SAS environment.
   Do NOT back NYK at odds shorter than 1.80 in Games 3-4 at SAS (SAS home + NetRtg edge + desperation).
 - NET EDGE (Game 3 at SAS): SAS home court + NetRtg edge + desperation/must-win vs NYK series dominance + momentum.
   This is the first game where SAS has a genuine structural advantage. Evaluate carefully — do not carry over Games 1-2 NYK bias.
 - Historical note: Teams that go up 2-0 in Finals win the series ~95% of the time — but they still must win on the road eventually.
+  The ~5% of series that flip virtually always start with the trailing team winning Game 3 at home.
 
 ## SECTION:elimination_flags
 PLAYOFFS ELIMINATION FLAGS (updated from ESPN live feed)
@@ -97,7 +98,7 @@ PLAYOFF REST RULES (active — NBA Finals):
 - Home court advantage in playoffs worth ~3-4 points (stronger than regular season ~2-3pts).
 
 NBA FINALS REST CONTEXT (Game 3 — NYK leads 2-0, series at SAS):
-- NYK REST STATUS (Game 3 away): Standard rest between Finals games. NYK has been sharp in Games 1-2 with full calibration.
+- NYK REST STATUS (Game 3 away): Standard rest between Finals games. NYK has been sharp in Games 1-2.
   Road game for NYK: apply standard road context — no significant rest disadvantage.
   Possible series-control mindset leading to reduced urgency — monitor via line movement at tip-off.
 
@@ -132,7 +133,7 @@ PLAYOFF MOTIVATION HIERARCHY (NBA Finals — Active)
 
 3. REST ADVANTAGE:
    NYK: Standard rest. Road game — no significant structural edge or deficit.
-   SAS: Cumulative fatigue from 7-game WCF + two Games at NYK. BUT: Playing at home — crowd energy partially offsets.
+   SAS: Cumulative fatigue from 7-game WCF + two road Games at NYK. BUT: Playing at home — crowd energy partially offsets.
    Rest asymmetry: Narrowing from Games 1-2. SAS home court becomes primary factor in Game 3.
 
 4. STATISTICAL EDGES (season NetRtg):
@@ -157,7 +158,7 @@ PLAYOFF MOTIVATION HIERARCHY (NBA Finals — Active)
    SAS HOME context (Game 3) is fundamentally different — prior road losses do NOT predict home performance.
    Require clear additional edge to back NYK on road in Games 3-4 at SAS.
 
-8. KEY LESSONS FROM CONFERENCE FINALS, GAMES 1-2:
+8. KEY LESSONS FROM CONFERENCE FINALS AND GAMES 1-2:
    WCF: Superior NetRtg (OKC +11.1) and home court for Game 7 did NOT produce a win.
    ECF: NYK swept CLE 4-0 — validates NetRtg gap + home court as dominant signals in one-sided matchups.
    GAMES 1-2: NYK home court + rest validated. Series now shifts — do NOT over-extrapolate.
@@ -190,15 +191,14 @@ NBA Finals: New York Knicks vs San Antonio Spurs — NYK LEADS 2-0, GAME 3 NEXT 
   SAS home + desperation + Wembanyama healthy = SAS live favourite in Games 3-4 despite series deficit.
 - NYK ROAD CONTEXT: Game 3 is NYK's first road game of the series. Road pressure is new for NYK in this series.
   Do NOT back NYK at odds < 1.80 at SAS without explicit health/injury edge for NYK.
-- SAS PROVEN ROAD PERFORMER: Won WCF Game 7 on road at OKC — but that was different venue. Lost Games 1-2 in Finals on road.
-  SAS road performance in Finals (0-2) vs WCF (won critical road games) — Finals environment more hostile.
+- SAS PROVEN ROAD PERFORMER: Won WCF Game 7 on road at OKC — but Finals environment more hostile. Lost Games 1-2 in Finals on road.
   SAS HOME (Game 3): Fresh context — prior road losses do NOT predict home performance.
 - Re-verify Jalen Brunson, Karl-Anthony Towns (NYK) active. MANDATORY.
 - Re-verify Victor Wembanyama (SAS) active. Monitor WCF fatigue + Games 1-2 minutes. MANDATORY.
 
 GAME 3 ODDS GUIDELINES:
 - Do NOT back NYK at odds < 1.80 in Games 3-4 at SAS (SAS home + NetRtg edge + desperation disadvantage for NYK).
-- Do NOT back SAS at odds < 1.65 in Games 3-4 at SAS (even with home court, NYK series dominance + 2-0 lead is a premium).
+- Do NOT back SAS at odds < 1.65 in Games 3-4 at SAS (even with home court, NYK series dominance + 2-0 lead carries a premium).
 - Require confluence of 2+ signals to back either side — home court + health + in-game efficiency data.
 
 Regular season H2H (NYK vs SAS): Verify from ESPN — use as tiebreaker only. Books already price H2H in.
@@ -271,8 +271,8 @@ NBA Finals — SAS (+8.3) vs NYK (+6.5):
   SAS road Finals record 0-2. SAS home Finals record: TBD (Game 3 first home game).
 - Overall Finals edge (Game 3 at SAS): SAS compound home advantage. Require confluence of 2+ signals to back NYK on road.
 
-KEY LESSONS FROM WCF, GAMES 1-2 APPLIED TO FINALS:
-1. NYK won Games 1-2 — home court + rest compound edge is validated for this series.
+KEY LESSONS APPLIED TO FINALS:
+1. NYK won Games 1-2 — home court + rest compound edge validated for this series.
 2. VENUE SHIFT: Game 3 at SAS requires independent framing. Do NOT apply Games 1-2 NYK bias.
 3. In the Finals (SAS +1.8pt edge), SAS home court + NetRtg = genuine SAS advantage in Games 3-4.
 4. Wembanyama health + efficiency from Games 1-2 is the #1 swing factor for SAS Game 3 onwards.
