@@ -1,7 +1,7 @@
 ---
-version: 75
-updated_at: 2026-06-05T12:33:15.070087+00:00
-updated_by: analyst_2026-06-05
+version: 76
+updated_at: 2026-06-06T11:21:22.239977+00:00
+updated_by: analyst_2026-06-06
 llm: claude-sonnet-4-6
 ---
 
@@ -103,11 +103,11 @@ New York Knicks:
 
 San Antonio Spurs:
 - David Jones Garcia (F): OUT [roster-only]
-- Victor Wembanyama: re-verify active status each session. Monitor fatigue from 7-game WCF + Game 1 minutes. MANDATORY.
+- Victor Wembanyama: re-verify active status each session. Monitor fatigue from 7-game WCF + Games 1-2 minutes. MANDATORY.
 
 Los Angeles Lakers:
 - Luka Doncic (G): OUT [roster-only] — FRANCHISE PLAYER.
-NOTE: LAL Round 2 still active — verify opponent and current series score from ESPN before drafting.
+NOTE: LAL Round 2 status — verify opponent and current series score from ESPN before drafting.
 
 Oklahoma City Thunder:
 - Ajay Mitchell (G): OUT [roster-only]
