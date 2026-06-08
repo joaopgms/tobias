@@ -1,24 +1,24 @@
 {
   "season": "2024-25",
   "game": 2,
-  "bankroll": 1260.86,
+  "bankroll": 1071.73,
   "bankroll_initial": 1000.0,
   "bankroll_peak": 2195.96,
-  "total_staked": 10174.71,
+  "total_staked": 10363.84,
   "total_returned": 10576.21,
   "net_pnl": 401.5,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-06-08T16:51:01.997457+00:00",
+  "last_updated": "2026-06-08T22:56:54.354767+00:00",
   "first_game_time": "2026-06-09T00:30:00Z",
   "llm_provider": "claude",
   "scout_status": "live",
   "scout_error": "",
   "scout_updated_at": "2026-06-08T16:51:01.997457+00:00",
   "scout_odds_source": "theodds_onexbet",
-  "commit_status": "pending",
-  "commit_updated_at": "2026-06-05T23:15:58.088786+00:00",
-  "commit_date": "2026-06-05",
+  "commit_status": "done",
+  "commit_updated_at": "2026-06-08T22:56:54.354767+00:00",
+  "commit_date": "2026-06-08",
   "analyst_updated_at": "2026-06-08T14:02:50.535581+00:00",
   "settler_updated_at": "2026-06-08T12:33:35.151407+00:00",
   "agent_models": {
@@ -27,28 +27,31 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "Single-game Finals slate (NYK vs SAS Game 4). nba_official injury source with full coverage — no notable injuries reported, all key players presumed active. One ML pick drafted: NYK to win Game 4 on road at SAS. Strong EV (0.224) driven by dominant 3-0 series lead, validated road execution edge (Game 3 win at SAS), historical ~75-80% sweep completion rate, and no injury concerns. ML odds 1.80 above the 1.65 floor required for road closer picks per skills file. SAS desperation and weakened home court (lost Game 3 at home) partially offsetting factors. Spread and totals skipped — insufficient confidence edge for -1.5 spread in elimination game context, and pace/total signals insufficient for O/U. Medium confidence tier, 15% stake.",
-  "draft_picks": [
+  "last_report": "### CONFIRMED — New York Knicks ML\n\n- **Match**: San Antonio Spurs vs New York Knicks | **Tip**: 2026-06-09T00:30 UTC\n- **Pick**: NYK ML | **Scout odds**: 1.80 | **Commit odds**: 1.83 | **Move**: +0.03 (favourable)\n- **ML**: NYK 1.83 / SAS 2.11 | **ATS**: NYK -1.5 (1.94/1.98) | **O/U**: 215.5 (O:1.96/U:1.96)\n- **Stake**: €189.13 | **Pot**: €346.11 | **Conf**: 68/100 | **EV**: 0.244\n- **Decision**: All mandatory checks passed. Jalen Brunson, Karl-Anthony Towns (NYK) and Victor Wembanyama (SAS) all confirmed ACTIVE via nba_official feed. Odds drifted +0.03 in favour since Scout — confirming at original stake per rules. EV of 0.244 substantially clears the raised 0.08 threshold for the 1.70–1.89 ML underperformance band. NYK leads Finals 3-0 with no precedent for a comeback from 0-3; NYK won Game 3 on the road at SAS validating execution edge across all venues. Skills floor of 1.65 for NYK in Game 4 is well clear at 1.83. Medium confidence tier (55–69) is outperforming at 56.8% — no cause to cancel. Total exposure 15% of bankroll, far within 70% cap.\n\n---\n\n### Late Scout Summary\n\nNo new picks added at commit phase. The only game on tonight's slate is Game 4 of the NBA Finals (NYK vs SAS). Both markets Scout previously rejected — NYK -1.5 spread and the O/U — were re-evaluated at current odds. The spread moved to 1.94 (into valid range) but remains a correlated position with the committed ML, confidence is estimated below the 60-threshold gate for new commit-phase picks, and the elimination game dynamics creating spread uncertainty are unchanged. The total line moved down one point to 215.5 with no directional lean and no resolution of the pace signal concern. Neither market meets the late-scout confidence gate (≥ 60) or provides a genuinely independent edge.\n\n**Slate**: One game confirmed. NYK ML at 1.83, €189.13 staked (15% of bankroll), EV 0.244. All three Finals anchor players confirmed active. Series context strongly favours NYK (3-0, including road win in G3), with EV well above the raised performance threshold for this odds band.",
+  "draft_picks": [],
+  "pending_bets": [
     {
-      "id": "nba_draft_20260608_001",
-      "match": "New York Knicks vs San Antonio Spurs",
+      "id": "nba_bet_20260608_001",
+      "match": "San Antonio Spurs vs New York Knicks",
       "time": "2026-06-09T00:30:00Z",
       "pick": "New York Knicks ML",
-      "odds": 1.8,
+      "odds": 1.83,
       "stake": 189.13,
-      "potential_return": 340.43,
+      "potential_return": 346.11,
       "confidence": 68,
-      "reasoning": "MANDATORY VERIFICATION: Injury report source is nba_official (full 30-team coverage) — normal confidence rules apply. No notable injuries reported for either team, meaning Jalen Brunson, Karl-Anthony Towns (NYK) and Victor Wembanyama (SAS) are presumed active (no injury flag). Game 4 at SAS (road game for NYK). SERIES CONTEXT: NYK leads 3-0. Historically ~75-80% of 3-0 Finals leaders complete the sweep. No team has EVER come back from 0-3 in the Finals. ODDS CHECK: NYK ML 1.80 falls within target range (1.60-2.50). ML underperformance note: ML odds 1.70-1.89 range is underperforming (9W/10L -€818.05) — requires EV ≥ 0.08 for this range. LOCATION: Game 4 at SAS home. SAS home court weakened after Game 3 loss at home — reduce premium from +3-4pts to +1-2pts. NYK won on road in Game 3 — execution edge validated across all venues. L15 NETRG: NYK +23.2 vs SAS +20.9 — NYK gap of +2.3 over L15 (marginal). Season NetRtg: SAS +8.3 vs NYK +6.5 (SAS +1.8pt edge) — but this edge has NOT translated to wins in 3 games. In-series evidence strongly overrides structural stats here. GAME 4 COMPLACENCY RISK: Skills file explicitly states 'Do NOT back NYK below 1.65 (sweep fatigue/overconfidence risk).' NYK at 1.80 is ABOVE the 1.65 floor — acceptable. WEMBANYAMA FATIGUE: No injury flag, but cumulative load (7 WCF games + 3 Finals games = 10 heavy-minute playoff games) is a concern. No injury feed signal to apply a penalty. SAS DESPERATION: Maximum urgency — elimination game. ~20-25% historical Game 4 survival rate for 0-3 teams. SAS can win this game. B2B/REST: Standard playoff rest for both teams — no adjustment. SPREAD CONSIDERATION: Spread -1.5 at 1.88 was evaluated. Skills require confidence ≥ 60 for spreads. Game 4 elimination dynamics, weakened home court signal, and SAS desperation create uncertainty around covering -1.5. ML preferred over spread here. TOTAL: O/U 216.5 at 1.96/1.96. Pace data: NYK 96.8, SAS 99.9 — both below 100. Pace mismatch ~3 (within range). OffRtg both ~119.7-119.9, DefRtg NYK 113.4 / SAS 111.4. No strong lean required and confidence floor for totals is 65 (raised to 70 with Pace concerns). Skipping totals. EV CALCULATION: NYK ML at 1.80. EV = (0.68 × 1.80) - 1 = 1.224 - 1 = 0.224. EV = 0.224 ≥ 0.08 threshold for this odds range. STRONG EDGE. CONFIDENCE TIER: 68 = Medium (55-69) — stake 15-20% of bankroll. The ML underperformance note in this range requires extra scrutiny, but the in-series evidence (3-0, road win in G3, execution edge validated, no injuries) supports this pick. Applying 15% stake given road closer complacency risk. STAKE: 15% × €1260.86 = €189.13.",
+      "reasoning": "COMMIT CONFIRMATION — NYK ML Game 4 at SAS. INJURY VERIFICATION (MANDATORY): Source nba_official (full 30-team coverage). Jalen Brunson ACTIVE, Karl-Anthony Towns ACTIVE, Victor Wembanyama ACTIVE. No injury penalties applied. LINE MOVEMENT: Scout odds 1.80 → Commit odds 1.83 (+0.03 in favour). Confirming at original stake per line_movement_rules. ODDS VALIDATION: 1.83 within ML valid range 1.65–2.50. ML 1.70–1.89 underperformance band applies → EV ≥ 0.08 required. EV RECALCULATION at 1.83: (0.68 × 1.83) - 1 = 0.2444. EV = 0.2444 ≥ 0.08 threshold — STRONG EDGE confirmed. SERIES CONTEXT: NYK leads Finals 3-0. ~75-80% of 3-0 Finals leaders complete sweep. No team has EVER come back from 0-3 in Finals. NYK won road Game 3 at SAS — execution edge validated across all venues. GAME 4 AT SAS: Skills mandate no NYK back below 1.65 — 1.83 is well clear. SAS home court weakened after Game 3 home loss (reduced from +3-4pts to +1-2pts premium). SAS maximum elimination desperation (~25% historical G4 survival rate for 0-3 teams) noted but NYK execution edge overrides structural signals in this series. NETRG: NYK L15 +23.2 vs SAS +20.9 — marginal NYK edge. Season SAS +8.3 vs NYK +6.5 — SAS structural edge has NOT translated to wins in 3 games, treated as weak signal. CONFIDENCE TIER: 68 = Medium (55–69), outperforming at 56.8% — skills note do not over-cancel without clear cause. STAKE: 15% × €1,260.86 = €189.13. TOTAL EXPOSURE: 15% of bankroll — well within 70% cap.",
       "anchor_players": [
         "Jalen Brunson",
         "Karl-Anthony Towns",
         "Victor Wembanyama"
       ],
-      "drafted_at": "2026-06-08T16:51:07Z",
-      "market_type": "ml"
+      "result": null,
+      "returned": null,
+      "pnl": null,
+      "settled_at": null,
+      "committed_at": "2026-06-08T22:56:56Z"
     }
   ],
-  "pending_bets": [],
   "settled_bets": [
     {
       "id": "nba_bet_20260406_001",
@@ -1036,26 +1039,56 @@
   "late_scout_rejections": [
     {
       "match": "San Antonio Spurs vs New York Knicks",
-      "reason": "All four markets fail validation at commit time. SAS ML 1.45: below ML floor of 1.65 — invalid. NYK ML 3.02: above ML ceiling of 2.50 — invalid. SAS -6.5 spread at 1.96: in valid odds range but confidence estimated at 49 (below the 60 gate required for new late-scout picks) after applying SAS fatigue -5, unknown Wembanyama Games 1-2 efficiency data -3, and NYK series momentum penalty -5 against large spread. EV = (0.49 × 1.96) - 1 = -0.04 — negative, fails EV ≥ 0.05 gate. O/U 216.5 at 1.95: in valid range but confidence ~52, below the 65 floor required for totals picks; pace mismatch only 3.1 (below 5-point threshold); Finals defensive intensity creates insufficient signal clarity; EV = (0.52 × 1.95) - 1 = 0.014 — below 0.05 gate. All markets rejected."
+      "reason": "Spread NYK -1.5 at 1.94 (improved from Scout's 1.88): Odds now in valid range and EV passes at estimated confidence 58 (~0.125). However, pick is correlated with committed ML and adds no diversified edge. SAS maximum elimination desperation + road closer dynamics remain unchanged since Scout — same uncertainty around covering -1.5. Confidence below 60 threshold for new picks. No new signal justifies adding a correlated spread position. Rejected."
+    },
+    {
+      "match": "San Antonio Spurs vs New York Knicks",
+      "reason": "O/U 215.5 (line moved down from 216.5 at Scout): Total line shifted 1 point lower — books pointing to lower scoring. No clear directional thesis: pace data for both teams below 100 (NYK 96.8, SAS 99.9) with no strong lean. Confidence floor for totals raised to 70 without strong pace signal — cannot meet this threshold. Odds 1.96 are in valid range but no edge identified. Rejected."
     }
   ],
   "commit_report_data": {
-    "date": "2026-06-05",
-    "ts": "2026-06-05T23:15:58.088786+00:00",
-    "bets": [],
+    "date": "2026-06-08",
+    "ts": "2026-06-08T22:56:54.354767+00:00",
+    "bets": [
+      {
+        "id": "nba_bet_20260608_001",
+        "match": "San Antonio Spurs vs New York Knicks",
+        "time": "2026-06-09T00:30:00Z",
+        "pick": "New York Knicks ML",
+        "odds": 1.83,
+        "stake": 189.13,
+        "potential_return": 346.11,
+        "confidence": 68,
+        "reasoning": "COMMIT CONFIRMATION — NYK ML Game 4 at SAS. INJURY VERIFICATION (MANDATORY): Source nba_official (full 30-team coverage). Jalen Brunson ACTIVE, Karl-Anthony Towns ACTIVE, Victor Wembanyama ACTIVE. No injury penalties applied. LINE MOVEMENT: Scout odds 1.80 → Commit odds 1.83 (+0.03 in favour). Confirming at original stake per line_movement_rules. ODDS VALIDATION: 1.83 within ML valid range 1.65–2.50. ML 1.70–1.89 underperformance band applies → EV ≥ 0.08 required. EV RECALCULATION at 1.83: (0.68 × 1.83) - 1 = 0.2444. EV = 0.2444 ≥ 0.08 threshold — STRONG EDGE confirmed. SERIES CONTEXT: NYK leads Finals 3-0. ~75-80% of 3-0 Finals leaders complete sweep. No team has EVER come back from 0-3 in Finals. NYK won road Game 3 at SAS — execution edge validated across all venues. GAME 4 AT SAS: Skills mandate no NYK back below 1.65 — 1.83 is well clear. SAS home court weakened after Game 3 home loss (reduced from +3-4pts to +1-2pts premium). SAS maximum elimination desperation (~25% historical G4 survival rate for 0-3 teams) noted but NYK execution edge overrides structural signals in this series. NETRG: NYK L15 +23.2 vs SAS +20.9 — marginal NYK edge. Season SAS +8.3 vs NYK +6.5 — SAS structural edge has NOT translated to wins in 3 games, treated as weak signal. CONFIDENCE TIER: 68 = Medium (55–69), outperforming at 56.8% — skills note do not over-cancel without clear cause. STAKE: 15% × €1,260.86 = €189.13. TOTAL EXPOSURE: 15% of bankroll — well within 70% cap.",
+        "anchor_players": [
+          "Jalen Brunson",
+          "Karl-Anthony Towns",
+          "Victor Wembanyama"
+        ],
+        "result": null,
+        "returned": null,
+        "pnl": null,
+        "settled_at": null,
+        "committed_at": "2026-06-08T22:56:56Z"
+      }
+    ],
     "cancelled": [],
     "late_rejections": [
       {
         "match": "San Antonio Spurs vs New York Knicks",
-        "reason": "All four markets fail validation at commit time. SAS ML 1.45: below ML floor of 1.65 — invalid. NYK ML 3.02: above ML ceiling of 2.50 — invalid. SAS -6.5 spread at 1.96: in valid odds range but confidence estimated at 49 (below the 60 gate required for new late-scout picks) after applying SAS fatigue -5, unknown Wembanyama Games 1-2 efficiency data -3, and NYK series momentum penalty -5 against large spread. EV = (0.49 × 1.96) - 1 = -0.04 — negative, fails EV ≥ 0.05 gate. O/U 216.5 at 1.95: in valid range but confidence ~52, below the 65 floor required for totals picks; pace mismatch only 3.1 (below 5-point threshold); Finals defensive intensity creates insufficient signal clarity; EV = (0.52 × 1.95) - 1 = 0.014 — below 0.05 gate. All markets rejected."
+        "reason": "Spread NYK -1.5 at 1.94 (improved from Scout's 1.88): Odds now in valid range and EV passes at estimated confidence 58 (~0.125). However, pick is correlated with committed ML and adds no diversified edge. SAS maximum elimination desperation + road closer dynamics remain unchanged since Scout — same uncertainty around covering -1.5. Confidence below 60 threshold for new picks. No new signal justifies adding a correlated spread position. Rejected."
+      },
+      {
+        "match": "San Antonio Spurs vs New York Knicks",
+        "reason": "O/U 215.5 (line moved down from 216.5 at Scout): Total line shifted 1 point lower — books pointing to lower scoring. No clear directional thesis: pace data for both teams below 100 (NYK 96.8, SAS 99.9) with no strong lean. Confidence floor for totals raised to 70 without strong pace signal — cannot meet this threshold. Odds 1.96 are in valid range but no edge identified. Rejected."
       }
     ],
-    "total_staked": 0.0,
+    "total_staked": 189.13,
     "bankroll_before": 1260.86,
-    "report": "## Commit Report — 2026-06-05T23:15:59Z\n**Bankroll: €1260.86 | Slate: 1 game (NBA Finals Game 3)**\n\n---\n\n### No Draft Picks to Review\nThe Scout phase produced no draft picks, so Task 1 yielded no confirmations or cancellations.\n\n---\n\n### LATE SCOUT — San Antonio Spurs vs New York Knicks (Game 3)\n- **Match**: San Antonio Spurs vs New York Knicks | Tip: 2026-06-06T00:30 UTC\n- **Current Odds**: SAS ML 1.45 / NYK ML 3.02 | Spread SAS -6.5 (1.96/1.96) | O/U 216.5 (O:1.95 / U:1.97)\n\n**Mandatory Verification**: All three anchor players confirmed Active per nba_official — Jalen Brunson ✅, Karl-Anthony Towns ✅, Victor Wembanyama ✅. Injury data source: nba_official (no cap or ban triggered).\n\n**Market-by-market analysis:**\n\n**SAS ML (1.45)**: Below the ML floor of 1.65. Cannot confirm under any circumstance. Rejected.\n\n**NYK ML (3.02)**: Above the ML ceiling of 2.50. Cannot confirm. Rejected.\n\n**SAS -6.5 (1.96)**: Odds in valid spread range (1.75–2.30). Structural analysis: SAS home court (+3-4pts) + NetRtg edge (+1.8pt) + maximum desperation (0-3 would be fatal, no team has ever recovered) = meaningful SAS edge. However: SAS fatigue penalty -5 (7-game WCF + Games 1-2 road travel), unknown Wembanyama efficiency from Games 1-2 -3, NYK series momentum (2-0, 95% Finals close rate) weighs against SAS covering a 6.5-point line -5. Net confidence: ~49 — below the 60 gate required for new late-scout picks. EV = (0.49 × 1.96) - 1 = **-0.04**. Negative EV. Rejected.\n\n**O/U 216.5 (1.95/1.97)**: Odds in valid O/U range. SAS OffRtg 119.7 / NYK OffRtg 119.9 both elite. However: pace mismatch only 3.1 (below 5-point threshold for clear signal), Finals defensive intensity extreme, NYK Pace 96.8 projects toward slower game, no Games 1-2 scoring data available to calibrate. Totals require confidence ≥ 65; net confidence ~52. EV = (0.52 × 1.95) - 1 = **0.014** — below 0.05 gate. Rejected.\n\n**Outcome**: No picks added from late scout. No bets committed tonight.\n\n---\n\n### Slate Summary\n\nTonight's sole game (NBA Finals Game 3 at San Antonio) presents no bettable market within the simulation's validated parameters. All franchise players are confirmed active, which is the correct outcome for mandatory verification — but it removes injury-based edges. The ML markets sit outside valid odds bounds entirely (SAS 1.45 too short, NYK 3.02 too long). The spread is structurally interesting given SAS home court + NetRtg + desperation, but confidence falls to ~49 after mandatory fatigue and momentum adjustments — below the 60-confidence gate and producing negative EV. The O/U similarly fails both the confidence floor and EV gate. Bankroll remains at €1,260.86 fully preserved heading into Game 3.",
-    "tokens_in": 11585,
-    "tokens_out": 3316,
-    "cost_usd": 0.084495
+    "report": "### CONFIRMED — New York Knicks ML\n\n- **Match**: San Antonio Spurs vs New York Knicks | **Tip**: 2026-06-09T00:30 UTC\n- **Pick**: NYK ML | **Scout odds**: 1.80 | **Commit odds**: 1.83 | **Move**: +0.03 (favourable)\n- **ML**: NYK 1.83 / SAS 2.11 | **ATS**: NYK -1.5 (1.94/1.98) | **O/U**: 215.5 (O:1.96/U:1.96)\n- **Stake**: €189.13 | **Pot**: €346.11 | **Conf**: 68/100 | **EV**: 0.244\n- **Decision**: All mandatory checks passed. Jalen Brunson, Karl-Anthony Towns (NYK) and Victor Wembanyama (SAS) all confirmed ACTIVE via nba_official feed. Odds drifted +0.03 in favour since Scout — confirming at original stake per rules. EV of 0.244 substantially clears the raised 0.08 threshold for the 1.70–1.89 ML underperformance band. NYK leads Finals 3-0 with no precedent for a comeback from 0-3; NYK won Game 3 on the road at SAS validating execution edge across all venues. Skills floor of 1.65 for NYK in Game 4 is well clear at 1.83. Medium confidence tier (55–69) is outperforming at 56.8% — no cause to cancel. Total exposure 15% of bankroll, far within 70% cap.\n\n---\n\n### Late Scout Summary\n\nNo new picks added at commit phase. The only game on tonight's slate is Game 4 of the NBA Finals (NYK vs SAS). Both markets Scout previously rejected — NYK -1.5 spread and the O/U — were re-evaluated at current odds. The spread moved to 1.94 (into valid range) but remains a correlated position with the committed ML, confidence is estimated below the 60-threshold gate for new commit-phase picks, and the elimination game dynamics creating spread uncertainty are unchanged. The total line moved down one point to 215.5 with no directional lean and no resolution of the pace signal concern. Neither market meets the late-scout confidence gate (≥ 60) or provides a genuinely independent edge.\n\n**Slate**: One game confirmed. NYK ML at 1.83, €189.13 staked (15% of bankroll), EV 0.244. All three Finals anchor players confirmed active. Series context strongly favours NYK (3-0, including road win in G3), with EV well above the raised performance threshold for this odds band.",
+    "tokens_in": 12674,
+    "tokens_out": 3462,
+    "cost_usd": 0.089952
   },
   "netrtg_l15": {
     "Charlotte Hornets": 16.9,
