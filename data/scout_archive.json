@@ -2426,5 +2426,47 @@
     "tokens_in": 13018,
     "tokens_out": 1055,
     "cost_usd": 0.054879
+  },
+  {
+    "ts": "2026-06-08T16:51:01.997457+00:00",
+    "date": "2026-06-08",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_onexbet",
+    "draft_count": 1,
+    "picks": [
+      {
+        "id": "nba_draft_20260608_001",
+        "match": "New York Knicks vs San Antonio Spurs",
+        "time": "2026-06-09T00:30:00Z",
+        "pick": "New York Knicks ML",
+        "odds": 1.8,
+        "stake": 189.13,
+        "potential_return": 340.43,
+        "confidence": 68,
+        "reasoning": "MANDATORY VERIFICATION: Injury report source is nba_official (full 30-team coverage) — normal confidence rules apply. No notable injuries reported for either team, meaning Jalen Brunson, Karl-Anthony Towns (NYK) and Victor Wembanyama (SAS) are presumed active (no injury flag). Game 4 at SAS (road game for NYK). SERIES CONTEXT: NYK leads 3-0. Historically ~75-80% of 3-0 Finals leaders complete the sweep. No team has EVER come back from 0-3 in the Finals. ODDS CHECK: NYK ML 1.80 falls within target range (1.60-2.50). ML underperformance note: ML odds 1.70-1.89 range is underperforming (9W/10L -€818.05) — requires EV ≥ 0.08 for this range. LOCATION: Game 4 at SAS home. SAS home court weakened after Game 3 loss at home — reduce premium from +3-4pts to +1-2pts. NYK won on road in Game 3 — execution edge validated across all venues. L15 NETRG: NYK +23.2 vs SAS +20.9 — NYK gap of +2.3 over L15 (marginal). Season NetRtg: SAS +8.3 vs NYK +6.5 (SAS +1.8pt edge) — but this edge has NOT translated to wins in 3 games. In-series evidence strongly overrides structural stats here. GAME 4 COMPLACENCY RISK: Skills file explicitly states 'Do NOT back NYK below 1.65 (sweep fatigue/overconfidence risk).' NYK at 1.80 is ABOVE the 1.65 floor — acceptable. WEMBANYAMA FATIGUE: No injury flag, but cumulative load (7 WCF games + 3 Finals games = 10 heavy-minute playoff games) is a concern. No injury feed signal to apply a penalty. SAS DESPERATION: Maximum urgency — elimination game. ~20-25% historical Game 4 survival rate for 0-3 teams. SAS can win this game. B2B/REST: Standard playoff rest for both teams — no adjustment. SPREAD CONSIDERATION: Spread -1.5 at 1.88 was evaluated. Skills require confidence ≥ 60 for spreads. Game 4 elimination dynamics, weakened home court signal, and SAS desperation create uncertainty around covering -1.5. ML preferred over spread here. TOTAL: O/U 216.5 at 1.96/1.96. Pace data: NYK 96.8, SAS 99.9 — both below 100. Pace mismatch ~3 (within range). OffRtg both ~119.7-119.9, DefRtg NYK 113.4 / SAS 111.4. No strong lean required and confidence floor for totals is 65 (raised to 70 with Pace concerns). Skipping totals. EV CALCULATION: NYK ML at 1.80. EV = (0.68 × 1.80) - 1 = 1.224 - 1 = 0.224. EV = 0.224 ≥ 0.08 threshold for this odds range. STRONG EDGE. CONFIDENCE TIER: 68 = Medium (55-69) — stake 15-20% of bankroll. The ML underperformance note in this range requires extra scrutiny, but the in-series evidence (3-0, road win in G3, execution edge validated, no injuries) supports this pick. Applying 15% stake given road closer complacency risk. STAKE: 15% × €1260.86 = €189.13.",
+        "anchor_players": [
+          "Jalen Brunson",
+          "Karl-Anthony Towns",
+          "Victor Wembanyama"
+        ],
+        "drafted_at": "2026-06-08T16:51:07Z",
+        "market_type": "ml"
+      }
+    ],
+    "rejected": [
+      {
+        "match": "New York Knicks vs San Antonio Spurs",
+        "reason": "Spread (-1.5 at 1.88): NYK spread drafted as ML instead — spread confidence threshold concern given SAS elimination desperation and road closer dynamics in Game 4. Total (216.5 at 1.96): Pace data below 100 for both teams, no strong lean signal, confidence floor raised to 70 for totals without strong pace signal — skipped. ML drafted separately.",
+        "ml_home": 1.8,
+        "ml_away": 2.14,
+        "decision": "rejected"
+      }
+    ],
+    "report": "Single-game Finals slate (NYK vs SAS Game 4). nba_official injury source with full coverage — no notable injuries reported, all key players presumed active. One ML pick drafted: NYK to win Game 4 on road at SAS. Strong EV (0.224) driven by dominant 3-0 series lead, validated road execution edge (Game 3 win at SAS), historical ~75-80% sweep completion rate, and no injury concerns. ML odds 1.80 above the 1.65 floor required for road closer picks per skills file. SAS desperation and weakened home court (lost Game 3 at home) partially offsetting factors. Spread and totals skipped — insufficient confidence edge for -1.5 spread in elimination game context, and pace/total signals insufficient for O/U. Medium confidence tier, 15% stake.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 13368,
+    "tokens_out": 1513,
+    "cost_usd": 0.062799
   }
 ]
