@@ -24,7 +24,7 @@
           "started_at": "2026-04-05T10:44:07.102344+00:00",
           "bankroll_start": 1000.0,
           "wins": 27,
-          "losses": 21,
+          "losses": 22,
           "peak_bankroll": 2195.96,
           "total_bets": 49
         }
@@ -2577,10 +2577,10 @@
             "Karl-Anthony Towns",
             "Victor Wembanyama"
           ],
-          "result": null,
-          "returned": null,
-          "pnl": null,
-          "settled_at": null,
+          "result": "LOST",
+          "returned": 0.0,
+          "pnl": -189.13,
+          "settled_at": "2026-06-09T11:17:31.568628+00:00",
           "committed_at": "2026-06-08T22:56:56Z"
         }
       ],
