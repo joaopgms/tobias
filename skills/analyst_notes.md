@@ -1,14 +1,14 @@
 ---
-date: 2026-06-09
+date: 2026-06-10
 llm: claude-sonnet-4-6
 scout_patches: 1
 commit_patches: 0
 milestone: daily (48 bets)
 ---
 
-## Today's Analysis — 2026-06-09
+## Today's Analysis — 2026-06-10
 
-Critical data quality issue this session: ESPN live feed shows 'NYK leads 2-1 (Game 4 next)' which directly conflicts with the prior session's confirmed NYK 3-0 series lead — this is likely a feed lag artifact, but Scout MUST verify the actual Game 4 result from ESPN scoreboard before drafting any Finals picks (if NYK swept in Game 4, the series is over and no picks are needed). If the series has extended to 3-1 NYK after a SAS Game 4 home win, the key analytical update is that SAS home court signal would be partially restored and Wembanyama efficiency in that game becomes the primary input for Game 5 evaluation. Performance data continues to show Medium confidence (55-69) outperforming at 56.8% / +€632 while High confidence (70-84) underperforms at 38.9% / -€895 — Scout should continue applying the extra scrutiny gate requiring NetRtg gap ≥ 5.0 AND home/health advantage before staking 20%+ on any remaining Finals games.
+The ESPN feed now explicitly shows 'Game 5 next' which resolves the prior session's discrepancy — working assumption updated to NYK 3-1 (SAS won Game 4 at home), though mandatory verification remains required before any Finals picks. If confirmed 3-1, Game 5 at NYK home represents the strongest compound edge of the series: home court + overwhelming series lead + SAS fatigue at 11 heavy playoff games. Performance data continues to show Medium confidence (55-69) as the profitable tier (+€649.92) while High confidence underperforms (-€955.52) and ML in the 1.70-1.89 range is the worst band (-€867.52) — reinforcing restraint on any SAS pick below 1.85 and preference for NYK spread or ML at ≥1.65 if available. LAL Round 2 remains an intelligence gap — series score and opponent unknown, preventing any evaluation.
 
 ## Performance Stats
 ALL-TIME: 32W / 34L | Win rate: 48.5% | P&L: €-666.51 | Avg odds: 1.94 | Avg conf: 65.4/100
@@ -20,21 +20,22 @@ By odds range:  1.70-1.89 23bets 11W/12L 47.8% €-867.52  |  1.90-2.09 38bets 2
 
 
 ## Scout patches applied
-- [franchise_player_rules] Routine session update — advancing SAS fatigue monitor to reflect Games 1-4 cumulative load; all other verified absences unchanged per ESPN/NBA feed cross-reference.
+- [franchise_player_rules] Routine session update to reflect current verified franchise player statuses; no new absences added beyond prior session — injury landscape confirms Vukcevic, Sarr, Coulibaly (WAS) consistent with feed.
 
 ## Commit patches applied
 None
 
 ## Playoff context patches applied
-- [phase] ESPN feed shows 'NYK leads 2-1 (Game 4 next)' which conflicts with prior session confirming NYK 3-0 — flagging the discrepancy and requiring mandatory ESPN verification before any Game 4/5 picks.
-- [series_context] ESPN live feed shows 'NYK leads 2-1 (Game 4 next)' which conflicts with last session's confirmed 3-0 lead — flagging data discrepancy and establishing mandatory verification gate before any Finals picks, with both scenarios documented.
-- [elimination_flags] ESPN feed discrepancy (shows 2-1 vs prior confirmed 3-0) requires dual-scenario documentation and mandatory verification gate to prevent picks on stale series data.
-- [h2h_playoff] ESPN feed shows series at 2-1 instead of the prior confirmed 3-0 — establishing dual-scenario h2h framing and mandatory verification gate, while preserving all validated lessons from Games 1-3.
-- [playoff_rest] Updating rest context to account for ESPN feed discrepancy and document both Game 4 pending and Game 5 scenarios, with cumulative fatigue escalation for SAS.
-- [playoff_motivation] Updating motivation hierarchy to reflect ESPN feed discrepancy and document both current scenarios, preserving all validated lessons from Games 1-3.
-- [l15_caveat] Updating l15_caveat to reflect ESPN feed discrepancy and dual-scenario framing while preserving all validated series lessons; advancing Wembanyama fatigue monitor to reflect escalating cumulative load.
-- [no_tanking] Updating no_tanking to reflect ESPN feed discrepancy and provide dual-scenario elimination flags for SAS depending on Game 4 result.
+- [phase] ESPN feed now shows 'Game 5 next' which resolves the prior discrepancy — working assumption updated to NYK 3-1 with SAS winning Game 4, pending mandatory verification.
+- [series_context] Updated to reflect ESPN feed showing 'Game 5 next', reconciling with prior 3-0 confirmed to working assumption of NYK 3-1; both Game 4 and Game 5 framings preserved pending mandatory verification.
+- [elimination_flags] Updated elimination flags to reflect working assumption NYK 3-1 with dual-scenario framing maintained pending mandatory ESPN verification.
+- [playoff_rest] Updated rest context to reflect Game 5 framing as working assumption (NYK 3-1), with partial SAS home premium restoration if Game 4 confirmed SAS win, and escalating fatigue penalty maintained.
+- [h2h_playoff] Updated H2H playoff section with working assumption NYK 3-1 and dual-scenario framing; SAS home premium partially restored for Game 5 context if Game 4 was a SAS win.
+- [playoff_motivation] Updated motivation section to reflect Game 5 as working assumption for next game, escalating SAS cumulative fatigue to 11 games, and tightened SAS backing threshold for Game 5 road elimination.
+- [l15_caveat] Updated L15 caveat to reflect Game 5 working assumption, escalated SAS fatigue to 11 games minimum, tightened SAS backing criteria for Game 5, and maintained NYK compound edge framing with verification mandate.
+- [no_tanking] Updated no_tanking section to reflect Game 5 working assumption with verification mandate, consistent with other playoff_context section updates.
 
 ## Intelligence gaps identified
-- **ESPN live feed series score ('NYK leads 2-1') conflicts with prior session confirmed score (NYK 3-0) — unclear whether Game 4 has been played and whether feed is lagging or reflecting a corrected score.** — If the series is actually 3-1 (SAS won Game 4), the entire Finals framing shifts: SAS home court signal is partially restored, Wembanyama's Game 4 efficiency becomes primary input, and Game 5 at NYK home becomes the next pick opportunity — picking based on stale 3-0 framing would produce systematically wrong confidence and odds evaluations. → Add a pre-Scout mandatory verification step: Scout must confirm NBA Finals series score from ESPN scoreboard API before drafting any Finals pick, and refuse to draft if score cannot be confirmed — infrastructure fix needed to ensure live feed reflects completed game results within the 11:00 UTC analyst window.
-- **No Wembanyama per-game efficiency tracking (TS%, minutes, +/-) across the Finals series despite this being identified as the #1 swing variable for SAS viability in every Finals game.** — Identifying Wembanyama as the most critical variable without tracking his actual efficiency trajectory means Scout is applying a verbal flag without quantitative evidence — if his TS% has declined or minutes have been reduced due to fatigue, that is an actionable signal that should suppress SAS confidence further; if he has been dominant, SAS odds may offer value. → Add a Finals-specific stat to the session data feed: Wembanyama per-game TS%, minutes, and +/- for each Finals game, plus comparison to his WCF average — this would allow the analyst to apply a data-driven fatigue confidence adjustment rather than a binary 'monitor fatigue' flag.
+- **Los Angeles Lakers Round 2 series status (opponent, score, home court schedule) is entirely unknown from current data feed.** — Luka Doncic is confirmed OUT — LAL franchise player absence creates a potential betting edge if LAL is facing elimination or a favourable matchup, but no picks can be evaluated without knowing the opponent and series state. → Add LAL series context to playoff_context series_context section once ESPN feed confirms opponent and score; apply franchise player OUT rule immediately (do not bet LAL to win until verified).
+- **Wembanyama's Game 4 individual efficiency metrics (points, efficiency rating, minutes) are not available in the current data feed.** — The rules specify 'Wembanyama efficiency in Game 4 is the critical signal' for Game 5 SAS picks — without this data, any SAS Game 5 pick must be reflexively capped, which may cause us to miss value if he was dominant. → Add Wembanyama per-game playoff efficiency (points, TS%, minutes) to the franchise_player_rules or l15_caveat section as a mandatory pre-pick data requirement for any SAS bet in Games 5+.
+- **No settled bets since recent performance data — unclear if any picks were placed on Games 3-4 of the Finals and how they performed.** — Performance feedback loop is essential for tightening playoff-specific rules (e.g. SAS home court premium reduction was a prediction — was it validated by bet outcomes?); without settled bet data we cannot confirm rule efficacy. → Flag Settler to report Finals game bet outcomes to allow Analyst to validate or tighten the SAS home premium reduction and NYK road closer threshold rules.
