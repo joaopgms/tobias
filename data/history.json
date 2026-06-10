@@ -26,7 +26,7 @@
           "wins": 27,
           "losses": 22,
           "peak_bankroll": 2195.96,
-          "total_bets": 49
+          "total_bets": 50
         }
       ]
     }
@@ -2585,6 +2585,41 @@
         }
       ],
       "summary": "Day 2026-06-08 commit — 1 bets totalling €189.13. 0 cancelled. Bankroll: €1260.86 → €1071.73."
+    },
+    {
+      "entry_id": "nba_entry_20260610",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-06-10T23:56:30.577659+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1071.73,
+      "total_staked": 161.0,
+      "bankroll_after": 910.73,
+      "cancelled_picks": [],
+      "bets": [
+        {
+          "id": "nba_bet_20260610_001",
+          "match": "New York Knicks vs San Antonio Spurs",
+          "time": "2026-06-11T00:30:00Z",
+          "pick": "New York Knicks ML",
+          "odds": 1.77,
+          "stake": 161.0,
+          "potential_return": 284.97,
+          "confidence": 72,
+          "reasoning": "COMMIT CONFIRMATION — all checks passed. ANCHOR VERIFICATION (MANDATORY): Jalen Brunson ACTIVE, Karl-Anthony Towns ACTIVE, Victor Wembanyama ACTIVE — nba_official source, no notable injuries. ODDS: Scout 1.77, commit 1.77 — no movement. Within valid ML range (1.65–2.50). LINE MOVEMENT: Delta 0.00 — stable, no investigation required. EV: (0.72 × 1.77) - 1 = 0.2744 (27.4%) — well above 0.08 floor for 1.70–1.89 ML range and above 0.05 standard floor. SERIES CONTEXT (verified working assumption NYK 3-1): Game 5 at MSG. NYK leads 3-1 — teams up 3-1 in NBA Finals win championship ~95%+ of the time. NYK home court (MSG) = full +3-4pt premium for closing game. SAS faces road elimination — historically near-impossible (~5% comeback). PERFORMANCE NOTE SCRUTINY (high conf 70-84 underperforming at 38.9%): L15 gap NYK +24.5 vs SAS +15.6 = +8.9pt gap (≥5.0 requirement met) AND home court confirmed — extra scrutiny requirements satisfied. SAS FATIGUE: 7 WCF + 4 Finals = 11 heavy-minute playoff games cumulative — #1 risk variable, but Wembanyama shows no injury flag. STAKE: 15% of €1,071.73 = €160.76 → €161.00. Conservative relative to high-conf tier (20-25%) — applying ML underperformance caution in 1.70-1.89 range and working assumption uncertainty about Game 4 result. Total exposure 15.0% — within 70% cap. NO CANCELLATION CRITERIA MET.",
+          "anchor_players": [
+            "Jalen Brunson",
+            "Karl-Anthony Towns",
+            "Victor Wembanyama"
+          ],
+          "result": null,
+          "returned": null,
+          "pnl": null,
+          "settled_at": null,
+          "committed_at": "2026-06-10T23:56:32Z"
+        }
+      ],
+      "summary": "Day 2026-06-10 commit — 1 bets totalling €161.00. 0 cancelled. Bankroll: €1071.73 → €910.73."
     }
   ]
 }
