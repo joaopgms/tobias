@@ -1,14 +1,14 @@
 ---
-date: 2026-06-11
+date: 2026-06-12
 llm: claude-sonnet-4-6
 scout_patches: 1
 commit_patches: 0
 milestone: daily (49 bets)
 ---
 
-## Today's Analysis — 2026-06-11
+## Today's Analysis — 2026-06-12
 
-The NBA Finals is now at its decisive inflection point: with NYK leading 3-1 (working assumption), Game 5 at Madison Square Garden is a near-certain championship opportunity for New York given the ~95% historical close-out rate from 3-1. The single most important verification task before any Game 5 pick is Wembanyama's Game 4 efficiency — if he was inefficient or showed fatigue signs, SAS's path to winning three straight is essentially zero. Macro performance note: the system's Medium confidence tier (55-69) continues to drive profits (+€631.80 at 56.8%) while High confidence (70-84) remains a liability (-€831.55 at 42.9%), reinforcing the discipline of requiring NetRtg gap ≥ 5.0 AND a secondary advantage before escalating to 20%+ stakes; the Finals setup (NYK home + 3-1 lead + franchise player verification) could justify a well-supported Medium pick rather than an aggressive High-confidence play.
+The NBA Finals working assumption holds at NYK 3-1 heading into Game 5 at NYK home — Scout must verify from ESPN before drafting any picks, as NYK may have already clinched. The key analytical tension for Game 5 remains Wembanyama cumulative fatigue (11+ heavy playoff games) versus SAS desperation energy on the road: historically this combination (~5% comeback from 1-3) strongly favours NYK regardless of structural metrics. LAL Round 2 is the only other active betting vehicle — Luka Doncic OUT remains a hard franchise player block until ESPN confirms their opponent and series score.
 
 ## Performance Stats
 ALL-TIME: 33W / 34L | Win rate: 49.3% | P&L: €-542.54 | Avg odds: 1.93 | Avg conf: 65.5/100
@@ -20,22 +20,22 @@ By odds range:  1.70-1.89 24bets 12W/12L 50.0% €-743.55  |  1.90-2.09 38bets 2
 
 
 ## Scout patches applied
-- [franchise_player_rules] Routine session update: SAS cumulative fatigue reference updated to Games 1-5+ (series at minimum Game 5 next); all other entries unchanged per verified feed.
+- [franchise_player_rules] Routine session update — verified all franchise player statuses against the confirmed ESPN+NBA injury feed; no changes to player list from prior session.
 
 ## Commit patches applied
 None
 
 ## Playoff context patches applied
-- [phase] ESPN feed reconciled: 'NYK leads 2-1 (Game 5 next)' from prior session now updated to working assumption NYK 3-1 with Game 5 next; removing ambiguity about NYK 3-0 scenario as it is no longer operationally relevant.
-- [series_context] Series context updated to reflect working assumption NYK 3-1 (SAS won Game 4) and remove the three-scenario ambiguity now that Game 4 is assumed complete; Game 5 framing is the primary operative scenario.
-- [elimination_flags] Elimination flags updated to reflect Game 5 as the current operative game with NYK 3-1 working assumption; removed the three-way ambiguity and clarified SAS elimination framing for Game 5.
-- [playoff_rest] Rest context updated to reflect Game 5 as the current game with clear NYK 3-1 working assumption; removed Game 4 pending language now that G4 is assumed complete.
-- [playoff_motivation] Motivation section updated to remove the three-scenario framing and consolidate around NYK 3-1 working assumption with Game 5 as the operative frame.
-- [h2h_playoff] H2H section streamlined to remove 3-0 scenario (no longer relevant) and focus on the operative 3-1 working assumption with clear Game 5 framing.
-- [l15_caveat] L15 caveat updated to consolidate around NYK 3-1 working assumption; removed the 3-0 pending scenario to reduce token waste and align with ESPN feed reconciliation.
-- [no_tanking] No_tanking section updated to reflect the NYK 3-1 working assumption as the consolidated operative frame, removing the 3-0 ambiguity and tightening Game 5 elimination language.
+- [phase] No new game result data since last session — maintaining working assumption NYK 3-1 with mandatory ESPN verification gate intact.
+- [series_context] No new game result confirmed this session — maintaining Game 5 NYK-leads-3-1 framing with mandatory ESPN verification gate.
+- [elimination_flags] No new elimination confirmed this session — maintaining current elimination list with Game 5 framing and mandatory ESPN verification gate.
+- [playoff_rest] No rest day changes confirmed this session — maintaining Game 5 cumulative fatigue framing for SAS.
+- [playoff_motivation] No new game results this session — motivation hierarchy maintained consistent with working assumption NYK 3-1.
+- [h2h_playoff] No new series data confirmed this session — h2h_playoff maintained with working assumption framing and mandatory verification gate.
+- [l15_caveat] No new game data to update L15 hierarchy — maintaining current framing with all mandatory verification gates intact.
+- [no_tanking] Routine session update — no tanking flags applicable during playoffs; elimination list maintained with no new confirmed eliminations this session.
 
 ## Intelligence gaps identified
-- **Wembanyama's Game 4 per-game efficiency metrics (minutes, points, shooting %, fatigue indicators) are not available in the current data feed despite being the #1 swing factor for any Game 5 SAS pick.** — The franchise_player_rules and l15_caveat sections both cite Wembanyama G4 efficiency as the critical signal for any SAS Game 5 consideration — without it, Scout cannot properly gate the confidence adjustment for SAS picks. → Add a pre-Scout step to fetch Wembanyama's Game 4 box score from ESPN before drafting any Finals pick; if unavailable, apply automatic confidence -15 on any SAS Game 5 consideration beyond the standard cumulative fatigue penalty.
-- **Los Angeles Lakers Round 2 opponent and current series score are unknown — only 'verify from ESPN' notes exist with no actual data in the feed.** — LAL is an active playoff team with Luka Doncic OUT; without knowing their Round 2 opponent, series score, and that opponent's injury status, Scout cannot evaluate any LAL picks and may be missing value on a winnable market. → Ensure the ESPN live feed includes all active playoff series scores, not just the Finals; add a LAL series_context entry to playoff_context.md the moment the opponent and score are confirmed.
-- **ML market at odds 1.70-1.89 remains the system's highest-loss band (-€818.05, 9W/10L) with no specific gate for Finals picks where NYK closing-out odds are likely to fall in this exact range.** — If NYK Game 5 ML is priced around 1.65-1.80 (plausible given 3-1 lead + home court), the system's elevated EV floor of 0.08 for this odds band may result in a valid edge being passed over, or conversely a marginal pick being confirmed without adequate scrutiny. → The existing ML 1.70-1.89 EV ≥ 0.08 rule already covers this — no new patch needed, but Scout should explicitly check NYK Game 5 ML odds against this band during draft and flag if odds fall at or below 1.75 as likely below-EV-threshold territory.
+- **Wembanyama game-by-game efficiency stats (minutes, points, TS%, turnovers) for Finals Games 1-4 are not available in the current data feed.** — Wembanyama G4 efficiency is listed as the #1 swing factor for any Game 5 SAS consideration, but without box score data Scout cannot make an evidence-based assessment — it will default to the blanket cumulative fatigue flag which may over- or under-penalise SAS. → Add a Finals box score fetch (or manual input field) to the pre-Scout data pipeline so G4 efficiency stats (Wembanyama minutes, +/-, TS%) are available as structured input at 11:00 UTC.
+- **LAL Round 2 opponent and current series score are unverified — no ESPN data provided for the LAL series this session.** — LAL is listed as an active betting vehicle with Luka Doncic OUT, but Scout cannot evaluate any LAL pick without knowing the opponent, series score, home court situation, and opponent's injury status. → Ensure the daily data pull explicitly includes the full playoff bracket with all active Round 2 series scores, not just the NBA Finals feed.
+- **ML performance in the 1.70-1.89 odds range remains the highest-loss band (-€818 on 9W/10L) but no specific post-Finals analysis has been conducted on whether this band is being avoided in practice.** — The EV ≥ 0.08 rule for ML picks at 1.70-1.89 was already patched into confidence_staking and commit_staking, but with only the NYK Finals ML likely in this range, it's unclear if the rule is being applied consistently or if odds have drifted above this band. → Flag in next milestone review (after Finals conclude) whether the 1.70-1.89 EV ≥ 0.08 rule for ML was applied to all Finals picks and whether outcomes justify further tightening or the rule is sufficient.
