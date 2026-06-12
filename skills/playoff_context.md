@@ -1,7 +1,7 @@
 ---
-version: 54
-updated_at: 2026-06-11T13:55:40.966337+00:00
-updated_by: analyst_2026-06-11
+version: 55
+updated_at: 2026-06-12T12:51:30.542162+00:00
+updated_by: analyst_2026-06-12
 llm: claude-sonnet-4-6
 ---
 
@@ -20,7 +20,7 @@ NBA FINALS: New York Knicks vs San Antonio Spurs.
   WORKING ASSUMPTION THIS SESSION: NYK leads 3-1 (SAS won Game 4 at home). Game 5 next at NYK (home — NYK hosts Games 1,2,5,7).
   MANDATORY: Verify actual series score from ESPN scoreboard before any Finals picks.
   IF NYK 3-1 (SAS won Game 4): apply Game 5 NYK home closer framing. NYK one win from championship.
-  IF NYK 4-0 (series complete): No further picks. NYK CHAMPIONS.
+  IF NYK 4-1 (series complete, NYK won G5): NYK CHAMPIONS. No further picks.
 
 ## SECTION:series_context
 NBA PLAYOFFS — Active Series (updated from ESPN live feed)
@@ -31,7 +31,7 @@ NBA Finals: New York Knicks vs San Antonio Spurs
 - STATUS: Working assumption NYK leads 3-1 (SAS won Game 4 at home). Game 5 next at NYK (home).
   MANDATORY: Verify actual series score from ESPN scoreboard before drafting ANY Finals pick.
   SCENARIO A (if NYK 3-1, confirmed): Game 5 at NYK home. NYK closes out at home. Apply Game 5 framing below.
-  SCENARIO B (if NYK 4-0, series complete): No further picks. NYK CHAMPIONS.
+  SCENARIO B (if NYK 4-1, series complete): No further picks. NYK CHAMPIONS.
 
 - NYK (NetRtg +6.5, 53-29): East representative. Swept ECF (CLE 4-0). Won Games 1, 2, 3. Possible Game 5 closer at home.
   Re-verify Jalen Brunson, Karl-Anthony Towns active before ANY Finals pick. MANDATORY.
@@ -39,7 +39,7 @@ NBA Finals: New York Knicks vs San Antonio Spurs
 
 - SAS (NetRtg +8.3, 62-20): Won WCF 4-3 over OKC. Won Game 4 at home (if working assumption correct).
   Re-verify Victor Wembanyama active before ANY Finals pick. MANDATORY.
-  Monitor cumulative fatigue: 7-game WCF + minimum 4 Finals games. Heavy minutes load escalating to critical threshold.
+  Monitor cumulative fatigue: 7-game WCF + minimum 4 Finals games = 11 heavy playoff games.
   David Jones Garcia (F): OUT [roster-only].
   SAS HOME COURT: WEAKENED — lost Game 3 at home. Won Game 4 at home (if confirmed). SAS home premium +2-3pts (partial restoration).
 
@@ -79,14 +79,14 @@ NBA FINALS — WORKING ASSUMPTION (verify before picks):
   ESPN feed: working assumption NYK 3-1 (SAS won Game 4 at home). Game 5 next at NYK.
   MANDATORY: Verify actual series score from ESPN scoreboard.
 
-IF NYK WON GAME 5 (series 4-1 or if previously 4-0):
+IF NYK WON GAME 5 (series 4-1):
 - San Antonio Spurs: ELIMINATED. Series COMPLETE. No further picks.
 - New York Knicks: NBA CHAMPIONS. No further picks needed.
 
 IF SAS WON GAME 5 (series 3-2) — hypothetical:
 - San Antonio Spurs: TRAILS 2-3. FACES ELIMINATION in Game 6 at SAS HOME.
   Re-verify Victor Wembanyama active before any Game 6 pick. MANDATORY.
-  SAS home (Game 6) = partial home premium +2-3pts if won G4 and G5 momentum.
+  SAS home (Game 6) = partial home premium +2-3pts if momentum restored.
 
 SAS CURRENT STATUS (working assumption 1-3 trailing):
 - San Antonio Spurs: FACES ELIMINATION in Game 5 at NYK HOME. ~5% series comeback probability.
@@ -202,7 +202,7 @@ IF SERIES IS 3-1 NYK (SAS won Game 4) — WORKING ASSUMPTION:
 - Do NOT back SAS in Game 5 unless Wembanyama dominant in Game 4 AND odds ≥ 2.10 AND 2+ confluence signals.
 - NYK home + series lead = strong compound edge. Best NYK pick of series if Brunson + Towns verified active.
 
-IF SERIES IS COMPLETE (NYK 4-0 or 4-1 sweep/close):
+IF SERIES IS COMPLETE (NYK 4-1 close):
 - No further Finals picks. Evaluate LAL Round 2 if active.
 
 Regular season H2H (NYK vs SAS): Use as tiebreaker only — books already price it in.
