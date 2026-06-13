@@ -9,14 +9,14 @@
   "net_pnl": 336.34,
   "bust": false,
   "bust_at": null,
-  "last_updated": "2026-06-13T10:30:59.095389+00:00",
-  "first_game_time": "2026-06-11T00:30:00Z",
+  "last_updated": "2026-06-13T15:03:08.469045+00:00",
+  "first_game_time": "2026-06-14T00:30:00Z",
   "llm_provider": "claude",
-  "scout_status": "no_games",
+  "scout_status": "live",
   "scout_error": "",
-  "scout_updated_at": "2026-06-12T16:22:37.654088+00:00",
+  "scout_updated_at": "2026-06-13T15:03:08.469045+00:00",
   "scout_odds_source": "theodds_onexbet",
-  "commit_status": "done",
+  "commit_status": "pending",
   "commit_updated_at": "2026-06-10T23:56:30.577659+00:00",
   "commit_date": "2026-06-10",
   "analyst_updated_at": "2026-06-13T11:51:14.516709+00:00",
@@ -27,7 +27,7 @@
     "scout": "claude-sonnet-4-6",
     "commit": "claude-sonnet-4-6"
   },
-  "last_report": "### CONFIRMED — New York Knicks ML\n\n- **Match:** New York Knicks vs San Antonio Spurs | **Tip:** 2026-06-11T00:30 UTC (Madison Square Garden)\n- **Pick:** NYK ML | **Scout odds:** 1.77 | **Commit odds:** 1.77 | **Move:** 0.00 (stable)\n- **ML:** NYK 1.77 / SAS 2.19 | **ATS:** NYK -2.5 (2.00/1.92) | **O/U:** 216.5 (O:1.96/U:1.96)\n- **Stake:** €161.00 | **Pot:** €284.97 | **Conf:** 72/100 | **EV:** 0.274 (27.4%)\n- **Decision:** All confirmation criteria met. Anchor players Brunson, Towns (NYK) and Wembanyama (SAS) all confirmed active per nba_official — no injury-driven pick adjustments required. Odds unchanged from Scout at 1.77, within valid ML range, EV 27.4% far exceeds the elevated 0.08 floor required for ML picks in the 1.70–1.89 band. High-confidence tier extra scrutiny satisfied: L15 NetRtg gap of +8.9 points (NYK +24.5 vs SAS +15.6) and full MSG home court premium for a Game 5 closer. Working assumption NYK 3-1 series lead with ~95% championship probability for leading team at this stage. SAS cumulative fatigue (11+ heavy playoff games) is the primary risk variable but no efficiency concerns flagged. Stake held at Scout's conservative 15% (€161.00) rather than full high-conf 20–25% allocation, appropriate given ML underperformance band and Game 4 result uncertainty.\n\n---\n\n**Slate Summary:** Single-game Finals slate at MSG. NYK ML at 1.77 is the sole committed bet — NYK home + 3-1 series lead + dominant L15 form (+8.9pt gap) creates a compound edge at strong EV. Total exposure €161.00 (15.0% of bankroll) is disciplined and well within limits. No late-breaking information emerged after Scout to create new edges, and the spread and total markets offer no independent value beyond the ML thesis already committed.",
+  "last_report": "Single-game Finals slate (SAS vs NYK, Game 6). No picks drafted. SAS ML (1.53) is below the 1.60 minimum odds floor; NYK ML (2.71) exceeds the 2.50 ceiling — neither ML side is draftable. Spread (SAS -5.5) conflicts with NYK's dominant L15 NetRtg (+24.5 vs SAS +15.6), making SAS covering -5.5 low-confidence despite home court and elimination desperation. O/U market within odds range but pace data borderline and totals confidence floor (65) not reached. Mandatory franchise player checks: Brunson, Towns (NYK) and Wembanyama (SAS) all appear active per injury report. Zero picks is the correct outcome — forcing a bet into this slate would violate odds range or EV requirements.",
   "draft_picks": [],
   "pending_bets": [],
   "settled_bets": [
@@ -1047,7 +1047,15 @@
       "committed_at": "2026-06-10T23:56:32Z"
     }
   ],
-  "rejected_games": [],
+  "rejected_games": [
+    {
+      "match": "San Antonio Spurs vs New York Knicks",
+      "reason": "SAS ML 1.53 is below the 1.60 minimum ML odds target. NYK ML 2.71 exceeds the 2.50 maximum ML odds target. Spread odds 2.0/1.92 are within range but SAS -5.5 confidence fails: NYK L15 NetRtg +24.5 vastly outperforms SAS L15 +15.6 (NYK gap +8.9pts favours NYK), conflicting with SAS -5.5 line. SAS home court + desperation partially offsets but NYK L15 dominance makes covering -5.5 for SAS low-confidence. O/U 1.96 within range but Pace data quality concern (SAS 99.9 / NYK 96.8 — pace mismatch ~3pts, marginal) and totals floor 65 confidence not met given pace uncertainty. No pick meets odds range AND confidence/EV thresholds simultaneously. MANDATORY checks: Brunson + Towns verified active (no absences listed in injury report). Wembanyama not listed on injury report — active. Luke Kornet (SAS) Questionable — minor impact. Line anomaly check: SAS priced at 1.53 as home team — below 1.60 ML floor but not an anomaly per se (SAS is structural favourite with home court + desperation). NYK at 2.71 exceeds 2.50 ML ceiling — outside draftable range. No valid market entry found.",
+      "ml_home": 1.53,
+      "ml_away": 2.71,
+      "decision": "no_edge"
+    }
+  ],
   "late_scout_rejections": [
     {
       "match": "New York Knicks vs San Antonio Spurs",
@@ -1652,41 +1660,30 @@
     "Philadelphia 76ers@Houston Rockets"
   ],
   "cached_context": {
-    "cached_at": "2026-06-10",
-    "games_str": "New York Knicks vs San Antonio Spurs  |  2026-06-11T00:30 UTC  |  Madison Square Garden",
+    "cached_at": "2026-06-13",
+    "games_str": "San Antonio Spurs vs New York Knicks  |  2026-06-14T00:30 UTC  |  Frost Bank Center",
     "standings_str": "Oklahoma City Thunder: 64-18  L10:7-3\nSan Antonio Spurs: 62-20  L10:8-2\nDetroit Pistons: 60-22  L10:8-2\nBoston Celtics: 56-26  L10:8-2\nDenver Nuggets: 54-28  L10:10-0\nNew York Knicks: 53-29  L10:6-4\nUtah Jazz: 22-60  L10:1-9\nUTAH: 22-60  L10:1-9\nBrooklyn Nets: 20-62  L10:3-7\nIndiana Pacers: 19-63  L10:3-7\nWashington Wizards: 17-65  L10:0-10",
-    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nNew York Knicks: OffRtg 119.9 | DefRtg 113.4 | NetRtg +6.5 | Pace 96.8 | L15:+24.5\nSan Antonio Spurs: OffRtg 119.7 | DefRtg 111.4 | NetRtg +8.3 | Pace 99.9 | L15:+15.6"
+    "adv_str": "Source: Basketball-Reference (OffRtg/DefRtg/NetRtg/Pace | L15=last-15-game approx)\nSan Antonio Spurs: OffRtg 119.7 | DefRtg 111.4 | NetRtg +8.3 | Pace 99.9 | L15:+15.6\nNew York Knicks: OffRtg 119.9 | DefRtg 113.4 | NetRtg +6.5 | Pace 96.8 | L15:+24.5"
   },
   "scout_report_data": {
-    "date": "2026-06-10",
-    "updated_at": "2026-06-10T16:37:24.802780+00:00",
-    "picks": [
+    "date": "2026-06-13",
+    "updated_at": "2026-06-13T15:03:08.469045+00:00",
+    "picks": [],
+    "rejected": [
       {
-        "id": "nba_draft_20260610_001",
-        "match": "New York Knicks vs San Antonio Spurs",
-        "time": "2026-06-11T00:30:00Z",
-        "pick": "New York Knicks ML",
-        "odds": 1.77,
-        "stake": 161.0,
-        "potential_return": 284.97,
-        "confidence": 72,
-        "reasoning": "MANDATORY VERIFICATION: Injury report source is nba_official with no notable injuries reported — Jalen Brunson and Karl-Anthony Towns confirmed available (no injuries listed). Victor Wembanyama also not listed as injured — active confirmed. SERIES CONTEXT: Working assumption NYK 3-1 (SAS won Game 4). Game 5 at NYK home (Madison Square Garden). Teams up 3-1 in NBA Finals win the championship ~95%+ of the time. NYK is closing out at home. LINE ANOMALY CHECK: NYK at 1.77 as home team with 3-1 series lead — reasonable. SAS at 2.19. No anomaly. NYK season record 53-29 as home favourite at 1.77 — appropriate. No anomaly flagged. NETRG L15: NYK L15 +24.5 vs SAS L15 +15.6 — gap of +8.9 points, well above the 4.0 threshold. This is the strongest L15 signal available and strongly favours NYK. Season NetRtg: SAS +8.3 vs NYK +6.5 — SAS +1.8 seasonal edge, but has NOT translated to wins in this series. SERIES DOMINANCE: NYK won Games 1, 2 (home) and Game 3 (road). If SAS won G4 at home (working assumption), NYK still leads 3-1 with near-certain series advantage. Game 5 at NYK home = NYK home court premium +3-4pts. FATIGUE: SAS cumulative fatigue (7 WCF + 4 Finals games = 11 heavy-minute playoff games). Wembanyama cumulative load is the #1 risk variable. No injury report shows him as doubtful/GTD. HOME COURT: NYK full home court premium applies — Game 5 at MSG, closing out. CONFIDENCE ASSESSMENT: Base 70 (high tier, justified by NYK home + 3-1 lead + active roster). L15 gap +8.9 adds confidence. SAS fatigue adds confidence. No B2B adjustment needed (standard playoff rest). No injury deductions. Final confidence: 72. PERFORMANCE NOTE: High conf (70-84) tier underperforming at 38.9% — applying extra scrutiny. NetRtg L15 gap IS ≥ 5.0 (8.9 gap) AND home court advantage confirmed — meets the extra scrutiny requirement for 20%+ stake. ML MARKET CAUTION: Odds 1.77 falls in the underperforming 1.70-1.89 range (9W/10L -€818.05). Require EV ≥ 0.08 minimum. EV CALCULATION: EV = (0.72 × 1.77) - 1 = 1.2744 - 1 = 0.2744. EV = 27.4% — well above the 0.08 minimum for this odds range and strongly above the 0.05 floor. STAKE: High confidence tier (70-84) = 20-25% of €1071.73. Applying 15% given ML market underperformance caution and working assumption uncertainty about Game 4 result. Stake = €1071.73 × 0.15 = €160.76 → rounded to €161.00.",
-        "anchor_players": [
-          "Jalen Brunson",
-          "Karl-Anthony Towns",
-          "Victor Wembanyama"
-        ],
-        "drafted_at": "2026-06-10T16:37:28Z",
-        "market_type": "ml"
+        "match": "San Antonio Spurs vs New York Knicks",
+        "reason": "SAS ML 1.53 is below the 1.60 minimum ML odds target. NYK ML 2.71 exceeds the 2.50 maximum ML odds target. Spread odds 2.0/1.92 are within range but SAS -5.5 confidence fails: NYK L15 NetRtg +24.5 vastly outperforms SAS L15 +15.6 (NYK gap +8.9pts favours NYK), conflicting with SAS -5.5 line. SAS home court + desperation partially offsets but NYK L15 dominance makes covering -5.5 for SAS low-confidence. O/U 1.96 within range but Pace data quality concern (SAS 99.9 / NYK 96.8 — pace mismatch ~3pts, marginal) and totals floor 65 confidence not met given pace uncertainty. No pick meets odds range AND confidence/EV thresholds simultaneously. MANDATORY checks: Brunson + Towns verified active (no absences listed in injury report). Wembanyama not listed on injury report — active. Luke Kornet (SAS) Questionable — minor impact. Line anomaly check: SAS priced at 1.53 as home team — below 1.60 ML floor but not an anomaly per se (SAS is structural favourite with home court + desperation). NYK at 2.71 exceeds 2.50 ML ceiling — outside draftable range. No valid market entry found.",
+        "ml_home": 1.53,
+        "ml_away": 2.71,
+        "decision": "no_edge"
       }
     ],
-    "rejected": [],
-    "report": "Single-game Finals slate — NYK vs SAS Game 5 at MSG. nba_official injury source with full coverage; no notable injuries reported, confirming Brunson, KAT, and Wembanyama all available. Working assumption NYK 3-1 series lead (verify Game 4 result before commit). Drafted 1 pick: NYK ML at 1.77 with EV +27.4% — strong edge driven by NYK L15 dominance (+8.9pt gap), home court at MSG, 3-1 series lead, and SAS cumulative fatigue (11+ heavy playoff games). ML odds range 1.70-1.89 is underperforming historically, so stake reduced to 15% as caution. Spread evaluated but NYK -1.5 at 1.92 offers lower EV and spread requires higher confidence bar — ML provides cleaner edge here. Totals not evaluated: Pace data shows NYK 96.8 and SAS 99.9 (slight pace mismatch), insufficient confluence for totals bet with missing pace reliability signal in playoffs.",
+    "report": "Single-game Finals slate (SAS vs NYK, Game 6). No picks drafted. SAS ML (1.53) is below the 1.60 minimum odds floor; NYK ML (2.71) exceeds the 2.50 ceiling — neither ML side is draftable. Spread (SAS -5.5) conflicts with NYK's dominant L15 NetRtg (+24.5 vs SAS +15.6), making SAS covering -5.5 low-confidence despite home court and elimination desperation. O/U market within odds range but pace data borderline and totals confidence floor (65) not reached. Mandatory franchise player checks: Brunson, Towns (NYK) and Wembanyama (SAS) all appear active per injury report. Zero picks is the correct outcome — forcing a bet into this slate would violate odds range or EV requirements.",
     "odds_source": "theodds_onexbet",
     "injuries_source": "nba_official",
-    "tokens_in": 12769,
-    "tokens_out": 1311,
-    "cost_usd": 0.057972
+    "tokens_in": 13554,
+    "tokens_out": 675,
+    "cost_usd": 0.050787
   },
   "analyst_checkpoint_done": true,
   "slate_game_times": [
