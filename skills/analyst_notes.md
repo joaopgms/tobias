@@ -1,14 +1,14 @@
 ---
-date: 2026-06-12
+date: 2026-06-13
 llm: claude-sonnet-4-6
 scout_patches: 1
 commit_patches: 0
 milestone: daily (49 bets)
 ---
 
-## Today's Analysis — 2026-06-12
+## Today's Analysis — 2026-06-13
 
-The NBA Finals working assumption holds at NYK 3-1 heading into Game 5 at NYK home — Scout must verify from ESPN before drafting any picks, as NYK may have already clinched. The key analytical tension for Game 5 remains Wembanyama cumulative fatigue (11+ heavy playoff games) versus SAS desperation energy on the road: historically this combination (~5% comeback from 1-3) strongly favours NYK regardless of structural metrics. LAL Round 2 is the only other active betting vehicle — Luka Doncic OUT remains a hard franchise player block until ESPN confirms their opponent and series score.
+ESPN feed has progressed to 'Game 6 next', which implies SAS won Game 5 — a remarkable road win at NYK that shifts the series narrative substantially. SAS is now 2-3 with home court in Game 6, ~30% series comeback probability, and genuine momentum; this is no longer a near-certain NYK close-out but a legitimately balanced individual game requiring fresh analysis. The critical variable remains Wembanyama's efficiency in Game 5: if he was dominant despite cumulative fatigue (now 12+ heavy playoff games), SAS at home with good odds becomes a defensible pick; if efficiency was declining despite the win, fade SAS. The ML market underperformance (-€354.59, 48.1%) combined with the High confidence tier collapse (42.9% WR) continues to demand restraint — Game 6 should only be bet if a genuine odds discrepancy exists, not forced on series narrative alone.
 
 ## Performance Stats
 ALL-TIME: 33W / 34L | Win rate: 49.3% | P&L: €-542.54 | Avg odds: 1.93 | Avg conf: 65.5/100
@@ -20,22 +20,22 @@ By odds range:  1.70-1.89 24bets 12W/12L 50.0% €-743.55  |  1.90-2.09 38bets 2
 
 
 ## Scout patches applied
-- [franchise_player_rules] Routine session update — verified all franchise player statuses against the confirmed ESPN+NBA injury feed; no changes to player list from prior session.
+- [franchise_player_rules] Routine mandatory session update — verified franchise player statuses cross-referenced against ESPN roster + NBA injury feed; no new absences detected beyond previously listed players, but section must be refreshed each session per rules.
 
 ## Commit patches applied
 None
 
 ## Playoff context patches applied
-- [phase] No new game result data since last session — maintaining working assumption NYK 3-1 with mandatory ESPN verification gate intact.
-- [series_context] No new game result confirmed this session — maintaining Game 5 NYK-leads-3-1 framing with mandatory ESPN verification gate.
-- [elimination_flags] No new elimination confirmed this session — maintaining current elimination list with Game 5 framing and mandatory ESPN verification gate.
-- [playoff_rest] No rest day changes confirmed this session — maintaining Game 5 cumulative fatigue framing for SAS.
-- [playoff_motivation] No new game results this session — motivation hierarchy maintained consistent with working assumption NYK 3-1.
-- [h2h_playoff] No new series data confirmed this session — h2h_playoff maintained with working assumption framing and mandatory verification gate.
-- [l15_caveat] No new game data to update L15 hierarchy — maintaining current framing with all mandatory verification gates intact.
-- [no_tanking] Routine session update — no tanking flags applicable during playoffs; elimination list maintained with no new confirmed eliminations this session.
+- [phase] ESPN live feed now shows 'Game 6 next' rather than 'Game 5 next' — series has progressed; working assumption updated from NYK 3-1 to NYK 3-2 with SAS hosting Game 6.
+- [series_context] ESPN live feed updated to show 'Game 6 next' — series context must reflect NYK 3-2 working assumption with SAS hosting Game 6; all framing, fatigue counts, and probability estimates updated accordingly.
+- [elimination_flags] ESPN feed progression to 'Game 6 next' requires elimination flags update — SAS now 2-3 trailing with home Game 6 elimination game, materially different probability profile than 1-3 scenario.
+- [playoff_rest] ESPN feed implies SAS won Game 5 (series now 3-2); rest and home court framing must update to Game 6 at SAS, with SAS home premium restored after 2 consecutive wins and fatigue penalty adjusted downward due to desperation energy.
+- [playoff_motivation] ESPN feed showing 'Game 6 next' implies SAS won Game 5; motivation hierarchy must reflect SAS 2-game winning streak, restored home premium for Game 6, and updated series comeback probability from ~5% (1-3) to ~30% (2-3).
+- [h2h_playoff] ESPN 'Game 6 next' signal requires H2H section to reflect SAS winning Games 4+5, updated game-level balance assessment for Game 6 at SAS, and revised comeback probability from ~5% to ~30%.
+- [l15_caveat] ESPN feed implies SAS won Game 5 on road at NYK — L15 caveat must reflect restored SAS home premium for Game 6, moderately increased season NetRtg weight, and genuinely balanced Game 6 individual game framing.
+- [no_tanking] No_tanking section updated to reflect series progression to NYK 3-2 working assumption and Game 6 at SAS framing.
 
 ## Intelligence gaps identified
-- **Wembanyama game-by-game efficiency stats (minutes, points, TS%, turnovers) for Finals Games 1-4 are not available in the current data feed.** — Wembanyama G4 efficiency is listed as the #1 swing factor for any Game 5 SAS consideration, but without box score data Scout cannot make an evidence-based assessment — it will default to the blanket cumulative fatigue flag which may over- or under-penalise SAS. → Add a Finals box score fetch (or manual input field) to the pre-Scout data pipeline so G4 efficiency stats (Wembanyama minutes, +/-, TS%) are available as structured input at 11:00 UTC.
-- **LAL Round 2 opponent and current series score are unverified — no ESPN data provided for the LAL series this session.** — LAL is listed as an active betting vehicle with Luka Doncic OUT, but Scout cannot evaluate any LAL pick without knowing the opponent, series score, home court situation, and opponent's injury status. → Ensure the daily data pull explicitly includes the full playoff bracket with all active Round 2 series scores, not just the NBA Finals feed.
-- **ML performance in the 1.70-1.89 odds range remains the highest-loss band (-€818 on 9W/10L) but no specific post-Finals analysis has been conducted on whether this band is being avoided in practice.** — The EV ≥ 0.08 rule for ML picks at 1.70-1.89 was already patched into confidence_staking and commit_staking, but with only the NYK Finals ML likely in this range, it's unclear if the rule is being applied consistently or if odds have drifted above this band. → Flag in next milestone review (after Finals conclude) whether the 1.70-1.89 EV ≥ 0.08 rule for ML was applied to all Finals picks and whether outcomes justify further tightening or the rule is sufficient.
+- **Wembanyama per-game efficiency data (PTS, FG%, minutes, plus-minus) for Finals Games 4+5 is not available in the current feed, which is the #1 stated swing variable for any Game 6 SAS pick.** — A Wembanyama efficiency dip in Games 4-5 despite wins would signal fatigue-driven regression risk for Game 6, potentially flipping a SAS home pick from 'value' to 'trap'; without this data, any SAS Game 6 pick carries additional uncertainty premium. → Add Wembanyama game-by-game efficiency log (pts, fga, minutes, net) as a required data input in franchise_player_rules for any pick on his team in a given Finals game; if not available, apply additional confidence -10 on SAS picks as a fatigue proxy.
+- **The ESPN live feed shows 'New York Knicks leads 3-1 (Game 6 next)' which is internally contradictory — a 3-1 lead would produce 'Game 5 next' not 'Game 6 next'; the feed appears to show stale series score (3-1) with updated game number (Game 6).** — This ambiguity means the working assumption (NYK 3-2) could be wrong — if the series is still 3-1 and Game 6 is being used loosely for what should be Game 5, all framing in this session may be misaligned. → Mandate that Scout verifies BOTH the series score AND the game number from ESPN box score page before any Finals pick, and flags a contradiction if score + game number don't align; add an explicit 'SCORE-GAME-NUMBER CONSISTENCY CHECK' step to priority_stats item 0 for Finals games.
+- **No LAL Round 2 series context is available in the current feed — opponent, series score, and game number are all unknown, preventing any LAL picks despite Luka Doncic being OUT.** — LAL with Doncic OUT is a potential high-value fade opportunity (betting against LAL) if the series is close and opponent has value odds, but without series context Scout cannot safely evaluate any LAL bet. → Add LAL Round 2 ESPN scoreboard verification as a mandatory pre-pick step in series_context, with explicit instruction to fetch LAL current series score from ESPN before any LAL or LAL-opponent pick; currently flagged but not structured.
