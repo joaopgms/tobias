@@ -2502,5 +2502,28 @@
     "tokens_in": 12769,
     "tokens_out": 1311,
     "cost_usd": 0.057972
+  },
+  {
+    "ts": "2026-06-13T15:03:08.469045+00:00",
+    "date": "2026-06-13",
+    "llm": "claude-sonnet-4-6",
+    "odds_source": "theodds_onexbet",
+    "draft_count": 0,
+    "picks": [],
+    "rejected": [
+      {
+        "match": "San Antonio Spurs vs New York Knicks",
+        "reason": "SAS ML 1.53 is below the 1.60 minimum ML odds target. NYK ML 2.71 exceeds the 2.50 maximum ML odds target. Spread odds 2.0/1.92 are within range but SAS -5.5 confidence fails: NYK L15 NetRtg +24.5 vastly outperforms SAS L15 +15.6 (NYK gap +8.9pts favours NYK), conflicting with SAS -5.5 line. SAS home court + desperation partially offsets but NYK L15 dominance makes covering -5.5 for SAS low-confidence. O/U 1.96 within range but Pace data quality concern (SAS 99.9 / NYK 96.8 — pace mismatch ~3pts, marginal) and totals floor 65 confidence not met given pace uncertainty. No pick meets odds range AND confidence/EV thresholds simultaneously. MANDATORY checks: Brunson + Towns verified active (no absences listed in injury report). Wembanyama not listed on injury report — active. Luke Kornet (SAS) Questionable — minor impact. Line anomaly check: SAS priced at 1.53 as home team — below 1.60 ML floor but not an anomaly per se (SAS is structural favourite with home court + desperation). NYK at 2.71 exceeds 2.50 ML ceiling — outside draftable range. No valid market entry found.",
+        "ml_home": 1.53,
+        "ml_away": 2.71,
+        "decision": "no_edge"
+      }
+    ],
+    "report": "Single-game Finals slate (SAS vs NYK, Game 6). No picks drafted. SAS ML (1.53) is below the 1.60 minimum odds floor; NYK ML (2.71) exceeds the 2.50 ceiling — neither ML side is draftable. Spread (SAS -5.5) conflicts with NYK's dominant L15 NetRtg (+24.5 vs SAS +15.6), making SAS covering -5.5 low-confidence despite home court and elimination desperation. O/U market within odds range but pace data borderline and totals confidence floor (65) not reached. Mandatory franchise player checks: Brunson, Towns (NYK) and Wembanyama (SAS) all appear active per injury report. Zero picks is the correct outcome — forcing a bet into this slate would violate odds range or EV requirements.",
+    "retries": 0,
+    "model": "claude-sonnet-4-6",
+    "tokens_in": 13554,
+    "tokens_out": 675,
+    "cost_usd": 0.050787
   }
 ]
