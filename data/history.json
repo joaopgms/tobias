@@ -2620,6 +2620,19 @@
         }
       ],
       "summary": "Day 2026-06-10 commit — 1 bets totalling €161.00. 0 cancelled. Bankroll: €1071.73 → €910.73."
+    },
+    {
+      "entry_id": "nba_entry_20260613",
+      "season": "2024-25",
+      "game": 2,
+      "timestamp": "2026-06-13T23:06:54.209883+00:00",
+      "type": "bets_placed",
+      "bankroll_before": 1195.7,
+      "total_staked": 0.0,
+      "bankroll_after": 1195.7,
+      "cancelled_picks": [],
+      "bets": [],
+      "summary": "Day 2026-06-13 commit — 0 bets totalling €0.00. 0 cancelled. Bankroll: €1195.70 → €1195.70."
     }
   ]
 }
