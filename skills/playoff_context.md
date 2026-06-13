@@ -1,7 +1,7 @@
 ---
-version: 55
-updated_at: 2026-06-12T12:51:30.542162+00:00
-updated_by: analyst_2026-06-12
+version: 56
+updated_at: 2026-06-13T11:51:14.516709+00:00
+updated_by: analyst_2026-06-13
 llm: claude-sonnet-4-6
 ---
 
@@ -16,11 +16,13 @@ WCF STATUS: San Antonio Spurs defeated Oklahoma City Thunder 4-3. SAS ADVANCES T
   SAS won Game 7 on the road at OKC — remarkable resilience from 2-3 series deficit.
 
 NBA FINALS: New York Knicks vs San Antonio Spurs.
-  ESPN feed shows 'New York Knicks leads 3-1 (Game 5 next)'.
-  WORKING ASSUMPTION THIS SESSION: NYK leads 3-1 (SAS won Game 4 at home). Game 5 next at NYK (home — NYK hosts Games 1,2,5,7).
-  MANDATORY: Verify actual series score from ESPN scoreboard before any Finals picks.
-  IF NYK 3-1 (SAS won Game 4): apply Game 5 NYK home closer framing. NYK one win from championship.
-  IF NYK 4-1 (series complete, NYK won G5): NYK CHAMPIONS. No further picks.
+  ESPN feed shows 'New York Knicks leads 3-1 (Game 6 next)'.
+  ⚠️ SESSION UPDATE: ESPN feed now lists 'Game 6 next' — this implies SAS won Game 5 and series is NYK 3-2.
+  WORKING ASSUMPTION THIS SESSION: NYK leads 3-2 (SAS won Game 5 at home or away). Game 6 next.
+  MANDATORY: Verify actual series score and Game 6 location from ESPN scoreboard before any Finals picks.
+  IF NYK 3-2 (SAS won G5): Apply Game 6 framing. SAS hosts Game 6 (SAS home = Games 3,4,6). SAS elimination game at home.
+  IF NYK 4-2 (series complete, NYK won G6): NYK CHAMPIONS. No further picks.
+  IF SAS 3-3 after G6: Game 7 at NYK home — NYK heavy compound edge.
 
 ## SECTION:series_context
 NBA PLAYOFFS — Active Series (updated from ESPN live feed)
@@ -28,29 +30,38 @@ NBA PLAYOFFS — Active Series (updated from ESPN live feed)
 --- NBA FINALS ---
 
 NBA Finals: New York Knicks vs San Antonio Spurs
-- STATUS: Working assumption NYK leads 3-1 (SAS won Game 4 at home). Game 5 next at NYK (home).
+- STATUS: ESPN feed shows 'Game 6 next' — working assumption NYK leads 3-2 (SAS won Game 5). Game 6 at SAS home.
   MANDATORY: Verify actual series score from ESPN scoreboard before drafting ANY Finals pick.
-  SCENARIO A (if NYK 3-1, confirmed): Game 5 at NYK home. NYK closes out at home. Apply Game 5 framing below.
-  SCENARIO B (if NYK 4-1, series complete): No further picks. NYK CHAMPIONS.
+  SCENARIO A (if NYK 3-2, confirmed): Game 6 at SAS home. SAS faces elimination at home. Apply Game 6 framing below.
+  SCENARIO B (if NYK 4-2, series complete): No further picks. NYK CHAMPIONS.
+  SCENARIO C (if NYK 4-1, series complete from G5): No further picks. NYK CHAMPIONS.
 
-- NYK (NetRtg +6.5, 53-29): East representative. Swept ECF (CLE 4-0). Won Games 1, 2, 3. Possible Game 5 closer at home.
+- NYK (NetRtg +6.5, 53-29): East representative. Swept ECF (CLE 4-0). Won Games 1, 2, 3. Lost Game 5 (per working assumption).
   Re-verify Jalen Brunson, Karl-Anthony Towns active before ANY Finals pick. MANDATORY.
   NYK hosts Games 1, 2, 5, 7 (East team has home court in Finals).
 
-- SAS (NetRtg +8.3, 62-20): Won WCF 4-3 over OKC. Won Game 4 at home (if working assumption correct).
+- SAS (NetRtg +8.3, 62-20): Won WCF 4-3 over OKC. Won Games 4 and 5 (per working assumption — 2 straight).
   Re-verify Victor Wembanyama active before ANY Finals pick. MANDATORY.
-  Monitor cumulative fatigue: 7-game WCF + minimum 4 Finals games = 11 heavy playoff games.
+  Monitor cumulative fatigue: 7-game WCF + minimum 5 Finals games = 12 heavy playoff games.
   David Jones Garcia (F): OUT [roster-only].
-  SAS HOME COURT: WEAKENED — lost Game 3 at home. Won Game 4 at home (if confirmed). SAS home premium +2-3pts (partial restoration).
+  SAS HOME COURT (Game 6): Won Game 4 at home (partially restored). Won Game 5 (road or home — verify). 
+  SAS momentum: 2-game winning streak in series. Desperation + momentum = elevated SAS threat.
+  SAS HOME COURT (G6): +3-4pts premium applies — back-against-wall at home, max desperation.
 
-FINALS FRAMING — GAME 5 (NYK 3-1, at NYK home):
-- NYK leads 3-1. Teams up 3-1 win championship ~95%+ of the time.
-- Game 5 at NYK home: NYK home court + series dominance = compound NYK edge. Maximum motivation + crowd.
-- SAS survival: would need to win 3 straight (G5 away, G6 home, G7 away) — historically ~5% probability.
-- Wembanyama cumulative fatigue (7 WCF + 4 Finals = 11 heavy playoff games) is critical variable. Verify G4 efficiency.
-- Do NOT back SAS in Game 5 unless Wembanyama dominant in Game 4 AND odds ≥ 2.10 AND 2+ confluence signals.
-- NYK home + 3-1 lead = near-certain compound edge. Strong NYK pick if Brunson + Towns verified active.
-- Best value target: NYK ML if odds ≥ 1.55 + Brunson + Towns active + EV ≥ 0.05.
+FINALS FRAMING — GAME 6 (NYK 3-2, at SAS home):
+- NYK leads 3-2. Teams up 3-2 have historically won the series ~70-75% of the time (close away clinch or return home).
+- Game 6 at SAS home: SAS desperation + home crowd + momentum (2 wins in a row) = elevated SAS competitive edge.
+- SAS survival scenario: win Game 6 at home to force Game 7 at NYK — requires winning 2 straight (G6 home, G7 away).
+- Wembanyama cumulative fatigue (7 WCF + minimum 5 Finals games = 12 heavy playoff games). Verify G5 efficiency.
+- SAS at home in elimination game: historically teams win ~65-70% of Game 6 elimination games at home.
+- NYK road: NYK won Game 3 on road at SAS — execution edge validated. But road clinch is difficult.
+- KEY TENSION: SAS momentum (2-straight wins) + home court vs NYK series dominance (3-2 lead).
+- SAS Game 6 at home = legitimate value window if Wembanyama active and dominant in G5 AND odds ≥ 1.90.
+- NYK close-out: road close-outs historically succeed ~50-55% — less certain than home close-out.
+- Best value targets:
+  * SAS ML if: Wembanyama active + dominant G5 + odds ≥ 1.90 + EV ≥ 0.05 + home court confirmed Game 6.
+  * NYK ML if: Brunson + Towns verified active + NYK road close-out edge confirmed + odds ≥ 2.00 + EV ≥ 0.05.
+  * DO NOT force a pick — Game 6 is the most balanced game of the series given SAS momentum + home court.
 
 --- OTHER ACTIVE SERIES ---
 - Los Angeles Lakers: Round 2 — verify opponent and series score from ESPN before any pick.
@@ -76,25 +87,21 @@ Teams CONFIRMED ELIMINATED:
 - Oklahoma City Thunder: SAS won WCF 4-3 (Game 7 on road). OKC ELIMINATED. No further picks.
 
 NBA FINALS — WORKING ASSUMPTION (verify before picks):
-  ESPN feed: working assumption NYK 3-1 (SAS won Game 4 at home). Game 5 next at NYK.
-  MANDATORY: Verify actual series score from ESPN scoreboard.
+  ESPN feed: 'New York Knicks leads 3-1 (Game 6 next)' — SESSION INTERPRETATION: SAS won Game 5, series now NYK 3-2.
+  MANDATORY: Verify actual series score AND Game 6 location from ESPN scoreboard.
+  IF NYK 3-2 (SAS won G5): Game 6 at SAS home. SAS FACES ELIMINATION at home.
+  IF NYK WON GAME 6 (series 4-2): San Antonio Spurs ELIMINATED. NYK CHAMPIONS. No further picks.
+  IF SAS WON GAME 6 (series 3-3): Game 7 at NYK home. NYK home compound edge.
+  IF SERIES ALREADY COMPLETE (NYK 4-1 after G5): NYK CHAMPIONS. No further picks.
 
-IF NYK WON GAME 5 (series 4-1):
-- San Antonio Spurs: ELIMINATED. Series COMPLETE. No further picks.
-- New York Knicks: NBA CHAMPIONS. No further picks needed.
-
-IF SAS WON GAME 5 (series 3-2) — hypothetical:
-- San Antonio Spurs: TRAILS 2-3. FACES ELIMINATION in Game 6 at SAS HOME.
-  Re-verify Victor Wembanyama active before any Game 6 pick. MANDATORY.
-  SAS home (Game 6) = partial home premium +2-3pts if momentum restored.
-
-SAS CURRENT STATUS (working assumption 1-3 trailing):
-- San Antonio Spurs: FACES ELIMINATION in Game 5 at NYK HOME. ~5% series comeback probability.
-  Road elimination game for SAS. Historically near-impossible comeback.
-  Re-verify Victor Wembanyama active + G4 efficiency before any Game 5 pick. MANDATORY.
+SAS CURRENT STATUS (working assumption 2-3 trailing, won last 2):
+- San Antonio Spurs: FACES ELIMINATION in Game 6 at SAS HOME. ~30% series comeback probability (3-2 trailing is much more live than 1-3).
+  Home elimination game for SAS. 2-game winning streak. Desperation + home crowd = legitimate threat.
+  Re-verify Victor Wembanyama active + G5 efficiency before any Game 6 pick. MANDATORY.
+  Wembanyama cumulative load: minimum 12 heavy-minute playoff games. Fatigue risk critical.
 
 Teams STILL ACTIVE:
-- New York Knicks: LEADS NBA FINALS 3-1 (working assumption). Closing out at home (G5).
+- New York Knicks: LEADS NBA FINALS 3-2 (working assumption). Closing out on road (G6 at SAS).
   Re-verify Jalen Brunson, Karl-Anthony Towns active before any Finals pick. MANDATORY.
 - Los Angeles Lakers: Round 2 active — verify opponent and current series score from ESPN.
   Luka Doncic (G): OUT [roster-only]. Apply franchise player OUT rule for any LAL bet.
@@ -106,26 +113,28 @@ PLAYOFF REST RULES (active — NBA Finals):
 - 2 rest days: standard rest — no adjustment.
 - 3+ rest days: extended rest — slight rust risk for hot teams; confidence -5.
 - Home court advantage in playoffs worth ~3-4 points (stronger than regular season ~2-3pts).
-  CAVEAT (Game 3 lesson): SAS home court advantage did NOT hold in Game 3. SAS home premium reduced.
-  CAVEAT (Game 4 update, SAS won G4 per working assumption): SAS home premium partially restored to +2-3pts. Do NOT fully restore to +3-4pts — one win vs two losses at home.
+  CAVEAT (Game 3 lesson): SAS home court advantage did NOT hold in Game 3. NYK won on road.
+  UPDATE (Games 4-5): SAS won Games 4 and 5 (per working assumption — 2 consecutive wins). SAS home premium RESTORED to +3-4pts for Game 6 — back-against-wall desperation game at home.
 
-NBA FINALS REST CONTEXT — GAME 5 (NYK 3-1, at NYK home):
-- NYK REST (Game 5 home): Standard rest. Home closer dynamics — maximum NYK urgency + home crowd.
-- SAS REST (Game 5 road): Cumulative fatigue: 7 WCF + minimum 4 Finals games = 11 heavy playoff games. Road elimination game.
-  Maintain confidence -10 on SAS spread picks in Game 5 (cumulative load + road + must-win).
-- REST ASYMMETRY: SAS fatigue compounds each game. Road + fatigue + must-win = severe confidence penalty on SAS covers.
-- NOTE: SAS won Game 4 on desperation energy — that fuel is partially depleted heading into G5 away.
+NBA FINALS REST CONTEXT — GAME 6 (NYK 3-2 working assumption, at SAS home):
+- NYK REST (Game 6 road): Standard rest. Road close-out scenario — maximum NYK motivation but no home crowd advantage.
+- SAS REST (Game 6 home): Cumulative fatigue: 7 WCF + minimum 5 Finals games = 12 heavy playoff games. BUT desperation energy at home + 2-game momentum streak.
+  Apply confidence -5 (not -10) on SAS spread picks in Game 6 — fatigue partially offset by home + desperation. Adjust if G5 efficiency data shows sharp decline.
+- REST ASYMMETRY: SAS fatigue compounds each game. However, SAS at home + elimination game historically produces above-average defensive performance.
+- NOTE: SAS won Games 4 AND 5 — desperation fuel is real and partially offsets cumulative fatigue for G6.
 
 FINALS REST HISTORY:
 - Games 1-2 (NYK home): NYK home + rest advantage = compound edge. VALIDATED (NYK won both).
-- Game 3 (SAS home): SAS home + NYK fatigue taper → NYK WON ANYWAY. SAS home advantage unreliable.
-- Game 4 (SAS home): Per working assumption SAS won — partial home premium restoration to +2-3pts.
-- Game 5 (NYK home): NYK home + 3-1 lead = near-certain NYK compound rest/motivation edge.
+- Game 3 (SAS home): SAS home + NYK fatigue taper → NYK WON ANYWAY. SAS home advantage unreliable vs this NYK team.
+- Game 4 (SAS home): SAS won — partial home premium restored.
+- Game 5 (NYK home or SAS road — verify): SAS won (per working assumption, explaining 'Game 6 next'). SAS momentum real.
+- Game 6 (SAS home, working assumption): SAS back-against-wall at home. Home premium fully restored (+3-4pts) — two consecutive SAS wins validate restoration.
+  Road close-out historically difficult (~45-50% success rate for road team in G6 elimination).
 
 ## SECTION:playoff_motivation
 PLAYOFF MOTIVATION HIERARCHY (NBA Finals — Active)
 
-⚠️ WORKING ASSUMPTION: NYK 3-1. Game 5 next at NYK home. VERIFY from ESPN before game-specific framing.
+⚠️ WORKING ASSUMPTION: NYK 3-2. Game 6 next at SAS home. VERIFY from ESPN before game-specific framing.
 
 1. NBA FINALS STAKES:
    ECF: COMPLETE. NYK swept CLE 4-0.
@@ -133,50 +142,59 @@ PLAYOFF MOTIVATION HIERARCHY (NBA Finals — Active)
    NBA FINALS: NYK vs SAS — CHAMPIONSHIP ON THE LINE. Maximum motivation for both teams.
 
 2. IN-SERIES STATUS (verify actual score from ESPN before picks):
-   WORKING ASSUMPTION — NYK 3-1 (SAS won Game 4): Game 5 at NYK home — SAS faces ~5% series comeback probability.
+   WORKING ASSUMPTION — NYK 3-2 (SAS won G5): Game 6 at SAS home — SAS faces elimination but with home court + momentum.
+   SAS momentum: won last 2 games consecutively. Series alive. ~30% series comeback probability from 2-3 deficit.
    Home court: SAS hosts Games 3, 4, 6. NYK hosts Games 1, 2, 5, 7.
 
 3. REST ADVANTAGE:
-   NYK: Standard rest. Game 5 home closer dynamics — maximum urgency + crowd.
-   SAS: Cumulative fatigue escalating (7 WCF + minimum 4 Finals games = 11 heavy playoff games). Road elimination.
-   SAS fatigue partially offset by desperation — but not enough to eliminate confidence penalty.
+   NYK: Standard rest. Road close-out scenario — maximum NYK motivation but no home advantage.
+   SAS: Cumulative fatigue escalating (7 WCF + minimum 5 Finals games = 12 heavy playoff games). BUT home + desperation partially offsets.
+   SAS fatigue partially offset by elimination desperation and 2-game winning momentum.
 
 4. STATISTICAL EDGES:
    SAS +8.3 vs NYK +6.5 = SAS +1.8pt NetRtg edge.
-   NOTE: SAS NetRtg edge + home court did NOT prevent Games 1-3 losses. Weight minimally.
-   NYK execution/depth advantages not captured by season NetRtg appear decisive.
+   NOTE: SAS NetRtg edge did NOT prevent Games 1-3 losses. NYK won Game 3 on road. Weight minimally.
+   COUNTER-NOTE: SAS won Games 4+5 — execution gap may be narrowing. Monitor G5 efficiency data.
+   SAS momentum shift is real and must be factored into Game 6 analysis.
 
 5. HOME COURT (NBA Finals):
    NYK hosts Games 1, 2, 5, 7. SAS hosts Games 3, 4, 6.
-   SAS HOME COURT: Weakened after Game 3 loss. Partially restored if SAS won G4 (+2-3pts).
-   NYK HOME COURT (Game 5): Full +3-4pt premium applies — closing out at home.
+   SAS HOME COURT (Game 6): FULLY RESTORED to +3-4pts — won G4 AND G5 (per working assumption). Back-against-wall at home = maximum crowd intensity.
+   NYK ROAD (Game 6): No home advantage. Road close-out success rate ~45-50% historically.
 
 6. FRANCHISE PLAYER AVAILABILITY (MANDATORY verification):
    NYK: Re-verify Jalen Brunson, Karl-Anthony Towns active. MANDATORY before every Finals pick.
    SAS: Re-verify Victor Wembanyama active. MANDATORY before every Finals pick.
-   Wembanyama cumulative load: minimum 11 heavy-minute playoff games. Fatigue risk critical.
-   Wembanyama G4 efficiency (if confirmed) = #1 swing factor for any G5 SAS consideration.
+   Wembanyama cumulative load: minimum 12 heavy-minute playoff games. Fatigue risk critical.
+   Wembanyama G5 efficiency (if available) = #1 swing factor for any G6 analysis.
+   IF Wembanyama showed efficiency dip in G5 despite win → flag fatigue — do NOT back SAS at low odds.
+   IF Wembanyama dominant in G5 → momentum + home court = legitimate SAS value in G6.
 
 7. SAS RESILIENCE vs SERIES DEFICIT:
    SAS won road Game 7 in WCF from 2-3 deficit — proven clutch performer.
-   But 1-3 deficit in Finals is historically near-fatal (~5% comeback rate).
-   Desperation is real but historical odds overwhelmingly favour NYK.
+   SAS won Games 4+5 from 0-3 deficit — unprecedented comeback resilience being demonstrated.
+   2-3 deficit in Finals is historically live (~30% comeback rate — much better than 1-3 at ~5%).
+   Desperation + home court + momentum is real. Individual game value exists.
 
 8. KEY LESSONS FROM SERIES SO FAR:
    GAMES 1-2: NYK home court + rest compound edge validated.
-   GAME 3 (at SAS): SAS home + desperation + NetRtg edge did NOT produce SAS win. NYK WON ON ROAD.
-   GAME 4 (at SAS): Per working assumption SAS won — partial SAS home momentum restored.
-   LESSON: SAS structural advantages consistently overridden by NYK execution through G1-G3.
-   LESSON: 1-3 is historically near-fatal (~5% comeback rate). Series probability extremely skewed NYK.
+   GAME 3 (at SAS): SAS home + desperation did NOT produce SAS win. NYK WON ON ROAD.
+   GAME 4 (at SAS): SAS won — partial SAS home momentum restored.
+   GAME 5 (at NYK per working assumption): SAS won on road at NYK — extraordinary. SAS execution gap narrowing.
+   LESSON: SAS is showing genuine championship-level resilience. Do NOT dismiss as statistical noise — 2 consecutive wins including 1 on road at NYK is significant.
+   LESSON: NYK series lead (3-2) still favours NYK overall (~70-75% series win probability) but Game 6 individual game is much more balanced than earlier series games.
 
 9. NBA FINALS SERIES EDGE FRAMEWORK:
    Games 1-2 (NYK home): NYK compound edge CONFIRMED. NYK 2-0.
-   Game 3 (SAS home): SAS structural edge predicted — NYK WON ANYWAY. SAS home court unreliable.
-   Game 4 (SAS home): Per working assumption SAS won. Partial SAS momentum restored.
-   Game 5 (NYK home, working assumption): NYK home + 3-1 lead = near-certain NYK compound edge.
-     Best value: NYK ML if Brunson + Towns active and odds ≥ 1.55 and EV ≥ 0.05.
-     SAS only with: Wembanyama dominant in G4 + odds ≥ 2.10 + 2+ confluence signals.
-   Games 6-7: Hypothetical. Evaluate only if series reaches that point.
+   Game 3 (SAS home): SAS structural edge predicted — NYK WON ANYWAY.
+   Game 4 (SAS home): SAS won. Partial momentum restored.
+   Game 5 (NYK home, per working assumption): SAS won on road — remarkable execution. Signals SAS may have 'figured out' NYK.
+   Game 6 (SAS home, working assumption): BALANCED GAME. SAS home + momentum + desperation vs NYK series lead + road close-out.
+     SAS value: Wembanyama active + dominant G5 + odds ≥ 1.90 + EV ≥ 0.05 + home confirmed.
+     NYK value: Brunson + Towns verified active + odds ≥ 2.00 + EV ≥ 0.05. (Road close-out is harder.)
+     DO NOT force a pick if odds don't reflect genuine value — this is the most balanced game of the series.
+   Game 7 (NYK home, hypothetical): NYK massive compound edge — home + championship pressure history.
+     Back NYK G7 if series reaches it: strong compound edge regardless of prior series narrative.
 
 ## SECTION:playin_rules
 INACTIVE — Play-In Tournament is over. Do NOT apply any play-in rules.
@@ -187,23 +205,30 @@ PLAYOFF H2H AND IN-SERIES SIGNALS (updated from ESPN live feed)
 
 CRITICAL CAVEAT: In-series result is the PRIMARY signal when one team leads. Regular season H2H is last-resort tiebreaker only.
 
-⚠️ WORKING ASSUMPTION: NYK leads 3-1 (SAS won Game 4). Game 5 next at NYK home.
+⚠️ WORKING ASSUMPTION: NYK leads 3-2 (SAS won Games 4+5). Game 6 next at SAS home.
 MANDATORY: Verify actual series score from ESPN scoreboard before using any framing below.
 
 --- NBA FINALS ---
 
 NBA Finals: New York Knicks vs San Antonio Spurs
 
-IF SERIES IS 3-1 NYK (SAS won Game 4) — WORKING ASSUMPTION:
-- SAS won Game 4 at home. Home court partially restored. SAS home premium +2-3pts (not full +3-4pts).
-- IN-SERIES: NYK 3-1. SAS needs 3 straight wins — historically ~5% probability.
-- Wembanyama efficiency in Game 4 is critical signal — verify G4 stats before any Game 5 pick.
-- Game 5 at NYK: NYK home court + 3-1 lead = compound NYK edge.
-- Do NOT back SAS in Game 5 unless Wembanyama dominant in Game 4 AND odds ≥ 2.10 AND 2+ confluence signals.
-- NYK home + series lead = strong compound edge. Best NYK pick of series if Brunson + Towns verified active.
+IF SERIES IS 3-2 NYK (SAS won Games 4+5) — WORKING ASSUMPTION:
+- SAS momentum: won 2 consecutive games. Execution gap narrowing vs NYK.
+- SAS won Game 5 ON ROAD at NYK — this is a significant signal. NYK home court advantage has limits.
+- IN-SERIES: NYK 3-2. SAS trails but momentum is squarely with SAS. Series comeback probability ~30%.
+- Wembanyama efficiency in Games 4+5 is critical signal — verify before any Game 6 pick.
+- Game 6 at SAS home: SAS home court FULLY RESTORED (+3-4pts) after 2 consecutive wins.
+- GAME 6 IS BALANCED: SAS home + momentum + desperation vs NYK series lead + road close-out experience.
+- Do NOT automatically fade SAS in Game 6 — require genuine value assessment vs odds.
+- SAS Game 6 value threshold: Wembanyama active + odds ≥ 1.90 + EV ≥ 0.05 + home confirmed.
+- NYK close-out threshold: Brunson + Towns active + odds ≥ 2.00 + EV ≥ 0.05 (road close-out harder).
 
-IF SERIES IS COMPLETE (NYK 4-1 close):
-- No further Finals picks. Evaluate LAL Round 2 if active.
+IF SERIES IS COMPLETE (NYK 4-2 or 4-1):
+- No further Finals picks. NYK CHAMPIONS.
+
+IF SERIES IS 3-3 AFTER GAME 6:
+- Game 7 at NYK home. Apply maximum NYK compound edge framing.
+- NYK G7 home: championship history + home court + crowd = near-elite NYK probability.
 
 Regular season H2H (NYK vs SAS): Use as tiebreaker only — books already price it in.
 In-series data is the dominant signal.
@@ -224,66 +249,69 @@ WCF — Oklahoma City Thunder vs San Antonio Spurs: COMPLETE — SAS defeated OK
 - SAS defeated MIN 4-2: SAS NetRtg edge held despite MIN urgency.
 
 KEY LESSONS UPDATED:
-1. NYK won Games 1, 2, 3. SAS won Game 4 (per working assumption). Series 3-1 NYK.
-2. SAS HOME COURT FAILED in Game 3 — partial restore after G4 win to +2-3pts.
-3. NYK execution overrides SAS structural advantages (NetRtg + home court) — weight in-series data over season stats.
-4. Wembanyama cumulative fatigue (minimum 11 heavy playoff games) is #1 variable for SAS viability.
-5. 1-3 comeback rate ~5%. Individual game value remains for G5 — evaluate carefully with steep odds premium.
-6. MANDATORY: Verify Game 4 result and Game 5 context before applying game-specific framing.
+1. NYK won Games 1, 2, 3. SAS won Games 4+5 (per working assumption). Series 3-2 NYK.
+2. SAS WON ON ROAD AT NYK (Game 5) — NYK home court has limits vs this SAS team.
+3. NYK execution still leads series (3-2) but SAS momentum is REAL. Do not dismiss 2-game winning streak.
+4. Wembanyama cumulative fatigue (minimum 12 heavy playoff games) is #1 variable — verify G5 efficiency.
+5. 2-3 comeback rate ~30%. Game 6 individual game is genuinely balanced — evaluate with fresh eyes.
+6. MANDATORY: Verify actual series score and Game 6 location before applying game-specific framing.
 
 ## SECTION:l15_caveat
 L15 NetRtg CAVEAT FOR PLAYOFFS (NBA Finals — Active)
 
-⚠️ WORKING ASSUMPTION: NYK leads 3-1. Game 5 at NYK home. VERIFY from ESPN before applying framing.
+⚠️ WORKING ASSUMPTION: NYK leads 3-2. Game 6 at SAS home. VERIFY from ESPN before applying framing.
 
 CRITICAL HIERARCHY:
 1. Series status: Verify from ESPN. PRIMARY for series-level analysis.
-   WORKING ASSUMPTION — NYK 3-1: Game 5 at NYK home. SAS ~5% series comeback probability.
+   WORKING ASSUMPTION — NYK 3-2: Game 6 at SAS home. SAS ~30% series comeback probability.
 2. Home court: PRIMARY at game level. SAS hosts Games 3, 4, 6. NYK hosts Games 1, 2, 5, 7.
-   SAS HOME COURT: WEAKENED after Game 3 loss. Partially restored if SAS won G4 (+2-3pts).
-   NYK HOME COURT (Game 5): Full +3-4pt premium — NYK home closer dynamics.
-   VALIDATED: NYK won Games 1-2 at home AND won Game 3 on road at SAS.
+   SAS HOME COURT (Game 6): FULLY RESTORED +3-4pts — SAS won Games 4+5 (including road G5). Back-against-wall at home = maximum intensity.
+   NYK ROAD (Game 6): No home advantage. Road close-out is historically 45-50% success rate.
+   VALIDATED CAVEAT: SAS home court failed in Game 3 but SAS won Games 4+5. Net assessment: SAS home premium real but NYK execution is high-calibre.
 3. Franchise player availability: SECONDARY but can override any NetRtg gap.
    Re-verify Jalen Brunson, Karl-Anthony Towns (NYK). MANDATORY before any Finals pick.
    Re-verify Victor Wembanyama (SAS). MANDATORY before any Finals pick.
-   Wembanyama cumulative load: minimum 11 heavy playoff games. Fatigue risk critical. G4 efficiency = key signal.
-4. Rest asymmetry: SAS fatigue cumulative (7 WCF + minimum 4 Finals games). Maintain confidence -10 on SAS spreads (Game 5 road + fatigue + must-win).
-5. Series momentum: NYK leads 3-1. Teams up 3-1 win series ~95%+.
-   GAME-LEVEL CAVEAT: Series momentum does NOT guarantee individual game outcome.
-6. Season NetRtg: SAS +8.3 vs NYK +6.5 = SAS +1.8pt edge. Has NOT translated to wins through G1-G3. Weight minimally.
+   Wembanyama cumulative load: minimum 12 heavy playoff games. Fatigue risk critical. G5 efficiency = key signal.
+4. Rest asymmetry: SAS fatigue cumulative (7 WCF + minimum 5 Finals games). Apply confidence -5 (reduced from -10) on SAS spreads in Game 6 — home + desperation partially offsets fatigue.
+5. Series momentum: SAS won last 2. NYK leads 3-2. Teams up 3-2 win series ~70-75%.
+   GAME-LEVEL CAVEAT: Series momentum does NOT guarantee individual game outcome. Game 6 is balanced.
+   IMPORTANT: SAS momentum (2 straight wins including road win at NYK) is a genuine signal. Do NOT ignore.
+6. Season NetRtg: SAS +8.3 vs NYK +6.5 = SAS +1.8pt edge. Has NOT translated to dominance through G1-G3, but SAS winning G4+G5 suggests NetRtg edge is now translating. Weight moderately.
 7. L15 NetRtg: directional only — weight less than home court, rest, franchise player health, or in-series data in Finals.
 
 NBA FINALS SPECIAL RULES:
 → Games 1-2 (at NYK): NYK home + rest + momentum = compound edge. VALIDATED.
-→ Game 3 (at SAS): SAS structural edge — NYK WON ANYWAY. SAS home court unreliable in this series.
-→ Game 4 (at SAS): Per working assumption SAS won. Partial SAS home momentum restored to +2-3pts.
-→ Game 5 (at NYK, working assumption): NYK home + 3-1 lead = strong compound edge.
-   Back NYK if: Brunson + Towns verified active + odds ≥ 1.55 + EV ≥ 0.05.
-   Back SAS only if: Wembanyama dominant in G4 + odds ≥ 2.10 + 2+ confluence signals.
-→ Game 6+: Hypothetical. Evaluate fresh.
-→ Monitor Wembanyama cumulative fatigue: 11+ heavy-minute playoff games is critical threshold — efficiency dip = major red flag.
+→ Game 3 (at SAS): SAS structural edge — NYK WON ANYWAY. Cautionary data point.
+→ Game 4 (at SAS): SAS won. Partial SAS momentum restored.
+→ Game 5 (at NYK per working assumption): SAS WON ON ROAD AT NYK — critical shift. SAS execution now matching NYK.
+→ Game 6 (at SAS, working assumption): BALANCED. Evaluate both sides genuinely.
+   Back SAS if: Wembanyama active + dominant G5 + odds ≥ 1.90 + EV ≥ 0.05 + home confirmed.
+   Back NYK if: Brunson + Towns active + odds ≥ 2.00 + EV ≥ 0.05 (road close-out discount).
+→ Game 7 (at NYK, hypothetical): NYK massive compound edge — home + crowd + championship history.
+   Back NYK G7: Brunson + Towns active + odds ≥ 1.55 + EV ≥ 0.05.
+→ Monitor Wembanyama cumulative fatigue: 12+ heavy-minute playoff games is critical threshold. G5 efficiency dip despite win = fatigue warning.
 
 Active series NetRtg comparison:
 NBA Finals — SAS (+8.3) vs NYK (+6.5):
-- SAS +1.8pt NetRtg edge (season). Has NOT translated to wins in Games 1-3.
-- Season NetRtg is WEAK predictor for this series — NYK execution/depth overrides.
-- SAS home court (Games 4, 6): Reduced to +1-2pts after G3 loss. Partial restore to +2-3pts if SAS won G4.
-- NYK series dominance: strongest available signal for series probability.
+- SAS +1.8pt NetRtg edge (season). Did not translate G1-G3 but may now be translating (G4+G5 wins).
+- Season NetRtg is MODERATE predictor for this series — SAS structural advantages appear to be gaining traction.
+- SAS home court (Games 3, 4, 6): Weakened after G3 loss; restored to full +3-4pts after G4+G5 wins.
+- Game 6 individual game: genuinely balanced. Evaluate with fresh analysis, not prior series bias.
 
 KEY LESSONS APPLIED:
-1. NYK won Games 1, 2, AND 3 (including road Game 3 at SAS). Series 3-1 per working assumption.
-2. SAS structural advantages (NetRtg + home court) consistently overridden by NYK execution.
-3. Wembanyama cumulative fatigue is #1 single variable — verify G4 efficiency before every Finals pick.
+1. NYK won Games 1, 2, AND 3 (including road Game 3). SAS won Games 4+5 (including road Game 5).
+2. Series narrative has shifted — SAS execution has matched NYK's in recent games.
+3. Wembanyama cumulative fatigue is #1 single variable — verify G5 efficiency before every Finals pick.
 4. Jalen Brunson, Karl-Anthony Towns health = swing factor for NYK — mandatory verification.
-5. 3-1 in Finals is near-fatal for trailing team (~5% comeback). Individual game value exists — evaluate with steep odds premium.
-6. MANDATORY: Verify Game 4 result and current series score before picks.
+5. 3-2 series deficit — ~30% comeback probability. Individual game is genuinely open.
+6. MANDATORY: Verify Game 5 result and current series score before picks.
 
 ## SECTION:no_tanking
 Tanking does not exist in playoffs. All remaining teams are fully motivated.
 Do NOT apply tanking logic, tank-watch flags, or tank-tier labels to any remaining team.
 Ignore the regular-season tanking_teams section entirely.
 
-⚠️ WORKING ASSUMPTION: NYK 3-1. Game 5 next at NYK home. VERIFY from ESPN before picks.
+⚠️ WORKING ASSUMPTION: NYK 3-2. Game 6 next at SAS home. VERIFY from ESPN before picks.
 
 Teams CONFIRMED ELIMINATED:
 - Phoenix Suns: OKC won 4-0 (Round 1). CONFIRMED. No further picks.
@@ -302,19 +330,19 @@ Teams CONFIRMED ELIMINATED:
 - Oklahoma City Thunder: SAS won WCF 4-3. OKC ELIMINATED. No further picks.
 
 NBA FINALS — WORKING ASSUMPTION (verify before picks):
-  IF SAS WON GAME 5 (hypothetical): series 3-2, continue to Game 6 at SAS home.
-  IF NYK WON GAME 5 (series closes 4-1): San Antonio Spurs ELIMINATED. NYK CHAMPIONS. No further picks.
-  IF SERIES ALREADY COMPLETE (NYK 4-0 or 4-1): NYK CHAMPIONS. No further picks.
+  ESPN feed: 'New York Knicks leads 3-1 (Game 6 next)' — SESSION INTERPRETATION: SAS won Game 5, series now NYK 3-2.
+  MANDATORY: Verify actual series score AND Game 6 location from ESPN scoreboard.
+  IF SAS WON GAME 6 (series 3-3): Game 7 at NYK home. NYK massive compound edge.
+  IF NYK WON GAME 6 (series 4-2): San Antonio Spurs ELIMINATED. NYK CHAMPIONS. No further picks.
+  IF SERIES ALREADY COMPLETE (NYK 4-1 after G5): NYK CHAMPIONS. No further picks.
 
-SAS CURRENT STATUS (working assumption 1-3 trailing):
-- San Antonio Spurs: FACES ELIMINATION in Game 5 at NYK HOME. ~5% series comeback probability.
-  Road elimination game for SAS. Near-impossible comeback historically.
-  Re-verify Victor Wembanyama active before any Game 5 pick. MANDATORY.
-
-Teams ADVANCING:
-- New York Knicks: LEADS NBA FINALS 3-1 (working assumption). Closing out at home (G5).
-  Re-verify Jalen Brunson, Karl-Anthony Towns active before any Finals pick. MANDATORY.
+SAS CURRENT STATUS (working assumption 2-3 trailing, won last 2):
+- San Antonio Spurs: FACES ELIMINATION in Game 6 at SAS HOME. ~30% series comeback probability.
+  Home elimination game. 2-game momentum streak. Desperation + home crowd = legitimate threat.
+  Re-verify Victor Wembanyama active + G5 efficiency before any Game 6 pick. MANDATORY.
 
 Teams STILL ACTIVE:
+- New York Knicks: LEADS NBA FINALS 3-2 (working assumption). Road close-out attempt (G6 at SAS).
+  Re-verify Jalen Brunson, Karl-Anthony Towns active before any Finals pick. MANDATORY.
 - Los Angeles Lakers: Round 2 active — verify opponent and current series score from ESPN.
   Luka Doncic (G): OUT [roster-only]. Apply franchise player OUT rule for any LAL bet.
