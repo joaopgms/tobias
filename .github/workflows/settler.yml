@@ -1,8 +1,9 @@
 name: Tobias — Settler (08:00 UTC)
 
 on:
-  schedule:
-    - cron: '0 8 * * *'   # 08:00 UTC daily — settle yesterday's bets
+  # Cron disabled for 2024-25 -> 2025-26 off-season (re-enable when the new season starts, ~2025-10-21)
+  # schedule:
+  #   - cron: '0 8 * * *'   # 08:00 UTC daily — settle yesterday's bets
   workflow_dispatch:         # allow manual trigger
 
 jobs:

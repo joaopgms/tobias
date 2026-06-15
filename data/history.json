@@ -26,7 +26,30 @@
           "wins": 28,
           "losses": 22,
           "peak_bankroll": 2195.96,
-          "total_bets": 50
+          "total_bets": 50,
+          "end_date": "2026-06-15",
+          "final_bankroll": 1195.7,
+          "net_pnl": 195.7,
+          "bust": false
+        }
+      ]
+    },
+    {
+      "season": "2025-26",
+      "start_date": null,
+      "end_date": null,
+      "games": [
+        {
+          "game": 3,
+          "start_date": "2026-06-15",
+          "initial_bankroll": 1000.0,
+          "peak_bankroll": 1000.0,
+          "final_bankroll": null,
+          "net_pnl": null,
+          "total_bets": 0,
+          "wins": 0,
+          "losses": 0,
+          "bust": false
         }
       ]
     }
@@ -2633,6 +2656,20 @@
       "cancelled_picks": [],
       "bets": [],
       "summary": "Day 2026-06-13 commit — 0 bets totalling €0.00. 0 cancelled. Bankroll: €1195.70 → €1195.70."
+    },
+    {
+      "entry_id": "season_reset_20260615",
+      "season": "2025-26",
+      "game": 3,
+      "timestamp": "2026-06-15T00:00:00+00:00",
+      "type": "season_reset",
+      "previous_season": "2024-25",
+      "previous_game": 2,
+      "previous_final_bankroll": 1195.7,
+      "previous_net_pnl": 195.7,
+      "bankroll_before": 1195.7,
+      "bankroll_after": 1000.0,
+      "summary": "Season 2024-25 complete (NYK 2026 NBA Champions, 4-1 over SAS). Game 2 closed at €1195.70 (net +€195.70). Season rolled forward to 2025-26, Game 3 started with a fresh €1000 bump."
     }
   ]
 }

@@ -1,8 +1,9 @@
 name: Tobias — Analyst (10:00 UTC)
 
 on:
-  schedule:
-    - cron: '0 10 * * *'   # 10:00 UTC — after settler, before scout
+  # Cron disabled for 2024-25 -> 2025-26 off-season (re-enable when the new season starts, ~2025-10-21)
+  # schedule:
+  #   - cron: '0 10 * * *'   # 10:00 UTC — after settler, before scout
   workflow_dispatch:        # allow manual trigger
 
 jobs:
